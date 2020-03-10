@@ -1,0 +1,23 @@
+{
+  "name": "sos1920-09",
+  "version": "1.0.0",
+  "description": "This is an API that manages data related to renewable energies, plug-in cars' sales and primary energy sources.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gti-sos/SOS1920-09.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gti-sos/SOS1920-09/issues"
+  },
+  "homepage": "https://github.com/gti-sos/SOS1920-09#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
