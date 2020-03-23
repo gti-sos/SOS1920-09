@@ -101,7 +101,13 @@ app.post(BASE_API_URL+"/plugin-vehicles-stats",(req,res) =>{
 	}
 }); 
 
+// DELETE plugInVehiclesStats
 
+app.delete(BASE_API_URL+"/plugin-vehicles-stats",(req,res) =>{	
+	plugInVehiclesStats = [];
+	res.sendStatus(200);
+
+});
 
 
 
@@ -141,13 +147,14 @@ app.post(BASE_API_URL+"/renewable-sources-stats",(req,res) =>{
 });
 
 
-// DELETE CONTACTS
+// DELETE renewableSourcesStats
 
-app.delete(BASE_API_URL+"/contacts",(req,res) =>{	
-	contacts = [];
+app.delete(BASE_API_URL+"/renewable-sources-stats",(req,res) =>{	
+	renewableSourcesStats = [];
 	res.sendStatus(200);
 
 });
+
 
 
 // RESOURCE oilCoalNuclearEnergyConsumptionStats
@@ -178,42 +185,19 @@ app.get(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats", (req,res) => 
 	}
 });
 
+// DELETE newOilCoalNuclearEnergyConsumptionStat
 
-
-
-
-
-
-// GET CONTACTS
-
-app.get(BASE_API_URL+"/contacts", (req,res) =>{
-	res.send(JSON.stringify(contacts,null,2));
-	//console.log("Data sent:"+JSON.stringify(contacts,null,2));
-});
-
-
-// POST CONTACTS
-
-app.post(BASE_API_URL+"/contacts",(req,res) =>{
-	
-	var newContact = req.body; // Cogemos el body de la request http (que debe tener un contacto en json)
-	//console.log(newContact);
-	
-	if((newContact == {}) || (newContact.name == null)){
-		res.sendStatus(400,"BAD REQUEST");
-	} else {
-		contacts.push(newContact); 	
-		res.sendStatus(201,"CREATED");
-	}
-});
-
-// DELETE CONTACTS
-
-app.delete(BASE_API_URL+"/contacts",(req,res) =>{	
-	contacts = [];
+app.delete(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats",(req,res) =>{	
+	oilCoalNuclearEnergyConsumptionStats = [];
 	res.sendStatus(200);
 
 });
+
+
+
+
+
+
 
 
 // GET CONTACTS/XXX
