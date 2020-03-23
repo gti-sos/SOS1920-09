@@ -47,14 +47,14 @@ var renewableSourcesStats = [
 var oilCoalNuclearEnergyConsumptionStats = [
 	{ 
 		"year" : 2016,
-		"country": USA,
+		"country": "USA",
 		"oil-consumption": 907.6,
 		"coal-consumption": 340.6,
 		"nuclear-energy-consumption":191.9
 	},
 	{ 
 		"year" : 2016,
-		"country": Canada,
+		"country": "Canada",
 		"oil-consumption": 107.0,
 		"coal-consumption":19.9 ,
 		"nuclear-energy-consumption": 21.8
