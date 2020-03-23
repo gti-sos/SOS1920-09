@@ -208,6 +208,32 @@ app.delete(BASE_API_URL+"/plugin-vehicles-stats/:param",(req,res) =>{
 	}
 });
 
+// PUT plugInVehiclesStats/XXX
+app.put(BASE_API_URL+"/plugin-vehicles-stats/:country/:year", (req,res) =>{
+		
+	var country = req.params.country;
+	var year = req.params.year;
+	
+	var body = req.body;
+	
+	var updatedData = plugInVehiclesStats.map((c) => {
+		var updatedD = c;
+		if (c.country == country && c.year == year) {
+			for (var p in body) {
+				updatedD[p] = body[p];
+			}	
+		}
+		return (updatedD)
+	});
+	
+	if (updatedData.length == 0) {
+		res.sendStatus(404, "NOT FOUND");
+	} else {
+		plugInVehiclesStats = updatedData;
+		res.sendStatus(200, "OK");
+	}
+});
+
 
 // --------------------------------------------------------------- //
 
@@ -337,6 +363,37 @@ app.delete(BASE_API_URL+"/renewable-sources-stats/:country/:year",(req,res) =>{
 	}
 });
 
+// PUT renewableSourcesStats/XXX
+app.put(BASE_API_URL+"/renewable-sources-stats/:country/:year", (req,res) =>{
+		
+	var params = req.params;
+	var year = params.year;
+	var country = params.country;
+	
+	var body = req.body;
+	
+	var updatedRenewableSourcesStats = renewableSourcesStats.map((r) => {
+		var updatedSourceStat = r;
+		
+		if (r.year === year && r.country === country) {
+			for (var p in body) {
+				updatedSourceStat[p] = body[p];
+			}	
+		}
+		
+		return (updatedSourceStat)
+		
+	});
+	
+	if (updatedRenewableSourcesStats.length === 0) {
+		res.sendStatus(404, "NOT FOUND");
+	} else {
+		renewableSourcesStats = updatedRenewableSourcesStats;
+		res.sendStatus(200, "OK");
+	}
+	
+});
+
 app.delete(BASE_API_URL+"/renewable-sources-stats/:param",(req,res) =>{
 	
 	var param = req.params.param;
@@ -460,7 +517,37 @@ app.post(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:param",(req,r
 	res.sendStatus(405, "METHOD NOT ALLOWED");
 });
 
-    
+
+// PUT oilCoalNuclearEnergyConsumptionStats/XXX
+app.put(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:country/:year", (req,res) =>{
+	var year = req.params.year;
+	var country = req.params.country;
+	
+	var body = req.body;
+	
+	var updateOilCoalNuclearEnergyConsumptionStats = oilCoalNuclearEnergyConsumptionStats.map((r) => {
+		var updatedSourceStat = r;
+		
+		if (r.year === year && r.country === country) {
+			for (var p in body) {
+				updatedSourceStat[p] = body[p];
+			}	
+		}
+		
+		return (updatedSourceStat)
+		
+	});
+	
+	if (updateOilCoalNuclearEnergyConsumptionStats.length === 0) {
+		res.sendStatus(404, "NOT FOUND");
+	} else {
+		oilCoalNuclearEnergyConsumptionStats = updateOilCoalNuclearEnergyConsumptionStats;
+		res.sendStatus(200, "OK");
+	}
+	
+});
+
+
 
 //  delete oilCoalNuclearEnergyConsumptionStats/XXX
     
@@ -502,80 +589,9 @@ app.delete(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:param",(req
 
 
 
+
+
 // --------------------------------------------------------------- //
-
-
-
-
-
-
-// GET CONTACTS/XXX
-
-app.get(BASE_API_URL+"/contacts/:name", (req,res) =>{
-	
-	var name = req.params.name; //params contiene todos los parametros
-	
-	var filteredContacts = contacts.filter((c) => {
-		return (c.name == name)
-	});
-	
-	if(filteredContacts.length >= 1) {
-		res.send(filteredContacts[0]);	
-	} else {
-		res.sendStatus(404, "NOT FOUND");
-	}
-	
-});
-
-
-// PUT CONTACTS/XXX
-app.put(BASE_API_URL+"/contacts/:name", (req,res) =>{
-		
-	var params = req.params;
-	var name = params.name;
-	
-	var body = req.body;
-	
-	var updatedContacts = contacts.map((c) => {
-		var updatedC = c;
-		
-		if (c.name == name) {
-			for (var p in body) {
-				updatedC[p] = body[p];
-			}	
-		}
-		
-		
-		return (updatedC)
-		
-	});
-	
-	if (updatedContacts.length == 0) {
-		res.sendStatus(404, "NOT FOUND");
-	} else {
-		contacts = updatedContacts;
-		res.sendStatus(200, "OK");
-	}
-	
-});
-
-// DELETE CONTACTS/XXX
-app.delete(BASE_API_URL+"/contacts/:name",(req,res) =>{
-	
-	var name = req.params.name; //params contiene todos los parametros
-	
-	var filteredContacts = contacts.filter((c) => {
-		return (c.name != name);
-	});
-	
-	if(filteredContacts.length < contacts.length) {
-		contacts = filteredContacts;
-		res.sendStatus(200);
-		
-	} else {
-		res.sendStatus(404, "NOT FOUND");
-	}
-});
 
 
 
