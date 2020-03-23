@@ -98,9 +98,15 @@ app.get(BASE_API_URL+"/contacts", (req,res) =>{
 
 // RESOURCE oilCoalNuclearEnergyConsumptionStats
 
+		//GET oilCoalNuclearEnergyConsumptionStats
 
+				app.get(BASE_API_URL+"/oil-coal-nuclear-Energy-Consumption-Stats", (req,res) => {
+				  res.send(JSON.stringyfy(oil-coal-nuclear-Energy-Consumption-Stats,null,2));
+				});
 
-
+		//POST oilCoalNuclearEnergyConsumptionStats
+				
+				
 
 
 
