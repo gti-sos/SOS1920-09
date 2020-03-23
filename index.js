@@ -10,18 +10,12 @@ var port = process.env.PORT || 80;
 
 var plugInVehiclesStats = [
 	{ 
-		"country": "Canada",
-		"year": 2018,
-		"pev-stock": 81435,
-		"annual-sale": 33879,
-		"cars-per-1000": 2.2
+		name: "peter",
+		phone: 123456	
 	},
 	{ 
-		"country": "China",
-		"year": 2018,
-		"pev-stock": 2243772,
-		"annual-sale": 1016002,
-		"cars-per-1000": 1.6
+		name: "pablo",
+		phone: 789456	
 	}
 ];
 
@@ -77,6 +71,12 @@ const BASE_API_URL =  "/api/v1";
 
 // RESOURCE renewableSourcesStats
 
+// GET renewableSourcesStats
+
+app.get(BASE_API_URL+"/contacts", (req,res) =>{
+	res.send(JSON.stringify(contacts,null,2));
+	//console.log("Data sent:"+JSON.stringify(contacts,null,2));
+});
 
 
 
