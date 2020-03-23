@@ -213,7 +213,7 @@ app.put(BASE_API_URL+"/plugin-vehicles-stats/:country/:year", (req,res) =>{
 		
 	var country = req.params.country;
 	var year = req.params.year;
-	
+	var notFound = renewableSourcesStats.filter((r) => {return (r.year == year && r.country == country);}) == 0;
 	var body = req.body;
 	
 	var updatedData = plugInVehiclesStats.map((c) => {
@@ -226,7 +226,7 @@ app.put(BASE_API_URL+"/plugin-vehicles-stats/:country/:year", (req,res) =>{
 		return (updatedD)
 	});
 	
-	if (updatedData.length == 0) {
+	if (notFound) {
 		res.sendStatus(404, "NOT FOUND");
 	} else {
 		plugInVehiclesStats = updatedData;
@@ -462,7 +462,7 @@ app.delete(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats",(req,res) =
 
 // PUT oilCoalNuclearEnergyConsumptionStats
 
-app.put(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats",(req,res) =>{	
+app.delete(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats",(req,res) =>{	
 	res.sendStatus(405, "METHOD NOT ALLOWED");
 
 });
@@ -525,28 +525,31 @@ app.post(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:param",(req,r
 
 // PUT oilCoalNuclearEnergyConsumptionStats/XXX
 app.put(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:country/:year", (req,res) =>{
-		
-	var country = req.params.country;
 	var year = req.params.year;
-	
+	var country = req.params.country;
+	var notFound = renewableSourcesStats.filter((r) => {return (r.year == year && r.country == country);}) == 0;
 	var body = req.body;
 	
-	var updatedData = oilCoalNuclearEnergyConsumptionStats.map((c) => {
-		var updated = c;
-		if (c.country == country && c.year == year) {
+	var updateOilCoalNuclearEnergyConsumptionStats = oilCoalNuclearEnergyConsumptionStats.map((r) => {
+		var updatedSourceStat = r;
+		
+		if (r.year === year && r.country === country) {
 			for (var p in body) {
-				updated[p] = body[p];
+				updatedSourceStat[p] = body[p];
 			}	
 		}
-		return (updated)
+		
+		return (updatedSourceStat)
+		
 	});
 	
-	if (updatedData.length == 0) {
+	if (notFound) {
 		res.sendStatus(404, "NOT FOUND");
 	} else {
-		oilCoalNuclearEnergyConsumptionStats = updatedData;
+		oilCoalNuclearEnergyConsumptionStats = updateOilCoalNuclearEnergyConsumptionStats;
 		res.sendStatus(200, "OK");
 	}
+	
 });
 
 
