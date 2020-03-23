@@ -217,7 +217,7 @@ app.delete(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats",(req,res) =
 
 // PUT newOilCoalNuclearEnergyConsumptionStat
 
-app.delete(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats",(req,res) =>{	
+app.put(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats",(req,res) =>{	
 	res.sendStatus(405, "METHOD NOT ALLOWED");
 
 });
