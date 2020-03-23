@@ -27,16 +27,16 @@ var plugInVehiclesStats = [
 
 var renewableSourcesStats = [
 	{ 
-		"year": "Spain",
-		"country": 2016,
+		"country": "Spain",
+		"year": 2016,
 		"percentage-re-total": 38.1,
 		"percentage-hydropower-total": 14.5,
 		"percentage-wind-power-total": 17.8
 		
 	},
 	{ 
-		"year": "France",
-		"country": 2016,
+		"country": "France",
+		"year": 2016,
 		"percentage-re-total": 17.5,
 		"percentage-hydropower-total": 11.7,
 		"percentage-wind-power-total": 3.8
@@ -46,15 +46,15 @@ var renewableSourcesStats = [
 
 var oilCoalNuclearEnergyConsumptionStats = [
 	{ 
-		"year" : 2016,
 		"country": "USA",
+		"year" : 2016,
 		"oil-consumption": 907.6,
 		"coal-consumption": 340.6,
 		"nuclear-energy-consumption":191.9
 	},
 	{ 
-		"year" : 2016,
 		"country": "Canada",
+		"year" : 2016,
 		"oil-consumption": 107.0,
 		"coal-consumption":19.9 ,
 		"nuclear-energy-consumption": 21.8
@@ -118,6 +118,50 @@ app.put(BASE_API_URL+ "/plugin-vehicles-stats",(req,res) =>{
 });
 
 
+
+// GET plugInVehiclesStats/XXX
+
+app.get(BASE_API_URL+"/plugin-vehicles-stats/:country/:year", (req,res) =>{
+	
+    var country = req.params.country;
+	var year = req.params.year; 
+     
+	
+    
+	var filteredData = plugInVehiclesStats.filter((r) => {
+		return  (r.country == country) && (r.year == year);
+	});
+    
+	
+	if(filteredData.length >= 1) {
+		res.send(filteredData[0]);	
+	} else {
+		res.sendStatus(404, "CONTACT NOT FOUND");
+	}
+	
+});
+
+
+// GET plugInVehiclesStats/XXX
+
+app.get(BASE_API_URL+"/plugin-vehicles-stats/:param", (req,res) =>{
+	
+	var param = req.params.param; 
+	
+	var filteredData = plugInVehiclesStats.filter((r) => {
+		return (r["year"] == param) || (r["country"] == param);
+	});
+	
+    
+	if(filteredData.length >= 1) {
+		res.send(filteredData);	
+	} else {
+		res.sendStatus(404, "CONTACT NOT FOUND");
+	}
+	
+});
+
+
 // --------------------------------------------------------------- //
 
 // RESOURCE renewableSourcesStats
@@ -173,6 +217,49 @@ app.put(BASE_API_URL+"/renewable-sources-stats",(req,res) =>{
 
 
 
+// GET renewableSourcesStats/XXX
+
+app.get(BASE_API_URL+"/renewable-sources-stats/:country/:year", (req,res) =>{
+	
+	var year = req.params.year; 
+    var country = req.params.country; 
+	
+    
+	var filteredData = renewableSourcesStats.filter((r) => {
+		return (r.country == country) && (r.year == year);
+	});
+    
+	
+	if(filteredData.length >= 1) {
+		res.send(filteredData[0]);	
+	} else {
+		res.sendStatus(404, "CONTACT NOT FOUND");
+	}
+	
+});
+
+
+// GET renewableSourcesStats/XXX
+
+app.get(BASE_API_URL+"/renewable-sources-stats/:param", (req,res) =>{
+	
+	var param = req.params.param; 
+	
+	var filteredData = renewableSourcesStats.filter((r) => {
+		return (r["year"] == param) || (r["country"] == param);
+	});
+	
+    
+	if(filteredData.length >= 1) {
+		res.send(filteredData);	
+	} else {
+		res.sendStatus(404, "CONTACT NOT FOUND");
+	}
+	
+});
+
+
+
 
 // --------------------------------------------------------------- //
 
@@ -205,7 +292,7 @@ app.get(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats", (req,res) => 
 	}
 });
 
-// DELETE newOilCoalNuclearEnergyConsumptionStat
+// DELETE oilCoalNuclearEnergyConsumptionStats
 
 app.delete(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats",(req,res) =>{	
 	oilCoalNuclearEnergyConsumptionStats = [];
@@ -215,13 +302,53 @@ app.delete(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats",(req,res) =
 
 
 
-// PUT newOilCoalNuclearEnergyConsumptionStat
+// PUT oilCoalNuclearEnergyConsumptionStats
 
-app.put(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats",(req,res) =>{	
+app.delete(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats",(req,res) =>{	
 	res.sendStatus(405, "METHOD NOT ALLOWED");
 
 });
 	
+    
+
+// GET oilCoalNuclearEnergyConsumptionStats/XXX
+
+app.get(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:year/:country", (req,res) =>{
+	
+	var year = req.params.year;
+    var country = req.params.country;
+    
+	
+	var  filteredParam = oilCoalNuclearEnergyConsumptionStats.filter((c) => {
+		return (c.year == year) && (c.country == country)
+	});
+	
+	if( filteredParam.length >= 1) {
+		res.send(filteredParam[0]);	
+	} else {
+		res.sendStatus(404, "CONTACT NOT FOUND");
+	}
+	
+});
+
+// GET CONTACTS/XXX
+
+app.get(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:country/:year", (req,res) =>{
+	
+	var param = req.params.param; 
+	
+	var filteredParam = oilCoalNuclearEnergyConsumptionStats.filter((c) => {
+		return (c["year"] == param) || (c["country"] == param);
+	});
+	
+	if( filteredParam.length >= 1) {
+		res.send(filteredParam);	
+	} else {
+		res.sendStatus(404, "CONTACT NOT FOUND");
+	}
+	
+});
+    
     
 
 // --------------------------------------------------------------- //
@@ -287,7 +414,7 @@ app.delete(BASE_API_URL+"/contacts/:name",(req,res) =>{
 	var name = req.params.name; //params contiene todos los parametros
 	
 	var filteredContacts = contacts.filter((c) => {
-		return (c.name != name)
+		return (c.name != name);
 	});
 	
 	if(filteredContacts.length < contacts.length) {
