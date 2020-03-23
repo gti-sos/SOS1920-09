@@ -313,7 +313,7 @@ app.delete(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats",(req,res) =
 
 // GET oilCoalNuclearEnergyConsumptionStats/XXX
 
-app.get(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:year/:country", (req,res) =>{
+app.get(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:country/:year", (req,res) =>{
 	
 	var year = req.params.year;
     var country = req.params.country;
@@ -333,7 +333,7 @@ app.get(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:year/:country"
 
 // GET CONTACTS/XXX
 
-app.get(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:country/:year", (req,res) =>{
+app.get(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:param", (req,res) =>{
 	
 	var param = req.params.param; 
 	
