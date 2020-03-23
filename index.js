@@ -457,7 +457,7 @@ app.delete(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats",(req,res) =
 
 // PUT oilCoalNuclearEnergyConsumptionStats
 
-app.delete(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats",(req,res) =>{	
+app.put(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats",(req,res) =>{	
 	res.sendStatus(405, "METHOD NOT ALLOWED");
 
 });
@@ -520,31 +520,28 @@ app.post(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:param",(req,r
 
 // PUT oilCoalNuclearEnergyConsumptionStats/XXX
 app.put(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:country/:year", (req,res) =>{
-	var year = req.params.year;
+		
 	var country = req.params.country;
+	var year = req.params.year;
 	
 	var body = req.body;
 	
-	var updateOilCoalNuclearEnergyConsumptionStats = oilCoalNuclearEnergyConsumptionStats.map((r) => {
-		var updatedSourceStat = r;
-		
-		if (r.year === year && r.country === country) {
+	var updatedData = oilCoalNuclearEnergyConsumptionStats.map((c) => {
+		var updated = c;
+		if (c.country == country && c.year == year) {
 			for (var p in body) {
-				updatedSourceStat[p] = body[p];
+				updated[p] = body[p];
 			}	
 		}
-		
-		return (updatedSourceStat)
-		
+		return (updated)
 	});
 	
-	if (updateOilCoalNuclearEnergyConsumptionStats.length === 0) {
+	if (updatedData.length == 0) {
 		res.sendStatus(404, "NOT FOUND");
 	} else {
-		oilCoalNuclearEnergyConsumptionStats = updateOilCoalNuclearEnergyConsumptionStats;
+		oilCoalNuclearEnergyConsumptionStats = updatedData;
 		res.sendStatus(200, "OK");
 	}
-	
 });
 
 
