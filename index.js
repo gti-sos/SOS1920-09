@@ -43,6 +43,48 @@ var oilCoalNuclearEnergyConsumptionStats = [
 
 const BASE_API_URL =  "/api/v1";
 
+
+
+
+
+
+
+
+// RESOURCE plugInVehiclesStats
+
+
+
+
+
+
+
+
+
+
+// RESOURCE renewableSourcesStats
+
+
+
+
+
+
+
+
+// RESOURCE oilCoalNuclearEnergyConsumptionStats
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // GET CONTACTS
 
 app.get(BASE_API_URL+"/contacts", (req,res) =>{
