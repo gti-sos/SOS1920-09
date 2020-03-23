@@ -106,7 +106,7 @@ app.post(BASE_API_URL+"/plugin-vehicles-stats",(req,res) =>{
 
 app.delete(BASE_API_URL+"/plugin-vehicles-stats",(req,res) =>{	
 	plugInVehiclesStats = [];
-	res.sendStatus(200);
+	res.sendStatus(200, "OK");
 
 });
 
@@ -136,7 +136,7 @@ app.get(BASE_API_URL+"/plugin-vehicles-stats/:country/:year", (req,res) =>{
 	if(filteredData.length >= 1) {
 		res.send(filteredData[0]);	
 	} else {
-		res.sendStatus(404, "CONTACT NOT FOUND");
+		res.sendStatus(404, "NOT FOUND");
 	}
 	
 });
@@ -156,7 +156,7 @@ app.get(BASE_API_URL+"/plugin-vehicles-stats/:param", (req,res) =>{
 	if(filteredData.length >= 1) {
 		res.send(filteredData);	
 	} else {
-		res.sendStatus(404, "CONTACT NOT FOUND");
+		res.sendStatus(404, "NOT FOUND");
 	}
 	
 });
@@ -185,32 +185,26 @@ app.delete(BASE_API_URL+"/plugin-vehicles-stats/:country/:year",(req,res) =>{
 	
 	if(filteredData.length < plugInVehiclesStats.length) {
 		plugInVehiclesStats = filteredData;
-		res.sendStatus(200);
+		res.sendStatus(200, "OK");
 		
 	} else {
-		res.sendStatus(404, "CONTACT NOT FOUND");
+		res.sendStatus(404, "NOT FOUND");
 	}
 });
 app.delete(BASE_API_URL+"/plugin-vehicles-stats/:param",(req,res) =>{
 	
 	var param = req.params.param;
 	
-	if (typeof param == 'string') {
-        paramType = "country";
-    } else if (typeof param == 'number')  {
-        paramType = "year";
-    }
-	
 	var filteredData = plugInVehiclesStats.filter((r) => {
-		return r[paramType] != param;
+		return r["year"] != param && r["country"] != param;
 	});
 	
 	if(filteredData.length < plugInVehiclesStats.length) {
 		plugInVehiclesStats = filteredData;
-		res.sendStatus(200);
+		res.sendStatus(200, "OK");
 		
 	} else {
-		res.sendStatus(404, "CONTACT NOT FOUND");
+		res.sendStatus(404, "NOT FOUND");
 	}
 });
 
@@ -286,7 +280,7 @@ app.get(BASE_API_URL+"/renewable-sources-stats/:country/:year", (req,res) =>{
 	if(filteredData.length >= 1) {
 		res.send(filteredData[0]);	
 	} else {
-		res.sendStatus(404, "CONTACT NOT FOUND");
+		res.sendStatus(404, "NOT FOUND");
 	}
 	
 });
@@ -306,7 +300,7 @@ app.get(BASE_API_URL+"/renewable-sources-stats/:param", (req,res) =>{
 	if(filteredData.length >= 1) {
 		res.send(filteredData);	
 	} else {
-		res.sendStatus(404, "CONTACT NOT FOUND");
+		res.sendStatus(404, "NOT FOUND");
 	}
 	
 });
@@ -336,10 +330,10 @@ app.delete(BASE_API_URL+"/renewable-sources-stats/:country/:year",(req,res) =>{
 	
 	if(filteredData.length < renewableSourcesStats.length) {
 		renewableSourcesStats = filteredData;
-		res.sendStatus(200);
+		res.sendStatus(200, "OK");
 		
 	} else {
-		res.sendStatus(404, "CONTACT NOT FOUND");
+		res.sendStatus(404, "NOT FOUND");
 	}
 });
 
@@ -353,10 +347,10 @@ app.delete(BASE_API_URL+"/renewable-sources-stats/:param",(req,res) =>{
 	
 	if(filteredData.length < renewableSourcesStats.length) {
 		renewableSourcesStats = filteredData;
-		res.sendStatus(200);
+		res.sendStatus(200, "OK");
 		
 	} else {
-		res.sendStatus(404, "CONTACT NOT FOUND");
+		res.sendStatus(404, "NOT FOUND");
 	}
 });
 
@@ -398,7 +392,7 @@ app.get(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats", (req,res) => 
 
 app.delete(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats",(req,res) =>{	
 	oilCoalNuclearEnergyConsumptionStats = [];
-	res.sendStatus(200);
+	res.sendStatus(200, "OK");
 
 });
 
@@ -428,7 +422,7 @@ app.get(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:country/:year"
 	if( filteredParam.length >= 1) {
 		res.send(filteredParam[0]);	
 	} else {
-		res.sendStatus(404, "CONTACT NOT FOUND");
+		res.sendStatus(404, "NOT FOUND");
 	}
 	
 });
@@ -446,7 +440,7 @@ app.get(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:param", (req,r
 	if( filteredParam.length >= 1) {
 		res.send(filteredParam);	
 	} else {
-		res.sendStatus(404, "CONTACT NOT FOUND");
+		res.sendStatus(404, "NOT FOUND");
 	}
 	
 });
@@ -476,16 +470,16 @@ app.delete(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:country/:ye
 	var country = req.params.country;
 	var year = req.params.year;
 	
-	var filteredParam = oilCoalNuclearEnergyConsumptionStats.filter((r) => {
+	var filteredData = oilCoalNuclearEnergyConsumptionStats.filter((r) => {
 		return (r.country != country) || (r.year != year);
 	});
 	
-	if(filteredParam.length < oilCoalNuclearEnergyConsumptionStats.length) {
-		oilCoalNuclearEnergyConsumptionStats = filteredParam;
-		res.sendStatus(200);
+	if(filteredData.length < oilCoalNuclearEnergyConsumptionStats.length) {
+		oilCoalNuclearEnergyConsumptionStats = filteredData;
+		res.sendStatus(200, "OK");
 		
 	} else {
-		res.sendStatus(404, "CONTACT NOT FOUND");
+		res.sendStatus(404, "NOT FOUND");
 	}
 });
 
@@ -493,24 +487,20 @@ app.delete(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:param",(req
 	
 	var param = req.params.param;
 	
-	if (typeof param == 'string') {
-        paramType = "country";
-    } else if (typeof param == 'number')  {
-        paramType = "year";
-    }
-	
-	var filteredParam = oilCoalNuclearEnergyConsumptionStats.filter((r) => {
-		return r[paramType] != param;
+	var filteredData = oilCoalNuclearEnergyConsumptionStats.filter((r) => {
+		return r["year"] != param && r["country"] != param;
 	});
 	
-	if(filteredParam.length < oilCoalNuclearEnergyConsumptionStats.length) {
-		oilCoalNuclearEnergyConsumptionStats = filteredParam;
-		res.sendStatus(200);
+	if(filteredData.length < oilCoalNuclearEnergyConsumptionStats.length) {
+		oilCoalNuclearEnergyConsumptionStats = filteredData;
+		res.sendStatus(200, "OK");
 		
 	} else {
-		res.sendStatus(404, "CONTACT NOT FOUND");
+		res.sendStatus(404, "NOT FOUND");
 	}
 });
+
+
 
 // --------------------------------------------------------------- //
 
@@ -532,7 +522,7 @@ app.get(BASE_API_URL+"/contacts/:name", (req,res) =>{
 	if(filteredContacts.length >= 1) {
 		res.send(filteredContacts[0]);	
 	} else {
-		res.sendStatus(404, "CONTACT NOT FOUND");
+		res.sendStatus(404, "NOT FOUND");
 	}
 	
 });
@@ -561,7 +551,7 @@ app.put(BASE_API_URL+"/contacts/:name", (req,res) =>{
 	});
 	
 	if (updatedContacts.length == 0) {
-		res.sendStatus(404, "CONTACT NOT FOUND");
+		res.sendStatus(404, "NOT FOUND");
 	} else {
 		contacts = updatedContacts;
 		res.sendStatus(200, "OK");
@@ -583,7 +573,7 @@ app.delete(BASE_API_URL+"/contacts/:name",(req,res) =>{
 		res.sendStatus(200);
 		
 	} else {
-		res.sendStatus(404, "CONTACT NOT FOUND");
+		res.sendStatus(404, "NOT FOUND");
 	}
 });
 
@@ -593,4 +583,3 @@ app.listen(port, () => {
 	console.log("Server ready");
 });
 
-console.log("Starting server...");
