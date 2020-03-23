@@ -72,7 +72,12 @@ const BASE_API_URL =  "/api/v1";
 
 // RESOURCE plugInVehiclesStats
 
+// GET plugInVehiclesStats
 
+app.get(BASE_API_URL+"/plugin-vehicles-stats", (req,res) =>{
+	res.send(JSON.stringify(plugInVehiclesStats,null,2));
+	//console.log("Data sent:"+JSON.stringify(contacts,null,2));
+});
 
 
 
@@ -85,14 +90,10 @@ const BASE_API_URL =  "/api/v1";
 
 // GET renewableSourcesStats
 
-app.get(BASE_API_URL+"/contacts", (req,res) =>{
-	res.send(JSON.stringify(contacts,null,2));
-	//console.log("Data sent:"+JSON.stringify(contacts,null,2));
+app.get(BASE_API_URL+"/renewable-sources-stats", (req,res) =>{
+	res.send(JSON.stringify(renewableSourcesStats, null, 2)); 
+	//console.log("Data sent:"+JSON.stringify(renewableSourcesStats, null, 2));
 });
-
-
-
-
 
 
 
