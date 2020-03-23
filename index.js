@@ -343,6 +343,42 @@ app.post(BASE_API_URL+"/renewable-sources-stats/:param",(req,res) =>{
 	res.sendStatus(405, "METHOD NOT ALLOWED");
 });
 
+
+
+// PUT renewableSourcesStats/XXX
+app.put(BASE_API_URL+"/renewable-sources-stats/:country/:year", (req,res) =>{
+		
+	var params = req.params;
+	var year = params.year;
+	var country = params.country;
+	
+	var body = req.body;
+	
+	var notFound = renewableSourcesStats.filter((r) => {return (r.year == year && r.country == country);}) == 0;
+	
+	var updatedRenewableSourcesStats = renewableSourcesStats.map((r) => {
+		var updatedSourceStat = r;
+
+		if (r.year == year && r.country == country) {
+			for (var p in body) {
+				updatedSourceStat[p] = body[p];
+			}	
+
+		}
+
+		return (updatedSourceStat)
+		
+	});
+	
+	if (notFound) {
+		res.sendStatus(404, "NOT FOUND");
+	} else {
+		renewableSourcesStats = updatedRenewableSourcesStats;
+		res.sendStatus(200, "OK");
+	}
+	
+});
+
 // DELETE renewableSourcesStats/XXX
 
 app.delete(BASE_API_URL+"/renewable-sources-stats/:country/:year",(req,res) =>{
@@ -361,37 +397,6 @@ app.delete(BASE_API_URL+"/renewable-sources-stats/:country/:year",(req,res) =>{
 	} else {
 		res.sendStatus(404, "NOT FOUND");
 	}
-});
-
-// PUT renewableSourcesStats/XXX
-app.put(BASE_API_URL+"/renewable-sources-stats/:country/:year", (req,res) =>{
-		
-	var params = req.params;
-	var year = params.year;
-	var country = params.country;
-	
-	var body = req.body;
-	
-	var updatedRenewableSourcesStats = renewableSourcesStats.map((r) => {
-		var updatedSourceStat = r;
-		
-		if (r.year === year && r.country === country) {
-			for (var p in body) {
-				updatedSourceStat[p] = body[p];
-			}	
-		}
-		
-		return (updatedSourceStat)
-		
-	});
-	
-	if (updatedRenewableSourcesStats.length === 0) {
-		res.sendStatus(404, "NOT FOUND");
-	} else {
-		renewableSourcesStats = updatedRenewableSourcesStats;
-		res.sendStatus(200, "OK");
-	}
-	
 });
 
 app.delete(BASE_API_URL+"/renewable-sources-stats/:param",(req,res) =>{
