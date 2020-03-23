@@ -162,6 +162,17 @@ app.get(BASE_API_URL+"/plugin-vehicles-stats/:param", (req,res) =>{
 });
 
 
+// POST plugInVehiclesStats/XXX
+
+app.post(BASE_API_URL+"/plugin-vehicles-stats/:country/:year",(req,res) =>{
+	res.sendStatus(405, "METHOD NOT ALLOWED");
+});
+
+app.post(BASE_API_URL+"/plugin-vehicles-stats/:param",(req,res) =>{
+	res.sendStatus(405, "METHOD NOT ALLOWED");
+});
+
+
 // --------------------------------------------------------------- //
 
 // RESOURCE renewableSourcesStats
@@ -260,6 +271,18 @@ app.get(BASE_API_URL+"/renewable-sources-stats/:param", (req,res) =>{
 
 
 
+// POST renewableSourcesStats/XXX
+
+app.post(BASE_API_URL+"/renewable-sources-stats/:country/:year",(req,res) =>{
+	res.sendStatus(405, "METHOD NOT ALLOWED");
+});
+
+app.post(BASE_API_URL+"/renewable-sources-stats/:param",(req,res) =>{
+	res.sendStatus(405, "METHOD NOT ALLOWED");
+});
+
+
+
 
 // --------------------------------------------------------------- //
 
@@ -331,7 +354,7 @@ app.get(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:country/:year"
 	
 });
 
-// GET CONTACTS/XXX
+// GET oilCoalNuclearEnergyConsumptionStats/XXX
 
 app.get(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:param", (req,res) =>{
 	
@@ -348,7 +371,18 @@ app.get(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:param", (req,r
 	}
 	
 });
-    
+
+ //POST oilCoalNuclearEnergyConsumptionStats/XXXX
+ 
+app.post(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:country/:year",(req,res) =>{
+	res.sendStatus(405, "METHOD NOT ALLOWED");
+});
+
+
+app.post(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:param",(req,res) =>{
+	res.sendStatus(405, "METHOD NOT ALLOWED");
+});
+
     
 
 // --------------------------------------------------------------- //
