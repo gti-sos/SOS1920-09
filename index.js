@@ -172,6 +172,48 @@ app.post(BASE_API_URL+"/plugin-vehicles-stats/:param",(req,res) =>{
 	res.sendStatus(405, "METHOD NOT ALLOWED");
 });
 
+// DELETE plugInVehiclesStats/XXX
+
+app.delete(BASE_API_URL+"/plugin-vehicles-stats/:country/:year",(req,res) =>{
+	
+	var country = req.params.country;
+	var year = req.params.year;
+	
+	var filteredData = plugInVehiclesStats.filter((c) => {
+		return (c.country != country) || (c.year != year);
+	});
+	
+	if(filteredData.length < plugInVehiclesStats.length) {
+		plugInVehiclesStats = filteredData;
+		res.sendStatus(200);
+		
+	} else {
+		res.sendStatus(404, "CONTACT NOT FOUND");
+	}
+});
+app.delete(BASE_API_URL+"/plugin-vehicles-stats/:param",(req,res) =>{
+	
+	var param = req.params.param;
+	
+	if (typeof param == 'string') {
+        paramType = "country";
+    } else if (typeof param == 'number')  {
+        paramType = "year";
+    }
+	
+	var filteredData = plugInVehiclesStats.filter((r) => {
+		return r[paramType] != param;
+	});
+	
+	if(filteredData.length < plugInVehiclesStats.length) {
+		plugInVehiclesStats = filteredData;
+		res.sendStatus(200);
+		
+	} else {
+		res.sendStatus(404, "CONTACT NOT FOUND");
+	}
+});
+
 
 // --------------------------------------------------------------- //
 
@@ -281,10 +323,53 @@ app.post(BASE_API_URL+"/renewable-sources-stats/:param",(req,res) =>{
 	res.sendStatus(405, "METHOD NOT ALLOWED");
 });
 
+// DELETE renewableSourcesStats/XXX
+
+app.delete(BASE_API_URL+"/renewable-sources-stats/:country/:year",(req,res) =>{
+	
+	var country = req.params.country;
+	var year = req.params.year;
+	
+	var filteredData = renewableSourcesStats.filter((r) => {
+		return (r.country != country) || (r.year != year);
+	});
+	
+	if(filteredData.length < renewableSourcesStats.length) {
+		renewableSourcesStats = filteredData;
+		res.sendStatus(200);
+		
+	} else {
+		res.sendStatus(404, "CONTACT NOT FOUND");
+	}
+});
+
+app.delete(BASE_API_URL+"/renewable-sources-stats/:param",(req,res) =>{
+	
+	var param = req.params.param;
+	
+	if (typeof param == 'string') {
+        paramType = "country";
+    } else if (typeof param == 'number')  {
+        paramType = "year";
+    }
+	
+	var filteredData = renewableSourcesStats.filter((r) => {
+		return r[paramType] != param;
+	});
+	
+	if(filteredData.length < renewableSourcesStats.length) {
+		renewableSourcesStats = filteredData;
+		res.sendStatus(200);
+		
+	} else {
+		res.sendStatus(404, "CONTACT NOT FOUND");
+	}
+});
 
 
 
-// ------------------------Ejemplos profesor--------------------------------------- //
+
+// ------------------------Ejemplos Ruben--------------------------------------- //
 
 
 // RESOURCE oilCoalNuclearEnergyConsumptionStats
@@ -372,6 +457,10 @@ app.get(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:param", (req,r
 	
 });
 
+
+
+
+
  //POST oilCoalNuclearEnergyConsumptionStats/XXXX
  
 app.post(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:country/:year",(req,res) =>{
@@ -384,6 +473,50 @@ app.post(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:param",(req,r
 });
 
     
+
+//  delete oilCoalNuclearEnergyConsumptionStats/XXX
+    
+   
+app.delete(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:country/:year",(req,res) =>{
+	
+	var country = req.params.country;
+	var year = req.params.year;
+	
+	var filteredParam = oilCoalNuclearEnergyConsumptionStats.filter((r) => {
+		return (r.country != country) || (r.year != year);
+	});
+	
+	if(filteredParam.length < oilCoalNuclearEnergyConsumptionStats.length) {
+		oilCoalNuclearEnergyConsumptionStats = filteredParam;
+		res.sendStatus(200);
+		
+	} else {
+		res.sendStatus(404, "CONTACT NOT FOUND");
+	}
+});
+
+app.delete(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:param",(req,res) =>{
+	
+	var param = req.params.param;
+	
+	if (typeof param == 'string') {
+        paramType = "country";
+    } else if (typeof param == 'number')  {
+        paramType = "year";
+    }
+	
+	var filteredParam = oilCoalNuclearEnergyConsumptionStats.filter((r) => {
+		return r[paramType] != param;
+	});
+	
+	if(filteredParam.length < oilCoalNuclearEnergyConsumptionStats.length) {
+		oilCoalNuclearEnergyConsumptionStats = filteredParam;
+		res.sendStatus(200);
+		
+	} else {
+		res.sendStatus(404, "CONTACT NOT FOUND");
+	}
+});
 
 // --------------------------------------------------------------- //
 
