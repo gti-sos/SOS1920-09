@@ -10,12 +10,18 @@ var port = process.env.PORT || 80;
 
 var plugInVehiclesStats = [
 	{ 
-		name: "peter",
-		phone: 123456	
+		"country": "Canada",
+		"year": 2018,
+		"pev-stock": 81435,
+		"annual-sale": 33879,
+		"cars-per-1000": 2.2
 	},
 	{ 
-		name: "pablo",
-		phone: 789456	
+		"country": "China",
+		"year": 2018,
+		"pev-stock": 2243772,
+		"annual-sale": 1016002,
+		"cars-per-1000": 1.6
 	}
 ];
 
