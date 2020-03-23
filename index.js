@@ -79,7 +79,27 @@ app.get(BASE_API_URL+"/plugin-vehicles-stats", (req,res) =>{
 	//console.log("Data sent:"+JSON.stringify(contacts,null,2));
 });
 
+// POST plugInVehiclesStats
 
+app.post(BASE_API_URL+"/plugin-vehicles-stats",(req,res) =>{
+	
+	var newPlugInVehiclesStat = req.body; 
+	//console.log(newPlugInVehiclesStats);
+	
+	if((newPlugInVehiclesStat == {}) 
+    || (newPlugInVehiclesStat.country == null) 
+    || (newPlugInVehiclesStat.year == null) 
+    || (newPlugInVehiclesStat["pev-stock"] == null) 
+    || (newPlugInVehiclesStat["annual-sale"] == null) 
+    || (newPlugInVehiclesStat["cars-per-1000"]== null) ) {
+    
+		res.sendStatus(400,"BAD REQUEST");
+	} 
+    else {
+		plugInVehiclesStats.push(newPlugInVehiclesStat); 	
+		res.sendStatus(201,"CREATED");
+	}
+}); 
 
 
 
@@ -97,6 +117,39 @@ app.get(BASE_API_URL+"/renewable-sources-stats", (req,res) =>{
 
 
 
+// POST renewableSourcesStats
+
+app.post(BASE_API_URL+"/renewable-sources-stats",(req,res) =>{
+	
+	var newRenewableSourcesStat = req.body;
+	//console.log(renewableSourcesStats);
+	
+
+	
+	
+	if((newRenewableSourcesStat == {}) 
+         || (newRenewableSourcesStat.country == null) 
+         || (newRenewableSourcesStat.year == null) 
+         || (newRenewableSourcesStat["percentage-re-total"] == null) 
+         || (newRenewableSourcesStat["percentage-hydropower-total"] == null) 
+         || (newRenewableSourcesStat["percentage-wind-power-total"] == null)) {		
+		res.sendStatus(400,"BAD REQUEST");
+	} else {
+		renewableSourcesStats.push(newRenewableSourcesStat); 	
+		res.sendStatus(201,"CREATED");
+	}
+});
+
+
+// DELETE CONTACTS
+
+app.delete(BASE_API_URL+"/contacts",(req,res) =>{	
+	contacts = [];
+	res.sendStatus(200);
+
+});
+
+
 // RESOURCE oilCoalNuclearEnergyConsumptionStats
 
 //GET oilCoalNuclearEnergyConsumptionStats
@@ -107,7 +160,23 @@ app.get(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats", (req,res) => 
 
 //POST oilCoalNuclearEnergyConsumptionStats
 				
-				
+	app.post(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats",(req,res) =>{
+	
+	var newOilCoalNuclearEnergyConsumptionStat = req.body; 
+	//console.log(newOilCoalNuclearEnergyConsumptionStat);
+	
+	if((newOilCoalNuclearEnergyConsumptionStat == {}) 
+    || (newOilCoalNuclearEnergyConsumptionStat.country == null) 
+    || (newOilCoalNuclearEnergyConsumptionStat.year == null)
+    || (newOilCoalNuclearEnergyConsumptionStat["oil-consumption"] == null) 
+	|| (newOilCoalNuclearEnergyConsumptionStat["coal-consumption"] == null) 
+    || (newOilCoalNuclearEnergyConsumptionStat["nuclear-energy-consumption"] == null)){
+		res.sendStatus(400,"BAD REQUEST");
+	} else {
+		oilCoalNuclearEnergyConsumptionStats.push(newOilCoalNuclearEnergyConsumptionStat); 	
+		res.sendStatus(201,"CREATED");
+	}
+});
 
 
 
