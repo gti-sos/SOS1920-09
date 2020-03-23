@@ -27,12 +27,20 @@ var plugInVehiclesStats = [
 
 var renewableSourcesStats = [
 	{ 
-		name: "peter",
-		phone: 123456	
+		"year": "Spain",
+		"country": 2016,
+		"percentage-re-total": 38.1,
+		"percentage-hydropower-total": 14.5,
+		"percentage-wind-power-total": 17.8
+		
 	},
 	{ 
-		name: "pablo",
-		phone: 789456	
+		"year": "France",
+		"country": 2016,
+		"percentage-re-total": 17.5,
+		"percentage-hydropower-total": 11.7,
+		"percentage-wind-power-total": 3.8
+		
 	}
 ];
 
@@ -77,9 +85,6 @@ const BASE_API_URL =  "/api/v1";
 
 
 // RESOURCE oilCoalNuclearEnergyConsumptionStats
-
-
-
 
 
 
