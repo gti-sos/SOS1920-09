@@ -347,14 +347,8 @@ app.delete(BASE_API_URL+"/renewable-sources-stats/:param",(req,res) =>{
 	
 	var param = req.params.param;
 	
-	if (typeof param == 'string') {
-        paramType = "country";
-    } else if (typeof param == 'number')  {
-        paramType = "year";
-    }
-	
 	var filteredData = renewableSourcesStats.filter((r) => {
-		return r[paramType] != param;
+		return r["year"] != param && r["country"] != param;
 	});
 	
 	if(filteredData.length < renewableSourcesStats.length) {
