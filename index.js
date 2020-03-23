@@ -64,6 +64,7 @@ var oilCoalNuclearEnergyConsumptionStats = [
 const BASE_API_URL =  "/api/v1";
 
 
+// --------------------------------------------------------------- //
 
 
 
@@ -109,8 +110,15 @@ app.delete(BASE_API_URL+"/plugin-vehicles-stats",(req,res) =>{
 
 });
 
+// PUT plugInVehiclesStats
+
+app.put(BASE_API_URL+ "/plugin-vehicles-stats",(req,res) =>{	
+	res.sendStatus(405, "METHOD NOT ALLOWED");
+
+});
 
 
+// --------------------------------------------------------------- //
 
 // RESOURCE renewableSourcesStats
 
@@ -151,10 +159,22 @@ app.post(BASE_API_URL+"/renewable-sources-stats",(req,res) =>{
 
 app.delete(BASE_API_URL+"/renewable-sources-stats",(req,res) =>{	
 	renewableSourcesStats = [];
-	res.sendStatus(200);
+	res.sendStatus(200, "OK");
 
 });
 
+
+// PUT renewableSourcesStats
+
+app.put(BASE_API_URL+"/renewable-sources-stats",(req,res) =>{	
+	res.sendStatus(405, "METHOD NOT ALLOWED");
+
+});
+
+
+
+
+// --------------------------------------------------------------- //
 
 
 // RESOURCE oilCoalNuclearEnergyConsumptionStats
@@ -194,6 +214,17 @@ app.delete(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats",(req,res) =
 });
 
 
+
+// PUT newOilCoalNuclearEnergyConsumptionStat
+
+app.delete(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats",(req,res) =>{	
+	res.sendStatus(405, "METHOD NOT ALLOWED");
+
+});
+	
+    
+
+// --------------------------------------------------------------- //
 
 
 
