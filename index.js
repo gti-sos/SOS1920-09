@@ -99,9 +99,15 @@ app.get(BASE_API_URL+"/renewable-sources-stats", (req,res) =>{
 
 // RESOURCE oilCoalNuclearEnergyConsumptionStats
 
+		//GET oilCoalNuclearEnergyConsumptionStats
 
+				app.get(BASE_API_URL+"/oil-coal-nuclear-Energy-Consumption-Stats", (req,res) => {
+				  res.send(JSON.stringyfy(oilcoalnuclearEnergyConsumptionStats,null,2));
+				});
 
-
+		//POST oilCoalNuclearEnergyConsumptionStats
+				
+				
 
 
 
