@@ -284,7 +284,7 @@ app.post(BASE_API_URL+"/renewable-sources-stats/:param",(req,res) =>{
 
 
 
-// --------------------------------------------------------------- //
+// ------------------------Ejemplos profesor--------------------------------------- //
 
 
 // RESOURCE oilCoalNuclearEnergyConsumptionStats
