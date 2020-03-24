@@ -508,22 +508,22 @@ app.get(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats", (req,res) => 
 
 // DELETE oilCoalNuclearEnergyConsumptionStats
 
+
+
+	
 app.delete(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats",(req,res) =>{	
 	oilCoalNuclearEnergyConsumptionStats = [];
 	res.sendStatus(200, "OK");
-
-});
+    });
 
 
 
 // PUT oilCoalNuclearEnergyConsumptionStats
-
-app.delete(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats",(req,res) =>{	
+app.put(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats",(req,res) =>{	
 	res.sendStatus(405, "METHOD NOT ALLOWED");
 
 });
-	
-    
+
 
 // GET oilCoalNuclearEnergyConsumptionStats/XXX
 
