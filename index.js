@@ -461,18 +461,18 @@ app.delete(BASE_API_URL+"/renewable-sources-stats/:param",(req,res) =>{
 app.get(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/loadInitialData", (req,res) => {
     oilCoalNuclearEnergyConsumptionStats = [
 	{ 
-		"country": "Canada",
-		"year": 2018,
-		"pev-stock": 81435,
-		"annual-sale": 33879,
-		"cars-per-1000": 2.2
+		"country": "USA",
+		"year" : 2016,
+		"oil-consumption": 907.6,
+		"coal-consumption": 340.6,
+		"nuclear-energy-consumption":191.9
 	},
 	{ 
-		"country": "China",
-		"year": 2018,
-		"pev-stock": 2243772,
-		"annual-sale": 1016002,
-		"cars-per-1000": 1.6
+		"country": "Canada",
+		"year" : 2016,
+		"oil-consumption": 107.0,
+		"coal-consumption":19.9 ,
+		"nuclear-energy-consumption": 21.8
 	}
 ];
     
