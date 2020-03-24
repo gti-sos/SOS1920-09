@@ -221,7 +221,7 @@ app.put(BASE_API_URL+"/plugin-vehicles-stats/:country/:year", (req,res) =>{
 		
 	var country = req.params.country;
 	var year = req.params.year;
-	var notFound = renewableSourcesStats.filter((r) => {return (r.year == year && r.country == country);}) == 0;
+	var notFound = plugInVehiclesStats.filter((r) => {return (r.year == year && r.country == country);}) == 0;
 	var body = req.body;
 	
 	var updatedData = plugInVehiclesStats.map((c) => {
@@ -583,7 +583,7 @@ app.post(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:param",(req,r
 app.put(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:country/:year", (req,res) =>{
 	var year = req.params.year;
 	var country = req.params.country;
-	var notFound = renewableSourcesStats.filter((r) => {return (r.year == year && r.country == country);}) == 0;
+	var notFound = oilCoalNuclearEnergyConsumptionStats.filter((r) => {return (r.year == year && r.country == country);}) == 0;
 	var body = req.body;
 	
 	var updateOilCoalNuclearEnergyConsumptionStats = oilCoalNuclearEnergyConsumptionStats.map((r) => {
