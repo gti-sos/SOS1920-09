@@ -47,10 +47,9 @@ module.exports = function(app) {
 		db.find({}, (error, oil) => {
 			oil.forEach((s) => {
 					delete s._id
-
-					res.send(JSON.stringify(oil,null,2));
-					console.log("Data sent: " + JSON.stringify((oil,null,2)));
 			});
+			res.send(JSON.stringify(oil,null,2));
+					console.log("Data sent: " + JSON.stringify((oil,null,2)));
 		});
 		console.log("OK");
 		
