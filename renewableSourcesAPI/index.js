@@ -28,7 +28,32 @@ module.exports = function (app) {
 			"percentage-hydropower-total": 11.7,
 			"percentage-wind-power-total": 3.8
 
+		},
+		{ 
+			"country": "Russia",
+			"year": 2016,
+			"percentage-re-total": 16.9,
+			"percentage-hydropower-total": 17.0,
+			"percentage-wind-power-total": 0.0
+
+		},
+		{ 
+			"country": "Canada",
+			"year": 2016,
+			"percentage-re-total": 65.0,
+			"percentage-hydropower-total": 58.0,
+			"percentage-wind-power-total": 4.6
+
+		},
+		{ 
+			"country": "Greece",
+			"year": 2016,
+			"percentage-re-total": 27.4,
+			"percentage-hydropower-total": 42.7,
+			"percentage-wind-power-total": 9.5
+
 		}
+		
 	];
 	
 	// GET renewableSourcesStats/loadInitialData
