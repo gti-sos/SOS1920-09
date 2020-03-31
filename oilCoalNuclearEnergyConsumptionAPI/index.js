@@ -46,7 +46,7 @@ module.exports = function(app) {
 		console.log("New GET .../oil-coal-nuclear-energy-consumption-stats");
 		db.find({}, (error, oil) => {
 			oil.forEach((s) => {
-					delete x._id
+					delete s._id
 
 					res.send(JSON.stringify(oil,null,2));
 					console.log("Data sent: " + JSON.stringify((oil,null,2)));
