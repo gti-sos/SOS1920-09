@@ -49,7 +49,7 @@ app.get(BASE_API_URL+"/renewable-sources-stats", (req,res) =>{
 	
 	db.find({}, (error, renewableSourcesStats) => {
 		renewableSourcesStats.forEach((r) => {
-			delete c._id
+			delete r._id
 			
 			res.send(JSON.stringify(renewableSourcesStats, null, 2)); 
 			console.log("Data sent: " + JSON.stringify(renewableSourcesStats, null, 2));
