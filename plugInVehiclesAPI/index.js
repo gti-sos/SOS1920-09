@@ -24,7 +24,29 @@ module.exports = function (app){
 			"pev-stock": 2243772,
 			"annual-sale": 1016002,
 			"cars-per-1000": 1.6
+		},
+		{ 
+			"country": "France",
+			"year": 2018,
+			"pev-stock": 204617,
+			"annual-sale": 53745,
+			"cars-per-1000": 3.1
+		},
+		{ 
+			"country": "Germany",
+			"year": 2018,
+			"pev-stock": 196750,
+			"annual-sale": 67504,
+			"cars-per-1000": 2.4
+		},
+		{ 
+			"country": "USA",
+			"year": 2018,
+			"pev-stock": 1126000,
+			"annual-sale": 361307,
+			"cars-per-1000": 3.4
 		}
+		
 	];
 
 	// RESOURCE plugInVehiclesStats
