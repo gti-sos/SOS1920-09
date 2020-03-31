@@ -58,6 +58,7 @@ app.get(BASE_API_URL+"/renewable-sources-stats", (req,res) =>{
 	});
 	
 	console.log("OK.");
+	res.sendStatus(200);
 });
 
 
