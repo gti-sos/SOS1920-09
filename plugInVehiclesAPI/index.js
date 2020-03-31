@@ -55,6 +55,7 @@ module.exports = function (app){
 	});
 
 		console.log("Ok.");
+		res.sendStatus(200);
 	});
 
 	// POST plugInVehiclesStats
