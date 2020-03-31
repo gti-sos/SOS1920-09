@@ -3,7 +3,7 @@ module.exports = function(app) {
 	const dataS= require("nedb");
 	const path = 	require("path");
 	const dbFileName = path.join(__dirname,"oil_coal_nuclear_energy_consumption.db");
-	const BASE_URL_API = "/api/v1";
+	const BASE_API_URL = "/api/v1";
 	const db = new dataS ({
 		filename : dbFileName,
 		autoload : true
