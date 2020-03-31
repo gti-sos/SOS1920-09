@@ -49,13 +49,15 @@ module.exports = function (app){
 		db.find({}, (error, plugInVehiclesStats) => {
 			plugInVehiclesStats.forEach((p) => {
 			delete p._id
-			res.send(JSON.stringify(plugInVehiclesStats,null,2));
-			console.log("Data send:" + JSON.stringify(plugInVehiclesStats, null, 2));
+			
 		});
+			
+		res.send(JSON.stringify(plugInVehiclesStats,null,2));
+		console.log("Data send:" + JSON.stringify(plugInVehiclesStats, null, 2));
 	});
 
 		console.log("Ok.");
-		res.sendStatus(200);
+		
 	});
 
 	// POST plugInVehiclesStats
