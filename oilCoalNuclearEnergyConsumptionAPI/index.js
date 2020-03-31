@@ -53,6 +53,7 @@ module.exports = function(app) {
 			});
 		});
 		console.log("OK");
+		res.sendStatus(200);
 	});
 
 	//GET oilCoalNuclearEnergyConsumptionStats
