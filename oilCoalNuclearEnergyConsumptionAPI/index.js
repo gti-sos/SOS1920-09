@@ -14,38 +14,38 @@ module.exports = function(app) {
 	var initialOilCoalNuclearEnergyConsumptionStats = [
 		{ 
 			"country": "USA",
-			"year" : 2016,
-			"oil-consumption": 907.6,
-			"coal-consumption": 340.6,
-			"nuclear-energy-consumption":191.9
+			"year" : '2016',
+			"oil-consumption": '907.6',
+			"coal-consumption": '340.6',
+			"nuclear-energy-consumption":'191.9'
 		},
 		{ 
 			"country": "Canada",
-			"year" : 2016,
-			"oil-consumption": 107.0,
-			"coal-consumption":18.9 ,
-			"nuclear-energy-consumption": 21.8
+			"year" : '2016',
+			"oil-consumption": '107.0',
+			"coal-consumption":'18.9' ,
+			"nuclear-energy-consumption": '21.8'
 		},
 		{ 
 			"country": "Spain",
-			"year" : 2017,
-			"oil-consumption": 10.9,
-			"coal-consumption":0.1 ,
-			"nuclear-energy-consumption": 4.6
+			"year" : '2017',
+			"oil-consumption": '10.9',
+			"coal-consumption":'0.1' ,
+			"nuclear-energy-consumption": '4.6'
 		},
 		{ 
 			"country": "Germany",
-			"year" : 2016,
-			"oil-consumption": 117.3,
-			"coal-consumption":75.8 ,
-			"nuclear-energy-consumption": 19.2
+			"year" : '2016',
+			"oil-consumption":'117.3',
+			"coal-consumption":'75.8' ,
+			"nuclear-energy-consumption": '19.2'
 		},
 		{ 
 			"country": "Belgium",
-			"year" : 2017,
-			"oil-consumption": 32.2,
-			"coal-consumption":2.9 ,
-			"nuclear-energy-consumption": 9.5
+			"year" : '2017',
+			"oil-consumption": '32.2',
+			"coal-consumption":'2.9' ,
+			"nuclear-energy-consumption": '9.5'
 		}
 	];
 
@@ -61,11 +61,15 @@ module.exports = function(app) {
 		res.sendStatus(200);
 		console.log("Initial oil coal nuclear energy consumption loaded:" + JSON.stringify(initialOilCoalNuclearEnergyConsumptionStats,null,2));
 	});
-
+	
+	//GET oilCoalNuclearEnergyConsumptionStats 2 ?
 	app.get(BASE_API_URL + "/oil-coal-nuclear-energy-consumption-stats",(req,res) =>{
 
 		console.log("New GET .../oil-coal-nuclear-energy-consumption-stats");
-		db.find({}, (error, oil) => {
+		
+		var query= req.query;
+		
+		db.find(query, (error, oil) => {
 			oil.forEach((s) => {
 					delete s._id
 			});
@@ -76,12 +80,7 @@ module.exports = function(app) {
 		
 	});
 
-	//GET oilCoalNuclearEnergyConsumptionStats
-
-	app.get(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats", (req,res) => {
-	  res.send(JSON.stringify(oilCoalNuclearEnergyConsumptionStats,null,2));
-	});
-
+	
 
 	//POST oilCoalNuclearEnergyConsumptionStats
 
@@ -244,4 +243,11 @@ module.exports = function(app) {
 			res.sendStatus(404, "NOT FOUND");
 		}
 	});
+	
+	//GET oilCoalNuclearEnergyConsumptionStats
+
+	app.get(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats", (req,res) => {
+	  res.send(JSON.stringify(oilCoalNuclearEnergyConsumptionStats,null,2));
+	});
+
 }
