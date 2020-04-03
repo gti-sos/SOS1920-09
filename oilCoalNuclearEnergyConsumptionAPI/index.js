@@ -23,8 +23,29 @@ module.exports = function(app) {
 			"country": "Canada",
 			"year" : 2016,
 			"oil-consumption": 107.0,
-			"coal-consumption":19.9 ,
+			"coal-consumption":18.9 ,
 			"nuclear-energy-consumption": 21.8
+		},
+		{ 
+			"country": "Spain",
+			"year" : 2017,
+			"oil-consumption": 10.9,
+			"coal-consumption":0.1 ,
+			"nuclear-energy-consumption": 4.6
+		},
+		{ 
+			"country": "Germany",
+			"year" : 2016,
+			"oil-consumption": 117.3,
+			"coal-consumption":75.8 ,
+			"nuclear-energy-consumption": 19.2
+		},
+		{ 
+			"country": "Belgium",
+			"year" : 2017,
+			"oil-consumption": 32.2,
+			"coal-consumption":2.9 ,
+			"nuclear-energy-consumption": 9.5
 		}
 	];
 
