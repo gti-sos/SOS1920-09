@@ -69,15 +69,24 @@ module.exports = function (app){
 		console.log("New GET .../plugin-vehicles-stats");
 		
 		var query = req.query;
+		
+		//
+		var limit = query.limit;
+		var offset = query.offset;
+		
+		//
+		delete query.limit;
+		delete query.offset;
 
-		db.find(query, (error, plugInVehiclesStats) => {
+		db.find(query).skip(offset).limit(limit).exec((error, plugInVehiclesStats) => {
 			plugInVehiclesStats.forEach((p) => {
-			delete p._id
+				delete p._id
 			
-		});
+			});
 			
 		res.send(JSON.stringify(plugInVehiclesStats,null,2));
 		console.log("Data send:" + JSON.stringify(plugInVehiclesStats, null, 2));
+			
 	});
 
 		console.log("Ok.");
