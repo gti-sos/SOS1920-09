@@ -15,42 +15,42 @@ module.exports = function (app) {
 	var initialRenewableSourcesStats = [
 		{ 
 			"country": "Spain",
-			"year": 2016,
-			"percentage-re-total": 38.1,
-			"percentage-hydropower-total": 14.5,
-			"percentage-wind-power-total": 17.8
+			"year": '2016',
+			"percentage-re-total": '38.1',
+			"percentage-hydropower-total": '14.5',
+			"percentage-wind-power-total": '17.8'
 
 		},
 		{ 
 			"country": "France",
-			"year": 2016,
-			"percentage-re-total": 17.5,
-			"percentage-hydropower-total": 11.7,
-			"percentage-wind-power-total": 3.8
+			"year": '2016',
+			"percentage-re-total": '17.5',
+			"percentage-hydropower-total": '11.7',
+			"percentage-wind-power-total": '3.8'
 
 		},
 		{ 
 			"country": "Russia",
-			"year": 2016,
-			"percentage-re-total": 16.9,
-			"percentage-hydropower-total": 17.0,
-			"percentage-wind-power-total": 0.0
+			"year": '2016',
+			"percentage-re-total": '16.9',
+			"percentage-hydropower-total": '17.0',
+			"percentage-wind-power-total": '0.0'
 
 		},
 		{ 
 			"country": "Canada",
-			"year": 2016,
-			"percentage-re-total": 65.0,
-			"percentage-hydropower-total": 58.0,
-			"percentage-wind-power-total": 4.6
+			"year": '2016',
+			"percentage-re-total": '65.0',
+			"percentage-hydropower-total": '58.0',
+			"percentage-wind-power-total": '4.6'
 
 		},
 		{ 
 			"country": "Greece",
-			"year": 2016,
-			"percentage-re-total": 27.4,
-			"percentage-hydropower-total": 42.7,
-			"percentage-wind-power-total": 9.5
+			"year": '2016',
+			"percentage-re-total": '27.4',
+			"percentage-hydropower-total": '42.7',
+			"percentage-wind-power-total": '9.5'
 
 		}
 		
@@ -72,7 +72,10 @@ app.get(BASE_API_URL+"/renewable-sources-stats", (req,res) =>{
 	
 	console.log("New GET .../renewable-sources-stats");
 	
-	db.find({}, (error, renewableSourcesStats) => {
+	var query = req.query;
+	//console.log(query);
+	
+	db.find(query, (error, renewableSourcesStats) => {
 		renewableSourcesStats.forEach((r) => {
 			delete r._id
 		});
@@ -85,6 +88,7 @@ app.get(BASE_API_URL+"/renewable-sources-stats", (req,res) =>{
 	
 	
 });
+
 
 
 
