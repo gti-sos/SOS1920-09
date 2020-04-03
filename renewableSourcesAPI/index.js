@@ -75,7 +75,16 @@ app.get(BASE_API_URL+"/renewable-sources-stats", (req,res) =>{
 	var query = req.query;
 	//console.log(query);
 	
-	db.find(query, (error, renewableSourcesStats) => {
+	// Getting the offset and limit from the url
+	var limit = query.limit;
+	var offset = query.offset;
+	
+	// Removing extra query field of pagination
+	delete query.offset;
+	delete query.limit;
+	
+	// With skip we make the offset and with the limit we limit
+	db.find(query).skip(offset).limit(limit).exec((error, renewableSourcesStats) => {
 		renewableSourcesStats.forEach((r) => {
 			delete r._id
 		});
