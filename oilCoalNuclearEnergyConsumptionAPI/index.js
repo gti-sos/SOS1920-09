@@ -68,8 +68,14 @@ module.exports = function(app) {
 		console.log("New GET .../oil-coal-nuclear-energy-consumption-stats");
 		
 		var query= req.query;
+		var limit = query.limit;
+		var offset= query.offset;
 		
-		db.find(query, (error, oil) => {
+		//removing field of pagination
+		delete query.offset;
+		delete query.limit;
+		
+		db.find(query).skip(offset).limit(limit).exec((error, oil) => {
 			oil.forEach((s) => {
 					delete s._id
 			});
