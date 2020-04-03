@@ -13,35 +13,35 @@ module.exports = function (app){
 	var initialPlugInVehiclesStats = [
 		{ 
 			"country": "Canada",
-			"year": 2018,
+			"year": "2018",
 			"pev-stock": 81435,
 			"annual-sale": 33879,
 			"cars-per-1000": 2.2
 		},
 		{ 
 			"country": "China",
-			"year": 2018,
+			"year": "2018",
 			"pev-stock": 2243772,
 			"annual-sale": 1016002,
 			"cars-per-1000": 1.6
 		},
 		{ 
 			"country": "France",
-			"year": 2018,
+			"year": "2018",
 			"pev-stock": 204617,
 			"annual-sale": 53745,
 			"cars-per-1000": 3.1
 		},
 		{ 
 			"country": "Germany",
-			"year": 2018,
+			"year": "2018",
 			"pev-stock": 196750,
 			"annual-sale": 67504,
 			"cars-per-1000": 2.4
 		},
 		{ 
 			"country": "USA",
-			"year": 2018,
+			"year": "2018",
 			"pev-stock": 1126000,
 			"annual-sale": 361307,
 			"cars-per-1000": 3.4
@@ -67,8 +67,10 @@ module.exports = function (app){
 	app.get(BASE_API_URL+"/plugin-vehicles-stats", (req,res) =>{
 
 		console.log("New GET .../plugin-vehicles-stats");
+		
+		var query = req.query;
 
-		db.find({}, (error, plugInVehiclesStats) => {
+		db.find(query, (error, plugInVehiclesStats) => {
 			plugInVehiclesStats.forEach((p) => {
 			delete p._id
 			
