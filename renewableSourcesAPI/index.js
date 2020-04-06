@@ -262,6 +262,7 @@ module.exports = function (app) {
 
 	});
 
+	
 	// DELETE renewableSourcesStats/XXX
 
 	app.delete(BASE_API_URL+"/renewable-sources-stats/:country/:year",(req,res) =>{
