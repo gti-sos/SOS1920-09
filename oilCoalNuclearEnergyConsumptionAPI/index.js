@@ -14,38 +14,38 @@ module.exports = function(app) {
 	var initialOilCoalNuclearEnergyConsumptionStats = [
 		{ 
 			"country": "USA",
-			"year" : '2016',
-			"oil-consumption": '907.6',
-			"coal-consumption": '340.6',
-			"nuclear-energy-consumption":'191.9'
+			"year" : 2016,
+			"oil-consumption": 907.6,
+			"coal-consumption": 340.6,
+			"nuclear-energy-consumption":191.9
 		},
 		{ 
 			"country": "Canada",
-			"year" : '2016',
-			"oil-consumption": '107.0',
-			"coal-consumption":'18.9' ,
-			"nuclear-energy-consumption": '21.8'
+			"year" : 2016,
+			"oil-consumption": 107.0,
+			"coal-consumption":18.9 ,
+			"nuclear-energy-consumption": 21.8
 		},
 		{ 
 			"country": "Spain",
-			"year" : '2017',
-			"oil-consumption": '10.9',
-			"coal-consumption":'0.1' ,
-			"nuclear-energy-consumption": '4.6'
+			"year" : 2017,
+			"oil-consumption": 10.9,
+			"coal-consumption":0.1 ,
+			"nuclear-energy-consumption": 4.6
 		},
 		{ 
 			"country": "Germany",
-			"year" : '2016',
-			"oil-consumption":'117.3',
-			"coal-consumption":'75.8' ,
-			"nuclear-energy-consumption": '19.2'
+			"year" : 2016,
+			"oil-consumption":117.3,
+			"coal-consumption":75.8 ,
+			"nuclear-energy-consumption": 19.2
 		},
 		{ 
 			"country": "Belgium",
-			"year" : '2017',
-			"oil-consumption": '32.2',
-			"coal-consumption":'2.9' ,
-			"nuclear-energy-consumption": '9.5'
+			"year" : 2017,
+			"oil-consumption": 32.2,
+			"coal-consumption":2.9 ,
+			"nuclear-energy-consumption": 9.5
 		}
 	];
 
@@ -62,12 +62,16 @@ module.exports = function(app) {
 		console.log("Initial oil coal nuclear energy consumption loaded:" + JSON.stringify(initialOilCoalNuclearEnergyConsumptionStats,null,2));
 	});
 	
-	//GET oilCoalNuclearEnergyConsumptionStats 2 ?
+	//GET oilCoalNuclearEnergyConsumptionStats PERSISTENTE
 	app.get(BASE_API_URL + "/oil-coal-nuclear-energy-consumption-stats",(req,res) =>{
 
 		console.log("New GET .../oil-coal-nuclear-energy-consumption-stats");
 		
 		var query= req.query;
+		if(query.hasOwnProperty("year")){
+		   query.year= parseInt(query.year);
+		   }
+		
 		var limit = query.limit;
 		var offset= query.offset;
 		
@@ -77,7 +81,7 @@ module.exports = function(app) {
 		
 		db.find(query).skip(offset).limit(limit).exec((error, oil) => {
 			oil.forEach((s) => {
-					delete s._id
+					delete s._id;
 			});
 			res.send(JSON.stringify(oil,null,2));
 					console.log("Data sent: " + JSON.stringify((oil,null,2)));
@@ -103,8 +107,10 @@ module.exports = function(app) {
 		|| (newOilCoalNuclearEnergyConsumptionStat["nuclear-energy-consumption"] == null)){
 			res.sendStatus(400,"BAD REQUEST");
 		} else {
-			oilCoalNuclearEnergyConsumptionStats.push(newOilCoalNuclearEnergyConsumptionStat); 	
-			res.sendStatus(201,"CREATED");
+		db.insert(newOilCoalNuclearEnergyConsumptionStat);
+ 			
+	
+		res.sendStatus(201,"CREATED");
 		}
 	});
 
@@ -114,7 +120,7 @@ module.exports = function(app) {
 
 
 	app.delete(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats",(req,res) =>{	
-		oilCoalNuclearEnergyConsumptionStats = [];
+		db.remove({}, {multi:true}); 
 		res.sendStatus(200, "OK");
 		});
 
@@ -133,40 +139,64 @@ module.exports = function(app) {
 
 		var year = req.params.year;
 		var country = req.params.country;
-
-
-		var  filteredParam = oilCoalNuclearEnergyConsumptionStats.filter((c) => {
-			return (c.year == year) && (c.country == country)
+		
+		var query = {"country": country, "year": year}		
+		
+		db.find(query).exec((error, oil) => {
+			if(oil.length  >= 1){
+			   
+				delete oil[0]._id;
+				
+				res.send(JSON.stringify(oil[0],null,2));
+				console.log("Data sent: " + JSON.stringify((oil[0],null,2)));
+			   
+			} else {
+				   res.sendStatus(404,"NOT FOUND");
+			   }
 		});
-
-		if( filteredParam.length >= 1) {
-			res.send(filteredParam[0]);	
-		} else {
-			res.sendStatus(404, "NOT FOUND");
-		}
-
+		
+		console.log("OK");
 	});
 
-	// GET oilCoalNuclearEnergyConsumptionStats/XXX
+	// GET oilCoalNuclearEnergyConsumptionStats/
 
 	app.get(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:param", (req,res) =>{
 
 		var param = req.params.param; 
-
-		var filteredParam = oilCoalNuclearEnergyConsumptionStats.filter((c) => {
-			return (c["year"] == param) || (c["country"] == param);
+		
+		var query = {};
+		
+		if(isNaN(parseInt(param))){
+		   query = {country :param}
+		   }else{
+			   query = {year: parseInt(param)};
+		   
+		   }
+		
+		db.find(query).exec((error, oil) => {
+			if(oil.length  > 1){
+			   oil.forEach((r) => {
+				 delete oil._id;
+				  
+				 });
+				
+				res.send(JSON.stringify(oil,null,2));
+				console.log("Data sent: " + JSON.stringify((oil,null,2)));
+			   
+			}	
+			else if (oil.length==1){
+					delete oil[0]._id;
+				res.send(JSON.stringify(oil[0],null,2));
+				console.log("Data sent: " + JSON.stringify((oil[0],null,2)));
+			}
+			else {
+				   res.sendStatus(404,"NOT FOUND");
+			   }
 		});
-
-		if( filteredParam.length >= 1) {
-			res.send(filteredParam);	
-		} else {
-			res.sendStatus(404, "NOT FOUND");
-		}
-
+		
+		console.log("OK");
 	});
-
-
-
+		
 
 
 	 //POST oilCoalNuclearEnergyConsumptionStats/XXXX
@@ -187,27 +217,14 @@ module.exports = function(app) {
 		var country = req.params.country;
 		var notFound = oilCoalNuclearEnergyConsumptionStats.filter((r) => {return (r.year == year && r.country == country);}) == 0;
 		var body = req.body;
-
-		var updateOilCoalNuclearEnergyConsumptionStats = oilCoalNuclearEnergyConsumptionStats.map((r) => {
-			var updatedSourceStat = r;
-
-			if (r.year === year && r.country === country) {
-				for (var p in body) {
-					updatedSourceStat[p] = body[p];
-				}	
-			}
-
-			return (updatedSourceStat)
-
+	
+		db.update({country: country, year: year}, body, (error, numReplaced) => {
+			if (numReplaced== 0){
+				res.sendStatus(404,"NOT FOUND");
+				}else {
+					res.sendStatus();
+				}
 		});
-
-		if (notFound) {
-			res.sendStatus(404, "NOT FOUND");
-		} else {
-			oilCoalNuclearEnergyConsumptionStats = updateOilCoalNuclearEnergyConsumptionStats;
-			res.sendStatus(200, "OK");
-		}
-
 	});
 
 
@@ -219,35 +236,40 @@ module.exports = function(app) {
 
 		var country = req.params.country;
 		var year = req.params.year;
-
-		var filteredData = oilCoalNuclearEnergyConsumptionStats.filter((r) => {
-			return (r.country != country) || (r.year != year);
-		});
-
-		if(filteredData.length < oilCoalNuclearEnergyConsumptionStats.length) {
-			oilCoalNuclearEnergyConsumptionStats = filteredData;
-			res.sendStatus(200, "OK");
-
-		} else {
-			res.sendStatus(404, "NOT FOUND");
-		}
+		
+		var query = {country: country, year : parseInt(year)};
+		
+		db.remove(query, {multi:true}, (error, numRemoved) =>{
+			if (numRemoved == 0){
+			res.sendStatus(404,"NOT FOUND");
+			}else {
+				res.sendStatus(200,"OK");
+			}
+		}); 
+		
 	});
 
 	app.delete(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:param",(req,res) =>{
 
 		var param = req.params.param;
-
-		var filteredData = oilCoalNuclearEnergyConsumptionStats.filter((r) => {
-			return r["year"] != param && r["country"] != param;
-		});
-
-		if(filteredData.length < oilCoalNuclearEnergyConsumptionStats.length) {
-			oilCoalNuclearEnergyConsumptionStats = filteredData;
-			res.sendStatus(200, "OK");
-
-		} else {
-			res.sendStatus(404, "NOT FOUND");
-		}
+		var query = {}; 	
+		
+		if(isNaN(parseInt(param))){
+		   query = {country :param}
+		   }else{
+			   query = {year: parseInt(param)};
+		   }
+		
+			db.remove(query, {multi:true}, (error, numRemoved) =>{
+			if (numRemoved == 0){
+			res.sendStatus(404,"NOT FOUND");
+			}else {
+				res.sendStatus(200,"OK");
+			}
+		}); 
+		
+		
+		
 	});
 	
 	//GET oilCoalNuclearEnergyConsumptionStats
