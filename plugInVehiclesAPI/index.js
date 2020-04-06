@@ -13,35 +13,35 @@ module.exports = function (app){
 	var initialPlugInVehiclesStats = [
 		{ 
 			"country": "Canada",
-			"year": "2018",
+			"year": 2018,
 			"pev-stock": 81435,
 			"annual-sale": 33879,
 			"cars-per-1000": 2.2
 		},
 		{ 
 			"country": "China",
-			"year": "2018",
+			"year": 2018,
 			"pev-stock": 2243772,
 			"annual-sale": 1016002,
 			"cars-per-1000": 1.6
 		},
 		{ 
 			"country": "France",
-			"year": "2018",
+			"year": 2018,
 			"pev-stock": 204617,
 			"annual-sale": 53745,
 			"cars-per-1000": 3.1
 		},
 		{ 
 			"country": "Germany",
-			"year": "2018",
+			"year": 2018,
 			"pev-stock": 196750,
 			"annual-sale": 67504,
 			"cars-per-1000": 2.4
 		},
 		{ 
 			"country": "USA",
-			"year": "2018",
+			"year": 2018,
 			"pev-stock": 1126000,
 			"annual-sale": 361307,
 			"cars-per-1000": 3.4
@@ -69,6 +69,10 @@ module.exports = function (app){
 		console.log("New GET .../plugin-vehicles-stats");
 		
 		var query = req.query;
+		//We have to check that the json from the query
+		if(query.hasOwnProperty("year")){
+			query.year = parseInt(query.year); //Casting the String in Integer to compare data in the "find" query
+		}
 		
 		//
 		var limit = query.limit;
@@ -80,7 +84,7 @@ module.exports = function (app){
 
 		db.find(query).skip(offset).limit(limit).exec((error, plugInVehiclesStats) => {
 			plugInVehiclesStats.forEach((p) => {
-				delete p._id
+				delete p._id;
 			
 			});
 			
@@ -109,7 +113,7 @@ module.exports = function (app){
 			res.sendStatus(400,"BAD REQUEST");
 		} 
 		else {
-			plugInVehiclesStats.push(newPlugInVehiclesStat); 	
+			db.insert(newPlugInVehiclesStat);	
 			res.sendStatus(201,"CREATED");
 		}
 	}); 
@@ -117,7 +121,9 @@ module.exports = function (app){
 	// DELETE plugInVehiclesStats
 
 	app.delete(BASE_API_URL+"/plugin-vehicles-stats",(req,res) =>{	
-		plugInVehiclesStats = [];
+		db.remove({}, { multi: true }); // Deleting elements one by one
+		
+		
 		res.sendStatus(200, "OK");
 	});
 
@@ -132,35 +138,74 @@ module.exports = function (app){
 	app.get(BASE_API_URL+"/plugin-vehicles-stats/:country/:year", (req,res) =>{
 
 		var country = req.params.country;
-		var year = req.params.year; 
+		var year = req.params.year;
+		
+		var query = {"country": country, "year": parseInt(year)};
 
-		var filteredData = plugInVehiclesStats.filter((r) => {
-			return  (r.country == country) && (r.year == year);
+		db.find(query).exec((error, plugInVehiclesStats) => {
+			
+			if(plugInVehiclesStats.length >= 1) {
+				delete plugInVehiclesStats[0]._id;
+				
+				res.send(JSON.stringify(plugInVehiclesStats[0], null, 2));
+				console.log("Data sent: " + JSON.stringify(plugInVehiclesStats[0], null, 2));
+			}
+			else {
+				res.sendStatus(404, "NOT FOUND");
+			}
 		});
-
-		if(filteredData.length >= 1) {
-			res.send(filteredData[0]);	
-		} else {
-			res.sendStatus(404, "NOT FOUND");
-		}
+		
+		console.log("OK.");
 	});
+	
 
 	// GET plugInVehiclesStats/XXX
 
 	app.get(BASE_API_URL+"/plugin-vehicles-stats/:param", (req,res) =>{
 
-		var param = req.params.param; 
-
-		var filteredData = plugInVehiclesStats.filter((r) => {
-			return (r["year"] == param) || (r["country"] == param);
-		});
-
-		if(filteredData.length >= 1) {
-			res.send(filteredData);	
-		} else {
-			res.sendStatus(404, "NOT FOUND");
+		var param = req.params.param;
+		
+		var query = {};
+		
+		// Checking if we can parse the param, if so, it's a country
+		// And the query is just to specify the country
+		if(isNaN(parseInt(param))){
+			var query = {country: param};
+		} 
+		else {
+			query = {year: parseInt(param)};
 		}
+		
+
+		db.find(query).exec((error, plugInVehiclesStats) => {
+			
+			if(plugInVehiclesStats.length > 1) {
+				plugInVehiclesStats.forEach((r) => {
+					delete r._id;
+				});
+				
+				
+				res.send(JSON.stringify(plugInVehiclesStats, null, 2));
+				console.log("Data sent: " + JSON.stringify(plugInVehiclesStats[0], null, 2));
+			}
+			
+			// We consider the posibility of returning just 1 element and return a JSON and not an array
+			else if (plugInVehiclesStats.length == 1){
+				delete plugInVehiclesStats[0]._id;
+				
+				res.send(JSON.stringify(plugInVehiclesStats[0], null, 2));
+				console.log("Data sent: " + JSON.stringify(plugInVehiclesStats[0], null, 2));
+			}
+			
+			else {
+				res.sendStatus(404, "NOT FOUND");
+			}
+		});
+		
+		console.log("OK.");
+		
 	});
+	
 
 	// POST plugInVehiclesStats/XXX
 
@@ -171,6 +216,7 @@ module.exports = function (app){
 	app.post(BASE_API_URL+"/plugin-vehicles-stats/:param",(req,res) =>{
 		res.sendStatus(405, "METHOD NOT ALLOWED");
 	});
+	
 
 	// DELETE plugInVehiclesStats/XXX
 
@@ -178,60 +224,63 @@ module.exports = function (app){
 
 		var country = req.params.country;
 		var year = req.params.year;
-
-		var filteredData = plugInVehiclesStats.filter((c) => {
-			return (c.country != country) || (c.year != year);
+		
+		var query = {country: country, year: parseInt(year)};
+		
+		db.remove(query, {multi: true}, (error, numRemoved) => {
+			
+			if (numRemoved == 0){
+				res.sendStatus(404, "NOT FOUND");
+			}
+			else{
+				res.sendStatus(200, "OK");
+			}
 		});
-
-		if(filteredData.length < plugInVehiclesStats.length) {
-			plugInVehiclesStats = filteredData;
-			res.sendStatus(200, "OK");
-
-		} else {
-			res.sendStatus(404, "NOT FOUND");
-		}
 	});
 
+	
+	
 	app.delete(BASE_API_URL+"/plugin-vehicles-stats/:param",(req,res) =>{
 
 		var param = req.params.param;
+		
+		var query = {};
 
-		var filteredData = plugInVehiclesStats.filter((r) => {
-			return r["year"] != param && r["country"] != param;
-		});
-
-		if(filteredData.length < plugInVehiclesStats.length) {
-			plugInVehiclesStats = filteredData;
-			res.sendStatus(200, "OK");
-
-		} else {
-			res.sendStatus(404, "NOT FOUND");
+		if(isNaN(parseInt(param))){
+			 query = {country: param};
+		} 
+		else {
+			query = {year: parseInt(param)};
 		}
-	});
+		
+		db.remove(query, { multi: true}, (error, numRemoved) => {
+			if(numRemoved == 0){
+				res.sendStatus(404, "NOT FOUND");
+			}
+			else{
+				res.sendStatus(200, "OK");
+			}
+		});
+			
+		});
+	
 
 	// PUT plugInVehiclesStats/XXX
 	app.put(BASE_API_URL+"/plugin-vehicles-stats/:country/:year", (req,res) =>{
 
+		
 		var country = req.params.country;
 		var year = req.params.year;
-		var notFound = plugInVehiclesStats.filter((r) => {return (r.year == year && r.country == country);}) == 0;
 		var body = req.body;
-
-		var updatedData = plugInVehiclesStats.map((c) => {
-			var updatedD = c;
-			if (c.country == country && c.year == year) {
-				for (var p in body) {
-					updatedD[p] = body[p];
-				}	
-			}
-			return (updatedD)
-		});
-
-		if (notFound) {
-			res.sendStatus(404, "NOT FOUND");
+		
+		db.update({country: country, year: parseInt(year)}, body, (error, numReplaced) => {
+			
+			//Checking if we find match with the query
+			if (numReplaced == 0){
+				res.sendStatus(404, "NOT FOUND");
 		} else {
-			plugInVehiclesStats = updatedData;
 			res.sendStatus(200, "OK");
-		}
+			}
+		});
 	});
 };
