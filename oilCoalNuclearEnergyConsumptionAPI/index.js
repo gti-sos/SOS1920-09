@@ -139,8 +139,8 @@ module.exports = function(app) {
 
 		var year = req.params.year;
 		var country = req.params.country;
+		var query = {"country": country, "year": parseInt(year)};
 		
-		var query = {"country": country, "year": year}		
 		
 		db.find(query).exec((error, oil) => {
 			if(oil.length  >= 1){
@@ -215,14 +215,13 @@ module.exports = function(app) {
 	app.put(BASE_API_URL+"/oil-coal-nuclear-energy-consumption-stats/:country/:year", (req,res) =>{
 		var year = req.params.year;
 		var country = req.params.country;
-		var notFound = oilCoalNuclearEnergyConsumptionStats.filter((r) => {return (r.year == year && r.country == country);}) == 0;
 		var body = req.body;
 	
-		db.update({country: country, year: year}, body, (error, numReplaced) => {
+		db.update({country: country, year: parseInt(year)}, body, (error, numReplaced) => {
 			if (numReplaced== 0){
 				res.sendStatus(404,"NOT FOUND");
 				}else {
-					res.sendStatus();
+					res.sendStatus(200,"OK");
 				}
 		});
 	});
