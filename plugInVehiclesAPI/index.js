@@ -101,17 +101,28 @@ module.exports = function (app){
 
 	app.post(BASE_API_URL+"/plugin-vehicles-stats",(req,res) =>{
 
-		var newPlugInVehiclesStat = req.body; 
+		var newPlugInVehiclesStat = req.body;
+		
+		var isEmpty = newPlugInVehiclesStat == {};
+		
+		var haveNullField = (newPlugInVehiclesStat.country == null) 
+			|| (newPlugInVehiclesStat.year == null) 
+			|| (newPlugInVehiclesStat["pev-stock"] == null) 
+			|| (newPlugInVehiclesStat["annual-sale"] == null) 
+			|| (newPlugInVehiclesStat["cars-per-1000"]== null);
+		
+		 // Or it has extra fields or the fields are not the correct ones
+		
+		var rightFields = Object.keys(newPlugInVehiclesStat).length == 5
+			&& newPlugInVehiclesStat.hasOwnProperty("country") 
+			&& newPlugInVehiclesStat.hasOwnProperty("year") 
+			&& newPlugInVehiclesStat.hasOwnProperty("pev-stock") 
+			&& newPlugInVehiclesStat.hasOwnProperty("annual-sale") 
+			&& newPlugInVehiclesStat.hasOwnProperty("cars-per-1000");
 
-		if((newPlugInVehiclesStat == {}) 
-		|| (newPlugInVehiclesStat.country == null) 
-		|| (newPlugInVehiclesStat.year == null) 
-		|| (newPlugInVehiclesStat["pev-stock"] == null) 
-		|| (newPlugInVehiclesStat["annual-sale"] == null) 
-		|| (newPlugInVehiclesStat["cars-per-1000"]== null) ) {
-
+		if(isEmpty || haveNullField || !rightFields){
 			res.sendStatus(400,"BAD REQUEST");
-		} 
+		}
 		else {
 			db.insert(newPlugInVehiclesStat);	
 			res.sendStatus(201,"CREATED");
