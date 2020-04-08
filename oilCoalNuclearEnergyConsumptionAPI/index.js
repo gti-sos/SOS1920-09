@@ -98,15 +98,30 @@ module.exports = function(app) {
 
 		var newOilCoalNuclearEnergyConsumptionStat = req.body; 
 		//console.log(newOilCoalNuclearEnergyConsumptionStat);
-
-		if((newOilCoalNuclearEnergyConsumptionStat == {}) 
-		|| (newOilCoalNuclearEnergyConsumptionStat.country == null) 
+		var isempty= newOilCoalNuclearEnergyConsumptionStat == {};
+			
+			
+		var nofield = (newOilCoalNuclearEnergyConsumptionStat.country == null) 
 		|| (newOilCoalNuclearEnergyConsumptionStat.year == null)
 		|| (newOilCoalNuclearEnergyConsumptionStat["oil-consumption"] == null) 
 		|| (newOilCoalNuclearEnergyConsumptionStat["coal-consumption"] == null) 
-		|| (newOilCoalNuclearEnergyConsumptionStat["nuclear-energy-consumption"] == null)){
+		|| (newOilCoalNuclearEnergyConsumptionStat["nuclear-energy-consumption"] == null)
+		
+		
+		var rightfield = Object.keys(newOilCoalNuclearEnergyConsumptionStat).length==5
+		&& newOilCoalNuclearEnergyConsumptionStat.hasOwnProperty("year") 
+		&& newOilCoalNuclearEnergyConsumptionStat.hasOwnProperty("country")
+		&& newOilCoalNuclearEnergyConsumptionStat.hasOwnProperty("oil-consumption")
+		&& newOilCoalNuclearEnergyConsumptionStat.hasOwnProperty("coal-consumption") 
+		&& newOilCoalNuclearEnergyConsumptionStat.hasOwnProperty("nuclear-energy-consumption");
+			
+	//	var wrongValues = isNaN(parseInt(newOilCoalNuclearEnergyConsumptionStat.year))
+	//	|| isNaN(parseInt(newOilCoalNuclearEnergyConsumptionStat.year)
+			
+		if((isempty || nofield || !rightfield)  ){
 			res.sendStatus(400,"BAD REQUEST");
-		} else {
+		} 
+		else {
 		db.insert(newOilCoalNuclearEnergyConsumptionStat);
  			
 	
