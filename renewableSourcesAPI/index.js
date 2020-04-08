@@ -114,15 +114,36 @@ module.exports = function (app) {
 		var newRenewableSourcesStat = req.body;
 		//console.log(renewableSourcesStats);
 
-
-
-
-		if((newRenewableSourcesStat == {}) 
-			 || (newRenewableSourcesStat.country == null) 
+		// We divide the different reasons of badrequest response
+		var isEmpty = newRenewableSourcesStat == {};
+		
+		var haveNullField = (newRenewableSourcesStat.country == null) 
 			 || (newRenewableSourcesStat.year == null) 
 			 || (newRenewableSourcesStat["percentage-re-total"] == null) 
 			 || (newRenewableSourcesStat["percentage-hydropower-total"] == null) 
-			 || (newRenewableSourcesStat["percentage-wind-power-total"] == null)) {		
+			 || (newRenewableSourcesStat["percentage-wind-power-total"] == null);
+
+		
+
+		// Or it has extra fields or the fields are not the correct ones, in that cases the fields are wrong
+		// This var check if the fields are correct, so we check the opposite in the if
+		var rightFields = Object.keys(newRenewableSourcesStat).length == 5 
+			&& newRenewableSourcesStat.hasOwnProperty("year") 
+			&& newRenewableSourcesStat.hasOwnProperty("country")
+			&& newRenewableSourcesStat.hasOwnProperty("percentage-re-total")
+			&& newRenewableSourcesStat.hasOwnProperty("percentage-hydropower-total")
+			&& newRenewableSourcesStat.hasOwnProperty("percentage-wind-power-total");
+		
+		
+		/* 
+		var wrongValues = !(typeof newRenewableSourcesStat.country === 'string')
+			|| isNaN(parseInt(newRenewableSourcesStat.year)
+			|| isNaN(parseFloat(newRenewableSourcesStat["percentage-re-total"])
+			|| isNaN(parseFloat(newRenewableSourcesStat["percentage-hydropower-total"])
+			|| isNaN(parseFloat(newRenewableSourcesStat["percentage-wind-power-total"]);
+		*/
+		
+		if(isEmpty || haveNullField || !rightFields) {		
 			res.sendStatus(400,"BAD REQUEST");
 		} else {
 			db.insert(newRenewableSourcesStat);
