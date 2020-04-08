@@ -144,7 +144,7 @@ module.exports = function (app){
 
 		db.find(query).exec((error, plugInVehiclesStats) => {
 			
-			if(plugInVehiclesStats.length >= 1) {
+			if(plugInVehiclesStats.length == 1) {
 				delete plugInVehiclesStats[0]._id;
 				
 				res.send(JSON.stringify(plugInVehiclesStats[0], null, 2));
