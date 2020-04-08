@@ -161,7 +161,7 @@ module.exports = function (app) {
 		
 		db.find(query).exec((error, renewableSourcesStats) => {
 
-			if (renewableSourcesStats.length >= 1) {
+			if (renewableSourcesStats.length == 1) {
 				delete renewableSourcesStats[0]._id;
 
 				res.send(JSON.stringify(renewableSourcesStats[0], null, 2)); 
@@ -216,7 +216,7 @@ module.exports = function (app) {
 				res.send(JSON.stringify(renewableSourcesStats[0], null, 2)); 
 				console.log("Data sent: " + JSON.stringify(renewableSourcesStats[0], null, 2));
 				
-			} 
+			}
 			
 			else {
 				res.sendStatus(404, "NOT FOUND");
