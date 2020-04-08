@@ -143,7 +143,7 @@ module.exports = function(app) {
 		
 		
 		db.find(query).exec((error, oil) => {
-			if(oil.length  >= 1){
+			if(oil.length  == 1){
 			   
 				delete oil[0]._id;
 				
