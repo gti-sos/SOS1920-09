@@ -51,6 +51,8 @@ module.exports = function(app) {
 
 	// ------------------------Ejemplos Ruben--------------------------------------- //
 
+	db.remove({}, {multi:true});
+	db.insert(initialOilCoalNuclearEnergyConsumptionStats);
 
 	// RESOURCE oilCoalNuclearEnergyConsumptionStats
 

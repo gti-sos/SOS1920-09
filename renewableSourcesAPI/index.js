@@ -56,6 +56,11 @@ module.exports = function (app) {
 		
 	];
 	
+	// Cleaning the data base and inserting the initial data
+	db.remove({}, { multi: true }); // Deleting elements one by one
+	db.insert(initialRenewableSourcesStats);
+	
+	
 	// GET renewableSourcesStats/loadInitialData
 
 	app.get(BASE_API_URL+"/renewable-sources-stats/loadInitialData", (req, res) => {
