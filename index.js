@@ -1,10 +1,10 @@
-// Llamamos a los modulos
+// We call the modules
 const express = require("express");
 const bodyParser = require("body-parser");
-const path = require("path"); // No es necesario hacer npminstall
-const plugInVehiclesAPI = require(path.join(__dirname, "plugInVehiclesAPI"));
-const renewableSourcesAPI = require(path.join(__dirname, "renewableSourcesAPI"));
-const oilCoalNuclearEnergyConsumptionAPI = require(path.join(__dirname, "oilCoalNuclearEnergyConsumptionAPI"));
+const path = require("path"); 
+const plugInVehiclesAPI = require(path.join(__dirname, "plugInVehiclesAPI/front"));
+const renewableSourcesAPI = require(path.join(__dirname, "renewableSourcesAPI/front"));
+const oilCoalNuclearEnergyConsumptionAPI = require(path.join(__dirname, "oilCoalNuclearEnergyConsumptionAPI/front"));
 
 const port = process.env.PORT || 80;
 
@@ -21,4 +21,4 @@ app.listen(port, () => {
 });
 
 
-console.log("Starting server...");// Llamamos a los modulos
+console.log("Starting server...");
