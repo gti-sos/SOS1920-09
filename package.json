@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "This is an API that manages data related to renewable energies, plug-in cars' sales and primary energy sources.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node index",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "node index"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,12 @@
   },
   "homepage": "https://github.com/gti-sos/SOS1920-09#readme",
   "dependencies": {
+    "@rollup/plugin-commonjs": "11.0.2",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "rollup": "^1.20.0",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^5.1.2",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "nedb": "^1.8.0",
