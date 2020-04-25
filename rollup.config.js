@@ -7,7 +7,7 @@ import { terser } from 'rollup-plugin-terser';
 const production = !process.env.ROLLUP_WATCH;
 
 export default {
-	input: './front/index.js',
+	input: 'src/front/index.js',
 	output: {
 		sourcemap: true,
 		format: 'iife',

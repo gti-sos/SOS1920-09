@@ -54,7 +54,7 @@
 	
 	{#await pluginVehicles}
 		Loading plugin vehicles...
-	{:then plugin vehicles}
+	{:then pluginVehicles}
 
 		<Table bordered>
 			<thead>
@@ -71,18 +71,18 @@
 				<tr>
 					<td><input bind:value="{newPluginVehicles.country}"></td>
 					<td><input bind:value="{newPluginVehicles.year}"></td>
-					<td><input bind:value="{newPluginVehicles.['pev-stock']}"></td>
-					<td><input bind:value="{newPluginVehicles.['annual-sale']}"></td>
-					<td><input bind:value="{newPluginVehicles.['cars-per-1000']}"></td>
+					<td><input bind:value="{newPluginVehicles['pev-stock']}"></td>
+					<td><input bind:value="{newPluginVehicles['annual-sale']}"></td>
+					<td><input bind:value="{newPluginVehicles['cars-per-1000']}"></td>
 					<td> <Button outline color="primary" on:click={insertPluginVehicles}>Insertar</Button></td>
 				</tr>
 				{#each pluginVehicles as pluginVehicles}
 					<tr>
 						<td>{pluginVehicles.country}</td>
 						<td>{pluginVehicles.year}</td>
-						<td>{pluginVehicles.['pev-stock']}</td>
-						<td>{pluginVehicles.['annual-sale']}</td>
-						<td>{pluginVehicles.['cars-per-1000']}</td>
+						<td>{pluginVehicles['pev-stock']}</td>
+						<td>{pluginVehicles['annual-sale']}</td>
+						<td>{pluginVehicles['cars-per-1000']}</td>
 						<td><Button outline color="danger">Borrar</Button></td>
 					</tr>
 				{/each}

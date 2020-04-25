@@ -69,9 +69,9 @@ async function insertOilEnergy(){
 				<tr>
 					<td><input bind:value = "{newOilEnergy.country}"></td>
 					<td><input bind:value = "{newOilEnergy.year}"></td>
-					<td><input bind:value = "{newOilEnergy.oil-consumption}"></td>
-					<td><input bind:value = "{newOilEnergy.coal-consumption}"></td>
-					<td><input bind:value = "{newOilEnergy.nuclear-energy-consumption}"></td>
+					<td><input bind:value = "{newOilEnergy['oil-consumption']}"></td>
+					<td><input bind:value = "{newOilEnergy['coal-consumption']}"></td>
+					<td><input bind:value = "{newOilEnergy['nuclear-energy-consumption']}"></td>
 					<td><Button outline color= "primary" on:click= {insertOilEnergy}>Insertar</Button></td>
 				</tr>
 
@@ -79,9 +79,9 @@ async function insertOilEnergy(){
 					<tr>
 						<td>{newOilEnergy.country}</td>
 						<td>{newOilEnergy.year}</td>
-						<td>{newOilEnergy.oil-consumption}</td>
-						<td>{newOilEnergy.coal-consumption}</td>
-						<td>{newOilEnergy.nuclear-energy-consumption}</td>
+						<td>{newOilEnergy['oil-consumption']}</td>
+						<td>{newOilEnergy['coal-consumption']}</td>
+						<td>{newOilEnergy['nuclear-energy-consumption']}</td>
 						<td><Button outline color= "danger">Borrar</Button></td>
 					</tr>
 				{/each}

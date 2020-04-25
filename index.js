@@ -1,20 +1,25 @@
 // We call the modules
 const express = require("express");
 const bodyParser = require("body-parser");
-const path = require("path"); 
-const plugInVehiclesAPI = require(path.join(__dirname, "plugInVehiclesAPI/front"));
-const renewableSourcesAPI = require(path.join(__dirname, "renewableSourcesAPI/front"));
-const oilCoalNuclearEnergyConsumptionAPI = require(path.join(__dirname, "oilCoalNuclearEnergyConsumptionAPI/front"));
 
-const port = process.env.PORT || 80;
+/*
+const plugInVehiclesAPI = require("./src/back/plugInVehiclesAPI");
+const renewableSourcesAPI = require("./src/back/renewableSourcesAPI");
+*/const oilCoalNuclearEnergyConsumptionAPI = require("./src/back/oilCoalNuclearEnergyConsumptionAPI");
 
-const app = express();
+var app = express();
 
 app.use(bodyParser.json());
 
-plugInVehiclesAPI(app);
+
+
+/*plugInVehiclesAPI(app);
 renewableSourcesAPI(app);
-oilCoalNuclearEnergyConsumptionAPI(app);
+*/oilCoalNuclearEnergyConsumptionAPI(app);
+
+var port = process.env.PORT || 12345;
+
+app.use("/", express.static("./public"));
 
 app.listen(port, () => {
 	console.log("Server ready");
