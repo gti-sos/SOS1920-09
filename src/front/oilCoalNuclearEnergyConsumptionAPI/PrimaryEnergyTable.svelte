@@ -47,6 +47,20 @@ async function insertOilEnergy(){
 	});
 }
 
+
+async function deleteOilEnergy(country,year){
+
+console.log("Inserting oil coal consumption...");
+const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats" + country + "/" + year, {
+	method: "DELETE",
+	body: JSON.stringify(newOilEnergy),
+	headers: {
+		"Content-Type": "application/json"
+	}
+});
+}
+
+
 </script>
 
 
@@ -82,7 +96,7 @@ async function insertOilEnergy(){
 						<td>{newOilEnergy['oil-consumption']}</td>
 						<td>{newOilEnergy['coal-consumption']}</td>
 						<td>{newOilEnergy['nuclear-energy-consumption']}</td>
-						<td><Button outline color= "danger">Borrar</Button></td>
+						<td><Button outline color= "danger" on:click = {deleteOilEnergy(oilEnergy.country,oilEnergy.year)}>Borrar</Button></td>
 					</tr>
 				{/each}
 			</tbody>
