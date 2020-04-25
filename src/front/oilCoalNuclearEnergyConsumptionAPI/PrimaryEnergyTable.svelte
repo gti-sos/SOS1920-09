@@ -76,8 +76,14 @@ const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats" + "/
 
 				{#each oilEnergys as oilEnergy}
 					<tr>
-						<td>{oilEnergy.country}</td>
+
+					
+						<td>
+							<a href="#/oil-coal-nuclear-energy-consumption-stats/{oilEnergy.country}/{oilEnergy.year}"> </a>
+							{oilEnergy.country}
+						</td>
 						<td>{oilEnergy.year}</td>
+					
 						<td>{oilEnergy['oil-consumption']}</td>
 						<td>{oilEnergy['coal-consumption']}</td>
 						<td>{oilEnergy['nuclear-energy-consumption']}</td>
