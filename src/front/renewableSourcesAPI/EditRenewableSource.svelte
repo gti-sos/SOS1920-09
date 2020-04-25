@@ -84,9 +84,9 @@
                 <tr>
                     <td> {updatedCountry} </td>
                     <td> {updatedYear} </td>
-                    <td> <input bind:value="{updatedPercentageRe}"> </td>
-                    <td> <input bind:value="{updatedPercentageHydro}"> </td>
-                    <td> <input bind:value="{updatedPercentageWind}"> </td>
+                    <td> <input type="number" bind:value="{updatedPercentageRe}"> </td>
+                    <td> <input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{updatedPercentageHydro}"> </td>
+                    <td> <input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{updatedPercentageWind}"> </td>
                     <td> <Button outline color="primary" on:click={updateRenewableSource}> Actualizar </Button> </td>
                 </tr>
         </tbody>

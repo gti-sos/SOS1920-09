@@ -2921,7 +2921,7 @@ var app = (function () {
     	return block;
     }
 
-    // (84:10) <Button outline color= "danger" on:click = "{deleteOilEnergy(oilEnergy.country,oilEnergy.year)}">
+    // (91:10) <Button outline color= "danger" on:click = "{deleteOilEnergy(oilEnergy.country,oilEnergy.year)}">
     function create_default_slot_1(ctx) {
     	let t;
 
@@ -2941,7 +2941,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(84:10) <Button outline color= \\\"danger\\\" on:click = \\\"{deleteOilEnergy(oilEnergy.country,oilEnergy.year)}\\\">",
+    		source: "(91:10) <Button outline color= \\\"danger\\\" on:click = \\\"{deleteOilEnergy(oilEnergy.country,oilEnergy.year)}\\\">",
     		ctx
     	});
 
@@ -2952,8 +2952,10 @@ var app = (function () {
     function create_each_block(ctx) {
     	let tr;
     	let td0;
+    	let a;
     	let t0_value = /*oilEnergy*/ ctx[1].country + "";
     	let t0;
+    	let a_href_value;
     	let t1;
     	let td1;
     	let t2_value = /*oilEnergy*/ ctx[1].year + "";
@@ -2993,6 +2995,7 @@ var app = (function () {
     		c: function create() {
     			tr = element("tr");
     			td0 = element("td");
+    			a = element("a");
     			t0 = text(t0_value);
     			t1 = space();
     			td1 = element("td");
@@ -3010,18 +3013,21 @@ var app = (function () {
     			td5 = element("td");
     			create_component(button.$$.fragment);
     			t10 = space();
-    			add_location(td0, file$3, 78, 6, 2386);
-    			add_location(td1, file$3, 79, 6, 2422);
-    			add_location(td2, file$3, 80, 6, 2455);
-    			add_location(td3, file$3, 81, 6, 2502);
-    			add_location(td4, file$3, 82, 6, 2550);
-    			add_location(td5, file$3, 83, 6, 2608);
+    			attr_dev(a, "href", a_href_value = "#/oil-coal-nuclear-energy-consumption-stats/" + /*oilEnergy*/ ctx[1].country + "/" + /*oilEnergy*/ ctx[1].year);
+    			add_location(a, file$3, 81, 7, 2408);
+    			add_location(td0, file$3, 80, 6, 2395);
+    			add_location(td1, file$3, 85, 6, 2561);
+    			add_location(td2, file$3, 87, 6, 2601);
+    			add_location(td3, file$3, 88, 6, 2648);
+    			add_location(td4, file$3, 89, 6, 2696);
+    			add_location(td5, file$3, 90, 6, 2754);
     			add_location(tr, file$3, 77, 5, 2374);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
     			append_dev(tr, td0);
-    			append_dev(td0, t0);
+    			append_dev(td0, a);
+    			append_dev(a, t0);
     			append_dev(tr, t1);
     			append_dev(tr, td1);
     			append_dev(td1, t2);
@@ -3043,6 +3049,11 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
     			if ((!current || dirty & /*oilEnergy*/ 2) && t0_value !== (t0_value = /*oilEnergy*/ ctx[1].country + "")) set_data_dev(t0, t0_value);
+
+    			if (!current || dirty & /*oilEnergy*/ 2 && a_href_value !== (a_href_value = "#/oil-coal-nuclear-energy-consumption-stats/" + /*oilEnergy*/ ctx[1].country + "/" + /*oilEnergy*/ ctx[1].year)) {
+    				attr_dev(a, "href", a_href_value);
+    			}
+
     			if ((!current || dirty & /*oilEnergy*/ 2) && t2_value !== (t2_value = /*oilEnergy*/ ctx[1].year + "")) set_data_dev(t2, t2_value);
     			if ((!current || dirty & /*oilEnergy*/ 2) && t4_value !== (t4_value = /*oilEnergy*/ ctx[1]["oil-consumption"] + "")) set_data_dev(t4, t4_value);
     			if ((!current || dirty & /*oilEnergy*/ 2) && t6_value !== (t6_value = /*oilEnergy*/ ctx[1]["coal-consumption"] + "")) set_data_dev(t6, t6_value);
@@ -3641,13 +3652,19 @@ var app = (function () {
 
     function create_fragment$5(ctx) {
     	let main;
+    	let h1;
+    	let t1;
     	let current;
     	const primaryenergytable = new PrimaryEnergyTable({ $$inline: true });
 
     	const block = {
     		c: function create() {
     			main = element("main");
+    			h1 = element("h1");
+    			h1.textContent = "Admin";
+    			t1 = space();
     			create_component(primaryenergytable.$$.fragment);
+    			add_location(h1, file$4, 5, 1, 96);
     			add_location(main, file$4, 4, 0, 87);
     		},
     		l: function claim(nodes) {
@@ -3655,6 +3672,8 @@ var app = (function () {
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
+    			append_dev(main, h1);
+    			append_dev(main, t1);
     			mount_component(primaryenergytable, main, null);
     			current = true;
     		},
@@ -5587,8 +5606,6 @@ var app = (function () {
     		i: noop,
     		o: noop,
     		d: noop
-<<<<<<< HEAD
-=======
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
@@ -5708,16 +5725,34 @@ var app = (function () {
     	let t13;
     	let td2;
     	let input0;
+    	let input0_updating = false;
     	let t14;
     	let td3;
     	let input1;
+    	let input1_updating = false;
     	let t15;
     	let td4;
     	let input2;
+    	let input2_updating = false;
     	let t16;
     	let td5;
     	let current;
     	let dispose;
+
+    	function input0_input_handler() {
+    		input0_updating = true;
+    		/*input0_input_handler*/ ctx[9].call(input0);
+    	}
+
+    	function input1_input_handler() {
+    		input1_updating = true;
+    		/*input1_input_handler*/ ctx[10].call(input1);
+    	}
+
+    	function input2_input_handler() {
+    		input2_updating = true;
+    		/*input2_input_handler*/ ctx[11].call(input2);
+    	}
 
     	const button = new Button({
     			props: {
@@ -5729,7 +5764,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	button.$on("click", /*updateOilCoal*/ ctx[6]);
+    	button.$on("click", /*updateOilCoal*/ ctx[7]);
 
     	const block = {
     		c: function create() {
@@ -5769,24 +5804,33 @@ var app = (function () {
     			t16 = space();
     			td5 = element("td");
     			create_component(button.$$.fragment);
-    			add_location(th0, file$9, 78, 5, 2337);
-    			add_location(th1, file$9, 79, 5, 2357);
-    			add_location(th2, file$9, 80, 5, 2376);
-    			add_location(th3, file$9, 81, 5, 2426);
-    			add_location(th4, file$9, 82, 5, 2474);
-    			add_location(tr0, file$9, 77, 4, 2326);
-    			add_location(thead, file$9, 76, 12, 2313);
-    			add_location(td0, file$9, 87, 20, 2613);
-    			add_location(td1, file$9, 88, 20, 2660);
-    			add_location(input0, file$9, 89, 24, 2708);
-    			add_location(td2, file$9, 89, 20, 2704);
-    			add_location(input1, file$9, 90, 24, 2783);
-    			add_location(td3, file$9, 90, 20, 2779);
-    			add_location(input2, file$9, 91, 24, 2859);
-    			add_location(td4, file$9, 91, 20, 2855);
-    			add_location(td5, file$9, 93, 20, 2962);
-    			add_location(tr1, file$9, 86, 16, 2587);
-    			add_location(tbody, file$9, 85, 12, 2562);
+    			add_location(th0, file$9, 78, 5, 2319);
+    			add_location(th1, file$9, 79, 5, 2339);
+    			add_location(th2, file$9, 80, 5, 2358);
+    			add_location(th3, file$9, 81, 5, 2408);
+    			add_location(th4, file$9, 82, 5, 2456);
+    			add_location(tr0, file$9, 77, 4, 2308);
+    			add_location(thead, file$9, 76, 12, 2295);
+    			add_location(td0, file$9, 87, 20, 2595);
+    			add_location(td1, file$9, 88, 20, 2642);
+    			attr_dev(input0, "type", "number");
+    			add_location(input0, file$9, 89, 24, 2690);
+    			add_location(td2, file$9, 89, 20, 2686);
+    			attr_dev(input1, "type", "number");
+    			attr_dev(input1, "placeholder", "0.0");
+    			attr_dev(input1, "step", "0.01");
+    			attr_dev(input1, "min", "0");
+    			add_location(input1, file$9, 90, 24, 2779);
+    			add_location(td3, file$9, 90, 20, 2775);
+    			attr_dev(input2, "type", "number");
+    			attr_dev(input2, "placeholder", "0.0");
+    			attr_dev(input2, "step", "0.01");
+    			attr_dev(input2, "min", "0");
+    			add_location(input2, file$9, 91, 24, 2908);
+    			add_location(td4, file$9, 91, 20, 2904);
+    			add_location(td5, file$9, 93, 20, 3064);
+    			add_location(tr1, file$9, 86, 16, 2569);
+    			add_location(tbody, file$9, 85, 12, 2544);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -5827,27 +5871,32 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[9]),
-    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[10]),
-    				listen_dev(input2, "input", /*input2_input_handler*/ ctx[11])
+    				listen_dev(input0, "input", input0_input_handler),
+    				listen_dev(input1, "input", input1_input_handler),
+    				listen_dev(input2, "input", input2_input_handler)
     			];
     		},
     		p: function update(ctx, dirty) {
     			if (!current || dirty & /*updatedCountry*/ 2) set_data_dev(t10, /*updatedCountry*/ ctx[1]);
     			if (!current || dirty & /*updatedYear*/ 4) set_data_dev(t12, /*updatedYear*/ ctx[2]);
 
-    			if (dirty & /*updatedOilConsumption*/ 8 && input0.value !== /*updatedOilConsumption*/ ctx[3]) {
+    			if (!input0_updating && dirty & /*updatedOilConsumption*/ 8) {
     				set_input_value(input0, /*updatedOilConsumption*/ ctx[3]);
     			}
 
-    			if (dirty & /*updatedCoalConsumption*/ 16 && input1.value !== /*updatedCoalConsumption*/ ctx[4]) {
+    			input0_updating = false;
+
+    			if (!input1_updating && dirty & /*updatedCoalConsumption*/ 16) {
     				set_input_value(input1, /*updatedCoalConsumption*/ ctx[4]);
     			}
 
-    			if (dirty & /*updatedNuclearEnergyConsumption*/ 32 && input2.value !== /*updatedNuclearEnergyConsumption*/ ctx[5]) {
+    			input1_updating = false;
+
+    			if (!input2_updating && dirty & /*updatedNuclearEnergyConsumption*/ 32) {
     				set_input_value(input2, /*updatedNuclearEnergyConsumption*/ ctx[5]);
     			}
 
+    			input2_updating = false;
     			const button_changes = {};
 
     			if (dirty & /*$$scope*/ 4096) {
@@ -5965,11 +6014,11 @@ var app = (function () {
     		pending: create_pending_block$3,
     		then: create_then_block$3,
     		catch: create_catch_block$3,
-    		value: 7,
+    		value: 6,
     		blocks: [,,,]
     	};
 
-    	handle_promise(promise = /*oilCoal*/ ctx[7], info);
+    	handle_promise(promise = /*oilCoal*/ ctx[6], info);
 
     	const button = new Button({
     			props: {
@@ -5997,10 +6046,10 @@ var app = (function () {
     			info.block.c();
     			t5 = space();
     			create_component(button.$$.fragment);
-    			add_location(strong0, file$9, 71, 41, 2132);
-    			add_location(strong1, file$9, 71, 75, 2166);
-    			add_location(h3, file$9, 71, 4, 2095);
-    			add_location(main, file$9, 70, 0, 2083);
+    			add_location(strong0, file$9, 71, 41, 2114);
+    			add_location(strong1, file$9, 71, 75, 2148);
+    			add_location(h3, file$9, 71, 4, 2077);
+    			add_location(main, file$9, 70, 0, 2065);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6026,10 +6075,11 @@ var app = (function () {
     			ctx = new_ctx;
     			if ((!current || dirty & /*params*/ 1) && t1_value !== (t1_value = /*params*/ ctx[0].country + "")) set_data_dev(t1, t1_value);
     			if ((!current || dirty & /*params*/ 1) && t3_value !== (t3_value = /*params*/ ctx[0].year + "")) set_data_dev(t3, t3_value);
+    			info.ctx = ctx;
 
-    			{
+    			if (dirty & /*oilCoal*/ 64 && promise !== (promise = /*oilCoal*/ ctx[6]) && handle_promise(promise, info)) ; else {
     				const child_ctx = ctx.slice();
-    				child_ctx[7] = info.resolved;
+    				child_ctx[6] = info.resolved;
     				info.block.p(child_ctx, dirty);
     			}
 
@@ -6088,12 +6138,12 @@ var app = (function () {
 
     	async function getOilCoal() {
     		console.log("Fetching oilCoal...");
-    		const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats/" + params.country + "/" + paramas.year);
+    		const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats/" + params.country + "/" + params.year);
 
     		if (res.ok) {
     			console.log("Ok:");
     			const json = await res.json();
-    			contact = json;
+    			$$invalidate(6, oilCoal = json);
     			$$invalidate(1, updatedCountry = oilCoal.country);
     			$$invalidate(2, updatedYear = oilCoal.year);
     			$$invalidate(3, updatedOilConsumption = oilCoal["oil-consumption"]);
@@ -6108,11 +6158,11 @@ var app = (function () {
     	async function updateOilCoal() {
     		console.log("Updating Oil Coal...");
 
-    		const res = await fetch("/api/v1//oil-coal-nuclear-energy-consumption-stats//" + params.country + "/" + paramas.year, {
+    		const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats/" + params.country + "/" + params.year, {
     			method: "PUT",
     			body: JSON.stringify({
-    				updatedCountry: params.country,
-    				updatedYear: params.year,
+    				country: params.country,
+    				year: params.year,
     				"oil-consumption": updatedOilConsumption,
     				"coal-consumption": updatedCoalConsumption,
     				"nuclear-energy-consumption": updateupdatedNuclearEnergyConsumption
@@ -6133,17 +6183,17 @@ var app = (function () {
     	validate_slots("EditOilCoal", $$slots, []);
 
     	function input0_input_handler() {
-    		updatedOilConsumption = this.value;
+    		updatedOilConsumption = to_number(this.value);
     		$$invalidate(3, updatedOilConsumption);
     	}
 
     	function input1_input_handler() {
-    		updatedCoalConsumption = this.value;
+    		updatedCoalConsumption = to_number(this.value);
     		$$invalidate(4, updatedCoalConsumption);
     	}
 
     	function input2_input_handler() {
-    		updatedNuclearEnergyConsumption = this.value;
+    		updatedNuclearEnergyConsumption = to_number(this.value);
     		$$invalidate(5, updatedNuclearEnergyConsumption);
     	}
 
@@ -6169,7 +6219,7 @@ var app = (function () {
 
     	$$self.$inject_state = $$props => {
     		if ("params" in $$props) $$invalidate(0, params = $$props.params);
-    		if ("oilCoal" in $$props) $$invalidate(7, oilCoal = $$props.oilCoal);
+    		if ("oilCoal" in $$props) $$invalidate(6, oilCoal = $$props.oilCoal);
     		if ("updatedCountry" in $$props) $$invalidate(1, updatedCountry = $$props.updatedCountry);
     		if ("updatedYear" in $$props) $$invalidate(2, updatedYear = $$props.updatedYear);
     		if ("updatedOilConsumption" in $$props) $$invalidate(3, updatedOilConsumption = $$props.updatedOilConsumption);
@@ -6188,8 +6238,8 @@ var app = (function () {
     		updatedOilConsumption,
     		updatedCoalConsumption,
     		updatedNuclearEnergyConsumption,
-    		updateOilCoal,
     		oilCoal,
+    		updateOilCoal,
     		getOilCoal,
     		input0_input_handler,
     		input1_input_handler,
@@ -7007,16 +7057,34 @@ var app = (function () {
     	let t15;
     	let td2;
     	let input0;
+    	let input0_updating = false;
     	let t16;
     	let td3;
     	let input1;
+    	let input1_updating = false;
     	let t17;
     	let td4;
     	let input2;
+    	let input2_updating = false;
     	let t18;
     	let td5;
     	let current;
     	let dispose;
+
+    	function input0_input_handler() {
+    		input0_updating = true;
+    		/*input0_input_handler*/ ctx[9].call(input0);
+    	}
+
+    	function input1_input_handler() {
+    		input1_updating = true;
+    		/*input1_input_handler*/ ctx[10].call(input1);
+    	}
+
+    	function input2_input_handler() {
+    		input2_updating = true;
+    		/*input2_input_handler*/ ctx[11].call(input2);
+    	}
 
     	const button = new Button({
     			props: {
@@ -7081,13 +7149,22 @@ var app = (function () {
     			add_location(thead, file$b, 72, 12, 2350);
     			add_location(td0, file$b, 84, 20, 2736);
     			add_location(td1, file$b, 85, 20, 2785);
+    			attr_dev(input0, "type", "number");
     			add_location(input0, file$b, 86, 25, 2836);
     			add_location(td2, file$b, 86, 20, 2831);
-    			add_location(input1, file$b, 87, 25, 2911);
-    			add_location(td3, file$b, 87, 20, 2906);
-    			add_location(input2, file$b, 88, 25, 2989);
-    			add_location(td4, file$b, 88, 20, 2984);
-    			add_location(td5, file$b, 89, 20, 3061);
+    			attr_dev(input1, "type", "number");
+    			attr_dev(input1, "placeholder", "0.0");
+    			attr_dev(input1, "step", "0.01");
+    			attr_dev(input1, "min", "0");
+    			add_location(input1, file$b, 87, 25, 2925);
+    			add_location(td3, file$b, 87, 20, 2920);
+    			attr_dev(input2, "type", "number");
+    			attr_dev(input2, "placeholder", "0.0");
+    			attr_dev(input2, "step", "0.01");
+    			attr_dev(input2, "min", "0");
+    			add_location(input2, file$b, 88, 25, 3055);
+    			add_location(td4, file$b, 88, 20, 3050);
+    			add_location(td5, file$b, 89, 20, 3179);
     			add_location(tr1, file$b, 83, 16, 2710);
     			add_location(tbody, file$b, 82, 12, 2685);
     		},
@@ -7132,27 +7209,32 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[9]),
-    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[10]),
-    				listen_dev(input2, "input", /*input2_input_handler*/ ctx[11])
+    				listen_dev(input0, "input", input0_input_handler),
+    				listen_dev(input1, "input", input1_input_handler),
+    				listen_dev(input2, "input", input2_input_handler)
     			];
     		},
     		p: function update(ctx, dirty) {
     			if (!current || dirty & /*updatedCountry*/ 2) set_data_dev(t12, /*updatedCountry*/ ctx[1]);
     			if (!current || dirty & /*updatedYear*/ 4) set_data_dev(t14, /*updatedYear*/ ctx[2]);
 
-    			if (dirty & /*updatedPercentageRe*/ 8 && input0.value !== /*updatedPercentageRe*/ ctx[3]) {
+    			if (!input0_updating && dirty & /*updatedPercentageRe*/ 8) {
     				set_input_value(input0, /*updatedPercentageRe*/ ctx[3]);
     			}
 
-    			if (dirty & /*updatedPercentageHydro*/ 16 && input1.value !== /*updatedPercentageHydro*/ ctx[4]) {
+    			input0_updating = false;
+
+    			if (!input1_updating && dirty & /*updatedPercentageHydro*/ 16) {
     				set_input_value(input1, /*updatedPercentageHydro*/ ctx[4]);
     			}
 
-    			if (dirty & /*updatedPercentageWind*/ 32 && input2.value !== /*updatedPercentageWind*/ ctx[5]) {
+    			input1_updating = false;
+
+    			if (!input2_updating && dirty & /*updatedPercentageWind*/ 32) {
     				set_input_value(input2, /*updatedPercentageWind*/ ctx[5]);
     			}
 
+    			input2_updating = false;
     			const button_changes = {};
 
     			if (dirty & /*$$scope*/ 4096) {
@@ -7177,1908 +7259,6 @@ var app = (function () {
     			destroy_component(button);
     			run_all(dispose);
     		}
-<<<<<<< HEAD
-=======
->>>>>>> 097d2c6fa30f6d1d4529a2146b7455396a50ab80
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-<<<<<<< HEAD
-    		id: create_catch_block$3.name,
-    		type: "catch",
-    		source: "(1:0) <script>      import {          onMount      }",
-=======
-    		id: create_default_slot_1$5.name,
-    		type: "slot",
-    		source: "(72:8) <Table bordered>",
->>>>>>> 097d2c6fa30f6d1d4529a2146b7455396a50ab80
-    		ctx
-    	});
-
-    	return block;
-    }
-
-<<<<<<< HEAD
-    // (75:4) {:then oilCoal}
-    function create_then_block$3(ctx) {
-    	let current;
-
-    	const table = new Table({
-    			props: {
-    				bordered: true,
-    				$$slots: { default: [create_default_slot_1$3] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	const block = {
-    		c: function create() {
-    			create_component(table.$$.fragment);
-    		},
-    		m: function mount(target, anchor) {
-    			mount_component(table, target, anchor);
-    			current = true;
-    		},
-    		p: function update(ctx, dirty) {
-    			const table_changes = {};
-
-    			if (dirty & /*$$scope, updatedNuclearEnergyConsumption, updatedCoalConsumption, updatedOilConsumption, updatedYear, updatedCountry*/ 4158) {
-    				table_changes.$$scope = { dirty, ctx };
-    			}
-
-    			table.$set(table_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(table.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(table.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			destroy_component(table, detaching);
-=======
-    // (69:28)           Loading renewableSource...      {:then renewableSource}
-    function create_pending_block$5(ctx) {
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			t = text("Loading renewableSource...");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-    		p: noop,
-    		i: noop,
-    		o: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
->>>>>>> 097d2c6fa30f6d1d4529a2146b7455396a50ab80
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-<<<<<<< HEAD
-    		id: create_then_block$3.name,
-    		type: "then",
-    		source: "(75:4) {:then oilCoal}",
-=======
-    		id: create_pending_block$5.name,
-    		type: "pending",
-    		source: "(69:28)           Loading renewableSource...      {:then renewableSource}",
->>>>>>> 097d2c6fa30f6d1d4529a2146b7455396a50ab80
-    		ctx
-    	});
-
-    	return block;
-    }
-
-<<<<<<< HEAD
-    // (94:25) <Button outline  color="primary" on:click={updateOilCoal}>
-    function create_default_slot_2$3(ctx) {
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			t = text("Actualizar");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
-=======
-    // (96:4) <Button outline color="secondary" on:click="{pop}">
-    function create_default_slot$5(ctx) {
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			t = text("Atrás");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot$5.name,
-    		type: "slot",
-    		source: "(96:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    function create_fragment$c(ctx) {
-    	let main;
-    	let h3;
-    	let t0;
-    	let strong0;
-    	let t1_value = /*params*/ ctx[0].country + "";
-    	let t1;
-    	let t2;
-    	let strong1;
-    	let t3_value = /*params*/ ctx[0].year + "";
-    	let t3;
-    	let t4;
-    	let promise;
-    	let t5;
-    	let current;
-
-    	let info = {
-    		ctx,
-    		current: null,
-    		token: null,
-    		pending: create_pending_block$5,
-    		then: create_then_block$5,
-    		catch: create_catch_block$5,
-    		value: 6,
-    		blocks: [,,,]
-    	};
-
-    	handle_promise(promise = /*renewableSource*/ ctx[6], info);
-
-    	const button = new Button({
-    			props: {
-    				outline: true,
-    				color: "secondary",
-    				$$slots: { default: [create_default_slot$5] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	button.$on("click", pop);
-
-    	const block = {
-    		c: function create() {
-    			main = element("main");
-    			h3 = element("h3");
-    			t0 = text("Editar dato de energía renovable: ");
-    			strong0 = element("strong");
-    			t1 = text(t1_value);
-    			t2 = space();
-    			strong1 = element("strong");
-    			t3 = text(t3_value);
-    			t4 = space();
-    			info.block.c();
-    			t5 = space();
-    			create_component(button.$$.fragment);
-    			add_location(strong0, file$b, 67, 42, 2145);
-    			add_location(strong1, file$b, 67, 76, 2179);
-    			add_location(h3, file$b, 67, 4, 2107);
-    			add_location(main, file$b, 66, 0, 2095);
-    		},
-    		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, main, anchor);
-    			append_dev(main, h3);
-    			append_dev(h3, t0);
-    			append_dev(h3, strong0);
-    			append_dev(strong0, t1);
-    			append_dev(h3, t2);
-    			append_dev(h3, strong1);
-    			append_dev(strong1, t3);
-    			append_dev(main, t4);
-    			info.block.m(main, info.anchor = null);
-    			info.mount = () => main;
-    			info.anchor = t5;
-    			append_dev(main, t5);
-    			mount_component(button, main, null);
-    			current = true;
-    		},
-    		p: function update(new_ctx, [dirty]) {
-    			ctx = new_ctx;
-    			if ((!current || dirty & /*params*/ 1) && t1_value !== (t1_value = /*params*/ ctx[0].country + "")) set_data_dev(t1, t1_value);
-    			if ((!current || dirty & /*params*/ 1) && t3_value !== (t3_value = /*params*/ ctx[0].year + "")) set_data_dev(t3, t3_value);
-    			info.ctx = ctx;
-
-    			if (dirty & /*renewableSource*/ 64 && promise !== (promise = /*renewableSource*/ ctx[6]) && handle_promise(promise, info)) ; else {
-    				const child_ctx = ctx.slice();
-    				child_ctx[6] = info.resolved;
-    				info.block.p(child_ctx, dirty);
-    			}
-
-    			const button_changes = {};
-
-    			if (dirty & /*$$scope*/ 4096) {
-    				button_changes.$$scope = { dirty, ctx };
-    			}
-
-    			button.$set(button_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(info.block);
-    			transition_in(button.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			for (let i = 0; i < 3; i += 1) {
-    				const block = info.blocks[i];
-    				transition_out(block);
-    			}
-
-    			transition_out(button.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(main);
-    			info.block.d();
-    			info.token = null;
-    			info = null;
-    			destroy_component(button);
->>>>>>> 097d2c6fa30f6d1d4529a2146b7455396a50ab80
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_2$3.name,
-    		type: "slot",
-    		source: "(94:25) <Button outline  color=\\\"primary\\\" on:click={updateOilCoal}>",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-<<<<<<< HEAD
-    // (76:8) <Table bordered>
-    function create_default_slot_1$3(ctx) {
-    	let thead;
-    	let tr0;
-    	let th0;
-    	let t1;
-    	let th1;
-    	let t3;
-    	let th2;
-    	let t5;
-    	let th3;
-    	let t7;
-    	let th4;
-    	let t9;
-    	let tbody;
-    	let tr1;
-    	let td0;
-    	let t10;
-    	let t11;
-    	let td1;
-    	let t12;
-    	let t13;
-    	let td2;
-    	let input0;
-    	let t14;
-    	let td3;
-    	let input1;
-    	let t15;
-    	let td4;
-    	let input2;
-    	let t16;
-    	let td5;
-    	let current;
-    	let dispose;
-
-    	const button = new Button({
-    			props: {
-    				outline: true,
-    				color: "primary",
-    				$$slots: { default: [create_default_slot_2$3] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	button.$on("click", /*updateOilCoal*/ ctx[6]);
-=======
-    function instance$c($$self, $$props, $$invalidate) {
-    	let { params = {} } = $$props;
-    	let renewableSource = {};
-    	let updatedCountry = "";
-    	let updatedYear = 0;
-    	let updatedPercentageRe = 0;
-    	let updatedPercentageHydro = 0;
-    	let updatedPercentageWind = 0;
-    	onMount(getRenewableSource);
-
-    	async function getRenewableSource() {
-    		console.log("Fetching renewable source...");
-    		const res = await fetch("/api/v1/renewable-sources-stats/" + params.country + "/" + params.year);
-
-    		if (res.ok) {
-    			console.log("Ok:");
-    			const json = await res.json();
-    			$$invalidate(6, renewableSource = json);
-    			$$invalidate(1, updatedCountry = renewableSource.year);
-    			$$invalidate(2, updatedYear = renewableSource.country);
-    			$$invalidate(3, updatedPercentageRe = renewableSource["percentage-re-total"]);
-    			$$invalidate(4, updatedPercentageHydro = renewableSource["percentage-hydropower-total"]);
-    			$$invalidate(5, updatedPercentageWind = renewableSource["percentage-wind-power-total"]);
-    			console.log("Received contact.");
-    		} else {
-    			console.log("ERROR!");
-    		}
-    	}
-
-    	async function updateRenewableSource() {
-    		console.log("Updating renewable source...");
-
-    		const res = await fetch("/api/v1/renewable-sources-stats/" + params.country + "/" + params.year, {
-    			method: "PUT",
-    			body: JSON.stringify({
-    				country: params.country,
-    				year: params.year,
-    				"percentage-re-total": updatedPercentageRe,
-    				"percentage-hydropower-total": updatedPercentageHydro,
-    				"percentage-wind-power-total": updatedPercentageWind
-    			}),
-    			headers: { "Content-Type": "application/json" }
-    		}).then(function (res) {
-    			getRenewableSource();
-    		});
-    	}
-
-    	const writable_props = ["params"];
-
-    	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$6.warn(`<EditRenewableSource> was created with unknown prop '${key}'`);
-    	});
-
-    	let { $$slots = {}, $$scope } = $$props;
-    	validate_slots("EditRenewableSource", $$slots, []);
-
-    	function input0_input_handler() {
-    		updatedPercentageRe = this.value;
-    		$$invalidate(3, updatedPercentageRe);
-    	}
-
-    	function input1_input_handler() {
-    		updatedPercentageHydro = this.value;
-    		$$invalidate(4, updatedPercentageHydro);
-    	}
-
-    	function input2_input_handler() {
-    		updatedPercentageWind = this.value;
-    		$$invalidate(5, updatedPercentageWind);
-    	}
-
-    	$$self.$set = $$props => {
-    		if ("params" in $$props) $$invalidate(0, params = $$props.params);
-    	};
-
-    	$$self.$capture_state = () => ({
-    		onMount,
-    		pop,
-    		Table,
-    		Button,
-    		params,
-    		renewableSource,
-    		updatedCountry,
-    		updatedYear,
-    		updatedPercentageRe,
-    		updatedPercentageHydro,
-    		updatedPercentageWind,
-    		getRenewableSource,
-    		updateRenewableSource
-    	});
-
-    	$$self.$inject_state = $$props => {
-    		if ("params" in $$props) $$invalidate(0, params = $$props.params);
-    		if ("renewableSource" in $$props) $$invalidate(6, renewableSource = $$props.renewableSource);
-    		if ("updatedCountry" in $$props) $$invalidate(1, updatedCountry = $$props.updatedCountry);
-    		if ("updatedYear" in $$props) $$invalidate(2, updatedYear = $$props.updatedYear);
-    		if ("updatedPercentageRe" in $$props) $$invalidate(3, updatedPercentageRe = $$props.updatedPercentageRe);
-    		if ("updatedPercentageHydro" in $$props) $$invalidate(4, updatedPercentageHydro = $$props.updatedPercentageHydro);
-    		if ("updatedPercentageWind" in $$props) $$invalidate(5, updatedPercentageWind = $$props.updatedPercentageWind);
-    	};
-
-    	if ($$props && "$$inject" in $$props) {
-    		$$self.$inject_state($$props.$$inject);
-    	}
-
-    	return [
-    		params,
-    		updatedCountry,
-    		updatedYear,
-    		updatedPercentageRe,
-    		updatedPercentageHydro,
-    		updatedPercentageWind,
-    		renewableSource,
-    		updateRenewableSource,
-    		getRenewableSource,
-    		input0_input_handler,
-    		input1_input_handler,
-    		input2_input_handler
-    	];
-    }
-
-    class EditRenewableSource extends SvelteComponentDev {
-    	constructor(options) {
-    		super(options);
-    		init(this, options, instance$c, create_fragment$c, safe_not_equal, { params: 0 });
->>>>>>> 097d2c6fa30f6d1d4529a2146b7455396a50ab80
-
-    	const block = {
-    		c: function create() {
-    			thead = element("thead");
-    			tr0 = element("tr");
-    			th0 = element("th");
-    			th0.textContent = "País";
-    			t1 = space();
-    			th1 = element("th");
-    			th1.textContent = "Año";
-    			t3 = space();
-    			th2 = element("th");
-    			th2.textContent = "Porcentaje de consumpo de Gasolina";
-    			t5 = space();
-    			th3 = element("th");
-    			th3.textContent = "Porcentaje de consumpo de Carbón";
-    			t7 = space();
-    			th4 = element("th");
-    			th4.textContent = "Porcentaje de consumpo de Energía Nuclear";
-    			t9 = space();
-    			tbody = element("tbody");
-    			tr1 = element("tr");
-    			td0 = element("td");
-    			t10 = text(/*updatedCountry*/ ctx[1]);
-    			t11 = space();
-    			td1 = element("td");
-    			t12 = text(/*updatedYear*/ ctx[2]);
-    			t13 = space();
-    			td2 = element("td");
-    			input0 = element("input");
-    			t14 = space();
-    			td3 = element("td");
-    			input1 = element("input");
-    			t15 = space();
-    			td4 = element("td");
-    			input2 = element("input");
-    			t16 = space();
-    			td5 = element("td");
-    			create_component(button.$$.fragment);
-    			add_location(th0, file$9, 78, 5, 2337);
-    			add_location(th1, file$9, 79, 5, 2357);
-    			add_location(th2, file$9, 80, 5, 2376);
-    			add_location(th3, file$9, 81, 5, 2426);
-    			add_location(th4, file$9, 82, 5, 2474);
-    			add_location(tr0, file$9, 77, 4, 2326);
-    			add_location(thead, file$9, 76, 12, 2313);
-    			add_location(td0, file$9, 87, 20, 2613);
-    			add_location(td1, file$9, 88, 20, 2660);
-    			add_location(input0, file$9, 89, 24, 2708);
-    			add_location(td2, file$9, 89, 20, 2704);
-    			add_location(input1, file$9, 90, 24, 2783);
-    			add_location(td3, file$9, 90, 20, 2779);
-    			add_location(input2, file$9, 91, 24, 2859);
-    			add_location(td4, file$9, 91, 20, 2855);
-    			add_location(td5, file$9, 93, 20, 2962);
-    			add_location(tr1, file$9, 86, 16, 2587);
-    			add_location(tbody, file$9, 85, 12, 2562);
-    		},
-    		m: function mount(target, anchor, remount) {
-    			insert_dev(target, thead, anchor);
-    			append_dev(thead, tr0);
-    			append_dev(tr0, th0);
-    			append_dev(tr0, t1);
-    			append_dev(tr0, th1);
-    			append_dev(tr0, t3);
-    			append_dev(tr0, th2);
-    			append_dev(tr0, t5);
-    			append_dev(tr0, th3);
-    			append_dev(tr0, t7);
-    			append_dev(tr0, th4);
-    			insert_dev(target, t9, anchor);
-    			insert_dev(target, tbody, anchor);
-    			append_dev(tbody, tr1);
-    			append_dev(tr1, td0);
-    			append_dev(td0, t10);
-    			append_dev(tr1, t11);
-    			append_dev(tr1, td1);
-    			append_dev(td1, t12);
-    			append_dev(tr1, t13);
-    			append_dev(tr1, td2);
-    			append_dev(td2, input0);
-    			set_input_value(input0, /*updatedOilConsumption*/ ctx[3]);
-    			append_dev(tr1, t14);
-    			append_dev(tr1, td3);
-    			append_dev(td3, input1);
-    			set_input_value(input1, /*updatedCoalConsumption*/ ctx[4]);
-    			append_dev(tr1, t15);
-    			append_dev(tr1, td4);
-    			append_dev(td4, input2);
-    			set_input_value(input2, /*updatedNuclearEnergyConsumption*/ ctx[5]);
-    			append_dev(tr1, t16);
-    			append_dev(tr1, td5);
-    			mount_component(button, td5, null);
-    			current = true;
-    			if (remount) run_all(dispose);
-
-    			dispose = [
-    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[9]),
-    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[10]),
-    				listen_dev(input2, "input", /*input2_input_handler*/ ctx[11])
-    			];
-    		},
-    		p: function update(ctx, dirty) {
-    			if (!current || dirty & /*updatedCountry*/ 2) set_data_dev(t10, /*updatedCountry*/ ctx[1]);
-    			if (!current || dirty & /*updatedYear*/ 4) set_data_dev(t12, /*updatedYear*/ ctx[2]);
-
-    			if (dirty & /*updatedOilConsumption*/ 8 && input0.value !== /*updatedOilConsumption*/ ctx[3]) {
-    				set_input_value(input0, /*updatedOilConsumption*/ ctx[3]);
-    			}
-
-    			if (dirty & /*updatedCoalConsumption*/ 16 && input1.value !== /*updatedCoalConsumption*/ ctx[4]) {
-    				set_input_value(input1, /*updatedCoalConsumption*/ ctx[4]);
-    			}
-
-    			if (dirty & /*updatedNuclearEnergyConsumption*/ 32 && input2.value !== /*updatedNuclearEnergyConsumption*/ ctx[5]) {
-    				set_input_value(input2, /*updatedNuclearEnergyConsumption*/ ctx[5]);
-    			}
-
-    			const button_changes = {};
-
-    			if (dirty & /*$$scope*/ 4096) {
-    				button_changes.$$scope = { dirty, ctx };
-    			}
-
-    			button.$set(button_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(button.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(button.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(thead);
-    			if (detaching) detach_dev(t9);
-    			if (detaching) detach_dev(tbody);
-    			destroy_component(button);
-    			run_all(dispose);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_1$3.name,
-    		type: "slot",
-    		source: "(76:8) <Table bordered>",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (73:20)           Loading oilCoal...      {:then oilCoal}
-    function create_pending_block$3(ctx) {
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			t = text("Loading oilCoal...");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-    		p: noop,
-    		i: noop,
-    		o: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_pending_block$3.name,
-    		type: "pending",
-    		source: "(73:20)           Loading oilCoal...      {:then oilCoal}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (99:4) <Button outline color="secondary" on:click="{pop}">
-    function create_default_slot$3(ctx) {
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			t = text("Atrás");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot$3.name,
-    		type: "slot",
-    		source: "(99:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    function create_fragment$a(ctx) {
-    	let main;
-    	let h3;
-    	let t0;
-    	let strong0;
-    	let t1_value = /*params*/ ctx[0].country + "";
-    	let t1;
-    	let t2;
-    	let strong1;
-    	let t3_value = /*params*/ ctx[0].year + "";
-    	let t3;
-    	let t4;
-    	let promise;
-    	let t5;
-    	let current;
-
-    	let info = {
-    		ctx,
-    		current: null,
-    		token: null,
-    		pending: create_pending_block$3,
-    		then: create_then_block$3,
-    		catch: create_catch_block$3,
-    		value: 7,
-    		blocks: [,,,]
-    	};
-
-    	handle_promise(promise = /*oilCoal*/ ctx[7], info);
-
-    	const button = new Button({
-    			props: {
-    				outline: true,
-    				color: "secondary",
-    				$$slots: { default: [create_default_slot$3] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	button.$on("click", pop);
-
-    	const block = {
-    		c: function create() {
-    			main = element("main");
-    			h3 = element("h3");
-    			t0 = text("Editar datos Energías primarias: ");
-    			strong0 = element("strong");
-    			t1 = text(t1_value);
-    			t2 = space();
-    			strong1 = element("strong");
-    			t3 = text(t3_value);
-    			t4 = space();
-    			info.block.c();
-    			t5 = space();
-    			create_component(button.$$.fragment);
-    			add_location(strong0, file$9, 71, 41, 2132);
-    			add_location(strong1, file$9, 71, 75, 2166);
-    			add_location(h3, file$9, 71, 4, 2095);
-    			add_location(main, file$9, 70, 0, 2083);
-    		},
-    		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, main, anchor);
-    			append_dev(main, h3);
-    			append_dev(h3, t0);
-    			append_dev(h3, strong0);
-    			append_dev(strong0, t1);
-    			append_dev(h3, t2);
-    			append_dev(h3, strong1);
-    			append_dev(strong1, t3);
-    			append_dev(main, t4);
-    			info.block.m(main, info.anchor = null);
-    			info.mount = () => main;
-    			info.anchor = t5;
-    			append_dev(main, t5);
-    			mount_component(button, main, null);
-    			current = true;
-    		},
-    		p: function update(new_ctx, [dirty]) {
-    			ctx = new_ctx;
-    			if ((!current || dirty & /*params*/ 1) && t1_value !== (t1_value = /*params*/ ctx[0].country + "")) set_data_dev(t1, t1_value);
-    			if ((!current || dirty & /*params*/ 1) && t3_value !== (t3_value = /*params*/ ctx[0].year + "")) set_data_dev(t3, t3_value);
-
-    			{
-    				const child_ctx = ctx.slice();
-    				child_ctx[7] = info.resolved;
-    				info.block.p(child_ctx, dirty);
-    			}
-
-    			const button_changes = {};
-
-    			if (dirty & /*$$scope*/ 4096) {
-    				button_changes.$$scope = { dirty, ctx };
-    			}
-
-    			button.$set(button_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(info.block);
-    			transition_in(button.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			for (let i = 0; i < 3; i += 1) {
-    				const block = info.blocks[i];
-    				transition_out(block);
-    			}
-
-    			transition_out(button.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(main);
-    			info.block.d();
-    			info.token = null;
-    			info = null;
-    			destroy_component(button);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_fragment$a.name,
-    		type: "component",
-    		source: "",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    function instance$a($$self, $$props, $$invalidate) {
-    	let { params = {} } = $$props;
-    	let oilCoal = {};
-    	let updatedCountry = "";
-    	let updatedYear = 0;
-    	let updatedOilConsumption = 0;
-    	let updatedCoalConsumption = 0;
-    	let updatedNuclearEnergyConsumption = 0;
-    	onMount(getOilCoal);
-
-    	async function getOilCoal() {
-    		console.log("Fetching oilCoal...");
-    		const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats/" + params.country + "/" + paramas.year);
-
-    		if (res.ok) {
-    			console.log("Ok:");
-    			const json = await res.json();
-    			contact = json;
-    			$$invalidate(1, updatedCountry = oilCoal.country);
-    			$$invalidate(2, updatedYear = oilCoal.year);
-    			$$invalidate(3, updatedOilConsumption = oilCoal["oil-consumption"]);
-    			$$invalidate(4, updatedCoalConsumption = oilCoal["coal-consumption"]);
-    			updateupdatedNuclearEnergyConsumption = oilCoal["nuclear-energy-consumption"];
-    			console.log("Received contact.");
-    		} else {
-    			console.log("ERROR!" + errorMsg);
-    		}
-    	}
-
-    	async function updateOilCoal() {
-    		console.log("Updating Oil Coal...");
-
-    		const res = await fetch("/api/v1//oil-coal-nuclear-energy-consumption-stats//" + params.country + "/" + paramas.year, {
-    			method: "PUT",
-    			body: JSON.stringify({
-    				updatedCountry: params.country,
-    				updatedYear: params.year,
-    				"oil-consumption": updatedOilConsumption,
-    				"coal-consumption": updatedCoalConsumption,
-    				"nuclear-energy-consumption": updateupdatedNuclearEnergyConsumption
-    			}),
-    			headers: { "Content-Type": "application/json" }
-    		}).then(function (res) {
-    			getOilCoal();
-    		});
-    	}
-
-    	const writable_props = ["params"];
-
-    	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$4.warn(`<EditOilCoal> was created with unknown prop '${key}'`);
-    	});
-
-    	let { $$slots = {}, $$scope } = $$props;
-    	validate_slots("EditOilCoal", $$slots, []);
-
-    	function input0_input_handler() {
-    		updatedOilConsumption = this.value;
-    		$$invalidate(3, updatedOilConsumption);
-    	}
-
-    	function input1_input_handler() {
-    		updatedCoalConsumption = this.value;
-    		$$invalidate(4, updatedCoalConsumption);
-    	}
-
-    	function input2_input_handler() {
-    		updatedNuclearEnergyConsumption = this.value;
-    		$$invalidate(5, updatedNuclearEnergyConsumption);
-    	}
-
-    	$$self.$set = $$props => {
-    		if ("params" in $$props) $$invalidate(0, params = $$props.params);
-    	};
-
-    	$$self.$capture_state = () => ({
-    		onMount,
-    		pop,
-    		Table,
-    		Button,
-    		params,
-    		oilCoal,
-    		updatedCountry,
-    		updatedYear,
-    		updatedOilConsumption,
-    		updatedCoalConsumption,
-    		updatedNuclearEnergyConsumption,
-    		getOilCoal,
-    		updateOilCoal
-    	});
-
-    	$$self.$inject_state = $$props => {
-    		if ("params" in $$props) $$invalidate(0, params = $$props.params);
-    		if ("oilCoal" in $$props) $$invalidate(7, oilCoal = $$props.oilCoal);
-    		if ("updatedCountry" in $$props) $$invalidate(1, updatedCountry = $$props.updatedCountry);
-    		if ("updatedYear" in $$props) $$invalidate(2, updatedYear = $$props.updatedYear);
-    		if ("updatedOilConsumption" in $$props) $$invalidate(3, updatedOilConsumption = $$props.updatedOilConsumption);
-    		if ("updatedCoalConsumption" in $$props) $$invalidate(4, updatedCoalConsumption = $$props.updatedCoalConsumption);
-    		if ("updatedNuclearEnergyConsumption" in $$props) $$invalidate(5, updatedNuclearEnergyConsumption = $$props.updatedNuclearEnergyConsumption);
-    	};
-
-    	if ($$props && "$$inject" in $$props) {
-    		$$self.$inject_state($$props.$$inject);
-    	}
-
-    	return [
-    		params,
-    		updatedCountry,
-    		updatedYear,
-    		updatedOilConsumption,
-    		updatedCoalConsumption,
-    		updatedNuclearEnergyConsumption,
-    		updateOilCoal,
-    		oilCoal,
-    		getOilCoal,
-    		input0_input_handler,
-    		input1_input_handler,
-    		input2_input_handler
-    	];
-    }
-
-    class EditOilCoal extends SvelteComponentDev {
-    	constructor(options) {
-    		super(options);
-    		init(this, options, instance$a, create_fragment$a, safe_not_equal, { params: 0 });
-
-    		dispatch_dev("SvelteRegisterComponent", {
-    			component: this,
-    			tagName: "EditOilCoal",
-    			options,
-    			id: create_fragment$a.name
-    		});
-    	}
-
-    	get params() {
-    		throw new Error("<EditOilCoal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set params(value) {
-    		throw new Error("<EditOilCoal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-    }
-
-    /* src\front\plugInVehiclesAPI\EditPlugInVehicle.svelte generated by Svelte v3.20.1 */
-
-    const { console: console_1$5 } = globals;
-    const file$a = "src\\front\\plugInVehiclesAPI\\EditPlugInVehicle.svelte";
-
-    // (1:0) <script>      import {          onMount      }
-    function create_catch_block$4(ctx) {
-    	const block = {
-    		c: noop,
-    		m: noop,
-    		p: noop,
-    		i: noop,
-    		o: noop,
-    		d: noop
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_catch_block$4.name,
-    		type: "catch",
-    		source: "(1:0) <script>      import {          onMount      }",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (73:4) {:then pluginVehicles}
-    function create_then_block$4(ctx) {
-    	let current;
-
-    	const table = new Table({
-    			props: {
-    				bordered: true,
-    				$$slots: { default: [create_default_slot_1$4] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	const block = {
-    		c: function create() {
-    			create_component(table.$$.fragment);
-    		},
-    		m: function mount(target, anchor) {
-    			mount_component(table, target, anchor);
-    			current = true;
-    		},
-    		p: function update(ctx, dirty) {
-    			const table_changes = {};
-
-    			if (dirty & /*$$scope, updatedCarsPerPeople, updatedAnnualSale, updatedPevStock, updatedYear, updatedCountry*/ 4158) {
-    				table_changes.$$scope = { dirty, ctx };
-    			}
-
-    			table.$set(table_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(table.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(table.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			destroy_component(table, detaching);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_then_block$4.name,
-    		type: "then",
-    		source: "(73:4) {:then pluginVehicles}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (92:25) <Button outline  color="primary" on:click={updatedPluginVehicles}>
-    function create_default_slot_2$4(ctx) {
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			t = text("Actualizar");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_2$4.name,
-    		type: "slot",
-    		source: "(92:25) <Button outline  color=\\\"primary\\\" on:click={updatedPluginVehicles}>",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (74:8) <Table bordered>
-    function create_default_slot_1$4(ctx) {
-    	let thead;
-    	let tr0;
-    	let th0;
-    	let t1;
-    	let th1;
-    	let t3;
-    	let th2;
-    	let t5;
-    	let th3;
-    	let t7;
-    	let th4;
-    	let t9;
-    	let th5;
-    	let t11;
-    	let tbody;
-    	let tr1;
-    	let td0;
-    	let t12;
-    	let t13;
-    	let td1;
-    	let t14;
-    	let t15;
-    	let td2;
-    	let input0;
-    	let t16;
-    	let td3;
-    	let input1;
-    	let t17;
-    	let td4;
-    	let input2;
-    	let t18;
-    	let td5;
-    	let current;
-    	let dispose;
-
-    	const button = new Button({
-    			props: {
-    				outline: true,
-    				color: "primary",
-    				$$slots: { default: [create_default_slot_2$4] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	button.$on("click", /*updatedPluginVehicles*/ ctx[7]);
-
-    	const block = {
-    		c: function create() {
-    			thead = element("thead");
-    			tr0 = element("tr");
-    			th0 = element("th");
-    			th0.textContent = "País";
-    			t1 = space();
-    			th1 = element("th");
-    			th1.textContent = "Año";
-    			t3 = space();
-    			th2 = element("th");
-    			th2.textContent = "Ventas acumuladas";
-    			t5 = space();
-    			th3 = element("th");
-    			th3.textContent = "Salario anual";
-    			t7 = space();
-    			th4 = element("th");
-    			th4.textContent = "Porcentaje de coches cada 1000 personas";
-    			t9 = space();
-    			th5 = element("th");
-    			th5.textContent = "Acciones";
-    			t11 = space();
-    			tbody = element("tbody");
-    			tr1 = element("tr");
-    			td0 = element("td");
-    			t12 = text(/*updatedCountry*/ ctx[1]);
-    			t13 = space();
-    			td1 = element("td");
-    			t14 = text(/*updatedYear*/ ctx[2]);
-    			t15 = space();
-    			td2 = element("td");
-    			input0 = element("input");
-    			t16 = space();
-    			td3 = element("td");
-    			input1 = element("input");
-    			t17 = space();
-    			td4 = element("td");
-    			input2 = element("input");
-    			t18 = space();
-    			td5 = element("td");
-    			create_component(button.$$.fragment);
-    			add_location(th0, file$a, 76, 20, 2258);
-    			add_location(th1, file$a, 77, 5, 2278);
-    			add_location(th2, file$a, 78, 5, 2297);
-    			add_location(th3, file$a, 79, 5, 2330);
-    			add_location(th4, file$a, 80, 5, 2359);
-    			add_location(th5, file$a, 81, 5, 2414);
-    			add_location(tr0, file$a, 75, 16, 2232);
-    			add_location(thead, file$a, 74, 12, 2207);
-    			add_location(td0, file$a, 86, 20, 2541);
-    			add_location(td1, file$a, 87, 20, 2588);
-    			add_location(input0, file$a, 88, 24, 2636);
-    			add_location(td2, file$a, 88, 20, 2632);
-    			add_location(input1, file$a, 89, 24, 2705);
-    			add_location(td3, file$a, 89, 20, 2701);
-    			add_location(input2, file$a, 90, 24, 2776);
-    			add_location(td4, file$a, 90, 20, 2772);
-    			add_location(td5, file$a, 91, 20, 2846);
-    			add_location(tr1, file$a, 85, 16, 2515);
-    			add_location(tbody, file$a, 84, 12, 2490);
-    		},
-    		m: function mount(target, anchor, remount) {
-    			insert_dev(target, thead, anchor);
-    			append_dev(thead, tr0);
-    			append_dev(tr0, th0);
-    			append_dev(tr0, t1);
-    			append_dev(tr0, th1);
-    			append_dev(tr0, t3);
-    			append_dev(tr0, th2);
-    			append_dev(tr0, t5);
-    			append_dev(tr0, th3);
-    			append_dev(tr0, t7);
-    			append_dev(tr0, th4);
-    			append_dev(tr0, t9);
-    			append_dev(tr0, th5);
-    			insert_dev(target, t11, anchor);
-    			insert_dev(target, tbody, anchor);
-    			append_dev(tbody, tr1);
-    			append_dev(tr1, td0);
-    			append_dev(td0, t12);
-    			append_dev(tr1, t13);
-    			append_dev(tr1, td1);
-    			append_dev(td1, t14);
-    			append_dev(tr1, t15);
-    			append_dev(tr1, td2);
-    			append_dev(td2, input0);
-    			set_input_value(input0, /*updatedPevStock*/ ctx[3]);
-    			append_dev(tr1, t16);
-    			append_dev(tr1, td3);
-    			append_dev(td3, input1);
-    			set_input_value(input1, /*updatedAnnualSale*/ ctx[4]);
-    			append_dev(tr1, t17);
-    			append_dev(tr1, td4);
-    			append_dev(td4, input2);
-    			set_input_value(input2, /*updatedCarsPerPeople*/ ctx[5]);
-    			append_dev(tr1, t18);
-    			append_dev(tr1, td5);
-    			mount_component(button, td5, null);
-    			current = true;
-    			if (remount) run_all(dispose);
-
-    			dispose = [
-    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[9]),
-    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[10]),
-    				listen_dev(input2, "input", /*input2_input_handler*/ ctx[11])
-    			];
-    		},
-    		p: function update(ctx, dirty) {
-    			if (!current || dirty & /*updatedCountry*/ 2) set_data_dev(t12, /*updatedCountry*/ ctx[1]);
-    			if (!current || dirty & /*updatedYear*/ 4) set_data_dev(t14, /*updatedYear*/ ctx[2]);
-
-    			if (dirty & /*updatedPevStock*/ 8 && input0.value !== /*updatedPevStock*/ ctx[3]) {
-    				set_input_value(input0, /*updatedPevStock*/ ctx[3]);
-    			}
-
-    			if (dirty & /*updatedAnnualSale*/ 16 && input1.value !== /*updatedAnnualSale*/ ctx[4]) {
-    				set_input_value(input1, /*updatedAnnualSale*/ ctx[4]);
-    			}
-
-    			if (dirty & /*updatedCarsPerPeople*/ 32 && input2.value !== /*updatedCarsPerPeople*/ ctx[5]) {
-    				set_input_value(input2, /*updatedCarsPerPeople*/ ctx[5]);
-    			}
-
-    			const button_changes = {};
-
-    			if (dirty & /*$$scope*/ 4096) {
-    				button_changes.$$scope = { dirty, ctx };
-    			}
-
-    			button.$set(button_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(button.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(button.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(thead);
-    			if (detaching) detach_dev(t11);
-    			if (detaching) detach_dev(tbody);
-    			destroy_component(button);
-    			run_all(dispose);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_1$4.name,
-    		type: "slot",
-    		source: "(74:8) <Table bordered>",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (71:27)           Loading pluginVehicles...      {:then pluginVehicles}
-    function create_pending_block$4(ctx) {
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			t = text("Loading pluginVehicles...");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-    		p: noop,
-    		i: noop,
-    		o: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_pending_block$4.name,
-    		type: "pending",
-    		source: "(71:27)           Loading pluginVehicles...      {:then pluginVehicles}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (97:4) <Button outline color="secondary" on:click="{pop}">
-    function create_default_slot$4(ctx) {
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			t = text("Atrás");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot$4.name,
-    		type: "slot",
-    		source: "(97:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    function create_fragment$b(ctx) {
-    	let main;
-    	let h3;
-    	let t0;
-    	let strong0;
-    	let t1_value = /*params*/ ctx[0].country + "";
-    	let t1;
-    	let t2;
-    	let strong1;
-    	let t3_value = /*params*/ ctx[0].year + "";
-    	let t3;
-    	let t4;
-    	let promise;
-    	let t5;
-    	let current;
-
-    	let info = {
-    		ctx,
-    		current: null,
-    		token: null,
-    		pending: create_pending_block$4,
-    		then: create_then_block$4,
-    		catch: create_catch_block$4,
-    		value: 6,
-    		blocks: [,,,]
-    	};
-
-    	handle_promise(promise = /*pluginVehicles*/ ctx[6], info);
-
-    	const button = new Button({
-    			props: {
-    				outline: true,
-    				color: "secondary",
-    				$$slots: { default: [create_default_slot$4] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	button.$on("click", pop);
-
-    	const block = {
-    		c: function create() {
-    			main = element("main");
-    			h3 = element("h3");
-    			t0 = text("Editar Dato de coche eléctrico:  ");
-    			strong0 = element("strong");
-    			t1 = text(t1_value);
-    			t2 = space();
-    			strong1 = element("strong");
-    			t3 = text(t3_value);
-    			t4 = space();
-    			info.block.c();
-    			t5 = space();
-    			create_component(button.$$.fragment);
-    			add_location(strong0, file$a, 69, 41, 2006);
-    			add_location(strong1, file$a, 69, 75, 2040);
-    			add_location(h3, file$a, 69, 4, 1969);
-    			add_location(main, file$a, 68, 0, 1957);
-    		},
-    		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, main, anchor);
-    			append_dev(main, h3);
-    			append_dev(h3, t0);
-    			append_dev(h3, strong0);
-    			append_dev(strong0, t1);
-    			append_dev(h3, t2);
-    			append_dev(h3, strong1);
-    			append_dev(strong1, t3);
-    			append_dev(main, t4);
-    			info.block.m(main, info.anchor = null);
-    			info.mount = () => main;
-    			info.anchor = t5;
-    			append_dev(main, t5);
-    			mount_component(button, main, null);
-    			current = true;
-    		},
-    		p: function update(new_ctx, [dirty]) {
-    			ctx = new_ctx;
-    			if ((!current || dirty & /*params*/ 1) && t1_value !== (t1_value = /*params*/ ctx[0].country + "")) set_data_dev(t1, t1_value);
-    			if ((!current || dirty & /*params*/ 1) && t3_value !== (t3_value = /*params*/ ctx[0].year + "")) set_data_dev(t3, t3_value);
-    			info.ctx = ctx;
-
-    			if (dirty & /*pluginVehicles*/ 64 && promise !== (promise = /*pluginVehicles*/ ctx[6]) && handle_promise(promise, info)) ; else {
-    				const child_ctx = ctx.slice();
-    				child_ctx[6] = info.resolved;
-    				info.block.p(child_ctx, dirty);
-    			}
-
-    			const button_changes = {};
-
-    			if (dirty & /*$$scope*/ 4096) {
-    				button_changes.$$scope = { dirty, ctx };
-    			}
-
-    			button.$set(button_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(info.block);
-    			transition_in(button.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			for (let i = 0; i < 3; i += 1) {
-    				const block = info.blocks[i];
-    				transition_out(block);
-    			}
-
-    			transition_out(button.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(main);
-    			info.block.d();
-    			info.token = null;
-    			info = null;
-    			destroy_component(button);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_fragment$b.name,
-    		type: "component",
-    		source: "",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    function instance$b($$self, $$props, $$invalidate) {
-    	let { params = {} } = $$props;
-    	let pluginVehicles = {};
-    	let updatedCountry = "";
-    	let updatedYear = 0;
-    	let updatedPevStock = 0;
-    	let updatedAnnualSale = 0;
-    	let updatedCarsPerPeople = 0;
-    	onMount(getPluginVehicles);
-
-    	async function getPluginVehicles() {
-    		console.log("Fetching plugin vehicle...");
-    		const res = await fetch("/api/v1/plugin-vehicles-stats/" + params.country + "/" + params.year);
-
-    		if (res.ok) {
-    			console.log("Ok:");
-    			const json = await res.json();
-    			$$invalidate(6, pluginVehicles = json);
-    			$$invalidate(1, updatedCountry = pluginVehicles.country);
-    			$$invalidate(2, updatedYear = pluginVehicles.year);
-    			$$invalidate(3, updatedPevStock = pluginVehicles["pev-stock"]);
-    			$$invalidate(4, updatedAnnualSale = pluginVehicles["annual-sale"]);
-    			$$invalidate(5, updatedCarsPerPeople = pluginVehicles["cars-per-1000"]);
-    			console.log("Received plugin vehicle.");
-    		} else {
-    			console.log("ERROR!");
-    		}
-    	}
-
-    	async function updatedPluginVehicles() {
-    		console.log("Updating plugin vehicles...");
-
-    		const res = await fetch("/api/v1/plugin-vehicles-stats/" + params.country + "/" + params.year, {
-    			method: "PUT",
-    			body: JSON.stringify({
-    				country: params.country,
-    				year: params.year,
-    				"pev-stock": updatedPevStock,
-    				"annual-sale": updatedAnnualSale,
-    				"cars-per-1000": updatedCarsPerPeople
-    			}),
-    			headers: { "Content-Type": "application/json" }
-    		}).then(function (res) {
-    			getPluginVehicles();
-    		});
-    	}
-
-    	const writable_props = ["params"];
-
-    	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$5.warn(`<EditPlugInVehicle> was created with unknown prop '${key}'`);
-    	});
-
-    	let { $$slots = {}, $$scope } = $$props;
-    	validate_slots("EditPlugInVehicle", $$slots, []);
-
-    	function input0_input_handler() {
-    		updatedPevStock = this.value;
-    		$$invalidate(3, updatedPevStock);
-    	}
-
-    	function input1_input_handler() {
-    		updatedAnnualSale = this.value;
-    		$$invalidate(4, updatedAnnualSale);
-    	}
-
-    	function input2_input_handler() {
-    		updatedCarsPerPeople = this.value;
-    		$$invalidate(5, updatedCarsPerPeople);
-    	}
-
-    	$$self.$set = $$props => {
-    		if ("params" in $$props) $$invalidate(0, params = $$props.params);
-    	};
-
-    	$$self.$capture_state = () => ({
-    		onMount,
-    		pop,
-    		Table,
-    		Button,
-    		params,
-    		pluginVehicles,
-    		updatedCountry,
-    		updatedYear,
-    		updatedPevStock,
-    		updatedAnnualSale,
-    		updatedCarsPerPeople,
-    		getPluginVehicles,
-    		updatedPluginVehicles
-    	});
-
-    	$$self.$inject_state = $$props => {
-    		if ("params" in $$props) $$invalidate(0, params = $$props.params);
-    		if ("pluginVehicles" in $$props) $$invalidate(6, pluginVehicles = $$props.pluginVehicles);
-    		if ("updatedCountry" in $$props) $$invalidate(1, updatedCountry = $$props.updatedCountry);
-    		if ("updatedYear" in $$props) $$invalidate(2, updatedYear = $$props.updatedYear);
-    		if ("updatedPevStock" in $$props) $$invalidate(3, updatedPevStock = $$props.updatedPevStock);
-    		if ("updatedAnnualSale" in $$props) $$invalidate(4, updatedAnnualSale = $$props.updatedAnnualSale);
-    		if ("updatedCarsPerPeople" in $$props) $$invalidate(5, updatedCarsPerPeople = $$props.updatedCarsPerPeople);
-    	};
-
-    	if ($$props && "$$inject" in $$props) {
-    		$$self.$inject_state($$props.$$inject);
-    	}
-
-    	return [
-    		params,
-    		updatedCountry,
-    		updatedYear,
-    		updatedPevStock,
-    		updatedAnnualSale,
-    		updatedCarsPerPeople,
-    		pluginVehicles,
-    		updatedPluginVehicles,
-    		getPluginVehicles,
-    		input0_input_handler,
-    		input1_input_handler,
-    		input2_input_handler
-    	];
-    }
-
-    class EditPlugInVehicle extends SvelteComponentDev {
-    	constructor(options) {
-    		super(options);
-    		init(this, options, instance$b, create_fragment$b, safe_not_equal, { params: 0 });
-
-    		dispatch_dev("SvelteRegisterComponent", {
-    			component: this,
-    			tagName: "EditPlugInVehicle",
-    			options,
-    			id: create_fragment$b.name
-    		});
-    	}
-
-    	get params() {
-    		throw new Error("<EditPlugInVehicle>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set params(value) {
-    		throw new Error("<EditPlugInVehicle>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-    }
-
-    /* src\front\renewableSourcesAPI\EditRenewableSource.svelte generated by Svelte v3.20.1 */
-
-    const { console: console_1$6 } = globals;
-    const file$b = "src\\front\\renewableSourcesAPI\\EditRenewableSource.svelte";
-
-    // (1:0) <script>      import {          onMount      }
-    function create_catch_block$5(ctx) {
-    	const block = {
-    		c: noop,
-    		m: noop,
-    		p: noop,
-    		i: noop,
-    		o: noop,
-    		d: noop
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_catch_block$5.name,
-    		type: "catch",
-    		source: "(1:0) <script>      import {          onMount      }",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (71:4) {:then renewableSource}
-    function create_then_block$5(ctx) {
-    	let current;
-
-    	const table = new Table({
-    			props: {
-    				bordered: true,
-    				$$slots: { default: [create_default_slot_1$5] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	const block = {
-    		c: function create() {
-    			create_component(table.$$.fragment);
-    		},
-    		m: function mount(target, anchor) {
-    			mount_component(table, target, anchor);
-    			current = true;
-    		},
-    		p: function update(ctx, dirty) {
-    			const table_changes = {};
-
-    			if (dirty & /*$$scope, updatedPercentageWind, updatedPercentageHydro, updatedPercentageRe, updatedYear, updatedCountry*/ 4158) {
-    				table_changes.$$scope = { dirty, ctx };
-    			}
-
-    			table.$set(table_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(table.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(table.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			destroy_component(table, detaching);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_then_block$5.name,
-    		type: "then",
-    		source: "(71:4) {:then renewableSource}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (90:25) <Button outline color="primary" on:click={updateRenewableSource}>
-    function create_default_slot_2$5(ctx) {
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			t = text("Actualizar");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_2$5.name,
-    		type: "slot",
-    		source: "(90:25) <Button outline color=\\\"primary\\\" on:click={updateRenewableSource}>",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (72:8) <Table bordered>
-    function create_default_slot_1$5(ctx) {
-    	let thead;
-    	let tr0;
-    	let th0;
-    	let t1;
-    	let th1;
-    	let t3;
-    	let th2;
-    	let t5;
-    	let th3;
-    	let t7;
-    	let th4;
-    	let t9;
-    	let th5;
-    	let t11;
-    	let tbody;
-    	let tr1;
-    	let td0;
-    	let t12;
-    	let t13;
-    	let td1;
-    	let t14;
-    	let t15;
-    	let td2;
-    	let input0;
-    	let t16;
-    	let td3;
-    	let input1;
-    	let t17;
-    	let td4;
-    	let input2;
-    	let t18;
-    	let td5;
-    	let current;
-    	let dispose;
-
-    	const button = new Button({
-    			props: {
-    				outline: true,
-    				color: "primary",
-    				$$slots: { default: [create_default_slot_2$5] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	button.$on("click", /*updateRenewableSource*/ ctx[7]);
-
-    	const block = {
-    		c: function create() {
-    			thead = element("thead");
-    			tr0 = element("tr");
-    			th0 = element("th");
-    			th0.textContent = "País";
-    			t1 = space();
-    			th1 = element("th");
-    			th1.textContent = "Año";
-    			t3 = space();
-    			th2 = element("th");
-    			th2.textContent = "Porcentaje de uso de energías renovables";
-    			t5 = space();
-    			th3 = element("th");
-    			th3.textContent = "Porcentaje de uso de energías hidroeléctricas sobre el total";
-    			t7 = space();
-    			th4 = element("th");
-    			th4.textContent = "Porcentaje de uso de energías eólica";
-    			t9 = space();
-    			th5 = element("th");
-    			th5.textContent = "Acciones";
-    			t11 = space();
-    			tbody = element("tbody");
-    			tr1 = element("tr");
-    			td0 = element("td");
-    			t12 = text(/*updatedCountry*/ ctx[1]);
-    			t13 = space();
-    			td1 = element("td");
-    			t14 = text(/*updatedYear*/ ctx[2]);
-    			t15 = space();
-    			td2 = element("td");
-    			input0 = element("input");
-    			t16 = space();
-    			td3 = element("td");
-    			input1 = element("input");
-    			t17 = space();
-    			td4 = element("td");
-    			input2 = element("input");
-    			t18 = space();
-    			td5 = element("td");
-    			create_component(button.$$.fragment);
-    			add_location(th0, file$b, 74, 5, 2386);
-    			add_location(th1, file$b, 75, 5, 2408);
-    			add_location(th2, file$b, 76, 5, 2429);
-    			add_location(th3, file$b, 77, 5, 2487);
-    			add_location(th4, file$b, 78, 5, 2565);
-    			add_location(th5, file$b, 79, 5, 2619);
-    			add_location(tr0, file$b, 73, 16, 2375);
-    			add_location(thead, file$b, 72, 12, 2350);
-    			add_location(td0, file$b, 84, 20, 2736);
-    			add_location(td1, file$b, 85, 20, 2785);
-    			add_location(input0, file$b, 86, 25, 2836);
-    			add_location(td2, file$b, 86, 20, 2831);
-    			add_location(input1, file$b, 87, 25, 2911);
-    			add_location(td3, file$b, 87, 20, 2906);
-    			add_location(input2, file$b, 88, 25, 2989);
-    			add_location(td4, file$b, 88, 20, 2984);
-    			add_location(td5, file$b, 89, 20, 3061);
-    			add_location(tr1, file$b, 83, 16, 2710);
-    			add_location(tbody, file$b, 82, 12, 2685);
-    		},
-    		m: function mount(target, anchor, remount) {
-    			insert_dev(target, thead, anchor);
-    			append_dev(thead, tr0);
-    			append_dev(tr0, th0);
-    			append_dev(tr0, t1);
-    			append_dev(tr0, th1);
-    			append_dev(tr0, t3);
-    			append_dev(tr0, th2);
-    			append_dev(tr0, t5);
-    			append_dev(tr0, th3);
-    			append_dev(tr0, t7);
-    			append_dev(tr0, th4);
-    			append_dev(tr0, t9);
-    			append_dev(tr0, th5);
-    			insert_dev(target, t11, anchor);
-    			insert_dev(target, tbody, anchor);
-    			append_dev(tbody, tr1);
-    			append_dev(tr1, td0);
-    			append_dev(td0, t12);
-    			append_dev(tr1, t13);
-    			append_dev(tr1, td1);
-    			append_dev(td1, t14);
-    			append_dev(tr1, t15);
-    			append_dev(tr1, td2);
-    			append_dev(td2, input0);
-    			set_input_value(input0, /*updatedPercentageRe*/ ctx[3]);
-    			append_dev(tr1, t16);
-    			append_dev(tr1, td3);
-    			append_dev(td3, input1);
-    			set_input_value(input1, /*updatedPercentageHydro*/ ctx[4]);
-    			append_dev(tr1, t17);
-    			append_dev(tr1, td4);
-    			append_dev(td4, input2);
-    			set_input_value(input2, /*updatedPercentageWind*/ ctx[5]);
-    			append_dev(tr1, t18);
-    			append_dev(tr1, td5);
-    			mount_component(button, td5, null);
-    			current = true;
-    			if (remount) run_all(dispose);
-
-    			dispose = [
-    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[9]),
-    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[10]),
-    				listen_dev(input2, "input", /*input2_input_handler*/ ctx[11])
-    			];
-    		},
-    		p: function update(ctx, dirty) {
-    			if (!current || dirty & /*updatedCountry*/ 2) set_data_dev(t12, /*updatedCountry*/ ctx[1]);
-    			if (!current || dirty & /*updatedYear*/ 4) set_data_dev(t14, /*updatedYear*/ ctx[2]);
-
-    			if (dirty & /*updatedPercentageRe*/ 8 && input0.value !== /*updatedPercentageRe*/ ctx[3]) {
-    				set_input_value(input0, /*updatedPercentageRe*/ ctx[3]);
-    			}
-
-    			if (dirty & /*updatedPercentageHydro*/ 16 && input1.value !== /*updatedPercentageHydro*/ ctx[4]) {
-    				set_input_value(input1, /*updatedPercentageHydro*/ ctx[4]);
-    			}
-
-    			if (dirty & /*updatedPercentageWind*/ 32 && input2.value !== /*updatedPercentageWind*/ ctx[5]) {
-    				set_input_value(input2, /*updatedPercentageWind*/ ctx[5]);
-    			}
-
-    			const button_changes = {};
-
-    			if (dirty & /*$$scope*/ 4096) {
-    				button_changes.$$scope = { dirty, ctx };
-    			}
-
-    			button.$set(button_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(button.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(button.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(thead);
-    			if (detaching) detach_dev(t11);
-    			if (detaching) detach_dev(tbody);
-    			destroy_component(button);
-    			run_all(dispose);
-    		}
->>>>>>> 95e8ebf2eb29a918d540064f2e75c75b9197680c
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
@@ -9341,17 +7521,17 @@ var app = (function () {
     	validate_slots("EditRenewableSource", $$slots, []);
 
     	function input0_input_handler() {
-    		updatedPercentageRe = this.value;
+    		updatedPercentageRe = to_number(this.value);
     		$$invalidate(3, updatedPercentageRe);
     	}
 
     	function input1_input_handler() {
-    		updatedPercentageHydro = this.value;
+    		updatedPercentageHydro = to_number(this.value);
     		$$invalidate(4, updatedPercentageHydro);
     	}
 
     	function input2_input_handler() {
-    		updatedPercentageWind = this.value;
+    		updatedPercentageWind = to_number(this.value);
     		$$invalidate(5, updatedPercentageWind);
     	}
 
@@ -9425,17 +7605,6 @@ var app = (function () {
     	set params(value) {
     		throw new Error("<EditRenewableSource>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
-<<<<<<< HEAD
-=======
-
-    	get params() {
-    		throw new Error("<EditRenewableSource>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set params(value) {
-    		throw new Error("<EditRenewableSource>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
->>>>>>> 95e8ebf2eb29a918d540064f2e75c75b9197680c
     }
 
     /* src\front\NotFound.svelte generated by Svelte v3.20.1 */
@@ -9522,15 +7691,7 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			create_component(router.$$.fragment);
-<<<<<<< HEAD
     			add_location(main, file$d, 26, 0, 1006);
-=======
-<<<<<<< HEAD
-    			add_location(h1, file$d, 27, 1, 1000);
-=======
->>>>>>> 097d2c6fa30f6d1d4529a2146b7455396a50ab80
-    			add_location(main, file$d, 26, 0, 991);
->>>>>>> 95e8ebf2eb29a918d540064f2e75c75b9197680c
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
