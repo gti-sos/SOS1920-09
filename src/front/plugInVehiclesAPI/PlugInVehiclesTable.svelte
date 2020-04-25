@@ -45,7 +45,16 @@
 		}).then(function (res){
 			getPluginVehicles();
 		});
+	}
 
+	async function deletePluginVehicles(country, year) {
+
+		console.log("Deleting plugin vehicles...");
+		const res = await fetch("/api/v1/plugin-vehicles-stats" + "/" + country + "/" + year, {
+			method: "DELETE"
+		}).then(function (res) {
+			getPluginVehicles();
+		});
 	}
 
 </script>
@@ -70,10 +79,10 @@
 			<tbody>
 				<tr>
 					<td><input bind:value="{newPluginVehicles.country}"></td>
-					<td><input bind:value="{newPluginVehicles.year}"></td>
-					<td><input bind:value="{newPluginVehicles['pev-stock']}"></td>
-					<td><input bind:value="{newPluginVehicles['annual-sale']}"></td>
-					<td><input bind:value="{newPluginVehicles['cars-per-1000']}"></td>
+					<td><input type="number" bind:value="{newPluginVehicles.year}"></td>
+					<td><input type="number" bind:value="{newPluginVehicles['pev-stock']}"></td>
+					<td><input type="number" bind:value="{newPluginVehicles['annual-sale']}"></td>
+					<td><input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newPluginVehicles['cars-per-1000']}"></td>
 					<td> <Button outline color="primary" on:click={insertPluginVehicles}>Insertar</Button></td>
 				</tr>
 				{#each pluginVehicles as pluginVehicles}
@@ -83,12 +92,11 @@
 						<td>{pluginVehicles['pev-stock']}</td>
 						<td>{pluginVehicles['annual-sale']}</td>
 						<td>{pluginVehicles['cars-per-1000']}</td>
-						<td><Button outline color="danger">Borrar</Button></td>
+						<td><Button outline color="danger" on:click="{deletePluginVehicles(pluginVehicles.country, pluginVehicles.year)}">Borrar</Button></td>
 					</tr>
 				{/each}
 			</tbody>
-			
 		</Table>
 	{/await}
-	
+
 </main>

@@ -75,7 +75,7 @@
 			<tbody>
 				<tr>
 					<td> <input bind:value="{newRenewableSource.country}"> </td>
-					<td> <input  bind:value="{newRenewableSource.year}"> </td>
+					<td> <input type="number" bind:value="{newRenewableSource.year}"> </td>
 					<td> <input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newRenewableSource['percentage-re-total']}"> </td>
 					<td> <input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newRenewableSource['percentage-hydropower-total']}"> </td>
 					<td> <input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newRenewableSource['percentage-wind-power-total']}"> </td>

@@ -49,6 +49,9 @@ module.exports = function (app){
 		
 	];
 
+	db.remove({}, {multi:true});
+	db.insert(initialPlugInVehiclesStats);
+
 	// RESOURCE plugInVehiclesStats
 
 	// GET plugInVehiclesStats/loadInitialData
