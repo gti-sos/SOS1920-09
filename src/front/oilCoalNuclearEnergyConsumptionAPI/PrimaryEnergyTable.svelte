@@ -1,10 +1,7 @@
 <script>
-
 import {onMount} from "svelte";
-
 import Table from "sveltestrap/src/Table.svelte";
 import Button from "sveltestrap/src/Button.svelte";
-
 let oilEnergy = [];
 let newOilEnergy = {
 	"country": "",
@@ -13,16 +10,11 @@ let newOilEnergy = {
 	"coal-consumption": 0,
 	"nuclear-energy-consumption":0
 };
-
 onMount(getOilEnergy);
-
-
 async function getOilEnergy(){
 	
 	console.log("Fetching oil coal consumption...");
 	const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats");
-
-
 	if (res.ok){
 		console.log("OK:");
 		const json = await res.json();
@@ -34,9 +26,7 @@ async function getOilEnergy(){
 		console.log("ERROR!");
 	}
 }
-
 async function insertOilEnergy(){
-
 	console.log("Inserting oil coal consumption...");
 	const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats", {
 		method: "POST",
@@ -48,10 +38,7 @@ async function insertOilEnergy(){
 		getOilEnergy(); 
 	}); 
 }
-
-
 async function deleteOilEnergy(country,year){
-
 console.log("Inserting oil coal consumption...");
 const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats" + country + "/" + year, {
 	method: "DELETE",
@@ -61,8 +48,6 @@ const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats" + co
 	}
 });
 }
-
-
 </script>
 
 
