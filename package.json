@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "This is an API that manages data related to renewable energies, plug-in cars' sales and primary energy sources.",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
