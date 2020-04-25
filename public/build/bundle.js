@@ -2817,7 +2817,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (1:0) <script>    import {onMount}
+    // (1:0) <script>  import {onMount}
     function create_catch_block(ctx) {
     	const block = {
     		c: noop,
@@ -2832,14 +2832,14 @@ var app = (function () {
     		block,
     		id: create_catch_block.name,
     		type: "catch",
-    		source: "(1:0) <script>    import {onMount}",
+    		source: "(1:0) <script>  import {onMount}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (57:1) {:then OilEnergys}
+    // (58:1) {:then oilEnergys}
     function create_then_block(ctx) {
     	let current;
 
@@ -2863,7 +2863,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const table_changes = {};
 
-    			if (dirty & /*$$scope, OilEnergy, newOilEnergy*/ 4099) {
+    			if (dirty & /*$$scope, oilEnergy, newOilEnergy*/ 8195) {
     				table_changes.$$scope = { dirty, ctx };
     			}
 
@@ -2887,14 +2887,14 @@ var app = (function () {
     		block,
     		id: create_then_block.name,
     		type: "then",
-    		source: "(57:1) {:then OilEnergys}",
+    		source: "(58:1) {:then oilEnergys}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (75:9) <Button outline color= "primary" on:click= {insertOilEnergy}>
+    // (76:9) <Button outline color= "primary" on:click= {insertOilEnergy}>
     function create_default_slot_2(ctx) {
     	let t;
 
@@ -2914,14 +2914,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(75:9) <Button outline color= \\\"primary\\\" on:click= {insertOilEnergy}>",
+    		source: "(76:9) <Button outline color= \\\"primary\\\" on:click= {insertOilEnergy}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (85:10) <Button outline color= "danger">
+    // (86:10) <Button outline color= "danger">
     function create_default_slot_1(ctx) {
     	let t;
 
@@ -2941,34 +2941,34 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(85:10) <Button outline color= \\\"danger\\\">",
+    		source: "(86:10) <Button outline color= \\\"danger\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (78:4) {#each OilEnergys as OilEnergy}
+    // (79:4) {#each oilEnergys as oilEnergy}
     function create_each_block(ctx) {
     	let tr;
     	let td0;
-    	let t0_value = /*newOilEnergy*/ ctx[0].country + "";
+    	let t0_value = /*oilEnergy*/ ctx[1].country + "";
     	let t0;
     	let t1;
     	let td1;
-    	let t2_value = /*newOilEnergy*/ ctx[0].year + "";
+    	let t2_value = /*oilEnergy*/ ctx[1].year + "";
     	let t2;
     	let t3;
     	let td2;
-    	let t4_value = /*newOilEnergy*/ ctx[0]["oil-consumption"] + "";
+    	let t4_value = /*oilEnergy*/ ctx[1]["oil-consumption"] + "";
     	let t4;
     	let t5;
     	let td3;
-    	let t6_value = /*newOilEnergy*/ ctx[0]["coal-consumption"] + "";
+    	let t6_value = /*oilEnergy*/ ctx[1]["coal-consumption"] + "";
     	let t6;
     	let t7;
     	let td4;
-    	let t8_value = /*newOilEnergy*/ ctx[0]["nuclear-energy-consumption"] + "";
+    	let t8_value = /*oilEnergy*/ ctx[1]["nuclear-energy-consumption"] + "";
     	let t8;
     	let t9;
     	let td5;
@@ -3006,13 +3006,13 @@ var app = (function () {
     			td5 = element("td");
     			create_component(button.$$.fragment);
     			t10 = space();
-    			add_location(td0, file$3, 79, 6, 1911);
-    			add_location(td1, file$3, 80, 6, 1950);
-    			add_location(td2, file$3, 81, 6, 1986);
-    			add_location(td3, file$3, 82, 6, 2036);
-    			add_location(td4, file$3, 83, 6, 2087);
-    			add_location(td5, file$3, 84, 6, 2148);
-    			add_location(tr, file$3, 78, 5, 1899);
+    			add_location(td0, file$3, 80, 6, 2258);
+    			add_location(td1, file$3, 81, 6, 2294);
+    			add_location(td2, file$3, 82, 6, 2327);
+    			add_location(td3, file$3, 83, 6, 2374);
+    			add_location(td4, file$3, 84, 6, 2422);
+    			add_location(td5, file$3, 85, 6, 2480);
+    			add_location(tr, file$3, 79, 5, 2246);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -3037,14 +3037,14 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if ((!current || dirty & /*newOilEnergy*/ 1) && t0_value !== (t0_value = /*newOilEnergy*/ ctx[0].country + "")) set_data_dev(t0, t0_value);
-    			if ((!current || dirty & /*newOilEnergy*/ 1) && t2_value !== (t2_value = /*newOilEnergy*/ ctx[0].year + "")) set_data_dev(t2, t2_value);
-    			if ((!current || dirty & /*newOilEnergy*/ 1) && t4_value !== (t4_value = /*newOilEnergy*/ ctx[0]["oil-consumption"] + "")) set_data_dev(t4, t4_value);
-    			if ((!current || dirty & /*newOilEnergy*/ 1) && t6_value !== (t6_value = /*newOilEnergy*/ ctx[0]["coal-consumption"] + "")) set_data_dev(t6, t6_value);
-    			if ((!current || dirty & /*newOilEnergy*/ 1) && t8_value !== (t8_value = /*newOilEnergy*/ ctx[0]["nuclear-energy-consumption"] + "")) set_data_dev(t8, t8_value);
+    			if ((!current || dirty & /*oilEnergy*/ 2) && t0_value !== (t0_value = /*oilEnergy*/ ctx[1].country + "")) set_data_dev(t0, t0_value);
+    			if ((!current || dirty & /*oilEnergy*/ 2) && t2_value !== (t2_value = /*oilEnergy*/ ctx[1].year + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty & /*oilEnergy*/ 2) && t4_value !== (t4_value = /*oilEnergy*/ ctx[1]["oil-consumption"] + "")) set_data_dev(t4, t4_value);
+    			if ((!current || dirty & /*oilEnergy*/ 2) && t6_value !== (t6_value = /*oilEnergy*/ ctx[1]["coal-consumption"] + "")) set_data_dev(t6, t6_value);
+    			if ((!current || dirty & /*oilEnergy*/ 2) && t8_value !== (t8_value = /*oilEnergy*/ ctx[1]["nuclear-energy-consumption"] + "")) set_data_dev(t8, t8_value);
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 4096) {
+    			if (dirty & /*$$scope*/ 8192) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -3069,14 +3069,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(78:4) {#each OilEnergys as OilEnergy}",
+    		source: "(79:4) {#each oilEnergys as oilEnergy}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (58:2) <Table bordered>
+    // (59:2) <Table bordered>
     function create_default_slot(ctx) {
     	let thead;
     	let tr0;
@@ -3123,7 +3123,7 @@ var app = (function () {
     		});
 
     	button.$on("click", /*insertOilEnergy*/ ctx[2]);
-    	let each_value = /*OilEnergys*/ ctx[9];
+    	let each_value = /*oilEnergys*/ ctx[10];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -3179,26 +3179,26 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$3, 60, 5, 1168);
-    			add_location(th1, file$3, 61, 5, 1188);
-    			add_location(th2, file$3, 62, 5, 1207);
-    			add_location(th3, file$3, 63, 5, 1257);
-    			add_location(th4, file$3, 64, 5, 1305);
-    			add_location(tr0, file$3, 59, 4, 1157);
-    			add_location(thead, file$3, 58, 3, 1144);
-    			add_location(input0, file$3, 69, 9, 1412);
-    			add_location(td0, file$3, 69, 5, 1408);
-    			add_location(input1, file$3, 70, 9, 1473);
-    			add_location(td1, file$3, 70, 5, 1469);
-    			add_location(input2, file$3, 71, 9, 1531);
-    			add_location(td2, file$3, 71, 5, 1527);
-    			add_location(input3, file$3, 72, 9, 1603);
-    			add_location(td3, file$3, 72, 5, 1599);
-    			add_location(input4, file$3, 73, 9, 1676);
-    			add_location(td4, file$3, 73, 5, 1672);
-    			add_location(td5, file$3, 74, 5, 1755);
-    			add_location(tr1, file$3, 68, 4, 1397);
-    			add_location(tbody, file$3, 67, 3, 1384);
+    			add_location(th0, file$3, 61, 5, 1515);
+    			add_location(th1, file$3, 62, 5, 1535);
+    			add_location(th2, file$3, 63, 5, 1554);
+    			add_location(th3, file$3, 64, 5, 1604);
+    			add_location(th4, file$3, 65, 5, 1652);
+    			add_location(tr0, file$3, 60, 4, 1504);
+    			add_location(thead, file$3, 59, 3, 1491);
+    			add_location(input0, file$3, 70, 9, 1759);
+    			add_location(td0, file$3, 70, 5, 1755);
+    			add_location(input1, file$3, 71, 9, 1820);
+    			add_location(td1, file$3, 71, 5, 1816);
+    			add_location(input2, file$3, 72, 9, 1878);
+    			add_location(td2, file$3, 72, 5, 1874);
+    			add_location(input3, file$3, 73, 9, 1950);
+    			add_location(td3, file$3, 73, 5, 1946);
+    			add_location(input4, file$3, 74, 9, 2023);
+    			add_location(td4, file$3, 74, 5, 2019);
+    			add_location(td5, file$3, 75, 5, 2102);
+    			add_location(tr1, file$3, 69, 4, 1744);
+    			add_location(tbody, file$3, 68, 3, 1731);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -3247,11 +3247,11 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[4]),
-    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[5]),
-    				listen_dev(input2, "input", /*input2_input_handler*/ ctx[6]),
-    				listen_dev(input3, "input", /*input3_input_handler*/ ctx[7]),
-    				listen_dev(input4, "input", /*input4_input_handler*/ ctx[8])
+    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[5]),
+    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[6]),
+    				listen_dev(input2, "input", /*input2_input_handler*/ ctx[7]),
+    				listen_dev(input3, "input", /*input3_input_handler*/ ctx[8]),
+    				listen_dev(input4, "input", /*input4_input_handler*/ ctx[9])
     			];
     		},
     		p: function update(ctx, dirty) {
@@ -3277,14 +3277,14 @@ var app = (function () {
 
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 4096) {
+    			if (dirty & /*$$scope*/ 8192) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
     			button.$set(button_changes);
 
-    			if (dirty & /*newOilEnergy, OilEnergy*/ 3) {
-    				each_value = /*OilEnergys*/ ctx[9];
+    			if (dirty & /*oilEnergy*/ 2) {
+    				each_value = /*oilEnergys*/ ctx[10];
     				validate_each_argument(each_value);
     				let i;
 
@@ -3345,20 +3345,20 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(58:2) <Table bordered>",
+    		source: "(59:2) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (55:19)     Loading OilEnergy...   {:then OilEnergys}
+    // (56:19)     Loading oilEnergy...   {:then oilEnergys}
     function create_pending_block(ctx) {
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Loading OilEnergy...");
+    			t = text("Loading oilEnergy...");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
@@ -3375,7 +3375,7 @@ var app = (function () {
     		block,
     		id: create_pending_block.name,
     		type: "pending",
-    		source: "(55:19)     Loading OilEnergy...   {:then OilEnergys}",
+    		source: "(56:19)     Loading oilEnergy...   {:then oilEnergys}",
     		ctx
     	});
 
@@ -3394,17 +3394,17 @@ var app = (function () {
     		pending: create_pending_block,
     		then: create_then_block,
     		catch: create_catch_block,
-    		value: 9,
+    		value: 10,
     		blocks: [,,,]
     	};
 
-    	handle_promise(promise = /*OilEnergy*/ ctx[1], info);
+    	handle_promise(promise = /*oilEnergy*/ ctx[1], info);
 
     	const block = {
     		c: function create() {
     			main = element("main");
     			info.block.c();
-    			add_location(main, file$3, 52, 0, 1045);
+    			add_location(main, file$3, 53, 0, 1392);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3420,9 +3420,9 @@ var app = (function () {
     			ctx = new_ctx;
     			info.ctx = ctx;
 
-    			if (dirty & /*OilEnergy*/ 2 && promise !== (promise = /*OilEnergy*/ ctx[1]) && handle_promise(promise, info)) ; else {
+    			if (dirty & /*oilEnergy*/ 2 && promise !== (promise = /*oilEnergy*/ ctx[1]) && handle_promise(promise, info)) ; else {
     				const child_ctx = ctx.slice();
-    				child_ctx[9] = info.resolved;
+    				child_ctx[10] = info.resolved;
     				info.block.p(child_ctx, dirty);
     			}
     		},
@@ -3459,7 +3459,7 @@ var app = (function () {
     }
 
     function instance$4($$self, $$props, $$invalidate) {
-    	let OilEnergy = [];
+    	let oilEnergy = [];
 
     	let newOilEnergy = {
     		"country": "",
@@ -3478,8 +3478,8 @@ var app = (function () {
     		if (res.ok) {
     			console.log("OK:");
     			const json = await res.json();
-    			$$invalidate(1, OilEnergy = json);
-    			console.log("Received " + OilEnergy.length + "oil coal consumption.");
+    			$$invalidate(1, oilEnergy = json);
+    			console.log("Received " + oilEnergy.length + "oil coal consumption.");
     		} else {
     			console.log("ERROR!");
     		}
@@ -3490,6 +3490,18 @@ var app = (function () {
 
     		const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats", {
     			method: "POST",
+    			body: JSON.stringify(newOilEnergy),
+    			headers: { "Content-Type": "application/json" }
+    		}).then(function (res) {
+    			getOilEnergy();
+    		});
+    	}
+
+    	async function deleteOilEnergy(country, year) {
+    		console.log("Inserting oil coal consumption...");
+
+    		const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats" + country + "/" + year, {
+    			method: "DELETE",
     			body: JSON.stringify(newOilEnergy),
     			headers: { "Content-Type": "application/json" }
     		});
@@ -3533,14 +3545,15 @@ var app = (function () {
     		onMount,
     		Table,
     		Button,
-    		OilEnergy,
+    		oilEnergy,
     		newOilEnergy,
     		getOilEnergy,
-    		insertOilEnergy
+    		insertOilEnergy,
+    		deleteOilEnergy
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("OilEnergy" in $$props) $$invalidate(1, OilEnergy = $$props.OilEnergy);
+    		if ("oilEnergy" in $$props) $$invalidate(1, oilEnergy = $$props.oilEnergy);
     		if ("newOilEnergy" in $$props) $$invalidate(0, newOilEnergy = $$props.newOilEnergy);
     	};
 
@@ -3550,9 +3563,10 @@ var app = (function () {
 
     	return [
     		newOilEnergy,
-    		OilEnergy,
+    		oilEnergy,
     		insertOilEnergy,
     		getOilEnergy,
+    		deleteOilEnergy,
     		input0_input_handler,
     		input1_input_handler,
     		input2_input_handler,
@@ -4566,7 +4580,7 @@ var app = (function () {
 
     function get_each_context$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[9] = list[i];
+    	child_ctx[10] = list[i];
     	return child_ctx;
     }
 
@@ -4592,7 +4606,7 @@ var app = (function () {
     	return block;
     }
 
-    // (54:1) {:then renewableSources}
+    // (63:1) {:then renewableSources}
     function create_then_block$2(ctx) {
     	let current;
 
@@ -4616,7 +4630,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const table_changes = {};
 
-    			if (dirty & /*$$scope, renewableSources, newRenewableSource*/ 4099) {
+    			if (dirty & /*$$scope, renewableSources, newRenewableSource*/ 8195) {
     				table_changes.$$scope = { dirty, ctx };
     			}
 
@@ -4640,14 +4654,14 @@ var app = (function () {
     		block,
     		id: create_then_block$2.name,
     		type: "then",
-    		source: "(54:1) {:then renewableSources}",
+    		source: "(63:1) {:then renewableSources}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (73:10) <Button outline color="primary" on:click={insertRenewableSources}>
+    // (82:10) <Button outline color="primary" on:click={insertRenewableSources}>
     function create_default_slot_2$2(ctx) {
     	let t;
 
@@ -4667,14 +4681,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$2.name,
     		type: "slot",
-    		source: "(73:10) <Button outline color=\\\"primary\\\" on:click={insertRenewableSources}>",
+    		source: "(82:10) <Button outline color=\\\"primary\\\" on:click={insertRenewableSources}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (82:10) <Button outline color="danger">
+    // (91:10) <Button outline color="danger" on:click="{deleteRenewableSource(renewableSource.country, renewableSource.year)}">
     function create_default_slot_1$2(ctx) {
     	let t;
 
@@ -4694,34 +4708,34 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$2.name,
     		type: "slot",
-    		source: "(82:10) <Button outline color=\\\"danger\\\">",
+    		source: "(91:10) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteRenewableSource(renewableSource.country, renewableSource.year)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (75:4) {#each renewableSources as renewableSource}
+    // (84:4) {#each renewableSources as renewableSource}
     function create_each_block$2(ctx) {
     	let tr;
     	let td0;
-    	let t0_value = /*renewableSource*/ ctx[9].country + "";
+    	let t0_value = /*renewableSource*/ ctx[10].country + "";
     	let t0;
     	let t1;
     	let td1;
-    	let t2_value = /*renewableSource*/ ctx[9].year + "";
+    	let t2_value = /*renewableSource*/ ctx[10].year + "";
     	let t2;
     	let t3;
     	let td2;
-    	let t4_value = /*renewableSource*/ ctx[9]["percentage-re-total"] + "";
+    	let t4_value = /*renewableSource*/ ctx[10]["percentage-re-total"] + "";
     	let t4;
     	let t5;
     	let td3;
-    	let t6_value = /*renewableSource*/ ctx[9]["percentage-hydropower-total"] + "";
+    	let t6_value = /*renewableSource*/ ctx[10]["percentage-hydropower-total"] + "";
     	let t6;
     	let t7;
     	let td4;
-    	let t8_value = /*renewableSource*/ ctx[9]["percentage-wind-power-total"] + "";
+    	let t8_value = /*renewableSource*/ ctx[10]["percentage-wind-power-total"] + "";
     	let t8;
     	let t9;
     	let td5;
@@ -4737,6 +4751,10 @@ var app = (function () {
     			},
     			$$inline: true
     		});
+
+    	button.$on("click", function () {
+    		if (is_function(/*deleteRenewableSource*/ ctx[3](/*renewableSource*/ ctx[10].country, /*renewableSource*/ ctx[10].year))) /*deleteRenewableSource*/ ctx[3](/*renewableSource*/ ctx[10].country, /*renewableSource*/ ctx[10].year).apply(this, arguments);
+    	});
 
     	const block = {
     		c: function create() {
@@ -4759,13 +4777,13 @@ var app = (function () {
     			td5 = element("td");
     			create_component(button.$$.fragment);
     			t10 = space();
-    			add_location(td0, file$7, 76, 5, 2198);
-    			add_location(td1, file$7, 77, 5, 2241);
-    			add_location(td2, file$7, 78, 5, 2281);
-    			add_location(td3, file$7, 79, 5, 2339);
-    			add_location(td4, file$7, 80, 5, 2405);
-    			add_location(td5, file$7, 81, 5, 2471);
-    			add_location(tr, file$7, 75, 4, 2187);
+    			add_location(td0, file$7, 85, 5, 2651);
+    			add_location(td1, file$7, 86, 5, 2694);
+    			add_location(td2, file$7, 87, 5, 2734);
+    			add_location(td3, file$7, 88, 5, 2792);
+    			add_location(td4, file$7, 89, 5, 2858);
+    			add_location(td5, file$7, 90, 5, 2924);
+    			add_location(tr, file$7, 84, 4, 2640);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -4789,15 +4807,16 @@ var app = (function () {
     			append_dev(tr, t10);
     			current = true;
     		},
-    		p: function update(ctx, dirty) {
-    			if ((!current || dirty & /*renewableSources*/ 2) && t0_value !== (t0_value = /*renewableSource*/ ctx[9].country + "")) set_data_dev(t0, t0_value);
-    			if ((!current || dirty & /*renewableSources*/ 2) && t2_value !== (t2_value = /*renewableSource*/ ctx[9].year + "")) set_data_dev(t2, t2_value);
-    			if ((!current || dirty & /*renewableSources*/ 2) && t4_value !== (t4_value = /*renewableSource*/ ctx[9]["percentage-re-total"] + "")) set_data_dev(t4, t4_value);
-    			if ((!current || dirty & /*renewableSources*/ 2) && t6_value !== (t6_value = /*renewableSource*/ ctx[9]["percentage-hydropower-total"] + "")) set_data_dev(t6, t6_value);
-    			if ((!current || dirty & /*renewableSources*/ 2) && t8_value !== (t8_value = /*renewableSource*/ ctx[9]["percentage-wind-power-total"] + "")) set_data_dev(t8, t8_value);
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    			if ((!current || dirty & /*renewableSources*/ 2) && t0_value !== (t0_value = /*renewableSource*/ ctx[10].country + "")) set_data_dev(t0, t0_value);
+    			if ((!current || dirty & /*renewableSources*/ 2) && t2_value !== (t2_value = /*renewableSource*/ ctx[10].year + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty & /*renewableSources*/ 2) && t4_value !== (t4_value = /*renewableSource*/ ctx[10]["percentage-re-total"] + "")) set_data_dev(t4, t4_value);
+    			if ((!current || dirty & /*renewableSources*/ 2) && t6_value !== (t6_value = /*renewableSource*/ ctx[10]["percentage-hydropower-total"] + "")) set_data_dev(t6, t6_value);
+    			if ((!current || dirty & /*renewableSources*/ 2) && t8_value !== (t8_value = /*renewableSource*/ ctx[10]["percentage-wind-power-total"] + "")) set_data_dev(t8, t8_value);
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 4096) {
+    			if (dirty & /*$$scope*/ 8192) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -4822,14 +4841,14 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(75:4) {#each renewableSources as renewableSource}",
+    		source: "(84:4) {#each renewableSources as renewableSource}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (55:2) <Table bordered>
+    // (64:2) <Table bordered>
     function create_default_slot$2(ctx) {
     	let thead;
     	let tr0;
@@ -4852,20 +4871,44 @@ var app = (function () {
     	let t12;
     	let td1;
     	let input1;
+    	let input1_updating = false;
     	let t13;
     	let td2;
     	let input2;
+    	let input2_updating = false;
     	let t14;
     	let td3;
     	let input3;
+    	let input3_updating = false;
     	let t15;
     	let td4;
     	let input4;
+    	let input4_updating = false;
     	let t16;
     	let td5;
     	let t17;
     	let current;
     	let dispose;
+
+    	function input1_input_handler() {
+    		input1_updating = true;
+    		/*input1_input_handler*/ ctx[6].call(input1);
+    	}
+
+    	function input2_input_handler() {
+    		input2_updating = true;
+    		/*input2_input_handler*/ ctx[7].call(input2);
+    	}
+
+    	function input3_input_handler() {
+    		input3_updating = true;
+    		/*input3_input_handler*/ ctx[8].call(input3);
+    	}
+
+    	function input4_input_handler() {
+    		input4_updating = true;
+    		/*input4_input_handler*/ ctx[9].call(input4);
+    	}
 
     	const button = new Button({
     			props: {
@@ -4937,27 +4980,40 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$7, 57, 5, 1327);
-    			add_location(th1, file$7, 58, 5, 1349);
-    			add_location(th2, file$7, 59, 5, 1370);
-    			add_location(th3, file$7, 60, 5, 1428);
-    			add_location(th4, file$7, 61, 5, 1506);
-    			add_location(th5, file$7, 62, 5, 1560);
-    			add_location(tr0, file$7, 56, 4, 1316);
-    			add_location(thead, file$7, 55, 3, 1303);
-    			add_location(input0, file$7, 67, 10, 1637);
-    			add_location(td0, file$7, 67, 5, 1632);
-    			add_location(input1, file$7, 68, 10, 1704);
-    			add_location(td1, file$7, 68, 5, 1699);
-    			add_location(input2, file$7, 69, 10, 1768);
-    			add_location(td2, file$7, 69, 5, 1763);
-    			add_location(input3, file$7, 70, 10, 1850);
-    			add_location(td3, file$7, 70, 5, 1845);
-    			add_location(input4, file$7, 71, 10, 1940);
-    			add_location(td4, file$7, 71, 5, 1935);
-    			add_location(td5, file$7, 72, 5, 2025);
-    			add_location(tr1, file$7, 66, 4, 1621);
-    			add_location(tbody, file$7, 65, 3, 1608);
+    			add_location(th0, file$7, 66, 5, 1610);
+    			add_location(th1, file$7, 67, 5, 1632);
+    			add_location(th2, file$7, 68, 5, 1653);
+    			add_location(th3, file$7, 69, 5, 1711);
+    			add_location(th4, file$7, 70, 5, 1789);
+    			add_location(th5, file$7, 71, 5, 1843);
+    			add_location(tr0, file$7, 65, 4, 1599);
+    			add_location(thead, file$7, 64, 3, 1586);
+    			add_location(input0, file$7, 76, 10, 1920);
+    			add_location(td0, file$7, 76, 5, 1915);
+    			attr_dev(input1, "type", "number");
+    			add_location(input1, file$7, 77, 10, 1987);
+    			add_location(td1, file$7, 77, 5, 1982);
+    			attr_dev(input2, "type", "number");
+    			attr_dev(input2, "placeholder", "0.0");
+    			attr_dev(input2, "step", "0.01");
+    			attr_dev(input2, "min", "0");
+    			add_location(input2, file$7, 78, 10, 2065);
+    			add_location(td2, file$7, 78, 5, 2060);
+    			attr_dev(input3, "type", "number");
+    			attr_dev(input3, "placeholder", "0.0");
+    			attr_dev(input3, "step", "0.01");
+    			attr_dev(input3, "min", "0");
+    			add_location(input3, file$7, 79, 10, 2199);
+    			add_location(td3, file$7, 79, 5, 2194);
+    			attr_dev(input4, "type", "number");
+    			attr_dev(input4, "placeholder", "0.0");
+    			attr_dev(input4, "step", "0.01");
+    			attr_dev(input4, "min", "0");
+    			add_location(input4, file$7, 80, 10, 2341);
+    			add_location(td4, file$7, 80, 5, 2336);
+    			add_location(td5, file$7, 81, 5, 2478);
+    			add_location(tr1, file$7, 75, 4, 1904);
+    			add_location(tbody, file$7, 74, 3, 1891);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -5008,11 +5064,11 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[4]),
-    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[5]),
-    				listen_dev(input2, "input", /*input2_input_handler*/ ctx[6]),
-    				listen_dev(input3, "input", /*input3_input_handler*/ ctx[7]),
-    				listen_dev(input4, "input", /*input4_input_handler*/ ctx[8])
+    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[5]),
+    				listen_dev(input1, "input", input1_input_handler),
+    				listen_dev(input2, "input", input2_input_handler),
+    				listen_dev(input3, "input", input3_input_handler),
+    				listen_dev(input4, "input", input4_input_handler)
     			];
     		},
     		p: function update(ctx, dirty) {
@@ -5020,31 +5076,38 @@ var app = (function () {
     				set_input_value(input0, /*newRenewableSource*/ ctx[0].country);
     			}
 
-    			if (dirty & /*newRenewableSource*/ 1 && input1.value !== /*newRenewableSource*/ ctx[0].year) {
+    			if (!input1_updating && dirty & /*newRenewableSource*/ 1) {
     				set_input_value(input1, /*newRenewableSource*/ ctx[0].year);
     			}
 
-    			if (dirty & /*newRenewableSource*/ 1 && input2.value !== /*newRenewableSource*/ ctx[0]["percentage-re-total"]) {
+    			input1_updating = false;
+
+    			if (!input2_updating && dirty & /*newRenewableSource*/ 1) {
     				set_input_value(input2, /*newRenewableSource*/ ctx[0]["percentage-re-total"]);
     			}
 
-    			if (dirty & /*newRenewableSource*/ 1 && input3.value !== /*newRenewableSource*/ ctx[0]["percentage-hydropower-total"]) {
+    			input2_updating = false;
+
+    			if (!input3_updating && dirty & /*newRenewableSource*/ 1) {
     				set_input_value(input3, /*newRenewableSource*/ ctx[0]["percentage-hydropower-total"]);
     			}
 
-    			if (dirty & /*newRenewableSource*/ 1 && input4.value !== /*newRenewableSource*/ ctx[0]["percentage-wind-power-total"]) {
+    			input3_updating = false;
+
+    			if (!input4_updating && dirty & /*newRenewableSource*/ 1) {
     				set_input_value(input4, /*newRenewableSource*/ ctx[0]["percentage-wind-power-total"]);
     			}
 
+    			input4_updating = false;
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 4096) {
+    			if (dirty & /*$$scope*/ 8192) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
     			button.$set(button_changes);
 
-    			if (dirty & /*renewableSources*/ 2) {
+    			if (dirty & /*deleteRenewableSource, renewableSources*/ 10) {
     				each_value = /*renewableSources*/ ctx[1];
     				validate_each_argument(each_value);
     				let i;
@@ -5106,14 +5169,14 @@ var app = (function () {
     		block,
     		id: create_default_slot$2.name,
     		type: "slot",
-    		source: "(55:2) <Table bordered>",
+    		source: "(64:2) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (52:26)     Loading renewable sources...   {:then renewableSources}
+    // (61:26)     Loading renewable sources...   {:then renewableSources}
     function create_pending_block$2(ctx) {
     	let t;
 
@@ -5136,7 +5199,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$2.name,
     		type: "pending",
-    		source: "(52:26)     Loading renewable sources...   {:then renewableSources}",
+    		source: "(61:26)     Loading renewable sources...   {:then renewableSources}",
     		ctx
     	});
 
@@ -5165,7 +5228,7 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			info.block.c();
-    			add_location(main, file$7, 50, 0, 1185);
+    			add_location(main, file$7, 59, 0, 1468);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5259,6 +5322,14 @@ var app = (function () {
     		});
     	}
 
+    	async function deleteRenewableSource(country, year) {
+    		console.log("Deleting renewable resource...");
+
+    		const res = await fetch("/api/v1/renewable-sources-stats/" + country + "/" + year, { method: "DELETE" }).then(function (res) {
+    			getRenewableSources();
+    		});
+    	}
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -5274,22 +5345,22 @@ var app = (function () {
     	}
 
     	function input1_input_handler() {
-    		newRenewableSource.year = this.value;
+    		newRenewableSource.year = to_number(this.value);
     		$$invalidate(0, newRenewableSource);
     	}
 
     	function input2_input_handler() {
-    		newRenewableSource["percentage-re-total"] = this.value;
+    		newRenewableSource["percentage-re-total"] = to_number(this.value);
     		$$invalidate(0, newRenewableSource);
     	}
 
     	function input3_input_handler() {
-    		newRenewableSource["percentage-hydropower-total"] = this.value;
+    		newRenewableSource["percentage-hydropower-total"] = to_number(this.value);
     		$$invalidate(0, newRenewableSource);
     	}
 
     	function input4_input_handler() {
-    		newRenewableSource["percentage-wind-power-total"] = this.value;
+    		newRenewableSource["percentage-wind-power-total"] = to_number(this.value);
     		$$invalidate(0, newRenewableSource);
     	}
 
@@ -5300,7 +5371,8 @@ var app = (function () {
     		renewableSources,
     		newRenewableSource,
     		getRenewableSources,
-    		insertRenewableSources
+    		insertRenewableSources,
+    		deleteRenewableSource
     	});
 
     	$$self.$inject_state = $$props => {
@@ -5316,6 +5388,7 @@ var app = (function () {
     		newRenewableSource,
     		renewableSources,
     		insertRenewableSources,
+    		deleteRenewableSource,
     		getRenewableSources,
     		input0_input_handler,
     		input1_input_handler,
@@ -5345,35 +5418,35 @@ var app = (function () {
     function create_fragment$9(ctx) {
     	let main;
     	let current;
-    	const contactstable = new RenewableSourcesTable({ $$inline: true });
+    	const renewablesourcestable = new RenewableSourcesTable({ $$inline: true });
 
     	const block = {
     		c: function create() {
     			main = element("main");
-    			create_component(contactstable.$$.fragment);
-    			add_location(main, file$8, 4, 0, 85);
+    			create_component(renewablesourcestable.$$.fragment);
+    			add_location(main, file$8, 4, 0, 93);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
-    			mount_component(contactstable, main, null);
+    			mount_component(renewablesourcestable, main, null);
     			current = true;
     		},
     		p: noop,
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(contactstable.$$.fragment, local);
+    			transition_in(renewablesourcestable.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(contactstable.$$.fragment, local);
+    			transition_out(renewablesourcestable.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(main);
-    			destroy_component(contactstable);
+    			destroy_component(renewablesourcestable);
     		}
     	};
 
@@ -5397,7 +5470,7 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("App", $$slots, []);
-    	$$self.$capture_state = () => ({ ContactsTable: RenewableSourcesTable });
+    	$$self.$capture_state = () => ({ RenewableSourcesTable });
     	return [];
     }
 
