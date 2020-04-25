@@ -83,7 +83,11 @@
 				</tr>
 				{#each renewableSources as renewableSource}
 				<tr>
-					<td> {renewableSource.country} </td>
+					<td>			
+						<a href="#/renewable-sources-stats/{renewableSource.country}/{renewableSource.year}">		
+							{renewableSource.country}
+						</a>
+					</td>
 					<td> {renewableSource.year} </td>
 					<td> {renewableSource['percentage-re-total']} </td>
 					<td> {renewableSource['percentage-hydropower-total']} </td>

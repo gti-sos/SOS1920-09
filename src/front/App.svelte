@@ -17,14 +17,13 @@
 		"/oilCoalNuclearEnergyConsumptionAPI": OilCoal,
 		"/plugInVehiclesAPI": PlugInVehicles,
 		"/renewableSourcesAPI": RenewableSources,
-		"/oilCoalNuclearEnergyConsumptionAPI/:country/:year": EditOilCoal,
-		"/plugInVehiclesAPI/:country/:year": EditPlugInVehicle,
-		"/renewableSourcesAPI/:country/:year": EditRenewableSource,
+		"/oil-coal-nuclear-energy-consumption-stats/:country/:year": EditOilCoal,
+		"/plugin-vehicles-stats/:country/:year": EditPlugInVehicle,
+		"/renewable-sources-stats/:country/:year": EditRenewableSource,
 		"*": NotFound
 	};
 </script>
 
 <main>
-	<h1>Contact Manager</h1>
 	<Router {routes} />
 </main>
