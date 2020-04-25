@@ -10,11 +10,6 @@ var app = express();
 
 app.use(bodyParser.json());
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 6f9a25fb4794f63dc873d4ce37270f9d9c31b2fd
 plugInVehiclesAPI(app);
 renewableSourcesAPI(app);
 oilCoalNuclearEnergyConsumptionAPI(app);
