@@ -1,5 +1,5 @@
 node_modules
 
-src/back/oilCoalNuclearEnergyConsumptionAPI/oil_coal_nuclear_energy_consumption.db
-src/back/renewableSourcesAPI/renewable_sources_stats.db
-src/back/plugInVehiclesAPI/plugin_vehicles_stats.db
+/src/back/oilCoalNuclearEnergyConsumptionAPI/oil_coal_nuclear_energy_consumption.db
+/src/back/renewableSourcesAPI/renewable_sources_stats.db
+/src/back/plugInVehiclesAPI/plugin_vehicles_stats.db
