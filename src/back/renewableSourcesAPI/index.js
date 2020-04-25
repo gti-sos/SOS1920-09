@@ -119,6 +119,7 @@ module.exports = function (app) {
 		var newRenewableSourcesStat = req.body;
 		//console.log(renewableSourcesStats);
 
+
 		// We divide the different reasons of badrequest response
 		var isEmpty = newRenewableSourcesStat == {};
 		

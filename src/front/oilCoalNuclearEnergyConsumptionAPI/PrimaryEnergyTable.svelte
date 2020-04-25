@@ -78,12 +78,12 @@ const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats" + co
 
 				{#each oilEnergys as oilEnergy}
 					<tr>
-						<td>{newOilEnergy.country}</td>
-						<td>{newOilEnergy.year}</td>
-						<td>{newOilEnergy['oil-consumption']}</td>
-						<td>{newOilEnergy['coal-consumption']}</td>
-						<td>{newOilEnergy['nuclear-energy-consumption']}</td>
-						<td><Button outline color= "danger" on:click = {deleteOilEnergy(oilEnergy.country,oilEnergy.year)}>Borrar</Button></td>
+						<td>{oilEnergy.country}</td>
+						<td>{oilEnergy.year}</td>
+						<td>{oilEnergy['oil-consumption']}</td>
+						<td>{oilEnergy['coal-consumption']}</td>
+						<td>{oilEnergy['nuclear-energy-consumption']}</td>
+						<td><Button outline color= "danger">Borrar</Button></td>
 					</tr>
 				{/each}
 			</tbody>
