@@ -86,9 +86,9 @@
                 <tr>
                     <td>{updatedCountry}</td>
                     <td>{updatedYear}</td>
-                    <td><input bind:value="{updatedPevStock}"></td>
-                    <td><input bind:value="{updatedAnnualSale}"></td>
-                    <td><input bind:value="{updatedCarsPerPeople}"></td>
+                    <td><input type="number" bind:value="{updatedPevStock}"></td>
+                    <td><input type="number" bind:value="{updatedAnnualSale}"></td>
+                    <td><input type="number" bind:value="{updatedCarsPerPeople}"></td>
                     <td> <Button outline  color="primary" on:click={updatedPluginVehicles}>Actualizar</Button> </td>
                 </tr>
         </tbody>
