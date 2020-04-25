@@ -25,12 +25,12 @@
     async function getOilCoal() {
 
         console.log("Fetching oilCoal...");
-        const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats/" + params.country + "/" + paramas.year);
+        const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats/" + params.country + "/" + params.year);
 
         if (res.ok) {
             console.log("Ok:");
             const json = await res.json();
-            contact = json;
+            oilCoal = json;
             updatedCountry = oilCoal.country;
             updatedYear = oilCoal.year;
             updatedOilConsumption = oilCoal["oil-consumption"];
@@ -47,11 +47,11 @@
 
         console.log("Updating Oil Coal...");
 
-        const res = await fetch("/api/v1//oil-coal-nuclear-energy-consumption-stats//" + params.country + "/" + paramas.year, {
+        const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats/" + params.country + "/" + params.year, {
             method: "PUT",
             body: JSON.stringify({
-                updatedCountry: params.country,
-                updatedYear: params.year,
+                country: params.country,
+                year: params.year,
                 "oil-consumption" : updatedOilConsumption,
                 "coal-consumption" : updatedCoalConsumption,
                 "nuclear-energy-consumption": updateupdatedNuclearEnergyConsumption
@@ -87,9 +87,9 @@
                 <tr>
                     <td>{updatedCountry}</td>
                     <td>{updatedYear}</td>
-                    <td><input bind:value="{updatedOilConsumption}"></td>
-                    <td><input bind:value="{updatedCoalConsumption}"></td>
-                    <td><input bind:value="{updatedNuclearEnergyConsumption}"></td>
+                    <td><input type="number" bind:value="{updatedOilConsumption}"></td>
+                    <td><input type="number" placeholder="0.0" step="0.01" min="0"  bind:value="{updatedCoalConsumption}"></td>
+                    <td><input type="number" placeholder="0.0" step="0.01" min="0"  bind:value="{updatedNuclearEnergyConsumption}"></td>
                     
                     <td> <Button outline  color="primary" on:click={updateOilCoal}>Actualizar</Button> </td>
                 </tr>
