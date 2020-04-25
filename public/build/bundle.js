@@ -140,6 +140,9 @@ var app = (function () {
             }
         }
     }
+    function to_number(value) {
+        return value === '' ? undefined : +value;
+    }
     function children(element) {
         return Array.from(element.childNodes);
     }
@@ -3681,7 +3684,7 @@ var app = (function () {
     	return block;
     }
 
-    // (57:1) {:then pluginVehicles}
+    // (66:1) {:then pluginVehicles}
     function create_then_block$1(ctx) {
     	let current;
 
@@ -3705,7 +3708,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const table_changes = {};
 
-    			if (dirty & /*$$scope, pluginVehicles, newPluginVehicles*/ 2051) {
+    			if (dirty & /*$$scope, pluginVehicles, newPluginVehicles*/ 4099) {
     				table_changes.$$scope = { dirty, ctx };
     			}
 
@@ -3729,14 +3732,14 @@ var app = (function () {
     		block,
     		id: create_then_block$1.name,
     		type: "then",
-    		source: "(57:1) {:then pluginVehicles}",
+    		source: "(66:1) {:then pluginVehicles}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (77:10) <Button outline color="primary" on:click={insertPluginVehicles}>
+    // (86:10) <Button outline color="primary" on:click={insertPluginVehicles}>
     function create_default_slot_2$1(ctx) {
     	let t;
 
@@ -3756,14 +3759,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$1.name,
     		type: "slot",
-    		source: "(77:10) <Button outline color=\\\"primary\\\" on:click={insertPluginVehicles}>",
+    		source: "(86:10) <Button outline color=\\\"primary\\\" on:click={insertPluginVehicles}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (86:10) <Button outline color="danger">
+    // (95:10) <Button outline color="danger" on:click="{deletePluginVehicles(pluginVehicles.country, pluginVehicles.year)}">
     function create_default_slot_1$1(ctx) {
     	let t;
 
@@ -3783,14 +3786,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$1.name,
     		type: "slot",
-    		source: "(86:10) <Button outline color=\\\"danger\\\">",
+    		source: "(95:10) <Button outline color=\\\"danger\\\" on:click=\\\"{deletePluginVehicles(pluginVehicles.country, pluginVehicles.year)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (79:4) {#each pluginVehicles as pluginVehicles}
+    // (88:4) {#each pluginVehicles as pluginVehicles}
     function create_each_block$1(ctx) {
     	let tr;
     	let td0;
@@ -3827,6 +3830,10 @@ var app = (function () {
     			$$inline: true
     		});
 
+    	button.$on("click", function () {
+    		if (is_function(/*deletePluginVehicles*/ ctx[3](/*pluginVehicles*/ ctx[1].country, /*pluginVehicles*/ ctx[1].year))) /*deletePluginVehicles*/ ctx[3](/*pluginVehicles*/ ctx[1].country, /*pluginVehicles*/ ctx[1].year).apply(this, arguments);
+    	});
+
     	const block = {
     		c: function create() {
     			tr = element("tr");
@@ -3848,13 +3855,13 @@ var app = (function () {
     			td5 = element("td");
     			create_component(button.$$.fragment);
     			t10 = space();
-    			add_location(td0, file$5, 80, 6, 1960);
-    			add_location(td1, file$5, 81, 6, 2001);
-    			add_location(td2, file$5, 82, 6, 2039);
-    			add_location(td3, file$5, 83, 6, 2085);
-    			add_location(td4, file$5, 84, 6, 2133);
-    			add_location(td5, file$5, 85, 6, 2183);
-    			add_location(tr, file$5, 79, 5, 1948);
+    			add_location(td0, file$5, 89, 6, 2334);
+    			add_location(td1, file$5, 90, 6, 2375);
+    			add_location(td2, file$5, 91, 6, 2413);
+    			add_location(td3, file$5, 92, 6, 2459);
+    			add_location(td4, file$5, 93, 6, 2507);
+    			add_location(td5, file$5, 94, 6, 2557);
+    			add_location(tr, file$5, 88, 5, 2322);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -3878,7 +3885,8 @@ var app = (function () {
     			append_dev(tr, t10);
     			current = true;
     		},
-    		p: function update(ctx, dirty) {
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
     			if ((!current || dirty & /*pluginVehicles*/ 2) && t0_value !== (t0_value = /*pluginVehicles*/ ctx[1].country + "")) set_data_dev(t0, t0_value);
     			if ((!current || dirty & /*pluginVehicles*/ 2) && t2_value !== (t2_value = /*pluginVehicles*/ ctx[1].year + "")) set_data_dev(t2, t2_value);
     			if ((!current || dirty & /*pluginVehicles*/ 2) && t4_value !== (t4_value = /*pluginVehicles*/ ctx[1]["pev-stock"] + "")) set_data_dev(t4, t4_value);
@@ -3886,7 +3894,7 @@ var app = (function () {
     			if ((!current || dirty & /*pluginVehicles*/ 2) && t8_value !== (t8_value = /*pluginVehicles*/ ctx[1]["cars-per-1000"] + "")) set_data_dev(t8, t8_value);
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 2048) {
+    			if (dirty & /*$$scope*/ 4096) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -3911,14 +3919,14 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(79:4) {#each pluginVehicles as pluginVehicles}",
+    		source: "(88:4) {#each pluginVehicles as pluginVehicles}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (59:2) <Table bordered>
+    // (68:2) <Table bordered>
     function create_default_slot$1(ctx) {
     	let thead;
     	let tr0;
@@ -3941,20 +3949,44 @@ var app = (function () {
     	let t12;
     	let td1;
     	let input1;
+    	let input1_updating = false;
     	let t13;
     	let td2;
     	let input2;
+    	let input2_updating = false;
     	let t14;
     	let td3;
     	let input3;
+    	let input3_updating = false;
     	let t15;
     	let td4;
     	let input4;
+    	let input4_updating = false;
     	let t16;
     	let td5;
     	let t17;
     	let current;
     	let dispose;
+
+    	function input1_input_handler() {
+    		input1_updating = true;
+    		/*input1_input_handler*/ ctx[6].call(input1);
+    	}
+
+    	function input2_input_handler() {
+    		input2_updating = true;
+    		/*input2_input_handler*/ ctx[7].call(input2);
+    	}
+
+    	function input3_input_handler() {
+    		input3_updating = true;
+    		/*input3_input_handler*/ ctx[8].call(input3);
+    	}
+
+    	function input4_input_handler() {
+    		input4_updating = true;
+    		/*input4_input_handler*/ ctx[9].call(input4);
+    	}
 
     	const button = new Button({
     			props: {
@@ -4026,27 +4058,34 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$5, 61, 5, 1229);
-    			add_location(th1, file$5, 62, 5, 1249);
-    			add_location(th2, file$5, 63, 5, 1268);
-    			add_location(th3, file$5, 64, 5, 1301);
-    			add_location(th4, file$5, 65, 5, 1330);
-    			add_location(th5, file$5, 66, 5, 1385);
-    			add_location(tr0, file$5, 60, 4, 1218);
-    			add_location(thead, file$5, 59, 3, 1205);
-    			add_location(input0, file$5, 71, 9, 1459);
-    			add_location(td0, file$5, 71, 5, 1455);
-    			add_location(input1, file$5, 72, 9, 1523);
-    			add_location(td1, file$5, 72, 5, 1519);
-    			add_location(input2, file$5, 73, 9, 1584);
-    			add_location(td2, file$5, 73, 5, 1580);
-    			add_location(input3, file$5, 74, 9, 1653);
-    			add_location(td3, file$5, 74, 5, 1649);
-    			add_location(input4, file$5, 75, 9, 1724);
-    			add_location(td4, file$5, 75, 5, 1720);
-    			add_location(td5, file$5, 76, 5, 1793);
-    			add_location(tr1, file$5, 70, 4, 1444);
-    			add_location(tbody, file$5, 69, 3, 1431);
+    			add_location(th0, file$5, 70, 5, 1509);
+    			add_location(th1, file$5, 71, 5, 1529);
+    			add_location(th2, file$5, 72, 5, 1548);
+    			add_location(th3, file$5, 73, 5, 1581);
+    			add_location(th4, file$5, 74, 5, 1610);
+    			add_location(th5, file$5, 75, 5, 1665);
+    			add_location(tr0, file$5, 69, 4, 1498);
+    			add_location(thead, file$5, 68, 3, 1485);
+    			add_location(input0, file$5, 80, 9, 1739);
+    			add_location(td0, file$5, 80, 5, 1735);
+    			attr_dev(input1, "type", "number");
+    			add_location(input1, file$5, 81, 9, 1803);
+    			add_location(td1, file$5, 81, 5, 1799);
+    			attr_dev(input2, "type", "number");
+    			add_location(input2, file$5, 82, 9, 1878);
+    			add_location(td2, file$5, 82, 5, 1874);
+    			attr_dev(input3, "type", "number");
+    			add_location(input3, file$5, 83, 9, 1961);
+    			add_location(td3, file$5, 83, 5, 1957);
+    			attr_dev(input4, "type", "number");
+    			attr_dev(input4, "placeholder", "0.0");
+    			attr_dev(input4, "step", "0.01");
+    			attr_dev(input4, "min", "0");
+    			add_location(input4, file$5, 84, 9, 2046);
+    			add_location(td4, file$5, 84, 5, 2042);
+    			add_location(td5, file$5, 85, 5, 2167);
+    			add_location(tr1, file$5, 79, 4, 1724);
+    			add_location(tbody, file$5, 78, 3, 1711);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -4097,11 +4136,11 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[4]),
-    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[5]),
-    				listen_dev(input2, "input", /*input2_input_handler*/ ctx[6]),
-    				listen_dev(input3, "input", /*input3_input_handler*/ ctx[7]),
-    				listen_dev(input4, "input", /*input4_input_handler*/ ctx[8])
+    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[5]),
+    				listen_dev(input1, "input", input1_input_handler),
+    				listen_dev(input2, "input", input2_input_handler),
+    				listen_dev(input3, "input", input3_input_handler),
+    				listen_dev(input4, "input", input4_input_handler)
     			];
     		},
     		p: function update(ctx, dirty) {
@@ -4109,31 +4148,38 @@ var app = (function () {
     				set_input_value(input0, /*newPluginVehicles*/ ctx[0].country);
     			}
 
-    			if (dirty & /*newPluginVehicles*/ 1 && input1.value !== /*newPluginVehicles*/ ctx[0].year) {
+    			if (!input1_updating && dirty & /*newPluginVehicles*/ 1) {
     				set_input_value(input1, /*newPluginVehicles*/ ctx[0].year);
     			}
 
-    			if (dirty & /*newPluginVehicles*/ 1 && input2.value !== /*newPluginVehicles*/ ctx[0]["pev-stock"]) {
+    			input1_updating = false;
+
+    			if (!input2_updating && dirty & /*newPluginVehicles*/ 1) {
     				set_input_value(input2, /*newPluginVehicles*/ ctx[0]["pev-stock"]);
     			}
 
-    			if (dirty & /*newPluginVehicles*/ 1 && input3.value !== /*newPluginVehicles*/ ctx[0]["annual-sale"]) {
+    			input2_updating = false;
+
+    			if (!input3_updating && dirty & /*newPluginVehicles*/ 1) {
     				set_input_value(input3, /*newPluginVehicles*/ ctx[0]["annual-sale"]);
     			}
 
-    			if (dirty & /*newPluginVehicles*/ 1 && input4.value !== /*newPluginVehicles*/ ctx[0]["cars-per-1000"]) {
+    			input3_updating = false;
+
+    			if (!input4_updating && dirty & /*newPluginVehicles*/ 1) {
     				set_input_value(input4, /*newPluginVehicles*/ ctx[0]["cars-per-1000"]);
     			}
 
+    			input4_updating = false;
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 2048) {
+    			if (dirty & /*$$scope*/ 4096) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
     			button.$set(button_changes);
 
-    			if (dirty & /*pluginVehicles*/ 2) {
+    			if (dirty & /*deletePluginVehicles, pluginVehicles*/ 10) {
     				each_value = /*pluginVehicles*/ ctx[1];
     				validate_each_argument(each_value);
     				let i;
@@ -4195,14 +4241,14 @@ var app = (function () {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(59:2) <Table bordered>",
+    		source: "(68:2) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (55:24)     Loading plugin vehicles...   {:then pluginVehicles}
+    // (64:24)     Loading plugin vehicles...   {:then pluginVehicles}
     function create_pending_block$1(ctx) {
     	let t;
 
@@ -4225,7 +4271,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$1.name,
     		type: "pending",
-    		source: "(55:24)     Loading plugin vehicles...   {:then pluginVehicles}",
+    		source: "(64:24)     Loading plugin vehicles...   {:then pluginVehicles}",
     		ctx
     	});
 
@@ -4254,7 +4300,7 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			info.block.c();
-    			add_location(main, file$5, 52, 0, 1088);
+    			add_location(main, file$5, 61, 0, 1368);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4347,6 +4393,14 @@ var app = (function () {
     		});
     	}
 
+    	async function deletePluginVehicles(country, year) {
+    		console.log("Deleting plugin vehicles...");
+
+    		const res = await fetch("/api/v1/plugin-vehicles-stats" + "/" + country + "/" + year, { method: "DELETE" }).then(function (res) {
+    			getPluginVehicles();
+    		});
+    	}
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -4362,22 +4416,22 @@ var app = (function () {
     	}
 
     	function input1_input_handler() {
-    		newPluginVehicles.year = this.value;
+    		newPluginVehicles.year = to_number(this.value);
     		$$invalidate(0, newPluginVehicles);
     	}
 
     	function input2_input_handler() {
-    		newPluginVehicles["pev-stock"] = this.value;
+    		newPluginVehicles["pev-stock"] = to_number(this.value);
     		$$invalidate(0, newPluginVehicles);
     	}
 
     	function input3_input_handler() {
-    		newPluginVehicles["annual-sale"] = this.value;
+    		newPluginVehicles["annual-sale"] = to_number(this.value);
     		$$invalidate(0, newPluginVehicles);
     	}
 
     	function input4_input_handler() {
-    		newPluginVehicles["cars-per-1000"] = this.value;
+    		newPluginVehicles["cars-per-1000"] = to_number(this.value);
     		$$invalidate(0, newPluginVehicles);
     	}
 
@@ -4388,7 +4442,8 @@ var app = (function () {
     		pluginVehicles,
     		newPluginVehicles,
     		getPluginVehicles,
-    		insertPluginVehicles
+    		insertPluginVehicles,
+    		deletePluginVehicles
     	});
 
     	$$self.$inject_state = $$props => {
@@ -4404,6 +4459,7 @@ var app = (function () {
     		newPluginVehicles,
     		pluginVehicles,
     		insertPluginVehicles,
+    		deletePluginVehicles,
     		getPluginVehicles,
     		input0_input_handler,
     		input1_input_handler,
