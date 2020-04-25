@@ -88,7 +88,7 @@
 				{#each pluginVehicles as pluginVehicles}
 					<tr>
 						<td>
-							<a href="#/api/v1/plugin-vehicles-stats/{pluginVehicles.country}/{pluginVehicles.year}">
+							<a href="#/plugin-vehicles-stats/{pluginVehicles.country}/{pluginVehicles.year}">
 								{pluginVehicles.country}
 							</a>
 						</td>
