@@ -140,6 +140,9 @@ var app = (function () {
             }
         }
     }
+    function to_number(value) {
+        return value === '' ? undefined : +value;
+    }
     function children(element) {
         return Array.from(element.childNodes);
     }
@@ -4512,7 +4515,7 @@ var app = (function () {
 
     function get_each_context$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[9] = list[i];
+    	child_ctx[10] = list[i];
     	return child_ctx;
     }
 
@@ -4538,7 +4541,7 @@ var app = (function () {
     	return block;
     }
 
-    // (54:1) {:then renewableSources}
+    // (63:1) {:then renewableSources}
     function create_then_block$2(ctx) {
     	let current;
 
@@ -4562,7 +4565,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const table_changes = {};
 
-    			if (dirty & /*$$scope, renewableSources, newRenewableSource*/ 4099) {
+    			if (dirty & /*$$scope, renewableSources, newRenewableSource*/ 8195) {
     				table_changes.$$scope = { dirty, ctx };
     			}
 
@@ -4586,14 +4589,14 @@ var app = (function () {
     		block,
     		id: create_then_block$2.name,
     		type: "then",
-    		source: "(54:1) {:then renewableSources}",
+    		source: "(63:1) {:then renewableSources}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (73:10) <Button outline color="primary" on:click={insertRenewableSources}>
+    // (82:10) <Button outline color="primary" on:click={insertRenewableSources}>
     function create_default_slot_2$2(ctx) {
     	let t;
 
@@ -4613,14 +4616,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$2.name,
     		type: "slot",
-    		source: "(73:10) <Button outline color=\\\"primary\\\" on:click={insertRenewableSources}>",
+    		source: "(82:10) <Button outline color=\\\"primary\\\" on:click={insertRenewableSources}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (82:10) <Button outline color="danger">
+    // (91:10) <Button outline color="danger" on:click="{deleteRenewableSource(renewableSource.country, renewableSource.year)}">
     function create_default_slot_1$2(ctx) {
     	let t;
 
@@ -4640,34 +4643,34 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$2.name,
     		type: "slot",
-    		source: "(82:10) <Button outline color=\\\"danger\\\">",
+    		source: "(91:10) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteRenewableSource(renewableSource.country, renewableSource.year)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (75:4) {#each renewableSources as renewableSource}
+    // (84:4) {#each renewableSources as renewableSource}
     function create_each_block$2(ctx) {
     	let tr;
     	let td0;
-    	let t0_value = /*renewableSource*/ ctx[9].country + "";
+    	let t0_value = /*renewableSource*/ ctx[10].country + "";
     	let t0;
     	let t1;
     	let td1;
-    	let t2_value = /*renewableSource*/ ctx[9].year + "";
+    	let t2_value = /*renewableSource*/ ctx[10].year + "";
     	let t2;
     	let t3;
     	let td2;
-    	let t4_value = /*renewableSource*/ ctx[9]["percentage-re-total"] + "";
+    	let t4_value = /*renewableSource*/ ctx[10]["percentage-re-total"] + "";
     	let t4;
     	let t5;
     	let td3;
-    	let t6_value = /*renewableSource*/ ctx[9]["percentage-hydropower-total"] + "";
+    	let t6_value = /*renewableSource*/ ctx[10]["percentage-hydropower-total"] + "";
     	let t6;
     	let t7;
     	let td4;
-    	let t8_value = /*renewableSource*/ ctx[9]["percentage-wind-power-total"] + "";
+    	let t8_value = /*renewableSource*/ ctx[10]["percentage-wind-power-total"] + "";
     	let t8;
     	let t9;
     	let td5;
@@ -4683,6 +4686,10 @@ var app = (function () {
     			},
     			$$inline: true
     		});
+
+    	button.$on("click", function () {
+    		if (is_function(/*deleteRenewableSource*/ ctx[3](/*renewableSource*/ ctx[10].country, /*renewableSource*/ ctx[10].year))) /*deleteRenewableSource*/ ctx[3](/*renewableSource*/ ctx[10].country, /*renewableSource*/ ctx[10].year).apply(this, arguments);
+    	});
 
     	const block = {
     		c: function create() {
@@ -4705,13 +4712,13 @@ var app = (function () {
     			td5 = element("td");
     			create_component(button.$$.fragment);
     			t10 = space();
-    			add_location(td0, file$7, 76, 5, 2198);
-    			add_location(td1, file$7, 77, 5, 2241);
-    			add_location(td2, file$7, 78, 5, 2281);
-    			add_location(td3, file$7, 79, 5, 2339);
-    			add_location(td4, file$7, 80, 5, 2405);
-    			add_location(td5, file$7, 81, 5, 2471);
-    			add_location(tr, file$7, 75, 4, 2187);
+    			add_location(td0, file$7, 85, 5, 2638);
+    			add_location(td1, file$7, 86, 5, 2681);
+    			add_location(td2, file$7, 87, 5, 2721);
+    			add_location(td3, file$7, 88, 5, 2779);
+    			add_location(td4, file$7, 89, 5, 2845);
+    			add_location(td5, file$7, 90, 5, 2911);
+    			add_location(tr, file$7, 84, 4, 2627);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -4735,15 +4742,16 @@ var app = (function () {
     			append_dev(tr, t10);
     			current = true;
     		},
-    		p: function update(ctx, dirty) {
-    			if ((!current || dirty & /*renewableSources*/ 2) && t0_value !== (t0_value = /*renewableSource*/ ctx[9].country + "")) set_data_dev(t0, t0_value);
-    			if ((!current || dirty & /*renewableSources*/ 2) && t2_value !== (t2_value = /*renewableSource*/ ctx[9].year + "")) set_data_dev(t2, t2_value);
-    			if ((!current || dirty & /*renewableSources*/ 2) && t4_value !== (t4_value = /*renewableSource*/ ctx[9]["percentage-re-total"] + "")) set_data_dev(t4, t4_value);
-    			if ((!current || dirty & /*renewableSources*/ 2) && t6_value !== (t6_value = /*renewableSource*/ ctx[9]["percentage-hydropower-total"] + "")) set_data_dev(t6, t6_value);
-    			if ((!current || dirty & /*renewableSources*/ 2) && t8_value !== (t8_value = /*renewableSource*/ ctx[9]["percentage-wind-power-total"] + "")) set_data_dev(t8, t8_value);
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    			if ((!current || dirty & /*renewableSources*/ 2) && t0_value !== (t0_value = /*renewableSource*/ ctx[10].country + "")) set_data_dev(t0, t0_value);
+    			if ((!current || dirty & /*renewableSources*/ 2) && t2_value !== (t2_value = /*renewableSource*/ ctx[10].year + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty & /*renewableSources*/ 2) && t4_value !== (t4_value = /*renewableSource*/ ctx[10]["percentage-re-total"] + "")) set_data_dev(t4, t4_value);
+    			if ((!current || dirty & /*renewableSources*/ 2) && t6_value !== (t6_value = /*renewableSource*/ ctx[10]["percentage-hydropower-total"] + "")) set_data_dev(t6, t6_value);
+    			if ((!current || dirty & /*renewableSources*/ 2) && t8_value !== (t8_value = /*renewableSource*/ ctx[10]["percentage-wind-power-total"] + "")) set_data_dev(t8, t8_value);
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 4096) {
+    			if (dirty & /*$$scope*/ 8192) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -4768,14 +4776,14 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(75:4) {#each renewableSources as renewableSource}",
+    		source: "(84:4) {#each renewableSources as renewableSource}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (55:2) <Table bordered>
+    // (64:2) <Table bordered>
     function create_default_slot$2(ctx) {
     	let thead;
     	let tr0;
@@ -4801,17 +4809,35 @@ var app = (function () {
     	let t13;
     	let td2;
     	let input2;
+    	let input2_updating = false;
     	let t14;
     	let td3;
     	let input3;
+    	let input3_updating = false;
     	let t15;
     	let td4;
     	let input4;
+    	let input4_updating = false;
     	let t16;
     	let td5;
     	let t17;
     	let current;
     	let dispose;
+
+    	function input2_input_handler() {
+    		input2_updating = true;
+    		/*input2_input_handler*/ ctx[7].call(input2);
+    	}
+
+    	function input3_input_handler() {
+    		input3_updating = true;
+    		/*input3_input_handler*/ ctx[8].call(input3);
+    	}
+
+    	function input4_input_handler() {
+    		input4_updating = true;
+    		/*input4_input_handler*/ ctx[9].call(input4);
+    	}
 
     	const button = new Button({
     			props: {
@@ -4883,27 +4909,39 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$7, 57, 5, 1327);
-    			add_location(th1, file$7, 58, 5, 1349);
-    			add_location(th2, file$7, 59, 5, 1370);
-    			add_location(th3, file$7, 60, 5, 1428);
-    			add_location(th4, file$7, 61, 5, 1506);
-    			add_location(th5, file$7, 62, 5, 1560);
-    			add_location(tr0, file$7, 56, 4, 1316);
-    			add_location(thead, file$7, 55, 3, 1303);
-    			add_location(input0, file$7, 67, 10, 1637);
-    			add_location(td0, file$7, 67, 5, 1632);
-    			add_location(input1, file$7, 68, 10, 1704);
-    			add_location(td1, file$7, 68, 5, 1699);
-    			add_location(input2, file$7, 69, 10, 1768);
-    			add_location(td2, file$7, 69, 5, 1763);
-    			add_location(input3, file$7, 70, 10, 1850);
-    			add_location(td3, file$7, 70, 5, 1845);
-    			add_location(input4, file$7, 71, 10, 1940);
-    			add_location(td4, file$7, 71, 5, 1935);
-    			add_location(td5, file$7, 72, 5, 2025);
-    			add_location(tr1, file$7, 66, 4, 1621);
-    			add_location(tbody, file$7, 65, 3, 1608);
+    			add_location(th0, file$7, 66, 5, 1610);
+    			add_location(th1, file$7, 67, 5, 1632);
+    			add_location(th2, file$7, 68, 5, 1653);
+    			add_location(th3, file$7, 69, 5, 1711);
+    			add_location(th4, file$7, 70, 5, 1789);
+    			add_location(th5, file$7, 71, 5, 1843);
+    			add_location(tr0, file$7, 65, 4, 1599);
+    			add_location(thead, file$7, 64, 3, 1586);
+    			add_location(input0, file$7, 76, 10, 1920);
+    			add_location(td0, file$7, 76, 5, 1915);
+    			add_location(input1, file$7, 77, 10, 1987);
+    			add_location(td1, file$7, 77, 5, 1982);
+    			attr_dev(input2, "type", "number");
+    			attr_dev(input2, "placeholder", "0.0");
+    			attr_dev(input2, "step", "0.01");
+    			attr_dev(input2, "min", "0");
+    			add_location(input2, file$7, 78, 10, 2052);
+    			add_location(td2, file$7, 78, 5, 2047);
+    			attr_dev(input3, "type", "number");
+    			attr_dev(input3, "placeholder", "0.0");
+    			attr_dev(input3, "step", "0.01");
+    			attr_dev(input3, "min", "0");
+    			add_location(input3, file$7, 79, 10, 2186);
+    			add_location(td3, file$7, 79, 5, 2181);
+    			attr_dev(input4, "type", "number");
+    			attr_dev(input4, "placeholder", "0.0");
+    			attr_dev(input4, "step", "0.01");
+    			attr_dev(input4, "min", "0");
+    			add_location(input4, file$7, 80, 10, 2328);
+    			add_location(td4, file$7, 80, 5, 2323);
+    			add_location(td5, file$7, 81, 5, 2465);
+    			add_location(tr1, file$7, 75, 4, 1904);
+    			add_location(tbody, file$7, 74, 3, 1891);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -4954,11 +4992,11 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[4]),
-    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[5]),
-    				listen_dev(input2, "input", /*input2_input_handler*/ ctx[6]),
-    				listen_dev(input3, "input", /*input3_input_handler*/ ctx[7]),
-    				listen_dev(input4, "input", /*input4_input_handler*/ ctx[8])
+    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[5]),
+    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[6]),
+    				listen_dev(input2, "input", input2_input_handler),
+    				listen_dev(input3, "input", input3_input_handler),
+    				listen_dev(input4, "input", input4_input_handler)
     			];
     		},
     		p: function update(ctx, dirty) {
@@ -4970,27 +5008,32 @@ var app = (function () {
     				set_input_value(input1, /*newRenewableSource*/ ctx[0].year);
     			}
 
-    			if (dirty & /*newRenewableSource*/ 1 && input2.value !== /*newRenewableSource*/ ctx[0]["percentage-re-total"]) {
+    			if (!input2_updating && dirty & /*newRenewableSource*/ 1) {
     				set_input_value(input2, /*newRenewableSource*/ ctx[0]["percentage-re-total"]);
     			}
 
-    			if (dirty & /*newRenewableSource*/ 1 && input3.value !== /*newRenewableSource*/ ctx[0]["percentage-hydropower-total"]) {
+    			input2_updating = false;
+
+    			if (!input3_updating && dirty & /*newRenewableSource*/ 1) {
     				set_input_value(input3, /*newRenewableSource*/ ctx[0]["percentage-hydropower-total"]);
     			}
 
-    			if (dirty & /*newRenewableSource*/ 1 && input4.value !== /*newRenewableSource*/ ctx[0]["percentage-wind-power-total"]) {
+    			input3_updating = false;
+
+    			if (!input4_updating && dirty & /*newRenewableSource*/ 1) {
     				set_input_value(input4, /*newRenewableSource*/ ctx[0]["percentage-wind-power-total"]);
     			}
 
+    			input4_updating = false;
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 4096) {
+    			if (dirty & /*$$scope*/ 8192) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
     			button.$set(button_changes);
 
-    			if (dirty & /*renewableSources*/ 2) {
+    			if (dirty & /*deleteRenewableSource, renewableSources*/ 10) {
     				each_value = /*renewableSources*/ ctx[1];
     				validate_each_argument(each_value);
     				let i;
@@ -5052,14 +5095,14 @@ var app = (function () {
     		block,
     		id: create_default_slot$2.name,
     		type: "slot",
-    		source: "(55:2) <Table bordered>",
+    		source: "(64:2) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (52:26)     Loading renewable sources...   {:then renewableSources}
+    // (61:26)     Loading renewable sources...   {:then renewableSources}
     function create_pending_block$2(ctx) {
     	let t;
 
@@ -5082,7 +5125,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$2.name,
     		type: "pending",
-    		source: "(52:26)     Loading renewable sources...   {:then renewableSources}",
+    		source: "(61:26)     Loading renewable sources...   {:then renewableSources}",
     		ctx
     	});
 
@@ -5111,7 +5154,7 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			info.block.c();
-    			add_location(main, file$7, 50, 0, 1185);
+    			add_location(main, file$7, 59, 0, 1468);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5205,6 +5248,14 @@ var app = (function () {
     		});
     	}
 
+    	async function deleteRenewableSource(country, year) {
+    		console.log("Deleting renewable resource...");
+
+    		const res = await fetch("/api/v1/renewable-sources-stats/" + country + "/" + year, { method: "DELETE" }).then(function (res) {
+    			getRenewableSources();
+    		});
+    	}
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -5225,17 +5276,17 @@ var app = (function () {
     	}
 
     	function input2_input_handler() {
-    		newRenewableSource["percentage-re-total"] = this.value;
+    		newRenewableSource["percentage-re-total"] = to_number(this.value);
     		$$invalidate(0, newRenewableSource);
     	}
 
     	function input3_input_handler() {
-    		newRenewableSource["percentage-hydropower-total"] = this.value;
+    		newRenewableSource["percentage-hydropower-total"] = to_number(this.value);
     		$$invalidate(0, newRenewableSource);
     	}
 
     	function input4_input_handler() {
-    		newRenewableSource["percentage-wind-power-total"] = this.value;
+    		newRenewableSource["percentage-wind-power-total"] = to_number(this.value);
     		$$invalidate(0, newRenewableSource);
     	}
 
@@ -5246,7 +5297,8 @@ var app = (function () {
     		renewableSources,
     		newRenewableSource,
     		getRenewableSources,
-    		insertRenewableSources
+    		insertRenewableSources,
+    		deleteRenewableSource
     	});
 
     	$$self.$inject_state = $$props => {
@@ -5262,6 +5314,7 @@ var app = (function () {
     		newRenewableSource,
     		renewableSources,
     		insertRenewableSources,
+    		deleteRenewableSource,
     		getRenewableSources,
     		input0_input_handler,
     		input1_input_handler,
