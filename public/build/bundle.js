@@ -1413,13 +1413,43 @@ var app = (function () {
     function create_fragment$1(ctx) {
     	let main;
     	let h6;
+    	let t1;
+    	let p0;
+    	let a0;
+    	let t3;
+    	let p1;
+    	let a1;
+    	let t5;
+    	let p2;
+    	let a2;
 
     	const block = {
     		c: function create() {
     			main = element("main");
     			h6 = element("h6");
     			h6.textContent = "Estas son nuestras APIs:";
+    			t1 = space();
+    			p0 = element("p");
+    			a0 = element("a");
+    			a0.textContent = "API de energías renovables";
+    			t3 = space();
+    			p1 = element("p");
+    			a1 = element("a");
+    			a1.textContent = "API de coches eléctricos";
+    			t5 = space();
+    			p2 = element("p");
+    			a2 = element("a");
+    			a2.textContent = "API de energías primarias";
     			add_location(h6, file, 2, 1, 11);
+    			attr_dev(a0, "href", "#/renewableSourcesAPI");
+    			add_location(a0, file, 3, 4, 50);
+    			add_location(p0, file, 3, 1, 47);
+    			attr_dev(a1, "href", "#/plugInVehiclesAPI");
+    			add_location(a1, file, 4, 4, 124);
+    			add_location(p1, file, 4, 1, 121);
+    			attr_dev(a2, "href", "#/oilCoalNuclearEnergyConsumptionAPI");
+    			add_location(a2, file, 5, 4, 194);
+    			add_location(p2, file, 5, 1, 191);
     			add_location(main, file, 0, 0, 0);
     		},
     		l: function claim(nodes) {
@@ -1428,6 +1458,15 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
     			append_dev(main, h6);
+    			append_dev(main, t1);
+    			append_dev(main, p0);
+    			append_dev(p0, a0);
+    			append_dev(main, t3);
+    			append_dev(main, p1);
+    			append_dev(p1, a1);
+    			append_dev(main, t5);
+    			append_dev(main, p2);
+    			append_dev(p2, a2);
     		},
     		p: noop,
     		i: noop,
@@ -5409,8 +5448,8 @@ var app = (function () {
     			h1.textContent = "Contact Manager";
     			t1 = space();
     			create_component(router.$$.fragment);
-    			add_location(h1, file$a, 17, 1, 418);
-    			add_location(main, file$a, 16, 0, 409);
+    			add_location(h1, file$a, 20, 1, 555);
+    			add_location(main, file$a, 19, 0, 546);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5450,7 +5489,14 @@ var app = (function () {
     }
 
     function instance$b($$self, $$props, $$invalidate) {
-    	const routes = { "/": Home, "*": NotFound };
+    	const routes = {
+    		"/": Home,
+    		"/oilCoalNuclearEnergyConsumptionAPI": App,
+    		"/plugInVehiclesAPI": App$1,
+    		"/renewableSourcesAPI": App$2,
+    		"*": NotFound
+    	};
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {

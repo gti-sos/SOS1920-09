@@ -10,6 +10,9 @@
 
 	const routes = {
 		"/": Home,
+		"/oilCoalNuclearEnergyConsumptionAPI": oilCoal,
+		"/plugInVehiclesAPI": plugInVehicles,
+		"/renewableSourcesAPI": renewableSources,
 		"*": NotFound
 	};
 </script>
