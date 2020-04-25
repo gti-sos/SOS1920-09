@@ -5,7 +5,7 @@ import {onMount} from "svelte";
 import Table from "sveltestrap/src/Table.svelte";
 import Button from "sveltestrap/src/Button.svelte";
 
-let OilEnergy = [];
+let oilEnergy = [];
 let newOilEnergy = {
 	"country": "",
 	"year" : 0,
@@ -26,8 +26,8 @@ async function getOilEnergy(){
 	if (res.ok){
 		console.log("OK:");
 		const json = await res.json();
-		OilEnergy = json;
-		console.log("Received " + OilEnergy.length +  "oil coal consumption.");
+		oilEnergy = json;
+		console.log("Received " + oilEnergy.length +  "oil coal consumption.");
 	} 
 	
 	else {
@@ -44,7 +44,9 @@ async function insertOilEnergy(){
 		headers: {
 			"Content-Type": "application/json"
 		}
-	});
+	}).then(function(res) {
+		getOilEnergy(); 
+	}); 
 }
 
 </script>
@@ -52,9 +54,9 @@ async function insertOilEnergy(){
 
 <main>
 
-	{#await OilEnergy}
-		Loading OilEnergy...
-	{:then OilEnergys}
+	{#await oilEnergy}
+		Loading oilEnergy...
+	{:then oilEnergys}
 		<Table bordered>
 			<thead>
 				<tr>
@@ -75,13 +77,13 @@ async function insertOilEnergy(){
 					<td><Button outline color= "primary" on:click= {insertOilEnergy}>Insertar</Button></td>
 				</tr>
 
-				{#each OilEnergys as OilEnergy}
+				{#each oilEnergys as oilEnergy}
 					<tr>
-						<td>{newOilEnergy.country}</td>
-						<td>{newOilEnergy.year}</td>
-						<td>{newOilEnergy['oil-consumption']}</td>
-						<td>{newOilEnergy['coal-consumption']}</td>
-						<td>{newOilEnergy['nuclear-energy-consumption']}</td>
+						<td>{oilEnergy.country}</td>
+						<td>{oilEnergy.year}</td>
+						<td>{oilEnergy['oil-consumption']}</td>
+						<td>{oilEnergy['coal-consumption']}</td>
+						<td>{oilEnergy['nuclear-energy-consumption']}</td>
 						<td><Button outline color= "danger">Borrar</Button></td>
 					</tr>
 				{/each}
