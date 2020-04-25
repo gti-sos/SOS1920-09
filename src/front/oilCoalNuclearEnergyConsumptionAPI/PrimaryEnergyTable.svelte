@@ -49,6 +49,20 @@ async function insertOilEnergy(){
 	}); 
 }
 
+
+async function deleteOilEnergy(country,year){
+
+console.log("Inserting oil coal consumption...");
+const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats" + country + "/" + year, {
+	method: "DELETE",
+	body: JSON.stringify(newOilEnergy),
+	headers: {
+		"Content-Type": "application/json"
+	}
+});
+}
+
+
 </script>
 
 
