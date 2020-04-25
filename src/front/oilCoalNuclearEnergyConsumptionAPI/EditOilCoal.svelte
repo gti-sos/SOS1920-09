@@ -89,7 +89,7 @@
                     <td>{updatedYear}</td>
                     <td><input bind:value="{updatedOilConsumption}"></td>
                     <td><input bind:value="{updatedCoalConsumption}"></td>
-                    <td><input bind:value="{updateupdatedNuclearEnergyConsumption}"></td>
+                    <td><input bind:value="{updatedNuclearEnergyConsumption}"></td>
                     
                     <td> <Button outline  color="primary" on:click={updateOilCoal}>Actualizar</Button> </td>
                 </tr>
