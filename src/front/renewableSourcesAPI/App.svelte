@@ -1,7 +1,7 @@
 <script>
-	import ContactsTable from './RenewableSourcesTable.svelte';
+	import RenewableSourcesTable from './RenewableSourcesTable.svelte';
 </script>
 
 <main>
-	<ContactsTable />
+	<RenewableSourcesTable />
 </main>
