@@ -87,8 +87,13 @@
 				</tr>
 				{#each pluginVehicles as pluginVehicles}
 					<tr>
-						<td>{pluginVehicles.country}</td>
+						<td>
+							<a href="#/api/v1/plugin-vehicles-stats/{pluginVehicles.country}/{pluginVehicles.year}">
+								{pluginVehicles.country}
+							</a>
+						</td>
 						<td>{pluginVehicles.year}</td>
+						
 						<td>{pluginVehicles['pev-stock']}</td>
 						<td>{pluginVehicles['annual-sale']}</td>
 						<td>{pluginVehicles['cars-per-1000']}</td>
