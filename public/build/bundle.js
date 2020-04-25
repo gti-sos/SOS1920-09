@@ -1419,7 +1419,7 @@ var app = (function () {
     			main = element("main");
     			h6 = element("h6");
     			h6.textContent = "Estas son nuestras APIs:";
-    			add_location(h6, file, 2, 1, 9);
+    			add_location(h6, file, 2, 1, 11);
     			add_location(main, file, 0, 0, 0);
     		},
     		l: function claim(nodes) {
@@ -5409,8 +5409,8 @@ var app = (function () {
     			h1.textContent = "Contact Manager";
     			t1 = space();
     			create_component(router.$$.fragment);
-    			add_location(h1, file$a, 17, 1, 401);
-    			add_location(main, file$a, 16, 0, 393);
+    			add_location(h1, file$a, 17, 1, 418);
+    			add_location(main, file$a, 16, 0, 409);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
