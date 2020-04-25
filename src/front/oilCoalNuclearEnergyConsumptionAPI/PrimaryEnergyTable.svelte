@@ -5,7 +5,7 @@ import {onMount} from "svelte";
 import Table from "sveltestrap/src/Table.svelte";
 import Button from "sveltestrap/src/Button.svelte";
 
-let OilEnergy = [];
+let oilEnergy = [];
 let newOilEnergy = {
 	"country": "",
 	"year" : 0,
@@ -26,8 +26,8 @@ async function getOilEnergy(){
 	if (res.ok){
 		console.log("OK:");
 		const json = await res.json();
-		OilEnergy = json;
-		console.log("Received " + OilEnergy.length +  "oil coal consumption.");
+		oilEnergy = json;
+		console.log("Received " + oilEnergy.length +  "oil coal consumption.");
 	} 
 	
 	else {
@@ -44,7 +44,9 @@ async function insertOilEnergy(){
 		headers: {
 			"Content-Type": "application/json"
 		}
-	});
+	}).then(function(res) {
+		getOilEnergy(); 
+	}); 
 }
 
 
@@ -66,9 +68,9 @@ const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats" + co
 
 <main>
 
-	{#await OilEnergy}
-		Loading OilEnergy...
-	{:then OilEnergys}
+	{#await oilEnergy}
+		Loading oilEnergy...
+	{:then oilEnergys}
 		<Table bordered>
 			<thead>
 				<tr>
@@ -89,14 +91,23 @@ const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats" + co
 					<td><Button outline color= "primary" on:click= {insertOilEnergy}>Insertar</Button></td>
 				</tr>
 
-				{#each OilEnergys as OilEnergy}
+				{#each oilEnergys as oilEnergy}
 					<tr>
+<<<<<<< HEAD
 						<td>{newOilEnergy.country}</td>
 						<td>{newOilEnergy.year}</td>
 						<td>{newOilEnergy['oil-consumption']}</td>
 						<td>{newOilEnergy['coal-consumption']}</td>
 						<td>{newOilEnergy['nuclear-energy-consumption']}</td>
 						<td><Button outline color= "danger" on:click = {deleteOilEnergy(oilEnergy.country,oilEnergy.year)}>Borrar</Button></td>
+=======
+						<td>{oilEnergy.country}</td>
+						<td>{oilEnergy.year}</td>
+						<td>{oilEnergy['oil-consumption']}</td>
+						<td>{oilEnergy['coal-consumption']}</td>
+						<td>{oilEnergy['nuclear-energy-consumption']}</td>
+						<td><Button outline color= "danger">Borrar</Button></td>
+>>>>>>> f308b478faf3bfe17c902b02e8e0402dcb97a7c0
 					</tr>
 				{/each}
 			</tbody>
