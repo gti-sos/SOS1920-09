@@ -39,14 +39,12 @@ async function insertOilEnergy(){
 	}); 
 }
 async function deleteOilEnergy(country,year){
-console.log("Inserting oil coal consumption...");
-const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats" + country + "/" + year, {
-	method: "DELETE",
-	body: JSON.stringify(newOilEnergy),
-	headers: {
-		"Content-Type": "application/json"
-	}
-});
+console.log("Deleting oil coal consumption...");
+const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats" + "/" + country + "/" + year, {
+	method: "DELETE"
+}).then(function(res) {
+		getOilEnergy(); 
+	}); 
 }
 </script>
 
@@ -69,10 +67,10 @@ const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats" + co
 			<tbody>
 				<tr>
 					<td><input bind:value = "{newOilEnergy.country}"></td>
-					<td><input bind:value = "{newOilEnergy.year}"></td>
-					<td><input bind:value = "{newOilEnergy['oil-consumption']}"></td>
-					<td><input bind:value = "{newOilEnergy['coal-consumption']}"></td>
-					<td><input bind:value = "{newOilEnergy['nuclear-energy-consumption']}"></td>
+					<td><input type="number" bind:value = "{newOilEnergy.year}"></td>
+					<td><input type="number" placeholder="0.0" step="0.01" min="0" bind:value = "{newOilEnergy['oil-consumption']}"></td>
+					<td><input type="number" placeholder="0.0" step="0.01" min="0" bind:value = "{newOilEnergy['coal-consumption']}"></td>
+					<td><input type="number" placeholder="0.0" step="0.01" min="0" bind:value = "{newOilEnergy['nuclear-energy-consumption']}"></td>
 					<td><Button outline color= "primary" on:click= {insertOilEnergy}>Insertar</Button></td>
 				</tr>
 
@@ -83,7 +81,7 @@ const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats" + co
 						<td>{oilEnergy['oil-consumption']}</td>
 						<td>{oilEnergy['coal-consumption']}</td>
 						<td>{oilEnergy['nuclear-energy-consumption']}</td>
-						<td><Button outline color= "danger">Borrar</Button></td>
+						<td><Button outline color= "danger" on:click = "{deleteOilEnergy(oilEnergy.country,oilEnergy.year)}">Borrar</Button></td>
 					</tr>
 				{/each}
 			</tbody>
