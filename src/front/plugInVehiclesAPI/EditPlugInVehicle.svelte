@@ -42,7 +42,6 @@
         }
     }
 
-
     async function updatedPluginVehicles() {
 
         console.log("Updating plugin vehicles...");
@@ -51,7 +50,7 @@
             method: "PUT",
             body: JSON.stringify({
                 country: params.country,
-                year: params.year,
+                year: parseInt(params.year),
                 "pev-stock": updatedPevStock,
 			    "annual-sale": updatedAnnualSale,
 			    "cars-per-1000": updatedCarsPerPeople
@@ -89,7 +88,7 @@
                     <td><input type="number" bind:value="{updatedPevStock}"></td>
                     <td><input type="number" bind:value="{updatedAnnualSale}"></td>
                     <td><input type="number" bind:value="{updatedCarsPerPeople}"></td>
-                    <td> <Button outline  color="primary" on:click={updatedPluginVehicles}>Actualizar</Button> </td>
+                    <td> <Button outline color="primary" on:click={updatedPluginVehicles}>Actualizar</Button> </td>
                 </tr>
         </tbody>
         </Table>

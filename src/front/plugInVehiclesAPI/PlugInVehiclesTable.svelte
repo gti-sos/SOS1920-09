@@ -3,6 +3,9 @@
 	import { 
 		onMount 
 	} from "svelte";
+	import {
+        pop
+    } from "svelte-spa-router";
 
 	import Table from "sveltestrap/src/Table.svelte";
 	import Button from "sveltestrap/src/Button.svelte";
@@ -10,7 +13,7 @@
 	let pluginVehicles = [];
 	let newPluginVehicles = {
 		"country": "",
-		"year": 0,
+		"year": "",
 		"pev-stock": 0,
 		"annual-sale": 0,
 		"cars-per-1000": 0.0
@@ -36,21 +39,40 @@
 	async function insertPluginVehicles(){
 
 		console.log("Inserting plugin vehicles...");
-		const res = await fetch("/api/v1/plugin-vehicles-stats", {
-			method: "POST",
-			body: JSON.stringify(newPluginVehicles),
-			headers:{
-				"Content-Type": "application/json"
-			}
-		}).then(function (res){
-			getPluginVehicles();
-		});
+		if(newPluginVehicles.country == "" 
+		|| newPluginVehicles.country == null 
+		|| newPluginVehicles.year == "" 
+		|| newPluginVehicles.year == null){
+
+			alert("Se debe incluir el nombre del país y del año");
+		}
+		else{
+			const res = await fetch("/api/v1/plugin-vehicles-stats", {
+				method: "POST",
+				body: JSON.stringify(newPluginVehicles),
+				headers:{
+					"Content-Type": "application/json"
+				}
+			}).then(function (res){
+				getPluginVehicles();
+			});
+		}
 	}
 
 	async function deletePluginVehicles(country, year) {
 
 		console.log("Deleting plugin vehicles...");
 		const res = await fetch("/api/v1/plugin-vehicles-stats" + "/" + country + "/" + year, {
+			method: "DELETE"
+		}).then(function (res) {
+			getPluginVehicles();
+		});
+	}
+	
+	async function deletePluginVehiclesAll() {
+
+		console.log("Deleting all plugin vehicles...");
+		const res = await fetch("/api/v1/plugin-vehicles-stats", {
 			method: "DELETE"
 		}).then(function (res) {
 			getPluginVehicles();
@@ -78,8 +100,8 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td><input bind:value="{newPluginVehicles.country}"></td>
-					<td><input type="number" bind:value="{newPluginVehicles.year}"></td>
+					<td><input placeholder="Ej. Spain" bind:value="{newPluginVehicles.country}"></td>
+					<td><input placeholder="Ej. 2020" type="number" bind:value="{newPluginVehicles.year}"></td>
 					<td><input type="number" bind:value="{newPluginVehicles['pev-stock']}"></td>
 					<td><input type="number" bind:value="{newPluginVehicles['annual-sale']}"></td>
 					<td><input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newPluginVehicles['cars-per-1000']}"></td>
@@ -93,15 +115,18 @@
 							</a>
 						</td>
 						<td>{pluginVehicles.year}</td>
-						
 						<td>{pluginVehicles['pev-stock']}</td>
 						<td>{pluginVehicles['annual-sale']}</td>
 						<td>{pluginVehicles['cars-per-1000']}</td>
 						<td><Button outline color="danger" on:click="{deletePluginVehicles(pluginVehicles.country, pluginVehicles.year)}">Borrar</Button></td>
 					</tr>
 				{/each}
+
 			</tbody>
 		</Table>
 	{/await}
+
+	<Button outline color="secondary" on:click="{pop}">Atrás</Button>
+	<Button outline color="danger" on:click={deletePluginVehiclesAll} >Borrar todos</Button>
 
 </main>
