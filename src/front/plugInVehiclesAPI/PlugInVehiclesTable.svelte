@@ -153,7 +153,7 @@
 		</Input>
 	</FormGroup>
 
-	<Button outline color="secondary" on:click="{search(currentCountry, currentYear)}">BuscarC</Button>
+	<Button outline color="secondary" on:click="{search(currentCountry, currentYear)}">Buscar</Button>
 
 
 	{#await pluginVehicles}
