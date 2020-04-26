@@ -51,7 +51,7 @@
             method: "PUT",
             body: JSON.stringify({
                 country: params.country,
-                year: params.year,
+                year: parseInt(params.year),
                 "oil-consumption" : updatedOilConsumption,
                 "coal-consumption" : updatedCoalConsumption,
                 "nuclear-energy-consumption": updatedNuclearEnergyConsumption
@@ -80,7 +80,8 @@
 					<th>Año</th>
 					<th>Porcentaje de consumpo de Gasolina</th>
 					<th>Porcentaje de consumpo de Carbón</th>
-					<th>Porcentaje de consumpo de Energía Nuclear</th>
+                    <th>Porcentaje de consumpo de Energía Nuclear</th>
+                    <th> Acciones </th>
 				</tr>
 			</thead>
             <tbody>
@@ -90,7 +91,6 @@
                     <td><input type="number" bind:value="{updatedOilConsumption}"></td>
                     <td><input type="number" placeholder="0.0" step="0.01" min="0"  bind:value="{updatedCoalConsumption}"></td>
                     <td><input type="number" placeholder="0.0" step="0.01" min="0"  bind:value="{updatedNuclearEnergyConsumption}"></td>
-                    
                     <td> <Button outline  color="primary" on:click={updateOilCoal}>Actualizar</Button> </td>
                 </tr>
         </tbody>
