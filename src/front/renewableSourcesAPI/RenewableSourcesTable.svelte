@@ -11,6 +11,9 @@
 	import Table from "sveltestrap/src/Table.svelte";
 	import Button from "sveltestrap/src/Button.svelte";
 
+	import Input from "sveltestrap/src/Input.svelte";
+	import Label from "sveltestrap/src/Label.svelte";
+	import FormGroup from "sveltestrap/src/FormGroup.svelte";
 	
 	let renewableSources = [];
 	let newRenewableSource = {
@@ -20,6 +23,12 @@
 		"percentage-hydropower-total": 0.0,
 		"percentage-wind-power-total": 0.0
 	};
+
+	/* These variables are for the selects */
+	let countries = [];
+	let years = [];
+	let currentCountry = "";
+	let currentYear = 2016;
 
 	onMount(getRenewableSources);
 
@@ -31,6 +40,13 @@
 			console.log("Ok:");
 			const json = await res.json();
 			renewableSources = json;
+			
+			/* Getting the countries for the select */
+			countries = json.map((d) => {
+				return d.country;
+			});
+			
+
 			console.log("Received " + renewableSources.length + " renewable sources stats.");
 		} else {
 			console.log("ERROR!");
@@ -79,12 +95,72 @@
 		});
 	}
 
+	async function searchYears(country) {
+		console.log("Searching years of country: " + country);
+		const res = await fetch("/api/v1/renewable-sources-stats/" + country);
+
+		if (res.ok) {
+            const json = await res.json();
+			renewableSources = json;
+			json.map((d) => {
+				return d.year;
+			});
+
+            console.log("Updated years.");
+        } else {
+            console.log("ERROR!");
+        }
+
+	}
+
+	async function search(country, year) {
+		console.log("Searching data: " + country + " and " + year);
+		
+		const res = await fetch("/api/v1/renewable-sources-stats?country=" + country + "&year=" + year); 
+
+		if (res.ok) {
+			console.log("Ok:");
+			const json = await res.json();
+			renewableSources = json;			
+
+			console.log("Found " + renewableSources.length + " renewable sources stats.");
+		} else {
+			console.log("ERROR!");
+		}
+		
+	}
+
+
 </script>
 
 <main>
+
 	{#await renewableSources}
 		Loading renewable sources...
 	{:then renewableSources}
+		
+		<FormGroup> 
+			<Label for="selectCountry">Búsqueda por país </Label>
+			<Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentCountry}">
+				{#each countries as country}
+				<option>{country}</option>
+				{/each}
+			</Input>
+		</FormGroup>
+		<Button outline color="secondary" on:click="{search(currentCountry, currentYear)}">Buscar</Button>
+		
+		<!--
+		<Button outline color="secondary" on:click="{searchYears(currentCountry)}"> Actualizar año </Button>
+		<FormGroup>
+			<Label for="selectYear"> Año </Label>
+			<Input type="select"  name="selectYear" id="selectYear">
+				{#each years as year}
+				<option>{year}</option>
+				{/each}
+			</Input>
+		</FormGroup>
+		-->
+
 		<Table bordered>
 			<thead>
 				<tr>
@@ -98,11 +174,11 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td> <input type="text" placeholder="Ej. Spain" bind:value="{newRenewableSource.country}"> </td>
-					<td> <input type="number" placeholder="Ej. 2020" bind:value="{newRenewableSource.year}"> </td>
-					<td> <input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newRenewableSource['percentage-re-total']}"> </td>
-					<td> <input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newRenewableSource['percentage-hydropower-total']}"> </td>
-					<td> <input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newRenewableSource['percentage-wind-power-total']}"> </td>
+					<td> <Input type="text" placeholder="Ej. Spain" bind:value="{newRenewableSource.country}" /> </td>
+					<td> <Input type="number" placeholder="Ej. 2020" bind:value="{newRenewableSource.year}" /> </td>
+					<td> <Input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newRenewableSource['percentage-re-total']}" /> </td>
+					<td> <Input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newRenewableSource['percentage-hydropower-total']}" /> </td>
+					<td> <Input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newRenewableSource['percentage-wind-power-total']}" /> </td>
 					<td> <Button outline color="primary" on:click={insertRenewableSources}> Insertar </Button> </td>
 				</tr>
 				{#each renewableSources as renewableSource}
@@ -122,8 +198,8 @@
 			</tbody>
 		</Table>
 	{/await}
+
+
 	<Button outline color="secondary" on:click="{pop}"> Atrás </Button>
 	<Button outline on:click={deleteRenewableSources} color="danger"> Borrar todo </Button>
-
-	
 </main>
