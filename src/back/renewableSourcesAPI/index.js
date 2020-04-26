@@ -78,7 +78,7 @@ module.exports = function (app) {
 		console.log("New GET .../renewable-sources-stats");
 
 		var query = req.query;
-		//console.log(query);
+		//console.log("Query: " +  query.year + query.country);
 		
 		// Casting the String in Integer to compare data in the "find"  query
 		// We have to check that the json from the query has the property "year"
@@ -93,6 +93,8 @@ module.exports = function (app) {
 		// Removing extra query field of pagination
 		delete query.offset;
 		delete query.limit;
+
+
 
 		// With skip we make the offset and with the limit we limit
 		db.find(query).skip(offset).limit(limit).exec((error, renewableSourcesStats) => {

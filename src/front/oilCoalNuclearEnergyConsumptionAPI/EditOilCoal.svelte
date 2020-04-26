@@ -52,8 +52,8 @@
             body: JSON.stringify({
                 country: params.country,
                 year: parseInt(params.year),
-                "oil-consumption" : updatedOilConsumption,
-                "coal-consumption" : updatedCoalConsumption,
+                "oil-consumption": updatedOilConsumption,
+                "coal-consumption": updatedCoalConsumption,
                 "nuclear-energy-consumption": updatedNuclearEnergyConsumption
 
             }),
@@ -78,9 +78,9 @@
 				<tr>
 					<th>País</th>
 					<th>Año</th>
-					<th>Porcentaje de consumpo de Gasolina</th>
-					<th>Porcentaje de consumpo de Carbón</th>
-                    <th>Porcentaje de consumpo de Energía Nuclear</th>
+					<th>Porcentaje de consumo de Gasolina</th>
+					<th>Porcentaje de consumo de Carbón</th>
+                    <th>Porcentaje de consumo de Energía Nuclear</th>
                     <th> Acciones </th>
 				</tr>
 			</thead>
