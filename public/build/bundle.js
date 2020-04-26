@@ -5930,33 +5930,33 @@ var app = (function () {
     			t16 = space();
     			td5 = element("td");
     			create_component(button.$$.fragment);
-    			add_location(th0, file$9, 78, 5, 2319);
-    			add_location(th1, file$9, 79, 5, 2339);
-    			add_location(th2, file$9, 80, 5, 2358);
-    			add_location(th3, file$9, 81, 5, 2408);
-    			add_location(th4, file$9, 82, 5, 2456);
-    			add_location(tr0, file$9, 77, 4, 2308);
-    			add_location(thead, file$9, 76, 12, 2295);
-    			add_location(td0, file$9, 87, 20, 2595);
-    			add_location(td1, file$9, 88, 20, 2642);
+    			add_location(th0, file$9, 78, 5, 2296);
+    			add_location(th1, file$9, 79, 5, 2316);
+    			add_location(th2, file$9, 80, 5, 2335);
+    			add_location(th3, file$9, 81, 5, 2385);
+    			add_location(th4, file$9, 82, 5, 2433);
+    			add_location(tr0, file$9, 77, 4, 2285);
+    			add_location(thead, file$9, 76, 12, 2272);
+    			add_location(td0, file$9, 87, 20, 2572);
+    			add_location(td1, file$9, 88, 20, 2619);
     			attr_dev(input0, "type", "number");
-    			add_location(input0, file$9, 89, 24, 2690);
-    			add_location(td2, file$9, 89, 20, 2686);
+    			add_location(input0, file$9, 89, 24, 2667);
+    			add_location(td2, file$9, 89, 20, 2663);
     			attr_dev(input1, "type", "number");
     			attr_dev(input1, "placeholder", "0.0");
     			attr_dev(input1, "step", "0.01");
     			attr_dev(input1, "min", "0");
-    			add_location(input1, file$9, 90, 24, 2779);
-    			add_location(td3, file$9, 90, 20, 2775);
+    			add_location(input1, file$9, 90, 24, 2756);
+    			add_location(td3, file$9, 90, 20, 2752);
     			attr_dev(input2, "type", "number");
     			attr_dev(input2, "placeholder", "0.0");
     			attr_dev(input2, "step", "0.01");
     			attr_dev(input2, "min", "0");
-    			add_location(input2, file$9, 91, 24, 2908);
-    			add_location(td4, file$9, 91, 20, 2904);
-    			add_location(td5, file$9, 93, 20, 3064);
-    			add_location(tr1, file$9, 86, 16, 2569);
-    			add_location(tbody, file$9, 85, 12, 2544);
+    			add_location(input2, file$9, 91, 24, 2885);
+    			add_location(td4, file$9, 91, 20, 2881);
+    			add_location(td5, file$9, 93, 20, 3041);
+    			add_location(tr1, file$9, 86, 16, 2546);
+    			add_location(tbody, file$9, 85, 12, 2521);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -6172,10 +6172,10 @@ var app = (function () {
     			info.block.c();
     			t5 = space();
     			create_component(button.$$.fragment);
-    			add_location(strong0, file$9, 71, 41, 2114);
-    			add_location(strong1, file$9, 71, 75, 2148);
-    			add_location(h3, file$9, 71, 4, 2077);
-    			add_location(main, file$9, 70, 0, 2065);
+    			add_location(strong0, file$9, 71, 41, 2091);
+    			add_location(strong1, file$9, 71, 75, 2125);
+    			add_location(h3, file$9, 71, 4, 2054);
+    			add_location(main, file$9, 70, 0, 2042);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6274,10 +6274,10 @@ var app = (function () {
     			$$invalidate(2, updatedYear = oilCoal.year);
     			$$invalidate(3, updatedOilConsumption = oilCoal["oil-consumption"]);
     			$$invalidate(4, updatedCoalConsumption = oilCoal["coal-consumption"]);
-    			updateupdatedNuclearEnergyConsumption = oilCoal["nuclear-energy-consumption"];
+    			$$invalidate(5, updatedNuclearEnergyConsumption = oilCoal["nuclear-energy-consumption"]);
     			console.log("Received contact.");
     		} else {
-    			console.log("ERROR!" + errorMsg);
+    			console.log("ERROR!");
     		}
     	}
 
@@ -6291,7 +6291,7 @@ var app = (function () {
     				year: params.year,
     				"oil-consumption": updatedOilConsumption,
     				"coal-consumption": updatedCoalConsumption,
-    				"nuclear-energy-consumption": updateupdatedNuclearEnergyConsumption
+    				"nuclear-energy-consumption": updatedNuclearEnergyConsumption
     			}),
     			headers: { "Content-Type": "application/json" }
     		}).then(function (res) {
