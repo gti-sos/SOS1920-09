@@ -51,7 +51,7 @@
             method: "PUT",
             body: JSON.stringify({
                 country: params.country,
-                year: params.year,
+                year: parseInt(params.year),
                 "percentage-re-total": updatedPercentageRe,
                 "percentage-hydropower-total": updatedPercentageHydro,
                 "percentage-wind-power-total": updatedPercentageWind

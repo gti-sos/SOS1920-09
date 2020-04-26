@@ -2,8 +2,12 @@
 	import  {
 		onMount
 	}
-		 from "svelte";;
+	from "svelte";
 
+	import {
+        pop
+    } from "svelte-spa-router";
+	
 	import Table from "sveltestrap/src/Table.svelte";
 	import Button from "sveltestrap/src/Button.svelte";
 
@@ -11,7 +15,7 @@
 	let renewableSources = [];
 	let newRenewableSource = {
 		"country": "",
-		"year": 0,
+		"year": "",
 		"percentage-re-total": 0.0,
 		"percentage-hydropower-total": 0.0,
 		"percentage-wind-power-total": 0.0
@@ -35,20 +39,40 @@
 
 	async function insertRenewableSources() {
 		console.log("Inserting renewable sources stats...");
-		const res = await fetch("/api/v1/renewable-sources-stats", {
-			method: "POST",
-			body: JSON.stringify(newRenewableSource),
-			headers: {
-				"Content-Type": "application/json"
-			}
-		}).then(function(res) {
-			getRenewableSources(); 
-		}); 
+
+		/* Checking if the country and the year are not empty */
+		if (newRenewableSource.country == ""
+			|| newRenewableSource.country == null
+			|| newRenewableSource.year == "" 
+			|| newRenewableSource.year == null) {
+			
+				alert("Se debe incluir el nombre del país y el año obligatoriamente");
+
+		} else {
+			const res = await fetch("/api/v1/renewable-sources-stats", {
+				method: "POST",
+				body: JSON.stringify(newRenewableSource),
+				headers: {
+					"Content-Type": "application/json"
+				}
+			}).then(function(res) {
+				getRenewableSources(); 
+			}); 
+		}
 	}
 
 	async function deleteRenewableSource(country, year) {
 		console.log("Deleting renewable resource...");
 		const res = await fetch("/api/v1/renewable-sources-stats/" + country + "/" + year, {
+			method: "DELETE"
+		}).then(function (res) {
+			getRenewableSources();
+		});
+	}
+
+	async function deleteRenewableSources() {
+		console.log("Deleting renewable resources...");
+		const res = await fetch("/api/v1/renewable-sources-stats/", {
 			method: "DELETE"
 		}).then(function (res) {
 			getRenewableSources();
@@ -74,8 +98,8 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td> <input bind:value="{newRenewableSource.country}"> </td>
-					<td> <input type="number" bind:value="{newRenewableSource.year}"> </td>
+					<td> <input type="text" placeholder="Ej. Spain" bind:value="{newRenewableSource.country}"> </td>
+					<td> <input type="number" placeholder="Ej. 2020" bind:value="{newRenewableSource.year}"> </td>
 					<td> <input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newRenewableSource['percentage-re-total']}"> </td>
 					<td> <input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newRenewableSource['percentage-hydropower-total']}"> </td>
 					<td> <input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newRenewableSource['percentage-wind-power-total']}"> </td>
@@ -98,4 +122,8 @@
 			</tbody>
 		</Table>
 	{/await}
+	<Button outline color="secondary" on:click="{pop}"> Atrás </Button>
+	<Button outline on:click={deleteRenewableSources} color="danger"> Borrar todo </Button>
+
+	
 </main>
