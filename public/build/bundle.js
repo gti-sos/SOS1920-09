@@ -3764,14 +3764,14 @@ var app = (function () {
     	return block;
     }
 
-    // (66:1) {:then pluginVehicles}
+    // (87:1) {:then pluginVehicles}
     function create_then_block$1(ctx) {
     	let current;
 
     	const table = new Table({
     			props: {
     				bordered: true,
-    				$$slots: { default: [create_default_slot$1] },
+    				$$slots: { default: [create_default_slot_2$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -3788,7 +3788,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const table_changes = {};
 
-    			if (dirty & /*$$scope, pluginVehicles, newPluginVehicles*/ 4099) {
+    			if (dirty & /*$$scope, pluginVehicles, newPluginVehicles*/ 8195) {
     				table_changes.$$scope = { dirty, ctx };
     			}
 
@@ -3812,15 +3812,15 @@ var app = (function () {
     		block,
     		id: create_then_block$1.name,
     		type: "then",
-    		source: "(66:1) {:then pluginVehicles}",
+    		source: "(87:1) {:then pluginVehicles}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (86:10) <Button outline color="primary" on:click={insertPluginVehicles}>
-    function create_default_slot_2$1(ctx) {
+    // (107:10) <Button outline color="primary" on:click={insertPluginVehicles}>
+    function create_default_slot_4(ctx) {
     	let t;
 
     	const block = {
@@ -3837,17 +3837,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_2$1.name,
+    		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(86:10) <Button outline color=\\\"primary\\\" on:click={insertPluginVehicles}>",
+    		source: "(107:10) <Button outline color=\\\"primary\\\" on:click={insertPluginVehicles}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (100:10) <Button outline color="danger" on:click="{deletePluginVehicles(pluginVehicles.country, pluginVehicles.year)}">
-    function create_default_slot_1$1(ctx) {
+    // (121:10) <Button outline color="danger" on:click="{deletePluginVehicles(pluginVehicles.country, pluginVehicles.year)}">
+    function create_default_slot_3(ctx) {
     	let t;
 
     	const block = {
@@ -3864,16 +3864,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_1$1.name,
+    		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(100:10) <Button outline color=\\\"danger\\\" on:click=\\\"{deletePluginVehicles(pluginVehicles.country, pluginVehicles.year)}\\\">",
+    		source: "(121:10) <Button outline color=\\\"danger\\\" on:click=\\\"{deletePluginVehicles(pluginVehicles.country, pluginVehicles.year)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (88:4) {#each pluginVehicles as pluginVehicles}
+    // (109:4) {#each pluginVehicles as pluginVehicles}
     function create_each_block$1(ctx) {
     	let tr;
     	let td0;
@@ -3906,7 +3906,7 @@ var app = (function () {
     			props: {
     				outline: true,
     				color: "danger",
-    				$$slots: { default: [create_default_slot_1$1] },
+    				$$slots: { default: [create_default_slot_3] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -3939,14 +3939,14 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t10 = space();
     			attr_dev(a, "href", a_href_value = "#/plugin-vehicles-stats/" + /*pluginVehicles*/ ctx[1].country + "/" + /*pluginVehicles*/ ctx[1].year);
-    			add_location(a, file$5, 90, 7, 2347);
-    			add_location(td0, file$5, 89, 6, 2334);
-    			add_location(td1, file$5, 94, 6, 2496);
-    			add_location(td2, file$5, 96, 6, 2542);
-    			add_location(td3, file$5, 97, 6, 2588);
-    			add_location(td4, file$5, 98, 6, 2636);
-    			add_location(td5, file$5, 99, 6, 2686);
-    			add_location(tr, file$5, 88, 5, 2322);
+    			add_location(a, file$5, 111, 7, 2941);
+    			add_location(td0, file$5, 110, 6, 2928);
+    			add_location(td1, file$5, 115, 6, 3090);
+    			add_location(td2, file$5, 117, 6, 3136);
+    			add_location(td3, file$5, 118, 6, 3182);
+    			add_location(td4, file$5, 119, 6, 3230);
+    			add_location(td5, file$5, 120, 6, 3280);
+    			add_location(tr, file$5, 109, 5, 2916);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -3985,7 +3985,7 @@ var app = (function () {
     			if ((!current || dirty & /*pluginVehicles*/ 2) && t8_value !== (t8_value = /*pluginVehicles*/ ctx[1]["cars-per-1000"] + "")) set_data_dev(t8, t8_value);
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 4096) {
+    			if (dirty & /*$$scope*/ 8192) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -4010,15 +4010,15 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(88:4) {#each pluginVehicles as pluginVehicles}",
+    		source: "(109:4) {#each pluginVehicles as pluginVehicles}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (68:2) <Table bordered>
-    function create_default_slot$1(ctx) {
+    // (89:2) <Table bordered>
+    function create_default_slot_2$1(ctx) {
     	let thead;
     	let tr0;
     	let th0;
@@ -4061,29 +4061,29 @@ var app = (function () {
 
     	function input1_input_handler() {
     		input1_updating = true;
-    		/*input1_input_handler*/ ctx[6].call(input1);
+    		/*input1_input_handler*/ ctx[7].call(input1);
     	}
 
     	function input2_input_handler() {
     		input2_updating = true;
-    		/*input2_input_handler*/ ctx[7].call(input2);
+    		/*input2_input_handler*/ ctx[8].call(input2);
     	}
 
     	function input3_input_handler() {
     		input3_updating = true;
-    		/*input3_input_handler*/ ctx[8].call(input3);
+    		/*input3_input_handler*/ ctx[9].call(input3);
     	}
 
     	function input4_input_handler() {
     		input4_updating = true;
-    		/*input4_input_handler*/ ctx[9].call(input4);
+    		/*input4_input_handler*/ ctx[10].call(input4);
     	}
 
     	const button = new Button({
     			props: {
     				outline: true,
     				color: "primary",
-    				$$slots: { default: [create_default_slot_2$1] },
+    				$$slots: { default: [create_default_slot_4] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -4149,34 +4149,36 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$5, 70, 5, 1509);
-    			add_location(th1, file$5, 71, 5, 1529);
-    			add_location(th2, file$5, 72, 5, 1548);
-    			add_location(th3, file$5, 73, 5, 1581);
-    			add_location(th4, file$5, 74, 5, 1610);
-    			add_location(th5, file$5, 75, 5, 1665);
-    			add_location(tr0, file$5, 69, 4, 1498);
-    			add_location(thead, file$5, 68, 3, 1485);
-    			add_location(input0, file$5, 80, 9, 1739);
-    			add_location(td0, file$5, 80, 5, 1735);
+    			add_location(th0, file$5, 91, 5, 2056);
+    			add_location(th1, file$5, 92, 5, 2076);
+    			add_location(th2, file$5, 93, 5, 2095);
+    			add_location(th3, file$5, 94, 5, 2128);
+    			add_location(th4, file$5, 95, 5, 2157);
+    			add_location(th5, file$5, 96, 5, 2212);
+    			add_location(tr0, file$5, 90, 4, 2045);
+    			add_location(thead, file$5, 89, 3, 2032);
+    			attr_dev(input0, "placeholder", "Ej. Spain");
+    			add_location(input0, file$5, 101, 9, 2286);
+    			add_location(td0, file$5, 101, 5, 2282);
+    			attr_dev(input1, "placeholder", "Ej. 2020");
     			attr_dev(input1, "type", "number");
-    			add_location(input1, file$5, 81, 9, 1803);
-    			add_location(td1, file$5, 81, 5, 1799);
+    			add_location(input1, file$5, 102, 9, 2374);
+    			add_location(td1, file$5, 102, 5, 2370);
     			attr_dev(input2, "type", "number");
-    			add_location(input2, file$5, 82, 9, 1878);
-    			add_location(td2, file$5, 82, 5, 1874);
+    			add_location(input2, file$5, 103, 9, 2472);
+    			add_location(td2, file$5, 103, 5, 2468);
     			attr_dev(input3, "type", "number");
-    			add_location(input3, file$5, 83, 9, 1961);
-    			add_location(td3, file$5, 83, 5, 1957);
+    			add_location(input3, file$5, 104, 9, 2555);
+    			add_location(td3, file$5, 104, 5, 2551);
     			attr_dev(input4, "type", "number");
     			attr_dev(input4, "placeholder", "0.0");
     			attr_dev(input4, "step", "0.01");
     			attr_dev(input4, "min", "0");
-    			add_location(input4, file$5, 84, 9, 2046);
-    			add_location(td4, file$5, 84, 5, 2042);
-    			add_location(td5, file$5, 85, 5, 2167);
-    			add_location(tr1, file$5, 79, 4, 1724);
-    			add_location(tbody, file$5, 78, 3, 1711);
+    			add_location(input4, file$5, 105, 9, 2640);
+    			add_location(td4, file$5, 105, 5, 2636);
+    			add_location(td5, file$5, 106, 5, 2761);
+    			add_location(tr1, file$5, 100, 4, 2271);
+    			add_location(tbody, file$5, 99, 3, 2258);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -4227,7 +4229,7 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[5]),
+    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[6]),
     				listen_dev(input1, "input", input1_input_handler),
     				listen_dev(input2, "input", input2_input_handler),
     				listen_dev(input3, "input", input3_input_handler),
@@ -4264,7 +4266,7 @@ var app = (function () {
     			input4_updating = false;
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 4096) {
+    			if (dirty & /*$$scope*/ 8192) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -4330,16 +4332,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$1.name,
+    		id: create_default_slot_2$1.name,
     		type: "slot",
-    		source: "(68:2) <Table bordered>",
+    		source: "(89:2) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (64:24)     Loading plugin vehicles...   {:then pluginVehicles}
+    // (85:24)     Loading plugin vehicles...   {:then pluginVehicles}
     function create_pending_block$1(ctx) {
     	let t;
 
@@ -4362,7 +4364,61 @@ var app = (function () {
     		block,
     		id: create_pending_block$1.name,
     		type: "pending",
-    		source: "(64:24)     Loading plugin vehicles...   {:then pluginVehicles}",
+    		source: "(85:24)     Loading plugin vehicles...   {:then pluginVehicles}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (129:1) <Button outline color="secondary" on:click="{pop}">
+    function create_default_slot_1$1(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Atrás");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_1$1.name,
+    		type: "slot",
+    		source: "(129:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (130:1) <Button outline color="danger" on:click={deletePluginVehiclesAll} >
+    function create_default_slot$1(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Borrar todos");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$1.name,
+    		type: "slot",
+    		source: "(130:1) <Button outline color=\\\"danger\\\" on:click={deletePluginVehiclesAll} >",
     		ctx
     	});
 
@@ -4372,6 +4428,8 @@ var app = (function () {
     function create_fragment$6(ctx) {
     	let main;
     	let promise;
+    	let t0;
+    	let t1;
     	let current;
 
     	let info = {
@@ -4387,11 +4445,39 @@ var app = (function () {
 
     	handle_promise(promise = /*pluginVehicles*/ ctx[1], info);
 
+    	const button0 = new Button({
+    			props: {
+    				outline: true,
+    				color: "secondary",
+    				$$slots: { default: [create_default_slot_1$1] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button0.$on("click", pop);
+
+    	const button1 = new Button({
+    			props: {
+    				outline: true,
+    				color: "danger",
+    				$$slots: { default: [create_default_slot$1] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button1.$on("click", /*deletePluginVehiclesAll*/ ctx[4]);
+
     	const block = {
     		c: function create() {
     			main = element("main");
     			info.block.c();
-    			add_location(main, file$5, 61, 0, 1368);
+    			t0 = space();
+    			create_component(button0.$$.fragment);
+    			t1 = space();
+    			create_component(button1.$$.fragment);
+    			add_location(main, file$5, 82, 0, 1915);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4400,7 +4486,11 @@ var app = (function () {
     			insert_dev(target, main, anchor);
     			info.block.m(main, info.anchor = null);
     			info.mount = () => main;
-    			info.anchor = null;
+    			info.anchor = t0;
+    			append_dev(main, t0);
+    			mount_component(button0, main, null);
+    			append_dev(main, t1);
+    			mount_component(button1, main, null);
     			current = true;
     		},
     		p: function update(new_ctx, [dirty]) {
@@ -4412,10 +4502,27 @@ var app = (function () {
     				child_ctx[1] = info.resolved;
     				info.block.p(child_ctx, dirty);
     			}
+
+    			const button0_changes = {};
+
+    			if (dirty & /*$$scope*/ 8192) {
+    				button0_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button0.$set(button0_changes);
+    			const button1_changes = {};
+
+    			if (dirty & /*$$scope*/ 8192) {
+    				button1_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button1.$set(button1_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
     			transition_in(info.block);
+    			transition_in(button0.$$.fragment, local);
+    			transition_in(button1.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
@@ -4424,6 +4531,8 @@ var app = (function () {
     				transition_out(block);
     			}
 
+    			transition_out(button0.$$.fragment, local);
+    			transition_out(button1.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -4431,6 +4540,8 @@ var app = (function () {
     			info.block.d();
     			info.token = null;
     			info = null;
+    			destroy_component(button0);
+    			destroy_component(button1);
     		}
     	};
 
@@ -4450,7 +4561,7 @@ var app = (function () {
 
     	let newPluginVehicles = {
     		"country": "",
-    		"year": 0,
+    		"year": "",
     		"pev-stock": 0,
     		"annual-sale": 0,
     		"cars-per-1000": 0
@@ -4475,19 +4586,31 @@ var app = (function () {
     	async function insertPluginVehicles() {
     		console.log("Inserting plugin vehicles...");
 
-    		const res = await fetch("/api/v1/plugin-vehicles-stats", {
-    			method: "POST",
-    			body: JSON.stringify(newPluginVehicles),
-    			headers: { "Content-Type": "application/json" }
-    		}).then(function (res) {
-    			getPluginVehicles();
-    		});
+    		if (newPluginVehicles.country == "" || newPluginVehicles.country == null || newPluginVehicles.year == "" || newPluginVehicles.year == null) {
+    			alert("Se debe incluir el nombre del país y del año");
+    		} else {
+    			const res = await fetch("/api/v1/plugin-vehicles-stats", {
+    				method: "POST",
+    				body: JSON.stringify(newPluginVehicles),
+    				headers: { "Content-Type": "application/json" }
+    			}).then(function (res) {
+    				getPluginVehicles();
+    			});
+    		}
     	}
 
     	async function deletePluginVehicles(country, year) {
     		console.log("Deleting plugin vehicles...");
 
     		const res = await fetch("/api/v1/plugin-vehicles-stats" + "/" + country + "/" + year, { method: "DELETE" }).then(function (res) {
+    			getPluginVehicles();
+    		});
+    	}
+
+    	async function deletePluginVehiclesAll() {
+    		console.log("Deleting all plugin vehicles...");
+
+    		const res = await fetch("/api/v1/plugin-vehicles-stats", { method: "DELETE" }).then(function (res) {
     			getPluginVehicles();
     		});
     	}
@@ -4528,13 +4651,15 @@ var app = (function () {
 
     	$$self.$capture_state = () => ({
     		onMount,
+    		pop,
     		Table,
     		Button,
     		pluginVehicles,
     		newPluginVehicles,
     		getPluginVehicles,
     		insertPluginVehicles,
-    		deletePluginVehicles
+    		deletePluginVehicles,
+    		deletePluginVehiclesAll
     	});
 
     	$$self.$inject_state = $$props => {
@@ -4551,6 +4676,7 @@ var app = (function () {
     		pluginVehicles,
     		insertPluginVehicles,
     		deletePluginVehicles,
+    		deletePluginVehiclesAll,
     		getPluginVehicles,
     		input0_input_handler,
     		input1_input_handler,
@@ -6296,7 +6422,7 @@ var app = (function () {
     	return block;
     }
 
-    // (73:4) {:then pluginVehicles}
+    // (72:4) {:then pluginVehicles}
     function create_then_block$4(ctx) {
     	let current;
 
@@ -6344,14 +6470,14 @@ var app = (function () {
     		block,
     		id: create_then_block$4.name,
     		type: "then",
-    		source: "(73:4) {:then pluginVehicles}",
+    		source: "(72:4) {:then pluginVehicles}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (92:25) <Button outline  color="primary" on:click={updatedPluginVehicles}>
+    // (91:25) <Button outline color="primary" on:click={updatedPluginVehicles}>
     function create_default_slot_2$4(ctx) {
     	let t;
 
@@ -6371,14 +6497,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$4.name,
     		type: "slot",
-    		source: "(92:25) <Button outline  color=\\\"primary\\\" on:click={updatedPluginVehicles}>",
+    		source: "(91:25) <Button outline color=\\\"primary\\\" on:click={updatedPluginVehicles}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (74:8) <Table bordered>
+    // (73:8) <Table bordered>
     function create_default_slot_1$4(ctx) {
     	let thead;
     	let tr0;
@@ -6486,28 +6612,28 @@ var app = (function () {
     			t18 = space();
     			td5 = element("td");
     			create_component(button.$$.fragment);
-    			add_location(th0, file$a, 76, 20, 2258);
-    			add_location(th1, file$a, 77, 5, 2278);
-    			add_location(th2, file$a, 78, 5, 2297);
-    			add_location(th3, file$a, 79, 5, 2330);
-    			add_location(th4, file$a, 80, 5, 2359);
-    			add_location(th5, file$a, 81, 5, 2414);
-    			add_location(tr0, file$a, 75, 16, 2232);
-    			add_location(thead, file$a, 74, 12, 2207);
-    			add_location(td0, file$a, 86, 20, 2541);
-    			add_location(td1, file$a, 87, 20, 2588);
+    			add_location(th0, file$a, 75, 20, 2266);
+    			add_location(th1, file$a, 76, 5, 2286);
+    			add_location(th2, file$a, 77, 5, 2305);
+    			add_location(th3, file$a, 78, 5, 2338);
+    			add_location(th4, file$a, 79, 5, 2367);
+    			add_location(th5, file$a, 80, 5, 2422);
+    			add_location(tr0, file$a, 74, 16, 2240);
+    			add_location(thead, file$a, 73, 12, 2215);
+    			add_location(td0, file$a, 85, 20, 2549);
+    			add_location(td1, file$a, 86, 20, 2596);
     			attr_dev(input0, "type", "number");
-    			add_location(input0, file$a, 88, 24, 2636);
-    			add_location(td2, file$a, 88, 20, 2632);
+    			add_location(input0, file$a, 87, 24, 2644);
+    			add_location(td2, file$a, 87, 20, 2640);
     			attr_dev(input1, "type", "number");
-    			add_location(input1, file$a, 89, 24, 2719);
-    			add_location(td3, file$a, 89, 20, 2715);
+    			add_location(input1, file$a, 88, 24, 2727);
+    			add_location(td3, file$a, 88, 20, 2723);
     			attr_dev(input2, "type", "number");
-    			add_location(input2, file$a, 90, 24, 2804);
-    			add_location(td4, file$a, 90, 20, 2800);
-    			add_location(td5, file$a, 91, 20, 2888);
-    			add_location(tr1, file$a, 85, 16, 2515);
-    			add_location(tbody, file$a, 84, 12, 2490);
+    			add_location(input2, file$a, 89, 24, 2812);
+    			add_location(td4, file$a, 89, 20, 2808);
+    			add_location(td5, file$a, 90, 20, 2896);
+    			add_location(tr1, file$a, 84, 16, 2523);
+    			add_location(tbody, file$a, 83, 12, 2498);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -6606,14 +6732,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$4.name,
     		type: "slot",
-    		source: "(74:8) <Table bordered>",
+    		source: "(73:8) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (71:27)           Loading pluginVehicles...      {:then pluginVehicles}
+    // (70:27)           Loading pluginVehicles...      {:then pluginVehicles}
     function create_pending_block$4(ctx) {
     	let t;
 
@@ -6636,14 +6762,14 @@ var app = (function () {
     		block,
     		id: create_pending_block$4.name,
     		type: "pending",
-    		source: "(71:27)           Loading pluginVehicles...      {:then pluginVehicles}",
+    		source: "(70:27)           Loading pluginVehicles...      {:then pluginVehicles}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (97:4) <Button outline color="secondary" on:click="{pop}">
+    // (96:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$4(ctx) {
     	let t;
 
@@ -6663,7 +6789,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$4.name,
     		type: "slot",
-    		source: "(97:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(96:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -6725,10 +6851,10 @@ var app = (function () {
     			info.block.c();
     			t5 = space();
     			create_component(button.$$.fragment);
-    			add_location(strong0, file$a, 69, 41, 2006);
-    			add_location(strong1, file$a, 69, 75, 2040);
-    			add_location(h3, file$a, 69, 4, 1969);
-    			add_location(main, file$a, 68, 0, 1957);
+    			add_location(strong0, file$a, 68, 41, 2014);
+    			add_location(strong1, file$a, 68, 75, 2048);
+    			add_location(h3, file$a, 68, 4, 1977);
+    			add_location(main, file$a, 67, 0, 1965);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6841,7 +6967,7 @@ var app = (function () {
     			method: "PUT",
     			body: JSON.stringify({
     				country: params.country,
-    				year: params.year,
+    				year: parseInt(params.year),
     				"pev-stock": updatedPevStock,
     				"annual-sale": updatedAnnualSale,
     				"cars-per-1000": updatedCarsPerPeople
