@@ -21,8 +21,8 @@
 	/* Select variables */
 	let countries = [];
 	let years = [];
-	let currentCountry= "";
-	let currentYear= 2016;
+	let currentCountry= "-";
+	let currentYear= "-";
 
 
 
@@ -36,11 +36,19 @@
 			console.log("OK:");
 			const json = await res.json();
 			oilEnergy = json;
-
+			 
 			/* getting countries */
 			countries = json.map((d) => {
 				return d.country;
 			});
+			countries = Array.from(new Set(countries));
+
+				/* getting years */
+			years = json.map((d) => {
+				return d.year;
+			});
+			years = Array.from(new Set(years));
+
 			console.log("Received " + oilEnergy.length + "oil coal consumption.");
 		}
 		else {
@@ -94,17 +102,41 @@
 
 	async function searchYears(country){
         console.log("Searching years in country...");
-        const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats/" + country).then((res) => {
-            years = res.map((d) => {
-                return d.year;
-            });
-        });
+		const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats/" + country)
+		
+		if (res.ok){
+            const json = await res.json();
+			oilEnergy = json;
+			
+			oilEnergy.map((d)=>{
+			return d.year;
+			});
+
+			console.log("Update years")
+		}else {
+			console.log("ERROR!")
+		}
+		
+	
+	
+       
     }
 
 	async function search(country, year){
         console.log("Searching data: " + country + "and " + year);
-        const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats?country=" + country + "&year=" + year);
- 
+		/* Checking if it fields is empty */
+		var url = "/api/v1/oil-coal-nuclear-energy-consumption-stats";
+
+		if(country != "-" && year != "-") {
+			url = url + "?country=" + country+ "&year=" + year;
+		}else if(country != "-" && year == "-"){
+			url = url + "?country=" + country;
+		} else if(country == "-" && year != "-"){
+			url = url + "?year=" + year;
+		} 
+		
+		const res = await fetch(url);
+
         if (res.ok){
             console.log("OK:");
             const json = await res.json();
@@ -124,29 +156,28 @@
 	{#await oilEnergy}
 		Loading oilEnergy...
 	{:then oilEnergys}
-	<formGroup> 
+	<FormGroup> 
         <Label for="selectCountry">Búsqueda por país </Label>
         <Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentCountry}">
             {#each countries as country}
             <option>{country}</option>
-            {/each}
-        </Input>
-    </formGroup>
-    <Button outline color="secondary" on:click="{search(currentCountry, currentYear)}">Buscar</Button>
-
-	<!--
-		<formGroup>
-
-		<Label for="selectCountry">Búsquedas</Label>
-	
-		<Input type="select" on:click={searchYears(currentCountry)} name="selectYear" id="selectYear">
-			{#each years as year}
-			<option>{year}</option>
 			{/each}
-		</Input>
-	</formGroup>
--->
+			<option>-</option>
+        </Input>
+    </FormGroup>
 	
+
+		<FormGroup>
+			<Label for="selectYear">Año</Label>
+			<Input type="select" name="selectYear" id="selectYear" bind:value = "{currentYear}">
+				{#each years as year}
+				<option>{year}</option>
+				{/each}
+				<option>-</option>
+			</Input>
+		</FormGroup>
+
+		<Button outline color="secondary" on:click="{search(currentCountry, currentYear)}">Buscar</Button>
 		
 		<Table bordered>
 			<thead>
