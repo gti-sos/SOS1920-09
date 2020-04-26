@@ -122,16 +122,16 @@
 <main>
 
 	{#await oilEnergy}
-		Loading oilEnergy...
+	Loading oilEnergy...
 	{:then oilEnergys}
-	<formGroup> 
+	<FormGroup> 
         <Label for="selectCountry">Búsqueda por país </Label>
         <Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentCountry}">
             {#each countries as country}
             <option>{country}</option>
             {/each}
         </Input>
-    </formGroup>
+    </FormGroup>
     <Button outline color="secondary" on:click="{search(currentCountry, currentYear)}">Buscar</Button>
 
 	<!--
