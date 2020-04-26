@@ -9,6 +9,10 @@
 
 	import Table from "sveltestrap/src/Table.svelte";
 	import Button from "sveltestrap/src/Button.svelte";
+	import Input from "sveltestrap/src/Input.svelte";
+	import Label from "sveltestrap/src/Label.svelte";
+	import Form from "sveltestrap/src/Form.svelte";
+	import FormGroup from "sveltestrap/src/FormGroup.svelte";
 
 	let pluginVehicles = [];
 	let newPluginVehicles = {
@@ -19,10 +23,15 @@
 		"cars-per-1000": 0.0
 	};
 
+	// These variables are for the selects.
+	let countries = [];
+	let years = [];
+	let currentCountry = "";
+	let currentYear = 2018;
+	
 	onMount(getPluginVehicles);
 
 	async function getPluginVehicles(){
-		
 		console.log("Fetching plugin vehicles...");
 		const res = await fetch("/api/v1/plugin-vehicles-stats");
 
@@ -30,6 +39,11 @@
 			console.log("OK:");
 			const json = await res.json();
 			pluginVehicles = json;
+
+			// Getting the countries for the select
+			countries = json.map((d) => {
+			return d.country;
+		});
 			console.log("Received " +pluginVehicles.length+" plugin vehicles.");
 		}else{
 			console.log("ERROR!");
@@ -37,7 +51,6 @@
 	}
 
 	async function insertPluginVehicles(){
-
 		console.log("Inserting plugin vehicles...");
 		if(newPluginVehicles.country == "" 
 		|| newPluginVehicles.country == null 
@@ -60,9 +73,8 @@
 	}
 
 	async function deletePluginVehicles(country, year) {
-
 		console.log("Deleting plugin vehicles...");
-		const res = await fetch("/api/v1/plugin-vehicles-stats" + "/" + country + "/" + year, {
+		const res = await fetch("/api/v1/plugin-vehicles-stats/" + country + "/" + year, {
 			method: "DELETE"
 		}).then(function (res) {
 			getPluginVehicles();
@@ -70,7 +82,6 @@
 	}
 	
 	async function deletePluginVehiclesAll() {
-
 		console.log("Deleting all plugin vehicles...");
 		const res = await fetch("/api/v1/plugin-vehicles-stats", {
 			method: "DELETE"
@@ -79,10 +90,55 @@
 		});
 	}
 
+	async function searchYears(country){
+		console.log("Searching years in country...");
+		const res = await fetch("/api/v1/plugin-vehicles-stats/" + country).then((res) => {
+			years = res.map((d) => {
+				return d.year;
+			});
+		});
+	}
+
+	async function search(country, year){
+		console.log("Searching data: " + country + "and " + year);
+		const res = await fetch("/api/v1/plugin-vehicles-stats?country=" + country + "&year=" + year);
+
+		if (res.ok){
+			console.log("OK:");
+			const json = await res.json();
+			pluginVehicles = json;
+			
+			console.log("Received " +pluginVehicles.length+" plugin vehicles.");
+		}else{
+			console.log("ERROR!");
+		}
+	}
+
 </script>
 
 <main>
-	
+
+	<FormGroup> 
+		<Label for="selectCountry">Búsqueda por país </Label>
+		<Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentCountry}">
+			{#each countries as country}
+			<option>{country}</option>
+		    {/each}
+		</Input>
+	</FormGroup>
+	<Button outline color="secondary" on:click="{search(currentCountry, currentYear)}">Buscar</Button>
+	<!--
+	<FormGroup> 
+		<Label for="selectYear">Búsqueda por años </Label>
+		<Input type="select" on:click="{searchYears(currentCountry)}" name="selectYear" id="selectYear" >
+			{#each years as year}
+			<option>{years}</option>
+		    {/each}
+		</Input>
+	</FormGroup>
+	<Button outline color="secondary" on:click="{searchYear(currentCountry)}">Buscar</Button>
+	-->
+
 	{#await pluginVehicles}
 		Loading plugin vehicles...
 	{:then pluginVehicles}
@@ -100,11 +156,11 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td><input placeholder="Ej. Spain" bind:value="{newPluginVehicles.country}"></td>
-					<td><input placeholder="Ej. 2020" type="number" bind:value="{newPluginVehicles.year}"></td>
-					<td><input type="number" bind:value="{newPluginVehicles['pev-stock']}"></td>
-					<td><input type="number" bind:value="{newPluginVehicles['annual-sale']}"></td>
-					<td><input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newPluginVehicles['cars-per-1000']}"></td>
+					<td><Input placeholder="Ej. Spain" bind:value="{newPluginVehicles.country}" /></td>
+					<td><Input placeholder="Ej. 2020" type="number" bind:value="{newPluginVehicles.year}" /></td>
+					<td><Input type="number" bind:value="{newPluginVehicles['pev-stock']}" /></td>
+					<td><Input type="number" bind:value="{newPluginVehicles['annual-sale']}" /></td>
+					<td><Input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newPluginVehicles['cars-per-1000']}" /></td>
 					<td> <Button outline color="primary" on:click={insertPluginVehicles}>Insertar</Button></td>
 				</tr>
 				{#each pluginVehicles as pluginVehicles}
@@ -121,7 +177,6 @@
 						<td><Button outline color="danger" on:click="{deletePluginVehicles(pluginVehicles.country, pluginVehicles.year)}">Borrar</Button></td>
 					</tr>
 				{/each}
-
 			</tbody>
 		</Table>
 	{/await}
