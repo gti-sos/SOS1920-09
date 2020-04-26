@@ -27,8 +27,8 @@
 	/* These variables are for the selects */
 	let countries = [];
 	let years = [];
-	let currentCountry = "";
-	let currentYear = 2016;
+	let currentCountry = "-";
+	let currentYear = "-";
 
 	onMount(getRenewableSources);
 
@@ -45,6 +45,17 @@
 			countries = json.map((d) => {
 				return d.country;
 			});
+			/* Deleting duplicated countries */
+			countries = Array.from(new Set(countries)); 
+
+			
+			/* Getting the years for the select */
+			years = json.map((d) => {
+					return d.year;
+			});
+			/* Deleting duplicated years */
+			years = Array.from(new Set(years)); 
+
 			
 
 			console.log("Received " + renewableSources.length + " renewable sources stats.");
@@ -95,28 +106,23 @@
 		});
 	}
 
-	async function searchYears(country) {
-		console.log("Searching years of country: " + country);
-		const res = await fetch("/api/v1/renewable-sources-stats/" + country);
-
-		if (res.ok) {
-            const json = await res.json();
-			renewableSources = json;
-			json.map((d) => {
-				return d.year;
-			});
-
-            console.log("Updated years.");
-        } else {
-            console.log("ERROR!");
-        }
-
-	}
+	
 
 	async function search(country, year) {
 		console.log("Searching data: " + country + " and " + year);
-		
-		const res = await fetch("/api/v1/renewable-sources-stats?country=" + country + "&year=" + year); 
+
+		/* Checking if the fields are empty */
+		var url = "/api/v1/renewable-sources-stats";
+
+		if (country != "-" && year != "-") {
+			url = url + "?country=" + country + "&year=" + year; 
+		} else if (country != "-" && year == "-") {
+			url = url + "?country=" + country;
+		} else if (country == "-" && year != "-") {
+			url = url + "?year=" + year;
+		}
+
+		const res = await fetch(url);
 
 		if (res.ok) {
 			console.log("Ok:");
@@ -140,26 +146,27 @@
 	{:then renewableSources}
 		
 		<FormGroup> 
-			<Label for="selectCountry">Búsqueda por país </Label>
+			<Label for="selectCountry"> Búsqueda por país </Label>
 			<Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentCountry}">
 				{#each countries as country}
 				<option>{country}</option>
 				{/each}
+				<option>-</option>
 			</Input>
 		</FormGroup>
-		<Button outline color="secondary" on:click="{search(currentCountry, currentYear)}">Buscar</Button>
-		
-		<!--
-		<Button outline color="secondary" on:click="{searchYears(currentCountry)}"> Actualizar año </Button>
+				
 		<FormGroup>
 			<Label for="selectYear"> Año </Label>
-			<Input type="select"  name="selectYear" id="selectYear">
+			<Input type="select"  name="selectYear" id="selectYear" bind:value="{currentYear}">
 				{#each years as year}
 				<option>{year}</option>
 				{/each}
+				<option>-</option>
 			</Input>
 		</FormGroup>
-		-->
+
+		<Button outline color="secondary" on:click="{search(currentCountry, currentYear)}"> Buscar </Button>
+		
 
 		<Table bordered>
 			<thead>
