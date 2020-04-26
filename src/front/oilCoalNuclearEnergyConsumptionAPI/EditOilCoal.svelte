@@ -35,10 +35,10 @@
             updatedYear = oilCoal.year;
             updatedOilConsumption = oilCoal["oil-consumption"];
             updatedCoalConsumption = oilCoal["coal-consumption"];
-            updateupdatedNuclearEnergyConsumption = oilCoal["nuclear-energy-consumption"];
+            updatedNuclearEnergyConsumption = oilCoal["nuclear-energy-consumption"];
             console.log("Received contact.");
         } else {
-            console.log("ERROR!" + errorMsg);
+            console.log("ERROR!");
         }
     }
 
@@ -54,7 +54,7 @@
                 year: params.year,
                 "oil-consumption" : updatedOilConsumption,
                 "coal-consumption" : updatedCoalConsumption,
-                "nuclear-energy-consumption": updateupdatedNuclearEnergyConsumption
+                "nuclear-energy-consumption": updatedNuclearEnergyConsumption
 
             }),
             headers: {

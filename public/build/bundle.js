@@ -2921,15 +2921,7 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
-    // (90:10) <Button outline color= "danger" on:click = "{deleteOilEnergy(oilEnergy.country,oilEnergy.year)}">
-=======
-<<<<<<< HEAD
-    // (90:10) <Button outline color= "danger" on:click = "{deleteOilEnergy(oilEnergy.country,oilEnergy.year)}">
-=======
     // (91:10) <Button outline color= "danger" on:click = "{deleteOilEnergy(oilEnergy.country,oilEnergy.year)}">
->>>>>>> 15e172be2dd30b2637fc76fac1c87defd1439eef
->>>>>>> 4a1deeeae6394ee568c30c92869e1c756c1c0b2f
     function create_default_slot_1(ctx) {
     	let t;
 
@@ -2949,15 +2941,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-<<<<<<< HEAD
-    		source: "(90:10) <Button outline color= \\\"danger\\\" on:click = \\\"{deleteOilEnergy(oilEnergy.country,oilEnergy.year)}\\\">",
-=======
-<<<<<<< HEAD
-    		source: "(90:10) <Button outline color= \\\"danger\\\" on:click = \\\"{deleteOilEnergy(oilEnergy.country,oilEnergy.year)}\\\">",
-=======
     		source: "(91:10) <Button outline color= \\\"danger\\\" on:click = \\\"{deleteOilEnergy(oilEnergy.country,oilEnergy.year)}\\\">",
->>>>>>> 15e172be2dd30b2637fc76fac1c87defd1439eef
->>>>>>> 4a1deeeae6394ee568c30c92869e1c756c1c0b2f
     		ctx
     	});
 
@@ -2969,41 +2953,28 @@ var app = (function () {
     	let tr;
     	let td0;
     	let a;
-<<<<<<< HEAD
-    	let a_href_value;
-    	let t0;
-    	let t1_value = /*oilEnergy*/ ctx[1].country + "";
-=======
-<<<<<<< HEAD
-    	let a_href_value;
-    	let t0;
-    	let t1_value = /*oilEnergy*/ ctx[1].country + "";
-=======
     	let t0_value = /*oilEnergy*/ ctx[1].country + "";
     	let t0;
     	let a_href_value;
->>>>>>> 15e172be2dd30b2637fc76fac1c87defd1439eef
->>>>>>> 4a1deeeae6394ee568c30c92869e1c756c1c0b2f
     	let t1;
-    	let t2;
     	let td1;
-    	let t3_value = /*oilEnergy*/ ctx[1].year + "";
+    	let t2_value = /*oilEnergy*/ ctx[1].year + "";
+    	let t2;
     	let t3;
-    	let t4;
     	let td2;
-    	let t5_value = /*oilEnergy*/ ctx[1]["oil-consumption"] + "";
+    	let t4_value = /*oilEnergy*/ ctx[1]["oil-consumption"] + "";
+    	let t4;
     	let t5;
-    	let t6;
     	let td3;
-    	let t7_value = /*oilEnergy*/ ctx[1]["coal-consumption"] + "";
+    	let t6_value = /*oilEnergy*/ ctx[1]["coal-consumption"] + "";
+    	let t6;
     	let t7;
-    	let t8;
     	let td4;
-    	let t9_value = /*oilEnergy*/ ctx[1]["nuclear-energy-consumption"] + "";
+    	let t8_value = /*oilEnergy*/ ctx[1]["nuclear-energy-consumption"] + "";
+    	let t8;
     	let t9;
-    	let t10;
     	let td5;
-    	let t11;
+    	let t10;
     	let current;
 
     	const button = new Button({
@@ -3025,50 +2996,22 @@ var app = (function () {
     			tr = element("tr");
     			td0 = element("td");
     			a = element("a");
-<<<<<<< HEAD
-    			t0 = space();
-    			t1 = text(t1_value);
-    			t2 = space();
-=======
-<<<<<<< HEAD
-    			t0 = space();
-    			t1 = text(t1_value);
-    			t2 = space();
-=======
     			t0 = text(t0_value);
     			t1 = space();
->>>>>>> 15e172be2dd30b2637fc76fac1c87defd1439eef
->>>>>>> 4a1deeeae6394ee568c30c92869e1c756c1c0b2f
     			td1 = element("td");
-    			t3 = text(t3_value);
-    			t4 = space();
+    			t2 = text(t2_value);
+    			t3 = space();
     			td2 = element("td");
-    			t5 = text(t5_value);
-    			t6 = space();
+    			t4 = text(t4_value);
+    			t5 = space();
     			td3 = element("td");
-    			t7 = text(t7_value);
-    			t8 = space();
+    			t6 = text(t6_value);
+    			t7 = space();
     			td4 = element("td");
-    			t9 = text(t9_value);
-    			t10 = space();
+    			t8 = text(t8_value);
+    			t9 = space();
     			td5 = element("td");
     			create_component(button.$$.fragment);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4a1deeeae6394ee568c30c92869e1c756c1c0b2f
-    			t11 = space();
-    			attr_dev(a, "href", a_href_value = "#/oil-coal-nuclear-energy-consumption-stats/" + /*oilEnergy*/ ctx[1].country + "/" + /*oilEnergy*/ ctx[1].year);
-    			add_location(a, file$3, 81, 7, 2408);
-    			add_location(td0, file$3, 80, 6, 2395);
-    			add_location(td1, file$3, 84, 6, 2553);
-    			add_location(td2, file$3, 86, 6, 2593);
-    			add_location(td3, file$3, 87, 6, 2640);
-    			add_location(td4, file$3, 88, 6, 2688);
-    			add_location(td5, file$3, 89, 6, 2746);
-<<<<<<< HEAD
-=======
-=======
     			t10 = space();
     			attr_dev(a, "href", a_href_value = "#/oil-coal-nuclear-energy-consumption-stats/" + /*oilEnergy*/ ctx[1].country + "/" + /*oilEnergy*/ ctx[1].year);
     			add_location(a, file$3, 81, 7, 2408);
@@ -3078,77 +3021,43 @@ var app = (function () {
     			add_location(td3, file$3, 88, 6, 2648);
     			add_location(td4, file$3, 89, 6, 2696);
     			add_location(td5, file$3, 90, 6, 2754);
->>>>>>> 15e172be2dd30b2637fc76fac1c87defd1439eef
->>>>>>> 4a1deeeae6394ee568c30c92869e1c756c1c0b2f
     			add_location(tr, file$3, 77, 5, 2374);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
     			append_dev(tr, td0);
     			append_dev(td0, a);
-<<<<<<< HEAD
-    			append_dev(td0, t0);
-    			append_dev(td0, t1);
-    			append_dev(tr, t2);
-=======
-<<<<<<< HEAD
-    			append_dev(td0, t0);
-    			append_dev(td0, t1);
-    			append_dev(tr, t2);
-=======
     			append_dev(a, t0);
     			append_dev(tr, t1);
->>>>>>> 15e172be2dd30b2637fc76fac1c87defd1439eef
->>>>>>> 4a1deeeae6394ee568c30c92869e1c756c1c0b2f
     			append_dev(tr, td1);
-    			append_dev(td1, t3);
-    			append_dev(tr, t4);
+    			append_dev(td1, t2);
+    			append_dev(tr, t3);
     			append_dev(tr, td2);
-    			append_dev(td2, t5);
-    			append_dev(tr, t6);
+    			append_dev(td2, t4);
+    			append_dev(tr, t5);
     			append_dev(tr, td3);
-    			append_dev(td3, t7);
-    			append_dev(tr, t8);
+    			append_dev(td3, t6);
+    			append_dev(tr, t7);
     			append_dev(tr, td4);
-    			append_dev(td4, t9);
-    			append_dev(tr, t10);
+    			append_dev(td4, t8);
+    			append_dev(tr, t9);
     			append_dev(tr, td5);
     			mount_component(button, td5, null);
-    			append_dev(tr, t11);
+    			append_dev(tr, t10);
     			current = true;
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     			if ((!current || dirty & /*oilEnergy*/ 2) && t0_value !== (t0_value = /*oilEnergy*/ ctx[1].country + "")) set_data_dev(t0, t0_value);
->>>>>>> 15e172be2dd30b2637fc76fac1c87defd1439eef
->>>>>>> 4a1deeeae6394ee568c30c92869e1c756c1c0b2f
 
     			if (!current || dirty & /*oilEnergy*/ 2 && a_href_value !== (a_href_value = "#/oil-coal-nuclear-energy-consumption-stats/" + /*oilEnergy*/ ctx[1].country + "/" + /*oilEnergy*/ ctx[1].year)) {
     				attr_dev(a, "href", a_href_value);
     			}
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4a1deeeae6394ee568c30c92869e1c756c1c0b2f
-    			if ((!current || dirty & /*oilEnergy*/ 2) && t1_value !== (t1_value = /*oilEnergy*/ ctx[1].country + "")) set_data_dev(t1, t1_value);
-    			if ((!current || dirty & /*oilEnergy*/ 2) && t3_value !== (t3_value = /*oilEnergy*/ ctx[1].year + "")) set_data_dev(t3, t3_value);
-    			if ((!current || dirty & /*oilEnergy*/ 2) && t5_value !== (t5_value = /*oilEnergy*/ ctx[1]["oil-consumption"] + "")) set_data_dev(t5, t5_value);
-    			if ((!current || dirty & /*oilEnergy*/ 2) && t7_value !== (t7_value = /*oilEnergy*/ ctx[1]["coal-consumption"] + "")) set_data_dev(t7, t7_value);
-    			if ((!current || dirty & /*oilEnergy*/ 2) && t9_value !== (t9_value = /*oilEnergy*/ ctx[1]["nuclear-energy-consumption"] + "")) set_data_dev(t9, t9_value);
-<<<<<<< HEAD
-=======
-=======
     			if ((!current || dirty & /*oilEnergy*/ 2) && t2_value !== (t2_value = /*oilEnergy*/ ctx[1].year + "")) set_data_dev(t2, t2_value);
     			if ((!current || dirty & /*oilEnergy*/ 2) && t4_value !== (t4_value = /*oilEnergy*/ ctx[1]["oil-consumption"] + "")) set_data_dev(t4, t4_value);
     			if ((!current || dirty & /*oilEnergy*/ 2) && t6_value !== (t6_value = /*oilEnergy*/ ctx[1]["coal-consumption"] + "")) set_data_dev(t6, t6_value);
     			if ((!current || dirty & /*oilEnergy*/ 2) && t8_value !== (t8_value = /*oilEnergy*/ ctx[1]["nuclear-energy-consumption"] + "")) set_data_dev(t8, t8_value);
->>>>>>> 15e172be2dd30b2637fc76fac1c87defd1439eef
->>>>>>> 4a1deeeae6394ee568c30c92869e1c756c1c0b2f
     			const button_changes = {};
 
     			if (dirty & /*$$scope*/ 8192) {
@@ -5895,33 +5804,33 @@ var app = (function () {
     			t16 = space();
     			td5 = element("td");
     			create_component(button.$$.fragment);
-    			add_location(th0, file$9, 78, 5, 2319);
-    			add_location(th1, file$9, 79, 5, 2339);
-    			add_location(th2, file$9, 80, 5, 2358);
-    			add_location(th3, file$9, 81, 5, 2408);
-    			add_location(th4, file$9, 82, 5, 2456);
-    			add_location(tr0, file$9, 77, 4, 2308);
-    			add_location(thead, file$9, 76, 12, 2295);
-    			add_location(td0, file$9, 87, 20, 2595);
-    			add_location(td1, file$9, 88, 20, 2642);
+    			add_location(th0, file$9, 78, 5, 2296);
+    			add_location(th1, file$9, 79, 5, 2316);
+    			add_location(th2, file$9, 80, 5, 2335);
+    			add_location(th3, file$9, 81, 5, 2385);
+    			add_location(th4, file$9, 82, 5, 2433);
+    			add_location(tr0, file$9, 77, 4, 2285);
+    			add_location(thead, file$9, 76, 12, 2272);
+    			add_location(td0, file$9, 87, 20, 2572);
+    			add_location(td1, file$9, 88, 20, 2619);
     			attr_dev(input0, "type", "number");
-    			add_location(input0, file$9, 89, 24, 2690);
-    			add_location(td2, file$9, 89, 20, 2686);
+    			add_location(input0, file$9, 89, 24, 2667);
+    			add_location(td2, file$9, 89, 20, 2663);
     			attr_dev(input1, "type", "number");
     			attr_dev(input1, "placeholder", "0.0");
     			attr_dev(input1, "step", "0.01");
     			attr_dev(input1, "min", "0");
-    			add_location(input1, file$9, 90, 24, 2779);
-    			add_location(td3, file$9, 90, 20, 2775);
+    			add_location(input1, file$9, 90, 24, 2756);
+    			add_location(td3, file$9, 90, 20, 2752);
     			attr_dev(input2, "type", "number");
     			attr_dev(input2, "placeholder", "0.0");
     			attr_dev(input2, "step", "0.01");
     			attr_dev(input2, "min", "0");
-    			add_location(input2, file$9, 91, 24, 2908);
-    			add_location(td4, file$9, 91, 20, 2904);
-    			add_location(td5, file$9, 93, 20, 3064);
-    			add_location(tr1, file$9, 86, 16, 2569);
-    			add_location(tbody, file$9, 85, 12, 2544);
+    			add_location(input2, file$9, 91, 24, 2885);
+    			add_location(td4, file$9, 91, 20, 2881);
+    			add_location(td5, file$9, 93, 20, 3041);
+    			add_location(tr1, file$9, 86, 16, 2546);
+    			add_location(tbody, file$9, 85, 12, 2521);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -6137,10 +6046,10 @@ var app = (function () {
     			info.block.c();
     			t5 = space();
     			create_component(button.$$.fragment);
-    			add_location(strong0, file$9, 71, 41, 2114);
-    			add_location(strong1, file$9, 71, 75, 2148);
-    			add_location(h3, file$9, 71, 4, 2077);
-    			add_location(main, file$9, 70, 0, 2065);
+    			add_location(strong0, file$9, 71, 41, 2091);
+    			add_location(strong1, file$9, 71, 75, 2125);
+    			add_location(h3, file$9, 71, 4, 2054);
+    			add_location(main, file$9, 70, 0, 2042);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6239,10 +6148,10 @@ var app = (function () {
     			$$invalidate(2, updatedYear = oilCoal.year);
     			$$invalidate(3, updatedOilConsumption = oilCoal["oil-consumption"]);
     			$$invalidate(4, updatedCoalConsumption = oilCoal["coal-consumption"]);
-    			updateupdatedNuclearEnergyConsumption = oilCoal["nuclear-energy-consumption"];
+    			$$invalidate(5, updatedNuclearEnergyConsumption = oilCoal["nuclear-energy-consumption"]);
     			console.log("Received contact.");
     		} else {
-    			console.log("ERROR!" + errorMsg);
+    			console.log("ERROR!");
     		}
     	}
 
@@ -6256,7 +6165,7 @@ var app = (function () {
     				year: params.year,
     				"oil-consumption": updatedOilConsumption,
     				"coal-consumption": updatedCoalConsumption,
-    				"nuclear-energy-consumption": updateupdatedNuclearEnergyConsumption
+    				"nuclear-energy-consumption": updatedNuclearEnergyConsumption
     			}),
     			headers: { "Content-Type": "application/json" }
     		}).then(function (res) {
@@ -7638,29 +7547,17 @@ var app = (function () {
     	validate_slots("EditRenewableSource", $$slots, []);
 
     	function input0_input_handler() {
-<<<<<<< HEAD
-    		updatedPercentageRe = this.value;
-=======
     		updatedPercentageRe = to_number(this.value);
->>>>>>> 15e172be2dd30b2637fc76fac1c87defd1439eef
     		$$invalidate(3, updatedPercentageRe);
     	}
 
     	function input1_input_handler() {
-<<<<<<< HEAD
-    		updatedPercentageHydro = this.value;
-=======
     		updatedPercentageHydro = to_number(this.value);
->>>>>>> 15e172be2dd30b2637fc76fac1c87defd1439eef
     		$$invalidate(4, updatedPercentageHydro);
     	}
 
     	function input2_input_handler() {
-<<<<<<< HEAD
-    		updatedPercentageWind = this.value;
-=======
     		updatedPercentageWind = to_number(this.value);
->>>>>>> 15e172be2dd30b2637fc76fac1c87defd1439eef
     		$$invalidate(5, updatedPercentageWind);
     	}
 
