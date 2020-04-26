@@ -26,8 +26,8 @@
 	// These variables are for the selects.
 	let countries = [];
 	let years = [];
-	let currentCountry = "";
-	let currentYear = 2018;
+	let currentCountry = "-";
+	let currentYear = "-";
 	
 	onMount(getPluginVehicles);
 
@@ -44,6 +44,19 @@
 			countries = json.map((d) => {
 			return d.country;
 		});
+
+		//Deleting duplicated countries
+		countries = Array.from(new Set(countries));
+
+		// Getting the years for the select
+		years = json.map((d) => {
+
+			return d.year;
+		});
+
+		//Deleting duplicated years
+		years = Array.from(new Set(years));
+
 			console.log("Received " +pluginVehicles.length+" plugin vehicles.");
 		}else{
 			console.log("ERROR!");
@@ -90,19 +103,21 @@
 		});
 	}
 
-	async function searchYears(country){
-		console.log("Searching years in country...");
-		const res = await fetch("/api/v1/plugin-vehicles-stats/" + country).then((res) => {
-			years = res.map((d) => {
-				return d.year;
-			});
-		});
-	}
-
 	async function search(country, year){
 		console.log("Searching data: " + country + "and " + year);
-		const res = await fetch("/api/v1/plugin-vehicles-stats?country=" + country + "&year=" + year);
 
+		/* Checking if the fields are empty */
+		var url = "/api/v1/plugin-vehicles-stats";
+
+		if(country != "-" && year != "-"){
+			url = url + "?country=" + country + "&year=" + year;
+		}else if(country != "-" && year == "-"){
+			url = url + "?country=" + country;
+		}else if(country == "-" && year != "-"){
+			url = url + "&year=" + year;
+		}
+
+		const res = await fetch(url);
 		if (res.ok){
 			console.log("OK:");
 			const json = await res.json();
@@ -123,21 +138,23 @@
 		<Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentCountry}">
 			{#each countries as country}
 			<option>{country}</option>
-		    {/each}
+			{/each}
+			<option>-</option>
 		</Input>
 	</FormGroup>
-	<Button outline color="secondary" on:click="{search(currentCountry, currentYear)}">Buscar</Button>
-	<!--
+	
 	<FormGroup> 
 		<Label for="selectYear">Búsqueda por años </Label>
-		<Input type="select" on:click="{searchYears(currentCountry)}" name="selectYear" id="selectYear" >
+		<Input type="select" name="selectYear" id="selectYear" bind:value="{currentYear}">
 			{#each years as year}
-			<option>{years}</option>
-		    {/each}
+			<option>{year}</option>
+			{/each}
+			<option>-</option>
 		</Input>
 	</FormGroup>
-	<Button outline color="secondary" on:click="{searchYear(currentCountry)}">Buscar</Button>
-	-->
+
+	<Button outline color="secondary" on:click="{search(currentCountry, currentYear)}">BuscarC</Button>
+
 
 	{#await pluginVehicles}
 		Loading plugin vehicles...
