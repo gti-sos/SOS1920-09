@@ -8174,15 +8174,6 @@ var app = (function () {
     	let t17;
     	let t18;
     	let tr2;
-    	let td6;
-    	let t19;
-    	let td7;
-    	let t20;
-    	let td8;
-    	let t21;
-    	let td9;
-    	let t22;
-    	let td10;
     	let current;
 
     	function input0_value_binding(value) {
@@ -8341,15 +8332,6 @@ var app = (function () {
 
     			t18 = space();
     			tr2 = element("tr");
-    			td6 = element("td");
-    			t19 = space();
-    			td7 = element("td");
-    			t20 = space();
-    			td8 = element("td");
-    			t21 = space();
-    			td9 = element("td");
-    			t22 = space();
-    			td10 = element("td");
     			add_location(th0, file$a, 216, 5, 5246);
     			add_location(th1, file$a, 217, 5, 5266);
     			add_location(th2, file$a, 218, 5, 5285);
@@ -8365,11 +8347,6 @@ var app = (function () {
     			add_location(td4, file$a, 230, 5, 5947);
     			add_location(td5, file$a, 231, 5, 6084);
     			add_location(tr1, file$a, 225, 4, 5498);
-    			add_location(td6, file$a, 250, 5, 6762);
-    			add_location(td7, file$a, 251, 5, 6778);
-    			add_location(td8, file$a, 252, 5, 6794);
-    			add_location(td9, file$a, 253, 5, 6810);
-    			add_location(td10, file$a, 254, 5, 6826);
     			add_location(tr2, file$a, 249, 4, 6751);
     			add_location(tbody, file$a, 224, 3, 5485);
     		},
@@ -8415,15 +8392,6 @@ var app = (function () {
 
     			append_dev(tbody, t18);
     			append_dev(tbody, tr2);
-    			append_dev(tr2, td6);
-    			append_dev(tr2, t19);
-    			append_dev(tr2, td7);
-    			append_dev(tr2, t20);
-    			append_dev(tr2, td8);
-    			append_dev(tr2, t21);
-    			append_dev(tr2, td9);
-    			append_dev(tr2, t22);
-    			append_dev(tr2, td10);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
@@ -8593,7 +8561,7 @@ var app = (function () {
     	return block;
     }
 
-    // (264:8) <PaginationItem class = "{currentPage === 1 ? 'disabled' : ''}">
+    // (259:8) <PaginationItem class = "{currentPage === 1 ? 'disabled' : ''}">
     function create_default_slot_10(ctx) {
     	let current;
 
@@ -8634,14 +8602,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10.name,
     		type: "slot",
-    		source: "(264:8) <PaginationItem class = \\\"{currentPage === 1 ? 'disabled' : ''}\\\">",
+    		source: "(259:8) <PaginationItem class = \\\"{currentPage === 1 ? 'disabled' : ''}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (268:2) {#if currentPage != 1}
+    // (263:2) {#if currentPage != 1}
     function create_if_block_1$2(ctx) {
     	let current;
 
@@ -8688,14 +8656,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(268:2) {#if currentPage != 1}",
+    		source: "(263:2) {#if currentPage != 1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (270:12) <PaginationLink href="#/oilCoalNuclearEnergyConsumptionAPI" on:click="{() => addOffset(-1)}" >
+    // (265:12) <PaginationLink href="#/oilCoalNuclearEnergyConsumptionAPI" on:click="{() => addOffset(-1)}" >
     function create_default_slot_9(ctx) {
     	let t_value = /*currentPage*/ ctx[5] - 1 + "";
     	let t;
@@ -8719,14 +8687,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9.name,
     		type: "slot",
-    		source: "(270:12) <PaginationLink href=\\\"#/oilCoalNuclearEnergyConsumptionAPI\\\" on:click=\\\"{() => addOffset(-1)}\\\" >",
+    		source: "(265:12) <PaginationLink href=\\\"#/oilCoalNuclearEnergyConsumptionAPI\\\" on:click=\\\"{() => addOffset(-1)}\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (269:8) <PaginationItem>
+    // (264:8) <PaginationItem>
     function create_default_slot_8(ctx) {
     	let current;
 
@@ -8776,14 +8744,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8.name,
     		type: "slot",
-    		source: "(269:8) <PaginationItem>",
+    		source: "(264:8) <PaginationItem>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (275:12) <PaginationLink href="#/oilCoalNuclearEnergyConsumptionAPI" >
+    // (270:12) <PaginationLink href="#/oilCoalNuclearEnergyConsumptionAPI" >
     function create_default_slot_7(ctx) {
     	let t;
 
@@ -8806,14 +8774,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7.name,
     		type: "slot",
-    		source: "(275:12) <PaginationLink href=\\\"#/oilCoalNuclearEnergyConsumptionAPI\\\" >",
+    		source: "(270:12) <PaginationLink href=\\\"#/oilCoalNuclearEnergyConsumptionAPI\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (274:8) <PaginationItem active>
+    // (269:8) <PaginationItem active>
     function create_default_slot_6(ctx) {
     	let current;
 
@@ -8861,14 +8829,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6.name,
     		type: "slot",
-    		source: "(274:8) <PaginationItem active>",
+    		source: "(269:8) <PaginationItem active>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (279:2) {#if moreData}
+    // (274:2) {#if moreData}
     function create_if_block$6(ctx) {
     	let current;
 
@@ -8915,14 +8883,14 @@ var app = (function () {
     		block,
     		id: create_if_block$6.name,
     		type: "if",
-    		source: "(279:2) {#if moreData}",
+    		source: "(274:2) {#if moreData}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (281:12) <PaginationLink href="#/oilCoalNuclearEnergyConsumptionAPI" on:click="{() => addOffset(1)}">
+    // (276:12) <PaginationLink href="#/oilCoalNuclearEnergyConsumptionAPI" on:click="{() => addOffset(1)}">
     function create_default_slot_5(ctx) {
     	let t_value = /*currentPage*/ ctx[5] + 1 + "";
     	let t;
@@ -8946,14 +8914,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5.name,
     		type: "slot",
-    		source: "(281:12) <PaginationLink href=\\\"#/oilCoalNuclearEnergyConsumptionAPI\\\" on:click=\\\"{() => addOffset(1)}\\\">",
+    		source: "(276:12) <PaginationLink href=\\\"#/oilCoalNuclearEnergyConsumptionAPI\\\" on:click=\\\"{() => addOffset(1)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (280:8) <PaginationItem >
+    // (275:8) <PaginationItem >
     function create_default_slot_4(ctx) {
     	let current;
 
@@ -9003,14 +8971,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(280:8) <PaginationItem >",
+    		source: "(275:8) <PaginationItem >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (285:8) <PaginationItem class = "{moreData ? '' : 'disabled'}">
+    // (280:8) <PaginationItem class = "{moreData ? '' : 'disabled'}">
     function create_default_slot_3(ctx) {
     	let current;
 
@@ -9051,14 +9019,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(285:8) <PaginationItem class = \\\"{moreData ? '' : 'disabled'}\\\">",
+    		source: "(280:8) <PaginationItem class = \\\"{moreData ? '' : 'disabled'}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (261:1) <Pagination style="float:right;" ariaLabel="Cambiar de página">
+    // (256:1) <Pagination style="float:right;" ariaLabel="Cambiar de página">
     function create_default_slot_2(ctx) {
     	let t0;
     	let t1;
@@ -9222,14 +9190,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(261:1) <Pagination style=\\\"float:right;\\\" ariaLabel=\\\"Cambiar de página\\\">",
+    		source: "(256:1) <Pagination style=\\\"float:right;\\\" ariaLabel=\\\"Cambiar de página\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (292:1) <Button outline color="secondary" on:click="{pop}">
+    // (287:1) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot_1(ctx) {
     	let t;
 
@@ -9249,14 +9217,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(292:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(287:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (293:1) <Button outline color= "danger" on:click = {deleteOilEnergys}>
+    // (288:1) <Button outline color= "danger" on:click = {deleteOilEnergys}>
     function create_default_slot(ctx) {
     	let t;
 
@@ -9276,7 +9244,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(293:1) <Button outline color= \\\"danger\\\" on:click = {deleteOilEnergys}>",
+    		source: "(288:1) <Button outline color= \\\"danger\\\" on:click = {deleteOilEnergys}>",
     		ctx
     	});
 
