@@ -248,11 +248,6 @@
 					</tr>
 				{/each}
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
 				</tr>
 			</tbody>
 		</Table>
