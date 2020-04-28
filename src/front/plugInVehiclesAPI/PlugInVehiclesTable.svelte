@@ -5,7 +5,10 @@
 	} from "svelte";
 	import {
         pop
-    } from "svelte-spa-router";
+	} from "svelte-spa-router";
+	import { 
+		Pagination, PaginationItem, PaginationLink 
+	} from 'sveltestrap';
 
 	import Table from "sveltestrap/src/Table.svelte";
 	import Button from "sveltestrap/src/Button.svelte";
@@ -28,16 +31,26 @@
 	let years = [];
 	let currentCountry = "-";
 	let currentYear = "-";
+
+	
+	let numberElementsPages = 10;
+	let pages = [1];
+	let offset = 0;
+	let currentPage = 1;
+	let moreData = true;
 	
 	onMount(getPluginVehicles);
 
 	async function getPluginVehicles(){
 		console.log("Fetching plugin vehicles...");
-		const res = await fetch("/api/v1/plugin-vehicles-stats");
+		const res = await fetch("/api/v1/plugin-vehicles-stats?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages);
+		const next = await fetch("/api/v1/plugin-vehicles-stats?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages);
+		// Asking for the following data
 
-		if (res.ok){
+		if (res.ok && next.ok){
 			console.log("OK:");
 			const json = await res.json();
+			const jsonNext = await next.json();
 			pluginVehicles = json;
 
 			// Getting the countries for the select
@@ -50,14 +63,21 @@
 
 		// Getting the years for the select
 		years = json.map((d) => {
-
 			return d.year;
 		});
 
 		//Deleting duplicated years
 		years = Array.from(new Set(years));
 
-			console.log("Received " +pluginVehicles.length+" plugin vehicles.");
+		// checking if we have run out of elements
+		if(jsonNext.length == 0){
+			moreData = false;
+			
+		}else{
+			moreData = true;
+		}
+
+		console.log("Received " +pluginVehicles.length+" plugin vehicles.");
 		}else{
 			console.log("ERROR!");
 		}
@@ -128,6 +148,17 @@
 			console.log("ERROR!");
 		}
 	}
+	
+	async function total(){
+
+
+	}
+
+	async function addOffset(increment){
+		offset += increment;
+		currentPage += increment;
+		getPluginVehicles();
+	}
 
 </script>
 
@@ -197,6 +228,32 @@
 			</tbody>
 		</Table>
 	{/await}
+
+	<Pagination style="float:right;" ariaLabel="Cambiar de página">
+        <PaginationItem class="{currentPage === 1 ? 'disabled' : ''}">
+          <PaginationLink previous href="#/plugInVehiclesAPI" on:click="{() => addOffset(-1)}" />
+        </PaginationItem>
+		
+		<!-- If we are not in the first page-->
+		{#if currentPage != 1}
+        <PaginationItem>
+            <PaginationLink previous href="#/plugInVehiclesAPI" on:click="{() => addOffset(-1)}">{currentPage - 1}</PaginationLink>
+		</PaginationItem>
+		{/if}
+        <PaginationItem active>
+            <PaginationLink href="#">{currentPage}</PaginationLink>
+		</PaginationItem>
+		<!-- If there are more elements-->
+		{#if moreData}
+        <PaginationItem >
+            <PaginationLink previous href="#/plugInVehiclesAPI" on:click="{() => addOffset(1)}">{currentPage + 1}</PaginationLink>
+         </PaginationItem>
+		{/if}
+		
+        <PaginationItem class="{moreData === true ? '' : 'disabled'}">
+          <PaginationLink next href="#/plugInVehiclesAPI" on:click="{() => addOffset(1)}" />
+        </PaginationItem>
+    </Pagination>
 
 	<Button outline color="secondary" on:click="{pop}">Atrás</Button>
 	<Button outline color="danger" on:click={deletePluginVehiclesAll} >Borrar todos</Button>
