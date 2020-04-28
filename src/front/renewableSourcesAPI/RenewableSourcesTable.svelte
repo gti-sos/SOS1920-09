@@ -16,6 +16,8 @@
 	import FormGroup from "sveltestrap/src/FormGroup.svelte";
 
 	import { Pagination, PaginationItem, PaginationLink } from 'sveltestrap';
+
+	
 	
 	let renewableSources = [];
 	let newRenewableSource = {
@@ -167,8 +169,9 @@
 
 </script>
 
-<main>
 
+
+<main>
 	{#await renewableSources}
 		Loading renewable sources...
 	{:then renewableSources}
@@ -267,3 +270,4 @@
 	<Button outline color="secondary" on:click="{pop}"> Atrás </Button>
 	<Button outline on:click={deleteRenewableSources} color="danger"> Borrar todo </Button>
 </main>
+
