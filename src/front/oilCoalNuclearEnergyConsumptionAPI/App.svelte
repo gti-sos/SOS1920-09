@@ -3,6 +3,6 @@
 </script>
 
 <main>
-	<h1>Admin</h1>
+	<h1>Administrador de datos de energías primarias</h1>
 	<PrimaryEnergyTable />
 </main>
