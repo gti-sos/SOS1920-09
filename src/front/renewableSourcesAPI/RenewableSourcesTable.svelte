@@ -14,6 +14,8 @@
 	import Input from "sveltestrap/src/Input.svelte";
 	import Label from "sveltestrap/src/Label.svelte";
 	import FormGroup from "sveltestrap/src/FormGroup.svelte";
+
+	import { Pagination, PaginationItem, PaginationLink } from 'sveltestrap';
 	
 	let renewableSources = [];
 	let newRenewableSource = {
@@ -30,15 +32,23 @@
 	let currentCountry = "-";
 	let currentYear = "-";
 
+	let numberElementsPages = 10;
+	let offset = 0;
+	let currentPage = 1;
+	let moreData = true; 
+
 	onMount(getRenewableSources);
 
 	async function getRenewableSources() {
-		console.log("Fetching renewable sources stats...");
-		const res = await fetch("/api/v1/renewable-sources-stats"); 
+		console.log("Fetching renewable sources stats...");	
+		const res = await fetch("/api/v1/renewable-sources-stats?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages); 
+		/* Asking for the following data */ 
+		const next = await fetch("/api/v1/renewable-sources-stats?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages); 
 
-		if (res.ok) {
+		if (res.ok && next.ok) {
 			console.log("Ok:");
 			const json = await res.json();
+			const jsonNext = await next.json();
 			renewableSources = json;
 			
 			/* Getting the countries for the select */
@@ -56,7 +66,13 @@
 			/* Deleting duplicated years */
 			years = Array.from(new Set(years)); 
 
-			
+			/* Checking if we have run out of elements */ 
+			if (jsonNext.length == 0) {
+				moreData = false;
+			} else {
+				moreData = true;
+			}
+
 
 			console.log("Received " + renewableSources.length + " renewable sources stats.");
 		} else {
@@ -136,6 +152,18 @@
 		
 	}
 
+	async function total () {
+
+
+	}
+
+
+	function addOffset (increment) {
+		offset += increment;
+		currentPage += increment;
+		getRenewableSources();
+	}
+	
 
 </script>
 
@@ -206,6 +234,35 @@
 		</Table>
 	{/await}
 
+	<Pagination style="float:right;" ariaLabel="Cambiar de página">
+
+
+		<PaginationItem class="{currentPage === 1 ? 'disabled' : ''}">
+		  <PaginationLink previous href="#/renewableSourcesAPI" on:click="{() => addOffset(-1)}" />
+		</PaginationItem>
+		
+		<!-- If we are not in the first page-->
+		{#if currentPage != 1}
+		<PaginationItem>
+			<PaginationLink href="#/renewableSourcesAPI" on:click="{() => addOffset(-1)}" >{currentPage - 1}</PaginationLink>
+		</PaginationItem>
+		{/if}
+		<PaginationItem active>
+			<PaginationLink href="#/renewableSourcesAPI" >{currentPage}</PaginationLink>
+		</PaginationItem>
+
+		<!-- If there are more elements-->
+		{#if moreData}
+		<PaginationItem >
+			<PaginationLink href="#/renewableSourcesAPI" on:click="{() => addOffset(1)}">{currentPage + 1}</PaginationLink>
+		</PaginationItem>
+		{/if}
+
+		<PaginationItem class="{moreData ? '' : 'disabled'}">
+		  <PaginationLink next href="#/renewableSourcesAPI" on:click="{() => addOffset(1)}"/>
+		</PaginationItem>
+
+	</Pagination>
 
 	<Button outline color="secondary" on:click="{pop}"> Atrás </Button>
 	<Button outline on:click={deleteRenewableSources} color="danger"> Borrar todo </Button>
