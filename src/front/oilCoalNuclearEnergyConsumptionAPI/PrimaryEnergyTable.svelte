@@ -5,6 +5,7 @@
 	import Input from "sveltestrap/src/Input.svelte";
 	import Label from "sveltestrap/src/Label.svelte";
 	import FormGroup from "sveltestrap/src/FormGroup.svelte";
+	import { Pagination, PaginationItem, PaginationLink } from 'sveltestrap';
 
 	import {
 		pop
@@ -21,33 +22,51 @@
 	/* Select variables */
 	let countries = [];
 	let years = [];
-	let currentCountry= "-";
-	let currentYear= "-";
+	let currentCountry = "-";
+	let currentYear = "-";
 
 
+
+	let numberElementsPages = 10;
+	let pages = [1];
+	let currentPage = 1;
+	let offset = 0;
+	let moreData = true;
 
 	onMount(getOilEnergy);
 
 	async function getOilEnergy() {
 
 		console.log("Fetching oil coal consumption...");
-		const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats");
-		if (res.ok) {
+		const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages);
+		const next = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats?offset=" + numberElementsPages * (offset+1) + "&limit=" + numberElementsPages);
+		
+		if (res.ok && next.ok) {
 			console.log("OK:");
 			const json = await res.json();
+
+			const jsonNext = await next.json();
 			oilEnergy = json;
-			 
+
 			/* getting countries */
 			countries = json.map((d) => {
 				return d.country;
 			});
 			countries = Array.from(new Set(countries));
-
-				/* getting years */
+			/* getting years */
 			years = json.map((d) => {
 				return d.year;
 			});
+			/* Deleting years */
 			years = Array.from(new Set(years));
+
+			console.log(jsonNext.length);
+			/*  */
+			if (jsonNext.length == 0){
+				moreData = false;
+			} else {
+				moreData = true;
+			}
 
 			console.log("Received " + oilEnergy.length + "oil coal consumption.");
 		}
@@ -100,53 +119,66 @@
 	}
 
 
-	async function searchYears(country){
-        console.log("Searching years in country...");
+	async function searchYears(country) {
+		console.log("Searching years in country...");
 		const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats/" + country)
-		
-		if (res.ok){
-            const json = await res.json();
+
+		if (res.ok) {
+			const json = await res.json();
 			oilEnergy = json;
-			
-			oilEnergy.map((d)=>{
-			return d.year;
+
+			oilEnergy.map((d) => {
+				return d.year;
 			});
 
 			console.log("Update years")
-		}else {
+		} else {
 			console.log("ERROR!")
 		}
-		
-	
-	
-       
-    }
 
-	async function search(country, year){
-        console.log("Searching data: " + country + "and " + year);
+
+
+
+	}
+
+	async function search(country, year) {
+		console.log("Searching data: " + country + "and " + year);
 		/* Checking if it fields is empty */
 		var url = "/api/v1/oil-coal-nuclear-energy-consumption-stats";
 
-		if(country != "-" && year != "-") {
-			url = url + "?country=" + country+ "&year=" + year;
-		}else if(country != "-" && year == "-"){
+		if (country != "-" && year != "-") {
+			url = url + "?country=" + country + "&year=" + year;
+		} else if (country != "-" && year == "-") {
 			url = url + "?country=" + country;
-		} else if(country == "-" && year != "-"){
+		} else if (country == "-" && year != "-") {
 			url = url + "?year=" + year;
-		} 
-		
+		}
+
 		const res = await fetch(url);
 
-        if (res.ok){
-            console.log("OK:");
-            const json = await res.json();
-            oilEnergy = json;
-            
-            console.log("Found " + oilEnergy.length+"Oil Coal Energy.");
-        }else{
-            console.log("ERROR!");
-        }
-    }
+		if (res.ok) {
+			console.log("OK:");
+			const json = await res.json();
+			oilEnergy = json;
+
+			console.log("Found " + oilEnergy.length + "Oil Coal Energy.");
+		} else {
+			console.log("ERROR!");
+		}
+	}
+
+	async function addOffset(increment) {
+		offset += increment;
+		currentPage += increment;
+		getOilEnergy();
+	}
+
+
+
+
+
+
+
 </script>
 
 
@@ -193,7 +225,7 @@
 			<tbody>
 				<tr>
 					<td><Input placeholder="Ej. España" bind:value = "{newOilEnergy.country}" /></td>
-					<td><Input required placeholder="Ej. 2020" bind:value = "{newOilEnergy.year}" /></td>
+					<td><Input required type="number" placeholder="Ej. 2020" bind:value = "{newOilEnergy.year}" /></td>
 					<td><Input required type="number" step="0.01" min="0" bind:value = "{newOilEnergy['oil-consumption']}" /></td>
 					<td><Input type="number" placeholder="0.0" step="0.01" min="0" bind:value = "{newOilEnergy['coal-consumption']}" /></td>
 					<td><Input type="number" placeholder="0.0" step="0.01" min="0" bind:value = "{newOilEnergy['nuclear-energy-consumption']}" /></td>
@@ -202,8 +234,6 @@
 
 				{#each oilEnergys as oilEnergy}
 					<tr>
-
-					
 						<td>
 							<a href="#/oil-coal-nuclear-energy-consumption-stats/{oilEnergy.country}/{oilEnergy.year}"> 
 							{oilEnergy.country}
@@ -227,6 +257,38 @@
 			</tbody>
 		</Table>
 	{/await}
+
+	<Pagination style="float:right;" ariaLabel="Cambiar de página">
+    
+		
+        <PaginationItem class = "{currentPage === 1 ? 'disabled' : ''}">
+          <PaginationLink previous href="#/oilCoalNuclearEnergyConsumptionAPI" on:click="{() => addOffset(-1)}" />
+        </PaginationItem>
+		
+		{#if currentPage != 1}
+        <PaginationItem>
+            <PaginationLink href="#/oilCoalNuclearEnergyConsumptionAPI" on:click="{() => addOffset(-1)}" >{currentPage - 1}</PaginationLink>
+		</PaginationItem>
+		{/if}
+
+        <PaginationItem active>
+            <PaginationLink href="#/oilCoalNuclearEnergyConsumptionAPI" >{currentPage}</PaginationLink>
+		</PaginationItem>
+
+		<!-- more elements...-->
+		{#if moreData}
+        <PaginationItem >
+            <PaginationLink href="#/oilCoalNuclearEnergyConsumptionAPI" on:click="{() => addOffset(1)}">{currentPage + 1}</PaginationLink>
+         </PaginationItem>
+		 {/if}
+
+        <PaginationItem class = "{moreData ? '' : 'disabled'}">
+          <PaginationLink next href="#/oilCoalNuclearEnergyConsumptionAPI" on:click="{() => addOffset(1)}"/>
+        </PaginationItem>
+      
+    </Pagination>
+
+	
 	<Button outline color="secondary" on:click="{pop}">Atrás</Button>
 	<Button outline color= "danger" on:click = {deleteOilEnergys}>Borrar todo</Button>
 
