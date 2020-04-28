@@ -89,7 +89,7 @@
 			|| newRenewableSource.year == "" 
 			|| newRenewableSource.year == null) {
 			
-				alert("Se debe incluir el nombre del país y el año obligatoriamente");
+			alert("Se debe incluir el nombre del país y el año obligatoriamente");
 
 		} else {
 			const res = await fetch("/api/v1/renewable-sources-stats", {
