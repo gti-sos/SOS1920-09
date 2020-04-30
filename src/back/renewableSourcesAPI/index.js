@@ -52,7 +52,88 @@ module.exports = function (app) {
 			"percentage-hydropower-total": 32.7,
 			"percentage-wind-power-total": 12.4
 
+		},
+		{ 
+			"country": "India",
+			"year": 2018,
+			"percentage-re-total": 7.4,
+			"percentage-hydropower-total": 34.9,
+			"percentage-wind-power-total": 10.8
+
+		},
+		{ 
+			"country": "Finland",
+			"year": 2017,
+			"percentage-re-total": 21.3,
+			"percentage-hydropower-total": 38.8,
+			"percentage-wind-power-total": 11.7
+
+		},
+		{ 
+			"country": "New Zealand",
+			"year": 2017,
+			"percentage-re-total": 6.1,
+			"percentage-hydropower-total": 87.7,
+			"percentage-wind-power-total": 31.0
+
+		},
+		{ 
+			"country": "Panama",
+			"year": 2017,
+			"percentage-re-total": 8.1,
+			"percentage-hydropower-total": 77.7,
+			"percentage-wind-power-total": 32.1
+
+		},
+		{ 
+			"country": "Panama",
+			"year": 2018,
+			"percentage-re-total": 8.5,
+			"percentage-hydropower-total": 84.7,
+			"percentage-wind-power-total": 44.3
+
+		},
+		{ 
+			"country": "Finland",
+			"year": 2016,
+			"percentage-re-total": 11.3,
+			"percentage-hydropower-total": 28.8,
+			"percentage-wind-power-total": 1.7
+
+		},
+		{ 
+			"country": "Poland",
+			"year": 2016,
+			"percentage-re-total": 10.3,
+			"percentage-hydropower-total": 58.8,
+			"percentage-wind-power-total": 2.9
+
+		},
+		{ 
+			"country": "Poland",
+			"year": 2017,
+			"percentage-re-total": 34.3,
+			"percentage-hydropower-total": 59.8,
+			"percentage-wind-power-total": 4.0
+
+		},
+		{ 
+			"country": "Switzerland",
+			"year": 2016,
+			"percentage-re-total": 28.7,
+			"percentage-hydropower-total": 48.8,
+			"percentage-wind-power-total": 1.9
+
+		},
+		{ 
+			"country": "Switzerland",
+			"year": 2017,
+			"percentage-re-total": 44.2,
+			"percentage-hydropower-total": 69.3,
+			"percentage-wind-power-total": 4.2
+
 		}
+		
 		
 	];
 	
