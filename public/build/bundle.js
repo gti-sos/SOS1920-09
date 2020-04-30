@@ -1485,11 +1485,11 @@ var app = (function () {
     			add_location(a0, file, 3, 4, 50);
     			add_location(p0, file, 3, 1, 47);
     			attr_dev(a1, "href", "#/plugInVehiclesAPI");
-    			add_location(a1, file, 4, 4, 124);
-    			add_location(p1, file, 4, 1, 121);
+    			add_location(a1, file, 4, 4, 125);
+    			add_location(p1, file, 4, 1, 122);
     			attr_dev(a2, "href", "#/oilCoalNuclearEnergyConsumptionAPI");
-    			add_location(a2, file, 5, 4, 194);
-    			add_location(p2, file, 5, 1, 191);
+    			add_location(a2, file, 5, 4, 195);
+    			add_location(p2, file, 5, 1, 192);
     			add_location(main, file, 0, 0, 0);
     		},
     		l: function claim(nodes) {
