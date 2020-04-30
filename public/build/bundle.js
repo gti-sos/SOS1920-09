@@ -151,6 +151,9 @@ var app = (function () {
             input.value = value;
         }
     }
+    function set_style(node, key, value, important) {
+        node.style.setProperty(key, value, important ? 'important' : '');
+    }
     function select_option(select, value) {
         for (let i = 0; i < select.options.length; i += 1) {
             const option = select.options[i];
@@ -1456,6 +1459,8 @@ var app = (function () {
     	let t1;
     	let p0;
     	let a0;
+    	let t2;
+    	let i;
     	let t3;
     	let p1;
     	let a1;
@@ -1471,7 +1476,8 @@ var app = (function () {
     			t1 = space();
     			p0 = element("p");
     			a0 = element("a");
-    			a0.textContent = "API de energías renovables";
+    			t2 = text("API de energías renovables ");
+    			i = element("i");
     			t3 = space();
     			p1 = element("p");
     			a1 = element("a");
@@ -1481,15 +1487,19 @@ var app = (function () {
     			a2 = element("a");
     			a2.textContent = "API de energías primarias";
     			add_location(h6, file, 2, 1, 11);
+    			attr_dev(i, "class", "fas fa-leaf");
+    			set_style(i, "font-size", "48px");
+    			set_style(i, "color", "green");
+    			add_location(i, file, 3, 64, 110);
     			attr_dev(a0, "href", "#/renewableSourcesAPI");
     			add_location(a0, file, 3, 4, 50);
     			add_location(p0, file, 3, 1, 47);
     			attr_dev(a1, "href", "#/plugInVehiclesAPI");
-    			add_location(a1, file, 4, 4, 124);
-    			add_location(p1, file, 4, 1, 121);
+    			add_location(a1, file, 4, 4, 187);
+    			add_location(p1, file, 4, 1, 184);
     			attr_dev(a2, "href", "#/oilCoalNuclearEnergyConsumptionAPI");
-    			add_location(a2, file, 5, 4, 194);
-    			add_location(p2, file, 5, 1, 191);
+    			add_location(a2, file, 5, 4, 257);
+    			add_location(p2, file, 5, 1, 254);
     			add_location(main, file, 0, 0, 0);
     		},
     		l: function claim(nodes) {
@@ -1501,6 +1511,8 @@ var app = (function () {
     			append_dev(main, t1);
     			append_dev(main, p0);
     			append_dev(p0, a0);
+    			append_dev(a0, t2);
+    			append_dev(a0, i);
     			append_dev(main, t3);
     			append_dev(main, p1);
     			append_dev(p1, a1);
