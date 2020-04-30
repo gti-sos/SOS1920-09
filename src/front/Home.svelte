@@ -1,8 +1,8 @@
 <main>
 
-	<h6>Estas son nuestras APIs:</h6>
-	<p><a href="#/renewableSourcesAPI"> API de energías renovables <i class='fas fa-leaf' style='font-size:48px;color:green'></i> </a></p>
-	<p><a href="#/plugInVehiclesAPI"> API de coches eléctricos </a></p>
-	<p><a href="#/oilCoalNuclearEnergyConsumptionAPI"> API de energías primarias </a></p>
-
+	<div class="div-home">
+		<button type="button"  class="btn btn-outline-success"  onclick="window.location.href='#/renewableSourcesAPI'"><i class='fas fa-leaf' ></i> API de energías renovables</button>
+		<button type="button" class="btn btn-outline-primary" onclick="window.location.href='#/plugInVehiclesAPI'"><i class='fas fa-car-battery' ></i> API de coches eléctricos</button>
+		<button type="button"  class="btn btn-outline-dark" onclick="window.location.href='#/oilCoalNuclearEnergyConsumptionAPI'"><i class='fas fa-radiation' ></i> API de energías primarias</button>
+	</div>
 </main>

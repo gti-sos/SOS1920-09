@@ -209,7 +209,7 @@
 			</Input>
 		</FormGroup>
 
-		<Button outline color="secondary" on:click="{search(currentCountry, currentYear)}">Buscar</Button>
+		<Button outline color="secondary" on:click="{search(currentCountry, currentYear)}" class="button-search" > <i class="fas fa-search"></i> Buscar </Button>
 		
 		<Table bordered>
 			<thead>
@@ -229,7 +229,7 @@
 					<td><Input required type="number" step="0.01" min="0" bind:value = "{newOilEnergy['oil-consumption']}" /></td>
 					<td><Input type="number" placeholder="0.0" step="0.01" min="0" bind:value = "{newOilEnergy['coal-consumption']}" /></td>
 					<td><Input type="number" placeholder="0.0" step="0.01" min="0" bind:value = "{newOilEnergy['nuclear-energy-consumption']}" /></td>
-					<td><Button outline color= "primary" on:click= {insertOilEnergy}>Insertar</Button></td>
+					<td><Button outline color= "primary" on:click= {insertOilEnergy}> <i class="far fa-edit"></i> Insertar</Button></td>
 				</tr>
 
 				{#each oilEnergys as oilEnergy}
@@ -244,7 +244,7 @@
 						<td>{oilEnergy['oil-consumption']}</td>
 						<td>{oilEnergy['coal-consumption']}</td>
 						<td>{oilEnergy['nuclear-energy-consumption']}</td>
-						<td><Button outline color= "danger" on:click = "{deleteOilEnergy(oilEnergy.country,oilEnergy.year)}">Borrar</Button></td>
+						<td><Button outline color= "danger" on:click = "{deleteOilEnergy(oilEnergy.country,oilEnergy.year)}"> <i class="fa fa-trash" aria-hidden="true"></i> Borrar</Button></td>
 					</tr>
 				{/each}
 				<tr>
@@ -284,7 +284,7 @@
     </Pagination>
 
 	
-	<Button outline color="secondary" on:click="{pop}">Atrás</Button>
-	<Button outline color= "danger" on:click = {deleteOilEnergys}>Borrar todo</Button>
+	<Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás</Button>
+	<Button outline color= "danger" on:click = {deleteOilEnergys}> <i class="fa fa-trash" aria-hidden="true"></i> Borrar todo</Button>
 
 </main>

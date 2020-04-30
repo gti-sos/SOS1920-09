@@ -184,7 +184,7 @@
 		</Input>
 	</FormGroup>
 
-	<Button outline color="secondary" on:click="{search(currentCountry, currentYear)}">Buscar</Button>
+	<Button outline color="secondary" on:click="{search(currentCountry, currentYear)}" class="button-search">  <i class="fas fa-search"></i> Buscar</Button>
 
 
 	{#await pluginVehicles}
@@ -209,7 +209,7 @@
 					<td><Input type="number" bind:value="{newPluginVehicles['pev-stock']}" /></td>
 					<td><Input type="number" bind:value="{newPluginVehicles['annual-sale']}" /></td>
 					<td><Input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newPluginVehicles['cars-per-1000']}" /></td>
-					<td> <Button outline color="primary" on:click={insertPluginVehicles}>Insertar</Button></td>
+					<td> <Button outline color="primary" on:click={insertPluginVehicles}> <i class="far fa-edit"></i> Insertar</Button></td>
 				</tr>
 				{#each pluginVehicles as pluginVehicles}
 					<tr>
@@ -222,7 +222,7 @@
 						<td>{pluginVehicles['pev-stock']}</td>
 						<td>{pluginVehicles['annual-sale']}</td>
 						<td>{pluginVehicles['cars-per-1000']}</td>
-						<td><Button outline color="danger" on:click="{deletePluginVehicles(pluginVehicles.country, pluginVehicles.year)}">Borrar</Button></td>
+						<td><Button outline color="danger" on:click="{deletePluginVehicles(pluginVehicles.country, pluginVehicles.year)}"> <i class="fa fa-trash" aria-hidden="true"></i> Borrar</Button></td>
 					</tr>
 				{/each}
 			</tbody>
@@ -255,7 +255,7 @@
         </PaginationItem>
     </Pagination>
 
-	<Button outline color="secondary" on:click="{pop}">Atrás</Button>
-	<Button outline color="danger" on:click={deletePluginVehiclesAll} >Borrar todos</Button>
+	<Button outline color="secondary" on:click="{pop}"><i class="fas fa-arrow-circle-left"></i> Atrás</Button>
+	<Button outline color="danger" on:click={deletePluginVehiclesAll} > <i class="fa fa-trash" aria-hidden="true"></i> Borrar todos</Button>
 
 </main>
