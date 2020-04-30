@@ -87,6 +87,13 @@ module.exports = function (app){
 			"pev-stock": 1126000,
 			"annual-sale": 361307,
 			"cars-per-1000": 3.4
+		},
+		{ 
+			"country": "USA",
+			"year": 2017,
+			"pev-stock": 764666,
+			"annual-sale": 199818,
+			"cars-per-1000": 2.9
 		}
 		
 	];

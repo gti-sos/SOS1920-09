@@ -1,4 +1,4 @@
-// We call the modules
+// We call the modules.
 const express = require("express");
 const bodyParser = require("body-parser");
 
