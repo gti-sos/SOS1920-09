@@ -6,6 +6,7 @@
     import {
         pop
     } from "svelte-spa-router";
+	import Input from "sveltestrap/src/Input.svelte";
 
 
     import Table from "sveltestrap/src/Table.svelte";
@@ -69,7 +70,8 @@
     }
 </script>
 <main>
-    <h3>Editar datos Energías primarias: <strong>{params.country}</strong> <strong>{params.year}</strong> </h3>
+    <h2  style="text-align: center;"><small> Editar datos Energías primarias: </small></h2>
+    <h2  style="text-align: center; margin-bottom: 2%;"><small><strong>{params.country}</strong> - <strong>{params.year}</strong></small></h2>
     {#await oilCoal}
         Loading oilCoal...
     {:then oilCoal}
@@ -88,13 +90,13 @@
                 <tr>
                     <td>{updatedCountry}</td>
                     <td>{updatedYear}</td>
-                    <td><input type="number" bind:value="{updatedOilConsumption}"></td>
-                    <td><input type="number" placeholder="0.0" step="0.01" min="0"  bind:value="{updatedCoalConsumption}"></td>
-                    <td><input type="number" placeholder="0.0" step="0.01" min="0"  bind:value="{updatedNuclearEnergyConsumption}"></td>
-                    <td> <Button outline  color="primary" on:click={updateOilCoal}>Actualizar</Button> </td>
+                    <td><Input type="number" bind:value="{updatedOilConsumption}"/></td>
+                    <td><Input type="number" placeholder="0.0" step="0.01" min="0"  bind:value="{updatedCoalConsumption}"/></td>
+                    <td><Input type="number" placeholder="0.0" step="0.01" min="0"  bind:value="{updatedNuclearEnergyConsumption}"/></td>
+                    <td> <Button outline  color="primary" on:click={updateOilCoal}> <i class="fas fa-pencil-alt"></i> Actualizar</Button> </td>
                 </tr>
         </tbody>
         </Table>
     {/await}
-    <Button outline color="secondary" on:click="{pop}">Atrás</Button>
+    <Button outline color="secondary" on:click="{pop}"><i class="fas fa-arrow-circle-left"></i> Atrás</Button>
 </main>

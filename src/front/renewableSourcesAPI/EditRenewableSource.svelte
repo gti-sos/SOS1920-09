@@ -10,6 +10,7 @@
 
     import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
+	import Input from "sveltestrap/src/Input.svelte";
 
     export let params = {};
     let renewableSource = {};
@@ -65,7 +66,9 @@
     }
 </script>
 <main>
-    <h3>Editar dato de energía renovable: <strong>{params.country}</strong> <strong>{params.year} </strong></h3>
+    <h2  style="text-align: center;"><small> Editar dato de energía renovable: </small></h2>
+    <h2  style="text-align: center; margin-bottom: 2%;"><small><strong>{params.country}</strong> - <strong>{params.year}</strong></small></h2>
+    
     {#await renewableSource}
         Loading renewableSource...
     {:then renewableSource}
@@ -84,14 +87,14 @@
                 <tr>
                     <td> {updatedCountry} </td>
                     <td> {updatedYear} </td>
-                    <td> <input type="number" bind:value="{updatedPercentageRe}"> </td>
-                    <td> <input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{updatedPercentageHydro}"> </td>
-                    <td> <input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{updatedPercentageWind}"> </td>
-                    <td> <Button outline color="primary" on:click={updateRenewableSource}> Actualizar </Button> </td>
+                    <td> <Input type="number" bind:value="{updatedPercentageRe}"/> </td>
+                    <td> <Input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{updatedPercentageHydro}"/> </td>
+                    <td> <Input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{updatedPercentageWind}"/> </td>
+                    <td> <Button outline color="primary" on:click={updateRenewableSource}> <i class="fas fa-pencil-alt"></i> Actualizar </Button> </td>
                 </tr>
         </tbody>
         </Table>
     {/await}
 
-    <Button outline color="secondary" on:click="{pop}"> Atrás </Button>
+    <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
 </main>

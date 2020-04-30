@@ -1455,51 +1455,54 @@ var app = (function () {
 
     function create_fragment$1(ctx) {
     	let main;
-    	let h6;
+    	let div;
+    	let button0;
+    	let i0;
+    	let t0;
     	let t1;
-    	let p0;
-    	let a0;
+    	let button1;
+    	let i1;
     	let t2;
-    	let i;
     	let t3;
-    	let p1;
-    	let a1;
-    	let t5;
-    	let p2;
-    	let a2;
+    	let button2;
+    	let i2;
+    	let t4;
 
     	const block = {
     		c: function create() {
     			main = element("main");
-    			h6 = element("h6");
-    			h6.textContent = "Estas son nuestras APIs:";
+    			div = element("div");
+    			button0 = element("button");
+    			i0 = element("i");
+    			t0 = text(" API de energías renovables");
     			t1 = space();
-    			p0 = element("p");
-    			a0 = element("a");
-    			t2 = text("API de energías renovables ");
-    			i = element("i");
+    			button1 = element("button");
+    			i1 = element("i");
+    			t2 = text(" API de coches eléctricos");
     			t3 = space();
-    			p1 = element("p");
-    			a1 = element("a");
-    			a1.textContent = "API de coches eléctricos";
-    			t5 = space();
-    			p2 = element("p");
-    			a2 = element("a");
-    			a2.textContent = "API de energías primarias";
-    			add_location(h6, file, 2, 1, 11);
-    			attr_dev(i, "class", "fas fa-leaf");
-    			set_style(i, "font-size", "48px");
-    			set_style(i, "color", "green");
-    			add_location(i, file, 3, 64, 110);
-    			attr_dev(a0, "href", "#/renewableSourcesAPI");
-    			add_location(a0, file, 3, 4, 50);
-    			add_location(p0, file, 3, 1, 47);
-    			attr_dev(a1, "href", "#/plugInVehiclesAPI");
-    			add_location(a1, file, 4, 4, 187);
-    			add_location(p1, file, 4, 1, 184);
-    			attr_dev(a2, "href", "#/oilCoalNuclearEnergyConsumptionAPI");
-    			add_location(a2, file, 5, 4, 257);
-    			add_location(p2, file, 5, 1, 254);
+    			button2 = element("button");
+    			i2 = element("i");
+    			t4 = text(" API de energías primarias");
+    			attr_dev(i0, "class", "fas fa-leaf");
+    			add_location(i0, file, 3, 113, 148);
+    			attr_dev(button0, "type", "button");
+    			attr_dev(button0, "class", "btn btn-outline-success");
+    			attr_dev(button0, "onclick", "window.location.href='#/renewableSourcesAPI'");
+    			add_location(button0, file, 3, 2, 37);
+    			attr_dev(i1, "class", "fas fa-car-battery");
+    			add_location(i1, file, 4, 109, 323);
+    			attr_dev(button1, "type", "button");
+    			attr_dev(button1, "class", "btn btn-outline-primary");
+    			attr_dev(button1, "onclick", "window.location.href='#/plugInVehiclesAPI'");
+    			add_location(button1, file, 4, 2, 216);
+    			attr_dev(i2, "class", "fas fa-radiation");
+    			add_location(i2, file, 5, 124, 518);
+    			attr_dev(button2, "type", "button");
+    			attr_dev(button2, "class", "btn btn-outline-dark");
+    			attr_dev(button2, "onclick", "window.location.href='#/oilCoalNuclearEnergyConsumptionAPI'");
+    			add_location(button2, file, 5, 2, 396);
+    			attr_dev(div, "class", "div-home");
+    			add_location(div, file, 2, 1, 11);
     			add_location(main, file, 0, 0, 0);
     		},
     		l: function claim(nodes) {
@@ -1507,18 +1510,18 @@ var app = (function () {
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
-    			append_dev(main, h6);
-    			append_dev(main, t1);
-    			append_dev(main, p0);
-    			append_dev(p0, a0);
-    			append_dev(a0, t2);
-    			append_dev(a0, i);
-    			append_dev(main, t3);
-    			append_dev(main, p1);
-    			append_dev(p1, a1);
-    			append_dev(main, t5);
-    			append_dev(main, p2);
-    			append_dev(p2, a2);
+    			append_dev(main, div);
+    			append_dev(div, button0);
+    			append_dev(button0, i0);
+    			append_dev(button0, t0);
+    			append_dev(div, t1);
+    			append_dev(div, button1);
+    			append_dev(button1, i1);
+    			append_dev(button1, t2);
+    			append_dev(div, t3);
+    			append_dev(div, button2);
+    			append_dev(button2, i2);
+    			append_dev(button2, t4);
     		},
     		p: noop,
     		i: noop,
@@ -7332,6 +7335,7 @@ var app = (function () {
     			props: {
     				outline: true,
     				color: "secondary",
+    				class: "button-search",
     				$$slots: { default: [create_default_slot_14] },
     				$$scope: { ctx }
     			},
@@ -7927,18 +7931,24 @@ var app = (function () {
     	return block;
     }
 
-    // (212:2) <Button outline color="secondary" on:click="{search(currentCountry, currentYear)}">
+    // (212:2) <Button outline color="secondary" on:click="{search(currentCountry, currentYear)}" class="button-search" >
     function create_default_slot_14(ctx) {
+    	let i;
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Buscar");
+    			i = element("i");
+    			t = text(" Buscar");
+    			attr_dev(i, "class", "fas fa-search");
+    			add_location(i, file$a, 211, 109, 5202);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
     			insert_dev(target, t, anchor);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
     			if (detaching) detach_dev(t);
     		}
     	};
@@ -7947,7 +7957,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_14.name,
     		type: "slot",
-    		source: "(212:2) <Button outline color=\\\"secondary\\\" on:click=\\\"{search(currentCountry, currentYear)}\\\">",
+    		source: "(212:2) <Button outline color=\\\"secondary\\\" on:click=\\\"{search(currentCountry, currentYear)}\\\" class=\\\"button-search\\\" >",
     		ctx
     	});
 
@@ -7956,16 +7966,22 @@ var app = (function () {
 
     // (232:9) <Button outline color= "primary" on:click= {insertOilEnergy}>
     function create_default_slot_13(ctx) {
+    	let i;
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Insertar");
+    			i = element("i");
+    			t = text(" Insertar");
+    			attr_dev(i, "class", "far fa-edit");
+    			add_location(i, file$a, 231, 71, 6205);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
     			insert_dev(target, t, anchor);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
     			if (detaching) detach_dev(t);
     		}
     	};
@@ -7983,16 +7999,23 @@ var app = (function () {
 
     // (247:10) <Button outline color= "danger" on:click = "{deleteOilEnergy(oilEnergy.country,oilEnergy.year)}">
     function create_default_slot_12(ctx) {
+    	let i;
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Borrar");
+    			i = element("i");
+    			t = text(" Borrar");
+    			attr_dev(i, "class", "fa fa-trash");
+    			attr_dev(i, "aria-hidden", "true");
+    			add_location(i, file$a, 246, 108, 6785);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
     			insert_dev(target, t, anchor);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
     			if (detaching) detach_dev(t);
     		}
     	};
@@ -8072,14 +8095,14 @@ var app = (function () {
     			td5 = element("td");
     			create_component(button.$$.fragment);
     			attr_dev(a, "href", a_href_value = "#/oil-coal-nuclear-energy-consumption-stats/" + /*oilEnergy*/ ctx[7].country + "/" + /*oilEnergy*/ ctx[7].year);
-    			add_location(a, file$a, 237, 7, 6253);
-    			add_location(td0, file$a, 236, 6, 6240);
-    			add_location(td1, file$a, 241, 6, 6406);
-    			add_location(td2, file$a, 243, 6, 6446);
-    			add_location(td3, file$a, 244, 6, 6493);
-    			add_location(td4, file$a, 245, 6, 6541);
-    			add_location(td5, file$a, 246, 6, 6599);
-    			add_location(tr, file$a, 235, 5, 6228);
+    			add_location(a, file$a, 237, 7, 6337);
+    			add_location(td0, file$a, 236, 6, 6324);
+    			add_location(td1, file$a, 241, 6, 6490);
+    			add_location(td2, file$a, 243, 6, 6530);
+    			add_location(td3, file$a, 244, 6, 6577);
+    			add_location(td4, file$a, 245, 6, 6625);
+    			add_location(td5, file$a, 246, 6, 6683);
+    			add_location(tr, file$a, 235, 5, 6312);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -8344,23 +8367,23 @@ var app = (function () {
 
     			t18 = space();
     			tr2 = element("tr");
-    			add_location(th0, file$a, 216, 5, 5246);
-    			add_location(th1, file$a, 217, 5, 5266);
-    			add_location(th2, file$a, 218, 5, 5285);
-    			add_location(th3, file$a, 219, 5, 5334);
-    			add_location(th4, file$a, 220, 5, 5381);
-    			add_location(th5, file$a, 221, 5, 5437);
-    			add_location(tr0, file$a, 215, 4, 5235);
-    			add_location(thead, file$a, 214, 3, 5222);
-    			add_location(td0, file$a, 226, 5, 5509);
-    			add_location(td1, file$a, 227, 5, 5597);
-    			add_location(td2, file$a, 228, 5, 5703);
-    			add_location(td3, file$a, 229, 5, 5820);
-    			add_location(td4, file$a, 230, 5, 5947);
-    			add_location(td5, file$a, 231, 5, 6084);
-    			add_location(tr1, file$a, 225, 4, 5498);
-    			add_location(tr2, file$a, 249, 4, 6751);
-    			add_location(tbody, file$a, 224, 3, 5485);
+    			add_location(th0, file$a, 216, 5, 5301);
+    			add_location(th1, file$a, 217, 5, 5321);
+    			add_location(th2, file$a, 218, 5, 5340);
+    			add_location(th3, file$a, 219, 5, 5389);
+    			add_location(th4, file$a, 220, 5, 5436);
+    			add_location(th5, file$a, 221, 5, 5492);
+    			add_location(tr0, file$a, 215, 4, 5290);
+    			add_location(thead, file$a, 214, 3, 5277);
+    			add_location(td0, file$a, 226, 5, 5564);
+    			add_location(td1, file$a, 227, 5, 5652);
+    			add_location(td2, file$a, 228, 5, 5758);
+    			add_location(td3, file$a, 229, 5, 5875);
+    			add_location(td4, file$a, 230, 5, 6002);
+    			add_location(td5, file$a, 231, 5, 6139);
+    			add_location(tr1, file$a, 225, 4, 5553);
+    			add_location(tr2, file$a, 249, 4, 6883);
+    			add_location(tbody, file$a, 224, 3, 5540);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -9211,16 +9234,22 @@ var app = (function () {
 
     // (287:1) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot_1(ctx) {
+    	let i;
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Atrás");
+    			i = element("i");
+    			t = text(" Atrás");
+    			attr_dev(i, "class", "fas fa-arrow-circle-left");
+    			add_location(i, file$a, 286, 53, 8162);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
     			insert_dev(target, t, anchor);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
     			if (detaching) detach_dev(t);
     		}
     	};
@@ -9238,16 +9267,23 @@ var app = (function () {
 
     // (288:1) <Button outline color= "danger" on:click = {deleteOilEnergys}>
     function create_default_slot(ctx) {
+    	let i;
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Borrar todo");
+    			i = element("i");
+    			t = text(" Borrar todo");
+    			attr_dev(i, "class", "fa fa-trash");
+    			attr_dev(i, "aria-hidden", "true");
+    			add_location(i, file$a, 287, 64, 8283);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
     			insert_dev(target, t, anchor);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
     			if (detaching) detach_dev(t);
     		}
     	};
@@ -9730,6 +9766,8 @@ var app = (function () {
     			h1.textContent = "Administrador de datos de energías primarias";
     			t1 = space();
     			create_component(primaryenergytable.$$.fragment);
+    			attr_dev(h1, "class", "display-4");
+    			set_style(h1, "text-align", "center");
     			add_location(h1, file$b, 5, 1, 96);
     			add_location(main, file$b, 4, 0, 87);
     		},
@@ -10308,18 +10346,24 @@ var app = (function () {
     	return block;
     }
 
-    // (187:1) <Button outline color="secondary" on:click="{search(currentCountry, currentYear)}">
+    // (187:1) <Button outline color="secondary" on:click="{search(currentCountry, currentYear)}" class="button-search">
     function create_default_slot_14$1(ctx) {
+    	let i;
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Buscar");
+    			i = element("i");
+    			t = text(" Buscar");
+    			attr_dev(i, "class", "fas fa-search");
+    			add_location(i, file$c, 186, 108, 4821);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
     			insert_dev(target, t, anchor);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
     			if (detaching) detach_dev(t);
     		}
     	};
@@ -10328,7 +10372,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_14$1.name,
     		type: "slot",
-    		source: "(187:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{search(currentCountry, currentYear)}\\\">",
+    		source: "(187:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{search(currentCountry, currentYear)}\\\" class=\\\"button-search\\\">",
     		ctx
     	});
 
@@ -10414,16 +10458,22 @@ var app = (function () {
 
     // (212:10) <Button outline color="primary" on:click={insertPluginVehicles}>
     function create_default_slot_13$1(ctx) {
+    	let i;
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Insertar");
+    			i = element("i");
+    			t = text(" Insertar");
+    			attr_dev(i, "class", "far fa-edit");
+    			add_location(i, file$c, 211, 75, 5787);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
     			insert_dev(target, t, anchor);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
     			if (detaching) detach_dev(t);
     		}
     	};
@@ -10441,16 +10491,23 @@ var app = (function () {
 
     // (225:10) <Button outline color="danger" on:click="{deletePluginVehicles(pluginVehicles.country, pluginVehicles.year)}">
     function create_default_slot_12$1(ctx) {
+    	let i;
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Borrar");
+    			i = element("i");
+    			t = text(" Borrar");
+    			attr_dev(i, "class", "fa fa-trash");
+    			attr_dev(i, "aria-hidden", "true");
+    			add_location(i, file$c, 224, 121, 6372);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
     			insert_dev(target, t, anchor);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
     			if (detaching) detach_dev(t);
     		}
     	};
@@ -10532,14 +10589,14 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t10 = space();
     			attr_dev(a, "href", a_href_value = "#/plugin-vehicles-stats/" + /*pluginVehicles*/ ctx[7].country + "/" + /*pluginVehicles*/ ctx[7].year);
-    			add_location(a, file$c, 216, 7, 5843);
-    			add_location(td0, file$c, 215, 6, 5830);
-    			add_location(td1, file$c, 220, 6, 5992);
-    			add_location(td2, file$c, 221, 6, 6030);
-    			add_location(td3, file$c, 222, 6, 6076);
-    			add_location(td4, file$c, 223, 6, 6124);
-    			add_location(td5, file$c, 224, 6, 6174);
-    			add_location(tr, file$c, 214, 5, 5818);
+    			add_location(a, file$c, 216, 7, 5926);
+    			add_location(td0, file$c, 215, 6, 5913);
+    			add_location(td1, file$c, 220, 6, 6075);
+    			add_location(td2, file$c, 221, 6, 6113);
+    			add_location(td3, file$c, 222, 6, 6159);
+    			add_location(td4, file$c, 223, 6, 6207);
+    			add_location(td5, file$c, 224, 6, 6257);
+    			add_location(tr, file$c, 214, 5, 5901);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -10787,22 +10844,22 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$c, 196, 5, 4948);
-    			add_location(th1, file$c, 197, 5, 4968);
-    			add_location(th2, file$c, 198, 5, 4987);
-    			add_location(th3, file$c, 199, 5, 5020);
-    			add_location(th4, file$c, 200, 5, 5049);
-    			add_location(th5, file$c, 201, 5, 5104);
-    			add_location(tr0, file$c, 195, 4, 4937);
-    			add_location(thead, file$c, 194, 3, 4924);
-    			add_location(td0, file$c, 206, 5, 5174);
-    			add_location(td1, file$c, 207, 5, 5264);
-    			add_location(td2, file$c, 208, 5, 5364);
-    			add_location(td3, file$c, 209, 5, 5449);
-    			add_location(td4, file$c, 210, 5, 5536);
-    			add_location(td5, file$c, 211, 5, 5663);
-    			add_location(tr1, file$c, 205, 4, 5163);
-    			add_location(tbody, file$c, 204, 3, 5150);
+    			add_location(th0, file$c, 196, 5, 5002);
+    			add_location(th1, file$c, 197, 5, 5022);
+    			add_location(th2, file$c, 198, 5, 5041);
+    			add_location(th3, file$c, 199, 5, 5074);
+    			add_location(th4, file$c, 200, 5, 5103);
+    			add_location(th5, file$c, 201, 5, 5158);
+    			add_location(tr0, file$c, 195, 4, 4991);
+    			add_location(thead, file$c, 194, 3, 4978);
+    			add_location(td0, file$c, 206, 5, 5228);
+    			add_location(td1, file$c, 207, 5, 5318);
+    			add_location(td2, file$c, 208, 5, 5418);
+    			add_location(td3, file$c, 209, 5, 5503);
+    			add_location(td4, file$c, 210, 5, 5590);
+    			add_location(td5, file$c, 211, 5, 5717);
+    			add_location(tr1, file$c, 205, 4, 5217);
+    			add_location(tbody, file$c, 204, 3, 5204);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -11650,16 +11707,22 @@ var app = (function () {
 
     // (258:1) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot_1$1(ctx) {
+    	let i;
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Atrás");
+    			i = element("i");
+    			t = text(" Atrás");
+    			attr_dev(i, "class", "fas fa-arrow-circle-left");
+    			add_location(i, file$c, 257, 52, 7675);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
     			insert_dev(target, t, anchor);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
     			if (detaching) detach_dev(t);
     		}
     	};
@@ -11677,16 +11740,23 @@ var app = (function () {
 
     // (259:1) <Button outline color="danger" on:click={deletePluginVehiclesAll} >
     function create_default_slot$1(ctx) {
+    	let i;
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Borrar todos");
+    			i = element("i");
+    			t = text(" Borrar todos");
+    			attr_dev(i, "class", "fa fa-trash");
+    			attr_dev(i, "aria-hidden", "true");
+    			add_location(i, file$c, 258, 69, 7801);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
     			insert_dev(target, t, anchor);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
     			if (detaching) detach_dev(t);
     		}
     	};
@@ -11733,6 +11803,7 @@ var app = (function () {
     			props: {
     				outline: true,
     				color: "secondary",
+    				class: "button-search",
     				$$slots: { default: [create_default_slot_14$1] },
     				$$scope: { ctx }
     			},
@@ -12229,6 +12300,8 @@ var app = (function () {
     			h1.textContent = "Administrador de datos de coches eléctricos";
     			t1 = space();
     			create_component(pluginvehiclestable.$$.fragment);
+    			attr_dev(h1, "class", "display-4");
+    			set_style(h1, "text-align", "center");
     			add_location(h1, file$d, 5, 1, 98);
     			add_location(main, file$d, 4, 0, 89);
     		},
@@ -12368,6 +12441,7 @@ var app = (function () {
     			props: {
     				outline: true,
     				color: "secondary",
+    				class: "button-search",
     				$$slots: { default: [create_default_slot_14$2] },
     				$$scope: { ctx }
     			},
@@ -12963,18 +13037,24 @@ var app = (function () {
     	return block;
     }
 
-    // (199:2) <Button outline color="secondary" on:click="{search(currentCountry, currentYear)}">
+    // (199:2) <Button outline color="secondary" on:click="{search(currentCountry, currentYear)}" class="button-search" >
     function create_default_slot_14$2(ctx) {
+    	let i;
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Buscar");
+    			i = element("i");
+    			t = text(" Buscar");
+    			attr_dev(i, "class", "fas fa-search");
+    			add_location(i, file$e, 198, 109, 5155);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
     			insert_dev(target, t, anchor);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
     			if (detaching) detach_dev(t);
     		}
     	};
@@ -12983,7 +13063,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_14$2.name,
     		type: "slot",
-    		source: "(199:2) <Button outline color=\\\"secondary\\\" on:click=\\\"{search(currentCountry, currentYear)}\\\">",
+    		source: "(199:2) <Button outline color=\\\"secondary\\\" on:click=\\\"{search(currentCountry, currentYear)}\\\" class=\\\"button-search\\\" >",
     		ctx
     	});
 
@@ -12992,16 +13072,22 @@ var app = (function () {
 
     // (220:10) <Button outline color="primary" on:click={insertRenewableSources}>
     function create_default_slot_13$2(ctx) {
+    	let i;
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Insertar");
+    			i = element("i");
+    			t = text(" Insertar");
+    			attr_dev(i, "class", "far fa-edit");
+    			add_location(i, file$e, 219, 77, 6265);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
     			insert_dev(target, t, anchor);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
     			if (detaching) detach_dev(t);
     		}
     	};
@@ -13019,16 +13105,23 @@ var app = (function () {
 
     // (233:10) <Button outline color="danger" on:click="{deleteRenewableSource(renewableSource.country, renewableSource.year)}">
     function create_default_slot_12$2(ctx) {
+    	let i;
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Borrar");
+    			i = element("i");
+    			t = text(" Borrar");
+    			attr_dev(i, "class", "fa fa-trash");
+    			attr_dev(i, "aria-hidden", "true");
+    			add_location(i, file$e, 232, 124, 6910);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
     			insert_dev(target, t, anchor);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
     			if (detaching) detach_dev(t);
     		}
     	};
@@ -13110,14 +13203,14 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t10 = space();
     			attr_dev(a, "href", a_href_value = "#/renewable-sources-stats/" + /*renewableSource*/ ctx[27].country + "/" + /*renewableSource*/ ctx[27].year);
-    			add_location(a, file$e, 224, 6, 6328);
-    			add_location(td0, file$e, 223, 5, 6313);
-    			add_location(td1, file$e, 228, 5, 6480);
-    			add_location(td2, file$e, 229, 5, 6520);
-    			add_location(td3, file$e, 230, 5, 6578);
-    			add_location(td4, file$e, 231, 5, 6644);
-    			add_location(td5, file$e, 232, 5, 6710);
-    			add_location(tr, file$e, 222, 4, 6302);
+    			add_location(a, file$e, 224, 6, 6409);
+    			add_location(td0, file$e, 223, 5, 6394);
+    			add_location(td1, file$e, 228, 5, 6561);
+    			add_location(td2, file$e, 229, 5, 6601);
+    			add_location(td3, file$e, 230, 5, 6659);
+    			add_location(td4, file$e, 231, 5, 6725);
+    			add_location(td5, file$e, 232, 5, 6791);
+    			add_location(tr, file$e, 222, 4, 6383);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -13375,22 +13468,22 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$e, 204, 5, 5203);
-    			add_location(th1, file$e, 205, 5, 5225);
-    			add_location(th2, file$e, 206, 5, 5246);
-    			add_location(th3, file$e, 207, 5, 5304);
-    			add_location(th4, file$e, 208, 5, 5382);
-    			add_location(th5, file$e, 209, 5, 5436);
-    			add_location(tr0, file$e, 203, 4, 5192);
-    			add_location(thead, file$e, 202, 3, 5179);
-    			add_location(td0, file$e, 214, 5, 5508);
-    			add_location(td1, file$e, 215, 5, 5613);
-    			add_location(td2, file$e, 216, 5, 5716);
-    			add_location(td3, file$e, 217, 5, 5852);
-    			add_location(td4, file$e, 218, 5, 5996);
-    			add_location(td5, file$e, 219, 5, 6140);
-    			add_location(tr1, file$e, 213, 4, 5497);
-    			add_location(tbody, file$e, 212, 3, 5484);
+    			add_location(th0, file$e, 204, 5, 5256);
+    			add_location(th1, file$e, 205, 5, 5278);
+    			add_location(th2, file$e, 206, 5, 5299);
+    			add_location(th3, file$e, 207, 5, 5357);
+    			add_location(th4, file$e, 208, 5, 5435);
+    			add_location(th5, file$e, 209, 5, 5489);
+    			add_location(tr0, file$e, 203, 4, 5245);
+    			add_location(thead, file$e, 202, 3, 5232);
+    			add_location(td0, file$e, 214, 5, 5561);
+    			add_location(td1, file$e, 215, 5, 5666);
+    			add_location(td2, file$e, 216, 5, 5769);
+    			add_location(td3, file$e, 217, 5, 5905);
+    			add_location(td4, file$e, 218, 5, 6049);
+    			add_location(td5, file$e, 219, 5, 6193);
+    			add_location(tr1, file$e, 213, 4, 5550);
+    			add_location(tbody, file$e, 212, 3, 5537);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -14239,16 +14332,22 @@ var app = (function () {
 
     // (270:1) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot_1$2(ctx) {
+    	let i;
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Atrás");
+    			i = element("i");
+    			t = text(" Atrás");
+    			attr_dev(i, "class", "fas fa-arrow-circle-left");
+    			add_location(i, file$e, 269, 53, 8132);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
     			insert_dev(target, t, anchor);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
     			if (detaching) detach_dev(t);
     		}
     	};
@@ -14266,16 +14365,23 @@ var app = (function () {
 
     // (271:1) <Button outline on:click={deleteRenewableSources} color="danger">
     function create_default_slot$2(ctx) {
+    	let i;
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Borrar todo");
+    			i = element("i");
+    			t = text(" Borrar todo");
+    			attr_dev(i, "class", "fa fa-trash");
+    			attr_dev(i, "aria-hidden", "true");
+    			add_location(i, file$e, 270, 67, 8257);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
     			insert_dev(target, t, anchor);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
     			if (detaching) detach_dev(t);
     		}
     	};
@@ -14739,6 +14845,8 @@ var app = (function () {
     			h1.textContent = "Administrador de datos de energías renovables";
     			t1 = space();
     			create_component(renewablesourcestable.$$.fragment);
+    			attr_dev(h1, "class", "display-4");
+    			set_style(h1, "text-align", "center");
     			add_location(h1, file$f, 5, 1, 102);
     			add_location(main, file$f, 4, 0, 93);
     		},
@@ -14833,7 +14941,7 @@ var app = (function () {
     	return block;
     }
 
-    // (75:4) {:then oilCoal}
+    // (77:4) {:then oilCoal}
     function create_then_block$3(ctx) {
     	let current;
 
@@ -14881,25 +14989,31 @@ var app = (function () {
     		block,
     		id: create_then_block$3.name,
     		type: "then",
-    		source: "(75:4) {:then oilCoal}",
+    		source: "(77:4) {:then oilCoal}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (94:25) <Button outline  color="primary" on:click={updateOilCoal}>
+    // (96:25) <Button outline  color="primary" on:click={updateOilCoal}>
     function create_default_slot_2$3(ctx) {
+    	let i;
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Actualizar");
+    			i = element("i");
+    			t = text(" Actualizar");
+    			attr_dev(i, "class", "fas fa-pencil-alt");
+    			add_location(i, file$g, 95, 84, 3323);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
     			insert_dev(target, t, anchor);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
     			if (detaching) detach_dev(t);
     		}
     	};
@@ -14908,14 +15022,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$3.name,
     		type: "slot",
-    		source: "(94:25) <Button outline  color=\\\"primary\\\" on:click={updateOilCoal}>",
+    		source: "(96:25) <Button outline  color=\\\"primary\\\" on:click={updateOilCoal}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (76:8) <Table bordered>
+    // (78:8) <Table bordered>
     function create_default_slot_1$3(ctx) {
     	let thead;
     	let tr0;
@@ -14940,35 +15054,65 @@ var app = (function () {
     	let t14;
     	let t15;
     	let td2;
-    	let input0;
-    	let input0_updating = false;
+    	let updating_value;
     	let t16;
     	let td3;
-    	let input1;
-    	let input1_updating = false;
+    	let updating_value_1;
     	let t17;
     	let td4;
-    	let input2;
-    	let input2_updating = false;
+    	let updating_value_2;
     	let t18;
     	let td5;
     	let current;
-    	let dispose;
 
-    	function input0_input_handler() {
-    		input0_updating = true;
-    		/*input0_input_handler*/ ctx[9].call(input0);
+    	function input0_value_binding(value) {
+    		/*input0_value_binding*/ ctx[9].call(null, value);
     	}
 
-    	function input1_input_handler() {
-    		input1_updating = true;
-    		/*input1_input_handler*/ ctx[10].call(input1);
+    	let input0_props = { type: "number" };
+
+    	if (/*updatedOilConsumption*/ ctx[3] !== void 0) {
+    		input0_props.value = /*updatedOilConsumption*/ ctx[3];
     	}
 
-    	function input2_input_handler() {
-    		input2_updating = true;
-    		/*input2_input_handler*/ ctx[11].call(input2);
+    	const input0 = new Input({ props: input0_props, $$inline: true });
+    	binding_callbacks.push(() => bind(input0, "value", input0_value_binding));
+
+    	function input1_value_binding(value) {
+    		/*input1_value_binding*/ ctx[10].call(null, value);
     	}
+
+    	let input1_props = {
+    		type: "number",
+    		placeholder: "0.0",
+    		step: "0.01",
+    		min: "0"
+    	};
+
+    	if (/*updatedCoalConsumption*/ ctx[4] !== void 0) {
+    		input1_props.value = /*updatedCoalConsumption*/ ctx[4];
+    	}
+
+    	const input1 = new Input({ props: input1_props, $$inline: true });
+    	binding_callbacks.push(() => bind(input1, "value", input1_value_binding));
+
+    	function input2_value_binding(value) {
+    		/*input2_value_binding*/ ctx[11].call(null, value);
+    	}
+
+    	let input2_props = {
+    		type: "number",
+    		placeholder: "0.0",
+    		step: "0.01",
+    		min: "0"
+    	};
+
+    	if (/*updatedNuclearEnergyConsumption*/ ctx[5] !== void 0) {
+    		input2_props.value = /*updatedNuclearEnergyConsumption*/ ctx[5];
+    	}
+
+    	const input2 = new Input({ props: input2_props, $$inline: true });
+    	binding_callbacks.push(() => bind(input2, "value", input2_value_binding));
 
     	const button = new Button({
     			props: {
@@ -15013,46 +15157,34 @@ var app = (function () {
     			t14 = text(/*updatedYear*/ ctx[2]);
     			t15 = space();
     			td2 = element("td");
-    			input0 = element("input");
+    			create_component(input0.$$.fragment);
     			t16 = space();
     			td3 = element("td");
-    			input1 = element("input");
+    			create_component(input1.$$.fragment);
     			t17 = space();
     			td4 = element("td");
-    			input2 = element("input");
+    			create_component(input2.$$.fragment);
     			t18 = space();
     			td5 = element("td");
     			create_component(button.$$.fragment);
-    			add_location(th0, file$g, 78, 5, 2304);
-    			add_location(th1, file$g, 79, 5, 2324);
-    			add_location(th2, file$g, 80, 5, 2343);
-    			add_location(th3, file$g, 81, 5, 2392);
-    			add_location(th4, file$g, 82, 20, 2454);
-    			add_location(th5, file$g, 83, 20, 2525);
-    			add_location(tr0, file$g, 77, 4, 2293);
-    			add_location(thead, file$g, 76, 12, 2280);
-    			add_location(td0, file$g, 88, 20, 2633);
-    			add_location(td1, file$g, 89, 20, 2680);
-    			attr_dev(input0, "type", "number");
-    			add_location(input0, file$g, 90, 24, 2728);
-    			add_location(td2, file$g, 90, 20, 2724);
-    			attr_dev(input1, "type", "number");
-    			attr_dev(input1, "placeholder", "0.0");
-    			attr_dev(input1, "step", "0.01");
-    			attr_dev(input1, "min", "0");
-    			add_location(input1, file$g, 91, 24, 2817);
-    			add_location(td3, file$g, 91, 20, 2813);
-    			attr_dev(input2, "type", "number");
-    			attr_dev(input2, "placeholder", "0.0");
-    			attr_dev(input2, "step", "0.01");
-    			attr_dev(input2, "min", "0");
-    			add_location(input2, file$g, 92, 24, 2946);
-    			add_location(td4, file$g, 92, 20, 2942);
-    			add_location(td5, file$g, 93, 20, 3080);
-    			add_location(tr1, file$g, 87, 16, 2607);
-    			add_location(tbody, file$g, 86, 12, 2582);
+    			add_location(th0, file$g, 80, 5, 2480);
+    			add_location(th1, file$g, 81, 5, 2500);
+    			add_location(th2, file$g, 82, 5, 2519);
+    			add_location(th3, file$g, 83, 5, 2568);
+    			add_location(th4, file$g, 84, 20, 2630);
+    			add_location(th5, file$g, 85, 20, 2701);
+    			add_location(tr0, file$g, 79, 4, 2469);
+    			add_location(thead, file$g, 78, 12, 2456);
+    			add_location(td0, file$g, 90, 20, 2809);
+    			add_location(td1, file$g, 91, 20, 2856);
+    			add_location(td2, file$g, 92, 20, 2900);
+    			add_location(td3, file$g, 93, 20, 2990);
+    			add_location(td4, file$g, 94, 20, 3120);
+    			add_location(td5, file$g, 95, 20, 3259);
+    			add_location(tr1, file$g, 89, 16, 2783);
+    			add_location(tbody, file$g, 88, 12, 2758);
     		},
-    		m: function mount(target, anchor, remount) {
+    		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
     			append_dev(thead, tr0);
     			append_dev(tr0, th0);
@@ -15076,49 +15208,48 @@ var app = (function () {
     			append_dev(td1, t14);
     			append_dev(tr1, t15);
     			append_dev(tr1, td2);
-    			append_dev(td2, input0);
-    			set_input_value(input0, /*updatedOilConsumption*/ ctx[3]);
+    			mount_component(input0, td2, null);
     			append_dev(tr1, t16);
     			append_dev(tr1, td3);
-    			append_dev(td3, input1);
-    			set_input_value(input1, /*updatedCoalConsumption*/ ctx[4]);
+    			mount_component(input1, td3, null);
     			append_dev(tr1, t17);
     			append_dev(tr1, td4);
-    			append_dev(td4, input2);
-    			set_input_value(input2, /*updatedNuclearEnergyConsumption*/ ctx[5]);
+    			mount_component(input2, td4, null);
     			append_dev(tr1, t18);
     			append_dev(tr1, td5);
     			mount_component(button, td5, null);
     			current = true;
-    			if (remount) run_all(dispose);
-
-    			dispose = [
-    				listen_dev(input0, "input", input0_input_handler),
-    				listen_dev(input1, "input", input1_input_handler),
-    				listen_dev(input2, "input", input2_input_handler)
-    			];
     		},
     		p: function update(ctx, dirty) {
     			if (!current || dirty & /*updatedCountry*/ 2) set_data_dev(t12, /*updatedCountry*/ ctx[1]);
     			if (!current || dirty & /*updatedYear*/ 4) set_data_dev(t14, /*updatedYear*/ ctx[2]);
+    			const input0_changes = {};
 
-    			if (!input0_updating && dirty & /*updatedOilConsumption*/ 8) {
-    				set_input_value(input0, /*updatedOilConsumption*/ ctx[3]);
+    			if (!updating_value && dirty & /*updatedOilConsumption*/ 8) {
+    				updating_value = true;
+    				input0_changes.value = /*updatedOilConsumption*/ ctx[3];
+    				add_flush_callback(() => updating_value = false);
     			}
 
-    			input0_updating = false;
+    			input0.$set(input0_changes);
+    			const input1_changes = {};
 
-    			if (!input1_updating && dirty & /*updatedCoalConsumption*/ 16) {
-    				set_input_value(input1, /*updatedCoalConsumption*/ ctx[4]);
+    			if (!updating_value_1 && dirty & /*updatedCoalConsumption*/ 16) {
+    				updating_value_1 = true;
+    				input1_changes.value = /*updatedCoalConsumption*/ ctx[4];
+    				add_flush_callback(() => updating_value_1 = false);
     			}
 
-    			input1_updating = false;
+    			input1.$set(input1_changes);
+    			const input2_changes = {};
 
-    			if (!input2_updating && dirty & /*updatedNuclearEnergyConsumption*/ 32) {
-    				set_input_value(input2, /*updatedNuclearEnergyConsumption*/ ctx[5]);
+    			if (!updating_value_2 && dirty & /*updatedNuclearEnergyConsumption*/ 32) {
+    				updating_value_2 = true;
+    				input2_changes.value = /*updatedNuclearEnergyConsumption*/ ctx[5];
+    				add_flush_callback(() => updating_value_2 = false);
     			}
 
-    			input2_updating = false;
+    			input2.$set(input2_changes);
     			const button_changes = {};
 
     			if (dirty & /*$$scope*/ 4096) {
@@ -15129,10 +15260,16 @@ var app = (function () {
     		},
     		i: function intro(local) {
     			if (current) return;
+    			transition_in(input0.$$.fragment, local);
+    			transition_in(input1.$$.fragment, local);
+    			transition_in(input2.$$.fragment, local);
     			transition_in(button.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
+    			transition_out(input0.$$.fragment, local);
+    			transition_out(input1.$$.fragment, local);
+    			transition_out(input2.$$.fragment, local);
     			transition_out(button.$$.fragment, local);
     			current = false;
     		},
@@ -15140,8 +15277,10 @@ var app = (function () {
     			if (detaching) detach_dev(thead);
     			if (detaching) detach_dev(t11);
     			if (detaching) detach_dev(tbody);
+    			destroy_component(input0);
+    			destroy_component(input1);
+    			destroy_component(input2);
     			destroy_component(button);
-    			run_all(dispose);
     		}
     	};
 
@@ -15149,14 +15288,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$3.name,
     		type: "slot",
-    		source: "(76:8) <Table bordered>",
+    		source: "(78:8) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (73:20)           Loading oilCoal...      {:then oilCoal}
+    // (75:20)           Loading oilCoal...      {:then oilCoal}
     function create_pending_block$3(ctx) {
     	let t;
 
@@ -15179,25 +15318,31 @@ var app = (function () {
     		block,
     		id: create_pending_block$3.name,
     		type: "pending",
-    		source: "(73:20)           Loading oilCoal...      {:then oilCoal}",
+    		source: "(75:20)           Loading oilCoal...      {:then oilCoal}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (99:4) <Button outline color="secondary" on:click="{pop}">
+    // (101:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$3(ctx) {
+    	let i;
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Atrás");
+    			i = element("i");
+    			t = text(" Atrás");
+    			attr_dev(i, "class", "fas fa-arrow-circle-left");
+    			add_location(i, file$g, 100, 55, 3512);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
     			insert_dev(target, t, anchor);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
     			if (detaching) detach_dev(t);
     		}
     	};
@@ -15206,7 +15351,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$3.name,
     		type: "slot",
-    		source: "(99:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(101:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -15215,18 +15360,21 @@ var app = (function () {
 
     function create_fragment$h(ctx) {
     	let main;
-    	let h3;
-    	let t0;
-    	let strong0;
-    	let t1_value = /*params*/ ctx[0].country + "";
+    	let h20;
+    	let small0;
     	let t1;
+    	let h21;
+    	let small1;
+    	let strong0;
+    	let t2_value = /*params*/ ctx[0].country + "";
     	let t2;
-    	let strong1;
-    	let t3_value = /*params*/ ctx[0].year + "";
     	let t3;
+    	let strong1;
+    	let t4_value = /*params*/ ctx[0].year + "";
     	let t4;
-    	let promise;
     	let t5;
+    	let promise;
+    	let t6;
     	let current;
 
     	let info = {
@@ -15257,46 +15405,59 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			main = element("main");
-    			h3 = element("h3");
-    			t0 = text("Editar datos Energías primarias: ");
+    			h20 = element("h2");
+    			small0 = element("small");
+    			small0.textContent = "Editar datos Energías primarias:";
+    			t1 = space();
+    			h21 = element("h2");
+    			small1 = element("small");
     			strong0 = element("strong");
-    			t1 = text(t1_value);
-    			t2 = space();
+    			t2 = text(t2_value);
+    			t3 = text(" - ");
     			strong1 = element("strong");
-    			t3 = text(t3_value);
-    			t4 = space();
-    			info.block.c();
+    			t4 = text(t4_value);
     			t5 = space();
+    			info.block.c();
+    			t6 = space();
     			create_component(button.$$.fragment);
-    			add_location(strong0, file$g, 71, 41, 2099);
-    			add_location(strong1, file$g, 71, 75, 2133);
-    			add_location(h3, file$g, 71, 4, 2062);
-    			add_location(main, file$g, 70, 0, 2050);
+    			add_location(small0, file$g, 72, 37, 2147);
+    			set_style(h20, "text-align", "center");
+    			add_location(h20, file$g, 72, 4, 2114);
+    			add_location(strong0, file$g, 73, 63, 2266);
+    			add_location(strong1, file$g, 73, 99, 2302);
+    			add_location(small1, file$g, 73, 56, 2259);
+    			set_style(h21, "text-align", "center");
+    			set_style(h21, "margin-bottom", "2%");
+    			add_location(h21, file$g, 73, 4, 2207);
+    			add_location(main, file$g, 71, 0, 2102);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
-    			append_dev(main, h3);
-    			append_dev(h3, t0);
-    			append_dev(h3, strong0);
-    			append_dev(strong0, t1);
-    			append_dev(h3, t2);
-    			append_dev(h3, strong1);
-    			append_dev(strong1, t3);
-    			append_dev(main, t4);
+    			append_dev(main, h20);
+    			append_dev(h20, small0);
+    			append_dev(main, t1);
+    			append_dev(main, h21);
+    			append_dev(h21, small1);
+    			append_dev(small1, strong0);
+    			append_dev(strong0, t2);
+    			append_dev(small1, t3);
+    			append_dev(small1, strong1);
+    			append_dev(strong1, t4);
+    			append_dev(main, t5);
     			info.block.m(main, info.anchor = null);
     			info.mount = () => main;
-    			info.anchor = t5;
-    			append_dev(main, t5);
+    			info.anchor = t6;
+    			append_dev(main, t6);
     			mount_component(button, main, null);
     			current = true;
     		},
     		p: function update(new_ctx, [dirty]) {
     			ctx = new_ctx;
-    			if ((!current || dirty & /*params*/ 1) && t1_value !== (t1_value = /*params*/ ctx[0].country + "")) set_data_dev(t1, t1_value);
-    			if ((!current || dirty & /*params*/ 1) && t3_value !== (t3_value = /*params*/ ctx[0].year + "")) set_data_dev(t3, t3_value);
+    			if ((!current || dirty & /*params*/ 1) && t2_value !== (t2_value = /*params*/ ctx[0].country + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty & /*params*/ 1) && t4_value !== (t4_value = /*params*/ ctx[0].year + "")) set_data_dev(t4, t4_value);
     			info.ctx = ctx;
 
     			if (dirty & /*oilCoal*/ 64 && promise !== (promise = /*oilCoal*/ ctx[6]) && handle_promise(promise, info)) ; else {
@@ -15404,18 +15565,18 @@ var app = (function () {
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("EditOilCoal", $$slots, []);
 
-    	function input0_input_handler() {
-    		updatedOilConsumption = to_number(this.value);
+    	function input0_value_binding(value) {
+    		updatedOilConsumption = value;
     		$$invalidate(3, updatedOilConsumption);
     	}
 
-    	function input1_input_handler() {
-    		updatedCoalConsumption = to_number(this.value);
+    	function input1_value_binding(value) {
+    		updatedCoalConsumption = value;
     		$$invalidate(4, updatedCoalConsumption);
     	}
 
-    	function input2_input_handler() {
-    		updatedNuclearEnergyConsumption = to_number(this.value);
+    	function input2_value_binding(value) {
+    		updatedNuclearEnergyConsumption = value;
     		$$invalidate(5, updatedNuclearEnergyConsumption);
     	}
 
@@ -15426,6 +15587,7 @@ var app = (function () {
     	$$self.$capture_state = () => ({
     		onMount,
     		pop,
+    		Input,
     		Table,
     		Button,
     		params,
@@ -15463,9 +15625,9 @@ var app = (function () {
     		oilCoal,
     		updateOilCoal,
     		getOilCoal,
-    		input0_input_handler,
-    		input1_input_handler,
-    		input2_input_handler
+    		input0_value_binding,
+    		input1_value_binding,
+    		input2_value_binding
     	];
     }
 
@@ -15518,7 +15680,7 @@ var app = (function () {
     	return block;
     }
 
-    // (72:4) {:then pluginVehicles}
+    // (74:4) {:then pluginVehicles}
     function create_then_block$4(ctx) {
     	let current;
 
@@ -15566,25 +15728,31 @@ var app = (function () {
     		block,
     		id: create_then_block$4.name,
     		type: "then",
-    		source: "(72:4) {:then pluginVehicles}",
+    		source: "(74:4) {:then pluginVehicles}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (91:25) <Button outline color="primary" on:click={updatedPluginVehicles}>
+    // (93:25) <Button outline color="primary" on:click={updatedPluginVehicles}>
     function create_default_slot_2$4(ctx) {
+    	let i;
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Actualizar");
+    			i = element("i");
+    			t = text(" Actualizar");
+    			attr_dev(i, "class", "fas fa-pencil-alt");
+    			add_location(i, file$h, 92, 91, 3149);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
     			insert_dev(target, t, anchor);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
     			if (detaching) detach_dev(t);
     		}
     	};
@@ -15593,14 +15761,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$4.name,
     		type: "slot",
-    		source: "(91:25) <Button outline color=\\\"primary\\\" on:click={updatedPluginVehicles}>",
+    		source: "(93:25) <Button outline color=\\\"primary\\\" on:click={updatedPluginVehicles}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (73:8) <Table bordered>
+    // (75:8) <Table bordered>
     function create_default_slot_1$4(ctx) {
     	let thead;
     	let tr0;
@@ -15625,35 +15793,55 @@ var app = (function () {
     	let t14;
     	let t15;
     	let td2;
-    	let input0;
-    	let input0_updating = false;
+    	let updating_value;
     	let t16;
     	let td3;
-    	let input1;
-    	let input1_updating = false;
+    	let updating_value_1;
     	let t17;
     	let td4;
-    	let input2;
-    	let input2_updating = false;
+    	let updating_value_2;
     	let t18;
     	let td5;
     	let current;
-    	let dispose;
 
-    	function input0_input_handler() {
-    		input0_updating = true;
-    		/*input0_input_handler*/ ctx[9].call(input0);
+    	function input0_value_binding(value) {
+    		/*input0_value_binding*/ ctx[9].call(null, value);
     	}
 
-    	function input1_input_handler() {
-    		input1_updating = true;
-    		/*input1_input_handler*/ ctx[10].call(input1);
+    	let input0_props = { type: "number" };
+
+    	if (/*updatedPevStock*/ ctx[3] !== void 0) {
+    		input0_props.value = /*updatedPevStock*/ ctx[3];
     	}
 
-    	function input2_input_handler() {
-    		input2_updating = true;
-    		/*input2_input_handler*/ ctx[11].call(input2);
+    	const input0 = new Input({ props: input0_props, $$inline: true });
+    	binding_callbacks.push(() => bind(input0, "value", input0_value_binding));
+
+    	function input1_value_binding(value) {
+    		/*input1_value_binding*/ ctx[10].call(null, value);
     	}
+
+    	let input1_props = { type: "number" };
+
+    	if (/*updatedAnnualSale*/ ctx[4] !== void 0) {
+    		input1_props.value = /*updatedAnnualSale*/ ctx[4];
+    	}
+
+    	const input1 = new Input({ props: input1_props, $$inline: true });
+    	binding_callbacks.push(() => bind(input1, "value", input1_value_binding));
+
+    	function input2_value_binding(value) {
+    		/*input2_value_binding*/ ctx[11].call(null, value);
+    	}
+
+    	let input2_props = { type: "number" };
+
+    	if (/*updatedCarsPerPeople*/ ctx[5] !== void 0) {
+    		input2_props.value = /*updatedCarsPerPeople*/ ctx[5];
+    	}
+
+    	const input2 = new Input({ props: input2_props, $$inline: true });
+    	binding_callbacks.push(() => bind(input2, "value", input2_value_binding));
 
     	const button = new Button({
     			props: {
@@ -15698,40 +15886,34 @@ var app = (function () {
     			t14 = text(/*updatedYear*/ ctx[2]);
     			t15 = space();
     			td2 = element("td");
-    			input0 = element("input");
+    			create_component(input0.$$.fragment);
     			t16 = space();
     			td3 = element("td");
-    			input1 = element("input");
+    			create_component(input1.$$.fragment);
     			t17 = space();
     			td4 = element("td");
-    			input2 = element("input");
+    			create_component(input2.$$.fragment);
     			t18 = space();
     			td5 = element("td");
     			create_component(button.$$.fragment);
-    			add_location(th0, file$h, 75, 20, 2266);
-    			add_location(th1, file$h, 76, 5, 2286);
-    			add_location(th2, file$h, 77, 5, 2305);
-    			add_location(th3, file$h, 78, 5, 2338);
-    			add_location(th4, file$h, 79, 5, 2367);
-    			add_location(th5, file$h, 80, 5, 2422);
-    			add_location(tr0, file$h, 74, 16, 2240);
-    			add_location(thead, file$h, 73, 12, 2215);
-    			add_location(td0, file$h, 85, 20, 2549);
-    			add_location(td1, file$h, 86, 20, 2596);
-    			attr_dev(input0, "type", "number");
-    			add_location(input0, file$h, 87, 24, 2644);
-    			add_location(td2, file$h, 87, 20, 2640);
-    			attr_dev(input1, "type", "number");
-    			add_location(input1, file$h, 88, 24, 2727);
-    			add_location(td3, file$h, 88, 20, 2723);
-    			attr_dev(input2, "type", "number");
-    			add_location(input2, file$h, 89, 24, 2812);
-    			add_location(td4, file$h, 89, 20, 2808);
-    			add_location(td5, file$h, 90, 20, 2896);
-    			add_location(tr1, file$h, 84, 16, 2523);
-    			add_location(tbody, file$h, 83, 12, 2498);
+    			add_location(th0, file$h, 77, 20, 2445);
+    			add_location(th1, file$h, 78, 5, 2465);
+    			add_location(th2, file$h, 79, 5, 2484);
+    			add_location(th3, file$h, 80, 5, 2517);
+    			add_location(th4, file$h, 81, 5, 2546);
+    			add_location(th5, file$h, 82, 5, 2601);
+    			add_location(tr0, file$h, 76, 16, 2419);
+    			add_location(thead, file$h, 75, 12, 2394);
+    			add_location(td0, file$h, 87, 20, 2728);
+    			add_location(td1, file$h, 88, 20, 2775);
+    			add_location(td2, file$h, 89, 20, 2819);
+    			add_location(td3, file$h, 90, 20, 2903);
+    			add_location(td4, file$h, 91, 20, 2989);
+    			add_location(td5, file$h, 92, 20, 3078);
+    			add_location(tr1, file$h, 86, 16, 2702);
+    			add_location(tbody, file$h, 85, 12, 2677);
     		},
-    		m: function mount(target, anchor, remount) {
+    		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
     			append_dev(thead, tr0);
     			append_dev(tr0, th0);
@@ -15755,49 +15937,48 @@ var app = (function () {
     			append_dev(td1, t14);
     			append_dev(tr1, t15);
     			append_dev(tr1, td2);
-    			append_dev(td2, input0);
-    			set_input_value(input0, /*updatedPevStock*/ ctx[3]);
+    			mount_component(input0, td2, null);
     			append_dev(tr1, t16);
     			append_dev(tr1, td3);
-    			append_dev(td3, input1);
-    			set_input_value(input1, /*updatedAnnualSale*/ ctx[4]);
+    			mount_component(input1, td3, null);
     			append_dev(tr1, t17);
     			append_dev(tr1, td4);
-    			append_dev(td4, input2);
-    			set_input_value(input2, /*updatedCarsPerPeople*/ ctx[5]);
+    			mount_component(input2, td4, null);
     			append_dev(tr1, t18);
     			append_dev(tr1, td5);
     			mount_component(button, td5, null);
     			current = true;
-    			if (remount) run_all(dispose);
-
-    			dispose = [
-    				listen_dev(input0, "input", input0_input_handler),
-    				listen_dev(input1, "input", input1_input_handler),
-    				listen_dev(input2, "input", input2_input_handler)
-    			];
     		},
     		p: function update(ctx, dirty) {
     			if (!current || dirty & /*updatedCountry*/ 2) set_data_dev(t12, /*updatedCountry*/ ctx[1]);
     			if (!current || dirty & /*updatedYear*/ 4) set_data_dev(t14, /*updatedYear*/ ctx[2]);
+    			const input0_changes = {};
 
-    			if (!input0_updating && dirty & /*updatedPevStock*/ 8) {
-    				set_input_value(input0, /*updatedPevStock*/ ctx[3]);
+    			if (!updating_value && dirty & /*updatedPevStock*/ 8) {
+    				updating_value = true;
+    				input0_changes.value = /*updatedPevStock*/ ctx[3];
+    				add_flush_callback(() => updating_value = false);
     			}
 
-    			input0_updating = false;
+    			input0.$set(input0_changes);
+    			const input1_changes = {};
 
-    			if (!input1_updating && dirty & /*updatedAnnualSale*/ 16) {
-    				set_input_value(input1, /*updatedAnnualSale*/ ctx[4]);
+    			if (!updating_value_1 && dirty & /*updatedAnnualSale*/ 16) {
+    				updating_value_1 = true;
+    				input1_changes.value = /*updatedAnnualSale*/ ctx[4];
+    				add_flush_callback(() => updating_value_1 = false);
     			}
 
-    			input1_updating = false;
+    			input1.$set(input1_changes);
+    			const input2_changes = {};
 
-    			if (!input2_updating && dirty & /*updatedCarsPerPeople*/ 32) {
-    				set_input_value(input2, /*updatedCarsPerPeople*/ ctx[5]);
+    			if (!updating_value_2 && dirty & /*updatedCarsPerPeople*/ 32) {
+    				updating_value_2 = true;
+    				input2_changes.value = /*updatedCarsPerPeople*/ ctx[5];
+    				add_flush_callback(() => updating_value_2 = false);
     			}
 
-    			input2_updating = false;
+    			input2.$set(input2_changes);
     			const button_changes = {};
 
     			if (dirty & /*$$scope*/ 4096) {
@@ -15808,10 +15989,16 @@ var app = (function () {
     		},
     		i: function intro(local) {
     			if (current) return;
+    			transition_in(input0.$$.fragment, local);
+    			transition_in(input1.$$.fragment, local);
+    			transition_in(input2.$$.fragment, local);
     			transition_in(button.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
+    			transition_out(input0.$$.fragment, local);
+    			transition_out(input1.$$.fragment, local);
+    			transition_out(input2.$$.fragment, local);
     			transition_out(button.$$.fragment, local);
     			current = false;
     		},
@@ -15819,8 +16006,10 @@ var app = (function () {
     			if (detaching) detach_dev(thead);
     			if (detaching) detach_dev(t11);
     			if (detaching) detach_dev(tbody);
+    			destroy_component(input0);
+    			destroy_component(input1);
+    			destroy_component(input2);
     			destroy_component(button);
-    			run_all(dispose);
     		}
     	};
 
@@ -15828,14 +16017,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$4.name,
     		type: "slot",
-    		source: "(73:8) <Table bordered>",
+    		source: "(75:8) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (70:27)           Loading pluginVehicles...      {:then pluginVehicles}
+    // (72:27)           Loading pluginVehicles...      {:then pluginVehicles}
     function create_pending_block$4(ctx) {
     	let t;
 
@@ -15858,25 +16047,31 @@ var app = (function () {
     		block,
     		id: create_pending_block$4.name,
     		type: "pending",
-    		source: "(70:27)           Loading pluginVehicles...      {:then pluginVehicles}",
+    		source: "(72:27)           Loading pluginVehicles...      {:then pluginVehicles}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (96:4) <Button outline color="secondary" on:click="{pop}">
+    // (98:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$4(ctx) {
+    	let i;
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Atrás");
+    			i = element("i");
+    			t = text(" Atrás");
+    			attr_dev(i, "class", "fas fa-arrow-circle-left");
+    			add_location(i, file$h, 97, 55, 3338);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
     			insert_dev(target, t, anchor);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
     			if (detaching) detach_dev(t);
     		}
     	};
@@ -15885,7 +16080,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$4.name,
     		type: "slot",
-    		source: "(96:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(98:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -15894,18 +16089,21 @@ var app = (function () {
 
     function create_fragment$i(ctx) {
     	let main;
-    	let h3;
-    	let t0;
-    	let strong0;
-    	let t1_value = /*params*/ ctx[0].country + "";
+    	let h20;
+    	let small0;
     	let t1;
+    	let h21;
+    	let small1;
+    	let strong0;
+    	let t2_value = /*params*/ ctx[0].country + "";
     	let t2;
-    	let strong1;
-    	let t3_value = /*params*/ ctx[0].year + "";
     	let t3;
+    	let strong1;
+    	let t4_value = /*params*/ ctx[0].year + "";
     	let t4;
-    	let promise;
     	let t5;
+    	let promise;
+    	let t6;
     	let current;
 
     	let info = {
@@ -15936,46 +16134,59 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			main = element("main");
-    			h3 = element("h3");
-    			t0 = text("Editar Dato de coche eléctrico:  ");
+    			h20 = element("h2");
+    			small0 = element("small");
+    			small0.textContent = "Editar dato de coche eléctrico:";
+    			t1 = space();
+    			h21 = element("h2");
+    			small1 = element("small");
     			strong0 = element("strong");
-    			t1 = text(t1_value);
-    			t2 = space();
+    			t2 = text(t2_value);
+    			t3 = text(" - ");
     			strong1 = element("strong");
-    			t3 = text(t3_value);
-    			t4 = space();
-    			info.block.c();
+    			t4 = text(t4_value);
     			t5 = space();
+    			info.block.c();
+    			t6 = space();
     			create_component(button.$$.fragment);
-    			add_location(strong0, file$h, 68, 41, 2014);
-    			add_location(strong1, file$h, 68, 75, 2048);
-    			add_location(h3, file$h, 68, 4, 1977);
-    			add_location(main, file$h, 67, 0, 1965);
+    			add_location(small0, file$h, 68, 37, 2063);
+    			set_style(h20, "text-align", "center");
+    			add_location(h20, file$h, 68, 4, 2030);
+    			add_location(strong0, file$h, 69, 63, 2181);
+    			add_location(strong1, file$h, 69, 99, 2217);
+    			add_location(small1, file$h, 69, 56, 2174);
+    			set_style(h21, "text-align", "center");
+    			set_style(h21, "margin-bottom", "2%");
+    			add_location(h21, file$h, 69, 4, 2122);
+    			add_location(main, file$h, 67, 0, 2018);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
-    			append_dev(main, h3);
-    			append_dev(h3, t0);
-    			append_dev(h3, strong0);
-    			append_dev(strong0, t1);
-    			append_dev(h3, t2);
-    			append_dev(h3, strong1);
-    			append_dev(strong1, t3);
-    			append_dev(main, t4);
+    			append_dev(main, h20);
+    			append_dev(h20, small0);
+    			append_dev(main, t1);
+    			append_dev(main, h21);
+    			append_dev(h21, small1);
+    			append_dev(small1, strong0);
+    			append_dev(strong0, t2);
+    			append_dev(small1, t3);
+    			append_dev(small1, strong1);
+    			append_dev(strong1, t4);
+    			append_dev(main, t5);
     			info.block.m(main, info.anchor = null);
     			info.mount = () => main;
-    			info.anchor = t5;
-    			append_dev(main, t5);
+    			info.anchor = t6;
+    			append_dev(main, t6);
     			mount_component(button, main, null);
     			current = true;
     		},
     		p: function update(new_ctx, [dirty]) {
     			ctx = new_ctx;
-    			if ((!current || dirty & /*params*/ 1) && t1_value !== (t1_value = /*params*/ ctx[0].country + "")) set_data_dev(t1, t1_value);
-    			if ((!current || dirty & /*params*/ 1) && t3_value !== (t3_value = /*params*/ ctx[0].year + "")) set_data_dev(t3, t3_value);
+    			if ((!current || dirty & /*params*/ 1) && t2_value !== (t2_value = /*params*/ ctx[0].country + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty & /*params*/ 1) && t4_value !== (t4_value = /*params*/ ctx[0].year + "")) set_data_dev(t4, t4_value);
     			info.ctx = ctx;
 
     			if (dirty & /*pluginVehicles*/ 64 && promise !== (promise = /*pluginVehicles*/ ctx[6]) && handle_promise(promise, info)) ; else {
@@ -16083,18 +16294,18 @@ var app = (function () {
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("EditPlugInVehicle", $$slots, []);
 
-    	function input0_input_handler() {
-    		updatedPevStock = to_number(this.value);
+    	function input0_value_binding(value) {
+    		updatedPevStock = value;
     		$$invalidate(3, updatedPevStock);
     	}
 
-    	function input1_input_handler() {
-    		updatedAnnualSale = to_number(this.value);
+    	function input1_value_binding(value) {
+    		updatedAnnualSale = value;
     		$$invalidate(4, updatedAnnualSale);
     	}
 
-    	function input2_input_handler() {
-    		updatedCarsPerPeople = to_number(this.value);
+    	function input2_value_binding(value) {
+    		updatedCarsPerPeople = value;
     		$$invalidate(5, updatedCarsPerPeople);
     	}
 
@@ -16105,6 +16316,7 @@ var app = (function () {
     	$$self.$capture_state = () => ({
     		onMount,
     		pop,
+    		Input,
     		Table,
     		Button,
     		params,
@@ -16142,9 +16354,9 @@ var app = (function () {
     		pluginVehicles,
     		updatedPluginVehicles,
     		getPluginVehicles,
-    		input0_input_handler,
-    		input1_input_handler,
-    		input2_input_handler
+    		input0_value_binding,
+    		input1_value_binding,
+    		input2_value_binding
     	];
     }
 
@@ -16197,7 +16409,7 @@ var app = (function () {
     	return block;
     }
 
-    // (71:4) {:then renewableSource}
+    // (74:4) {:then renewableSource}
     function create_then_block$5(ctx) {
     	let current;
 
@@ -16245,25 +16457,31 @@ var app = (function () {
     		block,
     		id: create_then_block$5.name,
     		type: "then",
-    		source: "(71:4) {:then renewableSource}",
+    		source: "(74:4) {:then renewableSource}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (90:25) <Button outline color="primary" on:click={updateRenewableSource}>
+    // (93:25) <Button outline color="primary" on:click={updateRenewableSource}>
     function create_default_slot_2$5(ctx) {
+    	let i;
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Actualizar");
+    			i = element("i");
+    			t = text(" Actualizar");
+    			attr_dev(i, "class", "fas fa-pencil-alt");
+    			add_location(i, file$i, 92, 91, 3445);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
     			insert_dev(target, t, anchor);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
     			if (detaching) detach_dev(t);
     		}
     	};
@@ -16272,14 +16490,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$5.name,
     		type: "slot",
-    		source: "(90:25) <Button outline color=\\\"primary\\\" on:click={updateRenewableSource}>",
+    		source: "(93:25) <Button outline color=\\\"primary\\\" on:click={updateRenewableSource}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (72:8) <Table bordered>
+    // (75:8) <Table bordered>
     function create_default_slot_1$5(ctx) {
     	let thead;
     	let tr0;
@@ -16304,35 +16522,65 @@ var app = (function () {
     	let t14;
     	let t15;
     	let td2;
-    	let input0;
-    	let input0_updating = false;
+    	let updating_value;
     	let t16;
     	let td3;
-    	let input1;
-    	let input1_updating = false;
+    	let updating_value_1;
     	let t17;
     	let td4;
-    	let input2;
-    	let input2_updating = false;
+    	let updating_value_2;
     	let t18;
     	let td5;
     	let current;
-    	let dispose;
 
-    	function input0_input_handler() {
-    		input0_updating = true;
-    		/*input0_input_handler*/ ctx[9].call(input0);
+    	function input0_value_binding(value) {
+    		/*input0_value_binding*/ ctx[9].call(null, value);
     	}
 
-    	function input1_input_handler() {
-    		input1_updating = true;
-    		/*input1_input_handler*/ ctx[10].call(input1);
+    	let input0_props = { type: "number" };
+
+    	if (/*updatedPercentageRe*/ ctx[3] !== void 0) {
+    		input0_props.value = /*updatedPercentageRe*/ ctx[3];
     	}
 
-    	function input2_input_handler() {
-    		input2_updating = true;
-    		/*input2_input_handler*/ ctx[11].call(input2);
+    	const input0 = new Input({ props: input0_props, $$inline: true });
+    	binding_callbacks.push(() => bind(input0, "value", input0_value_binding));
+
+    	function input1_value_binding(value) {
+    		/*input1_value_binding*/ ctx[10].call(null, value);
     	}
+
+    	let input1_props = {
+    		type: "number",
+    		placeholder: "0.0",
+    		step: "0.01",
+    		min: "0"
+    	};
+
+    	if (/*updatedPercentageHydro*/ ctx[4] !== void 0) {
+    		input1_props.value = /*updatedPercentageHydro*/ ctx[4];
+    	}
+
+    	const input1 = new Input({ props: input1_props, $$inline: true });
+    	binding_callbacks.push(() => bind(input1, "value", input1_value_binding));
+
+    	function input2_value_binding(value) {
+    		/*input2_value_binding*/ ctx[11].call(null, value);
+    	}
+
+    	let input2_props = {
+    		type: "number",
+    		placeholder: "0.0",
+    		step: "0.01",
+    		min: "0"
+    	};
+
+    	if (/*updatedPercentageWind*/ ctx[5] !== void 0) {
+    		input2_props.value = /*updatedPercentageWind*/ ctx[5];
+    	}
+
+    	const input2 = new Input({ props: input2_props, $$inline: true });
+    	binding_callbacks.push(() => bind(input2, "value", input2_value_binding));
 
     	const button = new Button({
     			props: {
@@ -16377,46 +16625,34 @@ var app = (function () {
     			t14 = text(/*updatedYear*/ ctx[2]);
     			t15 = space();
     			td2 = element("td");
-    			input0 = element("input");
+    			create_component(input0.$$.fragment);
     			t16 = space();
     			td3 = element("td");
-    			input1 = element("input");
+    			create_component(input1.$$.fragment);
     			t17 = space();
     			td4 = element("td");
-    			input2 = element("input");
+    			create_component(input2.$$.fragment);
     			t18 = space();
     			td5 = element("td");
     			create_component(button.$$.fragment);
-    			add_location(th0, file$i, 74, 5, 2396);
-    			add_location(th1, file$i, 75, 5, 2418);
-    			add_location(th2, file$i, 76, 5, 2439);
-    			add_location(th3, file$i, 77, 5, 2497);
-    			add_location(th4, file$i, 78, 5, 2575);
-    			add_location(th5, file$i, 79, 5, 2629);
-    			add_location(tr0, file$i, 73, 16, 2385);
-    			add_location(thead, file$i, 72, 12, 2360);
-    			add_location(td0, file$i, 84, 20, 2746);
-    			add_location(td1, file$i, 85, 20, 2795);
-    			attr_dev(input0, "type", "number");
-    			add_location(input0, file$i, 86, 25, 2846);
-    			add_location(td2, file$i, 86, 20, 2841);
-    			attr_dev(input1, "type", "number");
-    			attr_dev(input1, "placeholder", "0.0");
-    			attr_dev(input1, "step", "0.01");
-    			attr_dev(input1, "min", "0");
-    			add_location(input1, file$i, 87, 25, 2935);
-    			add_location(td3, file$i, 87, 20, 2930);
-    			attr_dev(input2, "type", "number");
-    			attr_dev(input2, "placeholder", "0.0");
-    			attr_dev(input2, "step", "0.01");
-    			attr_dev(input2, "min", "0");
-    			add_location(input2, file$i, 88, 25, 3065);
-    			add_location(td4, file$i, 88, 20, 3060);
-    			add_location(td5, file$i, 89, 20, 3189);
-    			add_location(tr1, file$i, 83, 16, 2720);
-    			add_location(tbody, file$i, 82, 12, 2695);
+    			add_location(th0, file$i, 77, 5, 2578);
+    			add_location(th1, file$i, 78, 5, 2600);
+    			add_location(th2, file$i, 79, 5, 2621);
+    			add_location(th3, file$i, 80, 5, 2679);
+    			add_location(th4, file$i, 81, 5, 2757);
+    			add_location(th5, file$i, 82, 5, 2811);
+    			add_location(tr0, file$i, 76, 16, 2567);
+    			add_location(thead, file$i, 75, 12, 2542);
+    			add_location(td0, file$i, 87, 20, 2928);
+    			add_location(td1, file$i, 88, 20, 2977);
+    			add_location(td2, file$i, 89, 20, 3023);
+    			add_location(td3, file$i, 90, 20, 3113);
+    			add_location(td4, file$i, 91, 20, 3244);
+    			add_location(td5, file$i, 92, 20, 3374);
+    			add_location(tr1, file$i, 86, 16, 2902);
+    			add_location(tbody, file$i, 85, 12, 2877);
     		},
-    		m: function mount(target, anchor, remount) {
+    		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
     			append_dev(thead, tr0);
     			append_dev(tr0, th0);
@@ -16440,49 +16676,48 @@ var app = (function () {
     			append_dev(td1, t14);
     			append_dev(tr1, t15);
     			append_dev(tr1, td2);
-    			append_dev(td2, input0);
-    			set_input_value(input0, /*updatedPercentageRe*/ ctx[3]);
+    			mount_component(input0, td2, null);
     			append_dev(tr1, t16);
     			append_dev(tr1, td3);
-    			append_dev(td3, input1);
-    			set_input_value(input1, /*updatedPercentageHydro*/ ctx[4]);
+    			mount_component(input1, td3, null);
     			append_dev(tr1, t17);
     			append_dev(tr1, td4);
-    			append_dev(td4, input2);
-    			set_input_value(input2, /*updatedPercentageWind*/ ctx[5]);
+    			mount_component(input2, td4, null);
     			append_dev(tr1, t18);
     			append_dev(tr1, td5);
     			mount_component(button, td5, null);
     			current = true;
-    			if (remount) run_all(dispose);
-
-    			dispose = [
-    				listen_dev(input0, "input", input0_input_handler),
-    				listen_dev(input1, "input", input1_input_handler),
-    				listen_dev(input2, "input", input2_input_handler)
-    			];
     		},
     		p: function update(ctx, dirty) {
     			if (!current || dirty & /*updatedCountry*/ 2) set_data_dev(t12, /*updatedCountry*/ ctx[1]);
     			if (!current || dirty & /*updatedYear*/ 4) set_data_dev(t14, /*updatedYear*/ ctx[2]);
+    			const input0_changes = {};
 
-    			if (!input0_updating && dirty & /*updatedPercentageRe*/ 8) {
-    				set_input_value(input0, /*updatedPercentageRe*/ ctx[3]);
+    			if (!updating_value && dirty & /*updatedPercentageRe*/ 8) {
+    				updating_value = true;
+    				input0_changes.value = /*updatedPercentageRe*/ ctx[3];
+    				add_flush_callback(() => updating_value = false);
     			}
 
-    			input0_updating = false;
+    			input0.$set(input0_changes);
+    			const input1_changes = {};
 
-    			if (!input1_updating && dirty & /*updatedPercentageHydro*/ 16) {
-    				set_input_value(input1, /*updatedPercentageHydro*/ ctx[4]);
+    			if (!updating_value_1 && dirty & /*updatedPercentageHydro*/ 16) {
+    				updating_value_1 = true;
+    				input1_changes.value = /*updatedPercentageHydro*/ ctx[4];
+    				add_flush_callback(() => updating_value_1 = false);
     			}
 
-    			input1_updating = false;
+    			input1.$set(input1_changes);
+    			const input2_changes = {};
 
-    			if (!input2_updating && dirty & /*updatedPercentageWind*/ 32) {
-    				set_input_value(input2, /*updatedPercentageWind*/ ctx[5]);
+    			if (!updating_value_2 && dirty & /*updatedPercentageWind*/ 32) {
+    				updating_value_2 = true;
+    				input2_changes.value = /*updatedPercentageWind*/ ctx[5];
+    				add_flush_callback(() => updating_value_2 = false);
     			}
 
-    			input2_updating = false;
+    			input2.$set(input2_changes);
     			const button_changes = {};
 
     			if (dirty & /*$$scope*/ 4096) {
@@ -16493,10 +16728,16 @@ var app = (function () {
     		},
     		i: function intro(local) {
     			if (current) return;
+    			transition_in(input0.$$.fragment, local);
+    			transition_in(input1.$$.fragment, local);
+    			transition_in(input2.$$.fragment, local);
     			transition_in(button.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
+    			transition_out(input0.$$.fragment, local);
+    			transition_out(input1.$$.fragment, local);
+    			transition_out(input2.$$.fragment, local);
     			transition_out(button.$$.fragment, local);
     			current = false;
     		},
@@ -16504,8 +16745,10 @@ var app = (function () {
     			if (detaching) detach_dev(thead);
     			if (detaching) detach_dev(t11);
     			if (detaching) detach_dev(tbody);
+    			destroy_component(input0);
+    			destroy_component(input1);
+    			destroy_component(input2);
     			destroy_component(button);
-    			run_all(dispose);
     		}
     	};
 
@@ -16513,14 +16756,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$5.name,
     		type: "slot",
-    		source: "(72:8) <Table bordered>",
+    		source: "(75:8) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (69:28)           Loading renewableSource...      {:then renewableSource}
+    // (72:28)           Loading renewableSource...      {:then renewableSource}
     function create_pending_block$5(ctx) {
     	let t;
 
@@ -16543,25 +16786,31 @@ var app = (function () {
     		block,
     		id: create_pending_block$5.name,
     		type: "pending",
-    		source: "(69:28)           Loading renewableSource...      {:then renewableSource}",
+    		source: "(72:28)           Loading renewableSource...      {:then renewableSource}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (96:4) <Button outline color="secondary" on:click="{pop}">
+    // (99:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$5(ctx) {
+    	let i;
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Atrás");
+    			i = element("i");
+    			t = text(" Atrás");
+    			attr_dev(i, "class", "fas fa-arrow-circle-left");
+    			add_location(i, file$i, 98, 56, 3638);
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
     			insert_dev(target, t, anchor);
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
     			if (detaching) detach_dev(t);
     		}
     	};
@@ -16570,7 +16819,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$5.name,
     		type: "slot",
-    		source: "(96:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(99:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -16579,18 +16828,21 @@ var app = (function () {
 
     function create_fragment$j(ctx) {
     	let main;
-    	let h3;
-    	let t0;
-    	let strong0;
-    	let t1_value = /*params*/ ctx[0].country + "";
+    	let h20;
+    	let small0;
     	let t1;
+    	let h21;
+    	let small1;
+    	let strong0;
+    	let t2_value = /*params*/ ctx[0].country + "";
     	let t2;
-    	let strong1;
-    	let t3_value = /*params*/ ctx[0].year + "";
     	let t3;
+    	let strong1;
+    	let t4_value = /*params*/ ctx[0].year + "";
     	let t4;
-    	let promise;
     	let t5;
+    	let promise;
+    	let t6;
     	let current;
 
     	let info = {
@@ -16621,46 +16873,59 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			main = element("main");
-    			h3 = element("h3");
-    			t0 = text("Editar dato de energía renovable: ");
+    			h20 = element("h2");
+    			small0 = element("small");
+    			small0.textContent = "Editar dato de energía renovable:";
+    			t1 = space();
+    			h21 = element("h2");
+    			small1 = element("small");
     			strong0 = element("strong");
-    			t1 = text(t1_value);
-    			t2 = space();
+    			t2 = text(t2_value);
+    			t3 = text(" - ");
     			strong1 = element("strong");
-    			t3 = text(t3_value);
-    			t4 = space();
-    			info.block.c();
+    			t4 = text(t4_value);
     			t5 = space();
+    			info.block.c();
+    			t6 = space();
     			create_component(button.$$.fragment);
-    			add_location(strong0, file$i, 67, 42, 2155);
-    			add_location(strong1, file$i, 67, 76, 2189);
-    			add_location(h3, file$i, 67, 4, 2117);
-    			add_location(main, file$i, 66, 0, 2105);
+    			add_location(small0, file$i, 68, 37, 2202);
+    			set_style(h20, "text-align", "center");
+    			add_location(h20, file$i, 68, 4, 2169);
+    			add_location(strong0, file$i, 69, 63, 2322);
+    			add_location(strong1, file$i, 69, 99, 2358);
+    			add_location(small1, file$i, 69, 56, 2315);
+    			set_style(h21, "text-align", "center");
+    			set_style(h21, "margin-bottom", "2%");
+    			add_location(h21, file$i, 69, 4, 2263);
+    			add_location(main, file$i, 67, 0, 2157);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
-    			append_dev(main, h3);
-    			append_dev(h3, t0);
-    			append_dev(h3, strong0);
-    			append_dev(strong0, t1);
-    			append_dev(h3, t2);
-    			append_dev(h3, strong1);
-    			append_dev(strong1, t3);
-    			append_dev(main, t4);
+    			append_dev(main, h20);
+    			append_dev(h20, small0);
+    			append_dev(main, t1);
+    			append_dev(main, h21);
+    			append_dev(h21, small1);
+    			append_dev(small1, strong0);
+    			append_dev(strong0, t2);
+    			append_dev(small1, t3);
+    			append_dev(small1, strong1);
+    			append_dev(strong1, t4);
+    			append_dev(main, t5);
     			info.block.m(main, info.anchor = null);
     			info.mount = () => main;
-    			info.anchor = t5;
-    			append_dev(main, t5);
+    			info.anchor = t6;
+    			append_dev(main, t6);
     			mount_component(button, main, null);
     			current = true;
     		},
     		p: function update(new_ctx, [dirty]) {
     			ctx = new_ctx;
-    			if ((!current || dirty & /*params*/ 1) && t1_value !== (t1_value = /*params*/ ctx[0].country + "")) set_data_dev(t1, t1_value);
-    			if ((!current || dirty & /*params*/ 1) && t3_value !== (t3_value = /*params*/ ctx[0].year + "")) set_data_dev(t3, t3_value);
+    			if ((!current || dirty & /*params*/ 1) && t2_value !== (t2_value = /*params*/ ctx[0].country + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty & /*params*/ 1) && t4_value !== (t4_value = /*params*/ ctx[0].year + "")) set_data_dev(t4, t4_value);
     			info.ctx = ctx;
 
     			if (dirty & /*renewableSource*/ 64 && promise !== (promise = /*renewableSource*/ ctx[6]) && handle_promise(promise, info)) ; else {
@@ -16768,18 +17033,18 @@ var app = (function () {
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("EditRenewableSource", $$slots, []);
 
-    	function input0_input_handler() {
-    		updatedPercentageRe = to_number(this.value);
+    	function input0_value_binding(value) {
+    		updatedPercentageRe = value;
     		$$invalidate(3, updatedPercentageRe);
     	}
 
-    	function input1_input_handler() {
-    		updatedPercentageHydro = to_number(this.value);
+    	function input1_value_binding(value) {
+    		updatedPercentageHydro = value;
     		$$invalidate(4, updatedPercentageHydro);
     	}
 
-    	function input2_input_handler() {
-    		updatedPercentageWind = to_number(this.value);
+    	function input2_value_binding(value) {
+    		updatedPercentageWind = value;
     		$$invalidate(5, updatedPercentageWind);
     	}
 
@@ -16792,6 +17057,7 @@ var app = (function () {
     		pop,
     		Table,
     		Button,
+    		Input,
     		params,
     		renewableSource,
     		updatedCountry,
@@ -16827,9 +17093,9 @@ var app = (function () {
     		renewableSource,
     		updateRenewableSource,
     		getRenewableSource,
-    		input0_input_handler,
-    		input1_input_handler,
-    		input2_input_handler
+    		input0_value_binding,
+    		input1_value_binding,
+    		input2_value_binding
     	];
     }
 
