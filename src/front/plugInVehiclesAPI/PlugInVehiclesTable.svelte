@@ -36,10 +36,43 @@
 	let numberElementsPages = 10;
 	let pages = [1];
 	let offset = 0;
-	let currentPage = 1;
+	let currentPage = 1; // We could use just one variable offset on currentPage, we leave both
 	let moreData = true;
 	
 	onMount(getPluginVehicles);
+	onMount(getCountriesYears);
+ 
+    /* 
+    This function get years and countries to put them into the selects.
+	We call it just once in the onMount and each time we need to update the selects,
+	but taking care we are asking for all the data
+    */
+    async function getCountriesYears() {
+        const res = await fetch("/api/v1/plugin-vehicles-stats");
+ 
+        /* Getting the countries for the select */
+        if (res.ok) {
+            const json = await res.json();
+ 
+            countries = json.map((d) => {
+                    return d.country;
+            });
+            /* Deleting duplicated countries */
+            countries = Array.from(new Set(countries)); 
+            
+            /* Getting the years for the select */
+            years = json.map((d) => {
+                    return d.year;
+            });
+            /* Deleting duplicated years */
+            years = Array.from(new Set(years)); 
+ 
+            console.log("Counted " + countries.length + "countries and " + years.length + "years.");
+ 
+        } else {
+            console.log("ERROR!");
+        }
+	}
 
 	async function getPluginVehicles(){
 		console.log("Fetching plugin vehicles...");
@@ -52,22 +85,6 @@
 			const json = await res.json();
 			const jsonNext = await next.json();
 			pluginVehicles = json;
-
-			// Getting the countries for the select
-			countries = json.map((d) => {
-			return d.country;
-		});
-
-		//Deleting duplicated countries
-		countries = Array.from(new Set(countries));
-
-		// Getting the years for the select
-		years = json.map((d) => {
-			return d.year;
-		});
-
-		//Deleting duplicated years
-		years = Array.from(new Set(years));
 
 		// checking if we have run out of elements
 		if(jsonNext.length == 0){
@@ -101,6 +118,8 @@
 				}
 			}).then(function (res){
 				getPluginVehicles();
+				/* If we want the select to be update each time we insert, uncoment the line below */
+				//getCountriesYears();
 			});
 		}
 	}
@@ -111,6 +130,7 @@
 			method: "DELETE"
 		}).then(function (res) {
 			getPluginVehicles();
+			getCountriesYears();
 		});
 	}
 	
@@ -120,6 +140,7 @@
 			method: "DELETE"
 		}).then(function (res) {
 			getPluginVehicles();
+			getCountriesYears();
 		});
 	}
 
@@ -134,7 +155,7 @@
 		}else if(country != "-" && year == "-"){
 			url = url + "?country=" + country;
 		}else if(country == "-" && year != "-"){
-			url = url + "&year=" + year;
+			url = url + "?year=" + year;
 		}
 
 		const res = await fetch(url);
@@ -147,11 +168,6 @@
 		}else{
 			console.log("ERROR!");
 		}
-	}
-	
-	async function total(){
-
-
 	}
 
 	async function addOffset(increment){
