@@ -40,6 +40,48 @@ module.exports = function (app){
 			"cars-per-1000": 2.4
 		},
 		{ 
+			"country": "Japan",
+			"year": 2018,
+			"pev-stock": 257363,
+			"annual-sale": 52013,
+			"cars-per-1000": 2.0
+		},
+		{ 
+			"country": "Netherlands",
+			"year": 2018,
+			"pev-stock": 145882,
+			"annual-sale": 29187,
+			"cars-per-1000": 8.4
+		},
+		{ 
+			"country": "Norway",
+			"year": 2018,
+			"pev-stock": 296215,
+			"annual-sale": 86290,
+			"cars-per-1000": 55.9
+		},
+		{ 
+			"country": "Spain",
+			"year": 2018,
+			"pev-stock": 155495 ,
+			"annual-sale": 26922,
+			"cars-per-1000": 2.8
+		},
+		{ 
+			"country": "Sweden",
+			"year": 2018,
+			"pev-stock": 79579,
+			"annual-sale": 29909,
+			"cars-per-1000": 7.8
+		},
+		{ 
+			"country": "UK",
+			"year": 2018,
+			"pev-stock": 197000,
+			"annual-sale": 59911,
+			"cars-per-1000": 3.2
+		},
+		{ 
 			"country": "USA",
 			"year": 2018,
 			"pev-stock": 1126000,

@@ -196,7 +196,7 @@
 			</Input>
 		</FormGroup>
 
-		<Button outline color="secondary" on:click="{search(currentCountry, currentYear)}"> Buscar </Button>
+		<Button outline color="secondary" on:click="{search(currentCountry, currentYear)}" class="button-search" > <i class="fas fa-search"></i> Buscar </Button>
 		
 
 		<Table bordered>
@@ -217,7 +217,7 @@
 					<td> <Input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newRenewableSource['percentage-re-total']}" /> </td>
 					<td> <Input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newRenewableSource['percentage-hydropower-total']}" /> </td>
 					<td> <Input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newRenewableSource['percentage-wind-power-total']}" /> </td>
-					<td> <Button outline color="primary" on:click={insertRenewableSources}> Insertar </Button> </td>
+					<td> <Button outline color="primary" on:click={insertRenewableSources}> <i class="far fa-edit"></i> Insertar </Button> </td>
 				</tr>
 				{#each renewableSources as renewableSource}
 				<tr>
@@ -230,7 +230,7 @@
 					<td> {renewableSource['percentage-re-total']} </td>
 					<td> {renewableSource['percentage-hydropower-total']} </td>
 					<td> {renewableSource['percentage-wind-power-total']} </td>
-					<td> <Button outline color="danger" on:click="{deleteRenewableSource(renewableSource.country, renewableSource.year)}"> Borrar </Button> </td>
+					<td> <Button outline color="danger" on:click="{deleteRenewableSource(renewableSource.country, renewableSource.year)}"> <i class="fa fa-trash" aria-hidden="true"></i> Borrar </Button> </td>
 				</tr>
 				{/each}
 			</tbody>
@@ -267,7 +267,7 @@
 
 	</Pagination>
 
-	<Button outline color="secondary" on:click="{pop}"> Atrás </Button>
-	<Button outline on:click={deleteRenewableSources} color="danger"> Borrar todo </Button>
+	<Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
+	<Button outline on:click={deleteRenewableSources} color="danger"> <i class="fa fa-trash" aria-hidden="true"></i> Borrar todo </Button>
 </main>
 
