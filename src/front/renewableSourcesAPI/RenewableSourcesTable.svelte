@@ -36,10 +36,43 @@
 
 	let numberElementsPages = 10;
 	let offset = 0;
-	let currentPage = 1;
+	let currentPage = 1; /* We could use just one variable offset or currentPage, we leave both */
 	let moreData = true; 
 
 	onMount(getRenewableSources);
+	onMount(getCountriesYears);
+
+	/* 
+	This function get years and countries to put them into the selects.
+	We call it just once in the onMount and each time we need to update the selects,
+	but taking care we are asking for all the data.
+	*/
+	async function getCountriesYears() {
+		const res = await fetch("/api/v1/renewable-sources-stats");
+
+		/* Getting the countries for the select */
+		if (res.ok) {
+			const json = await res.json();
+
+			countries = json.map((d) => {
+					return d.country;
+			});
+			/* Deleting duplicated countries */
+			countries = Array.from(new Set(countries)); 
+			
+			/* Getting the years for the select */
+			years = json.map((d) => {
+					return d.year;
+			});
+			/* Deleting duplicated years */
+			years = Array.from(new Set(years)); 
+
+			console.log("Counted " + countries.length + "countries and " + years.length + "years.");
+
+		} else {
+			console.log("ERROR!");
+		}
+	}
 
 	async function getRenewableSources() {
 		console.log("Fetching renewable sources stats...");	
@@ -53,20 +86,6 @@
 			const jsonNext = await next.json();
 			renewableSources = json;
 			
-			/* Getting the countries for the select */
-			countries = json.map((d) => {
-				return d.country;
-			});
-			/* Deleting duplicated countries */
-			countries = Array.from(new Set(countries)); 
-
-			
-			/* Getting the years for the select */
-			years = json.map((d) => {
-					return d.year;
-			});
-			/* Deleting duplicated years */
-			years = Array.from(new Set(years)); 
 
 			/* Checking if we have run out of elements */ 
 			if (jsonNext.length == 0) {
@@ -101,7 +120,9 @@
 					"Content-Type": "application/json"
 				}
 			}).then(function(res) {
-				getRenewableSources(); 
+				getRenewableSources();
+				/* If we want the select to be updated each time we insert, uncomment the line below */
+				/*getCountriesYears();*/
 			}); 
 		}
 	}
@@ -112,6 +133,7 @@
 			method: "DELETE"
 		}).then(function (res) {
 			getRenewableSources();
+			getCountriesYears();
 		});
 	}
 
@@ -121,10 +143,9 @@
 			method: "DELETE"
 		}).then(function (res) {
 			getRenewableSources();
+			getCountriesYears();
 		});
 	}
-
-	
 
 	async function search(country, year) {
 		console.log("Searching data: " + country + " and " + year);
@@ -153,12 +174,6 @@
 		}
 		
 	}
-
-	async function total () {
-
-
-	}
-
 
 	function addOffset (increment) {
 		offset += increment;
