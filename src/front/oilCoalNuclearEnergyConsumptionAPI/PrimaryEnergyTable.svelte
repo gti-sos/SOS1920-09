@@ -34,46 +34,62 @@
 	let moreData = true;
 
 	onMount(getOilEnergy);
+	onMount(getCountriesYears);	
+
+
+	async function getCountriesYears() {
+        const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats");
+ 
+        /* Getting the countries for the select */
+        if (res.ok) {
+            const json = await res.json();
+ 
+            countries = json.map((d) => {
+                    return d.country;
+            });
+            /* Deleting duplicated countries */
+            countries = Array.from(new Set(countries)); 
+            
+            /* Getting the years for the select */
+            years = json.map((d) => {
+                    return d.year;
+            });
+            /* Deleting duplicated years */
+            years = Array.from(new Set(years)); 
+ 
+            console.log("Counted " + countries.length + "countries and " + years.length + "years.");
+ 
+        } else {
+            console.log("ERROR!");
+        }
+    }
+
 
 	async function getOilEnergy() {
-
-		console.log("Fetching oil coal consumption...");
-		const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages);
-		const next = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats?offset=" + numberElementsPages * (offset+1) + "&limit=" + numberElementsPages);
-		
-		if (res.ok && next.ok) {
-			console.log("OK:");
-			const json = await res.json();
-
-			const jsonNext = await next.json();
-			oilEnergy = json;
-
-			/* getting countries */
-			countries = json.map((d) => {
-				return d.country;
-			});
-			countries = Array.from(new Set(countries));
-			/* getting years */
-			years = json.map((d) => {
-				return d.year;
-			});
-			/* Deleting years */
-			years = Array.from(new Set(years));
-
-			console.log(jsonNext.length);
-			/*  */
-			if (jsonNext.length == 0){
-				moreData = false;
-			} else {
-				moreData = true;
-			}
-
-			console.log("Received " + oilEnergy.length + "oil coal consumption.");
-		}
-		else {
-			console.log("ERROR!");
-		}
-	}
+        console.log("Fetching oil scoal stats..."); 
+        const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages); 
+        /* Asking for the following data */ 
+        const next = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages); 
+ 
+        if (res.ok && next.ok) {
+            console.log("Ok:");
+            const json = await res.json();
+            const jsonNext = await next.json();
+            oilEnergy = json;
+            
+ 
+            /* Checking if we have run out of elements */ 
+            if (jsonNext.length == 0) {
+                moreData = false;
+            } else {
+                moreData = true;
+            }
+ 
+            console.log("Received " + oilEnergy.length + " oil coal stats.");
+        } else {
+            console.log("ERROR!");
+        }
+    }
 
 
 	async function insertOilEnergy() {
@@ -93,6 +109,7 @@
 					"Content-Type": "application/json"
 				}
 			}).then(function (res) {
+				/* we can update it each time we insert*/
 				getOilEnergy();
 			});
 		};
@@ -106,6 +123,7 @@
 			method: "DELETE"
 		}).then(function (res) {
 			getOilEnergy();
+			getCountriesYears();
 		});
 	}
 
@@ -115,6 +133,7 @@
 			method: "DELETE"
 		}).then(function (res) {
 			getOilEnergy();
+			getCountriesYears();
 		});
 	}
 
