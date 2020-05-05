@@ -60,6 +60,7 @@
             }
         }).then(function (res) {
             if(res.ok){
+                updateAlert();
                 getPluginVehicles();
             }
             else if(res.status == 404){
@@ -132,7 +133,7 @@
                     <td><Input type="number" bind:value="{updatedPevStock}"/></td>
                     <td><Input type="number" bind:value="{updatedAnnualSale}"/></td>
                     <td><Input type="number" bind:value="{updatedCarsPerPeople}"/></td>
-                    <td> <Button outline color="primary" on:click={updatedPluginVehicles} on:click={updateAlert}> <i class="fas fa-pencil-alt"></i> Actualizar</Button> </td>
+                    <td> <Button outline color="primary" on:click={updatedPluginVehicles}> <i class="fas fa-pencil-alt"></i> Actualizar</Button> </td>
                 </tr>
         </tbody>
         </Table>

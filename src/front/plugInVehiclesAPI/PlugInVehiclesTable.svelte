@@ -122,6 +122,7 @@
 				}
 			}).then(function (res){
 				if(res.ok){
+					insertAlert();
 					getPluginVehicles();
 				}
 				else{
@@ -140,6 +141,7 @@
 			method: "DELETE"
 		}).then(function (res) {
 			if(res.ok){
+				deleteAlert();
 				getPluginVehicles();
 				getCountriesYears();
 			}
@@ -158,6 +160,7 @@
 			method: "DELETE"
 		}).then(function (res) {
 			if(res.ok){
+				deleteAllAlert();
 				getPluginVehicles();
 				getCountriesYears();
 			}
@@ -309,7 +312,7 @@
 					<td><Input type="number" bind:value="{newPluginVehicles['pev-stock']}" /></td>
 					<td><Input type="number" bind:value="{newPluginVehicles['annual-sale']}" /></td>
 					<td><Input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newPluginVehicles['cars-per-1000']}" /></td>
-					<td> <Button outline color="primary" on:click={insertPluginVehicles} on:click={insertAlert}> <i class="far fa-edit"></i> Insertar</Button></td>
+					<td> <Button outline color="primary" on:click={insertPluginVehicles}> <i class="far fa-edit"></i> Insertar</Button></td>
 				</tr>
 				{#each pluginVehicles as pluginVehicles}
 					<tr>
@@ -322,7 +325,7 @@
 						<td>{pluginVehicles['pev-stock']}</td>
 						<td>{pluginVehicles['annual-sale']}</td>
 						<td>{pluginVehicles['cars-per-1000']}</td>
-						<td><Button outline color="danger" on:click="{deletePluginVehicles(pluginVehicles.country, pluginVehicles.year)}" on:click={deleteAlert}> <i class="fa fa-trash" aria-hidden="true"></i> Borrar</Button></td>
+						<td><Button outline color="danger" on:click="{deletePluginVehicles(pluginVehicles.country, pluginVehicles.year)}"> <i class="fa fa-trash" aria-hidden="true"></i> Borrar</Button></td>
 					</tr>
 				{/each}
 			</tbody>
@@ -356,6 +359,6 @@
     </Pagination>
 
 	<Button outline color="secondary" on:click="{pop}"><i class="fas fa-arrow-circle-left"></i> Atrás</Button>
-	<Button outline color="danger" on:click={deletePluginVehiclesAll} on:click={deleteAllAlert}> <i class="fa fa-trash" aria-hidden="true"></i> Borrar todos</Button>
+	<Button outline color="danger" on:click={deletePluginVehiclesAll}> <i class="fa fa-trash" aria-hidden="true"></i> Borrar todos</Button>
 
 </main>
