@@ -60,6 +60,7 @@
             console.log("Counted " + countries.length + "countries and " + years.length + "years.");
  
         } else {
+			errorAlert=("Error interno al intentar obtener las ciudades y los años")
             console.log("ERROR!");
         }
     }
@@ -87,6 +88,7 @@
  
             console.log("Received " + oilEnergy.length + " oil coal stats.");
         } else {
+			errorAlert=("Error interno al intentar obtener todos los elementos");
             console.log("ERROR!");
         }
     }
@@ -110,7 +112,11 @@
 				}
 			}).then(function (res) {
 				/* we can update it each time we insert*/
-				getOilEnergy();
+				if (res.ok){
+					getOilEnergy();
+				}else {
+					errorAlert("No se han podido insetar los elementos");
+				}
 			});
 		};
 	}
@@ -122,8 +128,15 @@
 		const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats" + "/" + country + "/" + year, {
 			method: "DELETE"
 		}).then(function (res) {
-			getOilEnergy();
-			getCountriesYears();
+			if (res.ok){
+				getOilEnergy();
+				getCountriesYears();
+			} else if (res.status==404){
+				errorAlert("Se ha intentado borrar un dato inexistente");
+			} else {
+				errorAlert("Error interno al intentar borrar un elemento concreto");
+			}
+			
 		});
 	}
 
@@ -132,8 +145,13 @@
 		const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats", {
 			method: "DELETE"
 		}).then(function (res) {
-			getOilEnergy();
-			getCountriesYears();
+			if (res.ok){
+				getOilEnergy();
+				getCountriesYears();
+			}else {
+				errorAlert=("Error al intentar borrar todos los elementos");
+			}
+			
 		});
 	}
 
@@ -182,6 +200,7 @@
 
 			console.log("Found " + oilEnergy.length + "Oil Coal Energy.");
 		} else {
+			errorAlert=("Error interno al intentar realizar la búsqueda");
 			console.log("ERROR!");
 		}
 	}
@@ -193,58 +212,59 @@
 	}
 
 
-	function InsertAlert(){
+	function insertAlert(){
+		clearAlert();
 		var alert_element = document.getElementById("div_alert");
 		alert_element.style = "position: fixed; top: 0px; top: 1%; width: 90%;";
-		alert_element.className += "alert-success";
-		alert_element.innerHTML += "<strong> ¡Dato insertado! El dato ha sido insertado correctamente"; 
+		alert_element.className = " alert alert dismissible in alert-success ";
+		alert_element.innerHTML = "<strong>¡Dato insertado!</strong> El dato ha sido insertado correctamente!";
 
-		setTimeout(() =>{
+		setTimeout(() => {
 			clearAlert();
 		}, 3000);
 	}
 
-	function DeleteAlert(){
+	function deleteAlert(){
+		clearAlert();
 		var alert_element = document.getElementById("div_alert");
 		alert_element.style = "position: fixed; top: 0px; top: 1%; width: 90%;";
-		alert_element.className = "alert alert-dismissible in alert-danger";
-		alert_element.innerHTML = "<strong> ¡Dato borrado! El dato ha sido borrado correctamente"; 
+		alert_element.className = " alert alert dismissible in alert-danger ";
+		alert_element.innerHTML = "<strong>¡Dato borrado!</strong> El dato ha sido borrado correctamente!";
 
-		setTimeout(() =>{
+		setTimeout(() => {
 			clearAlert();
 		}, 3000);
 	}
 
-
-	function clearAlert(){
-		var alert_element = document.getElementById=("div_alert");
-		alert_element.style=" display: none; ";
-		alert_element.className = "alert alert-dismissible in";
-		alert_element.innerHTML = ""; 
-	}
-
-	
 	function deleteAllAlert(){
+		clearAlert();
 		var alert_element = document.getElementById("div_alert");
 		alert_element.style = "position: fixed; top: 0px; top: 1%; width: 90%;";
-		alert_element.className = "alert alert-dismissible in alert-danger";
-		alert_element.innerHTML = "<strong> ¡Datos borrados! Los datos han sido borrados correctamente"; 
+		alert_element.className = " alert alert dismissible in alert-danger ";
+		alert_element.innerHTML = "<strong>¡Datos borrados!</strong> Todos los datos han sido borrados correctamente!";
 
-		setTimeout(() =>{
+		setTimeout(() => {
 			clearAlert();
 		}, 3000);
 	}
 
+	function errorAlert(error){
+		clearAlert();
+		var alert_element = document.getElementById("div_alert");
+		alert_element.style = "position: fixed; top: 0px; top: 1%; width: 90%;";
+		alert_element.className = " alert alert dismissible in alert-danger ";
+		alert_element.innerHTML = "<strong>¡ERROR!</strong> ¡Ha ocurrido un error!" + error;
+
+		setTimeout(() => {
+			clearAlert();
+		}, 3000);
+	}
 
 </script>
 
 
 
 <main>
-	<div role ="alert" id ="div_alert" style = "display: none;">
-	</div>
-	
-
 	{#await oilEnergy}
 		Loading oilEnergy...
 	{:then oilEnergys}
@@ -289,7 +309,7 @@
 					<td><Input required type="number" step="0.01" min="0" bind:value = "{newOilEnergy['oil-consumption']}" /></td>
 					<td><Input type="number" placeholder="0.0" step="0.01" min="0" bind:value = "{newOilEnergy['coal-consumption']}" /></td>
 					<td><Input type="number" placeholder="0.0" step="0.01" min="0" bind:value = "{newOilEnergy['nuclear-energy-consumption']}" /></td>
-					<td><Button outline color= "primary" on:click={insertOilEnergy} on:click = "InsertAlert"> <i class="far fa-edit"></i> Insertar</Button></td>
+					<td><Button outline color= "primary" on:click={insertOilEnergy} on:click = {insertAlert}> <i class="far fa-edit"></i> Insertar</Button></td>
 				</tr>
 
 				{#each oilEnergys as oilEnergy}
@@ -304,7 +324,7 @@
 						<td>{oilEnergy['oil-consumption']}</td>
 						<td>{oilEnergy['coal-consumption']}</td>
 						<td>{oilEnergy['nuclear-energy-consumption']}</td>
-						<td><Button outline color= "danger" on:click = {deleteOilEnergy(oilEnergy.country,oilEnergy.year)} on:click= {DeleteAlert}> <i class="fa fa-trash" aria-hidden="true"></i> Borrar</Button></td>
+						<td><Button outline color= "danger" on:click = {deleteOilEnergy(oilEnergy.country,oilEnergy.year)} on:click= {deleteAlert}> <i class="fa fa-trash" aria-hidden="true"></i> Borrar</Button></td>
 					</tr>
 				{/each}
 				<tr>
