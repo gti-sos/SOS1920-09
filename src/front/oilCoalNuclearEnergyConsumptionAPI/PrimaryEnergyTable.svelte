@@ -93,6 +93,22 @@
         }
     }
 
+	async function loadInitialOilEnergy() {
+        console.log("Loading initial oil scoal stats data..."); 
+        const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats/loadInitialData").then(function (res) {
+			if (res.ok){
+				console.log("OK");
+				getOilEnergy();
+				initialDataAlert();
+			}else {
+				errorAlert=("Error al intentar borrar todos los elementos iniciales");
+				console.log("ERROR!");
+			}
+			
+		});
+    }
+
+
 
 	async function insertOilEnergy() {
 		console.log("Inserting oil coal consumption...");
@@ -148,6 +164,8 @@
 			method: "DELETE"
 		}).then(function (res) {
 			if (res.ok){
+				currentPage = 1;
+				offset=0;
 				getOilEnergy();
 				getCountriesYears();
 				deleteAllAlert();
@@ -250,6 +268,19 @@
 			clearAlert();
 		}, 3000);
 	}
+
+	function initialDataAlert(){
+		clearAlert();
+		var alert_element = document.getElementById("div_alert");
+		alert_element.style = "position: fixed; top: 0px; top: 1%; width: 90%;";
+		alert_element.className = " alert alert dismissible in alert-warning ";
+		alert_element.innerHTML = "<strong>Datos iniciales!</strong> ¡ Se han generado los datos iniciales !";
+
+		setTimeout(() => {
+			clearAlert();
+		}, 3000);
+	}
+
 
 	function errorAlert(error){
 		clearAlert();
@@ -377,6 +408,8 @@
 
 	
 	<Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás</Button>
+	<Button outline color= "warning" on:click = {loadInitialOilEnergy}> <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i> Cargar datos Iniciales </Button>
 	<Button outline color= "danger" on:click = {deleteOilEnergys}> <i class="fa fa-trash" aria-hidden="true"></i> Borrar todo</Button>
+	
 
 </main>
