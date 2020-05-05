@@ -114,6 +114,7 @@
 				/* we can update it each time we insert*/
 				if (res.ok){
 					getOilEnergy();
+					insertAlert();
 				}else {
 					errorAlert("No se han podido insetar los elementos");
 				}
@@ -131,6 +132,7 @@
 			if (res.ok){
 				getOilEnergy();
 				getCountriesYears();
+				deleteAlert();
 			} else if (res.status==404){
 				errorAlert("Se ha intentado borrar un dato inexistente");
 			} else {
@@ -148,6 +150,7 @@
 			if (res.ok){
 				getOilEnergy();
 				getCountriesYears();
+				deleteAllAlert();
 			}else {
 				errorAlert=("Error al intentar borrar todos los elementos");
 			}
@@ -260,11 +263,20 @@
 		}, 3000);
 	}
 
+    function clearAlert(){
+		var alert_element = document.getElementById("div_alert");
+		alert_element.style = "display: none; ";
+		alert_element.className = "alert alert-dismissible in";
+		alert_element.innerHTML = "";
+	}
+
 </script>
 
 
 
 <main>
+	<div role ="alert" id ="div_alert" style = "display: none;">
+	</div>
 	{#await oilEnergy}
 		Loading oilEnergy...
 	{:then oilEnergys}
@@ -309,7 +321,7 @@
 					<td><Input required type="number" step="0.01" min="0" bind:value = "{newOilEnergy['oil-consumption']}" /></td>
 					<td><Input type="number" placeholder="0.0" step="0.01" min="0" bind:value = "{newOilEnergy['coal-consumption']}" /></td>
 					<td><Input type="number" placeholder="0.0" step="0.01" min="0" bind:value = "{newOilEnergy['nuclear-energy-consumption']}" /></td>
-					<td><Button outline color= "primary" on:click={insertOilEnergy} on:click = {insertAlert}> <i class="far fa-edit"></i> Insertar</Button></td>
+					<td><Button outline color= "primary" on:click={insertOilEnergy}> <i class="far fa-edit"></i> Insertar</Button></td>
 				</tr>
 
 				{#each oilEnergys as oilEnergy}
@@ -324,7 +336,7 @@
 						<td>{oilEnergy['oil-consumption']}</td>
 						<td>{oilEnergy['coal-consumption']}</td>
 						<td>{oilEnergy['nuclear-energy-consumption']}</td>
-						<td><Button outline color= "danger" on:click = {deleteOilEnergy(oilEnergy.country,oilEnergy.year)} on:click= {deleteAlert}> <i class="fa fa-trash" aria-hidden="true"></i> Borrar</Button></td>
+						<td><Button outline color= "danger" on:click = {deleteOilEnergy(oilEnergy.country,oilEnergy.year)}> <i class="fa fa-trash" aria-hidden="true"></i> Borrar</Button></td>
 					</tr>
 				{/each}
 				<tr>
@@ -365,6 +377,6 @@
 
 	
 	<Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás</Button>
-	<Button outline color= "danger" on:click = {deleteOilEnergys} on:click = {deleteAllAlert}> <i class="fa fa-trash" aria-hidden="true"></i> Borrar todo</Button>
+	<Button outline color= "danger" on:click = {deleteOilEnergys}> <i class="fa fa-trash" aria-hidden="true"></i> Borrar todo</Button>
 
 </main>
