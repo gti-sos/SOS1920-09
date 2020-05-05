@@ -96,6 +96,9 @@
 
 
 			console.log("Received " + renewableSources.length + " renewable sources stats.");
+
+			
+
 		} else {
 			console.log("ERROR!");
 		}
@@ -182,11 +185,58 @@
 	}
 	
 
+	/* These functions are for the alerts */ 
+	function insertAlert() {
+		clearAlert();
+		var alert_element = document.getElementById("div_alert");
+		alert_element.style = "position: fixed; top: 0px; top: 1%; width: 90%;";
+		alert_element.className = "alert alert-dismissible in alert-success ";
+		alert_element.innerHTML = "<strong>¡Dato insertado!</strong> El dato ha sido insertado correctamente";
+		
+		setTimeout(() => {
+			clearAlert();
+		}, 3000);
+	}
+	
+	function deleteAlert() {
+		clearAlert();
+		var alert_element = document.getElementById("div_alert");
+		alert_element.style = "position: fixed; top: 0px; top: 1%; width: 90%;";
+		alert_element.className = "alert alert-dismissible in alert-danger ";
+		alert_element.innerHTML = "<strong>¡Dato borrado!</strong> El dato ha sido borrado correctamente";
+		
+		setTimeout(() => {
+			clearAlert();
+		}, 3000);
+	}
+
+	function deleteAllAlert() {
+		clearAlert();
+		var alert_element = document.getElementById("div_alert");
+		alert_element.style = "position: fixed; top: 0px; top: 1%; width: 90%;";
+		alert_element.className = "alert alert-dismissible in alert-danger ";
+		alert_element.innerHTML = "<strong>¡Datos borrados!</strong> Todos los datos han sido borrados correctamente";
+		
+		setTimeout(() => {
+			clearAlert();
+		}, 3000);
+	}
+
+	function clearAlert () {
+		var alert_element = document.getElementById("div_alert");
+		alert_element.style = "display: none; ";
+		alert_element.className = "alert alert-dismissible in";
+		alert_element.innerHTML = "";
+	}
+
 </script>
 
 
 
 <main>
+	<!-- This div is for the alerts -->
+	<div role="alert" id="div_alert" style="display: none;">
+	</div>
 	{#await renewableSources}
 		Loading renewable sources...
 	{:then renewableSources}
@@ -232,7 +282,7 @@
 					<td> <Input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newRenewableSource['percentage-re-total']}" /> </td>
 					<td> <Input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newRenewableSource['percentage-hydropower-total']}" /> </td>
 					<td> <Input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newRenewableSource['percentage-wind-power-total']}" /> </td>
-					<td> <Button outline color="primary" on:click={insertRenewableSources}> <i class="far fa-edit"></i> Insertar </Button> </td>
+					<td> <Button outline color="primary" on:click={insertRenewableSources} on:click={insertAlert}> <i class="far fa-edit"></i> Insertar </Button> </td>
 				</tr>
 				{#each renewableSources as renewableSource}
 				<tr>
@@ -245,7 +295,7 @@
 					<td> {renewableSource['percentage-re-total']} </td>
 					<td> {renewableSource['percentage-hydropower-total']} </td>
 					<td> {renewableSource['percentage-wind-power-total']} </td>
-					<td> <Button outline color="danger" on:click="{deleteRenewableSource(renewableSource.country, renewableSource.year)}"> <i class="fa fa-trash" aria-hidden="true"></i> Borrar </Button> </td>
+					<td> <Button outline color="danger" on:click="{deleteRenewableSource(renewableSource.country, renewableSource.year), deleteAlert}"> <i class="fa fa-trash" aria-hidden="true"></i> Borrar </Button> </td>
 				</tr>
 				{/each}
 			</tbody>
@@ -281,8 +331,8 @@
 		</PaginationItem>
 
 	</Pagination>
-
+	<Button outline  color="danger" on:click={deleteAllAlert} on:click={deleteRenewableSources} > <i class="fa fa-trash" aria-hidden="true"></i> Borrar todo </Button>
 	<Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
-	<Button outline on:click={deleteRenewableSources} color="danger"> <i class="fa fa-trash" aria-hidden="true"></i> Borrar todo </Button>
+	
 </main>
 
