@@ -61,11 +61,51 @@
                 "Content-Type": "application/json"
             }
         }).then(function (res) {
-            getRenewableSource();
+            if (res.ok) {
+                getRenewableSource();
+			} else if (res.status == 404) {
+				errorAlert("Se ha intentado borrar un elemento inexistente.");
+			} else {
+				errorAlert("");
+			}
         });
     }
+
+    function errorAlert(error) {
+		clearAlert();
+		var alert_element = document.getElementById("div_alert");
+		alert_element.style = "position: fixed; top: 0px; top: 1%; width: 90%;";
+		alert_element.className = "alert alert-dismissible in alert-danger ";
+		alert_element.innerHTML = "<strong>¡ERROR!</strong> ¡Ha ocurrido un error! " + error;
+		
+		setTimeout(() => {
+			clearAlert();
+		}, 3000);
+    }
+    
+    function updateAlert() {
+		clearAlert();
+		var alert_element = document.getElementById("div_alert");
+		alert_element.style = "position: fixed; top: 0px; top: 1%; width: 90%;";
+		alert_element.className = "alert alert-dismissible in alert-info ";
+		alert_element.innerHTML = "<strong>¡Dato actualizado!</strong> El dato ha sido actualizado correctamente";
+		
+		setTimeout(() => {
+			clearAlert();
+		}, 3000);
+    }
+    
+    function clearAlert () {
+		var alert_element = document.getElementById("div_alert");
+		alert_element.style = "display: none; ";
+		alert_element.className = "alert alert-dismissible in";
+		alert_element.innerHTML = "";
+	}
 </script>
 <main>
+    <!-- This div is for the alerts -->
+	<div role="alert" id="div_alert" style="display: none;">
+	</div>
     <h2  style="text-align: center;"><small> Editar dato de energía renovable: </small></h2>
     <h2  style="text-align: center; margin-bottom: 2%;"><small><strong>{params.country}</strong> - <strong>{params.year}</strong></small></h2>
     
@@ -90,7 +130,7 @@
                     <td> <Input type="number" bind:value="{updatedPercentageRe}"/> </td>
                     <td> <Input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{updatedPercentageHydro}"/> </td>
                     <td> <Input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{updatedPercentageWind}"/> </td>
-                    <td> <Button outline color="primary" on:click={updateRenewableSource}> <i class="fas fa-pencil-alt"></i> Actualizar </Button> </td>
+                    <td> <Button outline color="primary" on:click={updateRenewableSource} on:click={updateAlert}> <i class="fas fa-pencil-alt"></i> Actualizar </Button> </td>
                 </tr>
         </tbody>
         </Table>

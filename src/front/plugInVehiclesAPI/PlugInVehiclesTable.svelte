@@ -70,6 +70,7 @@
             console.log("Counted " + countries.length + "countries and " + years.length + "years.");
  
         } else {
+			errorAlert("Error interno al intentar obtener los paises y años!");
             console.log("ERROR!");
         }
 	}
@@ -98,6 +99,7 @@
 			console.log("Received " +pluginVehicles.length+" plugin vehicles.");
 		}
 		else{
+			errorAlert("Error interno al intentar obtener todos los datos!");
 			console.log("ERROR!");
 		}
 	}
@@ -119,7 +121,13 @@
 					"Content-Type": "application/json"
 				}
 			}).then(function (res){
-				getPluginVehicles();
+				if(res.ok){
+					getPluginVehicles();
+				}
+				else{
+					errorAlert("Error interno al intentar insertar un elemento.")
+				}
+				
 				/* If we want the select to be update each time we insert, uncoment the line below */
 				//getCountriesYears();
 			});
@@ -131,8 +139,16 @@
 		const res = await fetch("/api/v1/plugin-vehicles-stats/" + country + "/" + year, {
 			method: "DELETE"
 		}).then(function (res) {
-			getPluginVehicles();
-			getCountriesYears();
+			if(res.ok){
+				getPluginVehicles();
+				getCountriesYears();
+			}
+			else if (res.status == 404){
+				errorAlert("Se ha intentado borrar un elemento inexistente");
+			}
+			else{
+				errorAlert("Error interno al intentar borrar un elemento concreto");
+			}
 		});
 	}
 	
@@ -141,8 +157,14 @@
 		const res = await fetch("/api/v1/plugin-vehicles-stats", {
 			method: "DELETE"
 		}).then(function (res) {
-			getPluginVehicles();
-			getCountriesYears();
+			if(res.ok){
+				getPluginVehicles();
+				getCountriesYears();
+			}
+			else{
+				errorAlert("Error interno al intentar borrar todos los elementos.")
+			}
+			
 		});
 	}
 
@@ -168,6 +190,7 @@
 			
 			console.log("Received " +pluginVehicles.length+" plugin vehicles.");
 		}else{
+			errorAlert("Error interno al intentar realizar la búsqueda!");
 			console.log("ERROR!");
 		}
 	}
@@ -215,6 +238,18 @@
 			clearAlert();
 		}, 3000);
 	}
+
+	function errorAlert(error){
+		clearAlert();
+		var alert_element = document.getElementById("div_alert");
+		alert_element.style = "position: fixed; top: 0px; top: 1%; width: 90%;";
+		alert_element.className = " alert alert dismissible in alert-danger ";
+		alert_element.innerHTML = "<strong>¡ERROR!</strong> ¡Ha ocurrido un error! " + error;
+
+		setTimeout(() => {
+			clearAlert();
+		}, 3000);
+    }
 
 	function clearAlert(){
 		var alert_element = document.getElementById("div_alert");
@@ -287,7 +322,7 @@
 						<td>{pluginVehicles['pev-stock']}</td>
 						<td>{pluginVehicles['annual-sale']}</td>
 						<td>{pluginVehicles['cars-per-1000']}</td>
-						<td><Button outline color="danger" on:click="{deletePluginVehicles(pluginVehicles.country, pluginVehicles.year), deleteAlert}"> <i class="fa fa-trash" aria-hidden="true"></i> Borrar</Button></td>
+						<td><Button outline color="danger" on:click="{deletePluginVehicles(pluginVehicles.country, pluginVehicles.year)}" on:click={deleteAlert}> <i class="fa fa-trash" aria-hidden="true"></i> Borrar</Button></td>
 					</tr>
 				{/each}
 			</tbody>

@@ -70,6 +70,7 @@
 			console.log("Counted " + countries.length + "countries and " + years.length + "years.");
 
 		} else {
+			errorAlert("Error interno al intentar obtener las ciudades y los años");
 			console.log("ERROR!");
 		}
 	}
@@ -77,7 +78,7 @@
 	async function getRenewableSources() {
 		console.log("Fetching renewable sources stats...");	
 		const res = await fetch("/api/v1/renewable-sources-stats?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages); 
-		/* Asking for the following data */ 
+		/* Asking for the following data for the pagination */ 
 		const next = await fetch("/api/v1/renewable-sources-stats?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages); 
 
 		if (res.ok && next.ok) {
@@ -100,6 +101,7 @@
 			
 
 		} else {
+			errorAlert("Error interno al intentar obtener todos los datos");
 			console.log("ERROR!");
 		}
 	}
@@ -123,7 +125,12 @@
 					"Content-Type": "application/json"
 				}
 			}).then(function(res) {
-				getRenewableSources();
+				if (res.ok) {
+					getRenewableSources();
+				} else {
+					errorAlert("Error interno al intentar insertar un elemento");
+				}
+				
 				/* If we want the select to be updated each time we insert, uncomment the line below */
 				/*getCountriesYears();*/
 			}); 
@@ -135,8 +142,14 @@
 		const res = await fetch("/api/v1/renewable-sources-stats/" + country + "/" + year, {
 			method: "DELETE"
 		}).then(function (res) {
-			getRenewableSources();
-			getCountriesYears();
+			if (res.ok) {
+				getRenewableSources();
+				getCountriesYears();
+			} else if (res.status == 404) {
+				errorAlert("Se ha intentado borrar un elemento inexistente.");
+			} else {
+				errorAlert("Error interno al intentar borrar un elemento concreto");
+			}
 		});
 	}
 
@@ -145,8 +158,12 @@
 		const res = await fetch("/api/v1/renewable-sources-stats/", {
 			method: "DELETE"
 		}).then(function (res) {
-			getRenewableSources();
-			getCountriesYears();
+			if (res.ok) {
+				getRenewableSources();
+				getCountriesYears();
+			} else {
+				errorAlert("Error interno al intentar borrar todos los elementos");
+			}
 		});
 	}
 
@@ -172,7 +189,9 @@
 			renewableSources = json;			
 
 			console.log("Found " + renewableSources.length + " renewable sources stats.");
+			
 		} else {
+			errorAlert("Error interno al realizar la búsqueda");
 			console.log("ERROR!");
 		}
 		
@@ -216,6 +235,20 @@
 		alert_element.style = "position: fixed; top: 0px; top: 1%; width: 90%;";
 		alert_element.className = "alert alert-dismissible in alert-danger ";
 		alert_element.innerHTML = "<strong>¡Datos borrados!</strong> Todos los datos han sido borrados correctamente";
+		
+		setTimeout(() => {
+			clearAlert();
+		}, 3000);
+	}
+
+	
+
+	function errorAlert(error) {
+		clearAlert();
+		var alert_element = document.getElementById("div_alert");
+		alert_element.style = "position: fixed; top: 0px; top: 1%; width: 90%;";
+		alert_element.className = "alert alert-dismissible in alert-danger ";
+		alert_element.innerHTML = "<strong>¡ERROR!</strong> ¡Ha ocurrido un error! " + error;
 		
 		setTimeout(() => {
 			clearAlert();
@@ -295,7 +328,7 @@
 					<td> {renewableSource['percentage-re-total']} </td>
 					<td> {renewableSource['percentage-hydropower-total']} </td>
 					<td> {renewableSource['percentage-wind-power-total']} </td>
-					<td> <Button outline color="danger" on:click="{deleteRenewableSource(renewableSource.country, renewableSource.year), deleteAlert}"> <i class="fa fa-trash" aria-hidden="true"></i> Borrar </Button> </td>
+					<td> <Button outline color="danger" on:click="{deleteRenewableSource(renewableSource.country, renewableSource.year)}" on:click={deleteAlert}> <i class="fa fa-trash" aria-hidden="true"></i> Borrar </Button> </td>
 				</tr>
 				{/each}
 			</tbody>
@@ -331,8 +364,9 @@
 		</PaginationItem>
 
 	</Pagination>
-	<Button outline  color="danger" on:click={deleteAllAlert} on:click={deleteRenewableSources} > <i class="fa fa-trash" aria-hidden="true"></i> Borrar todo </Button>
+	
 	<Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
+	<Button outline  color="danger" on:click={deleteAllAlert} on:click={deleteRenewableSources} > <i class="fa fa-trash" aria-hidden="true"></i> Borrar todo </Button>
 	
 </main>
 
