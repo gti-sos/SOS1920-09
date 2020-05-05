@@ -86,16 +86,18 @@
 			const jsonNext = await next.json();
 			pluginVehicles = json;
 
-		// checking if we have run out of elements
-		if(jsonNext.length == 0){
-			moreData = false;
+			// checking if we have run out of elements
+			if(jsonNext.length == 0){
+				moreData = false;
 			
-		}else{
-			moreData = true;
-		}
+			}
+			else{
+				moreData = true;
+			}
 
-		console.log("Received " +pluginVehicles.length+" plugin vehicles.");
-		}else{
+			console.log("Received " +pluginVehicles.length+" plugin vehicles.");
+		}
+		else{
 			console.log("ERROR!");
 		}
 	}
@@ -176,10 +178,57 @@
 		getPluginVehicles();
 	}
 
+	//These function are for the alerts
+
+	function insertAlert(){
+		clearAlert();
+		var alert_element = document.getElementById("div_alert");
+		alert_element.style = "position: fixed; top: 0px; top: 1%; width: 90%;";
+		alert_element.className = " alert alert dismissible in alert-success ";
+		alert_element.innerHTML = "<strong>¡Dato insertado!</strong> El dato ha sido insertado correctamente!";
+
+		setTimeout(() => {
+			clearAlert();
+		}, 3000);
+	}
+
+	function deleteAlert(){
+		clearAlert();
+		var alert_element = document.getElementById("div_alert");
+		alert_element.style = "position: fixed; top: 0px; top: 1%; width: 90%;";
+		alert_element.className = " alert alert dismissible in alert-danger ";
+		alert_element.innerHTML = "<strong>¡Dato borrado!</strong> El dato ha sido borrado correctamente!";
+
+		setTimeout(() => {
+			clearAlert();
+		}, 3000);
+	}
+
+	function deleteAllAlert(){
+		clearAlert();
+		var alert_element = document.getElementById("div_alert");
+		alert_element.style = "position: fixed; top: 0px; top: 1%; width: 90%;";
+		alert_element.className = " alert alert dismissible in alert-danger ";
+		alert_element.innerHTML = "<strong>¡Datos borrados!</strong> Todos los datos han sido borrados correctamente!";
+
+		setTimeout(() => {
+			clearAlert();
+		}, 3000);
+	}
+
+	function clearAlert(){
+		var alert_element = document.getElementById("div_alert");
+		alert_element.style = "display: none; ";
+		alert_element.className = "alert alert-dismissible in";
+		alert_element.innerHTML = "";
+	}
+
 </script>
 
 <main>
-
+	<!-- This div is for the alerts -->
+	<div role="alert" id="div_alert" style="display: none;">
+	</div>
 	<FormGroup> 
 		<Label for="selectCountry">Búsqueda por país </Label>
 		<Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentCountry}">
@@ -225,7 +274,7 @@
 					<td><Input type="number" bind:value="{newPluginVehicles['pev-stock']}" /></td>
 					<td><Input type="number" bind:value="{newPluginVehicles['annual-sale']}" /></td>
 					<td><Input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newPluginVehicles['cars-per-1000']}" /></td>
-					<td> <Button outline color="primary" on:click={insertPluginVehicles}> <i class="far fa-edit"></i> Insertar</Button></td>
+					<td> <Button outline color="primary" on:click={insertPluginVehicles} on:click={insertAlert}> <i class="far fa-edit"></i> Insertar</Button></td>
 				</tr>
 				{#each pluginVehicles as pluginVehicles}
 					<tr>
@@ -238,7 +287,7 @@
 						<td>{pluginVehicles['pev-stock']}</td>
 						<td>{pluginVehicles['annual-sale']}</td>
 						<td>{pluginVehicles['cars-per-1000']}</td>
-						<td><Button outline color="danger" on:click="{deletePluginVehicles(pluginVehicles.country, pluginVehicles.year)}"> <i class="fa fa-trash" aria-hidden="true"></i> Borrar</Button></td>
+						<td><Button outline color="danger" on:click="{deletePluginVehicles(pluginVehicles.country, pluginVehicles.year), deleteAlert}"> <i class="fa fa-trash" aria-hidden="true"></i> Borrar</Button></td>
 					</tr>
 				{/each}
 			</tbody>
@@ -272,6 +321,6 @@
     </Pagination>
 
 	<Button outline color="secondary" on:click="{pop}"><i class="fas fa-arrow-circle-left"></i> Atrás</Button>
-	<Button outline color="danger" on:click={deletePluginVehiclesAll} > <i class="fa fa-trash" aria-hidden="true"></i> Borrar todos</Button>
+	<Button outline color="danger" on:click={deletePluginVehiclesAll} on:click={deleteAllAlert}> <i class="fa fa-trash" aria-hidden="true"></i> Borrar todos</Button>
 
 </main>
