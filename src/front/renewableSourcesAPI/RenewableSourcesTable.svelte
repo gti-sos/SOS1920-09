@@ -127,6 +127,7 @@
 			}).then(function(res) {
 				if (res.ok) {
 					getRenewableSources();
+					insertAlert();
 				} else {
 					errorAlert("Error interno al intentar insertar un elemento");
 				}
@@ -145,6 +146,7 @@
 			if (res.ok) {
 				getRenewableSources();
 				getCountriesYears();
+				deleteAlert();
 			} else if (res.status == 404) {
 				errorAlert("Se ha intentado borrar un elemento inexistente.");
 			} else {
@@ -161,6 +163,7 @@
 			if (res.ok) {
 				getRenewableSources();
 				getCountriesYears();
+				deleteAllAlert();
 			} else {
 				errorAlert("Error interno al intentar borrar todos los elementos");
 			}
@@ -315,7 +318,7 @@
 					<td> <Input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newRenewableSource['percentage-re-total']}" /> </td>
 					<td> <Input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newRenewableSource['percentage-hydropower-total']}" /> </td>
 					<td> <Input type="number" placeholder="0.0" step="0.01" min="0" bind:value="{newRenewableSource['percentage-wind-power-total']}" /> </td>
-					<td> <Button outline color="primary" on:click={insertRenewableSources} on:click={insertAlert}> <i class="far fa-edit"></i> Insertar </Button> </td>
+					<td> <Button outline color="primary" on:click={insertRenewableSources}> <i class="far fa-edit"></i> Insertar </Button> </td>
 				</tr>
 				{#each renewableSources as renewableSource}
 				<tr>
@@ -328,7 +331,7 @@
 					<td> {renewableSource['percentage-re-total']} </td>
 					<td> {renewableSource['percentage-hydropower-total']} </td>
 					<td> {renewableSource['percentage-wind-power-total']} </td>
-					<td> <Button outline color="danger" on:click="{deleteRenewableSource(renewableSource.country, renewableSource.year)}" on:click={deleteAlert}> <i class="fa fa-trash" aria-hidden="true"></i> Borrar </Button> </td>
+					<td> <Button outline color="danger" on:click="{deleteRenewableSource(renewableSource.country, renewableSource.year)}" > <i class="fa fa-trash" aria-hidden="true"></i> Borrar </Button> </td>
 				</tr>
 				{/each}
 			</tbody>
@@ -366,7 +369,7 @@
 	</Pagination>
 	
 	<Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
-	<Button outline  color="danger" on:click={deleteAllAlert} on:click={deleteRenewableSources} > <i class="fa fa-trash" aria-hidden="true"></i> Borrar todo </Button>
+	<Button outline  color="danger" on:click={deleteRenewableSources} > <i class="fa fa-trash" aria-hidden="true"></i> Borrar todo </Button>
 	
 </main>
 
