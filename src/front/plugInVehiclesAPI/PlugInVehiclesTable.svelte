@@ -104,6 +104,21 @@
 		}
 	}
 
+	async function loadInitialPluginVehicles(){
+		console.log("Loading initial plugin vehicles stats...");
+		const res = await fetch("/api/v1/plugin-vehicles-stats/loadInitialData").then(function (res){
+				if(res.ok){
+					console.log("OK:");
+					initialDataAlert();
+					getPluginVehicles();
+				}
+				else{
+					errorAlert("Error interno al intentar obtener todos los datos iniciales!");
+					console.log("ERROR!");
+				}
+		});
+	}
+
 	async function insertPluginVehicles(){
 		console.log("Inserting plugin vehicles...");
 		if(newPluginVehicles.country == "" 
@@ -160,6 +175,9 @@
 			method: "DELETE"
 		}).then(function (res) {
 			if(res.ok){
+				// To put the correct number in pagination
+				currentPage = 1;
+				offset = 0;
 				deleteAllAlert();
 				getPluginVehicles();
 				getCountriesYears();
@@ -241,6 +259,18 @@
 			clearAlert();
 		}, 3000);
 	}
+
+	function initialDataAlert(error){
+		clearAlert();
+		var alert_element = document.getElementById("div_alert");
+		alert_element.style = "position: fixed; top: 0px; top: 1%; width: 90%;";
+		alert_element.className = " alert alert dismissible in alert-warning ";
+		alert_element.innerHTML = "<strong>¡Datos cargados!</strong> Todos los datos iniciales han sido cargados correctamente!";
+
+		setTimeout(() => {
+			clearAlert();
+		}, 3000);
+    }
 
 	function errorAlert(error){
 		clearAlert();
@@ -344,7 +374,7 @@
 		</PaginationItem>
 		{/if}
         <PaginationItem active>
-            <PaginationLink href="#">{currentPage}</PaginationLink>
+            <PaginationLink href="#/plugInVehiclesAPI">{currentPage}</PaginationLink>
 		</PaginationItem>
 		<!-- If there are more elements-->
 		{#if moreData}
@@ -359,6 +389,7 @@
     </Pagination>
 
 	<Button outline color="secondary" on:click="{pop}"><i class="fas fa-arrow-circle-left"></i> Atrás</Button>
+	<Button outline color="warning" on:click={loadInitialPluginVehicles}> <i class="fa fa-cloud-upload-alt" aria-hidden="true"></i> Cargar datos iniciales</Button>
 	<Button outline color="danger" on:click={deletePluginVehiclesAll}> <i class="fa fa-trash" aria-hidden="true"></i> Borrar todos</Button>
 
 </main>
