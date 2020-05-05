@@ -64,6 +64,7 @@
         }).then(function (res) {
             if (res.ok) {
                 getOilCoal();
+                updateAlert();
             } else if (res.status == 404){
                 errorAlert=("Se ha intentado borrar un elemento inexistente.");
             }else {
@@ -133,7 +134,7 @@
                     <td><Input type="number" bind:value="{updatedOilConsumption}"/></td>
                     <td><Input type="number" placeholder="0.0" step="0.01" min="0"  bind:value="{updatedCoalConsumption}"/></td>
                     <td><Input type="number" placeholder="0.0" step="0.01" min="0"  bind:value="{updatedNuclearEnergyConsumption}"/></td>
-                    <td> <Button outline  color="primary" on:click={updateOilCoal}  on:click={updateAlert}> <i class="fas fa-pencil-alt"></i> Actualizar</Button> </td>
+                    <td> <Button outline  color="primary" on:click={updateOilCoal}> <i class="fas fa-pencil-alt"></i> Actualizar</Button> </td>
                 </tr>
         </tbody>
         </Table>
