@@ -87,7 +87,6 @@
 			const jsonNext = await next.json();
 			renewableSources = json;
 			
-
 			/* Checking if we have run out of elements */ 
 			if (jsonNext.length == 0) {
 				moreData = false;
@@ -95,15 +94,26 @@
 				moreData = true;
 			}
 
-
 			console.log("Received " + renewableSources.length + " renewable sources stats.");
-
-			
-
 		} else {
 			errorAlert("Error interno al intentar obtener todos los datos");
 			console.log("ERROR!");
 		}
+	}
+
+	async function loadInitialRenewableSources() {
+		console.log("Loading initial renewable sources stats...");	
+		const res = await fetch("/api/v1/renewable-sources-stats/loadInitialData").then(function(res) {
+				if (res.ok) {
+					console.log("Ok");
+					getRenewableSources();
+					initialDataAlert();
+				} else {
+					errorAlert("Error interno al intentar obtener los datos iniciales");
+					console.log("ERROR!");
+				}
+			}); 
+
 	}
 
 	async function insertRenewableSources() {
@@ -161,6 +171,9 @@
 			method: "DELETE"
 		}).then(function (res) {
 			if (res.ok) {
+				/* To put the correct number in pagination */
+				currentPage = 1;
+				offset = 0;
 				getRenewableSources();
 				getCountriesYears();
 				deleteAllAlert();
@@ -244,7 +257,17 @@
 		}, 3000);
 	}
 
-	
+	function initialDataAlert() {
+		clearAlert();
+		var alert_element = document.getElementById("div_alert");
+		alert_element.style = "position: fixed; top: 0px; top: 1%; width: 90%;";
+		alert_element.className = "alert alert-dismissible in alert-warning ";
+		alert_element.innerHTML = "<strong>¡Datos iniciales!</strong> Se han generado datos iniciales correctamente ";
+		
+		setTimeout(() => {
+			clearAlert();
+		}, 3000);
+	}
 
 	function errorAlert(error) {
 		clearAlert();
@@ -369,7 +392,8 @@
 	</Pagination>
 	
 	<Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
-	<Button outline  color="danger" on:click={deleteRenewableSources} > <i class="fa fa-trash" aria-hidden="true"></i> Borrar todo </Button>
+	<Button outline color="warning" on:click={loadInitialRenewableSources} > <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i> Cargar datos iniciales </Button>
+	<Button outline color="danger" on:click={deleteRenewableSources} > <i class="fa fa-trash" aria-hidden="true"></i> Borrar todo </Button>
 	
 </main>
 
