@@ -1,13 +1,21 @@
 # SOS1920-09
-This is an API that manages data related to [renewable energies](https://documenter.getpostman.com/view/10805606/SzYT4Lrw), [plug-in cars sales](https://documenter.getpostman.com/view/10674128/SzYT4Lrv) and [primary energy sources](https://documenter.getpostman.com/view/10667105/SzYT4Lrx).
+This is an API that manages data related to [renewable energies](http://sos1920-09.herokuapp.com/#/renewableSourcesAPI), [plug-in cars sales](http://sos1920-09.herokuapp.com/#/plugInVehiclesAPI) and [primary energy sources](http://sos1920-09.herokuapp.com/#/oilCoalNuclearEnergyConsumptionAPI).
 
-* https://documenter.getpostman.com/view/10674128/SzYT4Lrv
-* https://documenter.getpostman.com/view/10805606/SzYT4Lrw
-* https://documenter.getpostman.com/view/10667105/SzYT4Lrx
+Postman:
+* [Fernando Baeza Rodríguez](https://documenter.getpostman.com/view/10674128/SzYT4Lrv).
+* [Francisco Mohedano Caro](https://documenter.getpostman.com/view/10805606/SzYT4Lrw).
+* [Rubén Faraco Iglesia](https://documenter.getpostman.com/view/10667105/SzYT4Lrx).
+
+URL GUI:
+* http://sos1920-09.herokuapp.com/#
+
+URL Individual GUI APIs:
+* [Fernando Baeza Rodríguez](http://sos1920-09.herokuapp.com/#/plugInVehiclesAPI).
+* [Francisco Mohedano Caro](http://sos1920-09.herokuapp.com/#/renewableSourcesAPI).
+* [Rubén Faraco Iglesia](http://sos1920-09.herokuapp.com/#/oilCoalNuclearEnergyConsumptionAPI).
 
 Project members: 
-
-* Fernando Baeza Rodríguez.
-* Francisco Mohedano Caro.
-* Rubén Faraco Iglesia.
+* [Fernando Baeza Rodríguez](https://github.com/nandobaeza97).
+* [Francisco Mohedano Caro](https://github.com/pacomc).
+* [Rubén Faraco Iglesia](https://github.com/rubenfaracoi).
 
