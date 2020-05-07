@@ -4,8 +4,8 @@ This is an API that manages data related to [renewable energies](http://sos1920-
 Postman:
 * [Fernando Baeza Rodríguez](https://documenter.getpostman.com/view/10674128/SzYT4Lrv).
 * Francisco Mohedano Caro
-* * [v1](https://documenter.getpostman.com/view/10805606/SzYT4Lrw).
-* * [v2](https://documenter.getpostman.com/view/10805606/Szme3xGu).
+ * [v1](https://documenter.getpostman.com/view/10805606/SzYT4Lrw).
+ * [v2](https://documenter.getpostman.com/view/10805606/Szme3xGu).
 * [Rubén Faraco Iglesia](https://documenter.getpostman.com/view/10667105/SzYT4Lrx).
 
 
