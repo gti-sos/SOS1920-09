@@ -10077,7 +10077,7 @@ var app = (function () {
     }
 
     // (301:2) <Label for="selectCountry">
-    function create_default_slot_21(ctx) {
+    function create_default_slot_21$1(ctx) {
     	let t;
 
     	const block = {
@@ -10094,7 +10094,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_21.name,
+    		id: create_default_slot_21$1.name,
     		type: "slot",
     		source: "(301:2) <Label for=\\\"selectCountry\\\">",
     		ctx
@@ -10232,7 +10232,7 @@ var app = (function () {
     	const label = new Label({
     			props: {
     				for: "selectCountry",
-    				$$slots: { default: [create_default_slot_21] },
+    				$$slots: { default: [create_default_slot_21$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -12339,7 +12339,7 @@ var app = (function () {
     	);
     }
 
-    function initialDataAlert(error) {
+    function initialDataAlert$1(error) {
     	clearAlert$1();
     	var alert_element = document.getElementById("div_alert");
     	alert_element.style = "position: fixed; top: 0px; top: 1%; width: 90%;";
@@ -12467,7 +12467,7 @@ var app = (function () {
     		const res = await fetch("/api/v1/plugin-vehicles-stats/loadInitialData").then(function (res) {
     			if (res.ok) {
     				console.log("OK:");
-    				initialDataAlert();
+    				initialDataAlert$1();
     				getPluginVehicles();
     			} else {
     				errorAlert("Error interno al intentar obtener todos los datos iniciales!");
@@ -12647,7 +12647,7 @@ var app = (function () {
     		insertAlert: insertAlert$1,
     		deleteAlert: deleteAlert$1,
     		deleteAllAlert: deleteAllAlert$1,
-    		initialDataAlert,
+    		initialDataAlert: initialDataAlert$1,
     		errorAlert,
     		clearAlert: clearAlert$1
     	});
@@ -12985,7 +12985,7 @@ var app = (function () {
     }
 
     // (304:3) <Label for="selectCountry">
-    function create_default_slot_21(ctx) {
+    function create_default_slot_21$2(ctx) {
     	let t;
 
     	const block = {
@@ -13002,7 +13002,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_21.name,
+    		id: create_default_slot_21$2.name,
     		type: "slot",
     		source: "(304:3) <Label for=\\\"selectCountry\\\">",
     		ctx
@@ -13140,7 +13140,7 @@ var app = (function () {
     	const label = new Label({
     			props: {
     				for: "selectCountry",
-    				$$slots: { default: [create_default_slot_21] },
+    				$$slots: { default: [create_default_slot_21$2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -15104,7 +15104,7 @@ var app = (function () {
     	);
     }
 
-    function initialDataAlert() {
+    function initialDataAlert$2() {
     	clearAlert$2();
     	var alert_element = document.getElementById("div_alert");
     	alert_element.style = "position: fixed; top: 0px; top: 1%; width: 90%;";
@@ -15233,7 +15233,7 @@ var app = (function () {
     			if (res.ok) {
     				console.log("Ok");
     				getRenewableSources();
-    				initialDataAlert();
+    				initialDataAlert$2();
     			} else {
     				errorAlert$1("Error interno al intentar obtener los datos iniciales");
     				console.log("ERROR!");
@@ -15411,7 +15411,7 @@ var app = (function () {
     		insertAlert: insertAlert$2,
     		deleteAlert: deleteAlert$2,
     		deleteAllAlert: deleteAllAlert$2,
-    		initialDataAlert,
+    		initialDataAlert: initialDataAlert$2,
     		errorAlert: errorAlert$1,
     		clearAlert: clearAlert$2
     	});
