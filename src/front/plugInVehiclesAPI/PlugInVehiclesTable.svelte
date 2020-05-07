@@ -17,6 +17,8 @@
 	import Form from "sveltestrap/src/Form.svelte";
 	import FormGroup from "sveltestrap/src/FormGroup.svelte";
 
+	const BASE_API_URL = "/api/v2/plugin-vehicles-stats";
+
 	let pluginVehicles = [];
 	let newPluginVehicles = {
 		"country": "",
@@ -48,7 +50,7 @@
 	but taking care we are asking for all the data
     */
     async function getCountriesYears() {
-        const res = await fetch("/api/v1/plugin-vehicles-stats");
+        const res = await fetch(BASE_API_URL);
  
         /* Getting the countries for the select */
         if (res.ok) {
@@ -77,8 +79,8 @@
 
 	async function getPluginVehicles(){
 		console.log("Fetching plugin vehicles...");
-		const res = await fetch("/api/v1/plugin-vehicles-stats?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages);
-		const next = await fetch("/api/v1/plugin-vehicles-stats?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages);
+		const res = await fetch(BASE_API_URL + "?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages);
+		const next = await fetch(BASE_API_URL + "?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages);
 		// Asking for the following data
 
 		if (res.ok && next.ok){
@@ -106,7 +108,7 @@
 
 	async function loadInitialPluginVehicles(){
 		console.log("Loading initial plugin vehicles stats...");
-		const res = await fetch("/api/v1/plugin-vehicles-stats/loadInitialData").then(function (res){
+		const res = await fetch(BASE_API_URL + "/loadInitialData").then(function (res){
 				if(res.ok){
 					console.log("OK:");
 					initialDataAlert();
@@ -129,7 +131,7 @@
 			alert("Se debe incluir el nombre del país y del año");
 		}
 		else{
-			const res = await fetch("/api/v1/plugin-vehicles-stats", {
+			const res = await fetch(BASE_API_URL, {
 				method: "POST",
 				body: JSON.stringify(newPluginVehicles),
 				headers:{
@@ -152,7 +154,7 @@
 
 	async function deletePluginVehicles(country, year) {
 		console.log("Deleting plugin vehicles...");
-		const res = await fetch("/api/v1/plugin-vehicles-stats/" + country + "/" + year, {
+		const res = await fetch(BASE_API_URL + "/" + country + "/" + year, {
 			method: "DELETE"
 		}).then(function (res) {
 			if(res.ok){
@@ -171,7 +173,7 @@
 	
 	async function deletePluginVehiclesAll() {
 		console.log("Deleting all plugin vehicles...");
-		const res = await fetch("/api/v1/plugin-vehicles-stats", {
+		const res = await fetch(BASE_API_URL, {
 			method: "DELETE"
 		}).then(function (res) {
 			if(res.ok){
@@ -193,7 +195,7 @@
 		console.log("Searching data: " + country + "and " + year);
 
 		/* Checking if the fields are empty */
-		var url = "/api/v1/plugin-vehicles-stats";
+		var url = BASE_API_URL;
 
 		if(country != "-" && year != "-"){
 			url = url + "?country=" + country + "&year=" + year;
