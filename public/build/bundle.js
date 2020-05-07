@@ -10077,7 +10077,7 @@ var app = (function () {
     }
 
     // (301:2) <Label for="selectCountry">
-    function create_default_slot_21(ctx) {
+    function create_default_slot_21$1(ctx) {
     	let t;
 
     	const block = {
@@ -10094,7 +10094,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_21.name,
+    		id: create_default_slot_21$1.name,
     		type: "slot",
     		source: "(301:2) <Label for=\\\"selectCountry\\\">",
     		ctx
@@ -10232,7 +10232,7 @@ var app = (function () {
     	const label = new Label({
     			props: {
     				for: "selectCountry",
-    				$$slots: { default: [create_default_slot_21] },
+    				$$slots: { default: [create_default_slot_21$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -12339,7 +12339,7 @@ var app = (function () {
     	);
     }
 
-    function initialDataAlert(error) {
+    function initialDataAlert$1(error) {
     	clearAlert$1();
     	var alert_element = document.getElementById("div_alert");
     	alert_element.style = "position: fixed; top: 0px; top: 1%; width: 90%;";
@@ -12467,7 +12467,7 @@ var app = (function () {
     		const res = await fetch("/api/v1/plugin-vehicles-stats/loadInitialData").then(function (res) {
     			if (res.ok) {
     				console.log("OK:");
-    				initialDataAlert();
+    				initialDataAlert$1();
     				getPluginVehicles();
     			} else {
     				errorAlert("Error interno al intentar obtener todos los datos iniciales!");
@@ -12647,7 +12647,7 @@ var app = (function () {
     		insertAlert: insertAlert$1,
     		deleteAlert: deleteAlert$1,
     		deleteAllAlert: deleteAllAlert$1,
-    		initialDataAlert,
+    		initialDataAlert: initialDataAlert$1,
     		errorAlert,
     		clearAlert: clearAlert$1
     	});
@@ -12985,7 +12985,7 @@ var app = (function () {
     }
 
     // (304:3) <Label for="selectCountry">
-    function create_default_slot_21(ctx) {
+    function create_default_slot_21$2(ctx) {
     	let t;
 
     	const block = {
@@ -13002,7 +13002,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_21.name,
+    		id: create_default_slot_21$2.name,
     		type: "slot",
     		source: "(304:3) <Label for=\\\"selectCountry\\\">",
     		ctx
@@ -13024,7 +13024,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*country*/ ctx[35];
     			option.value = option.__value;
-    			add_location(option, file$e, 306, 4, 9203);
+    			add_location(option, file$e, 306, 4, 9115);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -13078,7 +13078,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$e, 308, 4, 9248);
+    			add_location(option, file$e, 308, 4, 9160);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -13140,7 +13140,7 @@ var app = (function () {
     	const label = new Label({
     			props: {
     				for: "selectCountry",
-    				$$slots: { default: [create_default_slot_21] },
+    				$$slots: { default: [create_default_slot_21$2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -13268,7 +13268,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*year*/ ctx[32];
     			option.value = option.__value;
-    			add_location(option, file$e, 316, 4, 9479);
+    			add_location(option, file$e, 316, 4, 9391);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -13322,7 +13322,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$e, 318, 4, 9521);
+    			add_location(option, file$e, 318, 4, 9433);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -13482,7 +13482,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Buscar");
     			attr_dev(i, "class", "fas fa-search");
-    			add_location(i, file$e, 322, 109, 9681);
+    			add_location(i, file$e, 322, 109, 9593);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -13515,7 +13515,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Insertar");
     			attr_dev(i, "class", "far fa-edit");
-    			add_location(i, file$e, 343, 77, 10791);
+    			add_location(i, file$e, 343, 77, 10703);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -13549,7 +13549,7 @@ var app = (function () {
     			t = text(" Borrar");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$e, 356, 125, 11437);
+    			add_location(i, file$e, 356, 125, 11349);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -13638,14 +13638,14 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t10 = space();
     			attr_dev(a, "href", a_href_value = "#/renewable-sources-stats/" + /*renewableSource*/ ctx[29].country + "/" + /*renewableSource*/ ctx[29].year);
-    			add_location(a, file$e, 348, 6, 10935);
-    			add_location(td0, file$e, 347, 5, 10920);
-    			add_location(td1, file$e, 352, 5, 11087);
-    			add_location(td2, file$e, 353, 5, 11127);
-    			add_location(td3, file$e, 354, 5, 11185);
-    			add_location(td4, file$e, 355, 5, 11251);
-    			add_location(td5, file$e, 356, 5, 11317);
-    			add_location(tr, file$e, 346, 4, 10909);
+    			add_location(a, file$e, 348, 6, 10847);
+    			add_location(td0, file$e, 347, 5, 10832);
+    			add_location(td1, file$e, 352, 5, 10999);
+    			add_location(td2, file$e, 353, 5, 11039);
+    			add_location(td3, file$e, 354, 5, 11097);
+    			add_location(td4, file$e, 355, 5, 11163);
+    			add_location(td5, file$e, 356, 5, 11229);
+    			add_location(tr, file$e, 346, 4, 10821);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -13903,22 +13903,22 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$e, 328, 5, 9782);
-    			add_location(th1, file$e, 329, 5, 9804);
-    			add_location(th2, file$e, 330, 5, 9825);
-    			add_location(th3, file$e, 331, 5, 9883);
-    			add_location(th4, file$e, 332, 5, 9961);
-    			add_location(th5, file$e, 333, 5, 10015);
-    			add_location(tr0, file$e, 327, 4, 9771);
-    			add_location(thead, file$e, 326, 3, 9758);
-    			add_location(td0, file$e, 338, 5, 10087);
-    			add_location(td1, file$e, 339, 5, 10192);
-    			add_location(td2, file$e, 340, 5, 10295);
-    			add_location(td3, file$e, 341, 5, 10431);
-    			add_location(td4, file$e, 342, 5, 10575);
-    			add_location(td5, file$e, 343, 5, 10719);
-    			add_location(tr1, file$e, 337, 4, 10076);
-    			add_location(tbody, file$e, 336, 3, 10063);
+    			add_location(th0, file$e, 328, 5, 9694);
+    			add_location(th1, file$e, 329, 5, 9716);
+    			add_location(th2, file$e, 330, 5, 9737);
+    			add_location(th3, file$e, 331, 5, 9795);
+    			add_location(th4, file$e, 332, 5, 9873);
+    			add_location(th5, file$e, 333, 5, 9927);
+    			add_location(tr0, file$e, 327, 4, 9683);
+    			add_location(thead, file$e, 326, 3, 9670);
+    			add_location(td0, file$e, 338, 5, 9999);
+    			add_location(td1, file$e, 339, 5, 10104);
+    			add_location(td2, file$e, 340, 5, 10207);
+    			add_location(td3, file$e, 341, 5, 10343);
+    			add_location(td4, file$e, 342, 5, 10487);
+    			add_location(td5, file$e, 343, 5, 10631);
+    			add_location(tr1, file$e, 337, 4, 9988);
+    			add_location(tbody, file$e, 336, 3, 9975);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -14775,7 +14775,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$e, 393, 53, 12660);
+    			add_location(i, file$e, 393, 53, 12572);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -14809,7 +14809,7 @@ var app = (function () {
     			t = text(" Cargar datos iniciales");
     			attr_dev(i, "class", "fas fa-cloud-upload-alt");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$e, 394, 74, 12792);
+    			add_location(i, file$e, 394, 74, 12704);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -14843,7 +14843,7 @@ var app = (function () {
     			t = text(" Borrar todo");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$e, 395, 68, 12953);
+    			add_location(i, file$e, 395, 68, 12865);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -14953,8 +14953,8 @@ var app = (function () {
     			attr_dev(div, "role", "alert");
     			attr_dev(div, "id", "div_alert");
     			set_style(div, "display", "none");
-    			add_location(div, file$e, 296, 1, 8836);
-    			add_location(main, file$e, 294, 0, 8789);
+    			add_location(div, file$e, 296, 1, 8748);
+    			add_location(main, file$e, 294, 0, 8701);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -15059,6 +15059,9 @@ var app = (function () {
     	return block;
     }
 
+    const BASE_API_URL = "/api/v2/renewable-sources-stats";
+
+    /* These functions are for the alerts */
     function insertAlert$2() {
     	clearAlert$2();
     	var alert_element = document.getElementById("div_alert");
@@ -15104,7 +15107,7 @@ var app = (function () {
     	);
     }
 
-    function initialDataAlert() {
+    function initialDataAlert$2() {
     	clearAlert$2();
     	var alert_element = document.getElementById("div_alert");
     	alert_element.style = "position: fixed; top: 0px; top: 1%; width: 90%;";
@@ -15171,7 +15174,7 @@ var app = (function () {
     but taking care we are asking for all the data.
     */
     	async function getCountriesYears() {
-    		const res = await fetch("/api/v1/renewable-sources-stats");
+    		const res = await fetch(BASE_API_URL);
 
     		/* Getting the countries for the select */
     		if (res.ok) {
@@ -15201,10 +15204,10 @@ var app = (function () {
 
     	async function getRenewableSources() {
     		console.log("Fetching renewable sources stats...");
-    		const res = await fetch("/api/v1/renewable-sources-stats?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages);
+    		const res = await fetch(BASE_API_URL + "?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages);
 
     		/* Asking for the following data for the pagination */
-    		const next = await fetch("/api/v1/renewable-sources-stats?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages);
+    		const next = await fetch(BASE_API_URL + "?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages);
 
     		if (res.ok && next.ok) {
     			console.log("Ok:");
@@ -15229,11 +15232,11 @@ var app = (function () {
     	async function loadInitialRenewableSources() {
     		console.log("Loading initial renewable sources stats...");
 
-    		const res = await fetch("/api/v1/renewable-sources-stats/loadInitialData").then(function (res) {
+    		const res = await fetch(BASE_API_URL + "/loadInitialData").then(function (res) {
     			if (res.ok) {
     				console.log("Ok");
     				getRenewableSources();
-    				initialDataAlert();
+    				initialDataAlert$2();
     			} else {
     				errorAlert$1("Error interno al intentar obtener los datos iniciales");
     				console.log("ERROR!");
@@ -15248,7 +15251,7 @@ var app = (function () {
     		if (newRenewableSource.country == "" || newRenewableSource.country == null || newRenewableSource.year == "" || newRenewableSource.year == null) {
     			alert("Se debe incluir el nombre del país y el año obligatoriamente");
     		} else {
-    			const res = await fetch("/api/v1/renewable-sources-stats", {
+    			const res = await fetch(BASE_API_URL, {
     				method: "POST",
     				body: JSON.stringify(newRenewableSource),
     				headers: { "Content-Type": "application/json" }
@@ -15266,7 +15269,7 @@ var app = (function () {
     	async function deleteRenewableSource(country, year) {
     		console.log("Deleting renewable resource...");
 
-    		const res = await fetch("/api/v1/renewable-sources-stats/" + country + "/" + year, { method: "DELETE" }).then(function (res) {
+    		const res = await fetch(BASE_API_URL + "/" + country + "/" + year, { method: "DELETE" }).then(function (res) {
     			if (res.ok) {
     				getRenewableSources();
     				getCountriesYears();
@@ -15282,7 +15285,7 @@ var app = (function () {
     	async function deleteRenewableSources() {
     		console.log("Deleting renewable resources...");
 
-    		const res = await fetch("/api/v1/renewable-sources-stats/", { method: "DELETE" }).then(function (res) {
+    		const res = await fetch(BASE_API_URL + "/", { method: "DELETE" }).then(function (res) {
     			if (res.ok) {
     				/* To put the correct number in pagination */
     				$$invalidate(5, currentPage = 1);
@@ -15301,7 +15304,7 @@ var app = (function () {
     		console.log("Searching data: " + country + " and " + year);
 
     		/* Checking if the fields are empty */
-    		var url = "/api/v1/renewable-sources-stats";
+    		var url = BASE_API_URL;
 
     		if (country != "-" && year != "-") {
     			url = url + "?country=" + country + "&year=" + year;
@@ -15390,6 +15393,7 @@ var app = (function () {
     		Pagination,
     		PaginationItem,
     		PaginationLink,
+    		BASE_API_URL,
     		renewableSources,
     		newRenewableSource,
     		countries,
@@ -15411,7 +15415,7 @@ var app = (function () {
     		insertAlert: insertAlert$2,
     		deleteAlert: deleteAlert$2,
     		deleteAllAlert: deleteAllAlert$2,
-    		initialDataAlert,
+    		initialDataAlert: initialDataAlert$2,
     		errorAlert: errorAlert$1,
     		clearAlert: clearAlert$2
     	});

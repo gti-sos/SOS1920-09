@@ -17,7 +17,7 @@
 
 	import { Pagination, PaginationItem, PaginationLink } from 'sveltestrap';
 
-	
+	const BASE_API_URL = "/api/v2/renewable-sources-stats";
 	
 	let renewableSources = [];
 	let newRenewableSource = {
@@ -48,7 +48,7 @@
 	but taking care we are asking for all the data.
 	*/
 	async function getCountriesYears() {
-		const res = await fetch("/api/v1/renewable-sources-stats");
+		const res = await fetch(BASE_API_URL);
 
 		/* Getting the countries for the select */
 		if (res.ok) {
@@ -77,9 +77,9 @@
 
 	async function getRenewableSources() {
 		console.log("Fetching renewable sources stats...");	
-		const res = await fetch("/api/v1/renewable-sources-stats?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages); 
+		const res = await fetch(BASE_API_URL + "?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages); 
 		/* Asking for the following data for the pagination */ 
-		const next = await fetch("/api/v1/renewable-sources-stats?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages); 
+		const next = await fetch(BASE_API_URL + "?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages); 
 
 		if (res.ok && next.ok) {
 			console.log("Ok:");
@@ -103,7 +103,7 @@
 
 	async function loadInitialRenewableSources() {
 		console.log("Loading initial renewable sources stats...");	
-		const res = await fetch("/api/v1/renewable-sources-stats/loadInitialData").then(function(res) {
+		const res = await fetch(BASE_API_URL + "/loadInitialData").then(function(res) {
 				if (res.ok) {
 					console.log("Ok");
 					getRenewableSources();
@@ -128,7 +128,7 @@
 			alert("Se debe incluir el nombre del país y el año obligatoriamente");
 
 		} else {
-			const res = await fetch("/api/v1/renewable-sources-stats", {
+			const res = await fetch(BASE_API_URL, {
 				method: "POST",
 				body: JSON.stringify(newRenewableSource),
 				headers: {
@@ -150,7 +150,7 @@
 
 	async function deleteRenewableSource(country, year) {
 		console.log("Deleting renewable resource...");
-		const res = await fetch("/api/v1/renewable-sources-stats/" + country + "/" + year, {
+		const res = await fetch(BASE_API_URL + "/" + country + "/" + year, {
 			method: "DELETE"
 		}).then(function (res) {
 			if (res.ok) {
@@ -167,7 +167,7 @@
 
 	async function deleteRenewableSources() {
 		console.log("Deleting renewable resources...");
-		const res = await fetch("/api/v1/renewable-sources-stats/", {
+		const res = await fetch(BASE_API_URL + "/", {
 			method: "DELETE"
 		}).then(function (res) {
 			if (res.ok) {
@@ -187,7 +187,7 @@
 		console.log("Searching data: " + country + " and " + year);
 
 		/* Checking if the fields are empty */
-		var url = "/api/v1/renewable-sources-stats";
+		var url = BASE_API_URL;
 
 		if (country != "-" && year != "-") {
 			url = url + "?country=" + country + "&year=" + year; 
