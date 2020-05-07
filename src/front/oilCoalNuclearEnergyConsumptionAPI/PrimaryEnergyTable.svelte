@@ -1,5 +1,8 @@
 <script>
-	import { onMount } from "svelte";
+	import {
+		 onMount 
+		} 
+	from "svelte";
 	import Table from "sveltestrap/src/Table.svelte";
 	import Button from "sveltestrap/src/Button.svelte";
 	import Input from "sveltestrap/src/Input.svelte";
@@ -10,6 +13,8 @@
 	import {
 		pop
 	} from "svelte-spa-router";
+	
+	const BASE_API_URL = "/api/v2/oil-coal-nuclear-energy-consumption-stats";
 	let oilEnergy = [];
 	let newOilEnergy = {
 		"country": "",
@@ -38,7 +43,7 @@
 
 
 	async function getCountriesYears() {
-        const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats");
+        const res = await fetch(BASE_API_URL);
  
         /* Getting the countries for the select */
         if (res.ok) {
@@ -68,9 +73,9 @@
 
 	async function getOilEnergy() {
         console.log("Fetching oil scoal stats..."); 
-        const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages); 
+        const res = await fetch(BASE_API_URL + "?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages); 
         /* Asking for the following data */ 
-        const next = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages); 
+        const next = await fetch(BASE_API_URL + "?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages); 
  
         if (res.ok && next.ok) {
             console.log("Ok:");
@@ -95,7 +100,7 @@
 
 	async function loadInitialOilEnergy() {
         console.log("Loading initial oil scoal stats data..."); 
-        const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats/loadInitialData").then(function (res) {
+        const res = await fetch(BASE_API_URL + "/loadInitialData").then(function (res) {
 			if (res.ok){
 				console.log("OK");
 				getOilEnergy();
@@ -120,7 +125,7 @@
 			alert("Es obligatorio el campo País y año");
 
 		} else {
-			const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats", {
+			const res = await fetch(BASE_API_URL, {
 				method: "POST",
 				body: JSON.stringify(newOilEnergy),
 				headers: {
@@ -142,7 +147,7 @@
 
 	async function deleteOilEnergy(country, year) {
 		console.log("Deleting oil coal consumption...");
-		const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats" + "/" + country + "/" + year, {
+		const res = await fetch(BASE_API_URL + "/" + country + "/" + year, {
 			method: "DELETE"
 		}).then(function (res) {
 			if (res.ok){
@@ -160,7 +165,7 @@
 
 	async function deleteOilEnergys() {
 		console.log("Deleting oil coal consumptions...");
-		const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats", {
+		const res = await fetch(BASE_API_URL + "/", {
 			method: "DELETE"
 		}).then(function (res) {
 			if (res.ok){
@@ -176,33 +181,10 @@
 		});
 	}
 
-
-	async function searchYears(country) {
-		console.log("Searching years in country...");
-		const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats/" + country)
-
-		if (res.ok) {
-			const json = await res.json();
-			oilEnergy = json;
-
-			oilEnergy.map((d) => {
-				return d.year;
-			});
-
-			console.log("Update years")
-		} else {
-			console.log("ERROR!")
-		}
-
-
-
-
-	}
-
 	async function search(country, year) {
 		console.log("Searching data: " + country + "and " + year);
 		/* Checking if it fields is empty */
-		var url = "/api/v1/oil-coal-nuclear-energy-consumption-stats";
+		var url = BASE_API_URL;
 
 		if (country != "-" && year != "-") {
 			url = url + "?country=" + country + "&year=" + year;

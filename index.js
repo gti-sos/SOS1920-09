@@ -6,7 +6,8 @@ const plugInVehiclesAPIv1 = require("./src/back/plugInVehiclesAPI/v1");
 const plugInVehiclesAPIv2 = require("./src/back/plugInVehiclesAPI/v2");
 const renewableSourcesAPIv1 = require("./src/back/renewableSourcesAPI/v1");
 const renewableSourcesAPIv2 = require("./src/back/renewableSourcesAPI/v2");
-const oilCoalNuclearEnergyConsumptionAPI = require("./src/back/oilCoalNuclearEnergyConsumptionAPI");
+const oilCoalNuclearEnergyConsumptionAPIv1 = require("./src/back/oilCoalNuclearEnergyConsumptionAPI/v1");
+const oilCoalNuclearEnergyConsumptionAPIv2 = require("./src/back/oilCoalNuclearEnergyConsumptionAPI/v2");
 
 var app = express();
 
@@ -16,7 +17,10 @@ plugInVehiclesAPIv1(app);
 plugInVehiclesAPIv2(app);
 renewableSourcesAPIv1(app);
 renewableSourcesAPIv2(app);
-oilCoalNuclearEnergyConsumptionAPI(app);
+oilCoalNuclearEnergyConsumptionAPIv1(app);
+oilCoalNuclearEnergyConsumptionAPIv2(app);
+
+
 
 var port = process.env.PORT || 12345;
 
