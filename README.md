@@ -2,7 +2,9 @@
 This is an API that manages data related to [renewable energies](http://sos1920-09.herokuapp.com/#/renewableSourcesAPI), [plug-in cars sales](http://sos1920-09.herokuapp.com/#/plugInVehiclesAPI) and [primary energy sources](http://sos1920-09.herokuapp.com/#/oilCoalNuclearEnergyConsumptionAPI).
 
 Postman:
-* [Fernando Baeza Rodríguez](https://documenter.getpostman.com/view/10674128/SzYT4Lrv).
+* Fernando Baeza Rodríguez:
+* * [v1](https://documenter.getpostman.com/view/10674128/SzYT4Lrv)
+* * [v2](https://documenter.getpostman.com/view/10674128/Szme3xWC)
 * Francisco Mohedano Caro:
 * * [v1](https://documenter.getpostman.com/view/10805606/SzYT4Lrw)
 * * [v2](https://documenter.getpostman.com/view/10805606/Szme3xGu)
