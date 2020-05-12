@@ -202,7 +202,7 @@
 
 	function search (country, year) {
 		setOffset(0);
-		getRenewableSources(currentCountry, currentYear);
+		getRenewableSources(country, year);
 	}
 
 	function setOffset (newOffset) {
@@ -302,12 +302,8 @@
 			<Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentCountry}">
 				
 				{#each countries as country}
-				<!-- The if to conserve the option selected after search and delete -->
-				{#if country == currentCountry}
-				<option selected="selected">{country}</option>
-				{:else}
+
 				<option>{country}</option>
-				{/if}
 				{/each}
 				<option>-</option>
 			</Input>
