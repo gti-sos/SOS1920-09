@@ -39,7 +39,7 @@
 	let currentPage = 1; /* We could use just one variable offset or currentPage, we leave both */
 	let moreData = true; 
 
-	onMount(getRenewableSources);
+	onMount(() => { getRenewableSources(currentCountry, currentYear); });
 	onMount(getCountriesYears);
 
 	/* 
@@ -75,11 +75,22 @@
 		}
 	}
 
-	async function getRenewableSources() {
+	async function getRenewableSources(country, year) {
 		console.log("Fetching renewable sources stats...");	
-		const res = await fetch(BASE_API_URL + "?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages); 
+		/* Checking if the fields are empty */
+		var url = BASE_API_URL + "?limit=" + numberElementsPages;
+
+		if (country != "-" && year != "-") {
+			url = url + "&country=" + country + "&year=" + year;
+		} else if (country != "-" && year == "-") {
+			url = url + "&country=" + country;
+		} else if (country == "-" && year != "-") {
+			url = url + "&year=" + year;
+		}
+
+		const res = await fetch(url + "&offset=" + numberElementsPages * offset ); 
 		/* Asking for the following data for the pagination */ 
-		const next = await fetch(BASE_API_URL + "?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages); 
+		const next = await fetch(url + "&offset=" + numberElementsPages * (offset + 1)); 
 
 		if (res.ok && next.ok) {
 			console.log("Ok:");
@@ -106,7 +117,11 @@
 		const res = await fetch(BASE_API_URL + "/loadInitialData").then(function(res) {
 				if (res.ok) {
 					console.log("Ok");
-					getRenewableSources();
+					/* Putting the current year and the country to remove the search */
+					currentYear = "-";
+					currentCountry = "-";
+					getRenewableSources(currentCountry, currentYear);
+					getCountriesYears();
 					initialDataAlert();
 				} else {
 					errorAlert("Error interno al intentar obtener los datos iniciales");
@@ -136,14 +151,15 @@
 				}
 			}).then(function(res) {
 				if (res.ok) {
-					getRenewableSources();
+					/* If we want the select to be updated each time we insert, uncomment the line below */
+					/*getCountriesYears();*/
+					getRenewableSources(currentCountry, currentYear);
 					insertAlert();
 				} else {
 					errorAlert("Error interno al intentar insertar un elemento");
 				}
 				
-				/* If we want the select to be updated each time we insert, uncomment the line below */
-				/*getCountriesYears();*/
+				
 			}); 
 		}
 	}
@@ -154,8 +170,10 @@
 			method: "DELETE"
 		}).then(function (res) {
 			if (res.ok) {
-				getRenewableSources();
-				getCountriesYears();
+				getRenewableSources(currentCountry, currentYear);
+				/* If we want to delete the entry in the select, uncomment the line below */
+				/* We decided to conserve the option because we find it more logic */
+				/* getCountriesYears(); */
 				deleteAlert();
 			} else if (res.status == 404) {
 				errorAlert("Se ha intentado borrar un elemento inexistente.");
@@ -172,9 +190,10 @@
 		}).then(function (res) {
 			if (res.ok) {
 				/* To put the correct number in pagination */
-				currentPage = 1;
-				offset = 0;
-				getRenewableSources();
+				setOffset(0);
+				currentYear = "-";
+				currentCountry = "-";
+				getRenewableSources(currentCountry, currentYear);
 				getCountriesYears();
 				deleteAllAlert();
 			} else {
@@ -183,40 +202,20 @@
 		});
 	}
 
-	async function search(country, year) {
-		console.log("Searching data: " + country + " and " + year);
+	function search (country, year) {
+		setOffset(0);
+		getRenewableSources(country, year);
+	}
 
-		/* Checking if the fields are empty */
-		var url = BASE_API_URL;
-
-		if (country != "-" && year != "-") {
-			url = url + "?country=" + country + "&year=" + year; 
-		} else if (country != "-" && year == "-") {
-			url = url + "?country=" + country;
-		} else if (country == "-" && year != "-") {
-			url = url + "?year=" + year;
-		}
-
-		const res = await fetch(url);
-
-		if (res.ok) {
-			console.log("Ok:");
-			const json = await res.json();
-			renewableSources = json;			
-
-			console.log("Found " + renewableSources.length + " renewable sources stats.");
-			
-		} else {
-			errorAlert("Error interno al realizar la búsqueda");
-			console.log("ERROR!");
-		}
-		
+	function setOffset (newOffset) {
+		offset = newOffset;
+		currentPage = newOffset + 1;
 	}
 
 	function addOffset (increment) {
 		offset += increment;
 		currentPage += increment;
-		getRenewableSources();
+		getRenewableSources(currentCountry, currentYear);
 	}
 	
 
@@ -303,8 +302,14 @@
 		<FormGroup> 
 			<Label for="selectCountry"> Búsqueda por país </Label>
 			<Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentCountry}">
+				
 				{#each countries as country}
+				<!-- The if to conserve the option selected after search and delete -->
+				{#if country == currentCountry}
+				<option selected="selected">{country}</option>
+				{:else}
 				<option>{country}</option>
+				{/if}
 				{/each}
 				<option>-</option>
 			</Input>
@@ -314,7 +319,12 @@
 			<Label for="selectYear"> Año </Label>
 			<Input type="select"  name="selectYear" id="selectYear" bind:value="{currentYear}">
 				{#each years as year}
+				<!-- The if to conserve the option selected after search and delete -->
+				{#if year == currentYear}
+				<option selected="selected">{year}</option>
+				{:else}
 				<option>{year}</option>
+				{/if}
 				{/each}
 				<option>-</option>
 			</Input>
