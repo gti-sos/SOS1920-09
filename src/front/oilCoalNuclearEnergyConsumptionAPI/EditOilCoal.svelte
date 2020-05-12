@@ -11,6 +11,7 @@
 
     import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
+    const BASE_API_URL = "/api/v2/oil-coal-nuclear-energy-consumption-stats";
 
     export let params = {};
     let oilCoal = {};
@@ -26,7 +27,7 @@
     async function getOilCoal() {
 
         console.log("Fetching oilCoal...");
-        const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats/" + params.country + "/" + params.year);
+        const res = await fetch(BASE_API_URL + "/" + params.country + "/" + params.year);
 
         if (res.ok) {
             console.log("Ok:");
@@ -48,7 +49,7 @@
 
         console.log("Updating Oil Coal...");
 
-        const res = await fetch("/api/v1/oil-coal-nuclear-energy-consumption-stats/" + params.country + "/" + params.year, {
+        const res = await fetch(BASE_API_URL  + "/" + params.country + "/" + params.year, {
             method: "PUT",
             body: JSON.stringify({
                 country: params.country,
