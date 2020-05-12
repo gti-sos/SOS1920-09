@@ -41,7 +41,7 @@
 	let currentPage = 1; // We could use just one variable offset on currentPage, we leave both
 	let moreData = true;
 	
-	onMount(() => { getPluginVehicles(currentCountry,currentYear);; });
+	onMount(() => { getPluginVehicles(currentCountry,currentYear); });
 	onMount(getCountriesYears);
  
     /* 
@@ -209,7 +209,7 @@
 		});
 	}
 
-	function search(country, year){
+	function search(currentCountry, currentYear){
 		setOffset(0);
 		getPluginVehicles(currentCountry,currentYear);
 	}
@@ -307,7 +307,7 @@
 			{#each countries as country}
 			<!-- The if to conserve the option selected after search and delete -->
 			{#if country == currentCountry}
-			<option select="selected">{country}</option>
+			<option selected="selected">{country}</option>
 			{:else}
 			<option>{country}</option>
 			{/if}
@@ -320,7 +320,12 @@
 		<Label for="selectYear">Búsqueda por años </Label>
 		<Input type="select" name="selectYear" id="selectYear" bind:value="{currentYear}">
 			{#each years as year}
+			<!-- The if to conserve the option selected after search and delete -->
+			{#if year == currentYear}
+			<option selected="selected">{year}</option>
+			{:else}
 			<option>{year}</option>
+			{/if}
 			{/each}
 			<option>-</option>
 		</Input>
