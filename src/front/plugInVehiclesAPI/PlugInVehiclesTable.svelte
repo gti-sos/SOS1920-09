@@ -177,7 +177,6 @@
 			if(res.ok){
 				deleteAlert();
 				getPluginVehicles(currentCountry,currentYear);
-				getCountriesYears();
 			}
 			else if (res.status == 404){
 				errorAlert("Se ha intentado borrar un elemento inexistente");

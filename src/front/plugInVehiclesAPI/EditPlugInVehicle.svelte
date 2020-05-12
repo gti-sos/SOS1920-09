@@ -11,6 +11,8 @@
     import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
 
+    const BASE_API_URL = "/api/v2/plugin-vehicles-stats";
+
     export let params = {};
     let pluginVehicles = {};
     let updatedCountry = "";
@@ -24,7 +26,7 @@
     async function getPluginVehicles() {
 
         console.log("Fetching plugin vehicle...");
-        const res = await fetch("/api/v1/plugin-vehicles-stats/" + params.country + "/" + params.year);
+        const res = await fetch(BASE_API_URL + "/" + params.country + "/" + params.year);
 
         if (res.ok) {
 
@@ -46,7 +48,7 @@
 
         console.log("Updating plugin vehicles...");
 
-        const res = await fetch("/api/v1/plugin-vehicles-stats/" + params.country + "/" + params.year, {
+        const res = await fetch(BASE_API_URL + "/" + params.country + "/" + params.year, {
             method: "PUT",
             body: JSON.stringify({
                 country: params.country,
