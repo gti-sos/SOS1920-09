@@ -12,6 +12,8 @@
     import Button from "sveltestrap/src/Button.svelte";
 	import Input from "sveltestrap/src/Input.svelte";
 
+    const BASE_API_URL = "/api/v2/renewable-sources-stats";
+
     export let params = {};
     let renewableSource = {};
     let updatedCountry = "";
@@ -22,10 +24,11 @@
 
     onMount(getRenewableSource);
 
+
     async function getRenewableSource() {
 
         console.log("Fetching renewable source...");
-        const res = await fetch("/api/v1/renewable-sources-stats/" + params.country + "/" + params.year);
+        const res = await fetch(BASE_API_URL + "/" + params.country + "/" + params.year);
 
         if (res.ok) {
             console.log("Ok:");
@@ -48,7 +51,7 @@
 
         console.log("Updating renewable source...");
 
-        const res = await fetch("/api/v1/renewable-sources-stats/" + params.country + "/" + params.year, {
+        const res = await fetch(BASE_API_URL + "/" + params.country + "/" + params.year, {
             method: "PUT",
             body: JSON.stringify({
                 country: params.country,
