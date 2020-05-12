@@ -10285,13 +10285,8 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
     // (310:3) {:else}
-    function create_else_block_1$1(ctx) {
-=======
-    // (311:3) {:else}
     function create_else_block_1$2(ctx) {
->>>>>>> 58d53269ca33fe3d2ee1d95d9e2d28ee86091778
     	let option;
     	let t_value = /*country*/ ctx[36] + "";
     	let t;
@@ -10334,13 +10329,8 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
     // (308:3) {#if country == currentCountry}
-    function create_if_block_3$2(ctx) {
-=======
-    // (309:3) {#if country == currentCountry}
     function create_if_block_3$3(ctx) {
->>>>>>> 58d53269ca33fe3d2ee1d95d9e2d28ee86091778
     	let option;
     	let t_value = /*country*/ ctx[36] + "";
     	let t;
@@ -10635,13 +10625,8 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
     // (325:3) {:else}
-    function create_else_block$6(ctx) {
-=======
-    // (326:3) {:else}
     function create_else_block$7(ctx) {
->>>>>>> 58d53269ca33fe3d2ee1d95d9e2d28ee86091778
     	let option;
     	let t_value = /*year*/ ctx[33] + "";
     	let t;
@@ -10684,13 +10669,8 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
     // (323:3) {#if year == currentYear}
-    function create_if_block_2$2(ctx) {
-=======
-    // (324:3) {#if year == currentYear}
     function create_if_block_2$3(ctx) {
->>>>>>> 58d53269ca33fe3d2ee1d95d9e2d28ee86091778
     	let option;
     	let t_value = /*year*/ ctx[33] + "";
     	let t;
@@ -13419,8 +13399,6 @@ var app = (function () {
 
     // (310:4) {:else}
     function create_else_block_1$3(ctx) {
-<<<<<<< HEAD
-=======
     	let option;
     	let t_value = /*country*/ ctx[36] + "";
     	let t;
@@ -13454,57 +13432,6 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block_1$3.name,
-    		type: "else",
-    		source: "(310:4) {:else}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (308:4) {#if country == currentCountry}
-    function create_if_block_3$4(ctx) {
->>>>>>> 2de762a300b42d96ae88ca8a808dfae4f1771334
-    	let option;
-    	let t_value = /*country*/ ctx[36] + "";
-    	let t;
-    	let option_value_value;
-
-    	const block = {
-    		c: function create() {
-    			option = element("option");
-    			t = text(t_value);
-    			option.selected = "selected";
-    			option.__value = option_value_value = /*country*/ ctx[36];
-    			option.value = option.__value;
-<<<<<<< HEAD
-    			add_location(option, file$e, 310, 4, 9536);
-=======
-    			add_location(option, file$e, 308, 4, 9471);
->>>>>>> 2de762a300b42d96ae88ca8a808dfae4f1771334
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, option, anchor);
-    			append_dev(option, t);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*countries*/ 2 && t_value !== (t_value = /*country*/ ctx[36] + "")) set_data_dev(t, t_value);
-
-    			if (dirty[0] & /*countries*/ 2 && option_value_value !== (option_value_value = /*country*/ ctx[36])) {
-    				prop_dev(option, "__value", option_value_value);
-    			}
-
-    			option.value = option.__value;
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(option);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-<<<<<<< HEAD
     		id: create_else_block_1$3.name,
     		type: "else",
     		source: "(310:4) {:else}",
@@ -13550,8 +13477,6 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-=======
->>>>>>> 2de762a300b42d96ae88ca8a808dfae4f1771334
     		id: create_if_block_3$4.name,
     		type: "if",
     		source: "(308:4) {#if country == currentCountry}",
@@ -13814,7 +13739,6 @@ var app = (function () {
 
     // (325:4) {:else}
     function create_else_block$8(ctx) {
-<<<<<<< HEAD
     	let option;
     	let t_value = /*year*/ ctx[33] + "";
     	let t;
@@ -13848,59 +13772,6 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$8.name,
-    		type: "else",
-    		source: "(325:4) {:else}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (323:4) {#if year == currentYear}
-    function create_if_block_2$4(ctx) {
-=======
->>>>>>> 2de762a300b42d96ae88ca8a808dfae4f1771334
-    	let option;
-    	let t_value = /*year*/ ctx[33] + "";
-    	let t;
-    	let option_value_value;
-
-    	const block = {
-    		c: function create() {
-    			option = element("option");
-    			t = text(t_value);
-    			option.selected = "selected";
-    			option.__value = option_value_value = /*year*/ ctx[33];
-    			option.value = option.__value;
-<<<<<<< HEAD
-    			add_location(option, file$e, 323, 4, 9931);
-=======
-    			add_location(option, file$e, 325, 4, 9993);
->>>>>>> 2de762a300b42d96ae88ca8a808dfae4f1771334
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, option, anchor);
-    			append_dev(option, t);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*years*/ 4 && t_value !== (t_value = /*year*/ ctx[33] + "")) set_data_dev(t, t_value);
-
-    			if (dirty[0] & /*years*/ 4 && option_value_value !== (option_value_value = /*year*/ ctx[33])) {
-    				prop_dev(option, "__value", option_value_value);
-    			}
-
-    			option.value = option.__value;
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(option);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-<<<<<<< HEAD
-=======
     		id: create_else_block$8.name,
     		type: "else",
     		source: "(325:4) {:else}",
@@ -13946,7 +13817,6 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
->>>>>>> 2de762a300b42d96ae88ca8a808dfae4f1771334
     		id: create_if_block_2$4.name,
     		type: "if",
     		source: "(323:4) {#if year == currentYear}",
@@ -17687,7 +17557,7 @@ var app = (function () {
     	return block;
     }
 
-    const BASE_API_URL$3 = "/api/v2/plugin-vehicles-stats";
+    const BASE_API_URL$4 = "/api/v2/plugin-vehicles-stats";
 
     function errorAlert$2(error) {
     	clearAlert$4();
@@ -17738,7 +17608,7 @@ var app = (function () {
 
     	async function getPluginVehicles() {
     		console.log("Fetching plugin vehicle...");
-    		const res = await fetch(BASE_API_URL$3 + "/" + params.country + "/" + params.year);
+    		const res = await fetch(BASE_API_URL$4 + "/" + params.country + "/" + params.year);
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -17758,7 +17628,7 @@ var app = (function () {
     	async function updatedPluginVehicles() {
     		console.log("Updating plugin vehicles...");
 
-    		const res = await fetch(BASE_API_URL$3 + "/" + params.country + "/" + params.year, {
+    		const res = await fetch(BASE_API_URL$4 + "/" + params.country + "/" + params.year, {
     			method: "PUT",
     			body: JSON.stringify({
     				country: params.country,
@@ -17814,7 +17684,7 @@ var app = (function () {
     		Input,
     		Table,
     		Button,
-    		BASE_API_URL: BASE_API_URL$3,
+    		BASE_API_URL: BASE_API_URL$4,
     		params,
     		pluginVehicles,
     		updatedCountry,
@@ -18486,7 +18356,7 @@ var app = (function () {
     	return block;
     }
 
-    const BASE_API_URL$3 = "/api/v2/renewable-sources-stats";
+    const BASE_API_URL$5 = "/api/v2/renewable-sources-stats";
 
     function errorAlert$3(error) {
     	clearAlert$5();
@@ -18537,7 +18407,7 @@ var app = (function () {
 
     	async function getRenewableSource() {
     		console.log("Fetching renewable source...");
-    		const res = await fetch(BASE_API_URL$3 + "/" + params.country + "/" + params.year);
+    		const res = await fetch(BASE_API_URL$5 + "/" + params.country + "/" + params.year);
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -18557,7 +18427,7 @@ var app = (function () {
     	async function updateRenewableSource() {
     		console.log("Updating renewable source...");
 
-    		const res = await fetch(BASE_API_URL$3 + "/" + params.country + "/" + params.year, {
+    		const res = await fetch(BASE_API_URL$5 + "/" + params.country + "/" + params.year, {
     			method: "PUT",
     			body: JSON.stringify({
     				country: params.country,
@@ -18613,7 +18483,7 @@ var app = (function () {
     		Table,
     		Button,
     		Input,
-    		BASE_API_URL: BASE_API_URL$3,
+    		BASE_API_URL: BASE_API_URL$5,
     		params,
     		renewableSource,
     		updatedCountry,
