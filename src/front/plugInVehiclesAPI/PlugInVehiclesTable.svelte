@@ -41,7 +41,7 @@
 	let currentPage = 1; // We could use just one variable offset on currentPage, we leave both
 	let moreData = true;
 	
-	onMount(getPluginVehicles);
+	onMount(() => { getPluginVehicles(currentCountry,currentYear);; });
 	onMount(getCountriesYears);
  
     /* 
@@ -77,11 +77,23 @@
         }
 	}
 
-	async function getPluginVehicles(){
+	async function getPluginVehicles(country, year){
 		console.log("Fetching plugin vehicles...");
-		const res = await fetch(BASE_API_URL + "?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages);
-		const next = await fetch(BASE_API_URL + "?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages);
-		// Asking for the following data
+
+		/* Checking if the fields are empty */
+		var url = BASE_API_URL + "?limit=" + numberElementsPages;
+
+		if(country != "-" && year != "-"){
+			url = url + "&country=" + country + "&year=" + year;
+		}else if(country != "-" && year == "-"){
+			url = url + "&country=" + country;
+		}else if(country == "-" && year != "-"){
+			url = url + "&year=" + year;
+		}
+
+		const res = await fetch(url + "&offset=" + numberElementsPages * offset );
+		// Asking for the following data of pagination
+		const next = await fetch(url + "&offset=" + numberElementsPages * (offset + 1));
 
 		if (res.ok && next.ok){
 			console.log("OK:");
@@ -110,9 +122,14 @@
 		console.log("Loading initial plugin vehicles stats...");
 		const res = await fetch(BASE_API_URL + "/loadInitialData").then(function (res){
 				if(res.ok){
+
+					// Putthin the current year and the country to remove search. 
 					console.log("OK:");
+					currentCountry = "-";
+					currentYear = "-";
 					initialDataAlert();
-					getPluginVehicles();
+					getPluginVehicles(currentCountry,currentYear);
+					getCountriesYears();
 				}
 				else{
 					errorAlert("Error interno al intentar obtener todos los datos iniciales!");
@@ -140,7 +157,7 @@
 			}).then(function (res){
 				if(res.ok){
 					insertAlert();
-					getPluginVehicles();
+					getPluginVehicles(currentCountry,currentYear);
 				}
 				else{
 					errorAlert("Error interno al intentar insertar un elemento.")
@@ -159,7 +176,7 @@
 		}).then(function (res) {
 			if(res.ok){
 				deleteAlert();
-				getPluginVehicles();
+				getPluginVehicles(currentCountry,currentYear);
 				getCountriesYears();
 			}
 			else if (res.status == 404){
@@ -178,10 +195,11 @@
 		}).then(function (res) {
 			if(res.ok){
 				// To put the correct number in pagination
-				currentPage = 1;
-				offset = 0;
+				setOffset(0);
+				currentCountry = "-";
+				currentYear = "-";
 				deleteAllAlert();
-				getPluginVehicles();
+				getPluginVehicles(currentCountry,currentYear);
 				getCountriesYears();
 			}
 			else{
@@ -191,37 +209,21 @@
 		});
 	}
 
-	async function search(country, year){
-		console.log("Searching data: " + country + "and " + year);
+	function search(country, year){
+		setOffset(0);
+		getPluginVehicles(currentCountry,currentYear);
+	}
 
-		/* Checking if the fields are empty */
-		var url = BASE_API_URL;
-
-		if(country != "-" && year != "-"){
-			url = url + "?country=" + country + "&year=" + year;
-		}else if(country != "-" && year == "-"){
-			url = url + "?country=" + country;
-		}else if(country == "-" && year != "-"){
-			url = url + "?year=" + year;
-		}
-
-		const res = await fetch(url);
-		if (res.ok){
-			console.log("OK:");
-			const json = await res.json();
-			pluginVehicles = json;
-			
-			console.log("Received " +pluginVehicles.length+" plugin vehicles.");
-		}else{
-			errorAlert("Error interno al intentar realizar la búsqueda!");
-			console.log("ERROR!");
-		}
+	// Pagination always go first page.
+	async function setOffset(newtOffset){
+		offset = newtOffset;
+		currentPage = newtOffset + 1;
 	}
 
 	async function addOffset(increment){
 		offset += increment;
 		currentPage += increment;
-		getPluginVehicles();
+		getPluginVehicles(currentCountry,currentYear);
 	}
 
 	//These function are for the alerts
@@ -303,7 +305,12 @@
 		<Label for="selectCountry">Búsqueda por país </Label>
 		<Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentCountry}">
 			{#each countries as country}
+			<!-- The if to conserve the option selected after search and delete -->
+			{#if country == currentCountry}
+			<option select="selected">{country}</option>
+			{:else}
 			<option>{country}</option>
+			{/if}
 			{/each}
 			<option>-</option>
 		</Input>
