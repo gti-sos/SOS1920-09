@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {"country":"Russia","year":2016,"percentage-re-total":16.9,"percentage-hydropower-total":17,"percentage-wind-power-total":0,"_id":"2l48o7NCciGywEvX"}
 {"country":"France","year":2016,"percentage-re-total":17.5,"percentage-hydropower-total":11.7,"percentage-wind-power-total":3.8,"_id":"HwiMFzzUdkWXFhWW"}
 {"country":"Spain","year":2016,"percentage-re-total":38.1,"percentage-hydropower-total":14.5,"percentage-wind-power-total":17.8,"_id":"a16GLZzQoD17Qagc"}
@@ -10,3 +11,17 @@
 {"country":"France","year":2016,"percentage-re-total":17.5,"percentage-hydropower-total":11.7,"percentage-wind-power-total":3.8,"_id":"rXmzYqh3cVuiLC57"}
 {"country":"Russia","year":2016,"percentage-re-total":16.9,"percentage-hydropower-total":17,"percentage-wind-power-total":0,"_id":"YQx3boIt3CBLkLGo"}
 {"country":"Canada","year":2016,"percentage-re-total":65,"percentage-hydropower-total":58,"percentage-wind-power-total":4.6,"_id":"7tfZ48RAikaXjAZp"}
+=======
+{"country":"France","year":2016,"percentage-re-total":17.5,"percentage-hydropower-total":11.7,"percentage-wind-power-total":3.8,"_id":"NzponAi1JZhSZSPM"}
+{"country":"Canada","year":2016,"percentage-re-total":65,"percentage-hydropower-total":58,"percentage-wind-power-total":4.6,"_id":"aMFOSAjXjoFlC7G4"}
+{"country":"Russia","year":2016,"percentage-re-total":16.9,"percentage-hydropower-total":17,"percentage-wind-power-total":0,"_id":"hSztW5OS3g7bm83z"}
+{"country":"Spain","year":2016,"percentage-re-total":38.1,"percentage-hydropower-total":14.5,"percentage-wind-power-total":17.8,"_id":"jGDu0wTaeKoofoSd"}
+{"$$deleted":true,"_id":"NzponAi1JZhSZSPM"}
+{"$$deleted":true,"_id":"aMFOSAjXjoFlC7G4"}
+{"$$deleted":true,"_id":"hSztW5OS3g7bm83z"}
+{"$$deleted":true,"_id":"jGDu0wTaeKoofoSd"}
+{"country":"Spain","year":2016,"percentage-re-total":38.1,"percentage-hydropower-total":14.5,"percentage-wind-power-total":17.8,"_id":"mxCid5y98tyX8tZl"}
+{"country":"France","year":2016,"percentage-re-total":17.5,"percentage-hydropower-total":11.7,"percentage-wind-power-total":3.8,"_id":"jw8Pu9fazzCzI6wY"}
+{"country":"Russia","year":2016,"percentage-re-total":16.9,"percentage-hydropower-total":17,"percentage-wind-power-total":0,"_id":"xKPiZfjQ37Lka7DI"}
+{"country":"Canada","year":2016,"percentage-re-total":65,"percentage-hydropower-total":58,"percentage-wind-power-total":4.6,"_id":"2b1sPGPI3dRyEByf"}
+>>>>>>> 2aa443768a0020ee9a08a554bc273ee987da16c9
