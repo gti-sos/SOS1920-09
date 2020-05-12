@@ -38,7 +38,7 @@
 	let offset = 0;
 	let moreData = true;
 
-	onMount(getOilEnergy);
+	onMount(() => {getOilEnergy(currentCountry,currentYear);});
 	onMount(getCountriesYears);	
 
 
@@ -71,11 +71,24 @@
     }
 
 
-	async function getOilEnergy() {
+	async function getOilEnergy(country,year) {
         console.log("Fetching oil scoal stats..."); 
-        const res = await fetch(BASE_API_URL + "?offset=" + numberElementsPages * offset + "&limit=" + numberElementsPages); 
+
+		/* Checking if it fields is empty */
+		var url = BASE_API_URL + "?limit=" + numberElementsPages;
+
+		if (country != "-" && year != "-") {
+			url = url + "&country=" + country + "&year=" + year;
+		} else if (country != "-" && year == "-") {
+			url = url + "&country=" + country;
+		} else if (country == "-" && year != "-") {
+			url = url + "&year=" + year;
+		}
+
+
+        const res = await fetch(url + "&offset=" + numberElementsPages * offset); 
         /* Asking for the following data */ 
-        const next = await fetch(BASE_API_URL + "?offset=" + numberElementsPages * (offset + 1) + "&limit=" + numberElementsPages); 
+        const next = await fetch(url + "&offset=" + numberElementsPages * (offset + 1)); 
  
         if (res.ok && next.ok) {
             console.log("Ok:");
@@ -102,8 +115,12 @@
         console.log("Loading initial oil scoal stats data..."); 
         const res = await fetch(BASE_API_URL + "/loadInitialData").then(function (res) {
 			if (res.ok){
+				/* putting the current year and the country to remove the search*/
 				console.log("OK");
-				getOilEnergy();
+				currentYear="-";
+				currentCountry="-";
+				getOilEnergy(currentCountry,currentYear);
+				getCountriesYears();
 				initialDataAlert();
 			}else {
 				errorAlert=("Error al intentar borrar todos los elementos iniciales");
@@ -134,7 +151,7 @@
 			}).then(function (res) {
 				/* we can update it each time we insert*/
 				if (res.ok){
-					getOilEnergy();
+					getOilEnergy(currentCountry,currentYear);
 					insertAlert();
 				}else {
 					errorAlert("No se han podido insetar los elementos");
@@ -151,8 +168,7 @@
 			method: "DELETE"
 		}).then(function (res) {
 			if (res.ok){
-				getOilEnergy();
-				getCountriesYears();
+				getOilEnergy(currentCountry,currentYear);
 				deleteAlert();
 			} else if (res.status==404){
 				errorAlert("Se ha intentado borrar un dato inexistente");
@@ -169,9 +185,10 @@
 			method: "DELETE"
 		}).then(function (res) {
 			if (res.ok){
-				currentPage = 1;
-				offset=0;
-				getOilEnergy();
+				setOffset(0);
+				currentCountry = "-";
+				currentYear = "-";
+				getOilEnergy(currentCountry,currentYear);
 				getCountriesYears();
 				deleteAllAlert();
 			}else {
@@ -181,37 +198,23 @@
 		});
 	}
 
-	async function search(country, year) {
-		console.log("Searching data: " + country + "and " + year);
-		/* Checking if it fields is empty */
-		var url = BASE_API_URL;
 
-		if (country != "-" && year != "-") {
-			url = url + "?country=" + country + "&year=" + year;
-		} else if (country != "-" && year == "-") {
-			url = url + "?country=" + country;
-		} else if (country == "-" && year != "-") {
-			url = url + "?year=" + year;
-		}
-
-		const res = await fetch(url);
-
-		if (res.ok) {
-			console.log("OK:");
-			const json = await res.json();
-			oilEnergy = json;
-
-			console.log("Found " + oilEnergy.length + "Oil Coal Energy.");
-		} else {
-			errorAlert=("Error interno al intentar realizar la búsqueda");
-			console.log("ERROR!");
-		}
+	function search(currentCountry,currentYear){
+		setOffset(0);
+		getOilEnergy(currentCountry,currentYear);
 	}
+
+	function setOffset(newOffset) {
+		offset = newOffset;
+		currentPage = newOffset+1;
+		getOilEnergy(currentCountry,currentYear);
+	}
+
 
 	function addOffset(increment) {
 		offset += increment;
 		currentPage += increment;
-		getOilEnergy();
+		getOilEnergy(currentCountry,currentYear);
 	}
 
 
@@ -296,8 +299,12 @@
 	<FormGroup> 
         <Label for="selectCountry">Búsqueda por país </Label>
         <Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentCountry}">
-            {#each countries as country}
-            <option>{country}</option>
+			{#each countries as country}
+			{#if country == currentCountry}
+			<option selected = "selected">{country}</option>
+			{:else}
+			<option>{country}</option>
+			{/if}
 			{/each}
 			<option>-</option>
         </Input>
@@ -307,8 +314,13 @@
 		<FormGroup>
 			<Label for="selectYear">Año</Label>
 			<Input type="select" name="selectYear" id="selectYear" bind:value = "{currentYear}">
+
 				{#each years as year}
+				{#if year == currentYear}
+				<option selected ="selected">{year}</option>
+				{:else}
 				<option>{year}</option>
+				{/if}
 				{/each}
 				<option>-</option>
 			</Input>

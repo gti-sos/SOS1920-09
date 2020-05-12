@@ -171,7 +171,9 @@
 		}).then(function (res) {
 			if (res.ok) {
 				getRenewableSources(currentCountry, currentYear);
-				getCountriesYears();
+				/* If we want to delete the entry in the select, uncomment the line below */
+				/* We decided to conserve the option because we find it more logic */
+				/* getCountriesYears(); */
 				deleteAlert();
 			} else if (res.status == 404) {
 				errorAlert("Se ha intentado borrar un elemento inexistente.");
@@ -302,8 +304,12 @@
 			<Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentCountry}">
 				
 				{#each countries as country}
-
+				<!-- The if to conserve the option selected after search and delete -->
+				{#if country == currentCountry}
+				<option selected="selected">{country}</option>
+				{:else}
 				<option>{country}</option>
+				{/if}
 				{/each}
 				<option>-</option>
 			</Input>
@@ -313,7 +319,12 @@
 			<Label for="selectYear"> Año </Label>
 			<Input type="select"  name="selectYear" id="selectYear" bind:value="{currentYear}">
 				{#each years as year}
+				<!-- The if to conserve the option selected after search and delete -->
+				{#if year == currentYear}
+				<option selected="selected">{year}</option>
+				{:else}
 				<option>{year}</option>
+				{/if}
 				{/each}
 				<option>-</option>
 			</Input>
