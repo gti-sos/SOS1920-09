@@ -22,13 +22,8 @@
 }
 
 .highcharts-figure, .highcharts-data-table table {
-<<<<<<< HEAD
-    min-width: 320px; 
-    max-width: 100px;
-=======
     min-width: 310px; 
     max-width: 800px;
->>>>>>> e9e5e8276d590dd97263d7805626100b1b05d5c0
     margin: 1em auto;
 }
 
