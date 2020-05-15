@@ -1,4 +1,11 @@
 <script>
+
+    import {
+            pop
+	} from "svelte-spa-router";
+    
+    import Button from "sveltestrap/src/Button.svelte";
+
     async function loadGraph(){
     
         const BASE_API_URL = "/api/v2/plugin-vehicles-stats";
@@ -103,10 +110,10 @@
                 shared: true
             },
             legend: {
-                align: 'right',
-                verticalAlign: 'top',
-                y: 60,
-                layout: 'vertical',
+                align: 'left',
+                verticalAlign: 'bottom',
+                y: 25,
+                floating: true,
                 backgroundColor:
                     Highcharts.defaultOptions.legend.backgroundColor || // theme
                     'rgba(255,255,255,0.25)'
@@ -193,12 +200,16 @@
     
         <figure class="highcharts-figure">
             <div id="container"></div>
+            <p>
+
+            </p>
             <p class="highcharts-description">
                 En esta sección de la api podemos observar una representación gráfica acerca de los datos que tenemos sobre cada país
                 en relación con el uso de coches eléctricos, mostrando de azul las ventas acumuladas, de negro las ventas anuales y de verde
                 el porcentaje de coches cada 1000 personas.
             </p>
         </figure>
-
+        
+        <Button outline color="secondary" on:click="{pop}"><i class="fas fa-arrow-circle-left"></i> Atrás</Button>
     
     </main>
