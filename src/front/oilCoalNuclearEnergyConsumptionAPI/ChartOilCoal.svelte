@@ -1,4 +1,9 @@
 <script>
+    import Button from "sveltestrap/src/Button.svelte";
+    import {
+        pop
+    } from "svelte-spa-router";
+    
     function getPointCategoryName(point, dimension) {
         var series = point.series,
             isY = dimension === 'y',
@@ -153,6 +158,6 @@
         </p>
     </figure>
 
-
+    <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
 
 </main>

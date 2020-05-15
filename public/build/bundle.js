@@ -13798,7 +13798,6 @@ var app = (function () {
 
     // (325:4) {:else}
     function create_else_block$8(ctx) {
-<<<<<<< HEAD
     	let option;
     	let t_value = /*year*/ ctx[33] + "";
     	let t;
@@ -13832,58 +13831,6 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$8.name,
-    		type: "else",
-    		source: "(325:4) {:else}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (323:4) {#if year == currentYear}
-    function create_if_block_2$4(ctx) {
-=======
->>>>>>> 1e86c3bdbb05a089ab6314fbbb31fdc06c01dda1
-    	let option;
-    	let t_value = /*year*/ ctx[33] + "";
-    	let t;
-    	let option_value_value;
-
-    	const block = {
-    		c: function create() {
-    			option = element("option");
-    			t = text(t_value);
-    			option.__value = option_value_value = /*year*/ ctx[33];
-    			option.value = option.__value;
-<<<<<<< HEAD
-    			add_location(option, file$e, 323, 4, 9931);
-=======
-    			add_location(option, file$e, 325, 4, 9993);
->>>>>>> 1e86c3bdbb05a089ab6314fbbb31fdc06c01dda1
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, option, anchor);
-    			append_dev(option, t);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*years*/ 4 && t_value !== (t_value = /*year*/ ctx[33] + "")) set_data_dev(t, t_value);
-
-    			if (dirty[0] & /*years*/ 4 && option_value_value !== (option_value_value = /*year*/ ctx[33])) {
-    				prop_dev(option, "__value", option_value_value);
-    			}
-
-    			option.value = option.__value;
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(option);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-<<<<<<< HEAD
-=======
     		id: create_else_block$8.name,
     		type: "else",
     		source: "(325:4) {:else}",
@@ -13929,7 +13876,6 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
->>>>>>> 1e86c3bdbb05a089ab6314fbbb31fdc06c01dda1
     		id: create_if_block_2$4.name,
     		type: "if",
     		source: "(323:4) {#if year == currentYear}",
@@ -18668,6 +18614,39 @@ var app = (function () {
     const { console: console_1$8 } = globals;
     const file$j = "src\\front\\oilCoalNuclearEnergyConsumptionAPI\\ChartOilCoal.svelte";
 
+    // (161:4) <Button outline color="secondary" on:click="{pop}">
+    function create_default_slot$6(ctx) {
+    	let i;
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			i = element("i");
+    			t = text(" Atrás");
+    			attr_dev(i, "class", "fas fa-arrow-circle-left");
+    			add_location(i, file$j, 160, 56, 5202);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$6.name,
+    		type: "slot",
+    		source: "(161:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
     function create_fragment$k(ctx) {
     	let script0;
     	let script0_src_value;
@@ -18685,7 +18664,21 @@ var app = (function () {
     	let div;
     	let t1;
     	let p;
+    	let t2;
+    	let current;
     	let dispose;
+
+    	const button = new Button({
+    			props: {
+    				outline: true,
+    				color: "secondary",
+    				$$slots: { default: [create_default_slot$6] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", pop);
 
     	const block = {
     		c: function create() {
@@ -18700,23 +18693,25 @@ var app = (function () {
     			div = element("div");
     			t1 = space();
     			p = element("p");
+    			t2 = space();
+    			create_component(button.$$.fragment);
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$j, 138, 4, 4340);
+    			add_location(script0, file$j, 143, 4, 4463);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/heatmap.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$j, 139, 4, 4432);
+    			add_location(script1, file$j, 144, 4, 4555);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$j, 140, 4, 4529);
+    			add_location(script2, file$j, 145, 4, 4652);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$j, 141, 4, 4628);
+    			add_location(script3, file$j, 146, 4, 4751);
     			if (script4.src !== (script4_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script4, "src", script4_src_value);
-    			add_location(script4, file$j, 142, 4, 4729);
+    			add_location(script4, file$j, 147, 4, 4852);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$j, 150, 8, 4920);
+    			add_location(div, file$j, 155, 8, 5043);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$j, 151, 8, 4956);
+    			add_location(p, file$j, 156, 8, 5079);
     			attr_dev(figure, "class", "highcharts-figure");
-    			add_location(figure, file$j, 149, 4, 4876);
-    			add_location(main, file$j, 147, 0, 4858);
+    			add_location(figure, file$j, 154, 4, 4999);
+    			add_location(main, file$j, 152, 0, 4981);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -18733,6 +18728,9 @@ var app = (function () {
     			append_dev(figure, div);
     			append_dev(figure, t1);
     			append_dev(figure, p);
+    			append_dev(main, t2);
+    			mount_component(button, main, null);
+    			current = true;
     			if (remount) run_all(dispose);
 
     			dispose = [
@@ -18743,9 +18741,24 @@ var app = (function () {
     				listen_dev(script4, "load", loadGraph, false, false, false)
     			];
     		},
-    		p: noop,
-    		i: noop,
-    		o: noop,
+    		p: function update(ctx, [dirty]) {
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 1) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
     		d: function destroy(detaching) {
     			detach_dev(script0);
     			detach_dev(script1);
@@ -18754,6 +18767,7 @@ var app = (function () {
     			detach_dev(script4);
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
+    			destroy_component(button);
     			run_all(dispose);
     		}
     	};
@@ -18899,7 +18913,14 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("ChartOilCoal", $$slots, []);
-    	$$self.$capture_state = () => ({ getPointCategoryName, loadGraph });
+
+    	$$self.$capture_state = () => ({
+    		Button,
+    		pop,
+    		getPointCategoryName,
+    		loadGraph
+    	});
+
     	return [];
     }
 
@@ -18970,8 +18991,40 @@ var app = (function () {
     }
 
     /* src\front\renewableSourcesAPI\ChartRenewableSources.svelte generated by Svelte v3.20.1 */
-
     const file$k = "src\\front\\renewableSourcesAPI\\ChartRenewableSources.svelte";
+
+    // (152:4) <Button outline color="secondary" on:click="{pop}">
+    function create_default_slot$7(ctx) {
+    	let i;
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			i = element("i");
+    			t = text(" Atrás");
+    			attr_dev(i, "class", "fas fa-arrow-circle-left");
+    			add_location(i, file$k, 151, 56, 4738);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$7.name,
+    		type: "slot",
+    		source: "(152:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
 
     function create_fragment$m(ctx) {
     	let script0;
@@ -18987,8 +19040,24 @@ var app = (function () {
     	let figure;
     	let div;
     	let t1;
-    	let p;
+    	let p0;
+    	let t3;
+    	let p1;
+    	let t4;
+    	let current;
     	let dispose;
+
+    	const button = new Button({
+    			props: {
+    				outline: true,
+    				color: "secondary",
+    				$$slots: { default: [create_default_slot$7] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", pop);
 
     	const block = {
     		c: function create() {
@@ -19001,29 +19070,28 @@ var app = (function () {
     			figure = element("figure");
     			div = element("div");
     			t1 = space();
-    			p = element("p");
-<<<<<<< HEAD
-    			p.textContent = "Gráfica que representa los datos de las energías renovables por países.";
+    			p0 = element("p");
+    			p0.textContent = "Gráfica que representa los datos de las energías renovables por países.";
+    			t3 = space();
+    			p1 = element("p");
+    			t4 = space();
+    			create_component(button.$$.fragment);
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$j, 129, 4, 3889);
+    			add_location(script0, file$k, 134, 4, 4008);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/data.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$j, 130, 4, 3980);
+    			add_location(script1, file$k, 135, 4, 4099);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/parallel-coordinates.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$j, 131, 4, 4073);
+    			add_location(script2, file$k, 136, 4, 4192);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$j, 132, 4, 4182);
+    			add_location(script3, file$k, 137, 4, 4301);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$j, 139, 8, 4362);
-    			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$j, 140, 8, 4398);
+    			add_location(div, file$k, 144, 8, 4481);
+    			attr_dev(p0, "class", "highcharts-description");
+    			add_location(p0, file$k, 145, 8, 4517);
     			attr_dev(figure, "class", "highcharts-figure");
-    			add_location(figure, file$j, 138, 4, 4318);
-    			add_location(main, file$j, 136, 0, 4300);
-=======
-    			p.textContent = "Hola";
-    			add_location(p, file$k, 1, 4, 12);
-    			add_location(main, file$k, 0, 0, 0);
->>>>>>> 1e86c3bdbb05a089ab6314fbbb31fdc06c01dda1
+    			add_location(figure, file$k, 143, 4, 4437);
+    			add_location(p1, file$k, 150, 4, 4673);
+    			add_location(main, file$k, 141, 0, 4419);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -19038,19 +19106,39 @@ var app = (function () {
     			append_dev(main, figure);
     			append_dev(figure, div);
     			append_dev(figure, t1);
-    			append_dev(figure, p);
+    			append_dev(figure, p0);
+    			append_dev(main, t3);
+    			append_dev(main, p1);
+    			append_dev(main, t4);
+    			mount_component(button, main, null);
+    			current = true;
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(script0, "load", loadGraph, false, false, false),
-    				listen_dev(script1, "load", loadGraph, false, false, false),
-    				listen_dev(script2, "load", loadGraph, false, false, false),
-    				listen_dev(script3, "load", loadGraph, false, false, false)
+    				listen_dev(script0, "load", loadGraph$1, false, false, false),
+    				listen_dev(script1, "load", loadGraph$1, false, false, false),
+    				listen_dev(script2, "load", loadGraph$1, false, false, false),
+    				listen_dev(script3, "load", loadGraph$1, false, false, false)
     			];
     		},
-    		p: noop,
-    		i: noop,
-    		o: noop,
+    		p: function update(ctx, [dirty]) {
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 1) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
     		d: function destroy(detaching) {
     			detach_dev(script0);
     			detach_dev(script1);
@@ -19058,6 +19146,7 @@ var app = (function () {
     			detach_dev(script3);
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
+    			destroy_component(button);
     			run_all(dispose);
     		}
     	};
@@ -19073,7 +19162,7 @@ var app = (function () {
     	return block;
     }
 
-    async function loadGraph() {
+    async function loadGraph$1() {
     	/* Asking for the data to the back */
     	const BASE_API_URL = "/api/v2/renewable-sources-stats";
 
@@ -19190,7 +19279,7 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("ChartRenewableSources", $$slots, []);
-    	$$self.$capture_state = () => ({ loadGraph });
+    	$$self.$capture_state = () => ({ Button, pop, loadGraph: loadGraph$1 });
     	return [];
     }
 
