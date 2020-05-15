@@ -1455,7 +1455,7 @@ var app = (function () {
 
     function create_fragment$1(ctx) {
     	let main;
-    	let div;
+    	let div0;
     	let button0;
     	let i0;
     	let t0;
@@ -1467,11 +1467,24 @@ var app = (function () {
     	let button2;
     	let i2;
     	let t4;
+    	let t5;
+    	let div1;
+    	let button3;
+    	let i3;
+    	let t6;
+    	let t7;
+    	let button4;
+    	let i4;
+    	let t8;
+    	let t9;
+    	let button5;
+    	let i5;
+    	let t10;
 
     	const block = {
     		c: function create() {
     			main = element("main");
-    			div = element("div");
+    			div0 = element("div");
     			button0 = element("button");
     			i0 = element("i");
     			t0 = text(" API de energías renovables");
@@ -1483,6 +1496,19 @@ var app = (function () {
     			button2 = element("button");
     			i2 = element("i");
     			t4 = text(" API de energías primarias");
+    			t5 = space();
+    			div1 = element("div");
+    			button3 = element("button");
+    			i3 = element("i");
+    			t6 = text(" Gráfica de energías renovables");
+    			t7 = space();
+    			button4 = element("button");
+    			i4 = element("i");
+    			t8 = text(" Gráfica de coches eléctricos");
+    			t9 = space();
+    			button5 = element("button");
+    			i5 = element("i");
+    			t10 = text(" Gráfica de energías primarias");
     			attr_dev(i0, "class", "fas fa-leaf");
     			add_location(i0, file, 3, 113, 148);
     			attr_dev(button0, "type", "button");
@@ -1501,8 +1527,28 @@ var app = (function () {
     			attr_dev(button2, "class", "btn btn-outline-dark");
     			attr_dev(button2, "onclick", "window.location.href='#/oilCoalNuclearEnergyConsumptionAPI'");
     			add_location(button2, file, 5, 2, 396);
-    			attr_dev(div, "class", "div-home");
-    			add_location(div, file, 2, 1, 11);
+    			attr_dev(div0, "class", "div-home");
+    			add_location(div0, file, 2, 1, 11);
+    			attr_dev(i3, "class", "fas fa-chart-area");
+    			add_location(i3, file, 9, 115, 739);
+    			attr_dev(button3, "type", "button");
+    			attr_dev(button3, "class", "btn btn-outline-success");
+    			attr_dev(button3, "onclick", "window.location.href='#/chartRenewableSources'");
+    			add_location(button3, file, 9, 2, 626);
+    			attr_dev(i4, "class", "fas fa-chart-area");
+    			add_location(i4, file, 10, 111, 925);
+    			attr_dev(button4, "type", "button");
+    			attr_dev(button4, "class", "btn btn-outline-primary");
+    			attr_dev(button4, "onclick", "window.location.href='#/chartPlugInVehicles'");
+    			add_location(button4, file, 10, 2, 816);
+    			attr_dev(i5, "class", "fas fa-chart-area");
+    			add_location(i5, file, 11, 102, 1100);
+    			attr_dev(button5, "type", "button");
+    			attr_dev(button5, "class", "btn btn-outline-dark");
+    			attr_dev(button5, "onclick", "window.location.href='#/chartOilCoal'");
+    			add_location(button5, file, 11, 2, 1000);
+    			attr_dev(div1, "class", "div-home");
+    			add_location(div1, file, 8, 1, 600);
     			add_location(main, file, 0, 0, 0);
     		},
     		l: function claim(nodes) {
@@ -1510,18 +1556,31 @@ var app = (function () {
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
-    			append_dev(main, div);
-    			append_dev(div, button0);
+    			append_dev(main, div0);
+    			append_dev(div0, button0);
     			append_dev(button0, i0);
     			append_dev(button0, t0);
-    			append_dev(div, t1);
-    			append_dev(div, button1);
+    			append_dev(div0, t1);
+    			append_dev(div0, button1);
     			append_dev(button1, i1);
     			append_dev(button1, t2);
-    			append_dev(div, t3);
-    			append_dev(div, button2);
+    			append_dev(div0, t3);
+    			append_dev(div0, button2);
     			append_dev(button2, i2);
     			append_dev(button2, t4);
+    			append_dev(main, t5);
+    			append_dev(main, div1);
+    			append_dev(div1, button3);
+    			append_dev(button3, i3);
+    			append_dev(button3, t6);
+    			append_dev(div1, t7);
+    			append_dev(div1, button4);
+    			append_dev(button4, i4);
+    			append_dev(button4, t8);
+    			append_dev(div1, t9);
+    			append_dev(div1, button5);
+    			append_dev(button5, i5);
+    			append_dev(button5, t10);
     		},
     		p: noop,
     		i: noop,
@@ -11058,7 +11117,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Insertar");
     			attr_dev(i, "class", "far fa-edit");
-    			add_location(i, file$c, 357, 75, 10964);
+    			add_location(i, file$c, 357, 75, 10965);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -11092,7 +11151,7 @@ var app = (function () {
     			t = text(" Borrar");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$c, 370, 121, 11549);
+    			add_location(i, file$c, 370, 121, 11550);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -11181,14 +11240,14 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t10 = space();
     			attr_dev(a, "href", a_href_value = "#/plugin-vehicles-stats/" + /*pluginVehicles*/ ctx[7].country + "/" + /*pluginVehicles*/ ctx[7].year);
-    			add_location(a, file$c, 362, 7, 11103);
-    			add_location(td0, file$c, 361, 6, 11090);
-    			add_location(td1, file$c, 366, 6, 11252);
-    			add_location(td2, file$c, 367, 6, 11290);
-    			add_location(td3, file$c, 368, 6, 11336);
-    			add_location(td4, file$c, 369, 6, 11384);
-    			add_location(td5, file$c, 370, 6, 11434);
-    			add_location(tr, file$c, 360, 5, 11078);
+    			add_location(a, file$c, 362, 7, 11104);
+    			add_location(td0, file$c, 361, 6, 11091);
+    			add_location(td1, file$c, 366, 6, 11253);
+    			add_location(td2, file$c, 367, 6, 11291);
+    			add_location(td3, file$c, 368, 6, 11337);
+    			add_location(td4, file$c, 369, 6, 11385);
+    			add_location(td5, file$c, 370, 6, 11435);
+    			add_location(tr, file$c, 360, 5, 11079);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -11403,7 +11462,7 @@ var app = (function () {
     			th2.textContent = "Ventas acumuladas";
     			t5 = space();
     			th3 = element("th");
-    			th3.textContent = "Salario anual";
+    			th3.textContent = "Ventas anuales";
     			t7 = space();
     			th4 = element("th");
     			th4.textContent = "Porcentaje de coches cada 1000 personas";
@@ -11440,18 +11499,18 @@ var app = (function () {
     			add_location(th1, file$c, 343, 5, 10199);
     			add_location(th2, file$c, 344, 5, 10218);
     			add_location(th3, file$c, 345, 5, 10251);
-    			add_location(th4, file$c, 346, 5, 10280);
-    			add_location(th5, file$c, 347, 5, 10335);
+    			add_location(th4, file$c, 346, 5, 10281);
+    			add_location(th5, file$c, 347, 5, 10336);
     			add_location(tr0, file$c, 341, 4, 10168);
     			add_location(thead, file$c, 340, 3, 10155);
-    			add_location(td0, file$c, 352, 5, 10405);
-    			add_location(td1, file$c, 353, 5, 10495);
-    			add_location(td2, file$c, 354, 5, 10595);
-    			add_location(td3, file$c, 355, 5, 10680);
-    			add_location(td4, file$c, 356, 5, 10767);
-    			add_location(td5, file$c, 357, 5, 10894);
-    			add_location(tr1, file$c, 351, 4, 10394);
-    			add_location(tbody, file$c, 350, 3, 10381);
+    			add_location(td0, file$c, 352, 5, 10406);
+    			add_location(td1, file$c, 353, 5, 10496);
+    			add_location(td2, file$c, 354, 5, 10596);
+    			add_location(td3, file$c, 355, 5, 10681);
+    			add_location(td4, file$c, 356, 5, 10768);
+    			add_location(td5, file$c, 357, 5, 10895);
+    			add_location(tr1, file$c, 351, 4, 10395);
+    			add_location(tbody, file$c, 350, 3, 10382);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -12307,7 +12366,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$c, 403, 52, 12870);
+    			add_location(i, file$c, 403, 52, 12871);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -12341,7 +12400,7 @@ var app = (function () {
     			t = text(" Cargar datos iniciales");
     			attr_dev(i, "class", "fa fa-cloud-upload-alt");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$c, 404, 71, 12998);
+    			add_location(i, file$c, 404, 71, 12999);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -12375,7 +12434,7 @@ var app = (function () {
     			t = text(" Borrar todos");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$c, 405, 68, 13157);
+    			add_location(i, file$c, 405, 68, 13158);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -18550,11 +18609,413 @@ var app = (function () {
     	}
     }
 
-    /* src\front\NotFound.svelte generated by Svelte v3.20.1 */
-
-    const file$j = "src\\front\\NotFound.svelte";
+    /* src\front\oilCoalNuclearEnergyConsumptionAPI\ChartOilCoal.svelte generated by Svelte v3.20.1 */
 
     function create_fragment$k(ctx) {
+    	const block = {
+    		c: noop,
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: noop,
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: noop
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$k.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$k($$self, $$props) {
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<ChartOilCoal> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("ChartOilCoal", $$slots, []);
+    	return [];
+    }
+
+    class ChartOilCoal extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$k, create_fragment$k, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "ChartOilCoal",
+    			options,
+    			id: create_fragment$k.name
+    		});
+    	}
+    }
+
+    /* src\front\plugInVehiclesAPI\ChartPlugInVehicles.svelte generated by Svelte v3.20.1 */
+
+    const file$j = "src\\front\\plugInVehiclesAPI\\ChartPlugInVehicles.svelte";
+
+    function create_fragment$l(ctx) {
+    	let script0;
+    	let script0_src_value;
+    	let script1;
+    	let script1_src_value;
+    	let script2;
+    	let script2_src_value;
+    	let script3;
+    	let script3_src_value;
+    	let script4;
+    	let script4_src_value;
+    	let t0;
+    	let main;
+    	let figure;
+    	let div;
+    	let t1;
+    	let p;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			script0 = element("script");
+    			script1 = element("script");
+    			script2 = element("script");
+    			script3 = element("script");
+    			script4 = element("script");
+    			t0 = space();
+    			main = element("main");
+    			figure = element("figure");
+    			div = element("div");
+    			t1 = space();
+    			p = element("p");
+    			p.textContent = "En esta sección de la api podemos observar una representación gráfica acerca de los datos que tenemos sobre cada país\r\n                en relación con el uso de coches eléctricos, mostrando de azul las ventas acumuladas, de negro las ventas anuales y de verde\r\n                el porcentaje de coches cada 1000 personas.";
+    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
+    			add_location(script0, file$j, 184, 12, 5659);
+    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/series-label.js")) attr_dev(script1, "src", script1_src_value);
+    			add_location(script1, file$j, 185, 12, 5758);
+    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
+    			add_location(script2, file$j, 186, 12, 5867);
+    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script3, "src", script3_src_value);
+    			add_location(script3, file$j, 187, 12, 5973);
+    			if (script4.src !== (script4_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script4, "src", script4_src_value);
+    			add_location(script4, file$j, 188, 12, 6081);
+    			attr_dev(div, "id", "container");
+    			add_location(div, file$j, 194, 12, 6283);
+    			attr_dev(p, "class", "highcharts-description");
+    			add_location(p, file$j, 195, 12, 6323);
+    			attr_dev(figure, "class", "highcharts-figure");
+    			add_location(figure, file$j, 193, 8, 6235);
+    			add_location(main, file$j, 191, 4, 6213);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor, remount) {
+    			append_dev(document.head, script0);
+    			append_dev(document.head, script1);
+    			append_dev(document.head, script2);
+    			append_dev(document.head, script3);
+    			append_dev(document.head, script4);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, main, anchor);
+    			append_dev(main, figure);
+    			append_dev(figure, div);
+    			append_dev(figure, t1);
+    			append_dev(figure, p);
+    			if (remount) run_all(dispose);
+
+    			dispose = [
+    				listen_dev(script0, "load", loadGraph, false, false, false),
+    				listen_dev(script1, "load", loadGraph, false, false, false),
+    				listen_dev(script2, "load", loadGraph, false, false, false),
+    				listen_dev(script3, "load", loadGraph, false, false, false),
+    				listen_dev(script4, "load", loadGraph, false, false, false)
+    			];
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			detach_dev(script0);
+    			detach_dev(script1);
+    			detach_dev(script2);
+    			detach_dev(script3);
+    			detach_dev(script4);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(main);
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$l.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    async function loadGraph() {
+    	const BASE_API_URL = "/api/v2/plugin-vehicles-stats";
+    	let MyData = [];
+    	const resData = await fetch(BASE_API_URL);
+    	MyData = await resData.json();
+    	let countries = [];
+    	let pevStock = [];
+    	let annualSale = [];
+    	let carsPer1000 = [];
+
+    	MyData.forEach(data => {
+    		let country = data.country;
+    		let year = data.year;
+    		let p = data["pev-stock"];
+    		let a = data["annual-sale"];
+    		let c = data["cars-per-1000"];
+
+    		if (data.year == 2018) {
+    			countries.push(country);
+    			pevStock.push(p);
+    			annualSale.push(a);
+    			carsPer1000.push(c);
+    		}
+    	});
+
+    	/*
+            { 
+    			"country": "Japan",
+    			"year": 2018,
+    			"pev-stock": 257363,
+    			"annual-sale": 52013,
+    			"cars-per-1000": 2.0
+    		}
+            
+            */
+    	Highcharts.chart("container", {
+    		chart: { zoomType: "xy" },
+    		title: {
+    			text: "Gráfica sobre datos de coches eléctricos.",
+    			align: "left"
+    		},
+    		subtitle: {
+    			text: "Datos sobre el año 2018:",
+    			align: "left"
+    		},
+    		xAxis: [{ categories: countries, crosshair: true }],
+    		yAxis: [
+    			{
+    				// Primary yAxis
+    				labels: {
+    					format: "{value} %",
+    					style: { color: Highcharts.getOptions().colors[2] }
+    				},
+    				title: {
+    					text: "Coches cada 1000 personas",
+    					style: { color: Highcharts.getOptions().colors[2] }
+    				},
+    				opposite: true
+    			},
+    			{
+    				// Secondary yAxis
+    				gridLineWidth: 0,
+    				title: {
+    					text: "Ventas Acumuladas",
+    					style: { color: Highcharts.getOptions().colors[0] }
+    				},
+    				labels: {
+    					format: "{value} unidades",
+    					style: { color: Highcharts.getOptions().colors[0] }
+    				}
+    			},
+    			{
+    				// Tertiary yAxis
+    				gridLineWidth: 0,
+    				title: {
+    					text: "Ventas anuales",
+    					style: { color: Highcharts.getOptions().colors[1] }
+    				},
+    				labels: {
+    					format: "{value} unidades",
+    					style: { color: Highcharts.getOptions().colors[1] }
+    				},
+    				opposite: true
+    			}
+    		],
+    		tooltip: { shared: true },
+    		legend: {
+    			align: "right",
+    			verticalAlign: "top",
+    			y: 60,
+    			layout: "vertical",
+    			backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || // theme
+    			"rgba(255,255,255,0.25)"
+    		},
+    		series: [
+    			{
+    				name: "Ventas acumuladas",
+    				type: "column",
+    				yAxis: 1,
+    				data: pevStock,
+    				tooltip: { valueSuffix: " unidades" }
+    			},
+    			{
+    				name: "Ventas anuales",
+    				type: "spline",
+    				yAxis: 2,
+    				data: annualSale,
+    				marker: { enabled: false },
+    				dashStyle: "shortdot",
+    				tooltip: { valueSuffix: " unidades" }
+    			},
+    			{
+    				name: "Coches cada 1000 personas",
+    				type: "spline",
+    				data: carsPer1000,
+    				tooltip: { valueSuffix: " %" }
+    			}
+    		],
+    		responsive: {
+    			rules: [
+    				{
+    					condition: { maxWidth: 500 },
+    					chartOptions: {
+    						legend: {
+    							floating: false,
+    							layout: "horizontal",
+    							align: "center",
+    							verticalAlign: "bottom",
+    							x: 0,
+    							y: 0
+    						},
+    						yAxis: [
+    							{
+    								labels: { align: "right", x: 0, y: -6 },
+    								showLastLabel: false
+    							},
+    							{
+    								labels: { align: "left", x: 0, y: -6 },
+    								showLastLabel: false
+    							},
+    							{ visible: false }
+    						]
+    					}
+    				}
+    			]
+    		}
+    	});
+    }
+
+    function instance$l($$self, $$props, $$invalidate) {
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<ChartPlugInVehicles> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("ChartPlugInVehicles", $$slots, []);
+    	$$self.$capture_state = () => ({ loadGraph });
+    	return [];
+    }
+
+    class ChartPlugInVehicles extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$l, create_fragment$l, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "ChartPlugInVehicles",
+    			options,
+    			id: create_fragment$l.name
+    		});
+    	}
+    }
+
+    /* src\front\renewableSourcesAPI\ChartRenewableSources.svelte generated by Svelte v3.20.1 */
+
+    const file$k = "src\\front\\renewableSourcesAPI\\ChartRenewableSources.svelte";
+
+    function create_fragment$m(ctx) {
+    	let main;
+    	let p;
+
+    	const block = {
+    		c: function create() {
+    			main = element("main");
+    			p = element("p");
+    			p.textContent = "Hola";
+    			add_location(p, file$k, 1, 4, 12);
+    			add_location(main, file$k, 0, 0, 0);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, main, anchor);
+    			append_dev(main, p);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(main);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$m.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$m($$self, $$props) {
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<ChartRenewableSources> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("ChartRenewableSources", $$slots, []);
+    	return [];
+    }
+
+    class ChartRenewableSources extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$m, create_fragment$m, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "ChartRenewableSources",
+    			options,
+    			id: create_fragment$m.name
+    		});
+    	}
+    }
+
+    /* src\front\NotFound.svelte generated by Svelte v3.20.1 */
+
+    const file$l = "src\\front\\NotFound.svelte";
+
+    function create_fragment$n(ctx) {
     	let main;
     	let h1;
 
@@ -18563,8 +19024,8 @@ var app = (function () {
     			main = element("main");
     			h1 = element("h1");
     			h1.textContent = "¡Esta página no existe!";
-    			add_location(h1, file$j, 1, 4, 12);
-    			add_location(main, file$j, 0, 0, 0);
+    			add_location(h1, file$l, 1, 4, 12);
+    			add_location(main, file$l, 0, 0, 0);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -18583,7 +19044,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$k.name,
+    		id: create_fragment$n.name,
     		type: "component",
     		source: "",
     		ctx
@@ -18592,7 +19053,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$k($$self, $$props) {
+    function instance$n($$self, $$props) {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -18607,21 +19068,21 @@ var app = (function () {
     class NotFound extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$k, create_fragment$k, safe_not_equal, {});
+    		init(this, options, instance$n, create_fragment$n, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "NotFound",
     			options,
-    			id: create_fragment$k.name
+    			id: create_fragment$n.name
     		});
     	}
     }
 
     /* src\front\App.svelte generated by Svelte v3.20.1 */
-    const file$k = "src\\front\\App.svelte";
+    const file$m = "src\\front\\App.svelte";
 
-    function create_fragment$l(ctx) {
+    function create_fragment$o(ctx) {
     	let main;
     	let current;
 
@@ -18634,7 +19095,7 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			create_component(router.$$.fragment);
-    			add_location(main, file$k, 26, 0, 1006);
+    			add_location(main, file$m, 32, 0, 1401);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -18662,7 +19123,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$l.name,
+    		id: create_fragment$o.name,
     		type: "component",
     		source: "",
     		ctx
@@ -18671,7 +19132,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$l($$self, $$props, $$invalidate) {
+    function instance$o($$self, $$props, $$invalidate) {
     	const routes = {
     		"/": Home,
     		"/oilCoalNuclearEnergyConsumptionAPI": App,
@@ -18680,6 +19141,9 @@ var app = (function () {
     		"/oil-coal-nuclear-energy-consumption-stats/:country/:year": EditOilCoal,
     		"/plugin-vehicles-stats/:country/:year": EditPlugInVehicle,
     		"/renewable-sources-stats/:country/:year": EditRenewableSource,
+    		"/chartOilCoal": ChartOilCoal,
+    		"/chartPlugInVehicles": ChartPlugInVehicles,
+    		"/chartRenewableSources": ChartRenewableSources,
     		"*": NotFound
     	};
 
@@ -18701,6 +19165,9 @@ var app = (function () {
     		EditOilCoal,
     		EditPlugInVehicle,
     		EditRenewableSource,
+    		ChartOilCoal,
+    		ChartPlugInVehicles,
+    		ChartRenewableSources,
     		NotFound,
     		routes
     	});
@@ -18711,13 +19178,13 @@ var app = (function () {
     class App$3 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$l, create_fragment$l, safe_not_equal, {});
+    		init(this, options, instance$o, create_fragment$o, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "App",
     			options,
-    			id: create_fragment$l.name
+    			id: create_fragment$o.name
     		});
     	}
     }

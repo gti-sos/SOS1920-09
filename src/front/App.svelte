@@ -8,6 +8,9 @@
 	import EditOilCoal from './oilCoalNuclearEnergyConsumptionAPI/EditOilCoal.svelte';
 	import EditPlugInVehicle from './plugInVehiclesAPI/EditPlugInVehicle.svelte';
 	import EditRenewableSource from './renewableSourcesAPI/EditRenewableSource.svelte';
+	import ChartOilCoal from './oilCoalNuclearEnergyConsumptionAPI/ChartOilCoal.svelte';
+	import ChartPlugInVehicles from './plugInVehiclesAPI/ChartPlugInVehicles.svelte';
+	import ChartRenewableSources from './renewableSourcesAPI/ChartRenewableSources.svelte';
 
 
 	import NotFound from './NotFound.svelte';
@@ -20,6 +23,9 @@
 		"/oil-coal-nuclear-energy-consumption-stats/:country/:year": EditOilCoal,
 		"/plugin-vehicles-stats/:country/:year": EditPlugInVehicle,
 		"/renewable-sources-stats/:country/:year": EditRenewableSource,
+		"/chartOilCoal": ChartOilCoal,
+		"/chartPlugInVehicles": ChartPlugInVehicles,
+		"/chartRenewableSources": ChartRenewableSources,
 		"*": NotFound
 	};
 </script>

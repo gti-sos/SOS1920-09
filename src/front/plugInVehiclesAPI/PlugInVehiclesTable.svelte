@@ -343,7 +343,7 @@
 					<th>País</th>
 					<th>Año</th>
 					<th>Ventas acumuladas</th>
-					<th>Salario anual</th>
+					<th>Ventas anuales</th>
 					<th>Porcentaje de coches cada 1000 personas</th>
 					<th>Acciones</th>
 				</tr>
