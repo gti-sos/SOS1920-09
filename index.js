@@ -47,8 +47,6 @@ renewableSourcesAPIv2(app);
 oilCoalNuclearEnergyConsumptionAPIv1(app);
 oilCoalNuclearEnergyConsumptionAPIv2(app);
 
-
-
 var port = process.env.PORT || 12345;
 
 app.use("/", express.static("./public"));

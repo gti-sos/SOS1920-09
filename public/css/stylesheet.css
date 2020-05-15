@@ -17,20 +17,29 @@
     float: right;
 }
 
+#container {
+    height: 400px; 
+}
+
 .highcharts-figure, .highcharts-data-table table {
+<<<<<<< HEAD
     min-width: 320px; 
     max-width: 100px;
+=======
+    min-width: 310px; 
+    max-width: 800px;
+>>>>>>> e9e5e8276d590dd97263d7805626100b1b05d5c0
     margin: 1em auto;
 }
 
 .highcharts-data-table table {
-	font-family: Verdana, sans-serif;
-	border-collapse: collapse;
-	border: 1px solid #EBEBEB;
-	margin: 10px auto;
-	text-align: center;
-	width: 100%;
-	max-width: 500px;
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #EBEBEB;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
 }
 .highcharts-data-table caption {
     padding: 1em 0;
