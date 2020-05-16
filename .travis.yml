@@ -6,8 +6,7 @@ install:
 before_script:
   - "npm run build"
   - "npm start &"
-script:
-  - "mvn cobertura:cobertura"
+script: "mvn cobertura:cobertura"
   - "npm test"
 after_success:
   - bash <(curl -s https://codecov.io/bash)
