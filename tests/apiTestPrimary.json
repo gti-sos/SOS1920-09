@@ -42,9 +42,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/oil-coal-nuclear-energy-consumption-stats",
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -92,9 +92,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/oil-coal-nuclear-energy-consumption-stats?limit=2&offset=1",
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats?limit=2&offset=1",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -162,9 +162,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/oil-coal-nuclear-energy-consumption-stats?country=Spain&year=2017",
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats?country=Spain&year=2017",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -214,9 +214,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/oil-coal-nuclear-energy-consumption-stats",
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -256,9 +256,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/oil-coal-nuclear-energy-consumption-stats",
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -298,9 +298,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/oil-coal-nuclear-energy-consumption-stats",
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -340,9 +340,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/oil-coal-nuclear-energy-consumption-stats/Australia/2015",
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats/Australia/2015",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -384,9 +384,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/oil-coal-nuclear-energy-consumption-stats/Australia/2015",
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats/Australia/2015",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -428,9 +428,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/oil-coal-nuclear-energy-consumption-stats/Australia/2015",
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats/Australia/2015",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -472,9 +472,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/oil-coal-nuclear-energy-consumption-stats/Australia/2015",
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats/Australia/2015",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -516,9 +516,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/oil-coal-nuclear-energy-consumption-stats",
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -551,9 +551,9 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/oil-coal-nuclear-energy-consumption-stats",
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -596,9 +596,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/oil-coal-nuclear-energy-consumption-stats/loadInitialData",
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats/loadInitialData",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",

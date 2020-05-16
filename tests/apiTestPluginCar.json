@@ -29,9 +29,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/plugin-vehicles-stats",
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -71,9 +71,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/plugin-vehicles-stats",
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -113,9 +113,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/plugin-vehicles-stats",
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -155,9 +155,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/plugin-vehicles-stats",
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -194,9 +194,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/plugin-vehicles-stats?limit=2&offset=1&year=2018",
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats?limit=2&offset=1&year=2018",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -257,9 +257,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/plugin-vehicles-stats?country=China&year=2018",
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats?country=China&year=2018",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -300,9 +300,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/plugin-vehicles-stats/France",
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats/France",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -344,9 +344,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/plugin-vehicles-stats/China/2018",
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats/China/2018",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -379,9 +379,9 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/plugin-vehicles-stats/China",
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats/China",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -413,9 +413,9 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/plugin-vehicles-stats/Canada/2018",
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats/Canada/2018",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -457,9 +457,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/plugin-vehicles-stats/",
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats/",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -500,9 +500,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/plugin-vehicles-stats/China",
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats/China",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -543,9 +543,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/plugin-vehicles-stats/France/2018",
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats/France/2018",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -578,9 +578,9 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/plugin-vehicles-stats",
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
@@ -623,9 +623,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/plugin-vehicles-stats/loadInitialData",
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats/loadInitialData",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:12345"
 					],
 					"path": [
 						"api",
