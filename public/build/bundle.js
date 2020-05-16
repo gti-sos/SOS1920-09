@@ -18624,7 +18624,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$j, 160, 56, 5211);
+    			add_location(i, file$j, 160, 56, 5205);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -18696,22 +18696,22 @@ var app = (function () {
     			t2 = space();
     			create_component(button.$$.fragment);
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$j, 143, 4, 4472);
+    			add_location(script0, file$j, 143, 4, 4466);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/heatmap.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$j, 144, 4, 4564);
+    			add_location(script1, file$j, 144, 4, 4558);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$j, 145, 4, 4661);
+    			add_location(script2, file$j, 145, 4, 4655);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$j, 146, 4, 4760);
+    			add_location(script3, file$j, 146, 4, 4754);
     			if (script4.src !== (script4_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script4, "src", script4_src_value);
-    			add_location(script4, file$j, 147, 4, 4861);
+    			add_location(script4, file$j, 147, 4, 4855);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$j, 155, 8, 5052);
+    			add_location(div, file$j, 155, 8, 5046);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$j, 156, 8, 5088);
+    			add_location(p, file$j, 156, 8, 5082);
     			attr_dev(figure, "class", "highcharts-figure");
-    			add_location(figure, file$j, 154, 4, 5008);
-    			add_location(main, file$j, 152, 0, 4990);
+    			add_location(figure, file$j, 154, 4, 5002);
+    			add_location(main, file$j, 152, 0, 4984);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -18874,7 +18874,7 @@ var app = (function () {
     		},
     		tooltip: {
     			formatter() {
-    				return "<b>" + getPointCategoryName(this.point, "x") + "</b> sold <br><b>" + this.point.value + "</b> consumo de carbón <br><b>" + getPointCategoryName(this.point, "y") + "</b>";
+    				return "<b>" + getPointCategoryName(this.point, "x") + "</b><br><b>" + this.point.value + "</b> consumo de carbón <br><b>" + getPointCategoryName(this.point, "y") + "</b>";
     			}
     		},
     		series: [
