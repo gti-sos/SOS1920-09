@@ -13,6 +13,6 @@
 	</div>
 
 	<div class="div-home">
-		<button type="button"  class="btn btn-secondary btn-lg btn-block"  onclick="window.location.href='#/analytics'"><i class="fas fa-chart-area"></i> Gráfica común de datos</button>
+		<button type="button"  class="btn btn-outline-dark"  onclick="window.location.href='#/analytics'"><i class="fas fa-chart-area"></i> Gráfica común de datos</button>
 	</div>
 </main>
