@@ -6,6 +6,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
+    "test": "npx newman run tests/apiTestPrimary.json && npx newman run tests/apiTestPluginCar.json && npx newman run tests/apiTestRenewable.json",
     "start": "node index"
   },
   "repository": {
