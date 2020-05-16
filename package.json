@@ -7,8 +7,7 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "test": "npx newman run tests/apiTestPrimary.json && npx newman run tests/apiTestPluginCar.json && npx newman run tests/apiTestRenewable.json",
-    "start": "node index",
-    "test:coveralls": "jest --coverage --coverageReporters=text-lcov --passWithNoTests | coveralls"
+    "start": "node index"
   },
   "repository": {
     "type": "git",
