@@ -339,7 +339,7 @@
 					<th> País </th>
 					<th> Año </th>
 					<th> Porcentaje de uso de energías renovables </th>
-					<th> Porcentaje de uso de energías hidroeléctricas sobre el total </th>
+					<th> Porcentaje de uso de energías hidroeléctricas </th>
 					<th> Porcentaje de uso de energías eólica </th>
 					<th> Acciones </th>
 				</tr>
