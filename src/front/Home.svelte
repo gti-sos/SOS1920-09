@@ -8,6 +8,7 @@
 
 	<div class="div-home">
 		<button type="button"  class="btn btn-outline-success"  onclick="window.location.href='#/chartRenewableSources'"><i class="fas fa-chart-area"></i> Gráfica de energías renovables</button>
+		<button type="button"  class="btn btn-outline-success"  onclick="window.location.href='#/chartRenewableSourcesRGraph'"><i class="fas fa-chart-area"></i> Gráfica de energías renovables</button>
 		<button type="button" class="btn btn-outline-primary" onclick="window.location.href='#/chartPlugInVehicles'"><i class="fas fa-chart-area"></i> Gráfica de coches eléctricos</button>
 		<button type="button"  class="btn btn-outline-dark" onclick="window.location.href='#/chartOilCoal'"><i class="fas fa-chart-area"></i> Gráfica de energías primarias</button>
 	</div>

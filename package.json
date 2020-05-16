@@ -29,7 +29,6 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "apexcharts": "^3.19.0",
     "body-parser": "^1.19.0",
     "coveralls": "^3.1.0",
     "express": "^4.17.1",

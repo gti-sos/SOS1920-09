@@ -11,6 +11,7 @@
 	import ChartOilCoal from './oilCoalNuclearEnergyConsumptionAPI/ChartOilCoal.svelte';
 	import ChartPlugInVehicles from './plugInVehiclesAPI/ChartPlugInVehicles.svelte';
 	import ChartRenewableSources from './renewableSourcesAPI/ChartRenewableSources.svelte';
+	import ChartRenewableSourcesRGraph from './renewableSourcesAPI/ChartRenewableSourcesRGraph.svelte';
 	import CommonChart from './CommonChart.svelte';
 
 
@@ -27,6 +28,7 @@
 		"/chartOilCoal": ChartOilCoal,
 		"/chartPlugInVehicles": ChartPlugInVehicles,
 		"/chartRenewableSources": ChartRenewableSources,
+		"/chartRenewableSourcesRGraph": ChartRenewableSourcesRGraph,
 		"/analytics": CommonChart,
 		"*": NotFound
 	};
