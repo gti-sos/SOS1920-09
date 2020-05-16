@@ -20,6 +20,7 @@
     margin-bottom: 1%;
     margin-top: 1%;
     float: right;
+<<<<<<< HEAD
 }
 
 #container {
@@ -59,3 +60,6 @@
 .highcharts-data-table tr:hover {
     background: #f1f7ff;
 }
+=======
+}
+>>>>>>> 77bd79de8569bb47128f13381784c7c12f534af8

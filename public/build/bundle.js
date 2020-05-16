@@ -19374,6 +19374,25 @@ var app = (function () {
     			figure = element("figure");
     			div = element("div");
     			t1 = space();
+<<<<<<< HEAD
+    			p = element("p");
+    			p.textContent = "Gráfica que representa los datos de las energías renovables por países.";
+    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
+    			add_location(script0, file$k, 129, 4, 3889);
+    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/data.js")) attr_dev(script1, "src", script1_src_value);
+    			add_location(script1, file$k, 130, 4, 3980);
+    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/parallel-coordinates.js")) attr_dev(script2, "src", script2_src_value);
+    			add_location(script2, file$k, 131, 4, 4073);
+    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script3, "src", script3_src_value);
+    			add_location(script3, file$k, 132, 4, 4182);
+    			attr_dev(div, "id", "container");
+    			add_location(div, file$k, 139, 8, 4362);
+    			attr_dev(p, "class", "highcharts-description");
+    			add_location(p, file$k, 140, 8, 4398);
+    			attr_dev(figure, "class", "highcharts-figure");
+    			add_location(figure, file$k, 138, 4, 4318);
+    			add_location(main, file$k, 136, 0, 4300);
+=======
     			p0 = element("p");
     			p0.textContent = "Gráfica que representa los datos de las energías renovables por países.";
     			t3 = space();
@@ -19396,6 +19415,7 @@ var app = (function () {
     			add_location(figure, file$l, 143, 4, 4437);
     			add_location(p1, file$l, 150, 4, 4673);
     			add_location(main, file$l, 141, 0, 4419);
+>>>>>>> 95f67450fbf8b0227fcd176da9b96c552952051e
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -19419,10 +19439,17 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
+<<<<<<< HEAD
+    				listen_dev(script0, "load", loadGraph$1, false, false, false),
+    				listen_dev(script1, "load", loadGraph$1, false, false, false),
+    				listen_dev(script2, "load", loadGraph$1, false, false, false),
+    				listen_dev(script3, "load", loadGraph$1, false, false, false)
+=======
     				listen_dev(script0, "load", loadGraph$2, false, false, false),
     				listen_dev(script1, "load", loadGraph$2, false, false, false),
     				listen_dev(script2, "load", loadGraph$2, false, false, false),
     				listen_dev(script3, "load", loadGraph$2, false, false, false)
+>>>>>>> 95f67450fbf8b0227fcd176da9b96c552952051e
     			];
     		},
     		p: function update(ctx, [dirty]) {
@@ -19466,7 +19493,11 @@ var app = (function () {
     	return block;
     }
 
+<<<<<<< HEAD
+    async function loadGraph$1() {
+=======
     async function loadGraph$2() {
+>>>>>>> 95f67450fbf8b0227fcd176da9b96c552952051e
     	/* Asking for the data to the back */
     	const BASE_API_URL = "/api/v2/renewable-sources-stats";
 
@@ -19583,7 +19614,11 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("ChartRenewableSources", $$slots, []);
+<<<<<<< HEAD
+    	$$self.$capture_state = () => ({ loadGraph: loadGraph$1 });
+=======
     	$$self.$capture_state = () => ({ Button, pop, loadGraph: loadGraph$2 });
+>>>>>>> 95f67450fbf8b0227fcd176da9b96c552952051e
     	return [];
     }
 
