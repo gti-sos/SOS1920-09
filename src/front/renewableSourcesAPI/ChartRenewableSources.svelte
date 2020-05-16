@@ -1,4 +1,9 @@
 <script>
+    import Button from "sveltestrap/src/Button.svelte";
+    import {
+        pop
+    } from "svelte-spa-router";
+
     async function loadGraph() {
         /* Asking for the data to the back */
         const BASE_API_URL = "/api/v2/renewable-sources-stats";
@@ -143,5 +148,6 @@
         </p>
     </figure>
 
-
+    <p></p>
+    <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
 </main>
