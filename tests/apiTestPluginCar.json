@@ -1,0 +1,664 @@
+{
+	"info": {
+		"_postman_id": "db8de12c-5d92-4200-884b-3160577a3c55",
+		"name": "SOS1920-09-plugin-vehicles-stats-v2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get plugin-vehicles-stats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4dfc05d0-6800-416e-a150-7ab0d9be39e1",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"There are more than 1 plugin vehicles stats\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.lengthOf.above(1);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"plugin-vehicles-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post plugin-vehicles-stats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "90b29364-0b1a-45f3-aece-ce3c5332d60e",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"country\": \"France\",\r\n\"year\": 2018,\r\n\"pev-stock\": 204617,\r\n\"annual-sale\": 53745,\r\n\"cars-per-1000\": 3.1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"plugin-vehicles-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post plugin-vehicles-stats NULL",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "de74e7f3-38c6-49ec-b145-b823cfb8ac0e",
+						"exec": [
+							"pm.test(\"Status code is 400, Bad Request\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"country\": \"France\",\r\n\"year\": 2018,\r\n\"pev-stock\": null,\r\n\"annual-sale\": 53745,\r\n\"cars-per-1000\": 3.1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"plugin-vehicles-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post plugin-vehicles-stats wrong fields",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6e0b6c21-8595-4384-b5d1-162b34acfc2f",
+						"exec": [
+							"pm.test(\"Status code is 400, Bad Request\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"country\": \"France\",\r\n\"year\": 2018,\r\n\"pev-stock\": null,\r\n\"annual-sale\": 53745,\r\n\"cars-per-1000\": 3.1,\r\n\"extra-field\": \"hola\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"plugin-vehicles-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get plugin-vehicles-stats limit=2 offset=1 year=2018",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "14f3158a-89ff-4e10-920f-55d4a2591942",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"There are 2 or less plugin vehicles stats\", function() {",
+							"    var jsonData = pm.response.json()",
+							"    pm.expect(jsonData).to.have.lengthOf.to.be.below(3);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats?limit=2&offset=1&year=2018",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"plugin-vehicles-stats"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "2"
+						},
+						{
+							"key": "offset",
+							"value": "1"
+						},
+						{
+							"key": "year",
+							"value": "2018"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get plugin-vehicles-stats country=China year=2018",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e21f84b9-47dc-41bd-81fa-c324304b287e",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"There are 1 plugin vehicles stats\", function() {",
+							"    pm.expect(jsonData).to.have.lengthOf(1); //The search should return just 1 element, because we search with the primary key",
+							"});",
+							"",
+							"var theElement = jsonData[0]; // Getting the only element it return in array form",
+							"",
+							"pm.test(\"Verify country\", function () {",
+							"   pm.expect(theElement.country).is.to.equal(\"China\"); // Checking that the element has the country we searched",
+							"});",
+							"",
+							"pm.test(\"Verify year\", function () {",
+							"   pm.expect(theElement.year).is.to.equal(2018); // Checking that the element has the year we searched",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats?country=China&year=2018",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"plugin-vehicles-stats"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "China"
+						},
+						{
+							"key": "year",
+							"value": "2018"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get plugin-vehicles-stats/France",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f1dbef85-5ef3-4423-b483-66b473ac7a15",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats/France",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"plugin-vehicles-stats",
+						"France"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get plugin-vehicles-stats/China/2018",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6016571f-53af-4931-9e8d-6dad955dc7fd",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"var theElement =pm.response.json(); //We receive a json, not an array because we are asking for an specific plugin",
+							"",
+							"pm.test(\"Verify country\", function () {",
+							"   pm.expect(theElement.country).is.to.equal(\"China\"); // Checking that the element has the country we searched",
+							"});",
+							"",
+							"pm.test(\"Verify year\", function () {",
+							"   pm.expect(theElement.year).is.to.equal(2018); // Checking that the element has the year we searched",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats/China/2018",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"plugin-vehicles-stats",
+						"China",
+						"2018"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete plugin-vehicles-stats/China",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2e2c10b4-4ff5-4bbc-9d51-5224766ba51c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats/China",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"plugin-vehicles-stats",
+						"China"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete plugin-vehicles-stats/Canada/2018",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb703dc6-b047-47d4-ba50-e21aca23d8b0",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats/Canada/2018",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"plugin-vehicles-stats",
+						"Canada",
+						"2018"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put plugin-vehicles-stats/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "76faa96e-b2f9-46ad-a0c1-4872ae58c324",
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\t\t\"country\": \"France\",\r\n\t\t\"year\": 2018,\r\n\t\t\"pev-stock\": 204617,\r\n\t\t\"annual-sale\": 53745,\r\n\t\t\"cars-per-1000\": \"cambio\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats/",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"plugin-vehicles-stats",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post plugin-vehicles-stats/China",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ceb86d8f-0ba2-455f-bce4-46f62801d373",
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"country\": \"China\",\r\n\"year\": 2018,\r\n\"pev-stock\": 2243772,\r\n\"annual-sale\": 1016002,\r\n\"cars-per-1000\": 1.6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats/China",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"plugin-vehicles-stats",
+						"China"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put plugin-vehicles-stats/France",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0b289a5b-66b1-4b5a-946b-0b34796d5d76",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"country\": \"France\",\r\n\"year\": 2018,\r\n\"pev-stock\": 204617,\r\n\"annual-sale\": 53745,\r\n\"cars-per-1000\": \"cambio\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats/France/2018",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"plugin-vehicles-stats",
+						"France",
+						"2018"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete plugin-vehicles-stats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "92adf4e3-5aee-41b5-ae56-4234489d54f9",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"plugin-vehicles-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get plugin-vehicles-stats/loadInitialData",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "94feb8b6-7e4d-4223-a815-cd59c900c0ea",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/v2/plugin-vehicles-stats/loadInitialData",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"plugin-vehicles-stats",
+						"loadInitialData"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "93a9843f-2483-4cd8-9e73-f29e95f20746",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "b2042eea-7c37-41c7-9e93-fc162ac3228c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

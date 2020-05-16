@@ -6,6 +6,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
+    "test": "npx newman run tests/apiTestPrimary.json && npx newman run tests/apiTestPluginCar.json && npx newman run tests/apiTestRenewable.json",
     "start": "node index"
   },
   "repository": {
@@ -28,6 +29,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "apexcharts": "^3.19.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "nedb": "^1.8.0",

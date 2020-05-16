@@ -1,0 +1,637 @@
+{
+	"info": {
+		"_postman_id": "3be38db7-9ed6-4d24-bb18-c05b7888eb6b",
+		"name": "SOS1920-09-oil-coal-nuclear-energy-consumption-stats V2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get oil-coal-nuclear-energy-consumption-stats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a24f8a53-7ef5-4215-9e04-a7e84f1d859c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"There are more than 1 oil Coal Nuclear Energy Consumption Stats\", function () {",
+							"   var jsonData = pm.response.json();",
+							"   pm.expect(jsonData).to.have.lengthOf.above(1);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"oil-coal-nuclear-energy-consumption-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get oil-coal-nuclear-energy-consumption-stats limit=3&offset=1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "21a650af-749d-48ae-b7f8-8d78dff711b0",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"There are more than 2 oil Coal Nuclear Energy Consumption Stats\", function () {",
+							"   var jsonData = pm.response.json();",
+							"   pm.expect(jsonData).to.have.lengthOf.to.be.below(3);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats?limit=2&offset=1",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"oil-coal-nuclear-energy-consumption-stats"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "2"
+						},
+						{
+							"key": "offset",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get oil-coal-nuclear-energy-consumption-stats country & year",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2a478ec3-cd0e-47c6-8d0e-a492e340098f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"var jsonData = pm.response.json();",
+							"pm.test(\"There are 1 oil consumption stats with that search\", function(){",
+							"    pm.expect(jsonData).to.have.lengthOf(1);",
+							"});",
+							"",
+							"var theElement = jsonData[0];",
+							"pm.test(\"Verify year\", function() {",
+							"    pm.expect(theElement.year).is.to.equal(2017);",
+							"});",
+							"",
+							"pm.test(\"Verify country\", function() {",
+							"    pm.expect(theElement.country).is.to.equal(\"Spain\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats?country=Spain&year=2017",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"oil-coal-nuclear-energy-consumption-stats"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "Spain"
+						},
+						{
+							"key": "year",
+							"value": "2017"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post oil-coal-nuclear-energy-consumption-stats /xxxx",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "aa77a971-7a79-4f19-96ac-cf24719fb565",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"country\": \"Australia\",\r\n\"year\": 2015,\r\n\"oil-consumption\": 101,\r\n\"coal-consumption\": 19.1,\r\n\"nuclear-energy-consumption\": 21.8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"oil-coal-nuclear-energy-consumption-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post oil-coal-nuclear-energy-consumption-stats null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "357ee7d2-4558-4609-83a0-712a0ebe02cd",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"country\": \"Australia\",\r\n\"year\": 2015,\r\n\"oil-consumption\": null,\r\n\"coal-consumption\": 19.1,\r\n\"nuclear-energy-consumption\": 21.8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"oil-coal-nuclear-energy-consumption-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post oil-coal-nuclear-energy-consumption-stats wrong fields",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f6de2f60-b1e4-40dc-84ea-7a9f1f29f1c6",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"country\": \"Australia\",\r\n\"year\": 2015,\r\n\"oil-consumption\": 101,\r\n\"coal-consumption\": 19.1,\r\n\"nuclear-energy-consumption\": 21.8,\r\n\"extrafield\" : 2.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"oil-coal-nuclear-energy-consumption-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get  oil-coal-nuclear-energy-consumption / xxxx",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "42e4b1b2-4d24-45df-b3eb-75867ef6a49c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"var theElement = pm.response.json();",
+							"pm.test(\"Verify year\", function() {",
+							"    pm.expect(theElement.year).is.to.equal(2015);",
+							"});",
+							"",
+							"pm.test(\"Verify country\", function() {",
+							"    pm.expect(theElement.country).is.to.equal(\"Australia\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats/Australia/2015",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"oil-coal-nuclear-energy-consumption-stats",
+						"Australia",
+						"2015"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put oil-coal-nuclear-energy-consumption-stats Spain 2016",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fdfeac99-5fd4-4aa5-a0a6-f5e92fe2c455",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"country\": \"Australia\",\r\n\"year\": 2015,\r\n\"oil-consumption\": 101,\r\n\"coal-consumption\": 19.1,\r\n\"nuclear-energy-consumption\": 21.8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats/Australia/2015",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"oil-coal-nuclear-energy-consumption-stats",
+						"Australia",
+						"2015"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete oil-coal-nuclear-energy-consumption-stats /Spain 2016",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "75605026-86b2-48d0-95c8-ebdfda7c22e1",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats/Australia/2015",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"oil-coal-nuclear-energy-consumption-stats",
+						"Australia",
+						"2015"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post oil-coal-nuclear-energy-consumption-stats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "edd6c20d-8c0f-437a-857e-5de13b5ad0bf",
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\t\t\"country\": \"Alemania\",\r\n\t\t\"year\" : 2016,\r\n\t\t\"oil-consumption\": 907.6,\r\n\t\t\"coal-consumption\": 340.6,\r\n\t\t\"nuclear-energy-consumption\":191.9\r\n\t} \r\n\t\t",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats/Australia/2015",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"oil-coal-nuclear-energy-consumption-stats",
+						"Australia",
+						"2015"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put oil-coal-nuclear-energy-consumption-stats /xxx",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c747a1dc-178d-45b1-9ce2-d52f02a73381",
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"oil-coal-nuclear-energy-consumption-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete oil-coal-nuclear-energy-consumption-stats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9f135250-a2fb-4ece-a8a4-b7f37f60e7f5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"oil-coal-nuclear-energy-consumption-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoadInitialData",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f0151c5f-2fd0-4aa7-992f-a8b8c36243d1",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats/loadInitialData",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"oil-coal-nuclear-energy-consumption-stats",
+						"loadInitialData"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "72991c00-a646-4ffd-8d68-5d84b67a2ca0",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "7693e2c2-e9cd-420b-ac36-3d9bd37f996f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

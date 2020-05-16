@@ -1,0 +1,553 @@
+{
+	"info": {
+		"_postman_id": "42c768f1-2183-4820-9d7c-1701a2bd79a8",
+		"name": "SOS1920-09-renewable-sources-stats-v2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get renewable-sources-stats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6a332826-2f08-4447-9ce2-f7b251d59cfb",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"There are more than 1 renewable source stat\", function () {",
+							"   var jsonData = pm.response.json();",
+							"   pm.expect(jsonData).to.have.lengthOf.above(1);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/api/v2/renewable-sources-stats",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"renewable-sources-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get renewable-sources-stats limit=2 offset=1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "43dab879-ccdd-487e-8d8f-5a824a8d6d5e",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"There are 2 or less renewable source stats\", function () {",
+							"   var jsonData = pm.response.json();",
+							"   pm.expect(jsonData).to.have.lengthOf.to.be.below(3);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/api/v2/renewable-sources-stats?limit=2&offset=1",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"renewable-sources-stats"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "2"
+						},
+						{
+							"key": "offset",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get renewable-sources-stats country=Spain year=2016",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d9bc6db6-3301-421e-bc1d-466c9f020669",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"var jsonData = pm.response.json();",
+							"pm.test(\"There are 1 renewable source stats with that search\", function () {",
+							"   ",
+							"   pm.expect(jsonData).to.have.lengthOf(1); // The search should return just 1 element, because we search with the primary key",
+							"});",
+							"",
+							"var theElement = jsonData[0]; // Getting the only element it return in array form",
+							"pm.test(\"Verify year\", function () { ",
+							"        pm.expect(theElement.year).is.to.equal(2016); // Checking that the element has the year we searched",
+							"});",
+							"",
+							"pm.test(\"Verify country\", function () { ",
+							"        pm.expect(theElement.country).is.to.equal(\"Spain\"); // Checking that the element has the country we search",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/api/v2/renewable-sources-stats?country=Spain&year=2016",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"renewable-sources-stats"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "Spain"
+						},
+						{
+							"key": "year",
+							"value": "2016"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post renewable-sources-stats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "66d1d85a-3837-47e1-b2ba-04d36a919a5e",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\t\"country\": \"Greece\",\r\n\t\"year\": 2016,\r\n\t\"percentage-re-total\": 27.4,\r\n\t\"percentage-hydropower-total\": 42.7,\r\n\t\"percentage-wind-power-total\": 9.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/v2/renewable-sources-stats",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"renewable-sources-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post renewable-sources-stats null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "05deb29e-bbc4-45fa-8e82-056315f7ebb5",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\t\"country\": \"Greece\",\r\n\t\"year\": 2016,\r\n\t\"percentage-re-total\": null,\r\n\t\"percentage-hydropower-total\": 42.7,\r\n\t\"percentage-wind-power-total\": 9.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/v2/renewable-sources-stats",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"renewable-sources-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post renewable-sources-stats wrong fields",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a5d330df-0366-45e5-a79a-755ceacf3bf5",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\t\"country\": \"Greece\",\r\n\t\"year\": 2016,\r\n\t\"percentage-re-total\": 2.4,\r\n\t\"percentage-hydropower-total\": 42.7,\r\n\t\"wrongField\": 9.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/v2/renewable-sources-stats",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"renewable-sources-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get renewable-sources-stats Greece 2016",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "47211db9-1e0e-40f8-83d7-e5d9e198b3b2",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"var theElement = pm.response.json(); // We receive a json, not an array because we are asking for an specific resource",
+							"",
+							"pm.test(\"Verify year\", function () { ",
+							"        pm.expect(theElement.year).is.to.equal(2016); // Checking that the element has the year we searched",
+							"});",
+							"",
+							"pm.test(\"Verify country\", function () { ",
+							"        pm.expect(theElement.country).is.to.equal(\"Greece\"); // Checking that the element has the country we search",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/api/v2/renewable-sources-stats/Greece/2016",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"renewable-sources-stats",
+						"Greece",
+						"2016"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put renewable-sources-stats Greece 2016",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "38ed77ad-d9fc-4331-9332-c094ce8bb7be",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"country\": \"Greece\",\r\n\"year\": 2016,\r\n\"percentage-re-total\": 0,\r\n\"percentage-hydropower-total\": 0,\r\n\"percentage-wind-power-total\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/v2/renewable-sources-stats/Greece/2016",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"renewable-sources-stats",
+						"Greece",
+						"2016"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete renewable-sources-stats Greece 2016",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "904ba780-ef92-4a20-b95a-e16e6ac1e9e3",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/api/v2/renewable-sources-stats/Greece/2016",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"renewable-sources-stats",
+						"Greece",
+						"2016"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post renewable-sources-stats Greece 2016",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "405beb4a-a07b-432d-a81c-b1ef7d62fbda",
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/api/v2/renewable-sources-stats/Greece/2016",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"renewable-sources-stats",
+						"Greece",
+						"2016"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put renewable-sources-stats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cd8e0706-17da-4a07-82a7-a50112e851c2",
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/api/v2/renewable-sources-stats",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"renewable-sources-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete renewable-sources-stats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "dc96e478-a3ac-41d4-b90d-dd87b46b680f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/api/v2/renewable-sources-stats",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"renewable-sources-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loadInitialData",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "90ca4839-af5f-4a02-9de6-bedc08958973",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/api/v2/renewable-sources-stats/loadInitialData",
+					"host": [
+						"http://localhost:12345"
+					],
+					"path": [
+						"api",
+						"v2",
+						"renewable-sources-stats",
+						"loadInitialData"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
