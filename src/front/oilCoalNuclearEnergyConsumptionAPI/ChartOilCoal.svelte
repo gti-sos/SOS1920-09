@@ -102,7 +102,7 @@
         
             tooltip: {
                 formatter: function () {
-                    return '<b>' + getPointCategoryName(this.point, 'x') + '</b> sold <br><b>' +
+                    return '<b>' + getPointCategoryName(this.point, 'x') + '</b><br><b>' +
                         this.point.value + '</b> consumo de carbón <br><b>' + getPointCategoryName(this.point, 'y') + '</b>';
                 }
             },
