@@ -8,7 +8,9 @@
     "dev": "rollup -c -w",
     "test": "npx newman run tests/apiTestPrimary.json && npx newman run tests/apiTestPluginCar.json && npx newman run tests/apiTestRenewable.json",
     "start": "node index",
-    "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info"
+    "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -37,6 +39,8 @@
     "jest": "^26.0.1",
     "nedb": "^1.8.0",
     "svelte-spa-router": "^2.1.0",
-    "sveltestrap": "^3.3.3"
-  }
+    "sveltestrap": "^3.3.3",
+    "snyk": "^1.321.0"
+  },
+  "snyk": true
 }
