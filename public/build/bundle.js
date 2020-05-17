@@ -1593,17 +1593,10 @@ var app = (function () {
     			add_location(i7, file, 13, 108, 1478);
     			attr_dev(button7, "type", "button");
     			attr_dev(button7, "class", "btn btn-outline-dark");
-<<<<<<< HEAD
     			attr_dev(button7, "onclick", "window.location.href='#/chartOilCoalRGraph'");
     			add_location(button7, file, 13, 2, 1372);
     			attr_dev(div1, "class", "div-home");
     			add_location(div1, file, 8, 1, 600);
-=======
-    			attr_dev(button7, "onclick", "window.location.href='#/analytics'");
-    			add_location(button7, file, 16, 2, 1408);
-    			attr_dev(div2, "class", "div-home");
-    			add_location(div2, file, 15, 1, 1382);
->>>>>>> cb3e33d948f9aeb4b1abf2984824cca010a2ba7e
     			attr_dev(i8, "class", "fas fa-chart-area");
     			add_location(i8, file, 18, 100, 1692);
     			attr_dev(button8, "type", "button");
