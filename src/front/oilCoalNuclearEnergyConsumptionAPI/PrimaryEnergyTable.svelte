@@ -333,10 +333,10 @@
 				<tr>
 					<th>País</th>
 					<th>Año</th>
-					<th>Porcentaje de consumo de Gasolina</th>
-					<th>Porcentaje de consumo de Carbón</th>
-					<th>Porcentaje de consumo de Energía Nuclear</th>
-					<th> Acciones </th>
+					<th>Consumo de Gasolina</th>
+					<th>Consumo de Carbón</th>
+                    <th>Consumo de Energía Nuclear</th>
+                    <th>Acciones</th>
 				</tr>
 			</thead>
 			<tbody>

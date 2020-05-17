@@ -1560,9 +1560,9 @@ var app = (function () {
     			attr_dev(div1, "class", "div-home");
     			add_location(div1, file, 8, 1, 600);
     			attr_dev(i6, "class", "fas fa-chart-area");
-    			add_location(i6, file, 15, 114, 1324);
+    			add_location(i6, file, 15, 100, 1310);
     			attr_dev(button6, "type", "button");
-    			attr_dev(button6, "class", "btn btn-secondary btn-lg btn-block");
+    			attr_dev(button6, "class", "btn btn-outline-dark");
     			attr_dev(button6, "onclick", "window.location.href='#/analytics'");
     			add_location(button6, file, 15, 2, 1212);
     			attr_dev(div2, "class", "div-home");
@@ -8248,7 +8248,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Insertar");
     			attr_dev(i, "class", "far fa-edit");
-    			add_location(i, file$a, 348, 70, 10456);
+    			add_location(i, file$a, 348, 70, 10442);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -8282,7 +8282,7 @@ var app = (function () {
     			t = text(" Borrar");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$a, 363, 106, 11034);
+    			add_location(i, file$a, 363, 106, 11020);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -8369,14 +8369,14 @@ var app = (function () {
     			td5 = element("td");
     			create_component(button.$$.fragment);
     			attr_dev(a, "href", a_href_value = "#/oil-coal-nuclear-energy-consumption-stats/" + /*oilEnergy*/ ctx[7].country + "/" + /*oilEnergy*/ ctx[7].year);
-    			add_location(a, file$a, 354, 7, 10588);
-    			add_location(td0, file$a, 353, 6, 10575);
-    			add_location(td1, file$a, 358, 6, 10741);
-    			add_location(td2, file$a, 360, 6, 10781);
-    			add_location(td3, file$a, 361, 6, 10828);
-    			add_location(td4, file$a, 362, 6, 10876);
-    			add_location(td5, file$a, 363, 6, 10934);
-    			add_location(tr, file$a, 352, 5, 10563);
+    			add_location(a, file$a, 354, 7, 10574);
+    			add_location(td0, file$a, 353, 6, 10561);
+    			add_location(td1, file$a, 358, 6, 10727);
+    			add_location(td2, file$a, 360, 6, 10767);
+    			add_location(td3, file$a, 361, 6, 10814);
+    			add_location(td4, file$a, 362, 6, 10862);
+    			add_location(td5, file$a, 363, 6, 10920);
+    			add_location(tr, file$a, 352, 5, 10549);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -8603,13 +8603,13 @@ var app = (function () {
     			th1.textContent = "Año";
     			t3 = space();
     			th2 = element("th");
-    			th2.textContent = "Porcentaje de consumo de Gasolina";
+    			th2.textContent = "Consumo de Gasolina";
     			t5 = space();
     			th3 = element("th");
-    			th3.textContent = "Porcentaje de consumo de Carbón";
+    			th3.textContent = "Consumo de Carbón";
     			t7 = space();
     			th4 = element("th");
-    			th4.textContent = "Porcentaje de consumo de Energía Nuclear";
+    			th4.textContent = "Consumo de Energía Nuclear";
     			t9 = space();
     			th5 = element("th");
     			th5.textContent = "Acciones";
@@ -8644,20 +8644,20 @@ var app = (function () {
     			add_location(th0, file$a, 333, 5, 9553);
     			add_location(th1, file$a, 334, 5, 9573);
     			add_location(th2, file$a, 335, 5, 9592);
-    			add_location(th3, file$a, 336, 5, 9641);
-    			add_location(th4, file$a, 337, 5, 9688);
-    			add_location(th5, file$a, 338, 5, 9744);
+    			add_location(th3, file$a, 336, 5, 9627);
+    			add_location(th4, file$a, 337, 20, 9675);
+    			add_location(th5, file$a, 338, 20, 9732);
     			add_location(tr0, file$a, 332, 4, 9542);
     			add_location(thead, file$a, 331, 3, 9529);
-    			add_location(td0, file$a, 343, 5, 9816);
-    			add_location(td1, file$a, 344, 5, 9904);
-    			add_location(td2, file$a, 345, 5, 10010);
-    			add_location(td3, file$a, 346, 5, 10127);
-    			add_location(td4, file$a, 347, 5, 10254);
-    			add_location(td5, file$a, 348, 5, 10391);
-    			add_location(tr1, file$a, 342, 4, 9805);
-    			add_location(tr2, file$a, 366, 4, 11132);
-    			add_location(tbody, file$a, 341, 3, 9792);
+    			add_location(td0, file$a, 343, 5, 9802);
+    			add_location(td1, file$a, 344, 5, 9890);
+    			add_location(td2, file$a, 345, 5, 9996);
+    			add_location(td3, file$a, 346, 5, 10113);
+    			add_location(td4, file$a, 347, 5, 10240);
+    			add_location(td5, file$a, 348, 5, 10377);
+    			add_location(tr1, file$a, 342, 4, 9791);
+    			add_location(tr2, file$a, 366, 4, 11118);
+    			add_location(tbody, file$a, 341, 3, 9778);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -9516,7 +9516,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$a, 403, 53, 12411);
+    			add_location(i, file$a, 403, 53, 12397);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -9550,7 +9550,7 @@ var app = (function () {
     			t = text(" Cargar datos Iniciales");
     			attr_dev(i, "class", "fas fa-cloud-upload-alt");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$a, 404, 69, 12537);
+    			add_location(i, file$a, 404, 69, 12523);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -9584,7 +9584,7 @@ var app = (function () {
     			t = text(" Borrar todo");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$a, 405, 64, 12694);
+    			add_location(i, file$a, 405, 64, 12680);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -16336,7 +16336,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Actualizar");
     			attr_dev(i, "class", "fas fa-pencil-alt");
-    			add_location(i, file$g, 137, 84, 4749);
+    			add_location(i, file$g, 137, 84, 4707);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -16467,13 +16467,13 @@ var app = (function () {
     			th1.textContent = "Año";
     			t3 = space();
     			th2 = element("th");
-    			th2.textContent = "Porcentaje de consumo de Gasolina";
+    			th2.textContent = "Consumo de Gasolina";
     			t5 = space();
     			th3 = element("th");
-    			th3.textContent = "Porcentaje de consumo de Carbón";
+    			th3.textContent = "Consumo de Carbón";
     			t7 = space();
     			th4 = element("th");
-    			th4.textContent = "Porcentaje de consumo de Energía Nuclear";
+    			th4.textContent = "Consumo de Energía Nuclear";
     			t9 = space();
     			th5 = element("th");
     			th5.textContent = "Acciones";
@@ -16500,19 +16500,19 @@ var app = (function () {
     			add_location(th0, file$g, 122, 5, 3906);
     			add_location(th1, file$g, 123, 5, 3926);
     			add_location(th2, file$g, 124, 5, 3945);
-    			add_location(th3, file$g, 125, 5, 3994);
-    			add_location(th4, file$g, 126, 20, 4056);
-    			add_location(th5, file$g, 127, 20, 4127);
+    			add_location(th3, file$g, 125, 5, 3980);
+    			add_location(th4, file$g, 126, 20, 4028);
+    			add_location(th5, file$g, 127, 20, 4085);
     			add_location(tr0, file$g, 121, 4, 3895);
     			add_location(thead, file$g, 120, 12, 3882);
-    			add_location(td0, file$g, 132, 20, 4235);
-    			add_location(td1, file$g, 133, 20, 4282);
-    			add_location(td2, file$g, 134, 20, 4326);
-    			add_location(td3, file$g, 135, 20, 4416);
-    			add_location(td4, file$g, 136, 20, 4546);
-    			add_location(td5, file$g, 137, 20, 4685);
-    			add_location(tr1, file$g, 131, 16, 4209);
-    			add_location(tbody, file$g, 130, 12, 4184);
+    			add_location(td0, file$g, 132, 20, 4193);
+    			add_location(td1, file$g, 133, 20, 4240);
+    			add_location(td2, file$g, 134, 20, 4284);
+    			add_location(td3, file$g, 135, 20, 4374);
+    			add_location(td4, file$g, 136, 20, 4504);
+    			add_location(td5, file$g, 137, 20, 4643);
+    			add_location(tr1, file$g, 131, 16, 4167);
+    			add_location(tbody, file$g, 130, 12, 4142);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -16665,7 +16665,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$g, 142, 55, 4938);
+    			add_location(i, file$g, 142, 55, 4896);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
