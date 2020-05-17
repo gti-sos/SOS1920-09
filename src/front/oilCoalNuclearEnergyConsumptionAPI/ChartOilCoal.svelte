@@ -3,6 +3,7 @@
     import {
         pop
     } from "svelte-spa-router";
+    import { onMount } from 'svelte';
     
     function getPointCategoryName(point, dimension) {
         var series = point.series,
@@ -136,18 +137,14 @@
         
         });
     }
-
+    loadGraph();
     
 </script>
 
 <svelte:head>
-    <script src="https://code.highcharts.com/highcharts.js"  on:load={loadGraph}></script>
-    <script src="https://code.highcharts.com/modules/heatmap.js"  on:load={loadGraph}></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"  on:load={loadGraph}></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"  on:load={loadGraph}></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"  on:load={loadGraph}></script>
-    
-    
+
+<!--We've passed the references to highchart to index.html beacause the graphic only changes when the page is reloaded... -->    
+
 </svelte:head>
 
 <main>

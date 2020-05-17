@@ -18,7 +18,14 @@
     <script src="https://code.highcharts.com/highcharts.js"  onload="{() => console.log('l1')}"> </script>
     <script src="https://code.highcharts.com/modules/data.js"  onload="{() => console.log('l2')}" ></script>
     <script src="https://code.highcharts.com/modules/parallel-coordinates.js"  onload="{() => console.log('l3')}"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"  onload="{() => console.log('l4')}" ></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"  onload="{() => console.log('l4')}" ></script>
+	
+	<!--Highcharts Oil Coal...-->
+	<script src="https://code.highcharts.com/highcharts.js"  on:load={loadGraph}></script>
+    <script src="https://code.highcharts.com/modules/heatmap.js"  on:load={loadGraph}></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"  on:load={loadGraph}></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"  on:load={loadGraph}></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"  on:load={loadGraph}></script>
 	
 </head>
 
