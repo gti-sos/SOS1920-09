@@ -3,8 +3,10 @@
     import {
         pop
     } from "svelte-spa-router";
-
+    import { onMount } from 'svelte';
+    
     async function loadGraph() {
+            
         /* Asking for the data to the back */
         const BASE_API_URL = "/api/v2/renewable-sources-stats";
 
@@ -55,7 +57,6 @@
             };
         });
         
-
         /* Setting the chart */
         Highcharts.chart('container', {
             chart: {
@@ -127,15 +128,11 @@
         });
     }
 
-
-    
+    loadGraph();
 </script>
 
 <svelte:head>
-    <script src="https://code.highcharts.com/highcharts.js" on:load={loadGraph}></script>
-    <script src="https://code.highcharts.com/modules/data.js" on:load={loadGraph}></script>
-    <script src="https://code.highcharts.com/modules/parallel-coordinates.js" on:load={loadGraph}></script>
-    <script src="https://code.highcharts.com/modules/exporting.js" on:load={loadGraph}></script>
+
     
 </svelte:head>
 

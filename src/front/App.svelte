@@ -11,7 +11,9 @@
 	import ChartOilCoal from './oilCoalNuclearEnergyConsumptionAPI/ChartOilCoal.svelte';
 	import ChartPlugInVehicles from './plugInVehiclesAPI/ChartPlugInVehicles.svelte';
 	import ChartRenewableSources from './renewableSourcesAPI/ChartRenewableSources.svelte';
+	import ChartRenewableSourcesRGraph from './renewableSourcesAPI/ChartRenewableSourcesRGraph.svelte';
 	import CommonChart from './CommonChart.svelte';
+	import ChartOutPlugInVehicles from './plugInVehiclesAPI/ChartOutPlugInVehicles.svelte';
 
 
 	import NotFound from './NotFound.svelte';
@@ -26,7 +28,9 @@
 		"/renewable-sources-stats/:country/:year": EditRenewableSource,
 		"/chartOilCoal": ChartOilCoal,
 		"/chartPlugInVehicles": ChartPlugInVehicles,
+		"/chartOutPlugInVehicles": ChartOutPlugInVehicles,
 		"/chartRenewableSources": ChartRenewableSources,
+		"/chartRenewableSourcesRGraph": ChartRenewableSourcesRGraph,
 		"/analytics": CommonChart,
 		"*": NotFound
 	};
