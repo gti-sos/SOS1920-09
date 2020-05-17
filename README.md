@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/gti-sos/SOS1920-09.svg?branch=master)](https://travis-ci.org/gti-sos/SOS1920-09)
+[![Known Vulnerabilities](https://snyk.io/test/github/gti-sos/SOS1920-09/badge.svg?targetFile=package.json)](https://snyk.io/test/github/gti-sos/SOS1920-09?targetFile=package.json)
+[![Coverage Status](https://coveralls.io/repos/github/gti-sos/SOS1920-09/badge.svg?branch=master)](https://coveralls.io/github/gti-sos/SOS1920-09?branch=master)
 
 # SOS1920-09
 This is an API that manages data related to [renewable energies](http://sos1920-09.herokuapp.com/#/renewableSourcesAPI), [plug-in cars sales](http://sos1920-09.herokuapp.com/#/plugInVehiclesAPI) and [primary energy sources](http://sos1920-09.herokuapp.com/#/oilCoalNuclearEnergyConsumptionAPI).

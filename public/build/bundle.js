@@ -1481,15 +1481,19 @@ var app = (function () {
     	let i5;
     	let t10;
     	let t11;
-    	let div2;
     	let button6;
     	let i6;
     	let t12;
     	let t13;
-    	let div3;
+    	let div2;
     	let button7;
     	let i7;
     	let t14;
+    	let t15;
+    	let div3;
+    	let button8;
+    	let i8;
+    	let t16;
 
     	const block = {
     		c: function create() {
@@ -1514,21 +1518,25 @@ var app = (function () {
     			t7 = space();
     			button4 = element("button");
     			i4 = element("i");
-    			t8 = text(" Gráfica de coches eléctricos");
+    			t8 = text(" Gráfica de energías renovables");
     			t9 = space();
     			button5 = element("button");
     			i5 = element("i");
-    			t10 = text(" Gráfica de energías primarias");
+    			t10 = text(" Gráfica de coches eléctricos");
     			t11 = space();
-    			div2 = element("div");
     			button6 = element("button");
     			i6 = element("i");
-    			t12 = text(" Gráfica común de datos");
+    			t12 = text(" Gráfica de energías primarias");
     			t13 = space();
-    			div3 = element("div");
+    			div2 = element("div");
     			button7 = element("button");
     			i7 = element("i");
-    			t14 = text(" Gráfica de coches eléctricos");
+    			t14 = text(" Gráfica común de datos");
+    			t15 = space();
+    			div3 = element("div");
+    			button8 = element("button");
+    			i8 = element("i");
+    			t16 = text(" Gráfica de coches eléctricos");
     			attr_dev(i0, "class", "fas fa-leaf");
     			add_location(i0, file, 3, 113, 148);
     			attr_dev(button0, "type", "button");
@@ -1556,35 +1564,41 @@ var app = (function () {
     			attr_dev(button3, "onclick", "window.location.href='#/chartRenewableSources'");
     			add_location(button3, file, 9, 2, 626);
     			attr_dev(i4, "class", "fas fa-chart-area");
-    			add_location(i4, file, 10, 111, 925);
+    			add_location(i4, file, 10, 121, 935);
     			attr_dev(button4, "type", "button");
-    			attr_dev(button4, "class", "btn btn-outline-primary");
-    			attr_dev(button4, "onclick", "window.location.href='#/chartPlugInVehicles'");
+    			attr_dev(button4, "class", "btn btn-outline-success");
+    			attr_dev(button4, "onclick", "window.location.href='#/chartRenewableSourcesRGraph'");
     			add_location(button4, file, 10, 2, 816);
     			attr_dev(i5, "class", "fas fa-chart-area");
-    			add_location(i5, file, 11, 102, 1100);
+    			add_location(i5, file, 11, 111, 1121);
     			attr_dev(button5, "type", "button");
-    			attr_dev(button5, "class", "btn btn-outline-dark");
-    			attr_dev(button5, "onclick", "window.location.href='#/chartOilCoal'");
-    			add_location(button5, file, 11, 2, 1000);
+    			attr_dev(button5, "class", "btn btn-outline-primary");
+    			attr_dev(button5, "onclick", "window.location.href='#/chartPlugInVehicles'");
+    			add_location(button5, file, 11, 2, 1012);
+    			attr_dev(i6, "class", "fas fa-chart-area");
+    			add_location(i6, file, 12, 102, 1296);
+    			attr_dev(button6, "type", "button");
+    			attr_dev(button6, "class", "btn btn-outline-dark");
+    			attr_dev(button6, "onclick", "window.location.href='#/chartOilCoal'");
+    			add_location(button6, file, 12, 2, 1196);
     			attr_dev(div1, "class", "div-home");
     			add_location(div1, file, 8, 1, 600);
-    			attr_dev(i6, "class", "fas fa-chart-area");
-    			add_location(i6, file, 15, 114, 1324);
-    			attr_dev(button6, "type", "button");
-    			attr_dev(button6, "class", "btn btn-secondary btn-lg btn-block");
-    			attr_dev(button6, "onclick", "window.location.href='#/analytics'");
-    			add_location(button6, file, 15, 2, 1212);
-    			attr_dev(div2, "class", "div-home");
-    			add_location(div2, file, 14, 1, 1186);
     			attr_dev(i7, "class", "fas fa-chart-area");
-    			add_location(i7, file, 19, 114, 1543);
+    			add_location(i7, file, 16, 100, 1506);
     			attr_dev(button7, "type", "button");
-    			attr_dev(button7, "class", "btn btn-outline-primary");
-    			attr_dev(button7, "onclick", "window.location.href='#/chartOutPlugInVehicles'");
-    			add_location(button7, file, 19, 2, 1431);
+    			attr_dev(button7, "class", "btn btn-outline-dark");
+    			attr_dev(button7, "onclick", "window.location.href='#/analytics'");
+    			add_location(button7, file, 16, 2, 1408);
+    			attr_dev(div2, "class", "div-home");
+    			add_location(div2, file, 15, 1, 1382);
+    			attr_dev(i8, "class", "fas fa-chart-area");
+    			add_location(i8, file, 20, 114, 1725);
+    			attr_dev(button8, "type", "button");
+    			attr_dev(button8, "class", "btn btn-outline-primary");
+    			attr_dev(button8, "onclick", "window.location.href='#/chartOutPlugInVehicles'");
+    			add_location(button8, file, 20, 2, 1613);
     			attr_dev(div3, "class", "div-home");
-    			add_location(div3, file, 17, 1, 1401);
+    			add_location(div3, file, 18, 1, 1583);
     			add_location(main, file, 0, 0, 0);
     		},
     		l: function claim(nodes) {
@@ -1617,16 +1631,20 @@ var app = (function () {
     			append_dev(div1, button5);
     			append_dev(button5, i5);
     			append_dev(button5, t10);
-    			append_dev(main, t11);
-    			append_dev(main, div2);
-    			append_dev(div2, button6);
+    			append_dev(div1, t11);
+    			append_dev(div1, button6);
     			append_dev(button6, i6);
     			append_dev(button6, t12);
     			append_dev(main, t13);
-    			append_dev(main, div3);
-    			append_dev(div3, button7);
+    			append_dev(main, div2);
+    			append_dev(div2, button7);
     			append_dev(button7, i7);
     			append_dev(button7, t14);
+    			append_dev(main, t15);
+    			append_dev(main, div3);
+    			append_dev(div3, button8);
+    			append_dev(button8, i8);
+    			append_dev(button8, t16);
     		},
     		p: noop,
     		i: noop,
@@ -18670,7 +18688,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$j, 160, 56, 5211);
+    			add_location(i, file$j, 160, 56, 5205);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -18742,22 +18760,22 @@ var app = (function () {
     			t2 = space();
     			create_component(button.$$.fragment);
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$j, 143, 4, 4472);
+    			add_location(script0, file$j, 143, 4, 4466);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/heatmap.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$j, 144, 4, 4564);
+    			add_location(script1, file$j, 144, 4, 4558);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$j, 145, 4, 4661);
+    			add_location(script2, file$j, 145, 4, 4655);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$j, 146, 4, 4760);
+    			add_location(script3, file$j, 146, 4, 4754);
     			if (script4.src !== (script4_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script4, "src", script4_src_value);
-    			add_location(script4, file$j, 147, 4, 4861);
+    			add_location(script4, file$j, 147, 4, 4855);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$j, 155, 8, 5052);
+    			add_location(div, file$j, 155, 8, 5046);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$j, 156, 8, 5088);
+    			add_location(p, file$j, 156, 8, 5082);
     			attr_dev(figure, "class", "highcharts-figure");
-    			add_location(figure, file$j, 154, 4, 5008);
-    			add_location(main, file$j, 152, 0, 4990);
+    			add_location(figure, file$j, 154, 4, 5002);
+    			add_location(main, file$j, 152, 0, 4984);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -18920,7 +18938,7 @@ var app = (function () {
     		},
     		tooltip: {
     			formatter() {
-    				return "<b>" + getPointCategoryName(this.point, "x") + "</b> sold <br><b>" + this.point.value + "</b> consumo de carbón <br><b>" + getPointCategoryName(this.point, "y") + "</b>";
+    				return "<b>" + getPointCategoryName(this.point, "x") + "</b><br><b>" + this.point.value + "</b> consumo de carbón <br><b>" + getPointCategoryName(this.point, "y") + "</b>";
     			}
     		},
     		series: [
@@ -19343,7 +19361,7 @@ var app = (function () {
     /* src\front\renewableSourcesAPI\ChartRenewableSources.svelte generated by Svelte v3.20.1 */
     const file$l = "src\\front\\renewableSourcesAPI\\ChartRenewableSources.svelte";
 
-    // (152:4) <Button outline color="secondary" on:click="{pop}">
+    // (149:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$8(ctx) {
     	let i;
     	let t;
@@ -19353,7 +19371,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$l, 151, 56, 4738);
+    			add_location(i, file$l, 148, 56, 4414);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -19369,7 +19387,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$8.name,
     		type: "slot",
-    		source: "(152:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(149:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -19377,14 +19395,6 @@ var app = (function () {
     }
 
     function create_fragment$m(ctx) {
-    	let script0;
-    	let script0_src_value;
-    	let script1;
-    	let script1_src_value;
-    	let script2;
-    	let script2_src_value;
-    	let script3;
-    	let script3_src_value;
     	let t0;
     	let main;
     	let figure;
@@ -19395,7 +19405,6 @@ var app = (function () {
     	let p1;
     	let t4;
     	let current;
-    	let dispose;
 
     	const button = new Button({
     			props: {
@@ -19411,10 +19420,6 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			script0 = element("script");
-    			script1 = element("script");
-    			script2 = element("script");
-    			script3 = element("script");
     			t0 = space();
     			main = element("main");
     			figure = element("figure");
@@ -19426,31 +19431,19 @@ var app = (function () {
     			p1 = element("p");
     			t4 = space();
     			create_component(button.$$.fragment);
-    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$l, 134, 4, 4008);
-    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/data.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$l, 135, 4, 4099);
-    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/parallel-coordinates.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$l, 136, 4, 4192);
-    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$l, 137, 4, 4301);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$l, 144, 8, 4481);
+    			add_location(div, file$l, 141, 8, 4157);
     			attr_dev(p0, "class", "highcharts-description");
-    			add_location(p0, file$l, 145, 8, 4517);
+    			add_location(p0, file$l, 142, 8, 4193);
     			attr_dev(figure, "class", "highcharts-figure");
-    			add_location(figure, file$l, 143, 4, 4437);
-    			add_location(p1, file$l, 150, 4, 4673);
-    			add_location(main, file$l, 141, 0, 4419);
+    			add_location(figure, file$l, 140, 4, 4113);
+    			add_location(p1, file$l, 147, 4, 4349);
+    			add_location(main, file$l, 138, 0, 4095);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
-    		m: function mount(target, anchor, remount) {
-    			append_dev(document.head, script0);
-    			append_dev(document.head, script1);
-    			append_dev(document.head, script2);
-    			append_dev(document.head, script3);
+    		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, figure);
@@ -19462,14 +19455,6 @@ var app = (function () {
     			append_dev(main, t4);
     			mount_component(button, main, null);
     			current = true;
-    			if (remount) run_all(dispose);
-
-    			dispose = [
-    				listen_dev(script0, "load", loadGraph$2, false, false, false),
-    				listen_dev(script1, "load", loadGraph$2, false, false, false),
-    				listen_dev(script2, "load", loadGraph$2, false, false, false),
-    				listen_dev(script3, "load", loadGraph$2, false, false, false)
-    			];
     		},
     		p: function update(ctx, [dirty]) {
     			const button_changes = {};
@@ -19490,14 +19475,9 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			detach_dev(script0);
-    			detach_dev(script1);
-    			detach_dev(script2);
-    			detach_dev(script3);
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			destroy_component(button);
-    			run_all(dispose);
     		}
     	};
 
@@ -19621,6 +19601,7 @@ var app = (function () {
     }
 
     function instance$m($$self, $$props, $$invalidate) {
+    	loadGraph$2();
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -19629,7 +19610,7 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("ChartRenewableSources", $$slots, []);
-    	$$self.$capture_state = () => ({ Button, pop, loadGraph: loadGraph$2 });
+    	$$self.$capture_state = () => ({ Button, pop, onMount, loadGraph: loadGraph$2 });
     	return [];
     }
 
@@ -19647,12 +19628,10 @@ var app = (function () {
     	}
     }
 
-    /* src\front\CommonChart.svelte generated by Svelte v3.20.1 */
+    /* src\front\renewableSourcesAPI\ChartRenewableSourcesRGraph.svelte generated by Svelte v3.20.1 */
+    const file$m = "src\\front\\renewableSourcesAPI\\ChartRenewableSourcesRGraph.svelte";
 
-    const { console: console_1$9 } = globals;
-    const file$m = "src\\front\\CommonChart.svelte";
-
-    // (129:1) <Button outline color="secondary" on:click="{pop}">
+    // (64:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$9(ctx) {
     	let i;
     	let t;
@@ -19662,7 +19641,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$m, 128, 52, 3093);
+    			add_location(i, file$m, 63, 56, 2189);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -19678,7 +19657,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$9.name,
     		type: "slot",
-    		source: "(129:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(64:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -19686,6 +19665,247 @@ var app = (function () {
     }
 
     function create_fragment$n(ctx) {
+    	let script0;
+    	let script0_src_value;
+    	let script1;
+    	let script1_src_value;
+    	let t0;
+    	let main;
+    	let canvas;
+    	let t2;
+    	let p0;
+    	let t3;
+    	let p1;
+    	let t5;
+    	let current;
+    	let dispose;
+
+    	const button = new Button({
+    			props: {
+    				outline: true,
+    				color: "secondary",
+    				$$slots: { default: [create_default_slot$9] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", pop);
+
+    	const block = {
+    		c: function create() {
+    			script0 = element("script");
+    			script1 = element("script");
+    			t0 = space();
+    			main = element("main");
+    			canvas = element("canvas");
+    			canvas.textContent = "[No canvas support]";
+    			t2 = space();
+    			p0 = element("p");
+    			t3 = space();
+    			p1 = element("p");
+    			p1.textContent = "Gráfica hecha con RGraph que representa el porcentaje de energía renovables por países de 2016.";
+    			t5 = space();
+    			create_component(button.$$.fragment);
+    			if (script0.src !== (script0_src_value = "libraries/RGraph.common.core.js")) attr_dev(script0, "src", script0_src_value);
+    			add_location(script0, file$m, 51, 4, 1759);
+    			if (script1.src !== (script1_src_value = "libraries/RGraph.pie.js")) attr_dev(script1, "src", script1_src_value);
+    			add_location(script1, file$m, 52, 4, 1841);
+    			attr_dev(canvas, "id", "cvs");
+    			add_location(canvas, file$m, 58, 4, 1949);
+    			add_location(p0, file$m, 61, 4, 2016);
+    			add_location(p1, file$m, 62, 4, 2029);
+    			add_location(main, file$m, 55, 0, 1929);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor, remount) {
+    			append_dev(document.head, script0);
+    			append_dev(document.head, script1);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, main, anchor);
+    			append_dev(main, canvas);
+    			append_dev(main, t2);
+    			append_dev(main, p0);
+    			append_dev(main, t3);
+    			append_dev(main, p1);
+    			append_dev(main, t5);
+    			mount_component(button, main, null);
+    			current = true;
+    			if (remount) run_all(dispose);
+
+    			dispose = [
+    				listen_dev(script0, "load", loadGraph$3, false, false, false),
+    				listen_dev(script1, "load", loadGraph$3, false, false, false)
+    			];
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 1) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			detach_dev(script0);
+    			detach_dev(script1);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(main);
+    			destroy_component(button);
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$n.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    async function loadGraph$3() {
+    	const BASE_API_URL = "/api/v2/renewable-sources-stats";
+    	const resData = await fetch(BASE_API_URL);
+    	let MyData = await resData.json();
+
+    	/* Getting the countries */
+    	let countries = Array.from(new Set(MyData.filter(d => d.year == 2016).map(d => {
+    			return d.country;
+    		})));
+
+    	let percentageRenewable = Array.from(new Set(MyData.filter(d => d.year == 2016).map(d => {
+    			return d["percentage-re-total"];
+    		})));
+
+    	let labels = countries;
+
+    	// Create the Pie chart, set the donut variant and the rest of the
+    	// configuration. The variant property is what sets the chart to
+    	// be a Donut chart instead of a regular Pie chart.
+    	new RGraph.Pie({
+    			id: "cvs",
+    			data: percentageRenewable,
+    			options: {
+    				shadow: true,
+    				shadowOffsetx: 0,
+    				shadowOffsety: 5,
+    				shadowColor: "#aaa",
+    				variant: "donut3d",
+    				labels,
+    				labelsSticksLength: 15,
+    				labelsSticksLinewidth: 2,
+    				textAccessible: false,
+    				colorsStroke: "transparent"
+    			}
+    		}).draw().responsive([
+    		{
+    			maxWidth: 1200,
+    			width: 1000,
+    			height: 400,
+    			options: {
+    				radius: 90,
+    				labels: null,
+    				title: "(Click for labels)",
+    				tooltips: labels
+    			}
+    		},
+    		{
+    			maxWidth: null,
+    			width: 1000,
+    			height: 600,
+    			options: {
+    				radius: 100,
+    				labelsList: true,
+    				labels,
+    				title: "",
+    				tooltips: null
+    			}
+    		}
+    	]);
+    }
+
+    function instance$n($$self, $$props, $$invalidate) {
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<ChartRenewableSourcesRGraph> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("ChartRenewableSourcesRGraph", $$slots, []);
+    	$$self.$capture_state = () => ({ Button, pop, loadGraph: loadGraph$3 });
+    	return [];
+    }
+
+    class ChartRenewableSourcesRGraph extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$n, create_fragment$n, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "ChartRenewableSourcesRGraph",
+    			options,
+    			id: create_fragment$n.name
+    		});
+    	}
+    }
+
+    /* src\front\CommonChart.svelte generated by Svelte v3.20.1 */
+
+    const { console: console_1$9 } = globals;
+    const file$n = "src\\front\\CommonChart.svelte";
+
+    // (129:1) <Button outline color="secondary" on:click="{pop}">
+    function create_default_slot$a(ctx) {
+    	let i;
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			i = element("i");
+    			t = text(" Atrás");
+    			attr_dev(i, "class", "fas fa-arrow-circle-left");
+    			add_location(i, file$n, 128, 52, 3093);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$a.name,
+    		type: "slot",
+    		source: "(129:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$o(ctx) {
     	let script0;
     	let script0_src_value;
     	let script1;
@@ -19708,7 +19928,7 @@ var app = (function () {
     			props: {
     				outline: true,
     				color: "secondary",
-    				$$slots: { default: [create_default_slot$9] },
+    				$$slots: { default: [create_default_slot$a] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -19732,20 +19952,20 @@ var app = (function () {
     			t3 = space();
     			create_component(button.$$.fragment);
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$m, 112, 1, 2391);
+    			add_location(script0, file$n, 112, 1, 2391);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$m, 113, 1, 2479);
+    			add_location(script1, file$n, 113, 1, 2479);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$m, 114, 1, 2572);
+    			add_location(script2, file$n, 114, 1, 2572);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$m, 115, 1, 2667);
+    			add_location(script3, file$n, 115, 1, 2667);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$m, 122, 2, 2838);
+    			add_location(div, file$n, 122, 2, 2838);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$m, 123, 2, 2868);
+    			add_location(p, file$n, 123, 2, 2868);
     			attr_dev(figure, "class", "highcharts-figure");
-    			add_location(figure, file$m, 121, 1, 2800);
-    			add_location(main, file$m, 119, 0, 2789);
+    			add_location(figure, file$n, 121, 1, 2800);
+    			add_location(main, file$n, 119, 0, 2789);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -19767,10 +19987,10 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(script0, "load", loadGraph$3, false, false, false),
-    				listen_dev(script1, "load", loadGraph$3, false, false, false),
-    				listen_dev(script2, "load", loadGraph$3, false, false, false),
-    				listen_dev(script3, "load", loadGraph$3, false, false, false)
+    				listen_dev(script0, "load", loadGraph$4, false, false, false),
+    				listen_dev(script1, "load", loadGraph$4, false, false, false),
+    				listen_dev(script2, "load", loadGraph$4, false, false, false),
+    				listen_dev(script3, "load", loadGraph$4, false, false, false)
     			];
     		},
     		p: function update(ctx, [dirty]) {
@@ -19805,7 +20025,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$n.name,
+    		id: create_fragment$o.name,
     		type: "component",
     		source: "",
     		ctx
@@ -19814,7 +20034,7 @@ var app = (function () {
     	return block;
     }
 
-    async function loadGraph$3() {
+    async function loadGraph$4() {
     	const BASE_API_URL_1 = "/api/v2/oil-coal-nuclear-energy-consumption-stats";
     	const BASE_API_URL_2 = "/api/v2/renewable-sources-stats";
     	const BASE_API_URL_3 = "/api/v2/plugin-vehicles-stats";
@@ -19904,7 +20124,7 @@ var app = (function () {
     	});
     }
 
-    function instance$n($$self, $$props, $$invalidate) {
+    function instance$o($$self, $$props, $$invalidate) {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -19913,29 +20133,29 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("CommonChart", $$slots, []);
-    	$$self.$capture_state = () => ({ pop, Button, loadGraph: loadGraph$3 });
+    	$$self.$capture_state = () => ({ pop, Button, loadGraph: loadGraph$4 });
     	return [];
     }
 
     class CommonChart extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$n, create_fragment$n, safe_not_equal, {});
+    		init(this, options, instance$o, create_fragment$o, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "CommonChart",
     			options,
-    			id: create_fragment$n.name
+    			id: create_fragment$o.name
     		});
     	}
     }
 
     /* src\front\plugInVehiclesAPI\ChartOutPlugInVehicles.svelte generated by Svelte v3.20.1 */
-    const file$n = "src\\front\\plugInVehiclesAPI\\ChartOutPlugInVehicles.svelte";
+    const file$o = "src\\front\\plugInVehiclesAPI\\ChartOutPlugInVehicles.svelte";
 
-    // (14:4) <Button outline color="secondary" on:click="{pop}">
-    function create_default_slot$a(ctx) {
+    // (77:4) <Button outline color="secondary" on:click="{pop}">
+    function create_default_slot$b(ctx) {
     	let i;
     	let t;
 
@@ -19944,7 +20164,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$n, 13, 55, 225);
+    			add_location(i, file$o, 76, 55, 2373);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -19958,24 +20178,36 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$a.name,
+    		id: create_default_slot$b.name,
     		type: "slot",
-    		source: "(14:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(77:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    function create_fragment$o(ctx) {
+    function create_fragment$p(ctx) {
+    	let script0;
+    	let script0_src_value;
+    	let script1;
+    	let script1_src_value;
+    	let t0;
     	let main;
+    	let div;
+    	let t1;
+    	let p0;
+    	let t2;
+    	let p1;
+    	let t4;
     	let current;
+    	let dispose;
 
     	const button = new Button({
     			props: {
     				outline: true,
     				color: "secondary",
-    				$$slots: { default: [create_default_slot$a] },
+    				$$slots: { default: [create_default_slot$b] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -19985,17 +20217,52 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			script0 = element("script");
+    			script1 = element("script");
+    			t0 = space();
     			main = element("main");
+    			div = element("div");
+    			t1 = space();
+    			p0 = element("p");
+    			t2 = space();
+    			p1 = element("p");
+    			p1.textContent = "Representación gráfica realizada con RGraph que nos muestra el porcentaje de coches electricos en el año 2018";
+    			t4 = space();
     			create_component(button.$$.fragment);
-    			add_location(main, file$n, 11, 0, 156);
+    			if (script0.src !== (script0_src_value = "libraries/RGraph.svg.common.core.js")) attr_dev(script0, "src", script0_src_value);
+    			add_location(script0, file$o, 65, 4, 1918);
+    			if (script1.src !== (script1_src_value = "libraries/RGraph.svg.line.js")) attr_dev(script1, "src", script1_src_value);
+    			add_location(script1, file$o, 66, 4, 2003);
+    			set_style(div, "width", "750px");
+    			set_style(div, "height", "250px");
+    			attr_dev(div, "id", "chart-container");
+    			add_location(div, file$o, 73, 4, 2113);
+    			add_location(p0, file$o, 74, 4, 2187);
+    			add_location(p1, file$o, 75, 4, 2200);
+    			add_location(main, file$o, 71, 0, 2099);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
-    		m: function mount(target, anchor) {
+    		m: function mount(target, anchor, remount) {
+    			append_dev(document.head, script0);
+    			append_dev(document.head, script1);
+    			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
+    			append_dev(main, div);
+    			append_dev(main, t1);
+    			append_dev(main, p0);
+    			append_dev(main, t2);
+    			append_dev(main, p1);
+    			append_dev(main, t4);
     			mount_component(button, main, null);
     			current = true;
+    			if (remount) run_all(dispose);
+
+    			dispose = [
+    				listen_dev(script0, "load", loadGraph$5, false, false, false),
+    				listen_dev(script1, "load", loadGraph$5, false, false, false)
+    			];
     		},
     		p: function update(ctx, [dirty]) {
     			const button_changes = {};
@@ -20016,14 +20283,18 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
+    			detach_dev(script0);
+    			detach_dev(script1);
+    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			destroy_component(button);
+    			run_all(dispose);
     		}
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$o.name,
+    		id: create_fragment$p.name,
     		type: "component",
     		source: "",
     		ctx
@@ -20032,7 +20303,60 @@ var app = (function () {
     	return block;
     }
 
-    function instance$o($$self, $$props, $$invalidate) {
+    async function loadGraph$5() {
+    	const BASE_API_URL = "/api/v2/plugin-vehicles-stats";
+    	let MyData = [];
+    	const resData = await fetch(BASE_API_URL);
+    	MyData = await resData.json();
+    	let countries = [];
+    	let carsPer1000 = [];
+
+    	MyData.forEach(data => {
+    		let country = data.country;
+    		let year = data.year;
+    		let p = data["pev-stock"];
+    		let a = data["annual-sale"];
+    		let c = data["cars-per-1000"];
+
+    		if (data.year == 2018) {
+    			countries.push(country);
+    			carsPer1000.push(c);
+    		}
+    	});
+
+    	new RGraph.SVG.Line({
+    			id: "chart-container",
+    			data: carsPer1000,
+    			options: {
+    				backgroundColor: "#eee",
+    				backgroundGridColor: "blue",
+    				backgroundGridVlinesCount: 20,
+    				backgroundGridLinewidth: 1,
+    				colors: ["black"],
+    				tickmarksStyle: "filledcircle",
+    				xaxis: true,
+    				yaxis: true,
+    				yaxisScaleUnitsPost: "%",
+    				textSize: 9,
+    				xaxisLabels: countries
+    			}
+    		}).trace().responsive([
+    		{
+    			maxWidth: 900, // Use the trace() animation to show the chart and add some responsive capability
+    			width: 450,
+    			height: 200,
+    			options: { linewidth: 2, tickmarksSize: 5 }
+    		},
+    		{
+    			maxWidth: null,
+    			width: 600,
+    			height: 250,
+    			options: { linewidth: 3, tickmarksSize: 6 }
+    		}
+    	]);
+    }
+
+    function instance$p($$self, $$props, $$invalidate) {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -20041,29 +20365,29 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("ChartOutPlugInVehicles", $$slots, []);
-    	$$self.$capture_state = () => ({ pop, Button });
+    	$$self.$capture_state = () => ({ pop, Button, loadGraph: loadGraph$5 });
     	return [];
     }
 
     class ChartOutPlugInVehicles extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$o, create_fragment$o, safe_not_equal, {});
+    		init(this, options, instance$p, create_fragment$p, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "ChartOutPlugInVehicles",
     			options,
-    			id: create_fragment$o.name
+    			id: create_fragment$p.name
     		});
     	}
     }
 
     /* src\front\NotFound.svelte generated by Svelte v3.20.1 */
 
-    const file$o = "src\\front\\NotFound.svelte";
+    const file$p = "src\\front\\NotFound.svelte";
 
-    function create_fragment$p(ctx) {
+    function create_fragment$q(ctx) {
     	let main;
     	let h1;
 
@@ -20072,8 +20396,8 @@ var app = (function () {
     			main = element("main");
     			h1 = element("h1");
     			h1.textContent = "¡Esta página no existe!";
-    			add_location(h1, file$o, 1, 4, 12);
-    			add_location(main, file$o, 0, 0, 0);
+    			add_location(h1, file$p, 1, 4, 12);
+    			add_location(main, file$p, 0, 0, 0);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -20092,7 +20416,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$p.name,
+    		id: create_fragment$q.name,
     		type: "component",
     		source: "",
     		ctx
@@ -20101,7 +20425,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$p($$self, $$props) {
+    function instance$q($$self, $$props) {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -20116,21 +20440,21 @@ var app = (function () {
     class NotFound extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$p, create_fragment$p, safe_not_equal, {});
+    		init(this, options, instance$q, create_fragment$q, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "NotFound",
     			options,
-    			id: create_fragment$p.name
+    			id: create_fragment$q.name
     		});
     	}
     }
 
     /* src\front\App.svelte generated by Svelte v3.20.1 */
-    const file$p = "src\\front\\App.svelte";
+    const file$q = "src\\front\\App.svelte";
 
-    function create_fragment$q(ctx) {
+    function create_fragment$r(ctx) {
     	let main;
     	let current;
 
@@ -20143,7 +20467,7 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			create_component(router.$$.fragment);
-    			add_location(main, file$p, 36, 0, 1625);
+    			add_location(main, file$q, 38, 0, 1791);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -20171,7 +20495,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$q.name,
+    		id: create_fragment$r.name,
     		type: "component",
     		source: "",
     		ctx
@@ -20180,7 +20504,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$q($$self, $$props, $$invalidate) {
+    function instance$r($$self, $$props, $$invalidate) {
     	const routes = {
     		"/": Home,
     		"/oilCoalNuclearEnergyConsumptionAPI": App,
@@ -20193,6 +20517,7 @@ var app = (function () {
     		"/chartPlugInVehicles": ChartPlugInVehicles,
     		"/chartOutPlugInVehicles": ChartOutPlugInVehicles,
     		"/chartRenewableSources": ChartRenewableSources,
+    		"/chartRenewableSourcesRGraph": ChartRenewableSourcesRGraph,
     		"/analytics": CommonChart,
     		"*": NotFound
     	};
@@ -20218,6 +20543,7 @@ var app = (function () {
     		ChartOilCoal,
     		ChartPlugInVehicles,
     		ChartRenewableSources,
+    		ChartRenewableSourcesRGraph,
     		CommonChart,
     		ChartOutPlugInVehicles,
     		NotFound,
@@ -20230,13 +20556,13 @@ var app = (function () {
     class App$3 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$q, create_fragment$q, safe_not_equal, {});
+    		init(this, options, instance$r, create_fragment$r, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "App",
     			options,
-    			id: create_fragment$q.name
+    			id: create_fragment$r.name
     		});
     	}
     }
