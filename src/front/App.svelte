@@ -12,6 +12,7 @@
 	import ChartPlugInVehicles from './plugInVehiclesAPI/ChartPlugInVehicles.svelte';
 	import ChartRenewableSources from './renewableSourcesAPI/ChartRenewableSources.svelte';
 	import CommonChart from './CommonChart.svelte';
+	import ChartOutPlugInVehicles from './plugInVehiclesAPI/ChartOutPlugInVehicles.svelte';
 
 
 	import NotFound from './NotFound.svelte';
@@ -26,6 +27,7 @@
 		"/renewable-sources-stats/:country/:year": EditRenewableSource,
 		"/chartOilCoal": ChartOilCoal,
 		"/chartPlugInVehicles": ChartPlugInVehicles,
+		"/chartOutPlugInVehicles": ChartOutPlugInVehicles,
 		"/chartRenewableSources": ChartRenewableSources,
 		"/analytics": CommonChart,
 		"*": NotFound

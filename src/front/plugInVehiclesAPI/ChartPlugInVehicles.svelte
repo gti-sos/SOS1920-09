@@ -186,30 +186,30 @@
        
     }
     
-    </script>
+</script>
     
-        <svelte:head>
-            <script src="https://code.highcharts.com/highcharts.js" on:load={loadGraph}></script>
-            <script src="https://code.highcharts.com/modules/series-label.js" on:load={loadGraph}></script>
-            <script src="https://code.highcharts.com/modules/exporting.js" on:load={loadGraph}></script>
-            <script src="https://code.highcharts.com/modules/export-data.js" on:load={loadGraph}></script>
-            <script src="https://code.highcharts.com/modules/accessibility.js" on:load={loadGraph}></script>
-        </svelte:head>
+    <svelte:head>
+        <script src="https://code.highcharts.com/highcharts.js" on:load={loadGraph}></script>
+        <script src="https://code.highcharts.com/modules/series-label.js" on:load={loadGraph}></script>
+        <script src="https://code.highcharts.com/modules/exporting.js" on:load={loadGraph}></script>
+        <script src="https://code.highcharts.com/modules/export-data.js" on:load={loadGraph}></script>
+        <script src="https://code.highcharts.com/modules/accessibility.js" on:load={loadGraph}></script>
+    </svelte:head>
     
-    <main>
+<main>
     
-        <figure class="highcharts-figure">
-            <div id="container"></div>
-            <p>
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p>
 
-            </p>
-            <p class="highcharts-description">
-                En esta sección de la api podemos observar una representación gráfica acerca de los datos que tenemos sobre cada país
-                en relación con el uso de coches eléctricos, mostrando de azul las ventas acumuladas, de negro las ventas anuales y de verde
-                el porcentaje de coches cada 1000 personas.
-            </p>
-        </figure>
+        </p>
+        <p class="highcharts-description">
+            En esta sección de la api podemos observar una representación gráfica acerca de los datos que tenemos sobre cada país
+            en relación con el uso de coches eléctricos, mostrando de azul las ventas acumuladas, de negro las ventas anuales y de verde
+            el porcentaje de coches cada 1000 personas.
+        </p>
+    </figure>
         
-        <Button outline color="secondary" on:click="{pop}"><i class="fas fa-arrow-circle-left"></i> Atrás</Button>
+    <Button outline color="secondary" on:click="{pop}"><i class="fas fa-arrow-circle-left"></i> Atrás</Button>
     
-    </main>
+</main>
