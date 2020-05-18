@@ -13,6 +13,7 @@
 	import ChartPlugInVehicles from './plugInVehiclesAPI/ChartPlugInVehicles.svelte';
 	import ChartRenewableSources from './renewableSourcesAPI/ChartRenewableSources.svelte';
 	import ChartRenewableSourcesRGraph from './renewableSourcesAPI/ChartRenewableSourcesRGraph.svelte';
+	import ChartRenewableSourcesD3 from './renewableSourcesAPI/ChartRenewableSourcesD3.svelte';
 	import CommonChart from './CommonChart.svelte';
 	import ChartOutPlugInVehicles from './plugInVehiclesAPI/ChartOutPlugInVehicles.svelte';
 
@@ -33,6 +34,7 @@
 		"/chartOutPlugInVehicles": ChartOutPlugInVehicles,
 		"/chartRenewableSources": ChartRenewableSources,
 		"/chartRenewableSourcesRGraph": ChartRenewableSourcesRGraph,
+		"/chartRenewableSourcesD3": ChartRenewableSourcesD3,
 		"/analytics": CommonChart,
 		"*": NotFound
 	};

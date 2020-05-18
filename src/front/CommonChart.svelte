@@ -61,7 +61,6 @@
 			}
 		];
 		
-		console.log(dataChart);
 
 
 		Highcharts.chart('container', {
