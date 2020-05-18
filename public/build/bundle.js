@@ -19711,7 +19711,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$n, 128, 52, 3093);
+    			add_location(i, file$n, 128, 52, 3149);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -19777,24 +19777,24 @@ var app = (function () {
     			div = element("div");
     			t1 = space();
     			p = element("p");
-    			p.textContent = "Gráfica común a las tres APIs. Muestra los porcentajes de energías renovables, primarias y coches eléctricos.";
+    			p.textContent = "Gráfica común a las tres APIs. Muestra los millones de toneladas de petróleo, los porcentajes del uso energías renovables y las ventas coches eléctricos por cada 1000.";
     			t3 = space();
     			create_component(button.$$.fragment);
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$n, 112, 1, 2391);
+    			add_location(script0, file$n, 112, 1, 2389);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$n, 113, 1, 2479);
+    			add_location(script1, file$n, 113, 1, 2477);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$n, 114, 1, 2572);
+    			add_location(script2, file$n, 114, 1, 2570);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$n, 115, 1, 2667);
+    			add_location(script3, file$n, 115, 1, 2665);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$n, 122, 2, 2838);
+    			add_location(div, file$n, 122, 2, 2836);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$n, 123, 2, 2868);
+    			add_location(p, file$n, 123, 2, 2866);
     			attr_dev(figure, "class", "highcharts-figure");
-    			add_location(figure, file$n, 121, 1, 2800);
-    			add_location(main, file$n, 119, 0, 2789);
+    			add_location(figure, file$n, 121, 1, 2798);
+    			add_location(main, file$n, 119, 0, 2787);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -19907,7 +19907,7 @@ var app = (function () {
     			data: dataPlugin
     		},
     		{
-    			name: "Porcentaje de consumo de gasolina",
+    			name: "Millones de toneladas de petróleo",
     			data: dataPrimary
     		},
     		{
@@ -19925,7 +19925,7 @@ var app = (function () {
     		},
     		tooltip: {
     			useHTML: true,
-    			pointFormat: "<b>{point.name}:</b> {point.value} %"
+    			pointFormat: "<b>{point.name}:</b> {point.value}"
     		},
     		plotOptions: {
     			packedbubble: {
