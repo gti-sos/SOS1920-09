@@ -1,6 +1,4 @@
 <main>
-
-<<<<<<< HEAD
 	<div class="div-home">
 		<button type="button"  class="btn btn-outline-success"  onclick="window.location.href='#/renewableSourcesAPI'"><i class='fas fa-leaf' ></i> API de energías renovables</button>
 		<button type="button" class="btn btn-outline-primary" onclick="window.location.href='#/plugInVehiclesAPI'"><i class='fas fa-car-battery' ></i> API de coches eléctricos</button>
@@ -24,6 +22,4 @@
 		<button type="button" class="btn btn-outline-primary" onclick="window.location.href='#/chartOutPlugInVehicles'"><i class="fas fa-chart-area"></i> Gráfica de coches eléctricos</button>
 		
 	</div>
-=======
->>>>>>> 950d2778b0cca0c3736540c64881a6438458a001
 </main>

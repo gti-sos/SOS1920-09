@@ -1455,11 +1455,53 @@ var app = (function () {
 
     function create_fragment$1(ctx) {
     	let main;
+    	let div0;
+    	let button0;
+    	let i0;
+    	let t0;
+    	let t1;
+    	let button1;
+    	let i1;
+    	let t2;
+    	let t3;
+    	let button2;
+    	let i2;
+    	let t4;
+    	let t5;
+    	let div1;
+    	let button3;
+    	let i3;
+    	let t6;
+    	let t7;
+    	let button4;
+    	let i4;
+    	let t8;
+    	let t9;
+    	let button5;
+    	let i5;
+    	let t10;
+    	let t11;
+    	let button6;
+    	let i6;
+    	let t12;
+    	let t13;
+    	let button7;
+    	let i7;
+    	let t14;
+    	let t15;
+    	let div2;
+    	let button8;
+    	let i8;
+    	let t16;
+    	let t17;
+    	let div3;
+    	let button9;
+    	let i9;
+    	let t18;
 
     	const block = {
     		c: function create() {
     			main = element("main");
-<<<<<<< HEAD
     			div0 = element("div");
     			button0 = element("button");
     			i0 = element("i");
@@ -1504,75 +1546,73 @@ var app = (function () {
     			i9 = element("i");
     			t18 = text(" Gráfica de coches eléctricos");
     			attr_dev(i0, "class", "fas fa-leaf");
-    			add_location(i0, file, 3, 113, 148);
+    			add_location(i0, file, 2, 113, 146);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn btn-outline-success");
     			attr_dev(button0, "onclick", "window.location.href='#/renewableSourcesAPI'");
-    			add_location(button0, file, 3, 2, 37);
+    			add_location(button0, file, 2, 2, 35);
     			attr_dev(i1, "class", "fas fa-car-battery");
-    			add_location(i1, file, 4, 109, 323);
+    			add_location(i1, file, 3, 109, 321);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "btn btn-outline-primary");
     			attr_dev(button1, "onclick", "window.location.href='#/plugInVehiclesAPI'");
-    			add_location(button1, file, 4, 2, 216);
+    			add_location(button1, file, 3, 2, 214);
     			attr_dev(i2, "class", "fas fa-radiation");
-    			add_location(i2, file, 5, 124, 518);
+    			add_location(i2, file, 4, 124, 516);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn btn-outline-dark");
     			attr_dev(button2, "onclick", "window.location.href='#/oilCoalNuclearEnergyConsumptionAPI'");
-    			add_location(button2, file, 5, 2, 396);
+    			add_location(button2, file, 4, 2, 394);
     			attr_dev(div0, "class", "div-home");
-    			add_location(div0, file, 2, 1, 11);
+    			add_location(div0, file, 1, 1, 9);
     			attr_dev(i3, "class", "fas fa-chart-area");
-    			add_location(i3, file, 9, 115, 739);
+    			add_location(i3, file, 8, 115, 737);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn btn-outline-success");
     			attr_dev(button3, "onclick", "window.location.href='#/chartRenewableSources'");
-    			add_location(button3, file, 9, 2, 626);
+    			add_location(button3, file, 8, 2, 624);
     			attr_dev(i4, "class", "fas fa-chart-area");
-    			add_location(i4, file, 10, 121, 935);
+    			add_location(i4, file, 9, 121, 933);
     			attr_dev(button4, "type", "button");
     			attr_dev(button4, "class", "btn btn-outline-success");
     			attr_dev(button4, "onclick", "window.location.href='#/chartRenewableSourcesRGraph'");
-    			add_location(button4, file, 10, 2, 816);
+    			add_location(button4, file, 9, 2, 814);
     			attr_dev(i5, "class", "fas fa-chart-area");
-    			add_location(i5, file, 11, 111, 1121);
+    			add_location(i5, file, 10, 111, 1119);
     			attr_dev(button5, "type", "button");
     			attr_dev(button5, "class", "btn btn-outline-primary");
     			attr_dev(button5, "onclick", "window.location.href='#/chartPlugInVehicles'");
-    			add_location(button5, file, 11, 2, 1012);
+    			add_location(button5, file, 10, 2, 1010);
     			attr_dev(i6, "class", "fas fa-chart-area");
-    			add_location(i6, file, 12, 102, 1296);
+    			add_location(i6, file, 11, 102, 1294);
     			attr_dev(button6, "type", "button");
     			attr_dev(button6, "class", "btn btn-outline-dark");
     			attr_dev(button6, "onclick", "window.location.href='#/chartOilCoal'");
-    			add_location(button6, file, 12, 2, 1196);
+    			add_location(button6, file, 11, 2, 1194);
     			attr_dev(i7, "class", "fas fa-chart-area");
-    			add_location(i7, file, 13, 103, 1473);
+    			add_location(i7, file, 12, 103, 1471);
     			attr_dev(button7, "type", "button");
     			attr_dev(button7, "class", "btn btn-outline-dark");
     			attr_dev(button7, "onclick", "window.location.href='#/chartOilCoal2'");
-    			add_location(button7, file, 13, 2, 1372);
+    			add_location(button7, file, 12, 2, 1370);
     			attr_dev(div1, "class", "div-home");
-    			add_location(div1, file, 8, 1, 600);
+    			add_location(div1, file, 7, 1, 598);
     			attr_dev(i8, "class", "fas fa-chart-area");
-    			add_location(i8, file, 18, 100, 1687);
+    			add_location(i8, file, 17, 100, 1685);
     			attr_dev(button8, "type", "button");
     			attr_dev(button8, "class", "btn btn-outline-dark");
     			attr_dev(button8, "onclick", "window.location.href='#/analytics'");
-    			add_location(button8, file, 18, 2, 1589);
+    			add_location(button8, file, 17, 2, 1587);
     			attr_dev(div2, "class", "div-home");
-    			add_location(div2, file, 17, 1, 1563);
+    			add_location(div2, file, 16, 1, 1561);
     			attr_dev(i9, "class", "fas fa-chart-area");
-    			add_location(i9, file, 22, 114, 1906);
+    			add_location(i9, file, 21, 114, 1904);
     			attr_dev(button9, "type", "button");
     			attr_dev(button9, "class", "btn btn-outline-primary");
     			attr_dev(button9, "onclick", "window.location.href='#/chartOutPlugInVehicles'");
-    			add_location(button9, file, 22, 2, 1794);
+    			add_location(button9, file, 21, 2, 1792);
     			attr_dev(div3, "class", "div-home");
-    			add_location(div3, file, 20, 1, 1764);
-=======
->>>>>>> 950d2778b0cca0c3736540c64881a6438458a001
+    			add_location(div3, file, 19, 1, 1762);
     			add_location(main, file, 0, 0, 0);
     		},
     		l: function claim(nodes) {
@@ -1580,6 +1620,49 @@ var app = (function () {
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
+    			append_dev(main, div0);
+    			append_dev(div0, button0);
+    			append_dev(button0, i0);
+    			append_dev(button0, t0);
+    			append_dev(div0, t1);
+    			append_dev(div0, button1);
+    			append_dev(button1, i1);
+    			append_dev(button1, t2);
+    			append_dev(div0, t3);
+    			append_dev(div0, button2);
+    			append_dev(button2, i2);
+    			append_dev(button2, t4);
+    			append_dev(main, t5);
+    			append_dev(main, div1);
+    			append_dev(div1, button3);
+    			append_dev(button3, i3);
+    			append_dev(button3, t6);
+    			append_dev(div1, t7);
+    			append_dev(div1, button4);
+    			append_dev(button4, i4);
+    			append_dev(button4, t8);
+    			append_dev(div1, t9);
+    			append_dev(div1, button5);
+    			append_dev(button5, i5);
+    			append_dev(button5, t10);
+    			append_dev(div1, t11);
+    			append_dev(div1, button6);
+    			append_dev(button6, i6);
+    			append_dev(button6, t12);
+    			append_dev(div1, t13);
+    			append_dev(div1, button7);
+    			append_dev(button7, i7);
+    			append_dev(button7, t14);
+    			append_dev(main, t15);
+    			append_dev(main, div2);
+    			append_dev(div2, button8);
+    			append_dev(button8, i8);
+    			append_dev(button8, t16);
+    			append_dev(main, t17);
+    			append_dev(main, div3);
+    			append_dev(div3, button9);
+    			append_dev(button9, i9);
+    			append_dev(button9, t18);
     		},
     		p: noop,
     		i: noop,
@@ -19965,7 +20048,7 @@ var app = (function () {
 
     /* src\front\renewableSourcesAPI\ChartRenewableSourcesD3.svelte generated by Svelte v3.20.1 */
 
-    const file$n = "src\\front\\renewableSourcesAPI\\ChartRenewableSourcesD3.svelte";
+    const file$o = "src\\front\\renewableSourcesAPI\\ChartRenewableSourcesD3.svelte";
 
     function create_fragment$p(ctx) {
     	let _DOCTYPE;
@@ -20021,31 +20104,31 @@ var app = (function () {
     			script2 = element("script");
     			script2.textContent = "// DEFINE VARIABLES\r\n      // Define size of map group\r\n      // Full world map is 2:1 ratio\r\n      // Using 12:5 because we will crop top and bottom of map\r\n      w = 3000;\r\n      h = 1250;\r\n      // variables for catching min and max zoom factors\r\n      var minZoom;\r\n      var maxZoom;\r\n\r\n      // DEFINE FUNCTIONS/OBJECTS\r\n      // Define map projection\r\n      var projection = d3\r\n        .geoEquirectangular()\r\n        .center([0, 15]) // set centre to further North as we are cropping more off bottom of map\r\n        .scale([w / (2 * Math.PI)]) // scale to fit group width\r\n        .translate([w / 2, h / 2]) // ensure centred in group\r\n      ;\r\n\r\n      // Define map path\r\n      var path = d3\r\n        .geoPath()\r\n        .projection(projection)\r\n      ;\r\n\r\n      // Create function to apply zoom to countriesGroup\r\n      function zoomed() {\r\n        t = d3\r\n          .event\r\n          .transform\r\n        ;\r\n        countriesGroup\r\n          .attr(\"transform\",\"translate(\" + [t.x, t.y] + \")scale(\" + t.k + \")\")\r\n        ;\r\n      }\r\n\r\n      // Define map zoom behaviour\r\n      var zoom = d3\r\n        .zoom()\r\n        .on(\"zoom\", zoomed)\r\n      ;\r\n\r\n      function getTextBox(selection) {\r\n        selection\r\n          .each(function(d) {\r\n            d.bbox = this\r\n              .getBBox();\r\n            })\r\n        ;\r\n      }\r\n\r\n      // Function that calculates zoom/pan limits and sets zoom to default value \r\n      function initiateZoom() {\r\n        // Define a \"minzoom\" whereby the \"Countries\" is as small possible without leaving white space at top/bottom or sides\r\n        minZoom = Math.max($(\"#map-holder\").width() / w, $(\"#map-holder\").height() / h);\r\n        // set max zoom to a suitable factor of this value\r\n        maxZoom = 20 * minZoom;\r\n        // set extent of zoom to chosen values\r\n        // set translate extent so that panning can't cause map to move out of viewport\r\n        zoom\r\n          .scaleExtent([minZoom, maxZoom])\r\n          .translateExtent([[0, 0], [w, h]])\r\n        ;\r\n        // define X and Y offset for centre of map to be shown in centre of holder\r\n        midX = ($(\"#map-holder\").width() - minZoom * w) / 2;\r\n        midY = ($(\"#map-holder\").height() - minZoom * h) / 2;\r\n        // change zoom transform to min zoom and centre offsets\r\n        svg.call(zoom.transform, d3.zoomIdentity.translate(midX, midY).scale(minZoom));\r\n      }\r\n\r\n      // zoom to show a bounding box, with optional additional padding as percentage of box size\r\n      function boxZoom(box, centroid, paddingPerc) {\r\n        minXY = box[0];\r\n        maxXY = box[1];\r\n        // find size of map area defined\r\n        zoomWidth = Math.abs(minXY[0] - maxXY[0]);\r\n        zoomHeight = Math.abs(minXY[1] - maxXY[1]);\r\n        // find midpoint of map area defined\r\n        zoomMidX = centroid[0];\r\n        zoomMidY = centroid[1];\r\n        // increase map area to include padding\r\n        zoomWidth = zoomWidth * (1 + paddingPerc / 100);\r\n        zoomHeight = zoomHeight * (1 + paddingPerc / 100);\r\n        // find scale required for area to fill svg\r\n        maxXscale = $(\"svg\").width() / zoomWidth;\r\n        maxYscale = $(\"svg\").height() / zoomHeight;\r\n        zoomScale = Math.min(maxXscale, maxYscale);\r\n        // handle some edge cases\r\n        // limit to max zoom (handles tiny countries)\r\n        zoomScale = Math.min(zoomScale, maxZoom);\r\n        // limit to min zoom (handles large countries and countries that span the date line)\r\n        zoomScale = Math.max(zoomScale, minZoom);\r\n        // Find screen pixel equivalent once scaled\r\n        offsetX = zoomScale * zoomMidX;\r\n        offsetY = zoomScale * zoomMidY;\r\n        // Find offset to centre, making sure no gap at left or top of holder\r\n        dleft = Math.min(0, $(\"svg\").width() / 2 - offsetX);\r\n        dtop = Math.min(0, $(\"svg\").height() / 2 - offsetY);\r\n        // Make sure no gap at bottom or right of holder\r\n        dleft = Math.max($(\"svg\").width() - w * zoomScale, dleft);\r\n        dtop = Math.max($(\"svg\").height() - h * zoomScale, dtop);\r\n        // set zoom\r\n        svg\r\n          .transition()\r\n          .duration(500)\r\n          .call(\r\n            zoom.transform,\r\n            d3.zoomIdentity.translate(dleft, dtop).scale(zoomScale)\r\n          );\r\n      }\r\n\r\n\r\n\r\n\r\n      // on window resize\r\n      $(window).resize(function() {\r\n        // Resize SVG\r\n        svg\r\n          .attr(\"width\", $(\"#map-holder\").width())\r\n          .attr(\"height\", $(\"#map-holder\").height())\r\n        ;\r\n        initiateZoom();\r\n      });\r\n\r\n      // create an SVG\r\n      var svg = d3\r\n        .select(\"#map-holder\")\r\n        .append(\"svg\")\r\n        // set to the same size as the \"map-holder\" div\r\n        .attr(\"width\", $(\"#map-holder\").width())\r\n        .attr(\"height\", $(\"#map-holder\").height())\r\n        // add zoom functionality\r\n        .call(zoom)\r\n      ;\r\n\r\n\r\n      // get map data\r\n      d3.json(\r\n        \"https://raw.githubusercontent.com/andybarefoot/andybarefoot-www/master/maps/mapdata/custom50.json\",\r\n        function(json) {\r\n          //Bind data and create one path per GeoJSON feature\r\n          countriesGroup = svg.append(\"g\").attr(\"id\", \"map\");\r\n          // add a background rectangle\r\n          countriesGroup\r\n            .append(\"rect\")\r\n            .attr(\"x\", 0)\r\n            .attr(\"y\", 0)\r\n            .attr(\"width\", w)\r\n            .attr(\"height\", h);\r\n\r\n          // draw a path for each feature/country\r\n          countries = countriesGroup\r\n            .selectAll(\"path\")\r\n            .data(json.features)\r\n            .enter()\r\n            .append(\"path\")\r\n            .attr(\"d\", path)\r\n            .attr(\"id\", function(d, i) {\r\n              return \"country\" + d.properties.iso_a3;\r\n            })\r\n            .attr(\"class\", \"country\")\r\n      //      .attr(\"stroke-width\", 10)\r\n      //      .attr(\"stroke\", \"#ff0000\")\r\n            // add a mouseover action to show name label for feature/country\r\n            .on(\"mouseover\", function(d, i) {\r\n                d3.select(\"#countryLabel\" + d.properties.iso_a3).style(\"display\", \"block\");\r\n            })\r\n            .on(\"mouseout\", function(d, i) {\r\n                d3.select(\"#countryLabel\" + d.properties.iso_a3).style(\"display\", \"none\");\r\n            })\r\n            // add an onclick action to zoom into clicked country\r\n            .on(\"click\", function(d, i) {\r\n                d3.selectAll(\".country\").classed(\"country-on\", false);\r\n                d3.select(this).classed(\"country-on\", true);\r\n            boxZoom(path.bounds(d), path.centroid(d), 20);\r\n            });\r\n          // Add a label group to each feature/country. This will contain the country name and a background rectangle\r\n          // Use CSS to have class \"countryLabel\" initially hidden\r\n          countryLabels = countriesGroup\r\n            .selectAll(\"g\")\r\n            .data(json.features)\r\n            .enter()\r\n            .append(\"g\")\r\n            .attr(\"class\", \"countryLabel\")\r\n            .attr(\"id\", function(d) {\r\n              return \"countryLabel\" + d.properties.iso_a3;\r\n            })\r\n            .attr(\"transform\", function(d) {\r\n              return (\r\n                \"translate(\" + path.centroid(d)[0] + \",\" + path.centroid(d)[1] + \")\"\r\n              );\r\n            })\r\n            // add mouseover functionality to the label\r\n            .on(\"mouseover\", function(d, i) {\r\n                d3.select(this).style(\"display\", \"block\");\r\n            })\r\n            .on(\"mouseout\", function(d, i) {\r\n                 d3.select(this).style(\"display\", \"none\");\r\n           })\r\n            // add an onlcick action to zoom into clicked country\r\n            .on(\"click\", function(d, i) {\r\n                d3.selectAll(\".country\").classed(\"country-on\", false);\r\n                d3.select(\"#country\" + d.properties.iso_a3).classed(\"country-on\", true);\r\n              boxZoom(path.bounds(d), path.centroid(d), 20);\r\n            });\r\n          // add the text to the label group showing country name\r\n          countryLabels\r\n            .append(\"text\")\r\n            .attr(\"class\", \"countryName\")\r\n            .style(\"text-anchor\", \"middle\")\r\n            .attr(\"dx\", 0)\r\n            .attr(\"dy\", 0)\r\n            .text(function(d) {\r\n              return d.properties.name;\r\n            })\r\n            .call(getTextBox);\r\n          // add a background rectangle the same size as the text\r\n          countryLabels\r\n            .insert(\"rect\", \"text\")\r\n            .attr(\"class\", \"countryLabelBg\")\r\n            .attr(\"transform\", function(d) {\r\n              return \"translate(\" + (d.bbox.x - 2) + \",\" + d.bbox.y + \")\";\r\n            })\r\n            .attr(\"width\", function(d) {\r\n              return d.bbox.width + 4;\r\n            })\r\n            .attr(\"height\", function(d) {\r\n              return d.bbox.height;\r\n            });\r\n          initiateZoom();\r\n        }\r\n      );";
     			attr_dev(_DOCTYPE, "html", "");
-    			add_location(_DOCTYPE, file$n, 0, 0, 0);
+    			add_location(_DOCTYPE, file$o, 0, 0, 0);
     			attr_dev(meta0, "charset", "utf-8");
-    			add_location(meta0, file$n, 3, 4, 49);
+    			add_location(meta0, file$o, 3, 4, 49);
     			attr_dev(meta1, "name", "viewport");
     			attr_dev(meta1, "content", "initial-scale=1.0, width=device-width");
-    			add_location(meta1, file$n, 4, 4, 78);
-    			add_location(title, file$n, 5, 4, 160);
+    			add_location(meta1, file$o, 4, 4, 78);
+    			add_location(title, file$o, 5, 4, 160);
     			attr_dev(script0, "type", "text/javascript");
     			if (script0.src !== (script0_src_value = "https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$n, 6, 4, 196);
+    			add_location(script0, file$o, 6, 4, 196);
     			attr_dev(script1, "type", "text/javascript");
     			if (script1.src !== (script1_src_value = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$n, 7, 4, 306);
+    			add_location(script1, file$o, 7, 4, 306);
     			attr_dev(link, "href", "https://fonts.googleapis.com/css?family=Abril+Fatface|Yanone+Kaffeesatz:200");
     			attr_dev(link, "rel", "stylesheet");
-    			add_location(link, file$n, 8, 4, 424);
-    			add_location(style, file$n, 9, 4, 536);
-    			add_location(head, file$n, 2, 2, 37);
+    			add_location(link, file$o, 8, 4, 424);
+    			add_location(style, file$o, 9, 4, 536);
+    			add_location(head, file$o, 2, 2, 37);
     			attr_dev(div, "id", "map-holder");
-    			add_location(div, file$n, 46, 4, 1495);
+    			add_location(div, file$o, 46, 4, 1495);
     			attr_dev(script2, "type", "text/javascript");
-    			add_location(script2, file$n, 47, 4, 1528);
-    			add_location(body, file$n, 45, 2, 1483);
+    			add_location(script2, file$o, 47, 4, 1528);
+    			add_location(body, file$o, 45, 2, 1483);
     			attr_dev(html, "lang", "en");
-    			add_location(html, file$n, 1, 0, 17);
+    			add_location(html, file$o, 1, 0, 17);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -20095,13 +20178,6 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
-    const { console: console_1$9 } = globals;
-    const file$o = "src\\front\\CommonChart.svelte";
-
-    // (129:1) <Button outline color="secondary" on:click="{pop}">
-    function create_default_slot$b(ctx) {
-=======
     function instance$p($$self, $$props) {
     	const writable_props = [];
 
@@ -20129,11 +20205,10 @@ var app = (function () {
     }
 
     /* src\front\CommonChart.svelte generated by Svelte v3.20.1 */
-    const file$o = "src\\front\\CommonChart.svelte";
+    const file$p = "src\\front\\CommonChart.svelte";
 
     // (128:1) <Button outline color="secondary" on:click="{pop}">
-    function create_default_slot$a(ctx) {
->>>>>>> 950d2778b0cca0c3736540c64881a6438458a001
+    function create_default_slot$b(ctx) {
     	let i;
     	let t;
 
@@ -20142,11 +20217,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-<<<<<<< HEAD
-    			add_location(i, file$o, 128, 52, 3093);
-=======
-    			add_location(i, file$o, 127, 52, 3122);
->>>>>>> 950d2778b0cca0c3736540c64881a6438458a001
+    			add_location(i, file$p, 127, 52, 3122);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -20216,37 +20287,20 @@ var app = (function () {
     			t3 = space();
     			create_component(button.$$.fragment);
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-<<<<<<< HEAD
-    			add_location(script0, file$o, 112, 1, 2391);
+    			add_location(script0, file$p, 111, 1, 2362);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$o, 113, 1, 2479);
+    			add_location(script1, file$p, 112, 1, 2450);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$o, 114, 1, 2572);
+    			add_location(script2, file$p, 113, 1, 2543);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$o, 115, 1, 2667);
+    			add_location(script3, file$p, 114, 1, 2638);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$o, 122, 2, 2838);
+    			add_location(div, file$p, 121, 2, 2809);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$o, 123, 2, 2868);
+    			add_location(p, file$p, 122, 2, 2839);
     			attr_dev(figure, "class", "highcharts-figure");
-    			add_location(figure, file$o, 121, 1, 2800);
-    			add_location(main, file$o, 119, 0, 2789);
-=======
-    			add_location(script0, file$o, 111, 1, 2362);
-    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$o, 112, 1, 2450);
-    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$o, 113, 1, 2543);
-    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$o, 114, 1, 2638);
-    			attr_dev(div, "id", "container");
-    			add_location(div, file$o, 121, 2, 2809);
-    			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$o, 122, 2, 2839);
-    			attr_dev(figure, "class", "highcharts-figure");
-    			add_location(figure, file$o, 120, 1, 2771);
-    			add_location(main, file$o, 118, 0, 2760);
->>>>>>> 950d2778b0cca0c3736540c64881a6438458a001
+    			add_location(figure, file$p, 120, 1, 2771);
+    			add_location(main, file$p, 118, 0, 2760);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -20431,7 +20485,7 @@ var app = (function () {
     }
 
     /* src\front\plugInVehiclesAPI\ChartOutPlugInVehicles.svelte generated by Svelte v3.20.1 */
-    const file$p = "src\\front\\plugInVehiclesAPI\\ChartOutPlugInVehicles.svelte";
+    const file$q = "src\\front\\plugInVehiclesAPI\\ChartOutPlugInVehicles.svelte";
 
     // (77:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$c(ctx) {
@@ -20443,7 +20497,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$p, 76, 55, 2373);
+    			add_location(i, file$q, 76, 55, 2373);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -20509,16 +20563,16 @@ var app = (function () {
     			t4 = space();
     			create_component(button.$$.fragment);
     			if (script0.src !== (script0_src_value = "libraries/RGraph.svg.common.core.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$p, 65, 4, 1918);
+    			add_location(script0, file$q, 65, 4, 1918);
     			if (script1.src !== (script1_src_value = "libraries/RGraph.svg.line.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$p, 66, 4, 2003);
+    			add_location(script1, file$q, 66, 4, 2003);
     			set_style(div, "width", "750px");
     			set_style(div, "height", "250px");
     			attr_dev(div, "id", "chart-container");
-    			add_location(div, file$p, 73, 4, 2113);
-    			add_location(p0, file$p, 74, 4, 2187);
-    			add_location(p1, file$p, 75, 4, 2200);
-    			add_location(main, file$p, 71, 0, 2099);
+    			add_location(div, file$q, 73, 4, 2113);
+    			add_location(p0, file$q, 74, 4, 2187);
+    			add_location(p1, file$q, 75, 4, 2200);
+    			add_location(main, file$q, 71, 0, 2099);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -20664,7 +20718,7 @@ var app = (function () {
 
     /* src\front\NotFound.svelte generated by Svelte v3.20.1 */
 
-    const file$q = "src\\front\\NotFound.svelte";
+    const file$r = "src\\front\\NotFound.svelte";
 
     function create_fragment$s(ctx) {
     	let main;
@@ -20675,8 +20729,8 @@ var app = (function () {
     			main = element("main");
     			h1 = element("h1");
     			h1.textContent = "¡Esta página no existe!";
-    			add_location(h1, file$q, 1, 4, 12);
-    			add_location(main, file$q, 0, 0, 0);
+    			add_location(h1, file$r, 1, 4, 12);
+    			add_location(main, file$r, 0, 0, 0);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -20731,7 +20785,7 @@ var app = (function () {
     }
 
     /* src\front\App.svelte generated by Svelte v3.20.1 */
-    const file$r = "src\\front\\App.svelte";
+    const file$s = "src\\front\\App.svelte";
 
     function create_fragment$t(ctx) {
     	let main;
@@ -20746,11 +20800,7 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			create_component(router.$$.fragment);
-<<<<<<< HEAD
-    			add_location(main, file$r, 40, 0, 1916);
-=======
-    			add_location(main, file$r, 42, 0, 2066);
->>>>>>> 950d2778b0cca0c3736540c64881a6438458a001
+    			add_location(main, file$s, 42, 0, 2066);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
