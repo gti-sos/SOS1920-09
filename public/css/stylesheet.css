@@ -22,7 +22,12 @@
     float: right;
 }
 
+.image {
+    
+    max-width: 400px;
+}
 
+/* For highchart charts */
 .highcharts-figure, .highcharts-data-table table {
     min-width: 320px; 
     max-width: 1000px;
@@ -56,3 +61,29 @@
 .highcharts-data-table tr:hover {
     background: #f1f7ff;
 }
+
+
+/* For D3 chart */
+
+#map-holder {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .country{
+    fill: #d0d0d0;   /* country colour */
+    stroke: #2A2C39; /* country border colour */
+    stroke-width: 1; /* country border width */
+  }
+  .country-on{
+    fill: #4B5358;   /* highlight colour for selected country */
+  }
+  .countryLabel{
+    display: none;   /* hide all country labels by default */
+  }
+  .countryName{
+    fill: #FFFAFF;   /* country label text colour */
+  }
+  .countryLabelBg{
+    fill: #30BCED;   /* country label background colour */
+  }
