@@ -34,28 +34,40 @@
             }
         });
 
-        new RGraph.SVG.Line({
-            id: 'chart-container',
-            data: carsPer1000,
-            options: {
-                backgroundColor: '#eee',
-                backgroundGridColor: 'blue',
-                backgroundGridVlinesCount: 20,
-                backgroundGridLinewidth: 1,
-                colors: ['black'],
-                tickmarksStyle: 'filledcircle',
-                xaxis: true,
-                yaxis: true,
-                yaxisScaleUnitsPost: '%',
-                textSize: 9,
-                xaxisLabels: countries
+        var chart = bb.generate({
+            data: {
+                x: "x",
+                columns: [
+                ["x", countries[0], countries[1], countries[2], countries[3]],
+                ["Porcentaje", carsPer1000[0], carsPer1000[1], carsPer1000[2], carsPer1000[3]]
+                ],
+                type: "bar"
+            },
+            axis: {
+                x: {
+                type: "category",
+                tick: {
+                    rotate: 75,
+                    multiline: false,
+                    tooltip: true
+                },
+                height: 130
+                }
+            },
+            bindto: "#rotateXAxisTickText"
+            });
+
+        /*var chart = bb.generate({
+            bindto: "#chart",
+            data: {
+                type: "bar",
+                columns: [
+                    ["data1", 30, 200, 100, 170, 150, 250],
+                    ["data2", 130, 100, 140, 35, 110, 50]
+                ]
             }
-        
-        // Use the trace() animation to show the chart and add some responsive capability
-        }).trace().responsive([
-            {maxWidth: 900, width:450,height:200,options:{linewidth: 2,tickmarksSize: 5}},
-            {maxWidth: null,width:600,height:250,options:{linewidth: 3,tickmarksSize: 6}}
-        ]);
+        });
+*/
     
     }
 
@@ -63,17 +75,17 @@
 
 <svelte:head>
 
-    <script src="libraries/RGraph.svg.common.core.js" on:load={loadGraph}></script>
-    <script src="libraries/RGraph.svg.line.js" on:load={loadGraph}></script>
-
+    <script src="https://d3js.org/d3.v5.min.js" on:load={loadGraph}></script>
+    <script src="libraries/billboard.js" on:load={loadGraph}></script>
 
 </svelte:head>
 
 <main>
 
-    <div style="width: 750px; height: 250px" id="chart-container"></div>
+    <!--<div id="chart"></div>-->
+    <div id="rotateXAxisTickText"></div>
     <p></p>
-    <p>Representación gráfica realizada con RGraph que nos muestra el porcentaje de coches electricos en el año 2018</p>
+    <p>Representación gráfica realizada con billboards que nos muestra el porcentaje de coches electricos en el año 2018</p>
     <Button outline color="secondary" on:click="{pop}"><i class="fas fa-arrow-circle-left"></i> Atrás</Button>
 
 </main>
