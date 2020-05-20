@@ -33,6 +33,7 @@
     "coveralls": "^3.1.0",
     "express": "^4.17.1",
     "jest": "^26.0.1",
+    "jsonwebtoken": "^8.5.1",
     "lokijs": "^1.5.8",
     "nedb": "^1.8.0",
     "svelte-spa-router": "^2.1.0",
