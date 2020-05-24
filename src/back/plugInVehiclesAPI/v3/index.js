@@ -8,8 +8,8 @@ module.exports = function (app){
 	const request = require('request');
 	const express = require("express");
 	
-	var api27 = 'https://sos1920-27.herokuapp.com';
-	var api07 = 'https://sos1920-07.herokuapp.com';
+	var api27 = 'https://sos1920-27.herokuapp.com'; // Integración mediante proxy
+	var api07 = 'https://sos1920-07.herokuapp.com'; // Integración mediante proxy
 	var paths27='/api/v2/spc-stats';
 	var paths07='/api/v2/imports';
 
@@ -18,7 +18,7 @@ module.exports = function (app){
 		autoload: true
 	});
 
-	// Api 07
+	// Integración mediante proxy Api 07
 	app.use(paths07, function(req, res) {
         var url = api07 + req.baseUrl + req.url;
         console.log('piped: ' + req.baseUrl + req.url);
@@ -27,7 +27,7 @@ module.exports = function (app){
 	
     app.use(express.static('.'));
 
-	// Api 27
+	// Integración mediante proxy Api 27
 	app.use(paths27, function(req, res) {
         var url = api27 + req.baseUrl + req.url;
         console.log('piped: ' + req.baseUrl + req.url);

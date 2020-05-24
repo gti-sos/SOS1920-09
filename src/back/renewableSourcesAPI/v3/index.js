@@ -1,17 +1,18 @@
 module.exports = function (app) {
+	/* Lodash helps us with the deepCopy */
+	var _ = require('lodash');
+	// For JWT auth
+	var jwt = require('jsonwebtoken');
+	var bodyParser = require('body-parser');
 	console.log("Registering renewable source stats API...");
-	const dataStore = require("nedb");
+	const dataStore = require("lokijs");
 	const path = require("path");
 	const dbFileName = path.join(__dirname, "renewable_sources_stats.db");
-	const BASE_API_URL = "/api/v2";
+	const BASE_API_URL = "/api/v3";
 	
-	const db = new dataStore({
-		filename: dbFileName,
-		autoload: true
-	});
+	const db = new dataStore(dbFileName);
 	
-	
-	var initialRenewableSourcesStats = [
+	var initialData = [
 		{ 
 			"country": "Spain",
 			"year": 2016,
@@ -131,27 +132,78 @@ module.exports = function (app) {
 			"percentage-hydropower-total": 69.3,
 			"percentage-wind-power-total": 4.2
 
+		}];
+	
+		// Login for the JWT auth
+	app.use(bodyParser.urlencoded({extended: false}))
+	app.use(bodyParser.json({limit:'10mb'}))
+
+	app.post(BASE_API_URL+'/renewable-sources-stats/login', (req, res) => {
+		var username = req.body.user
+		var password = req.body.password
+	  
+		if( !(username === 'test' && password === 'test')){
+		  res.status(401).send({
+			error: 'usuario o contraseña inválidos'
+		  })
+		  return
 		}
-		
-		
-	];
-	
-	// Cleaning the data base and inserting the initial data
-	db.remove({}, { multi: true }); // Deleting elements one by one
-	db.insert(initialRenewableSourcesStats);
-	
-	
-	// GET renewableSourcesStats/loadInitialData
+	  
+		var tokenData = {
+		  username: username
+		  // ANY DATA
+		}
+	  
+		var token = jwt.sign(tokenData, 'Secret Password', {
+		   expiresIn: 60 * 60 * 24 // expires in 24 hours
+		})
+	  
+		res.send({
+		  token
+		})
+	  });
 
-	app.get(BASE_API_URL+"/renewable-sources-stats/loadInitialData", (req, res) => {
-		db.insert(initialRenewableSourcesStats);
-		res.sendStatus(200);
-
-		console.log("Initial renewable source stats loaded:" + JSON.stringify(initialRenewableSourcesStats, null, 2));
+	// Securized site
+	app.get(BASE_API_URL+'/renewable-sources-stats/secure', (req, res) => {
+		var token = req.headers['authorization']
+		if(!token){
+			res.status(401).send({
+			  error: "Es necesario el token de autenticación"
+			})
+			return
+		}
+	
+		token = token.replace('Bearer ', '')
+	
+		jwt.verify(token, 'Secret Password', function(err, user) {
+		  if (err) {
+			res.status(401).send({
+			  error: 'Token inválido'
+			})
+		  } else {
+			res.send({
+			  message: 'Awwwww yeah!!!!'
+			})
+		  }
+		})
 	});
 
 
-	// GET renewableSourcesStats
+	/* Adding the element 1 by one because a lokijs problem, that in loadInitial said document already added */
+	initialData.forEach((d) => { db.addCollection('stats').insert(_.cloneDeep(d)); });
+	
+	db.saveDatabase();
+
+	app.get(BASE_API_URL+"/renewable-sources-stats/loadInitialData", (req, res) => {
+		db.removeCollection('stats'); 
+		db.saveDatabase();
+		initialData.forEach((d) => {  db.addCollection('stats').insert(_.cloneDeep(d)); });
+		db.saveDatabase();
+		res.sendStatus(200);
+
+		console.log("Initial renewable source stats loaded");
+	});
+
 
 	app.get(BASE_API_URL+"/renewable-sources-stats", (req, res) => {
 
@@ -174,23 +226,23 @@ module.exports = function (app) {
 		delete query.offset;
 		delete query.limit;
 
+		// With offset we make the offset and with the limit we limit
 
+		var data = db.addCollection('stats').chain().find(query).limit(limit).offset(offset).data();
+		/* Using clone deep to preserve meta, not enought shallow copy */
+		var results = _.cloneDeep(data);
 
-		// With skip we make the offset and with the limit we limit
-		db.find(query).skip(offset).limit(limit).exec((error, renewableSourcesStats) => {
-			renewableSourcesStats.forEach((r) => {
-				delete r._id;
-			});
-
-			res.send(JSON.stringify(renewableSourcesStats, null, 2)); 
-			console.log("Data sent: " + JSON.stringify(renewableSourcesStats, null, 2));
+		results.forEach((d) => {
+			delete d.meta;
+			delete d["$loki"];
 		});
-
+		
+		res.send(JSON.stringify(results, null, 2)); 
 		console.log("OK.");
+
+		//console.log(results);
+		//console.log(db.addCollection('stats').chain().find(query).limit(limit).offset(offset).data());
 	});
-
-
-
 
 	// POST renewableSourcesStats
 
@@ -229,22 +281,33 @@ module.exports = function (app) {
 			|| isNaN(parseFloat(newRenewableSourcesStat["percentage-wind-power-total"]);
 		*/
 		
-		if(isEmpty || haveNullField || !rightFields) {		
+		if(isEmpty || haveNullField || !rightFields) {
 			res.sendStatus(400,"BAD REQUEST");
 		} else {
-			db.insert(newRenewableSourcesStat);
+			db.addCollection('stats').insert(newRenewableSourcesStat);
+			db.saveDatabase();
 			
 			res.sendStatus(201, "CREATED");
 		}
 	});
 
-
+	
 	// DELETE renewableSourcesStats
 
 	app.delete(BASE_API_URL+"/renewable-sources-stats", (req, res) => {	
-		db.remove({}, { multi: true }); // Deleting elements one by one
+		db.removeCollection('stats');
+		db.addCollection('stats');
+		db.saveDatabase();
+		// stats.chain().remove(); 
+		// stats.chain().remove(); /* Twice because a lokijs problem, one it is not enought */
 		
-		res.sendStatus(200, "OK");
+
+		if (db.addCollection('stats').find().length == 0) {
+			res.sendStatus(200, "OK");
+		} else {
+			res.sendStatus(400, "BAD REQUEST");
+		}
+		
 	});
 
 
@@ -254,9 +317,8 @@ module.exports = function (app) {
 		res.sendStatus(405, "METHOD NOT ALLOWED");
 
 	});
-
-
-
+	
+	
 	// GET renewableSourcesStats/XXX
 
 	app.get(BASE_API_URL+"/renewable-sources-stats/:country/:year", (req, res) => {
@@ -266,19 +328,21 @@ module.exports = function (app) {
 
 		var query = {"country": country, "year": parseInt(year)};
 		
-		db.find(query).exec((error, renewableSourcesStats) => {
+		// With offset we make the offset and with the limit we limit
+		var results = _.cloneDeep(db.addCollection('stats').find(query));
 
-			if (renewableSourcesStats.length == 1) {
-				delete renewableSourcesStats[0]._id;
+		if (results.length == 1) {
+			delete results[0].meta;
+			delete results[0]["$loki"];
 
-				res.send(JSON.stringify(renewableSourcesStats[0], null, 2)); 
-				console.log("Data sent: " + JSON.stringify(renewableSourcesStats[0], null, 2));
-				
-			} else {
-				res.sendStatus(404, "NOT FOUND");
-			}
+			res.send(JSON.stringify(results[0], null, 2)); 
+			console.log("Data sent: " + JSON.stringify(results[0], null, 2));
 			
-		});
+		} else {
+			res.sendStatus(404, "NOT FOUND");
+		}		
+		res.send(JSON.stringify(results, null, 2));
+
 
 		console.log("OK.");
 		
@@ -303,32 +367,34 @@ module.exports = function (app) {
 			
 		}
 
-		
-		db.find(query).exec((error, renewableSourcesStats) => {
+		var results = _.cloneDeep(db.addCollection('stats').find(query));
 
-			if (renewableSourcesStats.length > 1) {
-				renewableSourcesStats.forEach((r) => {
-					delete r._id;
-				});
 
-				res.send(JSON.stringify(renewableSourcesStats, null, 2)); 
-				console.log("Data sent: " + JSON.stringify(renewableSourcesStats, null, 2));
-				
-			}
-			// We consider the posibility of returning just 1 element and return a JSON and not an array
+		if (results.length > 1) {
+			results.forEach((r) => {
+				delete r.meta;
+				delete r["$loki"];
+			});
+
+			res.send(JSON.stringify(results, null, 2)); 
+			console.log("Data sent: " + JSON.stringify(results, null, 2));
 			
-			else if (renewableSourcesStats.length == 1) {
-				delete renewableSourcesStats[0]._id;
-				
-				res.send(JSON.stringify(renewableSourcesStats[0], null, 2)); 
-				console.log("Data sent: " + JSON.stringify(renewableSourcesStats[0], null, 2));
-				
-			}
+		}
+		// We consider the posibility of returning just 1 element and return a JSON and not an array
 			
-			else {
-				res.sendStatus(404, "NOT FOUND");
-			}
-		});
+		else if (results.length == 1) {
+			delete results[0].meta;
+			delete results[0]["$loki"];
+
+			
+			res.send(JSON.stringify(results[0], null, 2)); 
+			console.log("Data sent: " + JSON.stringify(results[0], null, 2));
+			
+		}
+			
+		else {
+			res.sendStatus(404, "NOT FOUND");
+		}
 
 		console.log("OK.");
 
@@ -347,6 +413,7 @@ module.exports = function (app) {
 	});
 
 
+	
 
 	// PUT renewableSourcesStats/XXX
 	app.put(BASE_API_URL+"/renewable-sources-stats/:country/:year", (req,res) =>{
@@ -357,17 +424,35 @@ module.exports = function (app) {
 
 		var body = req.body;
 
-		
-		db.update({country: country, year: parseInt(year)}, body, (error, numReplaced) => {
-			// Checking if we find match with the query
-			if (numReplaced == 0) {
-				res.sendStatus(404, "NOT FOUND");
-			} else {
-				res.sendStatus(200, "OK");
-			}
-		});
+		var query = {country: country, year: parseInt(year)};		
+		var beforeRemoving = db.addCollection('stats').find(query);
 
-	});
+		if (beforeRemoving.length == 0) {
+			res.sendStatus(404, "NOT FOUND");
+		} else {
+			 /* 
+			 We had some problems with the remove function, so we remove the entire collection and 
+			 add the elements not removed
+			 */
+			var results = db.addCollection('stats').where((d) => {
+				return d.country != country || d.year != parseInt(year) ;
+			});
+			
+			var r = db.addCollection('stats').find(query)[0];
+			
+			r["percentage-re-total"] = body["percentage-re-total"];
+			r["percentage-hydropower-total"] = body["percentage-hydropower-total"];
+			r["percentage-wind-power-total"] = body["percentage-wind-power-total"];
+			console.log(r);
+
+			db.addCollection('stats').update(r);
+			res.sendStatus(200, "OK");
+
+
+		}
+
+	}); 
+
 
 	
 	// DELETE renewableSourcesStats/XXX
@@ -378,14 +463,31 @@ module.exports = function (app) {
 		var year = req.params.year;
 		
 		var query = {country: country, year: parseInt(year)};
+		var beforeRemoving = db.addCollection('stats').find(query);
+
+		if (beforeRemoving.length == 0) {
+			res.sendStatus(404, "NOT FOUND");
+		} else {
+			 /* 
+			 We had some problems with the remove function, so we remove the entire collection and 
+			 add the elements not removed
+			 */
+
+			var r = db.addCollection('stats').find(query)[0];
+			
+			console.log(r);
+			db.addCollection('stats').remove(r);
 		
-		db.remove(query, { multi: true }, (error, numRemoved) => {
-			if (numRemoved == 0) {
-				res.sendStatus(404, "NOT FOUND");
-			} else {
-				res.sendStatus(200, "OK");
-			}
-		}); 
+
+			
+			db.saveDatabase();		
+			
+			var searchDeletedData = db.addCollection('stats').find(query);
+
+			res.sendStatus(200, "OK");
+
+			
+		}
 		
 
 	});
@@ -400,20 +502,44 @@ module.exports = function (app) {
 		// And the query is just to specify the country
 		if (isNaN(parseInt(param))) {
 			query = { country: param };
-			
 		} else {
 			query = { year: parseInt(param) };
-			
 		}
+
 		
-		db.remove(query, { multi: true }, (error, numRemoved) => {
-			if (numRemoved == 0) {
-				res.sendStatus(404, "NOT FOUND");
-			} else {
+		
+		var beforeRemoving = db.addCollection('stats').find(query);
+
+		if (beforeRemoving.length == 0) {
+			res.sendStatus(404, "NOT FOUND");
+		} else if (beforeRemoving.length == 1) {
+
+	
+			
+			var r = db.addCollection('stats').find(query)[0];
+			
+			console.log(r);
+			db.addCollection('stats').remove(r);
+
+			res.sendStatus(200, "OK");
+		
+		} else {
+			for (let i = 0; i < beforeRemoving.length; i++) {
+				
+				
+				var r = db.addCollection('stats').find(query)[0];
+				
+				console.log(r);
+				db.addCollection('stats').remove(r);
+
 				res.sendStatus(200, "OK");
 			}
-		}); 
+		}
 		
 	});
+
+
+
+
 
 };
