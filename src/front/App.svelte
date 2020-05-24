@@ -11,10 +11,12 @@
 	import ChartOilCoal from './oilCoalNuclearEnergyConsumptionAPI/ChartOilCoal.svelte';
 	import ChartOilCoal2 from './oilCoalNuclearEnergyConsumptionAPI/ChartOilCoal2.svelte';
 	import ChartPlugInVehicles from './plugInVehiclesAPI/ChartPlugInVehicles.svelte';
+	import ChartOutPlugInVehicles from './plugInVehiclesAPI/ChartOutPlugInVehicles.svelte';
 	import ChartRenewableSources from './renewableSourcesAPI/ChartRenewableSources.svelte';
 	import ChartRenewableSourcesBillboard from './renewableSourcesAPI/ChartRenewableSourcesBillboard.svelte';
 	import CommonChart from './CommonChart.svelte';
-	import ChartOutPlugInVehicles from './plugInVehiclesAPI/ChartOutPlugInVehicles.svelte';
+	import Efforts from './efforts.svelte';
+	
 
 
 	import NotFound from './NotFound.svelte';
@@ -34,6 +36,7 @@
 		"/chartRenewableSources": ChartRenewableSources,
 		"/chartRenewableSourcesBillboard": ChartRenewableSourcesBillboard,
 		"/analytics": CommonChart,
+		"/efforts" : Efforts,
 		"*": NotFound
 	};
 </script>

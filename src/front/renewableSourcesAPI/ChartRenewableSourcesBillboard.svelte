@@ -41,7 +41,7 @@
                 }
             },
             size: {
-                height: 180
+                height: 300
             },
             bindto: "#gaugeChart"
         });
