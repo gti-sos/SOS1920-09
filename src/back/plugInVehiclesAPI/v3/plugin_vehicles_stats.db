@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {"country":"Canada","year":2018,"pev-stock":81435,"annual-sale":33879,"cars-per-1000":2.2,"_id":"hByxlsLwANGLsLxw"}
 {"country":"China","year":2018,"pev-stock":2243772,"annual-sale":1016002,"cars-per-1000":1.6,"_id":"BbxsaFUvvjUQbPQV"}
 {"country":"France","year":2018,"pev-stock":204617,"annual-sale":53745,"cars-per-1000":3.1,"_id":"HG5XBqCM2bo5nyKs"}
@@ -10,3 +11,17 @@
 {"country":"UK","year":2018,"pev-stock":197000,"annual-sale":59911,"cars-per-1000":3.2,"_id":"2pFkUnprNeu0F63d"}
 {"country":"USA","year":2018,"pev-stock":1126000,"annual-sale":361307,"cars-per-1000":3.4,"_id":"sT1TrXl61T1M2eOg"}
 {"country":"USA","year":2017,"pev-stock":764666,"annual-sale":199818,"cars-per-1000":2.9,"_id":"SicyUdoucpVM3crt"}
+=======
+{"country":"Canada","year":2018,"pev-stock":81435,"annual-sale":33879,"cars-per-1000":2.2,"_id":"XuSNkWeegPDNK9mP"}
+{"country":"China","year":2018,"pev-stock":2243772,"annual-sale":1016002,"cars-per-1000":1.6,"_id":"A7gnLy5KZHSQi22z"}
+{"country":"France","year":2018,"pev-stock":204617,"annual-sale":53745,"cars-per-1000":3.1,"_id":"aba6Ap0SuVH6i4OJ"}
+{"country":"Germany","year":2018,"pev-stock":196750,"annual-sale":67504,"cars-per-1000":2.4,"_id":"uH2Ebenw2XVTQGg6"}
+{"country":"Japan","year":2018,"pev-stock":257363,"annual-sale":52013,"cars-per-1000":2,"_id":"PGIKeWpwcB2C0EM8"}
+{"country":"Netherlands","year":2018,"pev-stock":145882,"annual-sale":29187,"cars-per-1000":8.4,"_id":"y7Bstb4gLC3WBgPn"}
+{"country":"Norway","year":2018,"pev-stock":296215,"annual-sale":86290,"cars-per-1000":55.9,"_id":"4QZesWsfaTUDV5vX"}
+{"country":"Spain","year":2018,"pev-stock":155495,"annual-sale":26922,"cars-per-1000":2.8,"_id":"ZQj1rpXnERmOWfnL"}
+{"country":"Sweden","year":2018,"pev-stock":79579,"annual-sale":29909,"cars-per-1000":7.8,"_id":"Hy0pwM3TFjtRhxaG"}
+{"country":"UK","year":2018,"pev-stock":197000,"annual-sale":59911,"cars-per-1000":3.2,"_id":"ZkOzJyRkTF8spgsl"}
+{"country":"USA","year":2018,"pev-stock":1126000,"annual-sale":361307,"cars-per-1000":3.4,"_id":"7D5a609qUs5pXdie"}
+{"country":"USA","year":2017,"pev-stock":764666,"annual-sale":199818,"cars-per-1000":2.9,"_id":"2LGXTxinJRiqfCv5"}
+>>>>>>> 5bd8a699a7ee7be445c419302305960f9c328e89

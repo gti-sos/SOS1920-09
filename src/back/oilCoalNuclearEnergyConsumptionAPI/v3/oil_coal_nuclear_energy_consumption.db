@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {"country":"USA","year":2016,"oil-consumption":907.6,"coal-consumption":340.6,"nuclear-energy-consumption":191.9,"_id":"J8YXLnUQkhexeIoF"}
 {"country":"Canada","year":2016,"oil-consumption":107,"coal-consumption":18.9,"nuclear-energy-consumption":21.8,"_id":"tZEpEQ6WstSgqDf2"}
 {"country":"Spain","year":2017,"oil-consumption":10.9,"coal-consumption":0.1,"nuclear-energy-consumption":4.6,"_id":"2IO9L8tfZbmiR502"}
@@ -12,3 +13,19 @@
 {"country":"Iran","year":2016,"oil-consumption":80.7,"coal-consumption":0.9,"nuclear-energy-consumption":1.5,"_id":"DM6YSswhdU4TmEOu"}
 {"country":"China","year":2017,"oil-consumption":608.4,"coal-consumption":1892.6,"nuclear-energy-consumption":56.2,"_id":"9hb2rtEbdvXajkR8"}
 {"country":"Sri Lanka","year":2016,"oil-consumption":5,"coal-consumption":1.3,"nuclear-energy-consumption":0,"_id":"J9TFnZe0yq5ZUOCD"}
+=======
+{"country":"USA","year":2016,"oil-consumption":907.6,"coal-consumption":340.6,"nuclear-energy-consumption":191.9,"_id":"P12isPkmsB44kqwB"}
+{"country":"Canada","year":2016,"oil-consumption":107,"coal-consumption":18.9,"nuclear-energy-consumption":21.8,"_id":"FEzmGSZ1kQwKBVZQ"}
+{"country":"Spain","year":2017,"oil-consumption":10.9,"coal-consumption":0.1,"nuclear-energy-consumption":4.6,"_id":"8L4MQ2SGgzZOqZP6"}
+{"country":"Germany","year":2016,"oil-consumption":117.3,"coal-consumption":75.8,"nuclear-energy-consumption":19.2,"_id":"7Pn8oPABmshEnSNg"}
+{"country":"Belgium","year":2017,"oil-consumption":32.2,"coal-consumption":2.9,"nuclear-energy-consumption":9.5,"_id":"abUyeI6Jq1ZJl00Q"}
+{"country":"Colombia","year":2016,"oil-consumption":16.5,"coal-consumption":5.5,"nuclear-energy-consumption":0,"_id":"lahkXyUJWAJ6uo3z"}
+{"country":"Austria","year":2017,"oil-consumption":13.4,"coal-consumption":3.2,"nuclear-energy-consumption":0,"_id":"NLk3OVWcCbI5fMcx"}
+{"country":"Romania","year":2017,"oil-consumption":10,"coal-consumption":5.7,"nuclear-energy-consumption":2.6,"_id":"CXrK7iZeD79nrS62"}
+{"country":"Switzerland","year":2016,"oil-consumption":15.5,"coal-consumption":2.1,"nuclear-energy-consumption":14.3,"_id":"UfBnTCmjGvA7YVMC"}
+{"country":"Turkey","year":2017,"oil-consumption":48.8,"coal-consumption":44.6,"nuclear-energy-consumption":0,"_id":"NRffsdru3gd0ptR2"}
+{"country":"United Kingdom","year":2017,"oil-consumption":76.3,"coal-consumption":9,"nuclear-energy-consumption":15.9,"_id":"eoCzose84QYQ1ZZP"}
+{"country":"Iran","year":2016,"oil-consumption":80.7,"coal-consumption":0.9,"nuclear-energy-consumption":1.5,"_id":"dbOaMs2zHFWHxCUv"}
+{"country":"China","year":2017,"oil-consumption":608.4,"coal-consumption":1892.6,"nuclear-energy-consumption":56.2,"_id":"Pw9kMoBADEqF3Uis"}
+{"country":"Sri Lanka","year":2016,"oil-consumption":5,"coal-consumption":1.3,"nuclear-energy-consumption":0,"_id":"SnXMGY3UrBOb8DIX"}
+>>>>>>> 5bd8a699a7ee7be445c419302305960f9c328e89
