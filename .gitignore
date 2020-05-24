@@ -2,7 +2,11 @@ node_modules
 
 src/back/oilCoalNuclearEnergyConsumptionAPI/v1/oil_coal_nuclear_energy_consumption.db
 src/back/oilCoalNuclearEnergyConsumptionAPI/v2/oil_coal_nuclear_energy_consumption.db
+src/back/oilCoalNuclearEnergyConsumptionAPI/v3/oil_coal_nuclear_energy_consumption.db
+src/back/oilCoalNuclearEnergyConsumptionAPI/v4/oil_coal_nuclear_energy_consumption.db
 src/back/renewableSourcesAPI/v1/renewable_sources_stats.db
 src/back/renewableSourcesAPI/v2/renewable_sources_stats.db
+src/back/renewableSourcesAPI/v3/renewable_sources_stats.db
 src/back/plugInVehiclesAPI/v1/plugin_vehicles_stats.db
 src/back/plugInVehiclesAPI/v2/plugin_vehicles_stats.db
+src/back/plugInVehiclesAPI/v3/plugin_vehicles_stats.db

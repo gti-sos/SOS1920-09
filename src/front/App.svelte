@@ -16,6 +16,9 @@
 	import ChartRenewableSourcesBillboard from './renewableSourcesAPI/ChartRenewableSourcesBillboard.svelte';
 	import CommonChart from './CommonChart.svelte';
 	import Efforts from './efforts.svelte';
+	import IntegrationsRenewableSource from './renewableSourcesAPI/Integrations.svelte';
+	import IntegrationsPrimaryEnergies from './oilCoalNuclearEnergyConsumptionAPI/Integrations.svelte';
+	import IntegrationsPluginCars from './plugInVehiclesAPI/Integrations.svelte';
 	
 
 
@@ -37,6 +40,9 @@
 		"/chartRenewableSourcesBillboard": ChartRenewableSourcesBillboard,
 		"/analytics": CommonChart,
 		"/efforts" : Efforts,
+		"/integrationsRenewableSource" : IntegrationsRenewableSource,
+		"/integrationsPrimaryEnergies" : IntegrationsPrimaryEnergies,
+		"/integrationsPluginCars" : IntegrationsPluginCars,
 		"*": NotFound
 	};
 </script>
