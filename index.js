@@ -22,14 +22,14 @@ app.use(cors());
 
 plugInVehiclesAPIv1(app);
 plugInVehiclesAPIv2(app);
-//plugInVehiclesAPIv3(app);
+plugInVehiclesAPIv3(app);
 renewableSourcesAPIv1(app);
 renewableSourcesAPIv2(app);
 renewableSourcesAPIv3(app);
 renewableSourcesAPIv4(app);
 oilCoalNuclearEnergyConsumptionAPIv1(app);
 oilCoalNuclearEnergyConsumptionAPIv2(app);
-//oilCoalNuclearEnergyConsumptionAPIv3(app);
+oilCoalNuclearEnergyConsumptionAPIv3(app);
 
 var port = process.env.PORT || 12345;
 
