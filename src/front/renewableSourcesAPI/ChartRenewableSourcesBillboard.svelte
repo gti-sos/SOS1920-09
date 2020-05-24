@@ -22,12 +22,6 @@
                 onclick: function(d, i) {
                 console.log("onclick", d, i);
             },
-                onover: function(d, i) {
-                console.log("onover", d, i);
-            },
-                onout: function(d, i) {
-                console.log("onout", d, i);
-            }
             },
             gauge: {},
             color: {
