@@ -9,9 +9,11 @@
 	import EditPlugInVehicle from './plugInVehiclesAPI/EditPlugInVehicle.svelte';
 	import EditRenewableSource from './renewableSourcesAPI/EditRenewableSource.svelte';
 	import ChartOilCoal from './oilCoalNuclearEnergyConsumptionAPI/ChartOilCoal.svelte';
+	import ChartOilCoal2 from './oilCoalNuclearEnergyConsumptionAPI/ChartOilCoal2.svelte';
 	import ChartPlugInVehicles from './plugInVehiclesAPI/ChartPlugInVehicles.svelte';
 	import ChartRenewableSources from './renewableSourcesAPI/ChartRenewableSources.svelte';
 	import ChartRenewableSourcesRGraph from './renewableSourcesAPI/ChartRenewableSourcesRGraph.svelte';
+	import ChartRenewableSourcesD3 from './renewableSourcesAPI/ChartRenewableSourcesD3.svelte';
 	import CommonChart from './CommonChart.svelte';
 	import ChartOutPlugInVehicles from './plugInVehiclesAPI/ChartOutPlugInVehicles.svelte';
 
@@ -27,10 +29,12 @@
 		"/plugin-vehicles-stats/:country/:year": EditPlugInVehicle,
 		"/renewable-sources-stats/:country/:year": EditRenewableSource,
 		"/chartOilCoal": ChartOilCoal,
+		"/chartOilCoal2": ChartOilCoal2,
 		"/chartPlugInVehicles": ChartPlugInVehicles,
 		"/chartOutPlugInVehicles": ChartOutPlugInVehicles,
 		"/chartRenewableSources": ChartRenewableSources,
 		"/chartRenewableSourcesRGraph": ChartRenewableSourcesRGraph,
+		"/chartRenewableSourcesD3": ChartRenewableSourcesD3,
 		"/analytics": CommonChart,
 		"*": NotFound
 	};

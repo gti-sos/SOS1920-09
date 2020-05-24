@@ -9,22 +9,112 @@
 
 	<link rel='icon' type='image/png' href='icon_api.png'>
 	<link rel='stylesheet' href='/build/bundle.css'>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" defer>
 	<link rel="stylesheet" href="./css/stylesheet.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-
 	<script defer src='/build/bundle.js'></script>
 
+    <script src="https://code.highcharts.com/highcharts.js"  onload="{() => console.log('l1')}"> </script>
+    <script src="https://code.highcharts.com/modules/data.js"  onload="{() => console.log('l2')}" ></script>
+    <script src="https://code.highcharts.com/modules/parallel-coordinates.js"  onload="{() => console.log('l3')}"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"  onload="{() => console.log('l4')}" ></script>
+	
+	<!--Highcharts Oil Coal...-->
+	<script src="https://code.highcharts.com/highcharts.js"  on:load={loadGraph}></script>
+    <script src="https://code.highcharts.com/modules/heatmap.js"  on:load={loadGraph}></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"  on:load={loadGraph}></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"  on:load={loadGraph}></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"  on:load={loadGraph}></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+	
     <script src="https://code.highcharts.com/highcharts.js"  defer> </script>
     <script src="https://code.highcharts.com/modules/data.js"  defer ></script>
     <script src="https://code.highcharts.com/modules/parallel-coordinates.js" defer></script>
     <script src="https://code.highcharts.com/modules/exporting.js" defer ></script>
-	
+
+	<!--Highcharts Oil Coal...-->
+    <script src="https://code.highcharts.com/modules/heatmap.js"  defer></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"  defer></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"  defer></script>
+
+	<!-- Including bootstrap and jquery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<!-- including d3 libraries -->
+	<script src="https://d3js.org/d3.v5.min.js"  ></script>
+
 </head>
 
-<body class="main-body">
+<body >
 	<h1 class="display-1 main-title">SOS1920-09</h1>
-	<div id="SvelteApp"></div>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">SOS1920-09</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Inicio <span class="sr-only">(actual)</span></a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					APIs
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<a class="dropdown-item" href="#/renewableSourcesAPI">API de energías renovables</a>
+				<a class="dropdown-item" href="#/plugInVehiclesAPI">API de coches eléctricos</a>
+				<a class="dropdown-item" href="#/oilCoalNuclearEnergyConsumptionAPI">API de energías primarias</a>
+				</div>
+			</li>
+			
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Gráficas con Highchart
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<a class="dropdown-item" href="#/chartRenewableSources">Gráfica de energías renovables</a>
+				<a class="dropdown-item" href="#/chartPlugInVehicles">Gráfica de coches eléctricos</a>
+				<a class="dropdown-item" href="#/chartOilCoal">Gráfica de energías primarias</a>
+				</div>
+			</li>
+	
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Gráficas con librerías externas
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<a class="dropdown-item" href="#/chartRenewableSourcesRGraph">Gráfica de energías renovables</a>
+				<a class="dropdown-item" href="#/chartOutPlugInVehicles">Gráfica de coches eléctricos</a>
+				<a class="dropdown-item" href="#/chartOilCoalRGraph">Gráfica de energías primarias</a>
+				</div>
+			</li>
+
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Gráficas opcionales
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<a class="dropdown-item" href="#/chartRenewableSourcesD3">Gráfica de energías renovables</a>
+
+				</div>
+			</li>
+			
+			<li class="nav-item">
+				<a class="nav-link" href="#/analytics">Gráfica común</a>
+			</li>
+	
+			<li class="nav-item">
+				<a class="nav-link" href="#/about">Sobre nosotros</a>
+			</li>
+			
+			</ul>
+		</div>
+		</nav>
+
+	<div id="SvelteApp" class="main-body"></div>
 </body>
 
 </html>

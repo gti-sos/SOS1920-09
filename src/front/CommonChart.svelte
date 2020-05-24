@@ -51,7 +51,7 @@
 				data: dataPlugin
 			},
 			{
-				name: "Porcentaje de consumo de gasolina",
+				name: "Millones de toneladas de petróleo",
 				data: dataPrimary
 			},
 			{
@@ -61,7 +61,6 @@
 			}
 		];
 		
-		console.log(dataChart);
 
 
 		Highcharts.chart('container', {
@@ -74,7 +73,7 @@
 			},
 			tooltip: {
 				useHTML: true,
-				pointFormat: '<b>{point.name}:</b> {point.value} %'
+				pointFormat: '<b>{point.name}:</b> {point.value}'
 			},
 			plotOptions: {
 				packedbubble: {
@@ -122,7 +121,7 @@
 	<figure class="highcharts-figure">
 		<div id="container"></div>
 		<p class="highcharts-description">
-			Gráfica común a las tres APIs. Muestra los porcentajes de energías renovables, primarias y coches eléctricos.
+			Gráfica común a las tres APIs. Muestra los millones de toneladas de petróleo, los porcentajes del uso energías renovables y las ventas coches eléctricos por cada 1000.
 		</p>
 	</figure>
 	

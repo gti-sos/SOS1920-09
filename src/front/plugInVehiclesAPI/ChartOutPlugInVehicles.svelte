@@ -19,6 +19,10 @@
         let annualSale = [];
         let carsPer1000 = [];
 
+        let pais = [];
+        let dato = [];
+
+        for(let i=0;i<countries.length;i++){}
         MyData.forEach((data) => {
             let country = data.country;
             let year = data.year;
@@ -34,55 +38,48 @@
             }
         });
 
-        var chart = bb.generate({
-            data: {
-                x: "x",
-                columns: [
-                ["x", countries[0], countries[1], countries[2], countries[3]],
-                ["Porcentaje", carsPer1000[0], carsPer1000[1], carsPer1000[2], carsPer1000[3]]
-                ],
-                type: "bar"
-            },
-            axis: {
-                x: {
-                type: "category",
-                tick: {
-                    rotate: 75,
-                    multiline: false,
-                    tooltip: true
+        for(let i=0;i<countries.length;i++){
+            var chart = bb.generate({
+                
+                data: {
+                    
+                    x: "x",
+                    columns: [
+                    ["x", countries[i]],
+                    ["Porcentaje", carsPer1000[i]]
+                    ],
+                    type: "bar"
                 },
-                height: 130
-                }
-            },
-            bindto: "#rotateXAxisTickText"
-            });
-
-        /*var chart = bb.generate({
-            bindto: "#chart",
-            data: {
-                type: "bar",
-                columns: [
-                    ["data1", 30, 200, 100, 170, 150, 250],
-                    ["data2", 130, 100, 140, 35, 110, 50]
-                ]
+                axis: {
+                    x: {
+                    type: "category",
+                    tick: {
+                        rotate: 75,
+                        multiline: false,
+                        tooltip: true
+                    },
+                    height: 130
+                    }
+                },
+                bindto: "#rotateXAxisTickText"
+                });
+        
             }
-        });
-*/
-    
     }
 
 </script>
 
 <svelte:head>
 
-    <script src="https://d3js.org/d3.v5.min.js" on:load={loadGraph}></script>
+    
+
+    <script src="https://d3js.org/d3.v5.min.js" on:load={loadGraph}> </script>
     <script src="libraries/billboard.js" on:load={loadGraph}></script>
 
 </svelte:head>
 
 <main>
-
-    <!--<div id="chart"></div>-->
+    
     <div id="rotateXAxisTickText"></div>
     <p></p>
     <p>Representación gráfica realizada con billboards que nos muestra el porcentaje de coches electricos en el año 2018</p>
