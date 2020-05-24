@@ -14,7 +14,7 @@
 
 
         let datachart = MyData.filter(d => d.year == 2016).map((d) => {return [d.country, d["percentage-re-total"]];})
-
+        
         var chart = bb.generate({
             data: {
                 columns: [],

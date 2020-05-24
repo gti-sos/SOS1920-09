@@ -3,14 +3,12 @@ module.exports = function (app) {
 	const dataStore = require("nedb");
 	const path = require("path");
 	const dbFileName = path.join(__dirname, "renewable_sources_stats.db");
-	const BASE_API_URL = "/api/v2";
+	const BASE_API_URL = "/api/v4";
 
 	const request = require('request');
 	const express = require("express");
 	var api07 = 'https://sos1920-07.herokuapp.com';
-	var api27 = 'https://sos1920-27.herokuapp.com';
 	var path07 = '/api/v2/foodsImports';
-	var path27 = '/api/v2/lq-stats';
 	
 	const db = new dataStore({
 		filename: dbFileName,
@@ -24,12 +22,6 @@ module.exports = function (app) {
 	});
 	app.use(express.static('.'));
 
-	app.use(path27, function(req, res) {
-		var url = api27 + req.baseUrl + req.url;
-		console.log('piped: ' + req.baseUrl + req.url);
-		req.pipe(request(url)).pipe(res);
-	});
-	app.use(express.static('.'));
 	
 	var initialRenewableSourcesStats = [
 		{ 
