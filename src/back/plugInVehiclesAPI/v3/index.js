@@ -9,23 +9,13 @@ module.exports = function (app){
 	const express = require("express");
 	
 	var api27 = 'https://sos1920-27.herokuapp.com'; // Integración mediante proxy
-	var api07 = 'https://sos1920-07.herokuapp.com'; // Integración mediante proxy
 	var paths27='/api/v2/spc-stats';
-	var paths07='/api/v2/imports';
+	
 
 	const db = new dataStore({
 		filename: dbFileName,
 		autoload: true
 	});
-
-	// Integración mediante proxy Api 07
-	app.use(paths07, function(req, res) {
-        var url = api07 + req.baseUrl + req.url;
-        console.log('piped: ' + req.baseUrl + req.url);
-        req.pipe(request(url)).pipe(res);
-	});
-	
-    app.use(express.static('.'));
 
 	// Integración mediante proxy Api 27
 	app.use(paths27, function(req, res) {
