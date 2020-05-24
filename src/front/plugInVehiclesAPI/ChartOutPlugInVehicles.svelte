@@ -66,7 +66,6 @@
     <script src="libraries/RGraph.svg.common.core.js" on:load={loadGraph}></script>
     <script src="libraries/RGraph.svg.line.js" on:load={loadGraph}></script>
 
-
 </svelte:head>
 
 <main>

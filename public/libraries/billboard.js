@@ -5,7 +5,11 @@
  * billboard.js, JavaScript chart library
  * https://naver.github.io/billboard.js/
  * 
+<<<<<<< HEAD
+ * @version 1.12.8
+=======
  * @version 1.12.9
+>>>>>>> 67454c08ee2f62aca9a9087b2ad0ee0bfba3b865
  */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
@@ -956,13 +960,30 @@ var AxisRenderer_AxisRenderer = /*#__PURE__*/function () {
     value: function create(g) {
       var ctx = this,
           config = this.config,
+<<<<<<< HEAD
+          params = this.params,
+          helperInst = this.helper,
+          scale = helperInst.scale,
+=======
           helper = this.helper,
           params = this.params,
           scale = helper.scale,
+>>>>>>> 67454c08ee2f62aca9a9087b2ad0ee0bfba3b865
           orient = config.orient,
           splitTickText = this.splitTickText.bind(this),
           isLeftRight = /^(left|right)$/.test(orient),
           isTopBottom = /^(top|bottom)$/.test(orient),
+<<<<<<< HEAD
+          tickTransform = helperInst.getTickTransformSetter(isTopBottom ? "x" : "y"),
+          axisPx = tickTransform === helperInst.axisX ? "y" : "x",
+          sign = /^(top|left)$/.test(orient) ? -1 : 1,
+          rotate = params.tickTextRotate;
+      this.config.range = scale.rangeExtent ? scale.rangeExtent() : helperInst.scaleExtent((params.orgXScale || scale).range());
+      var _config = config,
+          innerTickSize = _config.innerTickSize,
+          tickLength = _config.tickLength,
+          range = _config.range,
+=======
           tickTransform = helper.getTickTransformSetter(isTopBottom ? "x" : "y"),
           axisPx = tickTransform === helper.axisX ? "y" : "x",
           sign = /^(top|left)$/.test(orient) ? -1 : 1,
@@ -972,6 +993,7 @@ var AxisRenderer_AxisRenderer = /*#__PURE__*/function () {
           innerTickSize = _config2.innerTickSize,
           tickLength = _config2.tickLength,
           range = _config2.range,
+>>>>>>> 67454c08ee2f62aca9a9087b2ad0ee0bfba3b865
           name = params.name,
           tickTextPos = name && /^(x|y|y2)$/.test(name) ? params.config["axis_".concat(name, "_tick_text_position")] : {
         x: 0,
@@ -988,17 +1010,29 @@ var AxisRenderer_AxisRenderer = /*#__PURE__*/function () {
       g.each(function () {
         var g = Object(external_commonjs_d3_selection_commonjs2_d3_selection_amd_d3_selection_root_d3_["select"])(this),
             scale0 = this.__chart__ || scale,
+<<<<<<< HEAD
+            scale1 = helperInst.copyScale();
+=======
             scale1 = helper.copyScale();
+>>>>>>> 67454c08ee2f62aca9a9087b2ad0ee0bfba3b865
         $g = g, this.__chart__ = scale1, config.tickOffset = params.isCategory ? Math.ceil((scale1(1) - scale1(0)) / 2) : 0;
         // update selection - data join
         var path = g.selectAll(".domain").data([0]); // enter + update selection
 
+<<<<<<< HEAD
+        if (path.enter().append("path").attr("class", "domain").merge(helperInst.transitionise(path)).attr("d", function () {
+=======
         if (path.enter().append("path").attr("class", "domain").merge(helper.transitionise(path)).attr("d", function () {
+>>>>>>> 67454c08ee2f62aca9a9087b2ad0ee0bfba3b865
           var outerTickSized = config.outerTickSize * sign;
           return isTopBottom ? "M".concat(range[0], ",").concat(outerTickSized, "V0H").concat(range[1], "V").concat(outerTickSized) : "M".concat(outerTickSized, ",").concat(range[0], "H0V").concat(range[1], "H").concat(outerTickSized);
         }), tickShow.tick || tickShow.text) {
           // count of tick data in array
+<<<<<<< HEAD
+          var ticks = config.tickValues || helperInst.generateTicks(scale1, isLeftRight),
+=======
           var ticks = config.tickValues || helper.generateTicks(scale1, isLeftRight),
+>>>>>>> 67454c08ee2f62aca9a9087b2ad0ee0bfba3b865
               tick = g.selectAll(".tick").data(ticks, scale1),
               tickEnter = tick.enter().insert("g", ".domain").attr("class", "tick").style("opacity", "1"),
               tickExit = tick.exit().remove(); // update selection
@@ -1007,7 +1041,11 @@ var AxisRenderer_AxisRenderer = /*#__PURE__*/function () {
           var sizeFor1Char = AxisRendererHelper_AxisRendererHelper.getSizeFor1Char(tick),
               counts = [],
               tspan = tick.select("text").selectAll("tspan").data(function (d, index) {
+<<<<<<< HEAD
+            var split = params.tickMultiline ? splitTickText(d, scale1, ticks, isLeftRight, sizeFor1Char.w) : isArray(helperInst.textFormatted(d)) ? helperInst.textFormatted(d).concat() : [helperInst.textFormatted(d)];
+=======
             var split = params.tickMultiline ? splitTickText(d, scale1, ticks, isLeftRight, sizeFor1Char.w) : isArray(helper.textFormatted(d)) ? helper.textFormatted(d).concat() : [helper.textFormatted(d)];
+>>>>>>> 67454c08ee2f62aca9a9087b2ad0ee0bfba3b865
             return counts[index] = split.length, split.map(function (splitted) {
               return {
                 index: index,
@@ -1043,7 +1081,11 @@ var AxisRenderer_AxisRenderer = /*#__PURE__*/function () {
             }, scale1 = scale0;
           } else scale0.bandwidth ? scale0 = scale1 : tickTransform(tickExit, scale1);
 
+<<<<<<< HEAD
+          tickTransform(tickEnter, scale0), tickTransform(helperInst.transitionise(tick).style("opacity", "1"), scale1);
+=======
           tickTransform(tickEnter, scale0), tickTransform(helper.transitionise(tick).style("opacity", "1"), scale1);
+>>>>>>> 67454c08ee2f62aca9a9087b2ad0ee0bfba3b865
         }
       }), this.g = $g;
     }
@@ -1381,7 +1423,11 @@ var Axis_Axis = /*#__PURE__*/function () {
           config = $$.config,
           fit = config.axis_x_tick_fit,
           count = config.axis_x_tick_count;
+<<<<<<< HEAD
+      return (fit || count && fit) && (values = this.generateTickValues($$.mapTargetsToUniqueXs(targets), count, $$.isTimeSeries())), axis ? axis.tickValues(values) : $$.xAxis && ($$.xAxis.tickValues(values), $$.subXAxis.tickValues(values)), values;
+=======
       return (fit || count && fit) && (values = $$.mapTargetsToUniqueXs(targets), $$.isCategorized() && count > values.length && (count = values.length), values = this.generateTickValues(values, count, $$.isTimeSeries())), axis ? axis.tickValues(values) : $$.xAxis && ($$.xAxis.tickValues(values), $$.subXAxis.tickValues(values)), values;
+>>>>>>> 67454c08ee2f62aca9a9087b2ad0ee0bfba3b865
     }
   }, {
     key: "getId",
@@ -1655,12 +1701,27 @@ var Axis_Axis = /*#__PURE__*/function () {
   }, {
     key: "generateTickValues",
     value: function generateTickValues(values, tickCount, forTimeSeries) {
+<<<<<<< HEAD
+      var start,
+          end,
+          count,
+          interval,
+          i,
+          tickValue,
+          tickValues = values;
+=======
       var tickValues = values;
+>>>>>>> 67454c08ee2f62aca9a9087b2ad0ee0bfba3b865
 
       if (tickCount) {
         var targetCount = isFunction(tickCount) ? tickCount() : tickCount; // compute ticks according to tickCount
 
         if (targetCount === 1) tickValues = [values[0]];else if (targetCount === 2) tickValues = [values[0], values[values.length - 1]];else if (targetCount > 2) {
+<<<<<<< HEAD
+          var isCategorized = this.owner.isCategorized();
+
+          for (count = targetCount - 2, start = values[0], end = values[values.length - 1], interval = (end - start) / (count + 1), tickValues = [start], i = 0; i < count; i++) tickValue = +start + interval * (i + 1), tickValues.push(forTimeSeries ? new Date(tickValue) : isCategorized ? Math.round(tickValue) : tickValue);
+=======
           var tickValue,
               isCategorized = this.owner.isCategorized(),
               count = targetCount - 2,
@@ -1669,6 +1730,7 @@ var Axis_Axis = /*#__PURE__*/function () {
           tickValues = [start];
 
           for (var i = 0; i < count; i++) tickValue = +start + (end - start) / (count + 1) * (i + 1), tickValues.push(forTimeSeries ? new Date(tickValue) : isCategorized ? Math.round(tickValue) : tickValue);
+>>>>>>> 67454c08ee2f62aca9a9087b2ad0ee0bfba3b865
 
           tickValues.push(end);
         }
@@ -1767,8 +1829,13 @@ var Axis_Axis = /*#__PURE__*/function () {
               cullingMax = config["axis_".concat(id, "_tick_culling_max")];
 
           if (tickSize) {
+<<<<<<< HEAD
+            for (var _i = 1; _i < tickSize; _i++) if (tickSize / _i < cullingMax) {
+              intervalForCulling = _i;
+=======
             for (var i = 1; i < tickSize; i++) if (tickSize / i < cullingMax) {
               intervalForCulling = i;
+>>>>>>> 67454c08ee2f62aca9a9087b2ad0ee0bfba3b865
               break;
             }
 
@@ -1919,7 +1986,11 @@ var ChartInternal_ChartInternal = /*#__PURE__*/function () {
         });
       }
 
+<<<<<<< HEAD
+      config.svg_classname && $$.svg.attr("class", config.svg_classname), $$.defs = $$.svg.append("defs"), $$.clipChart = $$.appendClip($$.defs, $$.clipId), $$.clipXAxis = $$.appendClip($$.defs, $$.clipIdForXAxis), $$.clipXAxisTickTexts = $$.appendClip($$.defs, $$.clipIdForXAxisTickTexts), $$.clipYAxis = $$.appendClip($$.defs, $$.clipIdForYAxis), $$.clipGrid = $$.appendClip($$.defs, $$.clipIdForGrid), isFunction(config.color_tiles) && $$.patterns && $$.patterns.forEach(function (p) {
+=======
       config.svg_classname && $$.svg.attr("class", config.svg_classname), $$.defs = $$.svg.append("defs"), $$.clipChart = $$.appendClip($$.defs, $$.clipId), $$.clipXAxis = $$.appendClip($$.defs, $$.clipIdForXAxis), $$.clipYAxis = $$.appendClip($$.defs, $$.clipIdForYAxis), $$.clipGrid = $$.appendClip($$.defs, $$.clipIdForGrid), isFunction(config.color_tiles) && $$.patterns && $$.patterns.forEach(function (p) {
+>>>>>>> 67454c08ee2f62aca9a9087b2ad0ee0bfba3b865
         return $$.defs.append(function () {
           return p.node;
         });
@@ -2053,7 +2124,11 @@ var ChartInternal_ChartInternal = /*#__PURE__*/function () {
         right: NaN,
         bottom: 0,
         left: 0
+<<<<<<< HEAD
+      }, $$.updateSizeForLegend && $$.updateSizeForLegend(legend), $$.width = $$.currentWidth - $$.margin.left - $$.margin.right, $$.height = $$.currentHeight - $$.margin.top - $$.margin.bottom, $$.width < 0 && ($$.width = 0), $$.height < 0 && ($$.height = 0), $$.width2 = isRotated ? $$.margin.left - $$.rotated_padding_left - $$.rotated_padding_right : $$.width, $$.height2 = isRotated ? $$.height : $$.currentHeight - $$.margin2.top - $$.margin2.bottom, $$.width2 < 0 && ($$.width2 = 0), $$.height2 < 0 && ($$.height2 = 0), $$.arcWidth = $$.width - ($$.isLegendRight ? legend.width + 10 : 0), $$.arcHeight = $$.height - ($$.isLegendRight ? 0 : 10), $$.hasType("gauge") && !config.gauge_fullCircle && ($$.arcHeight += $$.height - $$.getGaugeLabelHeight()), $$.updateRadius && $$.updateRadius(), $$.isLegendRight && hasArc && ($$.margin3.left = $$.arcWidth / 2 + $$.radiusExpanded * 1.1), !hasArc && config.axis_x_show && $$.updateXAxisTickClip();
+=======
       }, $$.updateSizeForLegend && $$.updateSizeForLegend(legend), $$.width = $$.currentWidth - $$.margin.left - $$.margin.right, $$.height = $$.currentHeight - $$.margin.top - $$.margin.bottom, $$.width < 0 && ($$.width = 0), $$.height < 0 && ($$.height = 0), $$.width2 = isRotated ? $$.margin.left - $$.rotated_padding_left - $$.rotated_padding_right : $$.width, $$.height2 = isRotated ? $$.height : $$.currentHeight - $$.margin2.top - $$.margin2.bottom, $$.width2 < 0 && ($$.width2 = 0), $$.height2 < 0 && ($$.height2 = 0), $$.arcWidth = $$.width - ($$.isLegendRight ? legend.width + 10 : 0), $$.arcHeight = $$.height - ($$.isLegendRight ? 0 : 10), $$.hasType("gauge") && !config.gauge_fullCircle && ($$.arcHeight += $$.height - $$.getGaugeLabelHeight()), $$.updateRadius && $$.updateRadius(), $$.isLegendRight && hasArc && ($$.margin3.left = $$.arcWidth / 2 + $$.radiusExpanded * 1.1), !hasArc && config.axis_x_show && config.axis_x_tick_autorotate && $$.updateXAxisTickClip();
+>>>>>>> 67454c08ee2f62aca9a9087b2ad0ee0bfba3b865
     }
     /**
      * Update targeted element with given data
@@ -3901,7 +3976,11 @@ var Options_Options = function Options() {
      * @memberof Options
      * @type {Object}
      * @property {String|Object|Function} [color.onover] Set the color value for each data point when mouse/touch onover event occurs.
+<<<<<<< HEAD
+     * @property {Array} [color.pattern=[]] custom color pattern
+=======
      * @property {Array|null} [color.pattern=[]] Set custom color pattern. Passing `null` will not set a color for these elements, which requires the usage of custom CSS-based theming to work.
+>>>>>>> 67454c08ee2f62aca9a9087b2ad0ee0bfba3b865
      * @property {Function} [color.tiles] if defined, allows use svg's patterns to fill data area. It should return an array of [SVGPatternElement](https://developer.mozilla.org/en-US/docs/Web/API/SVGPatternElement).
      *  - **NOTE:** The pattern element's id will be defined as `bb-colorize-pattern-$COLOR-VALUE`.<br>
      *    ex. When color pattern value is `['red', '#fff']` and defined 2 patterns,then ids for pattern elements are:<br>
@@ -10384,7 +10463,11 @@ extend(ChartInternal_ChartInternal.prototype, {
           filteredTextNode = Object(external_commonjs_d3_selection_commonjs2_d3_selection_amd_d3_selection_root_d3_["select"])(this),
           nodeForWidth = calcHypo(translate.e, translate.f) > calcHypo(coordinate.e, coordinate.f) ? textNode : filteredTextNode,
           overlapsX = Math.ceil(Math.abs(translate.e - coordinate.e)) < Math.ceil(nodeForWidth.node().getComputedTextLength()),
+<<<<<<< HEAD
+          overlapsY = Math.ceil(Math.abs(translate.f - coordinate.f)) < parseInt(textNode.style("font-size"), 0);
+=======
           overlapsY = Math.ceil(Math.abs(translate.f - coordinate.f)) < parseInt(textNode.style("font-size"), 10);
+>>>>>>> 67454c08ee2f62aca9a9087b2ad0ee0bfba3b865
       filteredTextNode.classed(config_classes.TextOverlapping, overlapsX && overlapsY);
     });
   },
@@ -11004,6 +11087,12 @@ extend(ChartInternal_ChartInternal.prototype, {
     } // when tooltip left + tWidth > chart's width
 
 
+<<<<<<< HEAD
+    return left + tWidth + 15 > chartRight && (left -= tWidth + chartLeft), top + tHeight > $$.currentHeight && (top -= hasGauge ? tHeight * 3 : tHeight + 30), top < 0 && (top = 0), {
+      top: top,
+      left: left
+    };
+=======
     left + tWidth + 15 > chartRight && (left -= tWidth + chartLeft), top + tHeight > $$.currentHeight && (top -= hasGauge ? tHeight * 3 : tHeight + 30);
     var pos = {
       top: top,
@@ -11013,6 +11102,7 @@ extend(ChartInternal_ChartInternal.prototype, {
     return Object.keys(pos).forEach(function (v) {
       pos[v] < 0 && (pos[v] = 0);
     }), pos;
+>>>>>>> 67454c08ee2f62aca9a9087b2ad0ee0bfba3b865
   },
 
   /**
@@ -11737,6 +11827,9 @@ extend(ChartInternal_ChartInternal.prototype, {
   updateXAxisTickClip: function updateXAxisTickClip() {
     var $$ = this,
         newXAxisHeight = $$.getHorizontalAxisHeight("x");
+<<<<<<< HEAD
+    $$.clipIdForXAxisTickTexts = "".concat($$.clipId, "-xaxisticktexts"), $$.clipPathForXAxisTickTexts = $$.getClipPath($$.clipIdForXAxisTickTexts), !$$.config.axis_x_tick_multiline && $$.getAxisTickRotate("x") && newXAxisHeight !== $$.xAxisHeight && ($$.setXAxisTickClipWidth(), $$.setXAxisTickTextClipPathWidth()), $$.xAxisHeight = newXAxisHeight;
+=======
 
     if ($$.defs && !$$.clipXAxisTickTexts) {
       var clipId = "".concat($$.clipId, "-xaxisticktexts");
@@ -11744,6 +11837,7 @@ extend(ChartInternal_ChartInternal.prototype, {
     }
 
     !$$.config.axis_x_tick_multiline && $$.getAxisTickRotate("x") && newXAxisHeight !== $$.xAxisHeight && ($$.setXAxisTickClipWidth(), $$.setXAxisTickTextClipPathWidth()), $$.xAxisHeight = newXAxisHeight;
+>>>>>>> 67454c08ee2f62aca9a9087b2ad0ee0bfba3b865
   },
   setXAxisTickClipWidth: function setXAxisTickClipWidth() {
     var $$ = this,
@@ -14943,7 +15037,11 @@ var _defaults = {},
    *    bb.version;  // "1.0.0"
    * @memberof bb
    */
+<<<<<<< HEAD
+  version: "1.12.8",
+=======
   version: "1.12.9",
+>>>>>>> 67454c08ee2f62aca9a9087b2ad0ee0bfba3b865
 
   /**
    * Generate chart
@@ -15042,7 +15140,11 @@ var _defaults = {},
 };
 /**
  * @namespace bb
+<<<<<<< HEAD
+ * @version 1.12.8
+=======
  * @version 1.12.9
+>>>>>>> 67454c08ee2f62aca9a9087b2ad0ee0bfba3b865
  */
 
 
