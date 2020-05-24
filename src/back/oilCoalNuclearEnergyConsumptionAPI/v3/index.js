@@ -3,11 +3,11 @@ module.exports = function(app) {
 	const dataS= require("nedb");
 	const path = 	require("path");
 	const dbFileName = path.join(__dirname,"oil_coal_nuclear_energy_consumption.db");
-	const BASE_API_URL = "/api/v2";
+	const BASE_API_URL = "/api/v3";
 
 	const request = require('request');
     const express = require("express");
-    var apiServerHost = 'http://sos1920-09.herokuapp.com';
+    var apiServerHost = 'http://sos1920-01.herokuapp.com';
 	var paths= '/api/v2/poverty-stats';
 	
 	
