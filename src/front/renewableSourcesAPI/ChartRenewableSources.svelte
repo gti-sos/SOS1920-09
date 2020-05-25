@@ -3,7 +3,6 @@
     import {
         pop
     } from "svelte-spa-router";
-    import { onMount } from 'svelte';
     
     async function loadGraph() {
             
