@@ -20661,7 +20661,7 @@ var app = (function () {
     const { console: console_1$a } = globals;
     const file$r = "src\\front\\renewableSourcesAPI\\Integrations.svelte";
 
-    // (217:4) <Button outline color="secondary" on:click="{pop}">
+    // (369:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$e(ctx) {
     	let i;
     	let t;
@@ -20671,7 +20671,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$r, 216, 56, 9255);
+    			add_location(i, file$r, 368, 56, 14906);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -20687,7 +20687,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$e.name,
     		type: "slot",
-    		source: "(217:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(369:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -20838,122 +20838,122 @@ var app = (function () {
     			attr_dev(a0, "href", "#list-7");
     			attr_dev(a0, "role", "tab");
     			attr_dev(a0, "aria-controls", "home");
-    			add_location(a0, file$r, 154, 12, 5612);
+    			add_location(a0, file$r, 306, 12, 11265);
     			attr_dev(a1, "class", "list-group-item list-group-item-action");
     			attr_dev(a1, "id", "list-profile-list");
     			attr_dev(a1, "data-toggle", "list");
     			attr_dev(a1, "href", "#list-27");
     			attr_dev(a1, "role", "tab");
     			attr_dev(a1, "aria-controls", "profile");
-    			add_location(a1, file$r, 155, 12, 5790);
+    			add_location(a1, file$r, 307, 12, 11443);
     			attr_dev(a2, "class", "list-group-item list-group-item-action");
     			attr_dev(a2, "id", "list-profile-list");
     			attr_dev(a2, "data-toggle", "list");
     			attr_dev(a2, "href", "#list-5");
     			attr_dev(a2, "role", "tab");
     			attr_dev(a2, "aria-controls", "profile");
-    			add_location(a2, file$r, 156, 12, 5969);
+    			add_location(a2, file$r, 308, 12, 11622);
     			attr_dev(a3, "class", "list-group-item list-group-item-action");
     			attr_dev(a3, "id", "list-profile-list");
     			attr_dev(a3, "data-toggle", "list");
     			attr_dev(a3, "href", "#list-4");
     			attr_dev(a3, "role", "tab");
     			attr_dev(a3, "aria-controls", "profile");
-    			add_location(a3, file$r, 157, 12, 6146);
+    			add_location(a3, file$r, 309, 12, 11799);
     			attr_dev(a4, "class", "list-group-item list-group-item-action");
     			attr_dev(a4, "id", "list-profile-list");
     			attr_dev(a4, "data-toggle", "list");
     			attr_dev(a4, "href", "#list-22");
     			attr_dev(a4, "role", "tab");
     			attr_dev(a4, "aria-controls", "profile");
-    			add_location(a4, file$r, 158, 12, 6323);
+    			add_location(a4, file$r, 310, 12, 11976);
     			attr_dev(a5, "class", "list-group-item list-group-item-action");
     			attr_dev(a5, "id", "list-profile-list");
     			attr_dev(a5, "data-toggle", "list");
     			attr_dev(a5, "href", "#list-28");
     			attr_dev(a5, "role", "tab");
     			attr_dev(a5, "aria-controls", "profile");
-    			add_location(a5, file$r, 159, 12, 6502);
+    			add_location(a5, file$r, 311, 12, 12155);
     			attr_dev(div0, "class", "list-group");
     			attr_dev(div0, "id", "list-tab");
     			attr_dev(div0, "role", "tablist");
-    			add_location(div0, file$r, 153, 10, 5545);
+    			add_location(div0, file$r, 305, 10, 11198);
     			attr_dev(div1, "class", "col-4");
-    			add_location(div1, file$r, 152, 8, 5514);
+    			add_location(div1, file$r, 304, 8, 11167);
     			attr_dev(div2, "id", "container-7");
-    			add_location(div2, file$r, 167, 20, 6975);
+    			add_location(div2, file$r, 319, 20, 12628);
     			attr_dev(p0, "class", "highcharts-description");
-    			add_location(p0, file$r, 168, 20, 7025);
+    			add_location(p0, file$r, 320, 20, 12678);
     			attr_dev(figure0, "class", "highcharts-figure");
-    			add_location(figure0, file$r, 166, 16, 6919);
+    			add_location(figure0, file$r, 318, 16, 12572);
     			attr_dev(div3, "class", "tab-pane fade show active");
     			attr_dev(div3, "id", "list-7");
     			attr_dev(div3, "role", "tabpanel");
     			attr_dev(div3, "aria-labelledby", "list-home-list");
-    			add_location(div3, file$r, 165, 12, 6801);
+    			add_location(div3, file$r, 317, 12, 12454);
     			attr_dev(div4, "id", "container-27");
-    			add_location(div4, file$r, 175, 20, 7443);
+    			add_location(div4, file$r, 327, 20, 13096);
     			attr_dev(p1, "class", "highcharts-description");
-    			add_location(p1, file$r, 176, 20, 7494);
+    			add_location(p1, file$r, 328, 20, 13147);
     			attr_dev(figure1, "class", "highcharts-figure");
-    			add_location(figure1, file$r, 174, 16, 7387);
+    			add_location(figure1, file$r, 326, 16, 13040);
     			attr_dev(div5, "class", "tab-pane fade");
     			attr_dev(div5, "id", "list-27");
     			attr_dev(div5, "role", "tabpanel");
     			attr_dev(div5, "aria-labelledby", "list-profile-list");
-    			add_location(div5, file$r, 173, 12, 7277);
-    			attr_dev(div6, "id", "container-27");
-    			add_location(div6, file$r, 183, 20, 7820);
+    			add_location(div5, file$r, 325, 12, 12930);
+    			attr_dev(div6, "id", "container-5");
+    			add_location(div6, file$r, 335, 20, 13473);
     			attr_dev(p2, "class", "highcharts-description");
-    			add_location(p2, file$r, 184, 20, 7871);
+    			add_location(p2, file$r, 336, 20, 13523);
     			attr_dev(figure2, "class", "highcharts-figure");
-    			add_location(figure2, file$r, 182, 16, 7764);
+    			add_location(figure2, file$r, 334, 16, 13417);
     			attr_dev(div7, "class", "tab-pane fade");
     			attr_dev(div7, "id", "list-5");
     			attr_dev(div7, "role", "tabpanel");
     			attr_dev(div7, "aria-labelledby", "list-profile-list");
-    			add_location(div7, file$r, 181, 12, 7655);
-    			attr_dev(div8, "id", "container-27");
-    			add_location(div8, file$r, 191, 20, 8196);
+    			add_location(div7, file$r, 333, 12, 13308);
+    			attr_dev(div8, "id", "container-4");
+    			add_location(div8, file$r, 343, 20, 13848);
     			attr_dev(p3, "class", "highcharts-description");
-    			add_location(p3, file$r, 192, 20, 8247);
+    			add_location(p3, file$r, 344, 20, 13898);
     			attr_dev(figure3, "class", "highcharts-figure");
-    			add_location(figure3, file$r, 190, 16, 8140);
+    			add_location(figure3, file$r, 342, 16, 13792);
     			attr_dev(div9, "class", "tab-pane fade");
     			attr_dev(div9, "id", "list-4");
     			attr_dev(div9, "role", "tabpanel");
     			attr_dev(div9, "aria-labelledby", "list-profile-list");
-    			add_location(div9, file$r, 189, 12, 8031);
-    			attr_dev(div10, "id", "container-27");
-    			add_location(div10, file$r, 199, 20, 8573);
+    			add_location(div9, file$r, 341, 12, 13683);
+    			attr_dev(div10, "id", "container-22");
+    			add_location(div10, file$r, 351, 20, 14224);
     			attr_dev(p4, "class", "highcharts-description");
-    			add_location(p4, file$r, 200, 20, 8624);
+    			add_location(p4, file$r, 352, 20, 14275);
     			attr_dev(figure4, "class", "highcharts-figure");
-    			add_location(figure4, file$r, 198, 16, 8517);
+    			add_location(figure4, file$r, 350, 16, 14168);
     			attr_dev(div11, "class", "tab-pane fade");
     			attr_dev(div11, "id", "list-22");
     			attr_dev(div11, "role", "tabpanel");
     			attr_dev(div11, "aria-labelledby", "list-profile-list");
-    			add_location(div11, file$r, 197, 12, 8407);
-    			attr_dev(div12, "id", "container-27");
-    			add_location(div12, file$r, 207, 20, 8951);
+    			add_location(div11, file$r, 349, 12, 14058);
+    			attr_dev(div12, "id", "container-28");
+    			add_location(div12, file$r, 359, 20, 14602);
     			attr_dev(p5, "class", "highcharts-description");
-    			add_location(p5, file$r, 208, 20, 9002);
+    			add_location(p5, file$r, 360, 20, 14653);
     			attr_dev(figure5, "class", "highcharts-figure");
-    			add_location(figure5, file$r, 206, 16, 8895);
+    			add_location(figure5, file$r, 358, 16, 14546);
     			attr_dev(div13, "class", "tab-pane fade");
     			attr_dev(div13, "id", "list-28");
     			attr_dev(div13, "role", "tabpanel");
     			attr_dev(div13, "aria-labelledby", "list-profile-list");
-    			add_location(div13, file$r, 205, 12, 8785);
+    			add_location(div13, file$r, 357, 12, 14436);
     			attr_dev(div14, "class", "tab-content");
     			attr_dev(div14, "id", "nav-tabContent");
-    			add_location(div14, file$r, 164, 10, 6742);
+    			add_location(div14, file$r, 316, 10, 12395);
     			attr_dev(div15, "class", "col-8");
-    			add_location(div15, file$r, 163, 8, 6711);
+    			add_location(div15, file$r, 315, 8, 12364);
     			attr_dev(div16, "class", "row");
-    			add_location(div16, file$r, 151, 4, 5487);
-    			add_location(main, file$r, 150, 0, 5475);
+    			add_location(div16, file$r, 303, 4, 11140);
+    			add_location(main, file$r, 302, 0, 11128);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -21100,8 +21100,6 @@ var app = (function () {
     	MyData = MyData.filter(d => {
     		return Data7.find(d7 => d7.name == countries[d[0]] && parseInt(d7.year) == d[1]);
     	}).map(d => {
-    		console.log(d);
-
     		return [
     			d[0],
     			d[1],
@@ -21183,8 +21181,148 @@ var app = (function () {
     	});
     }
 
+    async function loadGraph4() {
+    	console.log("Loading 4");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_4 = "https://sos1920-04.herokuapp.com/api/v1/vehicles";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData4 = await fetch(BASE_API_URL_4);
+    	let MyData = await resData.json();
+    	let Data4 = await resData4.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country;
+    		})));
+
+    	let provinces = Array.from(new Set(Data4.map(d => {
+    			return d.province;
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.filter(d => {
+    		return d.country == "Spain";
+    	}).map(d => {
+    		return [
+    			countries.indexOf(d.country),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	for (let i = 0; i < MyData.length; i++) {
+    		let dataMatchesYear = Data4.find(d => d.year == MyData[i][1]);
+
+    		/* The first parameter of splice is the position and the second the numbers of elements to delete */
+    		MyData[i].splice(1, 0, provinces.indexOf(dataMatchesYear.province));
+
+    		MyData[i].push(dataMatchesYear["car"]);
+    	}
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MyData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-4", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: {
+    			text: "Energías renovables y número de coches"
+    		},
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Provincias",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Número de coches"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{
+    				categories: provinces,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
     function instance$s($$self, $$props, $$invalidate) {
     	loadGraph7();
+    	loadGraph4();
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -21193,7 +21331,7 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("Integrations", $$slots, []);
-    	$$self.$capture_state = () => ({ Button, pop, loadGraph7 });
+    	$$self.$capture_state = () => ({ Button, pop, loadGraph7, loadGraph4 });
     	return [];
     }
 
