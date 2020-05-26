@@ -20661,7 +20661,7 @@ var app = (function () {
     const { console: console_1$a } = globals;
     const file$r = "src\\front\\renewableSourcesAPI\\Integrations.svelte";
 
-    // (509:4) <Button outline color="secondary" on:click="{pop}">
+    // (660:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$e(ctx) {
     	let i;
     	let t;
@@ -20671,7 +20671,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$r, 508, 56, 20148);
+    			add_location(i, file$r, 659, 56, 25974);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -20687,7 +20687,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$e.name,
     		type: "slot",
-    		source: "(509:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(660:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -20696,7 +20696,7 @@ var app = (function () {
 
     function create_fragment$s(ctx) {
     	let main;
-    	let div16;
+    	let div18;
     	let div1;
     	let div0;
     	let a0;
@@ -20711,44 +20711,52 @@ var app = (function () {
     	let t9;
     	let a5;
     	let t11;
-    	let div15;
-    	let div14;
+    	let a6;
+    	let t13;
+    	let div17;
+    	let div16;
     	let div3;
     	let figure0;
     	let div2;
-    	let t12;
-    	let p0;
     	let t14;
+    	let p0;
+    	let t16;
     	let div5;
     	let figure1;
     	let div4;
-    	let t15;
-    	let p1;
     	let t17;
+    	let p1;
+    	let t19;
     	let div7;
     	let figure2;
     	let div6;
-    	let t18;
-    	let p2;
     	let t20;
+    	let p2;
+    	let t22;
     	let div9;
     	let figure3;
     	let div8;
-    	let t21;
-    	let p3;
     	let t23;
+    	let p3;
+    	let t25;
     	let div11;
     	let figure4;
     	let div10;
-    	let t24;
-    	let p4;
     	let t26;
+    	let p4;
+    	let t28;
     	let div13;
     	let figure5;
     	let div12;
-    	let t27;
-    	let p5;
     	let t29;
+    	let p5;
+    	let t31;
+    	let div15;
+    	let figure6;
+    	let div14;
+    	let t32;
+    	let p6;
+    	let t34;
     	let current;
 
     	const button = new Button({
@@ -20766,7 +20774,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			main = element("main");
-    			div16 = element("div");
+    			div18 = element("div");
     			div1 = element("div");
     			div0 = element("div");
     			a0 = element("a");
@@ -20787,50 +20795,60 @@ var app = (function () {
     			a5 = element("a");
     			a5.textContent = "Integración con 28";
     			t11 = space();
-    			div15 = element("div");
-    			div14 = element("div");
+    			a6 = element("a");
+    			a6.textContent = "Integración con API externa";
+    			t13 = space();
+    			div17 = element("div");
+    			div16 = element("div");
     			div3 = element("div");
     			figure0 = element("figure");
     			div2 = element("div");
-    			t12 = space();
+    			t14 = space();
     			p0 = element("p");
     			p0.textContent = "Integración con el grupo 7, la integración está realizada con la importaciones de vegetales y preparados.";
-    			t14 = space();
+    			t16 = space();
     			div5 = element("div");
     			figure1 = element("figure");
     			div4 = element("div");
-    			t15 = space();
+    			t17 = space();
     			p1 = element("p");
     			p1.textContent = "Integra la 27.";
-    			t17 = space();
+    			t19 = space();
     			div7 = element("div");
     			figure2 = element("figure");
     			div6 = element("div");
-    			t18 = space();
+    			t20 = space();
     			p2 = element("p");
     			p2.textContent = "Integra la 5.";
-    			t20 = space();
+    			t22 = space();
     			div9 = element("div");
     			figure3 = element("figure");
     			div8 = element("div");
-    			t21 = space();
+    			t23 = space();
     			p3 = element("p");
     			p3.textContent = "Integra la 4.";
-    			t23 = space();
+    			t25 = space();
     			div11 = element("div");
     			figure4 = element("figure");
     			div10 = element("div");
-    			t24 = space();
+    			t26 = space();
     			p4 = element("p");
     			p4.textContent = "Integra la 22.";
-    			t26 = space();
+    			t28 = space();
     			div13 = element("div");
     			figure5 = element("figure");
     			div12 = element("div");
-    			t27 = space();
+    			t29 = space();
     			p5 = element("p");
     			p5.textContent = "Integra la 28.";
-    			t29 = space();
+    			t31 = space();
+    			div15 = element("div");
+    			figure6 = element("figure");
+    			div14 = element("div");
+    			t32 = space();
+    			p6 = element("p");
+    			p6.textContent = "Integración con la una API externa que proporciona el área (en kilómetros cuadrados) de los países.";
+    			t34 = space();
     			create_component(button.$$.fragment);
     			attr_dev(a0, "class", "list-group-item list-group-item-action active");
     			attr_dev(a0, "id", "list-home-list");
@@ -20838,130 +20856,148 @@ var app = (function () {
     			attr_dev(a0, "href", "#list-7");
     			attr_dev(a0, "role", "tab");
     			attr_dev(a0, "aria-controls", "home");
-    			add_location(a0, file$r, 446, 12, 16507);
+    			add_location(a0, file$r, 588, 12, 21679);
     			attr_dev(a1, "class", "list-group-item list-group-item-action");
     			attr_dev(a1, "id", "list-profile-list");
     			attr_dev(a1, "data-toggle", "list");
     			attr_dev(a1, "href", "#list-27");
     			attr_dev(a1, "role", "tab");
     			attr_dev(a1, "aria-controls", "profile");
-    			add_location(a1, file$r, 447, 12, 16685);
+    			add_location(a1, file$r, 589, 12, 21857);
     			attr_dev(a2, "class", "list-group-item list-group-item-action");
     			attr_dev(a2, "id", "list-profile-list");
     			attr_dev(a2, "data-toggle", "list");
     			attr_dev(a2, "href", "#list-5");
     			attr_dev(a2, "role", "tab");
     			attr_dev(a2, "aria-controls", "profile");
-    			add_location(a2, file$r, 448, 12, 16864);
+    			add_location(a2, file$r, 590, 12, 22036);
     			attr_dev(a3, "class", "list-group-item list-group-item-action");
     			attr_dev(a3, "id", "list-profile-list");
     			attr_dev(a3, "data-toggle", "list");
     			attr_dev(a3, "href", "#list-4");
     			attr_dev(a3, "role", "tab");
     			attr_dev(a3, "aria-controls", "profile");
-    			add_location(a3, file$r, 449, 12, 17041);
+    			add_location(a3, file$r, 591, 12, 22213);
     			attr_dev(a4, "class", "list-group-item list-group-item-action");
     			attr_dev(a4, "id", "list-profile-list");
     			attr_dev(a4, "data-toggle", "list");
     			attr_dev(a4, "href", "#list-22");
     			attr_dev(a4, "role", "tab");
     			attr_dev(a4, "aria-controls", "profile");
-    			add_location(a4, file$r, 450, 12, 17218);
+    			add_location(a4, file$r, 592, 12, 22390);
     			attr_dev(a5, "class", "list-group-item list-group-item-action");
     			attr_dev(a5, "id", "list-profile-list");
     			attr_dev(a5, "data-toggle", "list");
     			attr_dev(a5, "href", "#list-28");
     			attr_dev(a5, "role", "tab");
     			attr_dev(a5, "aria-controls", "profile");
-    			add_location(a5, file$r, 451, 12, 17397);
+    			add_location(a5, file$r, 593, 12, 22569);
+    			attr_dev(a6, "class", "list-group-item list-group-item-action");
+    			attr_dev(a6, "id", "list-profile-list");
+    			attr_dev(a6, "data-toggle", "list");
+    			attr_dev(a6, "href", "#list-ext");
+    			attr_dev(a6, "role", "tab");
+    			attr_dev(a6, "aria-controls", "profile");
+    			add_location(a6, file$r, 594, 12, 22748);
     			attr_dev(div0, "class", "list-group");
     			attr_dev(div0, "id", "list-tab");
     			attr_dev(div0, "role", "tablist");
-    			add_location(div0, file$r, 445, 10, 16440);
+    			add_location(div0, file$r, 587, 10, 21612);
     			attr_dev(div1, "class", "col-4");
-    			add_location(div1, file$r, 444, 8, 16409);
+    			add_location(div1, file$r, 586, 8, 21581);
     			attr_dev(div2, "id", "container-7");
-    			add_location(div2, file$r, 459, 20, 17870);
+    			add_location(div2, file$r, 602, 20, 23231);
     			attr_dev(p0, "class", "highcharts-description");
-    			add_location(p0, file$r, 460, 20, 17920);
+    			add_location(p0, file$r, 603, 20, 23281);
     			attr_dev(figure0, "class", "highcharts-figure");
-    			add_location(figure0, file$r, 458, 16, 17814);
+    			add_location(figure0, file$r, 601, 16, 23175);
     			attr_dev(div3, "class", "tab-pane fade show active");
     			attr_dev(div3, "id", "list-7");
     			attr_dev(div3, "role", "tabpanel");
     			attr_dev(div3, "aria-labelledby", "list-home-list");
-    			add_location(div3, file$r, 457, 12, 17696);
+    			add_location(div3, file$r, 600, 12, 23057);
     			attr_dev(div4, "id", "container-27");
-    			add_location(div4, file$r, 467, 20, 18338);
+    			add_location(div4, file$r, 610, 20, 23699);
     			attr_dev(p1, "class", "highcharts-description");
-    			add_location(p1, file$r, 468, 20, 18389);
+    			add_location(p1, file$r, 611, 20, 23750);
     			attr_dev(figure1, "class", "highcharts-figure");
-    			add_location(figure1, file$r, 466, 16, 18282);
+    			add_location(figure1, file$r, 609, 16, 23643);
     			attr_dev(div5, "class", "tab-pane fade");
     			attr_dev(div5, "id", "list-27");
     			attr_dev(div5, "role", "tabpanel");
     			attr_dev(div5, "aria-labelledby", "list-profile-list");
-    			add_location(div5, file$r, 465, 12, 18172);
+    			add_location(div5, file$r, 608, 12, 23533);
     			attr_dev(div6, "id", "container-5");
-    			add_location(div6, file$r, 475, 20, 18715);
+    			add_location(div6, file$r, 618, 20, 24076);
     			attr_dev(p2, "class", "highcharts-description");
-    			add_location(p2, file$r, 476, 20, 18765);
+    			add_location(p2, file$r, 619, 20, 24126);
     			attr_dev(figure2, "class", "highcharts-figure");
-    			add_location(figure2, file$r, 474, 16, 18659);
+    			add_location(figure2, file$r, 617, 16, 24020);
     			attr_dev(div7, "class", "tab-pane fade");
     			attr_dev(div7, "id", "list-5");
     			attr_dev(div7, "role", "tabpanel");
     			attr_dev(div7, "aria-labelledby", "list-profile-list");
-    			add_location(div7, file$r, 473, 12, 18550);
+    			add_location(div7, file$r, 616, 12, 23911);
     			attr_dev(div8, "id", "container-4");
-    			add_location(div8, file$r, 483, 20, 19090);
+    			add_location(div8, file$r, 626, 20, 24451);
     			attr_dev(p3, "class", "highcharts-description");
-    			add_location(p3, file$r, 484, 20, 19140);
+    			add_location(p3, file$r, 627, 20, 24501);
     			attr_dev(figure3, "class", "highcharts-figure");
-    			add_location(figure3, file$r, 482, 16, 19034);
+    			add_location(figure3, file$r, 625, 16, 24395);
     			attr_dev(div9, "class", "tab-pane fade");
     			attr_dev(div9, "id", "list-4");
     			attr_dev(div9, "role", "tabpanel");
     			attr_dev(div9, "aria-labelledby", "list-profile-list");
-    			add_location(div9, file$r, 481, 12, 18925);
+    			add_location(div9, file$r, 624, 12, 24286);
     			attr_dev(div10, "id", "container-22");
-    			add_location(div10, file$r, 491, 20, 19466);
+    			add_location(div10, file$r, 634, 20, 24827);
     			attr_dev(p4, "class", "highcharts-description");
-    			add_location(p4, file$r, 492, 20, 19517);
+    			add_location(p4, file$r, 635, 20, 24878);
     			attr_dev(figure4, "class", "highcharts-figure");
-    			add_location(figure4, file$r, 490, 16, 19410);
+    			add_location(figure4, file$r, 633, 16, 24771);
     			attr_dev(div11, "class", "tab-pane fade");
     			attr_dev(div11, "id", "list-22");
     			attr_dev(div11, "role", "tabpanel");
     			attr_dev(div11, "aria-labelledby", "list-profile-list");
-    			add_location(div11, file$r, 489, 12, 19300);
+    			add_location(div11, file$r, 632, 12, 24661);
     			attr_dev(div12, "id", "container-28");
-    			add_location(div12, file$r, 499, 20, 19844);
+    			add_location(div12, file$r, 642, 20, 25205);
     			attr_dev(p5, "class", "highcharts-description");
-    			add_location(p5, file$r, 500, 20, 19895);
+    			add_location(p5, file$r, 643, 20, 25256);
     			attr_dev(figure5, "class", "highcharts-figure");
-    			add_location(figure5, file$r, 498, 16, 19788);
+    			add_location(figure5, file$r, 641, 16, 25149);
     			attr_dev(div13, "class", "tab-pane fade");
     			attr_dev(div13, "id", "list-28");
     			attr_dev(div13, "role", "tabpanel");
     			attr_dev(div13, "aria-labelledby", "list-profile-list");
-    			add_location(div13, file$r, 497, 12, 19678);
-    			attr_dev(div14, "class", "tab-content");
-    			attr_dev(div14, "id", "nav-tabContent");
-    			add_location(div14, file$r, 456, 10, 17637);
-    			attr_dev(div15, "class", "col-8");
-    			add_location(div15, file$r, 455, 8, 17606);
-    			attr_dev(div16, "class", "row");
-    			add_location(div16, file$r, 443, 4, 16382);
-    			add_location(main, file$r, 442, 0, 16370);
+    			add_location(div13, file$r, 640, 12, 25039);
+    			attr_dev(div14, "id", "container-ext");
+    			add_location(div14, file$r, 650, 20, 25584);
+    			attr_dev(p6, "class", "highcharts-description");
+    			add_location(p6, file$r, 651, 20, 25636);
+    			attr_dev(figure6, "class", "highcharts-figure");
+    			add_location(figure6, file$r, 649, 16, 25528);
+    			attr_dev(div15, "class", "tab-pane fade");
+    			attr_dev(div15, "id", "list-ext");
+    			attr_dev(div15, "role", "tabpanel");
+    			attr_dev(div15, "aria-labelledby", "list-profile-list");
+    			add_location(div15, file$r, 648, 12, 25417);
+    			attr_dev(div16, "class", "tab-content");
+    			attr_dev(div16, "id", "nav-tabContent");
+    			add_location(div16, file$r, 599, 10, 22998);
+    			attr_dev(div17, "class", "col-8");
+    			add_location(div17, file$r, 598, 8, 22967);
+    			attr_dev(div18, "class", "row");
+    			add_location(div18, file$r, 585, 4, 21554);
+    			add_location(main, file$r, 584, 0, 21542);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
-    			append_dev(main, div16);
-    			append_dev(div16, div1);
+    			append_dev(main, div18);
+    			append_dev(div18, div1);
     			append_dev(div1, div0);
     			append_dev(div0, a0);
     			append_dev(div0, t1);
@@ -20974,45 +21010,53 @@ var app = (function () {
     			append_dev(div0, a4);
     			append_dev(div0, t9);
     			append_dev(div0, a5);
-    			append_dev(div16, t11);
-    			append_dev(div16, div15);
-    			append_dev(div15, div14);
-    			append_dev(div14, div3);
+    			append_dev(div0, t11);
+    			append_dev(div0, a6);
+    			append_dev(div18, t13);
+    			append_dev(div18, div17);
+    			append_dev(div17, div16);
+    			append_dev(div16, div3);
     			append_dev(div3, figure0);
     			append_dev(figure0, div2);
-    			append_dev(figure0, t12);
+    			append_dev(figure0, t14);
     			append_dev(figure0, p0);
-    			append_dev(div14, t14);
-    			append_dev(div14, div5);
+    			append_dev(div16, t16);
+    			append_dev(div16, div5);
     			append_dev(div5, figure1);
     			append_dev(figure1, div4);
-    			append_dev(figure1, t15);
+    			append_dev(figure1, t17);
     			append_dev(figure1, p1);
-    			append_dev(div14, t17);
-    			append_dev(div14, div7);
+    			append_dev(div16, t19);
+    			append_dev(div16, div7);
     			append_dev(div7, figure2);
     			append_dev(figure2, div6);
-    			append_dev(figure2, t18);
+    			append_dev(figure2, t20);
     			append_dev(figure2, p2);
-    			append_dev(div14, t20);
-    			append_dev(div14, div9);
+    			append_dev(div16, t22);
+    			append_dev(div16, div9);
     			append_dev(div9, figure3);
     			append_dev(figure3, div8);
-    			append_dev(figure3, t21);
+    			append_dev(figure3, t23);
     			append_dev(figure3, p3);
-    			append_dev(div14, t23);
-    			append_dev(div14, div11);
+    			append_dev(div16, t25);
+    			append_dev(div16, div11);
     			append_dev(div11, figure4);
     			append_dev(figure4, div10);
-    			append_dev(figure4, t24);
+    			append_dev(figure4, t26);
     			append_dev(figure4, p4);
-    			append_dev(div14, t26);
-    			append_dev(div14, div13);
+    			append_dev(div16, t28);
+    			append_dev(div16, div13);
     			append_dev(div13, figure5);
     			append_dev(figure5, div12);
-    			append_dev(figure5, t27);
+    			append_dev(figure5, t29);
     			append_dev(figure5, p5);
-    			append_dev(main, t29);
+    			append_dev(div16, t31);
+    			append_dev(div16, div15);
+    			append_dev(div15, figure6);
+    			append_dev(figure6, div14);
+    			append_dev(figure6, t32);
+    			append_dev(figure6, p6);
+    			append_dev(main, t34);
     			mount_component(button, main, null);
     			current = true;
     		},
@@ -21451,10 +21495,140 @@ var app = (function () {
     	});
     }
 
+    async function loadGraphExt() {
+    	console.log("Loading external api");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_EXT = "https://restcountries.eu/rest/v2/all?fields=name;capital;area";
+    	const resData = await fetch(BASE_API_URL);
+    	const resDataExt = await fetch(BASE_API_URL_EXT);
+    	let MyData = await resData.json();
+    	let DataExt = await resDataExt.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country;
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.map(d => {
+    		return [
+    			countries.indexOf(d.country),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	MyData = MyData.filter(d => {
+    		return DataExt.find(dext => dext.name == countries[d[0]]);
+    	}).map(d => {
+    		return [
+    			d[0],
+    			d[1],
+    			d[2],
+    			d[3],
+    			d[4],
+    			DataExt.find(dext => dext.name == countries[d[0]])["area"]
+    		];
+    	});
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MyData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-ext", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: { text: "Energías renovables y área" },
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Área"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
     function instance$s($$self, $$props, $$invalidate) {
     	loadGraph7();
     	loadGraph4();
     	loadGraph27();
+    	loadGraphExt();
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -21469,7 +21643,8 @@ var app = (function () {
     		pop,
     		loadGraph7,
     		loadGraph4,
-    		loadGraph27
+    		loadGraph27,
+    		loadGraphExt
     	});
 
     	return [];
