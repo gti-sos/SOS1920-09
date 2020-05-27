@@ -13376,7 +13376,7 @@ var app = (function () {
     	return block;
     }
 
-    // (300:1) {:then renewableSources}
+    // (328:1) {:then renewableSources}
     function create_then_block$2(ctx) {
     	let t0;
     	let t1;
@@ -13504,14 +13504,14 @@ var app = (function () {
     		block,
     		id: create_then_block$2.name,
     		type: "then",
-    		source: "(300:1) {:then renewableSources}",
+    		source: "(328:1) {:then renewableSources}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (303:3) <Label for="selectCountry">
+    // (331:3) <Label for="selectCountry">
     function create_default_slot_21$2(ctx) {
     	let t;
 
@@ -13531,14 +13531,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_21$2.name,
     		type: "slot",
-    		source: "(303:3) <Label for=\\\"selectCountry\\\">",
+    		source: "(331:3) <Label for=\\\"selectCountry\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (310:4) {:else}
+    // (338:4) {:else}
     function create_else_block_1$3(ctx) {
     	let option;
     	let t_value = /*country*/ ctx[36] + "";
@@ -13551,7 +13551,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*country*/ ctx[36];
     			option.value = option.__value;
-    			add_location(option, file$e, 310, 4, 9536);
+    			add_location(option, file$e, 338, 4, 10278);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -13575,14 +13575,14 @@ var app = (function () {
     		block,
     		id: create_else_block_1$3.name,
     		type: "else",
-    		source: "(310:4) {:else}",
+    		source: "(338:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (308:4) {#if country == currentCountry}
+    // (336:4) {#if country == currentCountry}
     function create_if_block_3$4(ctx) {
     	let option;
     	let t_value = /*country*/ ctx[36] + "";
@@ -13596,7 +13596,7 @@ var app = (function () {
     			option.selected = "selected";
     			option.__value = option_value_value = /*country*/ ctx[36];
     			option.value = option.__value;
-    			add_location(option, file$e, 308, 4, 9471);
+    			add_location(option, file$e, 336, 4, 10213);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -13620,14 +13620,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3$4.name,
     		type: "if",
-    		source: "(308:4) {#if country == currentCountry}",
+    		source: "(336:4) {#if country == currentCountry}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (306:4) {#each countries as country}
+    // (334:4) {#each countries as country}
     function create_each_block_2$2(ctx) {
     	let if_block_anchor;
 
@@ -13671,14 +13671,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2$2.name,
     		type: "each",
-    		source: "(306:4) {#each countries as country}",
+    		source: "(334:4) {#each countries as country}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (304:3) <Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentCountry}">
+    // (332:3) <Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentCountry}">
     function create_default_slot_20$2(ctx) {
     	let t0;
     	let option;
@@ -13701,7 +13701,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$e, 313, 4, 9592);
+    			add_location(option, file$e, 341, 4, 10334);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -13747,14 +13747,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_20$2.name,
     		type: "slot",
-    		source: "(304:3) <Input type=\\\"select\\\" name=\\\"selectCountry\\\" id=\\\"selectCountry\\\" bind:value=\\\"{currentCountry}\\\">",
+    		source: "(332:3) <Input type=\\\"select\\\" name=\\\"selectCountry\\\" id=\\\"selectCountry\\\" bind:value=\\\"{currentCountry}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (302:2) <FormGroup>
+    // (330:2) <FormGroup>
     function create_default_slot_19$2(ctx) {
     	let t;
     	let updating_value;
@@ -13844,14 +13844,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_19$2.name,
     		type: "slot",
-    		source: "(302:2) <FormGroup>",
+    		source: "(330:2) <FormGroup>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (319:3) <Label for="selectYear">
+    // (347:3) <Label for="selectYear">
     function create_default_slot_18$2(ctx) {
     	let t;
 
@@ -13871,14 +13871,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_18$2.name,
     		type: "slot",
-    		source: "(319:3) <Label for=\\\"selectYear\\\">",
+    		source: "(347:3) <Label for=\\\"selectYear\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (325:4) {:else}
+    // (353:4) {:else}
     function create_else_block$8(ctx) {
     	let option;
     	let t_value = /*year*/ ctx[33] + "";
@@ -13891,7 +13891,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*year*/ ctx[33];
     			option.value = option.__value;
-    			add_location(option, file$e, 325, 4, 9993);
+    			add_location(option, file$e, 353, 4, 10735);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -13915,14 +13915,14 @@ var app = (function () {
     		block,
     		id: create_else_block$8.name,
     		type: "else",
-    		source: "(325:4) {:else}",
+    		source: "(353:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (323:4) {#if year == currentYear}
+    // (351:4) {#if year == currentYear}
     function create_if_block_2$4(ctx) {
     	let option;
     	let t_value = /*year*/ ctx[33] + "";
@@ -13936,7 +13936,7 @@ var app = (function () {
     			option.selected = "selected";
     			option.__value = option_value_value = /*year*/ ctx[33];
     			option.value = option.__value;
-    			add_location(option, file$e, 323, 4, 9931);
+    			add_location(option, file$e, 351, 4, 10673);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -13960,14 +13960,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$4.name,
     		type: "if",
-    		source: "(323:4) {#if year == currentYear}",
+    		source: "(351:4) {#if year == currentYear}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (321:4) {#each years as year}
+    // (349:4) {#each years as year}
     function create_each_block_1$2(ctx) {
     	let if_block_anchor;
 
@@ -14011,14 +14011,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1$2.name,
     		type: "each",
-    		source: "(321:4) {#each years as year}",
+    		source: "(349:4) {#each years as year}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (320:3) <Input type="select"  name="selectYear" id="selectYear" bind:value="{currentYear}">
+    // (348:3) <Input type="select"  name="selectYear" id="selectYear" bind:value="{currentYear}">
     function create_default_slot_17$2(ctx) {
     	let t0;
     	let option;
@@ -14041,7 +14041,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$e, 328, 4, 10046);
+    			add_location(option, file$e, 356, 4, 10788);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -14087,14 +14087,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_17$2.name,
     		type: "slot",
-    		source: "(320:3) <Input type=\\\"select\\\"  name=\\\"selectYear\\\" id=\\\"selectYear\\\" bind:value=\\\"{currentYear}\\\">",
+    		source: "(348:3) <Input type=\\\"select\\\"  name=\\\"selectYear\\\" id=\\\"selectYear\\\" bind:value=\\\"{currentYear}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (318:2) <FormGroup>
+    // (346:2) <FormGroup>
     function create_default_slot_16$2(ctx) {
     	let t;
     	let updating_value;
@@ -14184,14 +14184,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_16$2.name,
     		type: "slot",
-    		source: "(318:2) <FormGroup>",
+    		source: "(346:2) <FormGroup>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (333:2) <Button outline color="secondary" on:click="{search(currentCountry, currentYear)}" class="button-search" >
+    // (361:2) <Button outline color="secondary" on:click="{search(currentCountry, currentYear)}" class="button-search" >
     function create_default_slot_15$2(ctx) {
     	let i;
     	let t;
@@ -14201,7 +14201,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Buscar");
     			attr_dev(i, "class", "fas fa-search");
-    			add_location(i, file$e, 332, 109, 10206);
+    			add_location(i, file$e, 360, 109, 10948);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -14217,14 +14217,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_15$2.name,
     		type: "slot",
-    		source: "(333:2) <Button outline color=\\\"secondary\\\" on:click=\\\"{search(currentCountry, currentYear)}\\\" class=\\\"button-search\\\" >",
+    		source: "(361:2) <Button outline color=\\\"secondary\\\" on:click=\\\"{search(currentCountry, currentYear)}\\\" class=\\\"button-search\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (354:10) <Button outline color="primary" on:click={insertRenewableSources}>
+    // (382:10) <Button outline color="primary" on:click={insertRenewableSources}>
     function create_default_slot_14$2(ctx) {
     	let i;
     	let t;
@@ -14234,7 +14234,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Insertar");
     			attr_dev(i, "class", "far fa-edit");
-    			add_location(i, file$e, 353, 77, 11301);
+    			add_location(i, file$e, 381, 77, 12043);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -14250,14 +14250,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_14$2.name,
     		type: "slot",
-    		source: "(354:10) <Button outline color=\\\"primary\\\" on:click={insertRenewableSources}>",
+    		source: "(382:10) <Button outline color=\\\"primary\\\" on:click={insertRenewableSources}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (367:10) <Button outline color="danger" on:click="{deleteRenewableSource(renewableSource.country, renewableSource.year)}" >
+    // (395:10) <Button outline color="danger" on:click="{deleteRenewableSource(renewableSource.country, renewableSource.year)}" >
     function create_default_slot_13$2(ctx) {
     	let i;
     	let t;
@@ -14268,7 +14268,7 @@ var app = (function () {
     			t = text(" Borrar");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$e, 366, 125, 11947);
+    			add_location(i, file$e, 394, 125, 12689);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -14284,14 +14284,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_13$2.name,
     		type: "slot",
-    		source: "(367:10) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteRenewableSource(renewableSource.country, renewableSource.year)}\\\" >",
+    		source: "(395:10) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteRenewableSource(renewableSource.country, renewableSource.year)}\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (356:4) {#each renewableSources as renewableSource}
+    // (384:4) {#each renewableSources as renewableSource}
     function create_each_block$2(ctx) {
     	let tr;
     	let td0;
@@ -14357,14 +14357,14 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t10 = space();
     			attr_dev(a, "href", a_href_value = "#/renewable-sources-stats/" + /*renewableSource*/ ctx[30].country + "/" + /*renewableSource*/ ctx[30].year);
-    			add_location(a, file$e, 358, 6, 11445);
-    			add_location(td0, file$e, 357, 5, 11430);
-    			add_location(td1, file$e, 362, 5, 11597);
-    			add_location(td2, file$e, 363, 5, 11637);
-    			add_location(td3, file$e, 364, 5, 11695);
-    			add_location(td4, file$e, 365, 5, 11761);
-    			add_location(td5, file$e, 366, 5, 11827);
-    			add_location(tr, file$e, 356, 4, 11419);
+    			add_location(a, file$e, 386, 6, 12187);
+    			add_location(td0, file$e, 385, 5, 12172);
+    			add_location(td1, file$e, 390, 5, 12339);
+    			add_location(td2, file$e, 391, 5, 12379);
+    			add_location(td3, file$e, 392, 5, 12437);
+    			add_location(td4, file$e, 393, 5, 12503);
+    			add_location(td5, file$e, 394, 5, 12569);
+    			add_location(tr, file$e, 384, 4, 12161);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -14428,14 +14428,14 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(356:4) {#each renewableSources as renewableSource}",
+    		source: "(384:4) {#each renewableSources as renewableSource}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (336:2) <Table bordered>
+    // (364:2) <Table bordered>
     function create_default_slot_12$2(ctx) {
     	let thead;
     	let tr0;
@@ -14622,22 +14622,22 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$e, 338, 5, 10307);
-    			add_location(th1, file$e, 339, 5, 10329);
-    			add_location(th2, file$e, 340, 5, 10350);
-    			add_location(th3, file$e, 341, 5, 10408);
-    			add_location(th4, file$e, 342, 5, 10471);
-    			add_location(th5, file$e, 343, 5, 10525);
-    			add_location(tr0, file$e, 337, 4, 10296);
-    			add_location(thead, file$e, 336, 3, 10283);
-    			add_location(td0, file$e, 348, 5, 10597);
-    			add_location(td1, file$e, 349, 5, 10702);
-    			add_location(td2, file$e, 350, 5, 10805);
-    			add_location(td3, file$e, 351, 5, 10941);
-    			add_location(td4, file$e, 352, 5, 11085);
-    			add_location(td5, file$e, 353, 5, 11229);
-    			add_location(tr1, file$e, 347, 4, 10586);
-    			add_location(tbody, file$e, 346, 3, 10573);
+    			add_location(th0, file$e, 366, 5, 11049);
+    			add_location(th1, file$e, 367, 5, 11071);
+    			add_location(th2, file$e, 368, 5, 11092);
+    			add_location(th3, file$e, 369, 5, 11150);
+    			add_location(th4, file$e, 370, 5, 11213);
+    			add_location(th5, file$e, 371, 5, 11267);
+    			add_location(tr0, file$e, 365, 4, 11038);
+    			add_location(thead, file$e, 364, 3, 11025);
+    			add_location(td0, file$e, 376, 5, 11339);
+    			add_location(td1, file$e, 377, 5, 11444);
+    			add_location(td2, file$e, 378, 5, 11547);
+    			add_location(td3, file$e, 379, 5, 11683);
+    			add_location(td4, file$e, 380, 5, 11827);
+    			add_location(td5, file$e, 381, 5, 11971);
+    			add_location(tr1, file$e, 375, 4, 11328);
+    			add_location(tbody, file$e, 374, 3, 11315);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -14811,14 +14811,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_12$2.name,
     		type: "slot",
-    		source: "(336:2) <Table bordered>",
+    		source: "(364:2) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (298:26)     Loading renewable sources...   {:then renewableSources}
+    // (326:26)     Loading renewable sources...   {:then renewableSources}
     function create_pending_block$2(ctx) {
     	let t;
 
@@ -14841,14 +14841,14 @@ var app = (function () {
     		block,
     		id: create_pending_block$2.name,
     		type: "pending",
-    		source: "(298:26)     Loading renewable sources...   {:then renewableSources}",
+    		source: "(326:26)     Loading renewable sources...   {:then renewableSources}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (377:2) <PaginationItem class="{currentPage === 1 ? 'disabled' : ''}">
+    // (405:2) <PaginationItem class="{currentPage === 1 ? 'disabled' : ''}">
     function create_default_slot_11$2(ctx) {
     	let current;
 
@@ -14889,14 +14889,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11$2.name,
     		type: "slot",
-    		source: "(377:2) <PaginationItem class=\\\"{currentPage === 1 ? 'disabled' : ''}\\\">",
+    		source: "(405:2) <PaginationItem class=\\\"{currentPage === 1 ? 'disabled' : ''}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (382:2) {#if currentPage != 1}
+    // (410:2) {#if currentPage != 1}
     function create_if_block_1$4(ctx) {
     	let current;
 
@@ -14943,14 +14943,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$4.name,
     		type: "if",
-    		source: "(382:2) {#if currentPage != 1}",
+    		source: "(410:2) {#if currentPage != 1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (384:3) <PaginationLink href="#/renewableSourcesAPI" on:click="{() => addOffset(-1)}" >
+    // (412:3) <PaginationLink href="#/renewableSourcesAPI" on:click="{() => addOffset(-1)}" >
     function create_default_slot_10$2(ctx) {
     	let t_value = /*currentPage*/ ctx[5] - 1 + "";
     	let t;
@@ -14974,14 +14974,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10$2.name,
     		type: "slot",
-    		source: "(384:3) <PaginationLink href=\\\"#/renewableSourcesAPI\\\" on:click=\\\"{() => addOffset(-1)}\\\" >",
+    		source: "(412:3) <PaginationLink href=\\\"#/renewableSourcesAPI\\\" on:click=\\\"{() => addOffset(-1)}\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (383:2) <PaginationItem>
+    // (411:2) <PaginationItem>
     function create_default_slot_9$2(ctx) {
     	let current;
 
@@ -15031,14 +15031,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9$2.name,
     		type: "slot",
-    		source: "(383:2) <PaginationItem>",
+    		source: "(411:2) <PaginationItem>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (388:3) <PaginationLink href="#/renewableSourcesAPI" >
+    // (416:3) <PaginationLink href="#/renewableSourcesAPI" >
     function create_default_slot_8$2(ctx) {
     	let t;
 
@@ -15061,14 +15061,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8$2.name,
     		type: "slot",
-    		source: "(388:3) <PaginationLink href=\\\"#/renewableSourcesAPI\\\" >",
+    		source: "(416:3) <PaginationLink href=\\\"#/renewableSourcesAPI\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (387:2) <PaginationItem active>
+    // (415:2) <PaginationItem active>
     function create_default_slot_7$2(ctx) {
     	let current;
 
@@ -15116,14 +15116,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7$2.name,
     		type: "slot",
-    		source: "(387:2) <PaginationItem active>",
+    		source: "(415:2) <PaginationItem active>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (392:2) {#if moreData}
+    // (420:2) {#if moreData}
     function create_if_block$8(ctx) {
     	let current;
 
@@ -15170,14 +15170,14 @@ var app = (function () {
     		block,
     		id: create_if_block$8.name,
     		type: "if",
-    		source: "(392:2) {#if moreData}",
+    		source: "(420:2) {#if moreData}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (394:3) <PaginationLink href="#/renewableSourcesAPI" on:click="{() => addOffset(1)}">
+    // (422:3) <PaginationLink href="#/renewableSourcesAPI" on:click="{() => addOffset(1)}">
     function create_default_slot_6$2(ctx) {
     	let t_value = /*currentPage*/ ctx[5] + 1 + "";
     	let t;
@@ -15201,14 +15201,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6$2.name,
     		type: "slot",
-    		source: "(394:3) <PaginationLink href=\\\"#/renewableSourcesAPI\\\" on:click=\\\"{() => addOffset(1)}\\\">",
+    		source: "(422:3) <PaginationLink href=\\\"#/renewableSourcesAPI\\\" on:click=\\\"{() => addOffset(1)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (393:2) <PaginationItem >
+    // (421:2) <PaginationItem >
     function create_default_slot_5$2(ctx) {
     	let current;
 
@@ -15258,14 +15258,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5$2.name,
     		type: "slot",
-    		source: "(393:2) <PaginationItem >",
+    		source: "(421:2) <PaginationItem >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (398:2) <PaginationItem class="{moreData ? '' : 'disabled'}">
+    // (426:2) <PaginationItem class="{moreData ? '' : 'disabled'}">
     function create_default_slot_4$2(ctx) {
     	let current;
 
@@ -15306,14 +15306,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4$2.name,
     		type: "slot",
-    		source: "(398:2) <PaginationItem class=\\\"{moreData ? '' : 'disabled'}\\\">",
+    		source: "(426:2) <PaginationItem class=\\\"{moreData ? '' : 'disabled'}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (374:1) <Pagination style="float:right;" ariaLabel="Cambiar de página">
+    // (402:1) <Pagination style="float:right;" ariaLabel="Cambiar de página">
     function create_default_slot_3$2(ctx) {
     	let t0;
     	let t1;
@@ -15477,14 +15477,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$2.name,
     		type: "slot",
-    		source: "(374:1) <Pagination style=\\\"float:right;\\\" ariaLabel=\\\"Cambiar de página\\\">",
+    		source: "(402:1) <Pagination style=\\\"float:right;\\\" ariaLabel=\\\"Cambiar de página\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (404:1) <Button outline color="secondary" on:click="{pop}">
+    // (432:1) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot_2$2(ctx) {
     	let i;
     	let t;
@@ -15494,7 +15494,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$e, 403, 53, 13170);
+    			add_location(i, file$e, 431, 53, 13912);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -15510,14 +15510,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$2.name,
     		type: "slot",
-    		source: "(404:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(432:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (405:1) <Button outline color="warning" on:click={loadInitialRenewableSources} >
+    // (433:1) <Button outline color="warning" on:click={loadInitialRenewableSources} >
     function create_default_slot_1$2(ctx) {
     	let i;
     	let t;
@@ -15528,7 +15528,7 @@ var app = (function () {
     			t = text(" Cargar datos iniciales");
     			attr_dev(i, "class", "fas fa-cloud-upload-alt");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$e, 404, 74, 13302);
+    			add_location(i, file$e, 432, 74, 14044);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -15544,14 +15544,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$2.name,
     		type: "slot",
-    		source: "(405:1) <Button outline color=\\\"warning\\\" on:click={loadInitialRenewableSources} >",
+    		source: "(433:1) <Button outline color=\\\"warning\\\" on:click={loadInitialRenewableSources} >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (406:1) <Button outline color="danger" on:click={deleteRenewableSources} >
+    // (434:1) <Button outline color="danger" on:click={deleteRenewableSources} >
     function create_default_slot$2(ctx) {
     	let i;
     	let t;
@@ -15562,7 +15562,7 @@ var app = (function () {
     			t = text(" Borrar todo");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$e, 405, 68, 13463);
+    			add_location(i, file$e, 433, 68, 14205);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -15578,7 +15578,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$2.name,
     		type: "slot",
-    		source: "(406:1) <Button outline color=\\\"danger\\\" on:click={deleteRenewableSources} >",
+    		source: "(434:1) <Button outline color=\\\"danger\\\" on:click={deleteRenewableSources} >",
     		ctx
     	});
 
@@ -15672,8 +15672,8 @@ var app = (function () {
     			attr_dev(div, "role", "alert");
     			attr_dev(div, "id", "div_alert");
     			set_style(div, "display", "none");
-    			add_location(div, file$e, 295, 1, 8984);
-    			add_location(main, file$e, 293, 0, 8937);
+    			add_location(div, file$e, 323, 1, 9726);
+    			add_location(main, file$e, 321, 0, 9679);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -15779,6 +15779,30 @@ var app = (function () {
     }
 
     const BASE_API_URL$2 = "/api/v2/renewable-sources-stats";
+
+    async function checkData(data) {
+    	const res = await fetch(BASE_API_URL$2);
+    	let theDataExist = false;
+
+    	/* Getting the countries for the select */
+    	if (res.ok) {
+    		const json = await res.json();
+
+    		/* We find the number repeated data */
+    		let numberRepeatedData = json.filter(d => {
+    			return d.year == data.year && d.country == data.country;
+    		}).length;
+
+    		if (numberRepeatedData >= 1) {
+    			theDataExist = true;
+    		}
+    	} else {
+    		errorAlert$1("Error interno al intentar obtener repetidos");
+    		console.log("ERROR!");
+    	}
+
+    	return theDataExist;
+    }
 
     /* These functions are for the alerts */
     function insertAlert$2() {
@@ -15987,10 +16011,13 @@ var app = (function () {
 
     	async function insertRenewableSources() {
     		console.log("Inserting renewable sources stats...");
+    		const isRepeated = await checkData(newRenewableSource);
 
     		/* Checking if the country and the year are not empty */
     		if (newRenewableSource.country == "" || newRenewableSource.country == null || newRenewableSource.year == "" || newRenewableSource.year == null) {
     			alert("Se debe incluir el nombre del país y el año obligatoriamente");
+    		} else if (isRepeated) {
+    			alert("¡Ya existe ese dato en nuestra base de datos!");
     		} else {
     			const res = await fetch(BASE_API_URL$2, {
     				method: "POST",
@@ -16138,6 +16165,7 @@ var app = (function () {
     		getCountriesYears,
     		getRenewableSources,
     		loadInitialRenewableSources,
+    		checkData,
     		insertRenewableSources,
     		deleteRenewableSource,
     		deleteRenewableSources,
@@ -20661,7 +20689,7 @@ var app = (function () {
     const { console: console_1$a } = globals;
     const file$r = "src\\front\\renewableSourcesAPI\\Integrations.svelte";
 
-    // (509:4) <Button outline color="secondary" on:click="{pop}">
+    // (2029:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$e(ctx) {
     	let i;
     	let t;
@@ -20671,7 +20699,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$r, 508, 56, 20148);
+    			add_location(i, file$r, 2028, 56, 78685);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -20687,7 +20715,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$e.name,
     		type: "slot",
-    		source: "(509:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(2029:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -20696,7 +20724,7 @@ var app = (function () {
 
     function create_fragment$s(ctx) {
     	let main;
-    	let div16;
+    	let div30;
     	let div1;
     	let div0;
     	let a0;
@@ -20711,44 +20739,102 @@ var app = (function () {
     	let t9;
     	let a5;
     	let t11;
-    	let div15;
-    	let div14;
+    	let a6;
+    	let t13;
+    	let a7;
+    	let t15;
+    	let a8;
+    	let t17;
+    	let a9;
+    	let t19;
+    	let a10;
+    	let t21;
+    	let a11;
+    	let t23;
+    	let a12;
+    	let t25;
+    	let div29;
+    	let div28;
     	let div3;
     	let figure0;
     	let div2;
-    	let t12;
+    	let t26;
     	let p0;
-    	let t14;
+    	let t28;
     	let div5;
     	let figure1;
     	let div4;
-    	let t15;
+    	let t29;
     	let p1;
-    	let t17;
+    	let t31;
     	let div7;
     	let figure2;
     	let div6;
-    	let t18;
+    	let t32;
     	let p2;
-    	let t20;
+    	let t34;
     	let div9;
     	let figure3;
     	let div8;
-    	let t21;
+    	let t35;
     	let p3;
-    	let t23;
+    	let t37;
     	let div11;
     	let figure4;
     	let div10;
-    	let t24;
+    	let t38;
     	let p4;
-    	let t26;
+    	let t40;
     	let div13;
     	let figure5;
     	let div12;
-    	let t27;
+    	let t41;
     	let p5;
-    	let t29;
+    	let t43;
+    	let div15;
+    	let figure6;
+    	let div14;
+    	let t44;
+    	let p6;
+    	let t46;
+    	let div17;
+    	let figure7;
+    	let div16;
+    	let t47;
+    	let p7;
+    	let t49;
+    	let div19;
+    	let figure8;
+    	let div18;
+    	let t50;
+    	let p8;
+    	let t52;
+    	let div21;
+    	let figure9;
+    	let div20;
+    	let t53;
+    	let p9;
+    	let t55;
+    	let div23;
+    	let figure10;
+    	let div22;
+    	let t56;
+    	let p10;
+    	let t58;
+    	let div25;
+    	let figure11;
+    	let div24;
+    	let t59;
+    	let p11;
+    	let t61;
+    	let div27;
+    	let figure12;
+    	let div26;
+    	let t62;
+    	let p12;
+    	let t64;
+    	let p13;
+    	let t65;
     	let current;
 
     	const button = new Button({
@@ -20766,7 +20852,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			main = element("main");
-    			div16 = element("div");
+    			div30 = element("div");
     			div1 = element("div");
     			div0 = element("div");
     			a0 = element("a");
@@ -20785,52 +20871,124 @@ var app = (function () {
     			a4.textContent = "Integración con 22";
     			t9 = space();
     			a5 = element("a");
-    			a5.textContent = "Integración con 28";
+    			a5.textContent = "Integración con 1";
     			t11 = space();
-    			div15 = element("div");
-    			div14 = element("div");
+    			a6 = element("a");
+    			a6.textContent = "Integración con 30";
+    			t13 = space();
+    			a7 = element("a");
+    			a7.textContent = "Integración con 23";
+    			t15 = space();
+    			a8 = element("a");
+    			a8.textContent = "Integración con 25";
+    			t17 = space();
+    			a9 = element("a");
+    			a9.textContent = "Integración con 8";
+    			t19 = space();
+    			a10 = element("a");
+    			a10.textContent = "Integración con 6";
+    			t21 = space();
+    			a11 = element("a");
+    			a11.textContent = "Integración con API externa 1";
+    			t23 = space();
+    			a12 = element("a");
+    			a12.textContent = "Integración con API externa 2";
+    			t25 = space();
+    			div29 = element("div");
+    			div28 = element("div");
     			div3 = element("div");
     			figure0 = element("figure");
     			div2 = element("div");
-    			t12 = space();
+    			t26 = space();
     			p0 = element("p");
     			p0.textContent = "Integración con el grupo 7, la integración está realizada con la importaciones de vegetales y preparados.";
-    			t14 = space();
+    			t28 = space();
     			div5 = element("div");
     			figure1 = element("figure");
     			div4 = element("div");
-    			t15 = space();
+    			t29 = space();
     			p1 = element("p");
     			p1.textContent = "Integra la 27.";
-    			t17 = space();
+    			t31 = space();
     			div7 = element("div");
     			figure2 = element("figure");
     			div6 = element("div");
-    			t18 = space();
+    			t32 = space();
     			p2 = element("p");
     			p2.textContent = "Integra la 5.";
-    			t20 = space();
+    			t34 = space();
     			div9 = element("div");
     			figure3 = element("figure");
     			div8 = element("div");
-    			t21 = space();
+    			t35 = space();
     			p3 = element("p");
     			p3.textContent = "Integra la 4.";
-    			t23 = space();
+    			t37 = space();
     			div11 = element("div");
     			figure4 = element("figure");
     			div10 = element("div");
-    			t24 = space();
+    			t38 = space();
     			p4 = element("p");
     			p4.textContent = "Integra la 22.";
-    			t26 = space();
+    			t40 = space();
     			div13 = element("div");
     			figure5 = element("figure");
     			div12 = element("div");
-    			t27 = space();
+    			t41 = space();
     			p5 = element("p");
-    			p5.textContent = "Integra la 28.";
-    			t29 = space();
+    			p5.textContent = "Integra la 1.";
+    			t43 = space();
+    			div15 = element("div");
+    			figure6 = element("figure");
+    			div14 = element("div");
+    			t44 = space();
+    			p6 = element("p");
+    			p6.textContent = "Integra la 30.";
+    			t46 = space();
+    			div17 = element("div");
+    			figure7 = element("figure");
+    			div16 = element("div");
+    			t47 = space();
+    			p7 = element("p");
+    			p7.textContent = "Integra la 23.";
+    			t49 = space();
+    			div19 = element("div");
+    			figure8 = element("figure");
+    			div18 = element("div");
+    			t50 = space();
+    			p8 = element("p");
+    			p8.textContent = "Integra la 25.";
+    			t52 = space();
+    			div21 = element("div");
+    			figure9 = element("figure");
+    			div20 = element("div");
+    			t53 = space();
+    			p9 = element("p");
+    			p9.textContent = "Integra la 8.";
+    			t55 = space();
+    			div23 = element("div");
+    			figure10 = element("figure");
+    			div22 = element("div");
+    			t56 = space();
+    			p10 = element("p");
+    			p10.textContent = "Integra la 6.";
+    			t58 = space();
+    			div25 = element("div");
+    			figure11 = element("figure");
+    			div24 = element("div");
+    			t59 = space();
+    			p11 = element("p");
+    			p11.textContent = "Integración con la una API externa que proporciona el área (en kilómetros cuadrados) de los países.";
+    			t61 = space();
+    			div27 = element("div");
+    			figure12 = element("figure");
+    			div26 = element("div");
+    			t62 = space();
+    			p12 = element("p");
+    			p12.textContent = "Integración con la una API externa que proporciona la moneda utilizada de los países.";
+    			t64 = space();
+    			p13 = element("p");
+    			t65 = space();
     			create_component(button.$$.fragment);
     			attr_dev(a0, "class", "list-group-item list-group-item-action active");
     			attr_dev(a0, "id", "list-home-list");
@@ -20838,130 +20996,257 @@ var app = (function () {
     			attr_dev(a0, "href", "#list-7");
     			attr_dev(a0, "role", "tab");
     			attr_dev(a0, "aria-controls", "home");
-    			add_location(a0, file$r, 446, 12, 16507);
+    			add_location(a0, file$r, 1896, 12, 70876);
     			attr_dev(a1, "class", "list-group-item list-group-item-action");
     			attr_dev(a1, "id", "list-profile-list");
     			attr_dev(a1, "data-toggle", "list");
     			attr_dev(a1, "href", "#list-27");
     			attr_dev(a1, "role", "tab");
     			attr_dev(a1, "aria-controls", "profile");
-    			add_location(a1, file$r, 447, 12, 16685);
+    			add_location(a1, file$r, 1897, 12, 71054);
     			attr_dev(a2, "class", "list-group-item list-group-item-action");
     			attr_dev(a2, "id", "list-profile-list");
     			attr_dev(a2, "data-toggle", "list");
     			attr_dev(a2, "href", "#list-5");
     			attr_dev(a2, "role", "tab");
     			attr_dev(a2, "aria-controls", "profile");
-    			add_location(a2, file$r, 448, 12, 16864);
+    			add_location(a2, file$r, 1898, 12, 71233);
     			attr_dev(a3, "class", "list-group-item list-group-item-action");
     			attr_dev(a3, "id", "list-profile-list");
     			attr_dev(a3, "data-toggle", "list");
     			attr_dev(a3, "href", "#list-4");
     			attr_dev(a3, "role", "tab");
     			attr_dev(a3, "aria-controls", "profile");
-    			add_location(a3, file$r, 449, 12, 17041);
+    			add_location(a3, file$r, 1899, 12, 71410);
     			attr_dev(a4, "class", "list-group-item list-group-item-action");
     			attr_dev(a4, "id", "list-profile-list");
     			attr_dev(a4, "data-toggle", "list");
     			attr_dev(a4, "href", "#list-22");
     			attr_dev(a4, "role", "tab");
     			attr_dev(a4, "aria-controls", "profile");
-    			add_location(a4, file$r, 450, 12, 17218);
+    			add_location(a4, file$r, 1900, 12, 71587);
     			attr_dev(a5, "class", "list-group-item list-group-item-action");
     			attr_dev(a5, "id", "list-profile-list");
     			attr_dev(a5, "data-toggle", "list");
-    			attr_dev(a5, "href", "#list-28");
+    			attr_dev(a5, "href", "#list-1");
     			attr_dev(a5, "role", "tab");
     			attr_dev(a5, "aria-controls", "profile");
-    			add_location(a5, file$r, 451, 12, 17397);
+    			add_location(a5, file$r, 1901, 12, 71766);
+    			attr_dev(a6, "class", "list-group-item list-group-item-action");
+    			attr_dev(a6, "id", "list-profile-list");
+    			attr_dev(a6, "data-toggle", "list");
+    			attr_dev(a6, "href", "#list-30");
+    			attr_dev(a6, "role", "tab");
+    			attr_dev(a6, "aria-controls", "profile");
+    			add_location(a6, file$r, 1902, 12, 71944);
+    			attr_dev(a7, "class", "list-group-item list-group-item-action");
+    			attr_dev(a7, "id", "list-profile-list");
+    			attr_dev(a7, "data-toggle", "list");
+    			attr_dev(a7, "href", "#list-23");
+    			attr_dev(a7, "role", "tab");
+    			attr_dev(a7, "aria-controls", "profile");
+    			add_location(a7, file$r, 1903, 12, 72124);
+    			attr_dev(a8, "class", "list-group-item list-group-item-action");
+    			attr_dev(a8, "id", "list-profile-list");
+    			attr_dev(a8, "data-toggle", "list");
+    			attr_dev(a8, "href", "#list-25");
+    			attr_dev(a8, "role", "tab");
+    			attr_dev(a8, "aria-controls", "profile");
+    			add_location(a8, file$r, 1904, 12, 72304);
+    			attr_dev(a9, "class", "list-group-item list-group-item-action");
+    			attr_dev(a9, "id", "list-profile-list");
+    			attr_dev(a9, "data-toggle", "list");
+    			attr_dev(a9, "href", "#list-8");
+    			attr_dev(a9, "role", "tab");
+    			attr_dev(a9, "aria-controls", "profile");
+    			add_location(a9, file$r, 1905, 12, 72484);
+    			attr_dev(a10, "class", "list-group-item list-group-item-action");
+    			attr_dev(a10, "id", "list-profile-list");
+    			attr_dev(a10, "data-toggle", "list");
+    			attr_dev(a10, "href", "#list-6");
+    			attr_dev(a10, "role", "tab");
+    			attr_dev(a10, "aria-controls", "profile");
+    			add_location(a10, file$r, 1906, 12, 72662);
+    			attr_dev(a11, "class", "list-group-item list-group-item-action");
+    			attr_dev(a11, "id", "list-profile-list");
+    			attr_dev(a11, "data-toggle", "list");
+    			attr_dev(a11, "href", "#list-ext1");
+    			attr_dev(a11, "role", "tab");
+    			attr_dev(a11, "aria-controls", "profile");
+    			add_location(a11, file$r, 1910, 12, 72845);
+    			attr_dev(a12, "class", "list-group-item list-group-item-action");
+    			attr_dev(a12, "id", "list-profile-list");
+    			attr_dev(a12, "data-toggle", "list");
+    			attr_dev(a12, "href", "#list-ext2");
+    			attr_dev(a12, "role", "tab");
+    			attr_dev(a12, "aria-controls", "profile");
+    			add_location(a12, file$r, 1911, 12, 73038);
     			attr_dev(div0, "class", "list-group");
     			attr_dev(div0, "id", "list-tab");
     			attr_dev(div0, "role", "tablist");
-    			add_location(div0, file$r, 445, 10, 16440);
+    			add_location(div0, file$r, 1895, 10, 70809);
     			attr_dev(div1, "class", "col-4");
-    			add_location(div1, file$r, 444, 8, 16409);
+    			add_location(div1, file$r, 1894, 8, 70778);
     			attr_dev(div2, "id", "container-7");
-    			add_location(div2, file$r, 459, 20, 17870);
+    			add_location(div2, file$r, 1919, 20, 73525);
     			attr_dev(p0, "class", "highcharts-description");
-    			add_location(p0, file$r, 460, 20, 17920);
+    			add_location(p0, file$r, 1920, 20, 73575);
     			attr_dev(figure0, "class", "highcharts-figure");
-    			add_location(figure0, file$r, 458, 16, 17814);
+    			add_location(figure0, file$r, 1918, 16, 73469);
     			attr_dev(div3, "class", "tab-pane fade show active");
     			attr_dev(div3, "id", "list-7");
     			attr_dev(div3, "role", "tabpanel");
     			attr_dev(div3, "aria-labelledby", "list-home-list");
-    			add_location(div3, file$r, 457, 12, 17696);
+    			add_location(div3, file$r, 1917, 12, 73351);
     			attr_dev(div4, "id", "container-27");
-    			add_location(div4, file$r, 467, 20, 18338);
+    			add_location(div4, file$r, 1927, 20, 73993);
     			attr_dev(p1, "class", "highcharts-description");
-    			add_location(p1, file$r, 468, 20, 18389);
+    			add_location(p1, file$r, 1928, 20, 74044);
     			attr_dev(figure1, "class", "highcharts-figure");
-    			add_location(figure1, file$r, 466, 16, 18282);
+    			add_location(figure1, file$r, 1926, 16, 73937);
     			attr_dev(div5, "class", "tab-pane fade");
     			attr_dev(div5, "id", "list-27");
     			attr_dev(div5, "role", "tabpanel");
     			attr_dev(div5, "aria-labelledby", "list-profile-list");
-    			add_location(div5, file$r, 465, 12, 18172);
+    			add_location(div5, file$r, 1925, 12, 73827);
     			attr_dev(div6, "id", "container-5");
-    			add_location(div6, file$r, 475, 20, 18715);
+    			add_location(div6, file$r, 1935, 20, 74370);
     			attr_dev(p2, "class", "highcharts-description");
-    			add_location(p2, file$r, 476, 20, 18765);
+    			add_location(p2, file$r, 1936, 20, 74420);
     			attr_dev(figure2, "class", "highcharts-figure");
-    			add_location(figure2, file$r, 474, 16, 18659);
+    			add_location(figure2, file$r, 1934, 16, 74314);
     			attr_dev(div7, "class", "tab-pane fade");
     			attr_dev(div7, "id", "list-5");
     			attr_dev(div7, "role", "tabpanel");
     			attr_dev(div7, "aria-labelledby", "list-profile-list");
-    			add_location(div7, file$r, 473, 12, 18550);
+    			add_location(div7, file$r, 1933, 12, 74205);
     			attr_dev(div8, "id", "container-4");
-    			add_location(div8, file$r, 483, 20, 19090);
+    			add_location(div8, file$r, 1943, 20, 74745);
     			attr_dev(p3, "class", "highcharts-description");
-    			add_location(p3, file$r, 484, 20, 19140);
+    			add_location(p3, file$r, 1944, 20, 74795);
     			attr_dev(figure3, "class", "highcharts-figure");
-    			add_location(figure3, file$r, 482, 16, 19034);
+    			add_location(figure3, file$r, 1942, 16, 74689);
     			attr_dev(div9, "class", "tab-pane fade");
     			attr_dev(div9, "id", "list-4");
     			attr_dev(div9, "role", "tabpanel");
     			attr_dev(div9, "aria-labelledby", "list-profile-list");
-    			add_location(div9, file$r, 481, 12, 18925);
+    			add_location(div9, file$r, 1941, 12, 74580);
     			attr_dev(div10, "id", "container-22");
-    			add_location(div10, file$r, 491, 20, 19466);
+    			add_location(div10, file$r, 1951, 20, 75121);
     			attr_dev(p4, "class", "highcharts-description");
-    			add_location(p4, file$r, 492, 20, 19517);
+    			add_location(p4, file$r, 1952, 20, 75172);
     			attr_dev(figure4, "class", "highcharts-figure");
-    			add_location(figure4, file$r, 490, 16, 19410);
+    			add_location(figure4, file$r, 1950, 16, 75065);
     			attr_dev(div11, "class", "tab-pane fade");
     			attr_dev(div11, "id", "list-22");
     			attr_dev(div11, "role", "tabpanel");
     			attr_dev(div11, "aria-labelledby", "list-profile-list");
-    			add_location(div11, file$r, 489, 12, 19300);
-    			attr_dev(div12, "id", "container-28");
-    			add_location(div12, file$r, 499, 20, 19844);
+    			add_location(div11, file$r, 1949, 12, 74955);
+    			attr_dev(div12, "id", "container-1");
+    			add_location(div12, file$r, 1959, 20, 75498);
     			attr_dev(p5, "class", "highcharts-description");
-    			add_location(p5, file$r, 500, 20, 19895);
+    			add_location(p5, file$r, 1960, 20, 75548);
     			attr_dev(figure5, "class", "highcharts-figure");
-    			add_location(figure5, file$r, 498, 16, 19788);
+    			add_location(figure5, file$r, 1958, 16, 75442);
     			attr_dev(div13, "class", "tab-pane fade");
-    			attr_dev(div13, "id", "list-28");
+    			attr_dev(div13, "id", "list-1");
     			attr_dev(div13, "role", "tabpanel");
     			attr_dev(div13, "aria-labelledby", "list-profile-list");
-    			add_location(div13, file$r, 497, 12, 19678);
-    			attr_dev(div14, "class", "tab-content");
-    			attr_dev(div14, "id", "nav-tabContent");
-    			add_location(div14, file$r, 456, 10, 17637);
-    			attr_dev(div15, "class", "col-8");
-    			add_location(div15, file$r, 455, 8, 17606);
-    			attr_dev(div16, "class", "row");
-    			add_location(div16, file$r, 443, 4, 16382);
-    			add_location(main, file$r, 442, 0, 16370);
+    			add_location(div13, file$r, 1957, 12, 75333);
+    			attr_dev(div14, "id", "container-30");
+    			add_location(div14, file$r, 1967, 20, 75874);
+    			attr_dev(p6, "class", "highcharts-description");
+    			add_location(p6, file$r, 1968, 20, 75925);
+    			attr_dev(figure6, "class", "highcharts-figure");
+    			add_location(figure6, file$r, 1966, 16, 75818);
+    			attr_dev(div15, "class", "tab-pane fade");
+    			attr_dev(div15, "id", "list-30");
+    			attr_dev(div15, "role", "tabpanel");
+    			attr_dev(div15, "aria-labelledby", "list-profile-list");
+    			add_location(div15, file$r, 1965, 12, 75708);
+    			attr_dev(div16, "id", "container-23");
+    			add_location(div16, file$r, 1975, 20, 76252);
+    			attr_dev(p7, "class", "highcharts-description");
+    			add_location(p7, file$r, 1976, 20, 76303);
+    			attr_dev(figure7, "class", "highcharts-figure");
+    			add_location(figure7, file$r, 1974, 16, 76196);
+    			attr_dev(div17, "class", "tab-pane fade");
+    			attr_dev(div17, "id", "list-23");
+    			attr_dev(div17, "role", "tabpanel");
+    			attr_dev(div17, "aria-labelledby", "list-profile-list");
+    			add_location(div17, file$r, 1973, 12, 76086);
+    			attr_dev(div18, "id", "container-25");
+    			add_location(div18, file$r, 1983, 20, 76630);
+    			attr_dev(p8, "class", "highcharts-description");
+    			add_location(p8, file$r, 1984, 20, 76681);
+    			attr_dev(figure8, "class", "highcharts-figure");
+    			add_location(figure8, file$r, 1982, 16, 76574);
+    			attr_dev(div19, "class", "tab-pane fade");
+    			attr_dev(div19, "id", "list-25");
+    			attr_dev(div19, "role", "tabpanel");
+    			attr_dev(div19, "aria-labelledby", "list-profile-list");
+    			add_location(div19, file$r, 1981, 12, 76464);
+    			attr_dev(div20, "id", "container-8");
+    			add_location(div20, file$r, 1991, 20, 77007);
+    			attr_dev(p9, "class", "highcharts-description");
+    			add_location(p9, file$r, 1992, 20, 77057);
+    			attr_dev(figure9, "class", "highcharts-figure");
+    			add_location(figure9, file$r, 1990, 16, 76951);
+    			attr_dev(div21, "class", "tab-pane fade");
+    			attr_dev(div21, "id", "list-8");
+    			attr_dev(div21, "role", "tabpanel");
+    			attr_dev(div21, "aria-labelledby", "list-profile-list");
+    			add_location(div21, file$r, 1989, 12, 76842);
+    			attr_dev(div22, "id", "container-6");
+    			add_location(div22, file$r, 1999, 20, 77382);
+    			attr_dev(p10, "class", "highcharts-description");
+    			add_location(p10, file$r, 2000, 20, 77432);
+    			attr_dev(figure10, "class", "highcharts-figure");
+    			add_location(figure10, file$r, 1998, 16, 77326);
+    			attr_dev(div23, "class", "tab-pane fade");
+    			attr_dev(div23, "id", "list-6");
+    			attr_dev(div23, "role", "tabpanel");
+    			attr_dev(div23, "aria-labelledby", "list-profile-list");
+    			add_location(div23, file$r, 1997, 12, 77217);
+    			attr_dev(div24, "id", "container-ext1");
+    			add_location(div24, file$r, 2008, 20, 77774);
+    			attr_dev(p11, "class", "highcharts-description");
+    			add_location(p11, file$r, 2009, 20, 77827);
+    			attr_dev(figure11, "class", "highcharts-figure");
+    			add_location(figure11, file$r, 2007, 16, 77718);
+    			attr_dev(div25, "class", "tab-pane fade");
+    			attr_dev(div25, "id", "list-ext1");
+    			attr_dev(div25, "role", "tabpanel");
+    			attr_dev(div25, "aria-labelledby", "list-profile-list");
+    			add_location(div25, file$r, 2006, 12, 77606);
+    			attr_dev(div26, "id", "container-ext2");
+    			add_location(div26, file$r, 2017, 20, 78267);
+    			attr_dev(p12, "class", "highcharts-description");
+    			add_location(p12, file$r, 2018, 20, 78320);
+    			attr_dev(figure12, "class", "highcharts-figure");
+    			add_location(figure12, file$r, 2016, 16, 78211);
+    			attr_dev(div27, "class", "tab-pane fade");
+    			attr_dev(div27, "id", "list-ext2");
+    			attr_dev(div27, "role", "tabpanel");
+    			attr_dev(div27, "aria-labelledby", "list-profile-list");
+    			add_location(div27, file$r, 2015, 12, 78099);
+    			attr_dev(div28, "class", "tab-content");
+    			attr_dev(div28, "id", "nav-tabContent");
+    			add_location(div28, file$r, 1916, 10, 73292);
+    			attr_dev(div29, "class", "col-8");
+    			add_location(div29, file$r, 1915, 8, 73261);
+    			attr_dev(div30, "class", "row");
+    			add_location(div30, file$r, 1893, 4, 70751);
+    			add_location(p13, file$r, 2027, 6, 78620);
+    			add_location(main, file$r, 1892, 0, 70739);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
-    			append_dev(main, div16);
-    			append_dev(div16, div1);
+    			append_dev(main, div30);
+    			append_dev(div30, div1);
     			append_dev(div1, div0);
     			append_dev(div0, a0);
     			append_dev(div0, t1);
@@ -20974,45 +21259,103 @@ var app = (function () {
     			append_dev(div0, a4);
     			append_dev(div0, t9);
     			append_dev(div0, a5);
-    			append_dev(div16, t11);
-    			append_dev(div16, div15);
-    			append_dev(div15, div14);
-    			append_dev(div14, div3);
+    			append_dev(div0, t11);
+    			append_dev(div0, a6);
+    			append_dev(div0, t13);
+    			append_dev(div0, a7);
+    			append_dev(div0, t15);
+    			append_dev(div0, a8);
+    			append_dev(div0, t17);
+    			append_dev(div0, a9);
+    			append_dev(div0, t19);
+    			append_dev(div0, a10);
+    			append_dev(div0, t21);
+    			append_dev(div0, a11);
+    			append_dev(div0, t23);
+    			append_dev(div0, a12);
+    			append_dev(div30, t25);
+    			append_dev(div30, div29);
+    			append_dev(div29, div28);
+    			append_dev(div28, div3);
     			append_dev(div3, figure0);
     			append_dev(figure0, div2);
-    			append_dev(figure0, t12);
+    			append_dev(figure0, t26);
     			append_dev(figure0, p0);
-    			append_dev(div14, t14);
-    			append_dev(div14, div5);
+    			append_dev(div28, t28);
+    			append_dev(div28, div5);
     			append_dev(div5, figure1);
     			append_dev(figure1, div4);
-    			append_dev(figure1, t15);
+    			append_dev(figure1, t29);
     			append_dev(figure1, p1);
-    			append_dev(div14, t17);
-    			append_dev(div14, div7);
+    			append_dev(div28, t31);
+    			append_dev(div28, div7);
     			append_dev(div7, figure2);
     			append_dev(figure2, div6);
-    			append_dev(figure2, t18);
+    			append_dev(figure2, t32);
     			append_dev(figure2, p2);
-    			append_dev(div14, t20);
-    			append_dev(div14, div9);
+    			append_dev(div28, t34);
+    			append_dev(div28, div9);
     			append_dev(div9, figure3);
     			append_dev(figure3, div8);
-    			append_dev(figure3, t21);
+    			append_dev(figure3, t35);
     			append_dev(figure3, p3);
-    			append_dev(div14, t23);
-    			append_dev(div14, div11);
+    			append_dev(div28, t37);
+    			append_dev(div28, div11);
     			append_dev(div11, figure4);
     			append_dev(figure4, div10);
-    			append_dev(figure4, t24);
+    			append_dev(figure4, t38);
     			append_dev(figure4, p4);
-    			append_dev(div14, t26);
-    			append_dev(div14, div13);
+    			append_dev(div28, t40);
+    			append_dev(div28, div13);
     			append_dev(div13, figure5);
     			append_dev(figure5, div12);
-    			append_dev(figure5, t27);
+    			append_dev(figure5, t41);
     			append_dev(figure5, p5);
-    			append_dev(main, t29);
+    			append_dev(div28, t43);
+    			append_dev(div28, div15);
+    			append_dev(div15, figure6);
+    			append_dev(figure6, div14);
+    			append_dev(figure6, t44);
+    			append_dev(figure6, p6);
+    			append_dev(div28, t46);
+    			append_dev(div28, div17);
+    			append_dev(div17, figure7);
+    			append_dev(figure7, div16);
+    			append_dev(figure7, t47);
+    			append_dev(figure7, p7);
+    			append_dev(div28, t49);
+    			append_dev(div28, div19);
+    			append_dev(div19, figure8);
+    			append_dev(figure8, div18);
+    			append_dev(figure8, t50);
+    			append_dev(figure8, p8);
+    			append_dev(div28, t52);
+    			append_dev(div28, div21);
+    			append_dev(div21, figure9);
+    			append_dev(figure9, div20);
+    			append_dev(figure9, t53);
+    			append_dev(figure9, p9);
+    			append_dev(div28, t55);
+    			append_dev(div28, div23);
+    			append_dev(div23, figure10);
+    			append_dev(figure10, div22);
+    			append_dev(figure10, t56);
+    			append_dev(figure10, p10);
+    			append_dev(div28, t58);
+    			append_dev(div28, div25);
+    			append_dev(div25, figure11);
+    			append_dev(figure11, div24);
+    			append_dev(figure11, t59);
+    			append_dev(figure11, p11);
+    			append_dev(div28, t61);
+    			append_dev(div28, div27);
+    			append_dev(div27, figure12);
+    			append_dev(figure12, div26);
+    			append_dev(figure12, t62);
+    			append_dev(figure12, p12);
+    			append_dev(main, t64);
+    			append_dev(main, p13);
+    			append_dev(main, t65);
     			mount_component(button, main, null);
     			current = true;
     		},
@@ -21222,8 +21565,9 @@ var app = (function () {
     The first 0 is the index of "Country" in the array of countries
 
     */
+    	/* In the filter we put Spain to get only the Spain data and the years that are present in both APIs */
     	MyData = MyData.filter(d => {
-    		return d.country == "Spain";
+    		return d.country == "Spain" && Data4.find(d4 => d4.year == d.year);
     	}).map(d => {
     		return [
     			countries.indexOf(d.country),
@@ -21234,13 +21578,20 @@ var app = (function () {
     		];
     	});
 
+    	let ModifiedData = [];
+
     	for (let i = 0; i < MyData.length; i++) {
-    		let dataMatchesYear = Data4.find(d => d.year == MyData[i][1]);
-
-    		/* The first parameter of splice is the position and the second the numbers of elements to delete */
-    		MyData[i].splice(1, 0, provinces.indexOf(dataMatchesYear.province));
-
-    		MyData[i].push(dataMatchesYear["car"]);
+    		Data4.filter(d => d.year == MyData[i][1]).forEach(dataMatchesYear => {
+    			ModifiedData.push([
+    				MyData[i][0],
+    				provinces.indexOf(dataMatchesYear.province),
+    				MyData[i][1],
+    				MyData[i][2],
+    				MyData[i][3],
+    				MyData[i][4],
+    				dataMatchesYear["car"]
+    			]);
+    		});
     	}
 
     	/* 
@@ -21451,10 +21802,1365 @@ var app = (function () {
     	});
     }
 
+    async function loadGraph5() {
+    	console.log("Loading 5");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_5 = "/api/v1/books-exports";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData5 = await fetch(BASE_API_URL_5);
+    	let MyData = await resData.json();
+    	let Data5 = await resData5.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country.toLowerCase();
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.map(d => {
+    		return [
+    			countries.indexOf(d.country.toLowerCase()),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	MyData = MyData.filter(d => {
+    		return Data5.find(d5 => d5.country == countries[d[0]] && parseInt(d5.year) == d[1]);
+    	}).map(d => {
+    		return [
+    			d[0],
+    			d[1],
+    			d[2],
+    			d[3],
+    			d[4],
+    			Data5.find(d5 => d5.country == countries[d[0]] && parseInt(d5.year) == d[1])["exp_book"]
+    		];
+    	});
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MyData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-5", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: {
+    			text: "Energías renovables y exportación de libros"
+    		},
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Exportación de libros"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraph22() {
+    	console.log("Loading 22");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_22 = "https://sos1920-22.herokuapp.com/api/v2/formula-stats";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData22 = await fetch(BASE_API_URL_22);
+    	let MyData = await resData.json();
+    	let Data22 = await resData22.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country.toLowerCase();
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.map(d => {
+    		return [
+    			countries.indexOf(d.country.toLowerCase()),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	MyData = MyData.filter(d => {
+    		return Data22.find(d22 => d22.country == countries[d[0]] && parseInt(d22.year) == d[1]);
+    	}).map(d => {
+    		return [
+    			d[0],
+    			d[1],
+    			d[2],
+    			d[3],
+    			d[4],
+    			Data22.find(d22 => d22.country == countries[d[0]] && parseInt(d22.year) == d[1])["victorynumber"]
+    		];
+    	});
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MyData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-22", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: {
+    			text: "Energías renovables y victorias de fórmula 1"
+    		},
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Victorias en fórmula 1"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraph6() {
+    	console.log("Loading 6");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_6 = "/api/v2/lottery-sales";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData6 = await fetch(BASE_API_URL_6);
+    	let MyData = await resData.json();
+    	let Data6 = await resData6.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country;
+    		})));
+
+    	let provinces = Array.from(new Set(Data6.map(d => {
+    			return d.province;
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.filter(d => {
+    		return d.country == "Spain" && Data6.find(d4 => d4.year == d.year);
+    	}).map(d => {
+    		return [
+    			countries.indexOf(d.country),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	let ModifiedData = [];
+
+    	for (let i = 0; i < MyData.length; i++) {
+    		Data6.filter(d => d.year == MyData[i][1]).forEach(dataMatchesYear => {
+    			ModifiedData.push([
+    				MyData[i][0],
+    				provinces.indexOf(dataMatchesYear.province),
+    				MyData[i][1],
+    				MyData[i][2],
+    				MyData[i][3],
+    				MyData[i][4],
+    				dataMatchesYear["total"]
+    			]);
+    		});
+    	}
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = ModifiedData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-6", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: {
+    			text: "Energías renovables y número de coches"
+    		},
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Provincias",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Número de loterías vendidas"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{
+    				categories: provinces,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraph1() {
+    	console.log("Loading 1");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_1 = "/api/v2/natality-stats";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData1 = await fetch(BASE_API_URL_1);
+    	let MyData = await resData.json();
+    	let Data1 = await resData1.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country.toLowerCase();
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.map(d => {
+    		return [
+    			countries.indexOf(d.country.toLowerCase()),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	MyData = MyData.filter(d => {
+    		return Data1.find(d1 => d1.country == countries[d[0]] && parseInt(d1.year) == d[1]);
+    	}).map(d => {
+    		return [
+    			d[0],
+    			d[1],
+    			d[2],
+    			d[3],
+    			d[4],
+    			Data1.find(d1 => d1.country == countries[d[0]] && parseInt(d1.year) == d[1])["natality_totals"]
+    		];
+    	});
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MyData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-1", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: { text: "Energías renovables y natalidad" },
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Número de nacimientos"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraph30() {
+    	console.log("Loading 30");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_30 = "https://sos1920-30.herokuapp.com/api/v3/sugarconsume";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData30 = await fetch(BASE_API_URL_30);
+    	let MyData = await resData.json();
+    	let Data30 = await resData30.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let years = Array.from(new Set(MyData.map(d => {
+    			return d.year;
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	let MeanData = [];
+
+    	years.filter(y => {
+    		return Data30.find(d30 => d30.year == y);
+    	}).forEach(y => {
+    		let totalSugar = Data30.filter(d => {
+    			return d.year == y;
+    		}).map(d => {
+    			return d["sugarconsume"];
+    		}).reduce((accumulator, currentValue) => accumulator + currentValue);
+
+    		let reAverrage = MyData.filter(d => {
+    			return d.year == y;
+    		}).map(d => {
+    			return d["percentage-re-total"];
+    		}).reduce((accumulator, currentValue) => accumulator + currentValue) / MyData.filter(d => {
+    			return d.year == y;
+    		}).length;
+
+    		let hydropowerAverrage = MyData.filter(d => {
+    			return d.year == y;
+    		}).map(d => {
+    			return d["percentage-hydropower-total"];
+    		}).reduce((accumulator, currentValue) => accumulator + currentValue) / MyData.filter(d => {
+    			return d.year == y;
+    		}).length;
+
+    		let windAverrage = MyData.filter(d => {
+    			return d.year == y;
+    		}).map(d => {
+    			return d["percentage-wind-power-total"];
+    		}).reduce((accumulator, currentValue) => accumulator + currentValue) / MyData.filter(d => {
+    			return d.year == y;
+    		}).length;
+
+    		MeanData.push([y, reAverrage, hydropowerAverrage, windAverrage, totalSugar]);
+    	});
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MeanData.map(function (set, i) {
+    		return { name: set[0], data: set, shadow: false };
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-30", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: {
+    			text: "Energías renovables y azúcar consumido"
+    		},
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Kilos de azúcar consumidos"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			,{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraph23() {
+    	console.log("Loading 23");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_23 = "/api/v2/cigarretes-sales";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData23 = await fetch(BASE_API_URL_23);
+    	let MyData = await resData.json();
+    	let Data23 = await resData23.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country;
+    		})));
+
+    	let provinces = Array.from(new Set(Data23.map(d => {
+    			return d.community;
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.filter(d => {
+    		return d.country == "Spain" && Data23.find(d4 => d4.year == d.year);
+    	}).map(d => {
+    		return [
+    			countries.indexOf(d.country),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	let ModifiedData = [];
+
+    	for (let i = 0; i < MyData.length; i++) {
+    		Data23.filter(d => d.year == MyData[i][1]).forEach(dataMatchesYear => {
+    			ModifiedData.push([
+    				MyData[i][0],
+    				provinces.indexOf(dataMatchesYear.community),
+    				MyData[i][1],
+    				MyData[i][2],
+    				MyData[i][3],
+    				MyData[i][4],
+    				dataMatchesYear["cigarrete_sale"]
+    			]);
+    		});
+    	}
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = ModifiedData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-23", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: { text: "Energías renovables y tabaco" },
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Provincias",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Ventas de cigarrillos de tabaco"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{
+    				categories: provinces,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraph25() {
+    	console.log("Loading 25");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_25 = "/api/v2/happiness_rate";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData25 = await fetch(BASE_API_URL_25);
+    	let MyData = await resData.json();
+    	let Data25 = await resData25.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country.toLowerCase();
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.map(d => {
+    		return [
+    			countries.indexOf(d.country.toLowerCase()),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	MyData = MyData.filter(d => {
+    		return Data25.find(d25 => d25.country.toLowerCase() == countries[d[0]] && parseInt(d25.year) == d[1]);
+    	}).map(d => {
+    		return [
+    			d[0],
+    			d[1],
+    			d[2],
+    			d[3],
+    			d[4],
+    			Data25.find(d25 => d25.country.toLowerCase() == countries[d[0]] && parseInt(d25.year) == d[1])["happinessRanking"]
+    		];
+    	});
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MyData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-25", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: {
+    			text: "Energías renovables y nivel de felicidad"
+    		},
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Ranking en felicidad"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraph8() {
+    	console.log("Loading 8");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_8 = "/api/v1/motogp-statistics";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData8 = await fetch(BASE_API_URL_8);
+    	let MyData = await resData.json();
+    	let Data8 = await resData8.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country;
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.map(d => {
+    		return [
+    			countries.indexOf(d.country),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	MyData = MyData.filter(d => {
+    		return Data8.find(d8 => d8.country == countries[d[0]]);
+    	}).map(d => {
+    		return [
+    			d[0],
+    			d[1],
+    			d[2],
+    			d[3],
+    			d[4],
+    			Data8.find(d8 => d8.country == countries[d[0]])["world_title"]
+    		];
+    	});
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MyData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-8", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: { text: "Energías renovables y motoGP" },
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Títulos mundiales"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraphExt1() {
+    	console.log("Loading external api");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_EXT = "https://restcountries.eu/rest/v2/all?fields=name;capital;area";
+    	const resData = await fetch(BASE_API_URL);
+    	const resDataExt = await fetch(BASE_API_URL_EXT);
+    	let MyData = await resData.json();
+    	let DataExt = await resDataExt.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country;
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.map(d => {
+    		return [
+    			countries.indexOf(d.country),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	MyData = MyData.filter(d => {
+    		return DataExt.find(dext => dext.name == countries[d[0]]);
+    	}).map(d => {
+    		return [
+    			d[0],
+    			d[1],
+    			d[2],
+    			d[3],
+    			d[4],
+    			DataExt.find(dext => dext.name == countries[d[0]])["area"]
+    		];
+    	});
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MyData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-ext1", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: { text: "Energías renovables y área" },
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Área"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraphExt2() {
+    	console.log("Loading external api");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_EXT = "/v1/Country/getCountries";
+    	const resData = await fetch(BASE_API_URL);
+    	const resDataExt = await fetch(BASE_API_URL_EXT);
+    	let MyData = await resData.json();
+    	let DataExt = await resDataExt.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country;
+    		})));
+
+    	let currencies = Array.from(new Set(DataExt.Response.map(d => {
+    			return d["CurrencyName"];
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.map(d => {
+    		return [
+    			countries.indexOf(d.country),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	MyData = MyData.filter(d => {
+    		return DataExt.Response.find(dext => dext.Name == countries[d[0]]);
+    	}).map(d => {
+    		return [
+    			d[0],
+    			d[1],
+    			d[2],
+    			d[3],
+    			d[4],
+    			currencies.indexOf(DataExt.Response.find(dext => dext.Name == countries[d[0]])["CurrencyName"])
+    		];
+    	});
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MyData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-ext2", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: { text: "Energías renovables y monedas" },
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Moneda"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{
+    				categories: currencies,
+    				tooltipValueFormat: "{value}"
+    			}
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
     function instance$s($$self, $$props, $$invalidate) {
     	loadGraph7();
     	loadGraph4();
     	loadGraph27();
+    	loadGraph5(); // [proxy] bookexports
+    	loadGraph22();
+    	loadGraph6(); // [proxy] lottery
+    	loadGraph1(); // [proxy] natality
+    	loadGraph30();
+    	loadGraph23(); // [proxy] cigarettes
+    	loadGraph25(); // [proxy] happiness rate
+    	loadGraph8(); // [proxy] motogp
+    	loadGraphExt1();
+    	loadGraphExt2();
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -21469,7 +23175,17 @@ var app = (function () {
     		pop,
     		loadGraph7,
     		loadGraph4,
-    		loadGraph27
+    		loadGraph27,
+    		loadGraph5,
+    		loadGraph22,
+    		loadGraph6,
+    		loadGraph1,
+    		loadGraph30,
+    		loadGraph23,
+    		loadGraph25,
+    		loadGraph8,
+    		loadGraphExt1,
+    		loadGraphExt2
     	});
 
     	return [];
@@ -21492,7 +23208,7 @@ var app = (function () {
     /* src\front\oilCoalNuclearEnergyConsumptionAPI\Integrations.svelte generated by Svelte v3.20.1 */
     const file$s = "src\\front\\oilCoalNuclearEnergyConsumptionAPI\\Integrations.svelte";
 
-    // (12:4) <Button outline color="secondary" on:click="{pop}">
+    // (61:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$f(ctx) {
     	let i;
     	let t;
@@ -21502,7 +23218,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$s, 11, 56, 346);
+    			add_location(i, file$s, 60, 56, 2356);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -21518,7 +23234,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$f.name,
     		type: "slot",
-    		source: "(12:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(61:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -21526,14 +23242,22 @@ var app = (function () {
     }
 
     function create_fragment$t(ctx) {
-    	let main;
+    	let body;
+    	let div1;
     	let button0;
-    	let i;
-    	let t0;
     	let t1;
+    	let div0;
+    	let t2;
+    	let script;
+    	let t4;
+    	let main;
+    	let button1;
+    	let i;
+    	let t5;
+    	let t6;
     	let current;
 
-    	const button1 = new Button({
+    	const button2 = new Button({
     			props: {
     				outline: true,
     				color: "secondary",
@@ -21543,57 +23267,87 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	button1.$on("click", pop);
+    	button2.$on("click", pop);
 
     	const block = {
     		c: function create() {
-    			main = element("main");
+    			body = element("body");
+    			div1 = element("div");
     			button0 = element("button");
-    			i = element("i");
-    			t0 = text(" 1");
+    			button0.textContent = "Obtener";
     			t1 = space();
-    			create_component(button1.$$.fragment);
+    			div0 = element("div");
+    			t2 = space();
+    			script = element("script");
+    			script.textContent = "/* #contenido capturamos el id. Dentro de contenido guardamos ese div.*/\r\n        var contenido = document.querySelector('#contenido')\r\n        function traer() {\r\n            fetch('https://randomuser.me/api/')\r\n            .then(res => res.json())\r\n            .then(data => {\r\n                console.log(data.results['0'])\r\n                /* Estas comillas de abajo nos permiten manejar templates literarios, podemos mezclar html y css*/\r\n                contenido.innerHTML = `   \r\n                <table class=\"table table-dark\">\r\n                    <thead>\r\n                        <tr>\r\n                            <th scope=\"col\">Nombre</th>\r\n                            <th scope=\"col\">Email</th>\r\n                            <th scope=\"col\">Genero</th>\r\n                            <th scope=\"col\">Procedencia</th>\r\n                            <th scope=\"col\">Numero de tlf</th>\r\n                            <th scope=\"col\">Codigo Postal</th>\r\n                            <th scope=\"col\">Edad</th>\r\n                        </tr>\r\n                    </thead>\r\n                    <tbody>\r\n                        <tr>\r\n                            <td>${data.results['0'].name.last}</td>\r\n                            <td>${data.results['0'].email}</td>\r\n                            <td>${data.results['0'].gender}</td>\r\n                            <td>${data.results['0'].location.country}</td>\r\n                            <td>${data.results['0'].cell}</td>\r\n                            <td>${data.results['0'].location.postcode}</td>\r\n                            <td>${data.results['0'].registered.age}</td>\r\n                        </tr>\r\n                    </tbody>          \r\n                `\r\n            })\r\n        }";
+    			t4 = space();
+    			main = element("main");
+    			button1 = element("button");
+    			i = element("i");
+    			t5 = text(" 1");
+    			t6 = space();
+    			create_component(button2.$$.fragment);
+    			attr_dev(button0, "class", "btn btn-danger w-100");
+    			attr_dev(button0, "onclick", "traer()");
+    			add_location(button0, file$s, 11, 8, 209);
+    			attr_dev(div0, "class", "mt-5");
+    			attr_dev(div0, "id", "contenido");
+    			add_location(div0, file$s, 12, 8, 290);
+    			attr_dev(div1, "class", "container my-5 text-center");
+    			add_location(div1, file$s, 10, 4, 159);
+    			add_location(script, file$s, 16, 4, 359);
+    			add_location(body, file$s, 8, 0, 142);
     			attr_dev(i, "class", "fas fa-chart-area");
-    			add_location(i, file$s, 9, 92, 242);
-    			attr_dev(button0, "type", "button");
-    			attr_dev(button0, "class", "btn btn-outline-dark");
-    			attr_dev(button0, "onclick", "window.location.href='#/'");
-    			add_location(button0, file$s, 9, 4, 154);
-    			add_location(main, file$s, 8, 0, 142);
+    			add_location(i, file$s, 58, 92, 2248);
+    			attr_dev(button1, "type", "button");
+    			attr_dev(button1, "class", "btn btn-outline-dark");
+    			attr_dev(button1, "onclick", "window.location.href='#/'");
+    			add_location(button1, file$s, 58, 4, 2160);
+    			add_location(main, file$s, 57, 0, 2148);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, body, anchor);
+    			append_dev(body, div1);
+    			append_dev(div1, button0);
+    			append_dev(div1, t1);
+    			append_dev(div1, div0);
+    			append_dev(body, t2);
+    			append_dev(body, script);
+    			insert_dev(target, t4, anchor);
     			insert_dev(target, main, anchor);
-    			append_dev(main, button0);
-    			append_dev(button0, i);
-    			append_dev(button0, t0);
-    			append_dev(main, t1);
-    			mount_component(button1, main, null);
+    			append_dev(main, button1);
+    			append_dev(button1, i);
+    			append_dev(button1, t5);
+    			append_dev(main, t6);
+    			mount_component(button2, main, null);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
-    			const button1_changes = {};
+    			const button2_changes = {};
 
     			if (dirty & /*$$scope*/ 1) {
-    				button1_changes.$$scope = { dirty, ctx };
+    				button2_changes.$$scope = { dirty, ctx };
     			}
 
-    			button1.$set(button1_changes);
+    			button2.$set(button2_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(button1.$$.fragment, local);
+    			transition_in(button2.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(button1.$$.fragment, local);
+    			transition_out(button2.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(body);
+    			if (detaching) detach_dev(t4);
     			if (detaching) detach_dev(main);
-    			destroy_component(button1);
+    			destroy_component(button2);
     		}
     	};
 
