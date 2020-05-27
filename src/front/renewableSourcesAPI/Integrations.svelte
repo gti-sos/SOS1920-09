@@ -295,9 +295,149 @@
                 series: ChartData
             });
         }
+
+        async function loadGraph27() {
+            console.log("Loading 27");
+            /* Asking for the data to the back */
+            const BASE_API_URL = "/api/v4/renewable-sources-stats";
+            const BASE_API_URL_27 = "https://sos1920-27.herokuapp.com/api/v2/lq-stats";
+
+            const resData = await fetch(BASE_API_URL);
+            const resData27 = await fetch(BASE_API_URL_27);
+            let MyData = await resData.json();   
+            let Data27 = await resData27.json();  
+    
+            /* Getting the countries */
+            /* Turning them into upper case because the integration needs it */
+            let countries = Array.from(new Set(MyData.map((d) => {return d.country.toLowerCase();})));
+            /* Mapping the data in the right format */
+            /* The country must be an index of the array of countries */
+            /*  
+            Turning this:
+    
+            {
+                "country": "COUNTRY",
+                "year": 2000,
+                "percentage-re-total": 0.0,
+                "percentage-hydropower-total": 0.0,
+                "percentage-wind-power-total": 0.0
+            }
+    
+            into this:
+    
+            [0, 2000, 0.0, 0.0, 0.0]
+            The first 0 is the index of "Country" in the array of countries
+            
+            */
+            MyData = MyData.map((d) => {
+                return [countries.indexOf(d.country.toLowerCase()), d.year, d["percentage-re-total"], d["percentage-hydropower-total"], d["percentage-wind-power-total"]]; 
+            });
+
+            MyData = MyData.filter((d) => {  return Data27.find(d27 => d27.country == countries[d[0]] && parseInt(d27.year) == d[1])}).map((d) => {
+                return [d[0], d[1], d[2], d[3], d[4],
+                        Data27.find(d27 => d27.country == countries[d[0]] && parseInt(d27.year) == d[1])["climate"]
+            ]; 
+            });
+
+            /* 
+            The following array turn this:
+            [0, 2000, 0.0, 0.0, 0.0]
+    
+            into this:
+    
+            {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+            That is how the chart needs it
+             */
+             let ChartData = MyData.map(function (set, i) {
+                return {
+                    name: countries[set[0]],
+                    data: set,
+                    shadow: false
+                };
+            });
+            
+            /* Setting the chart */
+            Highcharts.chart('container-27', {
+                chart: {
+                    type: 'spline',
+                    parallelCoordinates: true,
+                    parallelAxes: {
+                        lineWidth: 3
+                    }
+                },
+                title: {
+                    text: 'Energías renovables y calidad de vida'
+                },
+                plotOptions: {
+                    series: {
+                        animation: false,
+                        marker: {
+                            enabled: false,
+                            states: {
+                                hover: {
+                                    enabled: false
+                                }
+                            }
+                        },
+                        states: {
+                            hover: {
+                                halo: {
+                                    size: 0
+                                }
+                            }
+                        },
+                        events: {
+                            mouseOver: function () {
+                                this.group.toFront();
+                            }
+                        }
+                    }
+                },
+                tooltip: {
+                    pointFormat: '<span style="color:{point.color}">\u25CF</span>' +
+                        '{series.name}: <b>{point.formattedValue}</b><br/>'
+                },
+                xAxis: {
+                    categories: [
+                        'País',
+                        'Año',
+                        'Porcentaje de uso de energías renovables',
+                        'Porcentaje de uso de energías hidroeléctricas',
+                        'Porcentaje de uso de energías eólica',
+                        'Calidad de vida'
+                    ],
+                    offset: 10
+                },
+                yAxis: [
+                {
+                    categories: countries,
+                    tooltipValueFormat: '{value}'
+                },
+                {
+                    min: 2000,
+                    tooltipValueFormat: '{value}'
+                }, {
+                    min: 0,
+                    tooltipValueFormat: '{value} %'
+                }, {
+                    min: 0,
+                    tooltipValueFormat: '{value} %'
+                },
+                {
+                    min: 0,
+                    tooltipValueFormat: '{value}'
+                }],
+                colors: ['rgba(129, 131, 202, 0.8)'],
+                series: ChartData
+            });
+
+            
+            
+        }
     
         loadGraph7();
         loadGraph4();
+        loadGraph27();
 </script>
 
 <main>
