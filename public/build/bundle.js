@@ -20661,7 +20661,7 @@ var app = (function () {
     const { console: console_1$a } = globals;
     const file$r = "src\\front\\renewableSourcesAPI\\Integrations.svelte";
 
-    // (660:4) <Button outline color="secondary" on:click="{pop}">
+    // (2040:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$e(ctx) {
     	let i;
     	let t;
@@ -20671,7 +20671,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$r, 659, 56, 25974);
+    			add_location(i, file$r, 2039, 56, 79342);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -20687,7 +20687,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$e.name,
     		type: "slot",
-    		source: "(660:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(2040:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -20696,7 +20696,7 @@ var app = (function () {
 
     function create_fragment$s(ctx) {
     	let main;
-    	let div18;
+    	let div32;
     	let div1;
     	let div0;
     	let a0;
@@ -20713,50 +20713,108 @@ var app = (function () {
     	let t11;
     	let a6;
     	let t13;
-    	let div17;
-    	let div16;
+    	let a7;
+    	let t15;
+    	let a8;
+    	let t17;
+    	let a9;
+    	let t19;
+    	let a10;
+    	let t21;
+    	let a11;
+    	let t23;
+    	let a12;
+    	let t25;
+    	let a13;
+    	let t27;
+    	let div31;
+    	let div30;
     	let div3;
     	let figure0;
     	let div2;
-    	let t14;
+    	let t28;
     	let p0;
-    	let t16;
+    	let t30;
     	let div5;
     	let figure1;
     	let div4;
-    	let t17;
+    	let t31;
     	let p1;
-    	let t19;
+    	let t33;
     	let div7;
     	let figure2;
     	let div6;
-    	let t20;
+    	let t34;
     	let p2;
-    	let t22;
+    	let t36;
     	let div9;
     	let figure3;
     	let div8;
-    	let t23;
+    	let t37;
     	let p3;
-    	let t25;
+    	let t39;
     	let div11;
     	let figure4;
     	let div10;
-    	let t26;
+    	let t40;
     	let p4;
-    	let t28;
+    	let t42;
     	let div13;
     	let figure5;
     	let div12;
-    	let t29;
+    	let t43;
     	let p5;
-    	let t31;
+    	let t45;
     	let div15;
     	let figure6;
     	let div14;
-    	let t32;
+    	let t46;
     	let p6;
-    	let t34;
+    	let t48;
+    	let div17;
+    	let figure7;
+    	let div16;
+    	let t49;
+    	let p7;
+    	let t51;
+    	let div19;
+    	let figure8;
+    	let div18;
+    	let t52;
+    	let p8;
+    	let t54;
+    	let div21;
+    	let figure9;
+    	let div20;
+    	let t55;
+    	let p9;
+    	let t57;
+    	let div23;
+    	let figure10;
+    	let div22;
+    	let t58;
+    	let p10;
+    	let t60;
+    	let div25;
+    	let figure11;
+    	let div24;
+    	let t61;
+    	let p11;
+    	let t63;
+    	let div27;
+    	let figure12;
+    	let div26;
+    	let t64;
+    	let p12;
+    	let t66;
+    	let div29;
+    	let figure13;
+    	let div28;
+    	let t67;
+    	let p13;
+    	let t69;
+    	let p14;
+    	let t70;
     	let current;
 
     	const button = new Button({
@@ -20774,7 +20832,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			main = element("main");
-    			div18 = element("div");
+    			div32 = element("div");
     			div1 = element("div");
     			div0 = element("div");
     			a0 = element("a");
@@ -20796,59 +20854,131 @@ var app = (function () {
     			a5.textContent = "Integración con 28";
     			t11 = space();
     			a6 = element("a");
-    			a6.textContent = "Integración con API externa";
+    			a6.textContent = "Integración con 1";
     			t13 = space();
-    			div17 = element("div");
-    			div16 = element("div");
+    			a7 = element("a");
+    			a7.textContent = "Integración con 30";
+    			t15 = space();
+    			a8 = element("a");
+    			a8.textContent = "Integración con 23";
+    			t17 = space();
+    			a9 = element("a");
+    			a9.textContent = "Integración con 25";
+    			t19 = space();
+    			a10 = element("a");
+    			a10.textContent = "Integración con 8";
+    			t21 = space();
+    			a11 = element("a");
+    			a11.textContent = "Integración con 6";
+    			t23 = space();
+    			a12 = element("a");
+    			a12.textContent = "Integración con API externa 1";
+    			t25 = space();
+    			a13 = element("a");
+    			a13.textContent = "Integración con API externa 2";
+    			t27 = space();
+    			div31 = element("div");
+    			div30 = element("div");
     			div3 = element("div");
     			figure0 = element("figure");
     			div2 = element("div");
-    			t14 = space();
+    			t28 = space();
     			p0 = element("p");
     			p0.textContent = "Integración con el grupo 7, la integración está realizada con la importaciones de vegetales y preparados.";
-    			t16 = space();
+    			t30 = space();
     			div5 = element("div");
     			figure1 = element("figure");
     			div4 = element("div");
-    			t17 = space();
+    			t31 = space();
     			p1 = element("p");
     			p1.textContent = "Integra la 27.";
-    			t19 = space();
+    			t33 = space();
     			div7 = element("div");
     			figure2 = element("figure");
     			div6 = element("div");
-    			t20 = space();
+    			t34 = space();
     			p2 = element("p");
     			p2.textContent = "Integra la 5.";
-    			t22 = space();
+    			t36 = space();
     			div9 = element("div");
     			figure3 = element("figure");
     			div8 = element("div");
-    			t23 = space();
+    			t37 = space();
     			p3 = element("p");
     			p3.textContent = "Integra la 4.";
-    			t25 = space();
+    			t39 = space();
     			div11 = element("div");
     			figure4 = element("figure");
     			div10 = element("div");
-    			t26 = space();
+    			t40 = space();
     			p4 = element("p");
     			p4.textContent = "Integra la 22.";
-    			t28 = space();
+    			t42 = space();
     			div13 = element("div");
     			figure5 = element("figure");
     			div12 = element("div");
-    			t29 = space();
+    			t43 = space();
     			p5 = element("p");
     			p5.textContent = "Integra la 28.";
-    			t31 = space();
+    			t45 = space();
     			div15 = element("div");
     			figure6 = element("figure");
     			div14 = element("div");
-    			t32 = space();
+    			t46 = space();
     			p6 = element("p");
-    			p6.textContent = "Integración con la una API externa que proporciona el área (en kilómetros cuadrados) de los países.";
-    			t34 = space();
+    			p6.textContent = "Integra la 1.";
+    			t48 = space();
+    			div17 = element("div");
+    			figure7 = element("figure");
+    			div16 = element("div");
+    			t49 = space();
+    			p7 = element("p");
+    			p7.textContent = "Integra la 30.";
+    			t51 = space();
+    			div19 = element("div");
+    			figure8 = element("figure");
+    			div18 = element("div");
+    			t52 = space();
+    			p8 = element("p");
+    			p8.textContent = "Integra la 23.";
+    			t54 = space();
+    			div21 = element("div");
+    			figure9 = element("figure");
+    			div20 = element("div");
+    			t55 = space();
+    			p9 = element("p");
+    			p9.textContent = "Integra la 25.";
+    			t57 = space();
+    			div23 = element("div");
+    			figure10 = element("figure");
+    			div22 = element("div");
+    			t58 = space();
+    			p10 = element("p");
+    			p10.textContent = "Integra la 8.";
+    			t60 = space();
+    			div25 = element("div");
+    			figure11 = element("figure");
+    			div24 = element("div");
+    			t61 = space();
+    			p11 = element("p");
+    			p11.textContent = "Integra la 6.";
+    			t63 = space();
+    			div27 = element("div");
+    			figure12 = element("figure");
+    			div26 = element("div");
+    			t64 = space();
+    			p12 = element("p");
+    			p12.textContent = "Integración con la una API externa que proporciona el área (en kilómetros cuadrados) de los países.";
+    			t66 = space();
+    			div29 = element("div");
+    			figure13 = element("figure");
+    			div28 = element("div");
+    			t67 = space();
+    			p13 = element("p");
+    			p13.textContent = "Integración con la una API externa que proporciona la moneda utilizada de los países.";
+    			t69 = space();
+    			p14 = element("p");
+    			t70 = space();
     			create_component(button.$$.fragment);
     			attr_dev(a0, "class", "list-group-item list-group-item-action active");
     			attr_dev(a0, "id", "list-home-list");
@@ -20856,148 +20986,275 @@ var app = (function () {
     			attr_dev(a0, "href", "#list-7");
     			attr_dev(a0, "role", "tab");
     			attr_dev(a0, "aria-controls", "home");
-    			add_location(a0, file$r, 588, 12, 21679);
+    			add_location(a0, file$r, 1898, 12, 70976);
     			attr_dev(a1, "class", "list-group-item list-group-item-action");
     			attr_dev(a1, "id", "list-profile-list");
     			attr_dev(a1, "data-toggle", "list");
     			attr_dev(a1, "href", "#list-27");
     			attr_dev(a1, "role", "tab");
     			attr_dev(a1, "aria-controls", "profile");
-    			add_location(a1, file$r, 589, 12, 21857);
+    			add_location(a1, file$r, 1899, 12, 71154);
     			attr_dev(a2, "class", "list-group-item list-group-item-action");
     			attr_dev(a2, "id", "list-profile-list");
     			attr_dev(a2, "data-toggle", "list");
     			attr_dev(a2, "href", "#list-5");
     			attr_dev(a2, "role", "tab");
     			attr_dev(a2, "aria-controls", "profile");
-    			add_location(a2, file$r, 590, 12, 22036);
+    			add_location(a2, file$r, 1900, 12, 71333);
     			attr_dev(a3, "class", "list-group-item list-group-item-action");
     			attr_dev(a3, "id", "list-profile-list");
     			attr_dev(a3, "data-toggle", "list");
     			attr_dev(a3, "href", "#list-4");
     			attr_dev(a3, "role", "tab");
     			attr_dev(a3, "aria-controls", "profile");
-    			add_location(a3, file$r, 591, 12, 22213);
+    			add_location(a3, file$r, 1901, 12, 71510);
     			attr_dev(a4, "class", "list-group-item list-group-item-action");
     			attr_dev(a4, "id", "list-profile-list");
     			attr_dev(a4, "data-toggle", "list");
     			attr_dev(a4, "href", "#list-22");
     			attr_dev(a4, "role", "tab");
     			attr_dev(a4, "aria-controls", "profile");
-    			add_location(a4, file$r, 592, 12, 22390);
+    			add_location(a4, file$r, 1902, 12, 71687);
     			attr_dev(a5, "class", "list-group-item list-group-item-action");
     			attr_dev(a5, "id", "list-profile-list");
     			attr_dev(a5, "data-toggle", "list");
     			attr_dev(a5, "href", "#list-28");
     			attr_dev(a5, "role", "tab");
     			attr_dev(a5, "aria-controls", "profile");
-    			add_location(a5, file$r, 593, 12, 22569);
+    			add_location(a5, file$r, 1903, 12, 71866);
     			attr_dev(a6, "class", "list-group-item list-group-item-action");
     			attr_dev(a6, "id", "list-profile-list");
     			attr_dev(a6, "data-toggle", "list");
-    			attr_dev(a6, "href", "#list-ext");
+    			attr_dev(a6, "href", "#list-1");
     			attr_dev(a6, "role", "tab");
     			attr_dev(a6, "aria-controls", "profile");
-    			add_location(a6, file$r, 594, 12, 22748);
+    			add_location(a6, file$r, 1904, 12, 72045);
+    			attr_dev(a7, "class", "list-group-item list-group-item-action");
+    			attr_dev(a7, "id", "list-profile-list");
+    			attr_dev(a7, "data-toggle", "list");
+    			attr_dev(a7, "href", "#list-30");
+    			attr_dev(a7, "role", "tab");
+    			attr_dev(a7, "aria-controls", "profile");
+    			add_location(a7, file$r, 1905, 12, 72223);
+    			attr_dev(a8, "class", "list-group-item list-group-item-action");
+    			attr_dev(a8, "id", "list-profile-list");
+    			attr_dev(a8, "data-toggle", "list");
+    			attr_dev(a8, "href", "#list-23");
+    			attr_dev(a8, "role", "tab");
+    			attr_dev(a8, "aria-controls", "profile");
+    			add_location(a8, file$r, 1906, 12, 72403);
+    			attr_dev(a9, "class", "list-group-item list-group-item-action");
+    			attr_dev(a9, "id", "list-profile-list");
+    			attr_dev(a9, "data-toggle", "list");
+    			attr_dev(a9, "href", "#list-25");
+    			attr_dev(a9, "role", "tab");
+    			attr_dev(a9, "aria-controls", "profile");
+    			add_location(a9, file$r, 1907, 12, 72583);
+    			attr_dev(a10, "class", "list-group-item list-group-item-action");
+    			attr_dev(a10, "id", "list-profile-list");
+    			attr_dev(a10, "data-toggle", "list");
+    			attr_dev(a10, "href", "#list-8");
+    			attr_dev(a10, "role", "tab");
+    			attr_dev(a10, "aria-controls", "profile");
+    			add_location(a10, file$r, 1908, 12, 72763);
+    			attr_dev(a11, "class", "list-group-item list-group-item-action");
+    			attr_dev(a11, "id", "list-profile-list");
+    			attr_dev(a11, "data-toggle", "list");
+    			attr_dev(a11, "href", "#list-6");
+    			attr_dev(a11, "role", "tab");
+    			attr_dev(a11, "aria-controls", "profile");
+    			add_location(a11, file$r, 1909, 12, 72941);
+    			attr_dev(a12, "class", "list-group-item list-group-item-action");
+    			attr_dev(a12, "id", "list-profile-list");
+    			attr_dev(a12, "data-toggle", "list");
+    			attr_dev(a12, "href", "#list-ext1");
+    			attr_dev(a12, "role", "tab");
+    			attr_dev(a12, "aria-controls", "profile");
+    			add_location(a12, file$r, 1913, 12, 73124);
+    			attr_dev(a13, "class", "list-group-item list-group-item-action");
+    			attr_dev(a13, "id", "list-profile-list");
+    			attr_dev(a13, "data-toggle", "list");
+    			attr_dev(a13, "href", "#list-ext2");
+    			attr_dev(a13, "role", "tab");
+    			attr_dev(a13, "aria-controls", "profile");
+    			add_location(a13, file$r, 1914, 12, 73317);
     			attr_dev(div0, "class", "list-group");
     			attr_dev(div0, "id", "list-tab");
     			attr_dev(div0, "role", "tablist");
-    			add_location(div0, file$r, 587, 10, 21612);
+    			add_location(div0, file$r, 1897, 10, 70909);
     			attr_dev(div1, "class", "col-4");
-    			add_location(div1, file$r, 586, 8, 21581);
+    			add_location(div1, file$r, 1896, 8, 70878);
     			attr_dev(div2, "id", "container-7");
-    			add_location(div2, file$r, 602, 20, 23231);
+    			add_location(div2, file$r, 1922, 20, 73804);
     			attr_dev(p0, "class", "highcharts-description");
-    			add_location(p0, file$r, 603, 20, 23281);
+    			add_location(p0, file$r, 1923, 20, 73854);
     			attr_dev(figure0, "class", "highcharts-figure");
-    			add_location(figure0, file$r, 601, 16, 23175);
+    			add_location(figure0, file$r, 1921, 16, 73748);
     			attr_dev(div3, "class", "tab-pane fade show active");
     			attr_dev(div3, "id", "list-7");
     			attr_dev(div3, "role", "tabpanel");
     			attr_dev(div3, "aria-labelledby", "list-home-list");
-    			add_location(div3, file$r, 600, 12, 23057);
+    			add_location(div3, file$r, 1920, 12, 73630);
     			attr_dev(div4, "id", "container-27");
-    			add_location(div4, file$r, 610, 20, 23699);
+    			add_location(div4, file$r, 1930, 20, 74272);
     			attr_dev(p1, "class", "highcharts-description");
-    			add_location(p1, file$r, 611, 20, 23750);
+    			add_location(p1, file$r, 1931, 20, 74323);
     			attr_dev(figure1, "class", "highcharts-figure");
-    			add_location(figure1, file$r, 609, 16, 23643);
+    			add_location(figure1, file$r, 1929, 16, 74216);
     			attr_dev(div5, "class", "tab-pane fade");
     			attr_dev(div5, "id", "list-27");
     			attr_dev(div5, "role", "tabpanel");
     			attr_dev(div5, "aria-labelledby", "list-profile-list");
-    			add_location(div5, file$r, 608, 12, 23533);
+    			add_location(div5, file$r, 1928, 12, 74106);
     			attr_dev(div6, "id", "container-5");
-    			add_location(div6, file$r, 618, 20, 24076);
+    			add_location(div6, file$r, 1938, 20, 74649);
     			attr_dev(p2, "class", "highcharts-description");
-    			add_location(p2, file$r, 619, 20, 24126);
+    			add_location(p2, file$r, 1939, 20, 74699);
     			attr_dev(figure2, "class", "highcharts-figure");
-    			add_location(figure2, file$r, 617, 16, 24020);
+    			add_location(figure2, file$r, 1937, 16, 74593);
     			attr_dev(div7, "class", "tab-pane fade");
     			attr_dev(div7, "id", "list-5");
     			attr_dev(div7, "role", "tabpanel");
     			attr_dev(div7, "aria-labelledby", "list-profile-list");
-    			add_location(div7, file$r, 616, 12, 23911);
+    			add_location(div7, file$r, 1936, 12, 74484);
     			attr_dev(div8, "id", "container-4");
-    			add_location(div8, file$r, 626, 20, 24451);
+    			add_location(div8, file$r, 1946, 20, 75024);
     			attr_dev(p3, "class", "highcharts-description");
-    			add_location(p3, file$r, 627, 20, 24501);
+    			add_location(p3, file$r, 1947, 20, 75074);
     			attr_dev(figure3, "class", "highcharts-figure");
-    			add_location(figure3, file$r, 625, 16, 24395);
+    			add_location(figure3, file$r, 1945, 16, 74968);
     			attr_dev(div9, "class", "tab-pane fade");
     			attr_dev(div9, "id", "list-4");
     			attr_dev(div9, "role", "tabpanel");
     			attr_dev(div9, "aria-labelledby", "list-profile-list");
-    			add_location(div9, file$r, 624, 12, 24286);
+    			add_location(div9, file$r, 1944, 12, 74859);
     			attr_dev(div10, "id", "container-22");
-    			add_location(div10, file$r, 634, 20, 24827);
+    			add_location(div10, file$r, 1954, 20, 75400);
     			attr_dev(p4, "class", "highcharts-description");
-    			add_location(p4, file$r, 635, 20, 24878);
+    			add_location(p4, file$r, 1955, 20, 75451);
     			attr_dev(figure4, "class", "highcharts-figure");
-    			add_location(figure4, file$r, 633, 16, 24771);
+    			add_location(figure4, file$r, 1953, 16, 75344);
     			attr_dev(div11, "class", "tab-pane fade");
     			attr_dev(div11, "id", "list-22");
     			attr_dev(div11, "role", "tabpanel");
     			attr_dev(div11, "aria-labelledby", "list-profile-list");
-    			add_location(div11, file$r, 632, 12, 24661);
+    			add_location(div11, file$r, 1952, 12, 75234);
     			attr_dev(div12, "id", "container-28");
-    			add_location(div12, file$r, 642, 20, 25205);
+    			add_location(div12, file$r, 1962, 20, 75778);
     			attr_dev(p5, "class", "highcharts-description");
-    			add_location(p5, file$r, 643, 20, 25256);
+    			add_location(p5, file$r, 1963, 20, 75829);
     			attr_dev(figure5, "class", "highcharts-figure");
-    			add_location(figure5, file$r, 641, 16, 25149);
+    			add_location(figure5, file$r, 1961, 16, 75722);
     			attr_dev(div13, "class", "tab-pane fade");
     			attr_dev(div13, "id", "list-28");
     			attr_dev(div13, "role", "tabpanel");
     			attr_dev(div13, "aria-labelledby", "list-profile-list");
-    			add_location(div13, file$r, 640, 12, 25039);
-    			attr_dev(div14, "id", "container-ext");
-    			add_location(div14, file$r, 650, 20, 25584);
+    			add_location(div13, file$r, 1960, 12, 75612);
+    			attr_dev(div14, "id", "container-1");
+    			add_location(div14, file$r, 1970, 20, 76155);
     			attr_dev(p6, "class", "highcharts-description");
-    			add_location(p6, file$r, 651, 20, 25636);
+    			add_location(p6, file$r, 1971, 20, 76205);
     			attr_dev(figure6, "class", "highcharts-figure");
-    			add_location(figure6, file$r, 649, 16, 25528);
+    			add_location(figure6, file$r, 1969, 16, 76099);
     			attr_dev(div15, "class", "tab-pane fade");
-    			attr_dev(div15, "id", "list-ext");
+    			attr_dev(div15, "id", "list-1");
     			attr_dev(div15, "role", "tabpanel");
     			attr_dev(div15, "aria-labelledby", "list-profile-list");
-    			add_location(div15, file$r, 648, 12, 25417);
-    			attr_dev(div16, "class", "tab-content");
-    			attr_dev(div16, "id", "nav-tabContent");
-    			add_location(div16, file$r, 599, 10, 22998);
-    			attr_dev(div17, "class", "col-8");
-    			add_location(div17, file$r, 598, 8, 22967);
-    			attr_dev(div18, "class", "row");
-    			add_location(div18, file$r, 585, 4, 21554);
-    			add_location(main, file$r, 584, 0, 21542);
+    			add_location(div15, file$r, 1968, 12, 75990);
+    			attr_dev(div16, "id", "container-30");
+    			add_location(div16, file$r, 1978, 20, 76531);
+    			attr_dev(p7, "class", "highcharts-description");
+    			add_location(p7, file$r, 1979, 20, 76582);
+    			attr_dev(figure7, "class", "highcharts-figure");
+    			add_location(figure7, file$r, 1977, 16, 76475);
+    			attr_dev(div17, "class", "tab-pane fade");
+    			attr_dev(div17, "id", "list-30");
+    			attr_dev(div17, "role", "tabpanel");
+    			attr_dev(div17, "aria-labelledby", "list-profile-list");
+    			add_location(div17, file$r, 1976, 12, 76365);
+    			attr_dev(div18, "id", "container-23");
+    			add_location(div18, file$r, 1986, 20, 76909);
+    			attr_dev(p8, "class", "highcharts-description");
+    			add_location(p8, file$r, 1987, 20, 76960);
+    			attr_dev(figure8, "class", "highcharts-figure");
+    			add_location(figure8, file$r, 1985, 16, 76853);
+    			attr_dev(div19, "class", "tab-pane fade");
+    			attr_dev(div19, "id", "list-23");
+    			attr_dev(div19, "role", "tabpanel");
+    			attr_dev(div19, "aria-labelledby", "list-profile-list");
+    			add_location(div19, file$r, 1984, 12, 76743);
+    			attr_dev(div20, "id", "container-25");
+    			add_location(div20, file$r, 1994, 20, 77287);
+    			attr_dev(p9, "class", "highcharts-description");
+    			add_location(p9, file$r, 1995, 20, 77338);
+    			attr_dev(figure9, "class", "highcharts-figure");
+    			add_location(figure9, file$r, 1993, 16, 77231);
+    			attr_dev(div21, "class", "tab-pane fade");
+    			attr_dev(div21, "id", "list-25");
+    			attr_dev(div21, "role", "tabpanel");
+    			attr_dev(div21, "aria-labelledby", "list-profile-list");
+    			add_location(div21, file$r, 1992, 12, 77121);
+    			attr_dev(div22, "id", "container-8");
+    			add_location(div22, file$r, 2002, 20, 77664);
+    			attr_dev(p10, "class", "highcharts-description");
+    			add_location(p10, file$r, 2003, 20, 77714);
+    			attr_dev(figure10, "class", "highcharts-figure");
+    			add_location(figure10, file$r, 2001, 16, 77608);
+    			attr_dev(div23, "class", "tab-pane fade");
+    			attr_dev(div23, "id", "list-8");
+    			attr_dev(div23, "role", "tabpanel");
+    			attr_dev(div23, "aria-labelledby", "list-profile-list");
+    			add_location(div23, file$r, 2000, 12, 77499);
+    			attr_dev(div24, "id", "container-6");
+    			add_location(div24, file$r, 2010, 20, 78039);
+    			attr_dev(p11, "class", "highcharts-description");
+    			add_location(p11, file$r, 2011, 20, 78089);
+    			attr_dev(figure11, "class", "highcharts-figure");
+    			add_location(figure11, file$r, 2009, 16, 77983);
+    			attr_dev(div25, "class", "tab-pane fade");
+    			attr_dev(div25, "id", "list-6");
+    			attr_dev(div25, "role", "tabpanel");
+    			attr_dev(div25, "aria-labelledby", "list-profile-list");
+    			add_location(div25, file$r, 2008, 12, 77874);
+    			attr_dev(div26, "id", "container-ext1");
+    			add_location(div26, file$r, 2019, 20, 78431);
+    			attr_dev(p12, "class", "highcharts-description");
+    			add_location(p12, file$r, 2020, 20, 78484);
+    			attr_dev(figure12, "class", "highcharts-figure");
+    			add_location(figure12, file$r, 2018, 16, 78375);
+    			attr_dev(div27, "class", "tab-pane fade");
+    			attr_dev(div27, "id", "list-ext1");
+    			attr_dev(div27, "role", "tabpanel");
+    			attr_dev(div27, "aria-labelledby", "list-profile-list");
+    			add_location(div27, file$r, 2017, 12, 78263);
+    			attr_dev(div28, "id", "container-ext2");
+    			add_location(div28, file$r, 2028, 20, 78924);
+    			attr_dev(p13, "class", "highcharts-description");
+    			add_location(p13, file$r, 2029, 20, 78977);
+    			attr_dev(figure13, "class", "highcharts-figure");
+    			add_location(figure13, file$r, 2027, 16, 78868);
+    			attr_dev(div29, "class", "tab-pane fade");
+    			attr_dev(div29, "id", "list-ext2");
+    			attr_dev(div29, "role", "tabpanel");
+    			attr_dev(div29, "aria-labelledby", "list-profile-list");
+    			add_location(div29, file$r, 2026, 12, 78756);
+    			attr_dev(div30, "class", "tab-content");
+    			attr_dev(div30, "id", "nav-tabContent");
+    			add_location(div30, file$r, 1919, 10, 73571);
+    			attr_dev(div31, "class", "col-8");
+    			add_location(div31, file$r, 1918, 8, 73540);
+    			attr_dev(div32, "class", "row");
+    			add_location(div32, file$r, 1895, 4, 70851);
+    			add_location(p14, file$r, 2038, 6, 79277);
+    			add_location(main, file$r, 1894, 0, 70839);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
-    			append_dev(main, div18);
-    			append_dev(div18, div1);
+    			append_dev(main, div32);
+    			append_dev(div32, div1);
     			append_dev(div1, div0);
     			append_dev(div0, a0);
     			append_dev(div0, t1);
@@ -21012,51 +21269,109 @@ var app = (function () {
     			append_dev(div0, a5);
     			append_dev(div0, t11);
     			append_dev(div0, a6);
-    			append_dev(div18, t13);
-    			append_dev(div18, div17);
-    			append_dev(div17, div16);
-    			append_dev(div16, div3);
+    			append_dev(div0, t13);
+    			append_dev(div0, a7);
+    			append_dev(div0, t15);
+    			append_dev(div0, a8);
+    			append_dev(div0, t17);
+    			append_dev(div0, a9);
+    			append_dev(div0, t19);
+    			append_dev(div0, a10);
+    			append_dev(div0, t21);
+    			append_dev(div0, a11);
+    			append_dev(div0, t23);
+    			append_dev(div0, a12);
+    			append_dev(div0, t25);
+    			append_dev(div0, a13);
+    			append_dev(div32, t27);
+    			append_dev(div32, div31);
+    			append_dev(div31, div30);
+    			append_dev(div30, div3);
     			append_dev(div3, figure0);
     			append_dev(figure0, div2);
-    			append_dev(figure0, t14);
+    			append_dev(figure0, t28);
     			append_dev(figure0, p0);
-    			append_dev(div16, t16);
-    			append_dev(div16, div5);
+    			append_dev(div30, t30);
+    			append_dev(div30, div5);
     			append_dev(div5, figure1);
     			append_dev(figure1, div4);
-    			append_dev(figure1, t17);
+    			append_dev(figure1, t31);
     			append_dev(figure1, p1);
-    			append_dev(div16, t19);
-    			append_dev(div16, div7);
+    			append_dev(div30, t33);
+    			append_dev(div30, div7);
     			append_dev(div7, figure2);
     			append_dev(figure2, div6);
-    			append_dev(figure2, t20);
+    			append_dev(figure2, t34);
     			append_dev(figure2, p2);
-    			append_dev(div16, t22);
-    			append_dev(div16, div9);
+    			append_dev(div30, t36);
+    			append_dev(div30, div9);
     			append_dev(div9, figure3);
     			append_dev(figure3, div8);
-    			append_dev(figure3, t23);
+    			append_dev(figure3, t37);
     			append_dev(figure3, p3);
-    			append_dev(div16, t25);
-    			append_dev(div16, div11);
+    			append_dev(div30, t39);
+    			append_dev(div30, div11);
     			append_dev(div11, figure4);
     			append_dev(figure4, div10);
-    			append_dev(figure4, t26);
+    			append_dev(figure4, t40);
     			append_dev(figure4, p4);
-    			append_dev(div16, t28);
-    			append_dev(div16, div13);
+    			append_dev(div30, t42);
+    			append_dev(div30, div13);
     			append_dev(div13, figure5);
     			append_dev(figure5, div12);
-    			append_dev(figure5, t29);
+    			append_dev(figure5, t43);
     			append_dev(figure5, p5);
-    			append_dev(div16, t31);
-    			append_dev(div16, div15);
+    			append_dev(div30, t45);
+    			append_dev(div30, div15);
     			append_dev(div15, figure6);
     			append_dev(figure6, div14);
-    			append_dev(figure6, t32);
+    			append_dev(figure6, t46);
     			append_dev(figure6, p6);
-    			append_dev(main, t34);
+    			append_dev(div30, t48);
+    			append_dev(div30, div17);
+    			append_dev(div17, figure7);
+    			append_dev(figure7, div16);
+    			append_dev(figure7, t49);
+    			append_dev(figure7, p7);
+    			append_dev(div30, t51);
+    			append_dev(div30, div19);
+    			append_dev(div19, figure8);
+    			append_dev(figure8, div18);
+    			append_dev(figure8, t52);
+    			append_dev(figure8, p8);
+    			append_dev(div30, t54);
+    			append_dev(div30, div21);
+    			append_dev(div21, figure9);
+    			append_dev(figure9, div20);
+    			append_dev(figure9, t55);
+    			append_dev(figure9, p9);
+    			append_dev(div30, t57);
+    			append_dev(div30, div23);
+    			append_dev(div23, figure10);
+    			append_dev(figure10, div22);
+    			append_dev(figure10, t58);
+    			append_dev(figure10, p10);
+    			append_dev(div30, t60);
+    			append_dev(div30, div25);
+    			append_dev(div25, figure11);
+    			append_dev(figure11, div24);
+    			append_dev(figure11, t61);
+    			append_dev(figure11, p11);
+    			append_dev(div30, t63);
+    			append_dev(div30, div27);
+    			append_dev(div27, figure12);
+    			append_dev(figure12, div26);
+    			append_dev(figure12, t64);
+    			append_dev(figure12, p12);
+    			append_dev(div30, t66);
+    			append_dev(div30, div29);
+    			append_dev(div29, figure13);
+    			append_dev(figure13, div28);
+    			append_dev(figure13, t67);
+    			append_dev(figure13, p13);
+    			append_dev(main, t69);
+    			append_dev(main, p14);
+    			append_dev(main, t70);
     			mount_component(button, main, null);
     			current = true;
     		},
@@ -21266,8 +21581,9 @@ var app = (function () {
     The first 0 is the index of "Country" in the array of countries
 
     */
+    	/* In the filter we put Spain to get only the Spain data and the years that are present in both APIs */
     	MyData = MyData.filter(d => {
-    		return d.country == "Spain";
+    		return d.country == "Spain" && Data4.find(d4 => d4.year == d.year);
     	}).map(d => {
     		return [
     			countries.indexOf(d.country),
@@ -21278,13 +21594,20 @@ var app = (function () {
     		];
     	});
 
+    	let ModifiedData = [];
+
     	for (let i = 0; i < MyData.length; i++) {
-    		let dataMatchesYear = Data4.find(d => d.year == MyData[i][1]);
-
-    		/* The first parameter of splice is the position and the second the numbers of elements to delete */
-    		MyData[i].splice(1, 0, provinces.indexOf(dataMatchesYear.province));
-
-    		MyData[i].push(dataMatchesYear["car"]);
+    		Data4.filter(d => d.year == MyData[i][1]).forEach(dataMatchesYear => {
+    			ModifiedData.push([
+    				MyData[i][0],
+    				provinces.indexOf(dataMatchesYear.province),
+    				MyData[i][1],
+    				MyData[i][2],
+    				MyData[i][3],
+    				MyData[i][4],
+    				dataMatchesYear["car"]
+    			]);
+    		});
     	}
 
     	/* 
@@ -21495,7 +21818,1092 @@ var app = (function () {
     	});
     }
 
-    async function loadGraphExt() {
+    async function loadGraph5() {
+    	console.log("Loading 5");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_5 = "/api/v1/books-exports";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData5 = await fetch(BASE_API_URL_5);
+    	let MyData = await resData.json();
+    	let Data5 = await resData5.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country.toLowerCase();
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.map(d => {
+    		return [
+    			countries.indexOf(d.country.toLowerCase()),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	MyData = MyData.filter(d => {
+    		return Data5.find(d5 => d5.country == countries[d[0]] && parseInt(d5.year) == d[1]);
+    	}).map(d => {
+    		return [
+    			d[0],
+    			d[1],
+    			d[2],
+    			d[3],
+    			d[4],
+    			Data5.find(d5 => d5.country == countries[d[0]] && parseInt(d5.year) == d[1])["exp_book"]
+    		];
+    	});
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MyData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-5", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: {
+    			text: "Energías renovables y exportación de libros"
+    		},
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Exportación de libros"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraph22() {
+    	console.log("Loading 22");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_22 = "https://sos1920-22.herokuapp.com/api/v2/formula-stats";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData22 = await fetch(BASE_API_URL_22);
+    	let MyData = await resData.json();
+    	let Data22 = await resData22.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country.toLowerCase();
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.map(d => {
+    		return [
+    			countries.indexOf(d.country.toLowerCase()),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	MyData = MyData.filter(d => {
+    		return Data22.find(d22 => d22.country == countries[d[0]] && parseInt(d22.year) == d[1]);
+    	}).map(d => {
+    		return [
+    			d[0],
+    			d[1],
+    			d[2],
+    			d[3],
+    			d[4],
+    			Data22.find(d22 => d22.country == countries[d[0]] && parseInt(d22.year) == d[1])["victorynumber"]
+    		];
+    	});
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MyData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-22", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: {
+    			text: "Energías renovables y victorias de fórmula 1"
+    		},
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Victorias en fórmula 1"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraph6() {
+    	console.log("Loading 6");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_6 = "/api/v2/lottery-sales";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData6 = await fetch(BASE_API_URL_6);
+    	let MyData = await resData.json();
+    	let Data6 = await resData6.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country;
+    		})));
+
+    	let provinces = Array.from(new Set(Data6.map(d => {
+    			return d.province;
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.filter(d => {
+    		return d.country == "Spain" && Data6.find(d4 => d4.year == d.year);
+    	}).map(d => {
+    		return [
+    			countries.indexOf(d.country),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	let ModifiedData = [];
+
+    	for (let i = 0; i < MyData.length; i++) {
+    		Data6.filter(d => d.year == MyData[i][1]).forEach(dataMatchesYear => {
+    			ModifiedData.push([
+    				MyData[i][0],
+    				provinces.indexOf(dataMatchesYear.province),
+    				MyData[i][1],
+    				MyData[i][2],
+    				MyData[i][3],
+    				MyData[i][4],
+    				dataMatchesYear["total"]
+    			]);
+    		});
+    	}
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = ModifiedData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-6", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: {
+    			text: "Energías renovables y número de coches"
+    		},
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Provincias",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Número de loterías vendidas"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{
+    				categories: provinces,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraph1() {
+    	console.log("Loading 1");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_1 = "/api/v2/natality-stats";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData1 = await fetch(BASE_API_URL_1);
+    	let MyData = await resData.json();
+    	let Data1 = await resData1.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country.toLowerCase();
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.map(d => {
+    		return [
+    			countries.indexOf(d.country.toLowerCase()),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	MyData = MyData.filter(d => {
+    		return Data1.find(d1 => d1.country == countries[d[0]] && parseInt(d1.year) == d[1]);
+    	}).map(d => {
+    		return [
+    			d[0],
+    			d[1],
+    			d[2],
+    			d[3],
+    			d[4],
+    			Data1.find(d1 => d1.country == countries[d[0]] && parseInt(d1.year) == d[1])["natality_totals"]
+    		];
+    	});
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MyData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-1", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: { text: "Energías renovables y natalidad" },
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Número de nacimientos"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraph30() {
+    	console.log("Loading 30");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_30 = "https://sos1920-30.herokuapp.com/api/v3/sugarconsume";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData30 = await fetch(BASE_API_URL_30);
+    	let MyData = await resData.json();
+    	let Data30 = await resData30.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let years = Array.from(new Set(MyData.map(d => {
+    			return d.year;
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	let MeanData = [];
+
+    	years.filter(y => {
+    		return Data30.find(d30 => d30.year == y);
+    	}).forEach(y => {
+    		let totalSugar = Data30.filter(d => {
+    			return d.year == y;
+    		}).map(d => {
+    			return d["sugarconsume"];
+    		}).reduce((accumulator, currentValue) => accumulator + currentValue);
+
+    		let reAverrage = MyData.filter(d => {
+    			return d.year == y;
+    		}).map(d => {
+    			return d["percentage-re-total"];
+    		}).reduce((accumulator, currentValue) => accumulator + currentValue) / MyData.filter(d => {
+    			return d.year == y;
+    		}).length;
+
+    		let hydropowerAverrage = MyData.filter(d => {
+    			return d.year == y;
+    		}).map(d => {
+    			return d["percentage-hydropower-total"];
+    		}).reduce((accumulator, currentValue) => accumulator + currentValue) / MyData.filter(d => {
+    			return d.year == y;
+    		}).length;
+
+    		let windAverrage = MyData.filter(d => {
+    			return d.year == y;
+    		}).map(d => {
+    			return d["percentage-wind-power-total"];
+    		}).reduce((accumulator, currentValue) => accumulator + currentValue) / MyData.filter(d => {
+    			return d.year == y;
+    		}).length;
+
+    		MeanData.push([y, reAverrage, hydropowerAverrage, windAverrage, totalSugar]);
+    	});
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MeanData.map(function (set, i) {
+    		return { name: set[0], data: set, shadow: false };
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-30", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: {
+    			text: "Energías renovables y azúcar consumido"
+    		},
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Kilos de azúcar consumidos"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			,{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraph23() {
+    	console.log("Loading 23");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_23 = "/api/v2/cigarretes-sales";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData23 = await fetch(BASE_API_URL_23);
+    	let MyData = await resData.json();
+    	let Data23 = await resData23.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country;
+    		})));
+
+    	let provinces = Array.from(new Set(Data23.map(d => {
+    			return d.community;
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.filter(d => {
+    		return d.country == "Spain" && Data23.find(d4 => d4.year == d.year);
+    	}).map(d => {
+    		return [
+    			countries.indexOf(d.country),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	let ModifiedData = [];
+
+    	for (let i = 0; i < MyData.length; i++) {
+    		Data23.filter(d => d.year == MyData[i][1]).forEach(dataMatchesYear => {
+    			ModifiedData.push([
+    				MyData[i][0],
+    				provinces.indexOf(dataMatchesYear.community),
+    				MyData[i][1],
+    				MyData[i][2],
+    				MyData[i][3],
+    				MyData[i][4],
+    				dataMatchesYear["cigarrete_sale"]
+    			]);
+    		});
+    	}
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = ModifiedData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-23", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: { text: "Energías renovables y tabaco" },
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Provincias",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Ventas de cigarrillos de tabaco"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{
+    				categories: provinces,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraph25() {
+    	console.log("Loading 25");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_25 = "/api/v2/happiness_rate";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData25 = await fetch(BASE_API_URL_25);
+    	let MyData = await resData.json();
+    	let Data25 = await resData25.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country.toLowerCase();
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.map(d => {
+    		return [
+    			countries.indexOf(d.country.toLowerCase()),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	MyData = MyData.filter(d => {
+    		return Data25.find(d25 => d25.country.toLowerCase() == countries[d[0]] && parseInt(d25.year) == d[1]);
+    	}).map(d => {
+    		return [
+    			d[0],
+    			d[1],
+    			d[2],
+    			d[3],
+    			d[4],
+    			Data25.find(d25 => d25.country.toLowerCase() == countries[d[0]] && parseInt(d25.year) == d[1])["happinessRanking"]
+    		];
+    	});
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MyData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-25", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: {
+    			text: "Energías renovables y nivel de felicidad"
+    		},
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Ranking en felicidad"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraph8() {
+    	console.log("Loading 8");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_8 = "/api/v1/motogp-statistics";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData8 = await fetch(BASE_API_URL_8);
+    	let MyData = await resData.json();
+    	let Data8 = await resData8.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country;
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	console.log(MyData);
+
+    	MyData = MyData.map(d => {
+    		return [
+    			countries.indexOf(d.country),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	console.log(MyData);
+
+    	MyData = MyData.filter(d => {
+    		return Data8.find(d8 => d8.country == countries[d[0]]);
+    	}).map(d => {
+    		return [
+    			d[0],
+    			d[1],
+    			d[2],
+    			d[3],
+    			d[4],
+    			Data8.find(d8 => d8.country == countries[d[0]])["world_title"]
+    		];
+    	});
+
+    	console.log(MyData);
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MyData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-8", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: { text: "Energías renovables y motoGP" },
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Títulos mundiales"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraphExt1() {
     	console.log("Loading external api");
 
     	/* Asking for the data to the back */
@@ -21573,7 +22981,7 @@ var app = (function () {
     	});
 
     	/* Setting the chart */
-    	Highcharts.chart("container-ext", {
+    	Highcharts.chart("container-ext1", {
     		chart: {
     			type: "spline",
     			parallelCoordinates: true,
@@ -21624,11 +23032,157 @@ var app = (function () {
     	});
     }
 
+    async function loadGraphExt2() {
+    	console.log("Loading external api");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_EXT = "/v1/Country/getCountries";
+    	const resData = await fetch(BASE_API_URL);
+    	const resDataExt = await fetch(BASE_API_URL_EXT);
+    	let MyData = await resData.json();
+    	let DataExt = await resDataExt.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country;
+    		})));
+
+    	let currencies = Array.from(new Set(DataExt.Response.map(d => {
+    			return d["CurrencyName"];
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.map(d => {
+    		return [
+    			countries.indexOf(d.country),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	MyData = MyData.filter(d => {
+    		return DataExt.Response.find(dext => dext.Name == countries[d[0]]);
+    	}).map(d => {
+    		return [
+    			d[0],
+    			d[1],
+    			d[2],
+    			d[3],
+    			d[4],
+    			currencies.indexOf(DataExt.Response.find(dext => dext.Name == countries[d[0]])["CurrencyName"])
+    		];
+    	});
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MyData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-ext2", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: { text: "Energías renovables y monedas" },
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Moneda"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{
+    				categories: currencies,
+    				tooltipValueFormat: "{value}"
+    			}
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
     function instance$s($$self, $$props, $$invalidate) {
     	loadGraph7();
     	loadGraph4();
     	loadGraph27();
-    	loadGraphExt();
+    	loadGraph5(); // [proxy] bookexports
+    	loadGraph22();
+    	loadGraph6(); // [proxy] lottery
+    	loadGraph1(); // [proxy] natality
+    	loadGraph30();
+    	loadGraph23(); // [proxy] cigarettes
+    	loadGraph25(); // [proxy] happiness rate
+    	loadGraph8(); // [proxy] motogp
+    	loadGraphExt1();
+    	loadGraphExt2();
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -21644,7 +23198,16 @@ var app = (function () {
     		loadGraph7,
     		loadGraph4,
     		loadGraph27,
-    		loadGraphExt
+    		loadGraph5,
+    		loadGraph22,
+    		loadGraph6,
+    		loadGraph1,
+    		loadGraph30,
+    		loadGraph23,
+    		loadGraph25,
+    		loadGraph8,
+    		loadGraphExt1,
+    		loadGraphExt2
     	});
 
     	return [];

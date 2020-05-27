@@ -1,4 +1,4 @@
-module.exports = function (app) {
+module.exports = function (app, port) {
 	/* Lodash helps us with the deepCopy */
 	var _ = require('lodash');
 	// For JWT auth
@@ -134,7 +134,7 @@ module.exports = function (app) {
 
 		}];
 	
-		// Login for the JWT auth
+	// Login for the JWT auth
 	app.use(bodyParser.urlencoded({extended: false}))
 	app.use(bodyParser.json({limit:'10mb'}))
 
@@ -151,42 +151,18 @@ module.exports = function (app) {
 	  
 		var tokenData = {
 		  username: username
-		  // ANY DATA
 		}
 	  
 		var token = jwt.sign(tokenData, 'Secret Password', {
 		   expiresIn: 60 * 60 * 24 // expires in 24 hours
-		})
+		});
 	  
 		res.send({
 		  token
-		})
+		});
 	  });
 
-	// Securized site
-	app.get(BASE_API_URL+'/renewable-sources-stats/secure', (req, res) => {
-		var token = req.headers['authorization']
-		if(!token){
-			res.status(401).send({
-			  error: "Es necesario el token de autenticación"
-			})
-			return
-		}
-	
-		token = token.replace('Bearer ', '')
-	
-		jwt.verify(token, 'Secret Password', function(err, user) {
-		  if (err) {
-			res.status(401).send({
-			  error: 'Token inválido'
-			})
-		  } else {
-			res.send({
-			  message: 'Awwwww yeah!!!!'
-			})
-		  }
-		})
-	});
+
 
 
 	/* Adding the element 1 by one because a lokijs problem, that in loadInitial said document already added */
@@ -195,59 +171,114 @@ module.exports = function (app) {
 	db.saveDatabase();
 
 	app.get(BASE_API_URL+"/renewable-sources-stats/loadInitialData", (req, res) => {
-		db.removeCollection('stats'); 
-		db.saveDatabase();
-		initialData.forEach((d) => {  db.addCollection('stats').insert(_.cloneDeep(d)); });
-		db.saveDatabase();
-		res.sendStatus(200);
+		var token = req.headers['authorization'];
+		if(!token){
+			res.status(401).send({
+			  error: "Es necesario el token de autenticación"
+			});
+			return;
+		}
+	
+		token = token.replace('Bearer ', '');
+	
+		jwt.verify(token, 'Secret Password', function(err, user) {
+			if (err) {
+				res.status(401).send({
+				error: 'Token inválido'
+				});
+			} else {
+				db.removeCollection('stats'); 
+				db.saveDatabase();
+				initialData.forEach((d) => {  db.addCollection('stats').insert(_.cloneDeep(d)); });
+				db.saveDatabase();
+				res.sendStatus(200);
+				
+				console.log("Initial renewable source stats loaded");
 
-		console.log("Initial renewable source stats loaded");
+			}
+		});
 	});
 
 
 	app.get(BASE_API_URL+"/renewable-sources-stats", (req, res) => {
 
-		console.log("New GET .../renewable-sources-stats");
-
-		var query = req.query;
-		//console.log("Query: " +  query.year + query.country);
-		
-		// Casting the String in Integer to compare data in the "find"  query
-		// We have to check that the json from the query has the property "year"
-		if (query.hasOwnProperty("year")) {
-			query.year = parseInt(query.year); 
+		var token = req.headers['authorization'];
+		if(!token){
+			res.status(401).send({
+			  error: "Es necesario el token de autenticación"
+			});
+			return;
 		}
+	
+		token = token.replace('Bearer ', '');
+	
+		jwt.verify(token, 'Secret Password', function(err, user) {
+			if (err) {
+				res.status(401).send({
+				error: 'Token inválido'
+				});
+			} else {
+				console.log("New GET .../renewable-sources-stats");
 
-		// Getting the offset and limit from the url
-		var limit = query.limit;
-		var offset = query.offset;
+				var query = req.query;
+				//console.log("Query: " +  query.year + query.country);
+				
+				// Casting the String in Integer to compare data in the "find"  query
+				// We have to check that the json from the query has the property "year"
+				if (query.hasOwnProperty("year")) {
+					query.year = parseInt(query.year); 
+				}
 
-		// Removing extra query field of pagination
-		delete query.offset;
-		delete query.limit;
+				// Getting the offset and limit from the url
+				var limit = query.limit;
+				var offset = query.offset;
 
-		// With offset we make the offset and with the limit we limit
+				// Removing extra query field of pagination
+				delete query.offset;
+				delete query.limit;
 
-		var data = db.addCollection('stats').chain().find(query).limit(limit).offset(offset).data();
-		/* Using clone deep to preserve meta, not enought shallow copy */
-		var results = _.cloneDeep(data);
+				// With offset we make the offset and with the limit we limit
 
-		results.forEach((d) => {
-			delete d.meta;
-			delete d["$loki"];
+				var data = db.addCollection('stats').chain().find(query).limit(limit).offset(offset).data();
+				/* Using clone deep to preserve meta, not enought shallow copy */
+				var results = _.cloneDeep(data);
+
+				results.forEach((d) => {
+					delete d.meta;
+					delete d["$loki"];
+				});
+				
+				res.send(JSON.stringify(results, null, 2)); 
+				console.log("OK.");
+
+				//console.log(results);
+				//console.log(db.addCollection('stats').chain().find(query).limit(limit).offset(offset).data());
+			}
 		});
-		
-		res.send(JSON.stringify(results, null, 2)); 
-		console.log("OK.");
-
-		//console.log(results);
-		//console.log(db.addCollection('stats').chain().find(query).limit(limit).offset(offset).data());
 	});
 
 	// POST renewableSourcesStats
 
 	app.post(BASE_API_URL+"/renewable-sources-stats", (req, res) => {
+		var token = req.headers['authorization'];
+		if(!token){
+			res.status(401).send({
+			  error: "Es necesario el token de autenticación"
+			});
+			return;
+		}
+	
+		token = token.replace('Bearer ', '');
+	
+		jwt.verify(token, 'Secret Password', function(err, user) {
+			if (err) {
+				res.status(401).send({
+				error: 'Token inválido'
+				});
+			} else {
 
+			}
+		});
 		var newRenewableSourcesStat = req.body;
 		//console.log(renewableSourcesStats);
 
@@ -295,6 +326,25 @@ module.exports = function (app) {
 	// DELETE renewableSourcesStats
 
 	app.delete(BASE_API_URL+"/renewable-sources-stats", (req, res) => {	
+		var token = req.headers['authorization'];
+		if(!token){
+			res.status(401).send({
+			  error: "Es necesario el token de autenticación"
+			});
+			return;
+		}
+	
+		token = token.replace('Bearer ', '');
+	
+		jwt.verify(token, 'Secret Password', function(err, user) {
+			if (err) {
+				res.status(401).send({
+				error: 'Token inválido'
+				});
+			} else {
+
+			}
+		});
 		db.removeCollection('stats');
 		db.addCollection('stats');
 		db.saveDatabase();
@@ -322,6 +372,25 @@ module.exports = function (app) {
 	// GET renewableSourcesStats/XXX
 
 	app.get(BASE_API_URL+"/renewable-sources-stats/:country/:year", (req, res) => {
+		var token = req.headers['authorization'];
+		if(!token){
+			res.status(401).send({
+			  error: "Es necesario el token de autenticación"
+			});
+			return;
+		}
+	
+		token = token.replace('Bearer ', '');
+	
+		jwt.verify(token, 'Secret Password', function(err, user) {
+			if (err) {
+				res.status(401).send({
+				error: 'Token inválido'
+				});
+			} else {
+
+			}
+		})
 
 		var year = req.params.year; 
 		var country = req.params.country; 
@@ -352,52 +421,68 @@ module.exports = function (app) {
 	// GET renewableSourcesStats/XXX
 
 	app.get(BASE_API_URL+"/renewable-sources-stats/:param", (req, res) => {
-		
-		var param = req.params.param;
-		
-		var query = {};
-		
-		// Checking if we can parse the param, if so, it's a country
-		// And the query is just to specify the country
-		if (isNaN(parseInt(param))) {
-			query = {country: param};
-			
-		} else {
-			query = {year: parseInt(param)};
-			
-		}
-
-		var results = _.cloneDeep(db.addCollection('stats').find(query));
-
-
-		if (results.length > 1) {
-			results.forEach((r) => {
-				delete r.meta;
-				delete r["$loki"];
+		var token = req.headers['authorization'];
+		if(!token){
+			res.status(401).send({
+			  error: "Es necesario el token de autenticación"
 			});
-
-			res.send(JSON.stringify(results, null, 2)); 
-			console.log("Data sent: " + JSON.stringify(results, null, 2));
-			
+			return;
 		}
-		// We consider the posibility of returning just 1 element and return a JSON and not an array
-			
-		else if (results.length == 1) {
-			delete results[0].meta;
-			delete results[0]["$loki"];
+	
+		token = token.replace('Bearer ', '');
+	
+		jwt.verify(token, 'Secret Password', function(err, user) {
+			if (err) {
+				res.status(401).send({
+				error: 'Token inválido'
+				});
+			} else {		
+				var param = req.params.param;
+				
+				var query = {};
+				
+				// Checking if we can parse the param, if so, it's a country
+				// And the query is just to specify the country
+				if (isNaN(parseInt(param))) {
+					query = {country: param};
+					
+				} else {
+					query = {year: parseInt(param)};
+					
+				}
 
-			
-			res.send(JSON.stringify(results[0], null, 2)); 
-			console.log("Data sent: " + JSON.stringify(results[0], null, 2));
-			
-		}
-			
-		else {
-			res.sendStatus(404, "NOT FOUND");
-		}
+				var results = _.cloneDeep(db.addCollection('stats').find(query));
 
-		console.log("OK.");
 
+				if (results.length > 1) {
+					results.forEach((r) => {
+						delete r.meta;
+						delete r["$loki"];
+					});
+
+					res.send(JSON.stringify(results, null, 2)); 
+					console.log("Data sent: " + JSON.stringify(results, null, 2));
+					
+				}
+				// We consider the posibility of returning just 1 element and return a JSON and not an array
+					
+				else if (results.length == 1) {
+					delete results[0].meta;
+					delete results[0]["$loki"];
+
+					
+					res.send(JSON.stringify(results[0], null, 2)); 
+					console.log("Data sent: " + JSON.stringify(results[0], null, 2));
+					
+				}
+					
+				else {
+					res.sendStatus(404, "NOT FOUND");
+				}
+
+				console.log("OK.");
+			}
+		});
 	});
 
 
@@ -417,39 +502,56 @@ module.exports = function (app) {
 
 	// PUT renewableSourcesStats/XXX
 	app.put(BASE_API_URL+"/renewable-sources-stats/:country/:year", (req,res) =>{
-
-		var params = req.params;
-		var year = params.year;
-		var country = params.country;
-
-		var body = req.body;
-
-		var query = {country: country, year: parseInt(year)};		
-		var beforeRemoving = db.addCollection('stats').find(query);
-
-		if (beforeRemoving.length == 0) {
-			res.sendStatus(404, "NOT FOUND");
-		} else {
-			 /* 
-			 We had some problems with the remove function, so we remove the entire collection and 
-			 add the elements not removed
-			 */
-			var results = db.addCollection('stats').where((d) => {
-				return d.country != country || d.year != parseInt(year) ;
+		var token = req.headers['authorization'];
+		if(!token){
+			res.status(401).send({
+			  error: "Es necesario el token de autenticación"
 			});
-			
-			var r = db.addCollection('stats').find(query)[0];
-			
-			r["percentage-re-total"] = body["percentage-re-total"];
-			r["percentage-hydropower-total"] = body["percentage-hydropower-total"];
-			r["percentage-wind-power-total"] = body["percentage-wind-power-total"];
-			console.log(r);
-
-			db.addCollection('stats').update(r);
-			res.sendStatus(200, "OK");
-
-
+			return;
 		}
+	
+		token = token.replace('Bearer ', '');
+	
+		jwt.verify(token, 'Secret Password', function(err, user) {
+			if (err) {
+				res.status(401).send({
+				error: 'Token inválido'
+				});
+			} else {
+				var params = req.params;
+				var year = params.year;
+				var country = params.country;
+
+				var body = req.body;
+
+				var query = {country: country, year: parseInt(year)};		
+				var beforeRemoving = db.addCollection('stats').find(query);
+
+				if (beforeRemoving.length == 0) {
+					res.sendStatus(404, "NOT FOUND");
+				} else {
+					/* 
+					We had some problems with the remove function, so we remove the entire collection and 
+					add the elements not removed
+					*/
+					var results = db.addCollection('stats').where((d) => {
+						return d.country != country || d.year != parseInt(year) ;
+					});
+					
+					var r = db.addCollection('stats').find(query)[0];
+					
+					r["percentage-re-total"] = body["percentage-re-total"];
+					r["percentage-hydropower-total"] = body["percentage-hydropower-total"];
+					r["percentage-wind-power-total"] = body["percentage-wind-power-total"];
+					console.log(r);
+
+					db.addCollection('stats').update(r);
+					res.sendStatus(200, "OK");
+
+
+				}
+			}
+		});
 
 	}); 
 
@@ -458,85 +560,120 @@ module.exports = function (app) {
 	// DELETE renewableSourcesStats/XXX
 
 	app.delete(BASE_API_URL+"/renewable-sources-stats/:country/:year",(req,res) =>{
-
-		var country = req.params.country;
-		var year = req.params.year;
-		
-		var query = {country: country, year: parseInt(year)};
-		var beforeRemoving = db.addCollection('stats').find(query);
-
-		if (beforeRemoving.length == 0) {
-			res.sendStatus(404, "NOT FOUND");
-		} else {
-			 /* 
-			 We had some problems with the remove function, so we remove the entire collection and 
-			 add the elements not removed
-			 */
-
-			var r = db.addCollection('stats').find(query)[0];
-			
-			console.log(r);
-			db.addCollection('stats').remove(r);
-		
-
-			
-			db.saveDatabase();		
-			
-			var searchDeletedData = db.addCollection('stats').find(query);
-
-			res.sendStatus(200, "OK");
-
-			
+		var token = req.headers['authorization'];
+		if(!token){
+			res.status(401).send({
+			  error: "Es necesario el token de autenticación"
+			});
+			return;
 		}
-		
+	
+		token = token.replace('Bearer ', '');
+	
+		jwt.verify(token, 'Secret Password', function(err, user) {
+			if (err) {
+				res.status(401).send({
+				error: 'Token inválido'
+				});
+			} else {
 
+				var country = req.params.country;
+				var year = req.params.year;
+				
+				var query = {country: country, year: parseInt(year)};
+				var beforeRemoving = db.addCollection('stats').find(query);
+
+				if (beforeRemoving.length == 0) {
+					res.sendStatus(404, "NOT FOUND");
+				} else {
+					/* 
+					We had some problems with the remove function, so we remove the entire collection and 
+					add the elements not removed
+					*/
+
+					var r = db.addCollection('stats').find(query)[0];
+					
+					console.log(r);
+					db.addCollection('stats').remove(r);
+				
+
+					
+					db.saveDatabase();		
+					
+					var searchDeletedData = db.addCollection('stats').find(query);
+
+					res.sendStatus(200, "OK");
+
+					
+				}
+		
+			}
+		})
 	});
 
 	app.delete(BASE_API_URL+"/renewable-sources-stats/:param",(req,res) =>{
-
-		var param = req.params.param;
-		
-		var query = {};
-		
-		// Checking if we can parse the param, if so, it's a country
-		// And the query is just to specify the country
-		if (isNaN(parseInt(param))) {
-			query = { country: param };
-		} else {
-			query = { year: parseInt(param) };
+		var token = req.headers['authorization'];
+		if(!token){
+			res.status(401).send({
+			  error: "Es necesario el token de autenticación"
+			});
+			return;
 		}
-
-		
-		
-		var beforeRemoving = db.addCollection('stats').find(query);
-
-		if (beforeRemoving.length == 0) {
-			res.sendStatus(404, "NOT FOUND");
-		} else if (beforeRemoving.length == 1) {
-
 	
-			
-			var r = db.addCollection('stats').find(query)[0];
-			
-			console.log(r);
-			db.addCollection('stats').remove(r);
+		token = token.replace('Bearer ', '');
+	
+		jwt.verify(token, 'Secret Password', function(err, user) {
+			if (err) {
+				res.status(401).send({
+				error: 'Token inválido'
+				});
+			} else {
 
-			res.sendStatus(200, "OK");
-		
-		} else {
-			for (let i = 0; i < beforeRemoving.length; i++) {
+				var param = req.params.param;
 				
+				var query = {};
 				
-				var r = db.addCollection('stats').find(query)[0];
-				
-				console.log(r);
-				db.addCollection('stats').remove(r);
+				// Checking if we can parse the param, if so, it's a country
+				// And the query is just to specify the country
+				if (isNaN(parseInt(param))) {
+					query = { country: param };
+				} else {
+					query = { year: parseInt(param) };
+				}
 
-				res.sendStatus(200, "OK");
+				
+				
+				var beforeRemoving = db.addCollection('stats').find(query);
+
+				if (beforeRemoving.length == 0) {
+					res.sendStatus(404, "NOT FOUND");
+				} else if (beforeRemoving.length == 1) {
+
+			
+					
+					var r = db.addCollection('stats').find(query)[0];
+					
+					console.log(r);
+					db.addCollection('stats').remove(r);
+
+					res.sendStatus(200, "OK");
+				
+				} else {
+					for (let i = 0; i < beforeRemoving.length; i++) {
+						
+						
+						var r = db.addCollection('stats').find(query)[0];
+						
+						console.log(r);
+						db.addCollection('stats').remove(r);
+
+						res.sendStatus(200, "OK");
+					}
+				}
 			}
-		}
-		
+		})		
 	});
+			
 
 
 
