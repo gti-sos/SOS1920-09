@@ -1472,19 +1472,16 @@
             The first 0 is the index of "Country" in the array of countries
             
             */
-            console.log(MyData);
 
             MyData = MyData.map((d) => {
                 return [countries.indexOf(d.country), d.year, d["percentage-re-total"], d["percentage-hydropower-total"], d["percentage-wind-power-total"]]; 
             });
-            console.log(MyData);
 
             MyData = MyData.filter((d) => {  return Data8.find(d8 => d8.country == countries[d[0]])}).map((d) => {
                 return [d[0], d[1], d[2], d[3], d[4],
                         Data8.find(d8 => d8.country == countries[d[0]] )["world_title"]
             ]; 
             });
-            console.log(MyData);
 
 
             /* 
