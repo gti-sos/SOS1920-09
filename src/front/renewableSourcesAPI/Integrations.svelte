@@ -1581,6 +1581,7 @@
         }
 
 
+
         async function loadGraphExt1() {
             console.log("Loading external api");
             /* Asking for the data to the back */
@@ -1898,7 +1899,6 @@
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-5" role="tab" aria-controls="profile">Integración con 5</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-4" role="tab" aria-controls="profile">Integración con 4</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-22" role="tab" aria-controls="profile">Integración con 22</a>
-            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-28" role="tab" aria-controls="profile">Integración con 28</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-1" role="tab" aria-controls="profile">Integración con 1 </a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-30" role="tab" aria-controls="profile">Integración con 30 </a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-23" role="tab" aria-controls="profile">Integración con 23 </a>
@@ -1952,14 +1952,6 @@
                     <div id="container-22"></div>
                     <p class="highcharts-description">
                         Integra la 22.
-                    </p>
-                </figure>
-            </div>
-            <div class="tab-pane fade" id="list-28" role="tabpanel" aria-labelledby="list-profile-list">
-                <figure class="highcharts-figure">
-                    <div id="container-28"></div>
-                    <p class="highcharts-description">
-                        Integra la 28.
                     </p>
                 </figure>
             </div>
