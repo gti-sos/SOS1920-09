@@ -114,6 +114,7 @@
 
 	async function loadInitialRenewableSources() {
 		console.log("Loading initial renewable sources stats...");	
+		deleteRenewableSources();
 		const res = await fetch(BASE_API_URL + "/loadInitialData").then(function(res) {
 				if (res.ok) {
 					console.log("Ok");
