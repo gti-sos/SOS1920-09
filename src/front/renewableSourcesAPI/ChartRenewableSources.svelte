@@ -7,7 +7,7 @@
     async function loadGraph() {
             
         /* Asking for the data to the back */
-        const BASE_API_URL = "/api/v2/renewable-sources-stats";
+        const BASE_API_URL = "/api/v4/renewable-sources-stats";
 
         const resData = await fetch(BASE_API_URL);
         let MyData = await resData.json();   

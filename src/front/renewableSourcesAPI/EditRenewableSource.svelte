@@ -12,7 +12,7 @@
     import Button from "sveltestrap/src/Button.svelte";
 	import Input from "sveltestrap/src/Input.svelte";
 
-    const BASE_API_URL = "/api/v2/renewable-sources-stats";
+    const BASE_API_URL = "/api/v4/renewable-sources-stats";
 
     export let params = {};
     let renewableSource = {};
