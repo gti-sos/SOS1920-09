@@ -7449,7 +7449,7 @@ var app = (function () {
     	return block;
     }
 
-    // (319:1) {:then oilEnergys}
+    // (320:1) {:then oilEnergys}
     function create_then_block(ctx) {
     	let t0;
     	let t1;
@@ -7577,14 +7577,14 @@ var app = (function () {
     		block,
     		id: create_then_block.name,
     		type: "then",
-    		source: "(319:1) {:then oilEnergys}",
+    		source: "(320:1) {:then oilEnergys}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (321:8) <Label for="selectCountry">
+    // (322:8) <Label for="selectCountry">
     function create_default_slot_21(ctx) {
     	let t;
 
@@ -7604,14 +7604,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_21.name,
     		type: "slot",
-    		source: "(321:8) <Label for=\\\"selectCountry\\\">",
+    		source: "(322:8) <Label for=\\\"selectCountry\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (326:3) {:else}
+    // (327:3) {:else}
     function create_else_block_1$1(ctx) {
     	let option;
     	let t_value = /*country*/ ctx[39] + "";
@@ -7624,7 +7624,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*country*/ ctx[39];
     			option.value = option.__value;
-    			add_location(option, file$a, 326, 3, 9541);
+    			add_location(option, file$a, 327, 3, 9557);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -7648,14 +7648,14 @@ var app = (function () {
     		block,
     		id: create_else_block_1$1.name,
     		type: "else",
-    		source: "(326:3) {:else}",
+    		source: "(327:3) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (324:3) {#if country == currentCountry}
+    // (325:3) {#if country == currentCountry}
     function create_if_block_3$2(ctx) {
     	let option;
     	let t_value = /*country*/ ctx[39] + "";
@@ -7669,7 +7669,7 @@ var app = (function () {
     			option.selected = "selected";
     			option.__value = option_value_value = /*country*/ ctx[39];
     			option.value = option.__value;
-    			add_location(option, file$a, 324, 3, 9476);
+    			add_location(option, file$a, 325, 3, 9492);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -7693,14 +7693,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3$2.name,
     		type: "if",
-    		source: "(324:3) {#if country == currentCountry}",
+    		source: "(325:3) {#if country == currentCountry}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (323:3) {#each countries as country}
+    // (324:3) {#each countries as country}
     function create_each_block_2(ctx) {
     	let if_block_anchor;
 
@@ -7744,14 +7744,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(323:3) {#each countries as country}",
+    		source: "(324:3) {#each countries as country}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (322:8) <Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentCountry}">
+    // (323:8) <Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentCountry}">
     function create_default_slot_20(ctx) {
     	let t0;
     	let option;
@@ -7774,7 +7774,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$a, 329, 3, 9594);
+    			add_location(option, file$a, 330, 3, 9610);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -7820,14 +7820,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_20.name,
     		type: "slot",
-    		source: "(322:8) <Input type=\\\"select\\\" name=\\\"selectCountry\\\" id=\\\"selectCountry\\\" bind:value=\\\"{currentCountry}\\\">",
+    		source: "(323:8) <Input type=\\\"select\\\" name=\\\"selectCountry\\\" id=\\\"selectCountry\\\" bind:value=\\\"{currentCountry}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (320:1) <FormGroup>
+    // (321:1) <FormGroup>
     function create_default_slot_19(ctx) {
     	let t;
     	let updating_value;
@@ -7917,14 +7917,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_19.name,
     		type: "slot",
-    		source: "(320:1) <FormGroup>",
+    		source: "(321:1) <FormGroup>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (336:3) <Label for="selectYear">
+    // (337:3) <Label for="selectYear">
     function create_default_slot_18(ctx) {
     	let t;
 
@@ -7944,14 +7944,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_18.name,
     		type: "slot",
-    		source: "(336:3) <Label for=\\\"selectYear\\\">",
+    		source: "(337:3) <Label for=\\\"selectYear\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (342:4) {:else}
+    // (343:4) {:else}
     function create_else_block$6(ctx) {
     	let option;
     	let t_value = /*year*/ ctx[36] + "";
@@ -7964,7 +7964,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*year*/ ctx[36];
     			option.value = option.__value;
-    			add_location(option, file$a, 342, 4, 9926);
+    			add_location(option, file$a, 343, 4, 9942);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -7988,14 +7988,14 @@ var app = (function () {
     		block,
     		id: create_else_block$6.name,
     		type: "else",
-    		source: "(342:4) {:else}",
+    		source: "(343:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (340:4) {#if year == currentYear}
+    // (341:4) {#if year == currentYear}
     function create_if_block_2$2(ctx) {
     	let option;
     	let t_value = /*year*/ ctx[36] + "";
@@ -8009,7 +8009,7 @@ var app = (function () {
     			option.selected = "selected";
     			option.__value = option_value_value = /*year*/ ctx[36];
     			option.value = option.__value;
-    			add_location(option, file$a, 340, 4, 9863);
+    			add_location(option, file$a, 341, 4, 9879);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -8033,14 +8033,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$2.name,
     		type: "if",
-    		source: "(340:4) {#if year == currentYear}",
+    		source: "(341:4) {#if year == currentYear}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (339:4) {#each years as year}
+    // (340:4) {#each years as year}
     function create_each_block_1(ctx) {
     	let if_block_anchor;
 
@@ -8084,14 +8084,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(339:4) {#each years as year}",
+    		source: "(340:4) {#each years as year}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (337:3) <Input type="select" name="selectYear" id="selectYear" bind:value = "{currentYear}">
+    // (338:3) <Input type="select" name="selectYear" id="selectYear" bind:value = "{currentYear}">
     function create_default_slot_17(ctx) {
     	let t0;
     	let option;
@@ -8114,7 +8114,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$a, 345, 4, 9979);
+    			add_location(option, file$a, 346, 4, 9995);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -8160,14 +8160,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_17.name,
     		type: "slot",
-    		source: "(337:3) <Input type=\\\"select\\\" name=\\\"selectYear\\\" id=\\\"selectYear\\\" bind:value = \\\"{currentYear}\\\">",
+    		source: "(338:3) <Input type=\\\"select\\\" name=\\\"selectYear\\\" id=\\\"selectYear\\\" bind:value = \\\"{currentYear}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (335:2) <FormGroup>
+    // (336:2) <FormGroup>
     function create_default_slot_16(ctx) {
     	let t;
     	let updating_value;
@@ -8257,14 +8257,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_16.name,
     		type: "slot",
-    		source: "(335:2) <FormGroup>",
+    		source: "(336:2) <FormGroup>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (350:2) <Button outline color="secondary" on:click="{search(currentCountry, currentYear)}" class="button-search" >
+    // (351:2) <Button outline color="secondary" on:click="{search(currentCountry, currentYear)}" class="button-search" >
     function create_default_slot_15(ctx) {
     	let i;
     	let t;
@@ -8274,7 +8274,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Buscar");
     			attr_dev(i, "class", "fas fa-search");
-    			add_location(i, file$a, 349, 109, 10139);
+    			add_location(i, file$a, 350, 109, 10155);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -8290,14 +8290,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_15.name,
     		type: "slot",
-    		source: "(350:2) <Button outline color=\\\"secondary\\\" on:click=\\\"{search(currentCountry, currentYear)}\\\" class=\\\"button-search\\\" >",
+    		source: "(351:2) <Button outline color=\\\"secondary\\\" on:click=\\\"{search(currentCountry, currentYear)}\\\" class=\\\"button-search\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (370:9) <Button outline color= "primary" on:click={insertOilEnergy}>
+    // (371:9) <Button outline color= "primary" on:click={insertOilEnergy}>
     function create_default_slot_14(ctx) {
     	let i;
     	let t;
@@ -8307,7 +8307,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Insertar");
     			attr_dev(i, "class", "far fa-edit");
-    			add_location(i, file$a, 369, 70, 11127);
+    			add_location(i, file$a, 370, 70, 11143);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -8323,14 +8323,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_14.name,
     		type: "slot",
-    		source: "(370:9) <Button outline color= \\\"primary\\\" on:click={insertOilEnergy}>",
+    		source: "(371:9) <Button outline color= \\\"primary\\\" on:click={insertOilEnergy}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (385:10) <Button outline color= "danger" on:click = {deleteOilEnergy(oilEnergy.country,oilEnergy.year)}>
+    // (386:10) <Button outline color= "danger" on:click = {deleteOilEnergy(oilEnergy.country,oilEnergy.year)}>
     function create_default_slot_13(ctx) {
     	let i;
     	let t;
@@ -8341,7 +8341,7 @@ var app = (function () {
     			t = text(" Borrar");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$a, 384, 106, 11705);
+    			add_location(i, file$a, 385, 106, 11721);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -8357,14 +8357,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_13.name,
     		type: "slot",
-    		source: "(385:10) <Button outline color= \\\"danger\\\" on:click = {deleteOilEnergy(oilEnergy.country,oilEnergy.year)}>",
+    		source: "(386:10) <Button outline color= \\\"danger\\\" on:click = {deleteOilEnergy(oilEnergy.country,oilEnergy.year)}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (373:4) {#each oilEnergys as oilEnergy}
+    // (374:4) {#each oilEnergys as oilEnergy}
     function create_each_block(ctx) {
     	let tr;
     	let td0;
@@ -8428,14 +8428,14 @@ var app = (function () {
     			td5 = element("td");
     			create_component(button.$$.fragment);
     			attr_dev(a, "href", a_href_value = "#/oil-coal-nuclear-energy-consumption-stats/" + /*oilEnergy*/ ctx[7].country + "/" + /*oilEnergy*/ ctx[7].year);
-    			add_location(a, file$a, 375, 7, 11259);
-    			add_location(td0, file$a, 374, 6, 11246);
-    			add_location(td1, file$a, 379, 6, 11412);
-    			add_location(td2, file$a, 381, 6, 11452);
-    			add_location(td3, file$a, 382, 6, 11499);
-    			add_location(td4, file$a, 383, 6, 11547);
-    			add_location(td5, file$a, 384, 6, 11605);
-    			add_location(tr, file$a, 373, 5, 11234);
+    			add_location(a, file$a, 376, 7, 11275);
+    			add_location(td0, file$a, 375, 6, 11262);
+    			add_location(td1, file$a, 380, 6, 11428);
+    			add_location(td2, file$a, 382, 6, 11468);
+    			add_location(td3, file$a, 383, 6, 11515);
+    			add_location(td4, file$a, 384, 6, 11563);
+    			add_location(td5, file$a, 385, 6, 11621);
+    			add_location(tr, file$a, 374, 5, 11250);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -8498,14 +8498,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(373:4) {#each oilEnergys as oilEnergy}",
+    		source: "(374:4) {#each oilEnergys as oilEnergy}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (352:2) <Table bordered>
+    // (353:2) <Table bordered>
     function create_default_slot_12(ctx) {
     	let thead;
     	let tr0;
@@ -8700,23 +8700,23 @@ var app = (function () {
 
     			t18 = space();
     			tr2 = element("tr");
-    			add_location(th0, file$a, 354, 5, 10238);
-    			add_location(th1, file$a, 355, 5, 10258);
-    			add_location(th2, file$a, 356, 5, 10277);
-    			add_location(th3, file$a, 357, 5, 10312);
-    			add_location(th4, file$a, 358, 20, 10360);
-    			add_location(th5, file$a, 359, 20, 10417);
-    			add_location(tr0, file$a, 353, 4, 10227);
-    			add_location(thead, file$a, 352, 3, 10214);
-    			add_location(td0, file$a, 364, 5, 10487);
-    			add_location(td1, file$a, 365, 5, 10575);
-    			add_location(td2, file$a, 366, 5, 10681);
-    			add_location(td3, file$a, 367, 5, 10798);
-    			add_location(td4, file$a, 368, 5, 10925);
-    			add_location(td5, file$a, 369, 5, 11062);
-    			add_location(tr1, file$a, 363, 4, 10476);
-    			add_location(tr2, file$a, 387, 4, 11803);
-    			add_location(tbody, file$a, 362, 3, 10463);
+    			add_location(th0, file$a, 355, 5, 10254);
+    			add_location(th1, file$a, 356, 5, 10274);
+    			add_location(th2, file$a, 357, 5, 10293);
+    			add_location(th3, file$a, 358, 5, 10328);
+    			add_location(th4, file$a, 359, 20, 10376);
+    			add_location(th5, file$a, 360, 20, 10433);
+    			add_location(tr0, file$a, 354, 4, 10243);
+    			add_location(thead, file$a, 353, 3, 10230);
+    			add_location(td0, file$a, 365, 5, 10503);
+    			add_location(td1, file$a, 366, 5, 10591);
+    			add_location(td2, file$a, 367, 5, 10697);
+    			add_location(td3, file$a, 368, 5, 10814);
+    			add_location(td4, file$a, 369, 5, 10941);
+    			add_location(td5, file$a, 370, 5, 11078);
+    			add_location(tr1, file$a, 364, 4, 10492);
+    			add_location(tr2, file$a, 388, 4, 11819);
+    			add_location(tbody, file$a, 363, 3, 10479);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -8892,14 +8892,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_12.name,
     		type: "slot",
-    		source: "(352:2) <Table bordered>",
+    		source: "(353:2) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (317:19)     Loading oilEnergy...   {:then oilEnergys}
+    // (318:19)     Loading oilEnergy...   {:then oilEnergys}
     function create_pending_block(ctx) {
     	let t;
 
@@ -8922,14 +8922,14 @@ var app = (function () {
     		block,
     		id: create_pending_block.name,
     		type: "pending",
-    		source: "(317:19)     Loading oilEnergy...   {:then oilEnergys}",
+    		source: "(318:19)     Loading oilEnergy...   {:then oilEnergys}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (397:8) <PaginationItem class = "{currentPage === 1 ? 'disabled' : ''}">
+    // (398:8) <PaginationItem class = "{currentPage === 1 ? 'disabled' : ''}">
     function create_default_slot_11(ctx) {
     	let current;
 
@@ -8970,14 +8970,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11.name,
     		type: "slot",
-    		source: "(397:8) <PaginationItem class = \\\"{currentPage === 1 ? 'disabled' : ''}\\\">",
+    		source: "(398:8) <PaginationItem class = \\\"{currentPage === 1 ? 'disabled' : ''}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (401:2) {#if currentPage != 1}
+    // (402:2) {#if currentPage != 1}
     function create_if_block_1$2(ctx) {
     	let current;
 
@@ -9024,14 +9024,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(401:2) {#if currentPage != 1}",
+    		source: "(402:2) {#if currentPage != 1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (403:12) <PaginationLink href="#/oilCoalNuclearEnergyConsumptionAPI" on:click="{() => addOffset(-1)}" >
+    // (404:12) <PaginationLink href="#/oilCoalNuclearEnergyConsumptionAPI" on:click="{() => addOffset(-1)}" >
     function create_default_slot_10(ctx) {
     	let t_value = /*currentPage*/ ctx[5] - 1 + "";
     	let t;
@@ -9055,14 +9055,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10.name,
     		type: "slot",
-    		source: "(403:12) <PaginationLink href=\\\"#/oilCoalNuclearEnergyConsumptionAPI\\\" on:click=\\\"{() => addOffset(-1)}\\\" >",
+    		source: "(404:12) <PaginationLink href=\\\"#/oilCoalNuclearEnergyConsumptionAPI\\\" on:click=\\\"{() => addOffset(-1)}\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (402:8) <PaginationItem>
+    // (403:8) <PaginationItem>
     function create_default_slot_9(ctx) {
     	let current;
 
@@ -9112,14 +9112,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9.name,
     		type: "slot",
-    		source: "(402:8) <PaginationItem>",
+    		source: "(403:8) <PaginationItem>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (408:12) <PaginationLink href="#/oilCoalNuclearEnergyConsumptionAPI" >
+    // (409:12) <PaginationLink href="#/oilCoalNuclearEnergyConsumptionAPI" >
     function create_default_slot_8(ctx) {
     	let t;
 
@@ -9142,14 +9142,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8.name,
     		type: "slot",
-    		source: "(408:12) <PaginationLink href=\\\"#/oilCoalNuclearEnergyConsumptionAPI\\\" >",
+    		source: "(409:12) <PaginationLink href=\\\"#/oilCoalNuclearEnergyConsumptionAPI\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (407:8) <PaginationItem active>
+    // (408:8) <PaginationItem active>
     function create_default_slot_7(ctx) {
     	let current;
 
@@ -9197,14 +9197,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7.name,
     		type: "slot",
-    		source: "(407:8) <PaginationItem active>",
+    		source: "(408:8) <PaginationItem active>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (412:2) {#if moreData}
+    // (413:2) {#if moreData}
     function create_if_block$6(ctx) {
     	let current;
 
@@ -9251,14 +9251,14 @@ var app = (function () {
     		block,
     		id: create_if_block$6.name,
     		type: "if",
-    		source: "(412:2) {#if moreData}",
+    		source: "(413:2) {#if moreData}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (414:12) <PaginationLink href="#/oilCoalNuclearEnergyConsumptionAPI" on:click="{() => addOffset(1)}">
+    // (415:12) <PaginationLink href="#/oilCoalNuclearEnergyConsumptionAPI" on:click="{() => addOffset(1)}">
     function create_default_slot_6(ctx) {
     	let t_value = /*currentPage*/ ctx[5] + 1 + "";
     	let t;
@@ -9282,14 +9282,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6.name,
     		type: "slot",
-    		source: "(414:12) <PaginationLink href=\\\"#/oilCoalNuclearEnergyConsumptionAPI\\\" on:click=\\\"{() => addOffset(1)}\\\">",
+    		source: "(415:12) <PaginationLink href=\\\"#/oilCoalNuclearEnergyConsumptionAPI\\\" on:click=\\\"{() => addOffset(1)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (413:8) <PaginationItem >
+    // (414:8) <PaginationItem >
     function create_default_slot_5(ctx) {
     	let current;
 
@@ -9339,14 +9339,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5.name,
     		type: "slot",
-    		source: "(413:8) <PaginationItem >",
+    		source: "(414:8) <PaginationItem >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (418:8) <PaginationItem class = "{moreData ? '' : 'disabled'}">
+    // (419:8) <PaginationItem class = "{moreData ? '' : 'disabled'}">
     function create_default_slot_4(ctx) {
     	let current;
 
@@ -9387,14 +9387,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(418:8) <PaginationItem class = \\\"{moreData ? '' : 'disabled'}\\\">",
+    		source: "(419:8) <PaginationItem class = \\\"{moreData ? '' : 'disabled'}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (394:1) <Pagination style="float:right;" ariaLabel="Cambiar de página">
+    // (395:1) <Pagination style="float:right;" ariaLabel="Cambiar de página">
     function create_default_slot_3(ctx) {
     	let t0;
     	let t1;
@@ -9558,14 +9558,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(394:1) <Pagination style=\\\"float:right;\\\" ariaLabel=\\\"Cambiar de página\\\">",
+    		source: "(395:1) <Pagination style=\\\"float:right;\\\" ariaLabel=\\\"Cambiar de página\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (425:1) <Button outline color="secondary" on:click="{pop}">
+    // (426:1) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot_2(ctx) {
     	let i;
     	let t;
@@ -9575,7 +9575,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$a, 424, 53, 13082);
+    			add_location(i, file$a, 425, 53, 13098);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -9591,14 +9591,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(425:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(426:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (426:1) <Button outline color= "warning" on:click = {loadInitialOilEnergy}>
+    // (427:1) <Button outline color= "warning" on:click = {loadInitialOilEnergy}>
     function create_default_slot_1(ctx) {
     	let i;
     	let t;
@@ -9609,7 +9609,7 @@ var app = (function () {
     			t = text(" Cargar datos Iniciales");
     			attr_dev(i, "class", "fas fa-cloud-upload-alt");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$a, 425, 69, 13208);
+    			add_location(i, file$a, 426, 69, 13224);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -9625,14 +9625,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(426:1) <Button outline color= \\\"warning\\\" on:click = {loadInitialOilEnergy}>",
+    		source: "(427:1) <Button outline color= \\\"warning\\\" on:click = {loadInitialOilEnergy}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (427:1) <Button outline color= "danger" on:click = {deleteOilEnergys}>
+    // (428:1) <Button outline color= "danger" on:click = {deleteOilEnergys}>
     function create_default_slot(ctx) {
     	let i;
     	let t;
@@ -9643,7 +9643,7 @@ var app = (function () {
     			t = text(" Borrar todo");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$a, 426, 64, 13365);
+    			add_location(i, file$a, 427, 64, 13381);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -9659,7 +9659,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(427:1) <Button outline color= \\\"danger\\\" on:click = {deleteOilEnergys}>",
+    		source: "(428:1) <Button outline color= \\\"danger\\\" on:click = {deleteOilEnergys}>",
     		ctx
     	});
 
@@ -9753,8 +9753,8 @@ var app = (function () {
     			attr_dev(div, "role", "alert");
     			attr_dev(div, "id", "div_alert");
     			set_style(div, "display", "none");
-    			add_location(div, file$a, 314, 1, 9088);
-    			add_location(main, file$a, 313, 0, 9079);
+    			add_location(div, file$a, 315, 1, 9104);
+    			add_location(main, file$a, 314, 0, 9095);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -10027,6 +10027,7 @@ var app = (function () {
 
     	async function loadInitialOilEnergy() {
     		console.log("Loading initial oil scoal stats data...");
+    		deleteOilEnergys();
 
     		const res = await fetch(BASE_API_URL + "/loadInitialData").then(function (res) {
     			if (res.ok) {
@@ -22051,109 +22052,66 @@ var app = (function () {
     		];
     	});
 
-    // (295:4) <Button outline color="secondary" on:click="{pop}">
-    function create_default_slot$f(ctx) {
-    	let i;
-    	let t;
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MyData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
 
-    	const block = {
-    		c: function create() {
-    			i = element("i");
-    			t = text(" Atrás");
-    			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$s, 294, 56, 10172);
+    	/* Setting the chart */
+    	Highcharts.chart("container-22", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
     		},
     		title: {
     			text: "Energías renovables y victorias de fórmula 1"
     		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(i);
-    			if (detaching) detach_dev(t);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot$f.name,
-    		type: "slot",
-    		source: "(295:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    function create_fragment$t(ctx) {
-    	let main;
-    	let div18;
-    	let div1;
-    	let div0;
-    	let a0;
-    	let t1;
-    	let a1;
-    	let t3;
-    	let a2;
-    	let t5;
-    	let a3;
-    	let t7;
-    	let a4;
-    	let t9;
-    	let a5;
-    	let t11;
-    	let a6;
-    	let t13;
-    	let div17;
-    	let div16;
-    	let div3;
-    	let figure0;
-    	let div2;
-    	let t14;
-    	let p0;
-    	let t16;
-    	let div5;
-    	let figure1;
-    	let div4;
-    	let t17;
-    	let p1;
-    	let t19;
-    	let div7;
-    	let figure2;
-    	let div6;
-    	let t20;
-    	let p2;
-    	let t22;
-    	let div9;
-    	let figure3;
-    	let div8;
-    	let t23;
-    	let p3;
-    	let t25;
-    	let div11;
-    	let figure4;
-    	let div10;
-    	let t26;
-    	let p4;
-    	let t28;
-    	let div13;
-    	let figure5;
-    	let div12;
-    	let t29;
-    	let p5;
-    	let t31;
-    	let div15;
-    	let figure6;
-    	let div14;
-    	let t32;
-    	let p6;
-    	let t34;
-    	let current;
-
-    	const button = new Button({
-    			props: {
-    				outline: true,
-    				color: "secondary",
-    				$$slots: { default: [create_default_slot$f] },
-    				$$scope: { ctx }
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Victorias en fórmula 1"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
     			},
     			{ min: 2000, tooltipValueFormat: "{value}" },
     			{ min: 0, tooltipValueFormat: "{value} %" },
@@ -23309,7 +23267,7 @@ var app = (function () {
     /* src\front\oilCoalNuclearEnergyConsumptionAPI\Integrations.svelte generated by Svelte v3.20.1 */
     const file$s = "src\\front\\oilCoalNuclearEnergyConsumptionAPI\\Integrations.svelte";
 
-    // (61:4) <Button outline color="secondary" on:click="{pop}">
+    // (295:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$f(ctx) {
     	let i;
     	let t;
@@ -23319,7 +23277,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$s, 60, 56, 2356);
+    			add_location(i, file$s, 294, 56, 10172);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -23335,7 +23293,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$f.name,
     		type: "slot",
-    		source: "(61:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(295:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -23343,22 +23301,71 @@ var app = (function () {
     }
 
     function create_fragment$t(ctx) {
-    	let body;
-    	let div1;
-    	let button0;
-    	let t1;
-    	let div0;
-    	let t2;
-    	let script;
-    	let t4;
     	let main;
-    	let button1;
-    	let i;
+    	let div18;
+    	let div1;
+    	let div0;
+    	let a0;
+    	let t1;
+    	let a1;
+    	let t3;
+    	let a2;
     	let t5;
-    	let t6;
+    	let a3;
+    	let t7;
+    	let a4;
+    	let t9;
+    	let a5;
+    	let t11;
+    	let a6;
+    	let t13;
+    	let div17;
+    	let div16;
+    	let div3;
+    	let figure0;
+    	let div2;
+    	let t14;
+    	let p0;
+    	let t16;
+    	let div5;
+    	let figure1;
+    	let div4;
+    	let t17;
+    	let p1;
+    	let t19;
+    	let div7;
+    	let figure2;
+    	let div6;
+    	let t20;
+    	let p2;
+    	let t22;
+    	let div9;
+    	let figure3;
+    	let div8;
+    	let t23;
+    	let p3;
+    	let t25;
+    	let div11;
+    	let figure4;
+    	let div10;
+    	let t26;
+    	let p4;
+    	let t28;
+    	let div13;
+    	let figure5;
+    	let div12;
+    	let t29;
+    	let p5;
+    	let t31;
+    	let div15;
+    	let figure6;
+    	let div14;
+    	let t32;
+    	let p6;
+    	let t34;
     	let current;
 
-    	const button2 = new Button({
+    	const button = new Button({
     			props: {
     				outline: true,
     				color: "secondary",
@@ -23368,1265 +23375,6 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	button2.$on("click", pop);
-
-    	const block = {
-    		c: function create() {
-    			body = element("body");
-    			div1 = element("div");
-    			button0 = element("button");
-    			button0.textContent = "Obtener";
-    			t1 = space();
-    			div0 = element("div");
-    			t2 = space();
-    			script = element("script");
-    			script.textContent = "/* #contenido capturamos el id. Dentro de contenido guardamos ese div.*/\r\n        var contenido = document.querySelector('#contenido')\r\n        function traer() {\r\n            fetch('https://randomuser.me/api/')\r\n            .then(res => res.json())\r\n            .then(data => {\r\n                console.log(data.results['0'])\r\n                /* Estas comillas de abajo nos permiten manejar templates literarios, podemos mezclar html y css*/\r\n                contenido.innerHTML = `   \r\n                <table class=\"table table-dark\">\r\n                    <thead>\r\n                        <tr>\r\n                            <th scope=\"col\">Nombre</th>\r\n                            <th scope=\"col\">Email</th>\r\n                            <th scope=\"col\">Genero</th>\r\n                            <th scope=\"col\">Procedencia</th>\r\n                            <th scope=\"col\">Numero de tlf</th>\r\n                            <th scope=\"col\">Codigo Postal</th>\r\n                            <th scope=\"col\">Edad</th>\r\n                        </tr>\r\n                    </thead>\r\n                    <tbody>\r\n                        <tr>\r\n                            <td>${data.results['0'].name.last}</td>\r\n                            <td>${data.results['0'].email}</td>\r\n                            <td>${data.results['0'].gender}</td>\r\n                            <td>${data.results['0'].location.country}</td>\r\n                            <td>${data.results['0'].cell}</td>\r\n                            <td>${data.results['0'].location.postcode}</td>\r\n                            <td>${data.results['0'].registered.age}</td>\r\n                        </tr>\r\n                    </tbody>          \r\n                `\r\n            })\r\n        }";
-    			t4 = space();
-    			main = element("main");
-    			button1 = element("button");
-    			i = element("i");
-    			t5 = text(" 1");
-    			t6 = space();
-    			create_component(button2.$$.fragment);
-    			attr_dev(button0, "class", "btn btn-danger w-100");
-    			attr_dev(button0, "onclick", "traer()");
-    			add_location(button0, file$s, 11, 8, 209);
-    			attr_dev(div0, "class", "mt-5");
-    			attr_dev(div0, "id", "contenido");
-    			add_location(div0, file$s, 12, 8, 290);
-    			attr_dev(div1, "class", "container my-5 text-center");
-    			add_location(div1, file$s, 10, 4, 159);
-    			add_location(script, file$s, 16, 4, 359);
-    			add_location(body, file$s, 8, 0, 142);
-    			attr_dev(i, "class", "fas fa-chart-area");
-    			add_location(i, file$s, 58, 92, 2248);
-    			attr_dev(button1, "type", "button");
-    			attr_dev(button1, "class", "btn btn-outline-dark");
-    			attr_dev(button1, "onclick", "window.location.href='#/'");
-    			add_location(button1, file$s, 58, 4, 2160);
-    			add_location(main, file$s, 57, 0, 2148);
-    		},
-    		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, body, anchor);
-    			append_dev(body, div1);
-    			append_dev(div1, button0);
-    			append_dev(div1, t1);
-    			append_dev(div1, div0);
-    			append_dev(body, t2);
-    			append_dev(body, script);
-    			insert_dev(target, t4, anchor);
-    			insert_dev(target, main, anchor);
-    			append_dev(main, button1);
-    			append_dev(button1, i);
-    			append_dev(button1, t5);
-    			append_dev(main, t6);
-    			mount_component(button2, main, null);
-    			current = true;
-    		},
-    		p: function update(ctx, [dirty]) {
-    			const button2_changes = {};
-
-    			if (dirty & /*$$scope*/ 1) {
-    				button2_changes.$$scope = { dirty, ctx };
-    			}
-
-    			button2.$set(button2_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(button2.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(button2.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(body);
-    			if (detaching) detach_dev(t4);
-    			if (detaching) detach_dev(main);
-    			destroy_component(button2);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_fragment$t.name,
-    		type: "component",
-    		source: "",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    function instance$t($$self, $$props, $$invalidate) {
-    	const writable_props = [];
-
-    	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Integrations> was created with unknown prop '${key}'`);
-    	});
-
-    	let { $$slots = {}, $$scope } = $$props;
-    	validate_slots("Integrations", $$slots, []);
-    	$$self.$capture_state = () => ({ Button, pop });
-    	return [];
-    }
-
-    class Integrations$1 extends SvelteComponentDev {
-    	constructor(options) {
-    		super(options);
-    		init(this, options, instance$t, create_fragment$t, safe_not_equal, {});
-
-    		dispatch_dev("SvelteRegisterComponent", {
-    			component: this,
-    			tagName: "Integrations",
-    			options,
-    			id: create_fragment$t.name
-    		});
-    	}
-    }
-
-    /* src\front\plugInVehiclesAPI\Integrations.svelte generated by Svelte v3.20.1 */
-
-    const { console: console_1$b } = globals;
-    const file$t = "src\\front\\plugInVehiclesAPI\\Integrations.svelte";
-
-    // (1432:4) <Button outline color="secondary" on:click="{pop}">
-    function create_default_slot$g(ctx) {
-    	let i;
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			i = element("i");
-    			t = text(" Atrás");
-    			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$t, 1431, 56, 44818);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, i, anchor);
-    			insert_dev(target, t, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(i);
-    			if (detaching) detach_dev(t);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot$g.name,
-    		type: "slot",
-    		source: "(1432:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    function create_fragment$u(ctx) {
-    	let script0;
-    	let script0_src_value;
-    	let script1;
-    	let script1_src_value;
-    	let script2;
-    	let script2_src_value;
-    	let script3;
-    	let script3_src_value;
-    	let t0;
-    	let main;
-    	let div26;
-    	let div1;
-    	let div0;
-    	let a0;
-    	let t2;
-    	let a1;
-    	let t4;
-    	let a2;
-    	let t6;
-    	let a3;
-    	let t8;
-    	let a4;
-    	let t10;
-    	let a5;
-    	let t12;
-    	let a6;
-    	let t14;
-    	let a7;
-    	let t16;
-    	let a8;
-    	let t18;
-    	let a9;
-    	let t20;
-    	let a10;
-    	let t22;
-    	let div25;
-    	let div24;
-    	let div3;
-    	let figure0;
-    	let div2;
-    	let t23;
-    	let p0;
-    	let t25;
-    	let div5;
-    	let figure1;
-    	let div4;
-    	let t26;
-    	let p1;
-    	let t28;
-    	let div7;
-    	let figure2;
-    	let div6;
-    	let t29;
-    	let p2;
-    	let t31;
-    	let div9;
-    	let figure3;
-    	let div8;
-    	let t32;
-    	let p3;
-    	let t34;
-    	let div11;
-    	let figure4;
-    	let div10;
-    	let t35;
-    	let p4;
-    	let t37;
-    	let div13;
-    	let figure5;
-    	let div12;
-    	let t38;
-    	let p5;
-    	let t40;
-    	let div15;
-    	let figure6;
-    	let div14;
-    	let t41;
-    	let p6;
-    	let t43;
-    	let div17;
-    	let figure7;
-    	let div16;
-    	let t44;
-    	let p7;
-    	let t46;
-    	let div19;
-    	let figure8;
-    	let div18;
-    	let t47;
-    	let p8;
-    	let t49;
-    	let div21;
-    	let figure9;
-    	let div20;
-    	let t50;
-    	let p9;
-    	let t52;
-    	let div23;
-    	let figure10;
-    	let div22;
-    	let t53;
-    	let p10;
-    	let t55;
-    	let current;
-
-    	const button = new Button({
-    			props: {
-    				outline: true,
-    				color: "secondary",
-    				$$slots: { default: [create_default_slot$g] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	button.$on("click", pop);
-
-    	const block = {
-    		c: function create() {
-    			script0 = element("script");
-    			script1 = element("script");
-    			script2 = element("script");
-    			script3 = element("script");
-    			t0 = space();
-    			main = element("main");
-    			div26 = element("div");
-    			div1 = element("div");
-    			div0 = element("div");
-    			a0 = element("a");
-    			a0.textContent = "Integración con 01 emigrants-stats";
-    			t2 = space();
-    			a1 = element("a");
-    			a1.textContent = "Integración con 04";
-    			t4 = space();
-    			a2 = element("a");
-    			a2.textContent = "Integración con 05";
-    			t6 = space();
-    			a3 = element("a");
-    			a3.textContent = "Integración con 06";
-    			t8 = space();
-    			a4 = element("a");
-    			a4.textContent = "Integración con 07";
-    			t10 = space();
-    			a5 = element("a");
-    			a5.textContent = "Integración con 08";
-    			t12 = space();
-    			a6 = element("a");
-    			a6.textContent = "Integración con 12";
-    			t14 = space();
-    			a7 = element("a");
-    			a7.textContent = "Integración con 23";
-    			t16 = space();
-    			a8 = element("a");
-    			a8.textContent = "Integración con 24";
-    			t18 = space();
-    			a9 = element("a");
-    			a9.textContent = "Integración con 27";
-    			t20 = space();
-    			a10 = element("a");
-    			a10.textContent = "Integración con 28";
-    			t22 = space();
-    			div25 = element("div");
-    			div24 = element("div");
-    			div3 = element("div");
-    			figure0 = element("figure");
-    			div2 = element("div");
-    			t23 = space();
-    			p0 = element("p");
-    			p0.textContent = "Integración con el grupo 01, la integración está realizada con emigrantes totales en todo el mundo";
-    			t25 = space();
-    			div5 = element("div");
-    			figure1 = element("figure");
-    			div4 = element("div");
-    			t26 = space();
-    			p1 = element("p");
-    			p1.textContent = "Integra la 04.";
-    			t28 = space();
-    			div7 = element("div");
-    			figure2 = element("figure");
-    			div6 = element("div");
-    			t29 = space();
-    			p2 = element("p");
-    			p2.textContent = "Integra la 05.";
-    			t31 = space();
-    			div9 = element("div");
-    			figure3 = element("figure");
-    			div8 = element("div");
-    			t32 = space();
-    			p3 = element("p");
-    			p3.textContent = "Integra la 06.";
-    			t34 = space();
-    			div11 = element("div");
-    			figure4 = element("figure");
-    			div10 = element("div");
-    			t35 = space();
-    			p4 = element("p");
-    			p4.textContent = "Integra la 07.";
-    			t37 = space();
-    			div13 = element("div");
-    			figure5 = element("figure");
-    			div12 = element("div");
-    			t38 = space();
-    			p5 = element("p");
-    			p5.textContent = "Integra la 08.";
-    			t40 = space();
-    			div15 = element("div");
-    			figure6 = element("figure");
-    			div14 = element("div");
-    			t41 = space();
-    			p6 = element("p");
-    			p6.textContent = "Integra la 12.";
-    			t43 = space();
-    			div17 = element("div");
-    			figure7 = element("figure");
-    			div16 = element("div");
-    			t44 = space();
-    			p7 = element("p");
-    			p7.textContent = "Integra la 23.";
-    			t46 = space();
-    			div19 = element("div");
-    			figure8 = element("figure");
-    			div18 = element("div");
-    			t47 = space();
-    			p8 = element("p");
-    			p8.textContent = "Integra la 24.";
-    			t49 = space();
-    			div21 = element("div");
-    			figure9 = element("figure");
-    			div20 = element("div");
-    			t50 = space();
-    			p9 = element("p");
-    			p9.textContent = "Integra la 27.";
-    			t52 = space();
-    			div23 = element("div");
-    			figure10 = element("figure");
-    			div22 = element("div");
-    			t53 = space();
-    			p10 = element("p");
-    			p10.textContent = "Integra la 28.";
-    			t55 = space();
-    			create_component(button.$$.fragment);
-    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$t, 1299, 4, 37642);
-    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$t, 1300, 4, 37713);
-    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$t, 1301, 4, 37789);
-    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$t, 1302, 4, 37867);
-    			attr_dev(a0, "class", "list-group-item list-group-item-action active");
-    			attr_dev(a0, "id", "list-home-list");
-    			attr_dev(a0, "data-toggle", "list");
-    			attr_dev(a0, "href", "#list-01");
-    			attr_dev(a0, "role", "tab");
-    			attr_dev(a0, "aria-controls", "home");
-    			add_location(a0, file$t, 1323, 12, 38355);
-    			attr_dev(a1, "class", "list-group-item list-group-item-action");
-    			attr_dev(a1, "id", "list-profile-list");
-    			attr_dev(a1, "data-toggle", "list");
-    			attr_dev(a1, "href", "#list-04");
-    			attr_dev(a1, "role", "tab");
-    			attr_dev(a1, "aria-controls", "profile");
-    			add_location(a1, file$t, 1324, 12, 38551);
-    			attr_dev(a2, "class", "list-group-item list-group-item-action");
-    			attr_dev(a2, "id", "list-profile-list");
-    			attr_dev(a2, "data-toggle", "list");
-    			attr_dev(a2, "href", "#list-05");
-    			attr_dev(a2, "role", "tab");
-    			attr_dev(a2, "aria-controls", "profile");
-    			add_location(a2, file$t, 1325, 12, 38730);
-    			attr_dev(a3, "class", "list-group-item list-group-item-action");
-    			attr_dev(a3, "id", "list-profile-list");
-    			attr_dev(a3, "data-toggle", "list");
-    			attr_dev(a3, "href", "#list-06");
-    			attr_dev(a3, "role", "tab");
-    			attr_dev(a3, "aria-controls", "profile");
-    			add_location(a3, file$t, 1326, 12, 38909);
-    			attr_dev(a4, "class", "list-group-item list-group-item-action");
-    			attr_dev(a4, "id", "list-profile-list");
-    			attr_dev(a4, "data-toggle", "list");
-    			attr_dev(a4, "href", "#list-07");
-    			attr_dev(a4, "role", "tab");
-    			attr_dev(a4, "aria-controls", "profile");
-    			add_location(a4, file$t, 1327, 12, 39088);
-    			attr_dev(a5, "class", "list-group-item list-group-item-action");
-    			attr_dev(a5, "id", "list-profile-list");
-    			attr_dev(a5, "data-toggle", "list");
-    			attr_dev(a5, "href", "#list-08");
-    			attr_dev(a5, "role", "tab");
-    			attr_dev(a5, "aria-controls", "profile");
-    			add_location(a5, file$t, 1328, 12, 39267);
-    			attr_dev(a6, "class", "list-group-item list-group-item-action");
-    			attr_dev(a6, "id", "list-profile-list");
-    			attr_dev(a6, "data-toggle", "list");
-    			attr_dev(a6, "href", "#list-12");
-    			attr_dev(a6, "role", "tab");
-    			attr_dev(a6, "aria-controls", "profile");
-    			add_location(a6, file$t, 1329, 12, 39446);
-    			attr_dev(a7, "class", "list-group-item list-group-item-action");
-    			attr_dev(a7, "id", "list-profile-list");
-    			attr_dev(a7, "data-toggle", "list");
-    			attr_dev(a7, "href", "#list-23");
-    			attr_dev(a7, "role", "tab");
-    			attr_dev(a7, "aria-controls", "profile");
-    			add_location(a7, file$t, 1330, 12, 39625);
-    			attr_dev(a8, "class", "list-group-item list-group-item-action");
-    			attr_dev(a8, "id", "list-profile-list");
-    			attr_dev(a8, "data-toggle", "list");
-    			attr_dev(a8, "href", "#list-24");
-    			attr_dev(a8, "role", "tab");
-    			attr_dev(a8, "aria-controls", "profile");
-    			add_location(a8, file$t, 1331, 12, 39804);
-    			attr_dev(a9, "class", "list-group-item list-group-item-action");
-    			attr_dev(a9, "id", "list-profile-list");
-    			attr_dev(a9, "data-toggle", "list");
-    			attr_dev(a9, "href", "#list-27");
-    			attr_dev(a9, "role", "tab");
-    			attr_dev(a9, "aria-controls", "profile");
-    			add_location(a9, file$t, 1332, 12, 39983);
-    			attr_dev(a10, "class", "list-group-item list-group-item-action");
-    			attr_dev(a10, "id", "list-profile-list");
-    			attr_dev(a10, "data-toggle", "list");
-    			attr_dev(a10, "href", "#list-28");
-    			attr_dev(a10, "role", "tab");
-    			attr_dev(a10, "aria-controls", "profile");
-    			add_location(a10, file$t, 1333, 12, 40162);
-    			attr_dev(div0, "class", "list-group");
-    			attr_dev(div0, "id", "list-tab");
-    			attr_dev(div0, "role", "tablist");
-    			add_location(div0, file$t, 1321, 10, 38286);
-    			attr_dev(div1, "class", "col-4");
-    			add_location(div1, file$t, 1320, 8, 38255);
-    			attr_dev(div2, "id", "container01");
-    			add_location(div2, file$t, 1341, 20, 40648);
-    			attr_dev(p0, "class", "highcharts-description");
-    			add_location(p0, file$t, 1342, 20, 40698);
-    			attr_dev(figure0, "class", "highcharts-figure");
-    			add_location(figure0, file$t, 1340, 16, 40592);
-    			attr_dev(div3, "class", "tab-pane fade show active");
-    			attr_dev(div3, "id", "list-01");
-    			attr_dev(div3, "role", "tabpanel");
-    			attr_dev(div3, "aria-labelledby", "list-home-list");
-    			add_location(div3, file$t, 1339, 12, 40473);
-    			attr_dev(div4, "id", "container04");
-    			add_location(div4, file$t, 1349, 20, 41109);
-    			attr_dev(p1, "class", "highcharts-description");
-    			add_location(p1, file$t, 1350, 20, 41159);
-    			attr_dev(figure1, "class", "highcharts-figure");
-    			add_location(figure1, file$t, 1348, 16, 41053);
-    			attr_dev(div5, "class", "tab-pane fade");
-    			attr_dev(div5, "id", "list-04");
-    			attr_dev(div5, "role", "tabpanel");
-    			attr_dev(div5, "aria-labelledby", "list-profile-list");
-    			add_location(div5, file$t, 1347, 12, 40943);
-    			attr_dev(div6, "id", "container05");
-    			add_location(div6, file$t, 1357, 20, 41486);
-    			attr_dev(p2, "class", "highcharts-description");
-    			add_location(p2, file$t, 1358, 20, 41536);
-    			attr_dev(figure2, "class", "highcharts-figure");
-    			add_location(figure2, file$t, 1356, 16, 41430);
-    			attr_dev(div7, "class", "tab-pane fade");
-    			attr_dev(div7, "id", "list-05");
-    			attr_dev(div7, "role", "tabpanel");
-    			attr_dev(div7, "aria-labelledby", "list-profile-list");
-    			add_location(div7, file$t, 1355, 12, 41320);
-    			attr_dev(div8, "id", "container06");
-    			add_location(div8, file$t, 1365, 20, 41863);
-    			attr_dev(p3, "class", "highcharts-description");
-    			add_location(p3, file$t, 1366, 20, 41913);
-    			attr_dev(figure3, "class", "highcharts-figure");
-    			add_location(figure3, file$t, 1364, 16, 41807);
-    			attr_dev(div9, "class", "tab-pane fade");
-    			attr_dev(div9, "id", "list-06");
-    			attr_dev(div9, "role", "tabpanel");
-    			attr_dev(div9, "aria-labelledby", "list-profile-list");
-    			add_location(div9, file$t, 1363, 12, 41697);
-    			attr_dev(div10, "id", "container07");
-    			add_location(div10, file$t, 1373, 20, 42240);
-    			attr_dev(p4, "class", "highcharts-description");
-    			add_location(p4, file$t, 1374, 20, 42290);
-    			attr_dev(figure4, "class", "highcharts-figure");
-    			add_location(figure4, file$t, 1372, 16, 42184);
-    			attr_dev(div11, "class", "tab-pane fade");
-    			attr_dev(div11, "id", "list-07");
-    			attr_dev(div11, "role", "tabpanel");
-    			attr_dev(div11, "aria-labelledby", "list-profile-list");
-    			add_location(div11, file$t, 1371, 12, 42074);
-    			attr_dev(div12, "id", "container08");
-    			add_location(div12, file$t, 1381, 20, 42617);
-    			attr_dev(p5, "class", "highcharts-description");
-    			add_location(p5, file$t, 1382, 20, 42667);
-    			attr_dev(figure5, "class", "highcharts-figure");
-    			add_location(figure5, file$t, 1380, 16, 42561);
-    			attr_dev(div13, "class", "tab-pane fade");
-    			attr_dev(div13, "id", "list-08");
-    			attr_dev(div13, "role", "tabpanel");
-    			attr_dev(div13, "aria-labelledby", "list-profile-list");
-    			add_location(div13, file$t, 1379, 12, 42451);
-    			attr_dev(div14, "id", "container12");
-    			add_location(div14, file$t, 1389, 20, 42994);
-    			attr_dev(p6, "class", "highcharts-description");
-    			add_location(p6, file$t, 1390, 20, 43044);
-    			attr_dev(figure6, "class", "highcharts-figure");
-    			add_location(figure6, file$t, 1388, 16, 42938);
-    			attr_dev(div15, "class", "tab-pane fade");
-    			attr_dev(div15, "id", "list-12");
-    			attr_dev(div15, "role", "tabpanel");
-    			attr_dev(div15, "aria-labelledby", "list-profile-list");
-    			add_location(div15, file$t, 1387, 12, 42828);
-    			attr_dev(div16, "id", "container23");
-    			add_location(div16, file$t, 1397, 20, 43371);
-    			attr_dev(p7, "class", "highcharts-description");
-    			add_location(p7, file$t, 1398, 20, 43421);
-    			attr_dev(figure7, "class", "highcharts-figure");
-    			add_location(figure7, file$t, 1396, 16, 43315);
-    			attr_dev(div17, "class", "tab-pane fade");
-    			attr_dev(div17, "id", "list-23");
-    			attr_dev(div17, "role", "tabpanel");
-    			attr_dev(div17, "aria-labelledby", "list-profile-list");
-    			add_location(div17, file$t, 1395, 12, 43205);
-    			attr_dev(div18, "id", "container24");
-    			add_location(div18, file$t, 1405, 20, 43748);
-    			attr_dev(p8, "class", "highcharts-description");
-    			add_location(p8, file$t, 1406, 20, 43798);
-    			attr_dev(figure8, "class", "highcharts-figure");
-    			add_location(figure8, file$t, 1404, 16, 43692);
-    			attr_dev(div19, "class", "tab-pane fade");
-    			attr_dev(div19, "id", "list-24");
-    			attr_dev(div19, "role", "tabpanel");
-    			attr_dev(div19, "aria-labelledby", "list-profile-list");
-    			add_location(div19, file$t, 1403, 12, 43582);
-    			attr_dev(div20, "id", "container27");
-    			add_location(div20, file$t, 1413, 20, 44125);
-    			attr_dev(p9, "class", "highcharts-description");
-    			add_location(p9, file$t, 1414, 20, 44175);
-    			attr_dev(figure9, "class", "highcharts-figure");
-    			add_location(figure9, file$t, 1412, 16, 44069);
-    			attr_dev(div21, "class", "tab-pane fade");
-    			attr_dev(div21, "id", "list-27");
-    			attr_dev(div21, "role", "tabpanel");
-    			attr_dev(div21, "aria-labelledby", "list-profile-list");
-    			add_location(div21, file$t, 1411, 12, 43959);
-    			attr_dev(div22, "id", "container28");
-    			add_location(div22, file$t, 1421, 20, 44502);
-    			attr_dev(p10, "class", "highcharts-description");
-    			add_location(p10, file$t, 1422, 20, 44552);
-    			attr_dev(figure10, "class", "highcharts-figure");
-    			add_location(figure10, file$t, 1420, 16, 44446);
-    			attr_dev(div23, "class", "tab-pane fade");
-    			attr_dev(div23, "id", "list-28");
-    			attr_dev(div23, "role", "tabpanel");
-    			attr_dev(div23, "aria-labelledby", "list-profile-list");
-    			add_location(div23, file$t, 1419, 12, 44336);
-    			attr_dev(div24, "class", "tab-content");
-    			attr_dev(div24, "id", "nav-tabContent");
-    			add_location(div24, file$t, 1338, 10, 40414);
-    			attr_dev(div25, "class", "col-8");
-    			add_location(div25, file$t, 1337, 8, 40383);
-    			attr_dev(div26, "class", "row");
-    			add_location(div26, file$t, 1319, 4, 38228);
-    			add_location(main, file$t, 1306, 0, 37969);
-    		},
-    		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
-    		},
-    		m: function mount(target, anchor) {
-    			append_dev(document.head, script0);
-    			append_dev(document.head, script1);
-    			append_dev(document.head, script2);
-    			append_dev(document.head, script3);
-    			insert_dev(target, t0, anchor);
-    			insert_dev(target, main, anchor);
-    			append_dev(main, div26);
-    			append_dev(div26, div1);
-    			append_dev(div1, div0);
-    			append_dev(div0, a0);
-    			append_dev(div0, t2);
-    			append_dev(div0, a1);
-    			append_dev(div0, t4);
-    			append_dev(div0, a2);
-    			append_dev(div0, t6);
-    			append_dev(div0, a3);
-    			append_dev(div0, t8);
-    			append_dev(div0, a4);
-    			append_dev(div0, t10);
-    			append_dev(div0, a5);
-    			append_dev(div0, t12);
-    			append_dev(div0, a6);
-    			append_dev(div0, t14);
-    			append_dev(div0, a7);
-    			append_dev(div0, t16);
-    			append_dev(div0, a8);
-    			append_dev(div0, t18);
-    			append_dev(div0, a9);
-    			append_dev(div0, t20);
-    			append_dev(div0, a10);
-    			append_dev(div26, t22);
-    			append_dev(div26, div25);
-    			append_dev(div25, div24);
-    			append_dev(div24, div3);
-    			append_dev(div3, figure0);
-    			append_dev(figure0, div2);
-    			append_dev(figure0, t23);
-    			append_dev(figure0, p0);
-    			append_dev(div24, t25);
-    			append_dev(div24, div5);
-    			append_dev(div5, figure1);
-    			append_dev(figure1, div4);
-    			append_dev(figure1, t26);
-    			append_dev(figure1, p1);
-    			append_dev(div24, t28);
-    			append_dev(div24, div7);
-    			append_dev(div7, figure2);
-    			append_dev(figure2, div6);
-    			append_dev(figure2, t29);
-    			append_dev(figure2, p2);
-    			append_dev(div24, t31);
-    			append_dev(div24, div9);
-    			append_dev(div9, figure3);
-    			append_dev(figure3, div8);
-    			append_dev(figure3, t32);
-    			append_dev(figure3, p3);
-    			append_dev(div24, t34);
-    			append_dev(div24, div11);
-    			append_dev(div11, figure4);
-    			append_dev(figure4, div10);
-    			append_dev(figure4, t35);
-    			append_dev(figure4, p4);
-    			append_dev(div24, t37);
-    			append_dev(div24, div13);
-    			append_dev(div13, figure5);
-    			append_dev(figure5, div12);
-    			append_dev(figure5, t38);
-    			append_dev(figure5, p5);
-    			append_dev(div24, t40);
-    			append_dev(div24, div15);
-    			append_dev(div15, figure6);
-    			append_dev(figure6, div14);
-    			append_dev(figure6, t41);
-    			append_dev(figure6, p6);
-    			append_dev(div24, t43);
-    			append_dev(div24, div17);
-    			append_dev(div17, figure7);
-    			append_dev(figure7, div16);
-    			append_dev(figure7, t44);
-    			append_dev(figure7, p7);
-    			append_dev(div24, t46);
-    			append_dev(div24, div19);
-    			append_dev(div19, figure8);
-    			append_dev(figure8, div18);
-    			append_dev(figure8, t47);
-    			append_dev(figure8, p8);
-    			append_dev(div24, t49);
-    			append_dev(div24, div21);
-    			append_dev(div21, figure9);
-    			append_dev(figure9, div20);
-    			append_dev(figure9, t50);
-    			append_dev(figure9, p9);
-    			append_dev(div24, t52);
-    			append_dev(div24, div23);
-    			append_dev(div23, figure10);
-    			append_dev(figure10, div22);
-    			append_dev(figure10, t53);
-    			append_dev(figure10, p10);
-    			append_dev(main, t55);
-    			mount_component(button, main, null);
-    			current = true;
-    		},
-    		p: function update(ctx, [dirty]) {
-    			const button_changes = {};
-
-    			if (dirty & /*$$scope*/ 1) {
-    				button_changes.$$scope = { dirty, ctx };
-    			}
-
-    			button.$set(button_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(button.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(button.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			detach_dev(script0);
-    			detach_dev(script1);
-    			detach_dev(script2);
-    			detach_dev(script3);
-    			if (detaching) detach_dev(t0);
-    			if (detaching) detach_dev(main);
-    			destroy_component(button);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_fragment$u.name,
-    		type: "component",
-    		source: "",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    const BASE_API_URL$6 = "/api/v3/plugin-vehicles-stats";
-
-    async function loadGraph01() {
-    	const BASE_API_URL_01 = "/api/v2/emigrants-stats";
-    	const resData = await fetch(BASE_API_URL$6);
-    	const resData01 = await fetch(BASE_API_URL_01);
-    	let MyData = await resData.json();
-    	let Data01 = await resData01.json();
-
-    	/*
-                Sus Datos:
-    }
-        "country": "spain",
-        "year": 2017,
-        "em_man": 609615,
-        "em_woman": 736247,
-        "em_totals": 1345862
-    }
-                Mis Datos:
-    { 
-        "country": "Japan",
-        "year": 2018,
-        "pev-stock": 257363,
-        "annual-sale": 52013,
-        "cars-per-1000": 2.0
-    }
-    */
-    	let dataPlugin = MyData.map(d => {
-    		let res = {
-    			name: d.country,
-    			value: d["cars-per-1000"]
-    		};
-
-    		return res;
-    	});
-
-    	let dataAPI01 = Data01.filter(d => {
-    		return d.year == 2017;
-    	}).map(d => {
-    		let res = { name: d.country, value: d.em_totals };
-    		return res;
-    	});
-
-    	let datos = [
-    		{
-    			name: "Porcentaje de coche eléctricos cada 1000 personas.",
-    			data: dataPlugin
-    		},
-    		{
-    			name: "Emigrantes totales",
-    			data: dataAPI01
-    		}
-    	];
-
-    	Highcharts.chart("container01", {
-    		chart: { type: "packedbubble", height: "100%" },
-    		title: { text: "Integración con el grupo 01." },
-    		tooltip: {
-    			useHTML: true,
-    			pointFormat: "<b>{point.name}:</b> {point.value}"
-    		},
-    		plotOptions: {
-    			packedbubble: {
-    				minSize: "20%",
-    				maxSize: "100%",
-    				zMin: 0,
-    				zMax: 1000,
-    				layoutAlgorithm: {
-    					gravitationalConstant: 0.05,
-    					splitSeries: true,
-    					seriesInteraction: false,
-    					dragBetweenSeries: true,
-    					parentNodeLimit: true
-    				},
-    				dataLabels: {
-    					enabled: true,
-    					format: "{point.name}",
-    					filter: { property: "y", operator: ">", value: 250 },
-    					style: {
-    						color: "black",
-    						textOutline: "none",
-    						fontWeight: "normal"
-    					}
-    				}
-    			}
-    		},
-    		series: datos
-    	});
-    }
-
-    async function loadGraph04() {
-    	const BASE_API_URL_04 = "https://sos1920-04.herokuapp.com/api/v1/roads/";
-    	const resData = await fetch(BASE_API_URL$6);
-    	const resData04 = await fetch(BASE_API_URL_04);
-    	let MyData = await resData.json();
-    	let Data04 = await resData04.json();
-
-    	/*
-                Sus Datos:
-    {
-        "province": "Madrid",
-        "year": 2015,
-        "oneway": 2347,
-        "multipleway": 208,
-        "dualCarriagewayAndHighway": 622,
-        "highwayWithToll": 161,
-        "total": 3338
-    }
-                Mis Datos:
-    { 
-        "country": "Japan",
-        "year": 2018,
-        "pev-stock": 257363,
-        "annual-sale": 52013,
-        "cars-per-1000": 2.0
-    }
-    */
-    	let dataPlugin = MyData.map(d => {
-    		let res = {
-    			name: d.country,
-    			value: d["cars-per-1000"]
-    		};
-
-    		return res;
-    	});
-
-    	let dataAPI04 = Data04.map(d => {
-    		let res = { name: d["province"], value: d["total"] };
-    		return res;
-    	});
-
-    	let datos = [
-    		{
-    			name: "Porcentaje de coche eléctricos cada 1000 personas.",
-    			data: dataPlugin
-    		},
-    		{
-    			name: "Número total de carreteras, autopistas y autovías.",
-    			data: dataAPI04
-    		}
-    	];
-
-    	Highcharts.chart("container04", {
-    		chart: { type: "packedbubble", height: "100%" },
-    		title: { text: "Integración con el grupo 04." },
-    		tooltip: {
-    			useHTML: true,
-    			pointFormat: "<b>{point.name}:</b> {point.value}"
-    		},
-    		plotOptions: {
-    			packedbubble: {
-    				minSize: "20%",
-    				maxSize: "100%",
-    				zMin: 0,
-    				zMax: 1000,
-    				layoutAlgorithm: {
-    					gravitationalConstant: 0.05,
-    					splitSeries: true,
-    					seriesInteraction: false,
-    					dragBetweenSeries: true,
-    					parentNodeLimit: true
-    				},
-    				dataLabels: {
-    					enabled: true,
-    					format: "{point.name}",
-    					filter: { property: "y", operator: ">", value: 250 },
-    					style: {
-    						color: "black",
-    						textOutline: "none",
-    						fontWeight: "normal"
-    					}
-    				}
-    			}
-    		},
-    		series: datos
-    	});
-    }
-
-    async function loadGraph05() {
-    	const BASE_API_URL_05 = "/api/v1/life_expectancies";
-    	const resData = await fetch(BASE_API_URL$6);
-    	const resData05 = await fetch(BASE_API_URL_05);
-    	let MyData = await resData.json();
-    	let Data05 = await resData05.json();
-
-    	/*
-                Sus Datos:
-    {
-        "country": "france",
-        "year": 2015,
-        "women_life_expectancy": 85.6,
-        "men_life_expectancy": 79.2,
-        "average_life_expectancy": 82.4
-    }
-                Mis Datos:
-    { 
-        "country": "Japan",
-        "year": 2018,
-        "pev-stock": 257363,
-        "annual-sale": 52013,
-        "cars-per-1000": 2.0
-    }
-    */
-    	let dataPlugin = MyData.map(d => {
-    		let res = {
-    			name: d.country,
-    			value: d["cars-per-1000"]
-    		};
-
-    		return res;
-    	});
-
-    	let dataAPI05 = Data05.map(d => {
-    		let res = {
-    			name: d.country,
-    			value: d["average_life_expectancy"]
-    		};
-
-    		return res;
-    	});
-
-    	let datos = [
-    		{
-    			name: "Porcentaje de coche eléctricos cada 1000 personas.",
-    			data: dataPlugin
-    		},
-    		{
-    			name: "Esperanza de vida media entre hombres y mujeres",
-    			data: dataAPI05
-    		}
-    	];
-
-    	Highcharts.chart("container05", {
-    		chart: { type: "packedbubble", height: "100%" },
-    		title: { text: "Integración con el grupo 05." },
-    		tooltip: {
-    			useHTML: true,
-    			pointFormat: "<b>{point.name}:</b> {point.value}"
-    		},
-    		plotOptions: {
-    			packedbubble: {
-    				minSize: "20%",
-    				maxSize: "100%",
-    				zMin: 0,
-    				zMax: 1000,
-    				layoutAlgorithm: {
-    					gravitationalConstant: 0.05,
-    					splitSeries: true,
-    					seriesInteraction: false,
-    					dragBetweenSeries: true,
-    					parentNodeLimit: true
-    				},
-    				dataLabels: {
-    					enabled: true,
-    					format: "{point.name}",
-    					filter: { property: "y", operator: ">", value: 250 },
-    					style: {
-    						color: "black",
-    						textOutline: "none",
-    						fontWeight: "normal"
-    					}
-    				}
-    			}
-    		},
-    		series: datos
-    	});
-    }
-
-    async function loadGraph06() {
-    	const BASE_API_URL_06 = "/api/v1/not-hospitalized-stats";
-    	const resData = await fetch(BASE_API_URL$6);
-    	const resData06 = await fetch(BASE_API_URL_06);
-    	let MyData = await resData.json();
-    	let Data06 = await resData06.json();
-
-    	/*
-                Sus Datos:
-
-    }
-        "province": "Tarragona",
-        "year": 1995,
-        "total": 1676,
-        "interurban": 1044,
-        "urban": 632
-    }
-                Mis Datos:
-    { 
-        "country": "Japan",
-        "year": 2018,
-        "pev-stock": 257363,
-        "annual-sale": 52013,
-        "cars-per-1000": 2.0
-    }
-    */
-    	let dataPlugin = MyData.map(d => {
-    		let res = {
-    			name: d.country,
-    			value: d["cars-per-1000"]
-    		};
-
-    		return res;
-    	});
-
-    	let dataAPI06 = Data06.map(d => {
-    		let res = { name: d.province, value: d.total };
-    		return res;
-    	});
-
-    	let datos = [
-    		{
-    			name: "Porcentaje de coche eléctricos cada 1000 personas.",
-    			data: dataPlugin
-    		},
-    		{
-    			name: "Número total de vías urbanas e interurbanas.",
-    			data: dataAPI06
-    		}
-    	];
-
-    	Highcharts.chart("container06", {
-    		chart: { type: "packedbubble", height: "100%" },
-    		title: { text: "Integración con el grupo 06." },
-    		tooltip: {
-    			useHTML: true,
-    			pointFormat: "<b>{point.name}:</b> {point.value}"
-    		},
-    		plotOptions: {
-    			packedbubble: {
-    				minSize: "20%",
-    				maxSize: "100%",
-    				zMin: 0,
-    				zMax: 1000,
-    				layoutAlgorithm: {
-    					gravitationalConstant: 0.05,
-    					splitSeries: true,
-    					seriesInteraction: false,
-    					dragBetweenSeries: true,
-    					parentNodeLimit: true
-    				},
-    				dataLabels: {
-    					enabled: true,
-    					format: "{point.name}",
-    					filter: { property: "y", operator: ">", value: 250 },
-    					style: {
-    						color: "black",
-    						textOutline: "none",
-    						fontWeight: "normal"
-    					}
-    				}
-    			}
-    		},
-    		series: datos
-    	});
-    }
-
-    async function loadGraph07() {
-    	const BASE_API_URL_07 = "https://sos1920-07.herokuapp.com/api/v2/imports";
-    	const resData = await fetch(BASE_API_URL$6);
-    	const resData07 = await fetch(BASE_API_URL_07);
-    	let MyData = await resData.json();
-    	let Data07 = await resData07.json();
-
-    	/*
-                Sus Datos:
-    }
-        "country": "canada",
-        "year": 2005,
-        "gdamalt": 584620,
-        "gdabarley": 50979,
-        "gdaoat": 1466303,
-        "gdawaste": 26325,
-        "gdaethylalcohol": 99284
-    }
-                Mis Datos:
-    { 
-        "country": "Japan",
-        "year": 2018,
-        "pev-stock": 257363,
-        "annual-sale": 52013,
-        "cars-per-1000": 2.0
-    }
-    */
-    	let dataPlugin = MyData.map(d => {
-    		let res = {
-    			name: d.country,
-    			value: d["cars-per-1000"]
-    		};
-
-    		return res;
-    	});
-
-    	let dataAPI07 = Data07.filter(d => {
-    		return d.year == 2000 && d.country != "total";
-    	}).map(d => {
-    		let res = {
-    			name: d.country,
-    			value: d.gdaethylalcohol
-    		};
-
-    		return res;
-    	});
-
-    	let datos = [
-    		{
-    			name: "Porcentaje de coche eléctricos cada 1000 personas.",
-    			data: dataPlugin
-    		},
-    		{
-    			name: "Alcohol total importado en el año 2000",
-    			data: dataAPI07
-    		}
-    	];
-
-    	Highcharts.chart("container07", {
-    		chart: { type: "packedbubble", height: "100%" },
-    		title: { text: "Integración con el grupo 07." },
-    		tooltip: {
-    			useHTML: true,
-    			pointFormat: "<b>{point.name}:</b> {point.value}"
-    		},
-    		plotOptions: {
-    			packedbubble: {
-    				minSize: "20%",
-    				maxSize: "100%",
-    				zMin: 0,
-    				zMax: 1000,
-    				layoutAlgorithm: {
-    					gravitationalConstant: 0.05,
-    					splitSeries: true,
-    					seriesInteraction: false,
-    					dragBetweenSeries: true,
-    					parentNodeLimit: true
-    				},
-    				dataLabels: {
-    					enabled: true,
-    					format: "{point.name}",
-    					filter: { property: "y", operator: ">", value: 250 },
-    					style: {
-    						color: "black",
-    						textOutline: "none",
-    						fontWeight: "normal"
-    					}
-    				}
-    			}
-    		},
-    		series: datos
-    	});
-    }
-
-    async function loadGraph08() {
-    	const BASE_API_URL_08 = "/api/v1/electricity-produced-stats/loadInitialData()";
-    	const resData = await fetch(BASE_API_URL$6);
-    	const resData08 = await fetch(BASE_API_URL_08);
-    	let MyData = await resData.json();
-    	let Data08 = await resData08.json();
-
-    	/*
-                Sus Datos:
-    {
-        "country": "EEUU",
-        "state": "Florida",
-        "year": 2018,
-        "hydro": 232574,
-        "solar": 2412067,
-        "coal": 30272201
-    }
-                Mis Datos:
-    { 
-        "country": "Japan",
-        "year": 2018,
-        "pev-stock": 257363,
-        "annual-sale": 52013,
-        "cars-per-1000": 2.0
-    }
-    */
-    	let dataPlugin = MyData.map(d => {
-    		let res = {
-    			name: d.country,
-    			value: d["cars-per-1000"]
-    		};
-
-    		return res;
-    	});
-
-    	let dataAPI08_1 = Data08.map(d => {
-    		let res = { name: d.state, value: d.hydro };
-    		return res;
-    	});
-
-<<<<<<< HEAD
     	button.$on("click", pop);
 
     	const block = {
@@ -24848,28 +23596,10 @@ var app = (function () {
     			attr_dev(div18, "class", "row");
     			add_location(div18, file$s, 220, 4, 5752);
     			add_location(main, file$s, 219, 0, 5740);
-=======
-    	let dataAPI08_2 = Data08.map(d => {
-    		let res = { name: d.state, value: d.solar };
-    		return res;
-    	});
-
-    	let dataAPI08_3 = Data08.map(d => {
-    		let res = { name: d.state, value: d.coal };
-    		return res;
-    	});
-
-    	let datos = [
-    		{
-    			name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018.",
-    			data: dataPlugin
->>>>>>> 43e6c3529c0a04455a2a86e87ab9a684b18d5c93
     		},
-    		{
-    			name: "Energía Hidroeléctrica producida en EEUU en el año 2018",
-    			data: dataAPI08_1
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
-<<<<<<< HEAD
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
     			append_dev(main, div18);
@@ -24941,55 +23671,8 @@ var app = (function () {
 
     			if (dirty & /*$$scope*/ 1) {
     				button_changes.$$scope = { dirty, ctx };
-=======
-    		{
-    			name: "Energía Solar producida en EEUU en el año 2018",
-    			data: dataAPI08_2
-    		},
-    		{
-    			name: "Energía por combustión de Carbón producida en EEUU en el año 2018",
-    			data: dataAPI08_3
-    		}
-    	];
-
-    	Highcharts.chart("container08", {
-    		chart: { type: "packedbubble", height: "100%" },
-    		title: { text: "Integración con el grupo 08." },
-    		tooltip: {
-    			useHTML: true,
-    			pointFormat: "<b>{point.name}:</b> {point.value}"
-    		},
-    		plotOptions: {
-    			packedbubble: {
-    				minSize: "20%",
-    				maxSize: "100%",
-    				zMin: 0,
-    				zMax: 1000,
-    				layoutAlgorithm: {
-    					gravitationalConstant: 0.05,
-    					splitSeries: true,
-    					seriesInteraction: false,
-    					dragBetweenSeries: true,
-    					parentNodeLimit: true
-    				},
-    				dataLabels: {
-    					enabled: true,
-    					format: "{point.name}",
-    					filter: { property: "y", operator: ">", value: 250 },
-    					style: {
-    						color: "black",
-    						textOutline: "none",
-    						fontWeight: "normal"
-    					}
-    				}
->>>>>>> 43e6c3529c0a04455a2a86e87ab9a684b18d5c93
     			}
-    		},
-    		series: datos
-    	});
-    }
 
-<<<<<<< HEAD
     			button.$set(button_changes);
     		},
     		i: function intro(local) {
@@ -25004,316 +23687,20 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(main);
     			destroy_component(button);
-=======
-    async function loadGraph12() {
-    	const BASE_API_URL_12 = "https://sos1920-12.herokuapp.com/api/v2/overdose-deaths";
-    	const resData = await fetch(BASE_API_URL$6);
-    	const resData12 = await fetch(BASE_API_URL_12);
-    	let MyData = await resData.json();
-    	let Data12 = await resData12.json();
-
-    	/*
-                Sus Datos:
-    {
-        "country": "France",
-        "year": 2011,
-        "death_male": 249,
-        "death_female": 91,
-        "death_total": 340,
-        "mean_age": 45.7
-    }
-                Mis Datos:
-    { 
-        "country": "Japan",
-        "year": 2018,
-        "pev-stock": 257363,
-        "annual-sale": 52013,
-        "cars-per-1000": 2.0
-    }
-    */
-    	let dataPlugin = MyData.map(d => {
-    		let res = {
-    			name: d.country,
-    			value: d["cars-per-1000"]
-    		};
-
-    		return res;
-    	});
-
-    	let dataAPI12 = Data12.filter(d => {
-    		return d.year == 2017;
-    	}).map(d => {
-    		let res = { name: d.country, value: d["death_total"] };
-    		return res;
-    	});
-
-    	let datos = [
-    		{
-    			name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018.",
-    			data: dataPlugin
-    		},
-    		{
-    			name: "Número total de muertes por sobredosis en el año 2017",
-    			data: dataAPI12
     		}
-    	];
+    	};
 
-    	Highcharts.chart("container12", {
-    		chart: { type: "packedbubble", height: "100%" },
-    		title: { text: "Integración con el grupo 12." },
-    		tooltip: {
-    			useHTML: true,
-    			pointFormat: "<b>{point.name}:</b> {point.value}"
-    		},
-    		plotOptions: {
-    			packedbubble: {
-    				minSize: "20%",
-    				maxSize: "100%",
-    				zMin: 0,
-    				zMax: 1000,
-    				layoutAlgorithm: {
-    					gravitationalConstant: 0.05,
-    					splitSeries: true,
-    					seriesInteraction: false,
-    					dragBetweenSeries: true,
-    					parentNodeLimit: true
-    				},
-    				dataLabels: {
-    					enabled: true,
-    					format: "{point.name}",
-    					filter: { property: "y", operator: ">", value: 250 },
-    					style: {
-    						color: "black",
-    						textOutline: "none",
-    						fontWeight: "normal"
-    					}
-    				}
-    			}
-    		},
-    		series: datos
-    	});
-    }
-
-    async function loadGraph23$1() {
-    	const BASE_API_URL_23 = "https://sos1920-23.herokuapp.com/api/v2/fires-stats/";
-    	const resData = await fetch(BASE_API_URL$6);
-    	const resData23 = await fetch(BASE_API_URL_23);
-    	let MyData = await resData.json();
-    	let Data23 = await resData23.json();
-
-    	/*
-                Sus Datos:
-    {
-        "community": "castilla-la-mancha",
-        "year": 2007,
-        "total_fire": 694,
-        "forest_area": 2026.46,
-        "non_forest_area": 1068.96
-    }
-                Mis Datos:
-    { 
-        "country": "Japan",
-        "year": 2018,
-        "pev-stock": 257363,
-        "annual-sale": 52013,
-        "cars-per-1000": 2.0
-    }
-    */
-    	let dataPlugin = MyData.map(d => {
-    		let res = {
-    			name: d.country,
-    			value: d["cars-per-1000"]
-    		};
-
-    		return res;
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$t.name,
+    		type: "component",
+    		source: "",
+    		ctx
     	});
 
-    	let dataAPI23 = Data23.filter(d => {
-    		return d.year == 2007;
-    	}).map(d => {
-    		let res = {
-    			name: d.community,
-    			value: d["total_fire"]
-    		};
-
-    		return res;
-    	});
-
-    	let datos = [
-    		{
-    			name: "Porcentaje de coche eléctricos cada 1000 personas.",
-    			data: dataPlugin
-    		},
-    		{
-    			name: "Número de incendios totales en España en el año 2007",
-    			data: dataAPI23
->>>>>>> 43e6c3529c0a04455a2a86e87ab9a684b18d5c93
-    		}
-    	];
-
-    	Highcharts.chart("container23", {
-    		chart: { type: "packedbubble", height: "100%" },
-    		title: { text: "Integración con el grupo 23." },
-    		tooltip: {
-    			useHTML: true,
-    			pointFormat: "<b>{point.name}:</b> {point.value}"
-    		},
-    		plotOptions: {
-    			packedbubble: {
-    				minSize: "20%",
-    				maxSize: "100%",
-    				zMin: 0,
-    				zMax: 1000,
-    				layoutAlgorithm: {
-    					gravitationalConstant: 0.05,
-    					splitSeries: true,
-    					seriesInteraction: false,
-    					dragBetweenSeries: true,
-    					parentNodeLimit: true
-    				},
-    				dataLabels: {
-    					enabled: true,
-    					format: "{point.name}",
-    					filter: { property: "y", operator: ">", value: 250 },
-    					style: {
-    						color: "black",
-    						textOutline: "none",
-    						fontWeight: "normal"
-    					}
-    				}
-    			}
-    		},
-    		series: datos
-    	});
+    	return block;
     }
 
-    async function loadGraph24() {
-    	const BASE_API_URL_24 = "https://sos1920-24.herokuapp.com/api/v2/atc-stats";
-    	const resData = await fetch(BASE_API_URL$6);
-    	const resData24 = await fetch(BASE_API_URL_24);
-    	let MyData = await resData.json();
-    	let Data24 = await resData24.json();
-
-    	/*
-                Sus Datos:
-    {
-        "aut_com": "Andalucia",
-        "year": 2018,
-        "espce": 757.2,
-        "yaq": 757,
-        "obu": 757
-    }
-                Mis Datos:
-    { 
-        "country": "Japan",
-        "year": 2018,
-        "pev-stock": 257363,
-        "annual-sale": 52013,
-        "cars-per-1000": 2.0
-    }
-    */
-    	let dataPlugin = MyData.map(d => {
-    		let res = {
-    			name: d.country,
-    			value: d["cars-per-1000"]
-    		};
-
-    		return res;
-    	});
-
-    	let dataAPI24 = Data24.map(d => {
-    		let res = {
-    			name: d["aut_com"],
-    			//value: (d["espce"] / 10) //Los divido entre 10 para obtener una mejor visualización.
-    			value: d["espce"]
-    		};
-
-    		return res;
-    	});
-
-    	let datos = [
-    		{
-    			name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018",
-    			data: dataPlugin
-    		},
-    		{
-    			name: "Coste medio de la matricula universitaria en el año 2018",
-    			data: dataAPI24
-    		}
-    	];
-
-    	Highcharts.chart("container24", {
-    		chart: { type: "packedbubble", height: "100%" },
-    		title: { text: "Integración con el grupo 24." },
-    		tooltip: {
-    			useHTML: true,
-    			pointFormat: "<b>{point.name}:</b> {point.value}"
-    		},
-    		plotOptions: {
-    			packedbubble: {
-    				minSize: "20%",
-    				maxSize: "100%",
-    				zMin: 0,
-    				zMax: 1000,
-    				layoutAlgorithm: {
-    					gravitationalConstant: 0.05,
-    					splitSeries: true,
-    					seriesInteraction: false,
-    					dragBetweenSeries: true,
-    					parentNodeLimit: true
-    				},
-    				dataLabels: {
-    					enabled: true,
-    					format: "{point.name}",
-    					filter: { property: "y", operator: ">", value: 250 },
-    					style: {
-    						color: "black",
-    						textOutline: "none",
-    						fontWeight: "normal"
-    					}
-    				}
-    			}
-    		},
-    		series: datos
-    	});
-    }
-
-    async function loadGraph27$1() {
-    	const BASE_API_URL_27 = "https://sos1920-27.herokuapp.com/api/v2/spc-stats";
-    	const resData = await fetch(BASE_API_URL$6);
-    	const resData27 = await fetch(BASE_API_URL_27);
-    	let MyData = await resData.json();
-    	let Data27 = await resData27.json();
-
-    	/*
-                Sus Datos:
-    {
-        "country": "cameroon",                       
-        "both_sex": 19.5,
-        "male_rank": 13,
-        "male_number": 26.9,
-        "female_rank": 10,
-        "female_number": 12.5,
-        "ratio": 2.15,
-        "year": 2013,
-        "continent": "africa"
-    }
-                Mis Datos:
-    { 
-        "country": "Japan",
-        "year": 2018,
-        "pev-stock": 257363,
-        "annual-sale": 52013,
-        "cars-per-1000": 2.0
-    }
-    */
-    	let dataPlugin = MyData.map(d => {
-    		let res = {
-    			name: d.country,
-    			value: d["cars-per-1000"]
-    		};
-
-<<<<<<< HEAD
     async function loadGraph4$1() {
     	const BASE_API_URL = "https://sos1920-04.herokuapp.com/api/v1/traffic_accidents";
     	let MyData = [];
@@ -25486,10 +23873,1669 @@ var app = (function () {
     function instance$t($$self, $$props, $$invalidate) {
     	loadGraph4$1();
     	const writable_props = [];
-=======
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Integrations> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("Integrations", $$slots, []);
+    	$$self.$capture_state = () => ({ Button, pop, loadGraph4: loadGraph4$1 });
+    	return [];
+    }
+
+    class Integrations$1 extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$t, create_fragment$t, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Integrations",
+    			options,
+    			id: create_fragment$t.name
+    		});
+    	}
+    }
+
+    /* src\front\plugInVehiclesAPI\Integrations.svelte generated by Svelte v3.20.1 */
+
+    const { console: console_1$b } = globals;
+    const file$t = "src\\front\\plugInVehiclesAPI\\Integrations.svelte";
+
+    // (1574:4) <Button outline color="secondary" on:click="{pop}">
+    function create_default_slot$g(ctx) {
+    	let i;
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			i = element("i");
+    			t = text(" Atrás");
+    			attr_dev(i, "class", "fas fa-arrow-circle-left");
+    			add_location(i, file$t, 1573, 56, 53284);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$g.name,
+    		type: "slot",
+    		source: "(1574:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$u(ctx) {
+    	let script0;
+    	let script0_src_value;
+    	let script1;
+    	let script1_src_value;
+    	let script2;
+    	let script2_src_value;
+    	let script3;
+    	let script3_src_value;
+    	let t0;
+    	let main;
+    	let div30;
+    	let div1;
+    	let div0;
+    	let a0;
+    	let t2;
+    	let a1;
+    	let t4;
+    	let a2;
+    	let t6;
+    	let a3;
+    	let t8;
+    	let a4;
+    	let t10;
+    	let a5;
+    	let t12;
+    	let a6;
+    	let t14;
+    	let a7;
+    	let t16;
+    	let a8;
+    	let t18;
+    	let a9;
+    	let t20;
+    	let a10;
+    	let t22;
+    	let a11;
+    	let t24;
+    	let a12;
+    	let t26;
+    	let div29;
+    	let div28;
+    	let div3;
+    	let figure0;
+    	let div2;
+    	let t27;
+    	let p0;
+    	let t29;
+    	let div5;
+    	let figure1;
+    	let div4;
+    	let t30;
+    	let p1;
+    	let t32;
+    	let div7;
+    	let figure2;
+    	let div6;
+    	let t33;
+    	let p2;
+    	let t35;
+    	let div9;
+    	let figure3;
+    	let div8;
+    	let t36;
+    	let p3;
+    	let t38;
+    	let div11;
+    	let figure4;
+    	let div10;
+    	let t39;
+    	let p4;
+    	let t41;
+    	let div13;
+    	let figure5;
+    	let div12;
+    	let t42;
+    	let p5;
+    	let t44;
+    	let div15;
+    	let figure6;
+    	let div14;
+    	let t45;
+    	let p6;
+    	let t47;
+    	let div17;
+    	let figure7;
+    	let div16;
+    	let t48;
+    	let p7;
+    	let t50;
+    	let div19;
+    	let figure8;
+    	let div18;
+    	let t51;
+    	let p8;
+    	let t53;
+    	let div21;
+    	let figure9;
+    	let div20;
+    	let t54;
+    	let p9;
+    	let t56;
+    	let div23;
+    	let figure10;
+    	let div22;
+    	let t57;
+    	let p10;
+    	let t59;
+    	let div25;
+    	let figure11;
+    	let div24;
+    	let t60;
+    	let p11;
+    	let t62;
+    	let div27;
+    	let figure12;
+    	let div26;
+    	let t63;
+    	let p12;
+    	let t65;
+    	let current;
+
+    	const button = new Button({
+    			props: {
+    				outline: true,
+    				color: "secondary",
+    				$$slots: { default: [create_default_slot$g] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", pop);
+
+    	const block = {
+    		c: function create() {
+    			script0 = element("script");
+    			script1 = element("script");
+    			script2 = element("script");
+    			script3 = element("script");
+    			t0 = space();
+    			main = element("main");
+    			div30 = element("div");
+    			div1 = element("div");
+    			div0 = element("div");
+    			a0 = element("a");
+    			a0.textContent = "Integración con 01 emigrants-stats";
+    			t2 = space();
+    			a1 = element("a");
+    			a1.textContent = "Integración con 04 roads";
+    			t4 = space();
+    			a2 = element("a");
+    			a2.textContent = "Integración con 05 life_expectancies";
+    			t6 = space();
+    			a3 = element("a");
+    			a3.textContent = "Integración con 06 not-hospitalized-stats";
+    			t8 = space();
+    			a4 = element("a");
+    			a4.textContent = "Integración con 07 imports";
+    			t10 = space();
+    			a5 = element("a");
+    			a5.textContent = "Integración con 08 electricity-produced-stats";
+    			t12 = space();
+    			a6 = element("a");
+    			a6.textContent = "Integración con 12 overdose-deaths";
+    			t14 = space();
+    			a7 = element("a");
+    			a7.textContent = "Integración con 23 fires-stats";
+    			t16 = space();
+    			a8 = element("a");
+    			a8.textContent = "Integración con 24 atc-stats";
+    			t18 = space();
+    			a9 = element("a");
+    			a9.textContent = "Integración con 27 spc-stats";
+    			t20 = space();
+    			a10 = element("a");
+    			a10.textContent = "Integración con 28 gce";
+    			t22 = space();
+    			a11 = element("a");
+    			a11.textContent = "Integración Externa 01";
+    			t24 = space();
+    			a12 = element("a");
+    			a12.textContent = "Integración Externa 02";
+    			t26 = space();
+    			div29 = element("div");
+    			div28 = element("div");
+    			div3 = element("div");
+    			figure0 = element("figure");
+    			div2 = element("div");
+    			t27 = space();
+    			p0 = element("p");
+    			p0.textContent = "La integración está realizada con emigrantes totales en todo el mundo junto el porcentaje de coches eléctricos cada 1000 personas \r\n                        en el año 2017 y 2018 respectivamente.";
+    			t29 = space();
+    			div5 = element("div");
+    			figure1 = element("figure");
+    			div4 = element("div");
+    			t30 = space();
+    			p1 = element("p");
+    			p1.textContent = "La integración muestra los datos en España sobre el número total de carreteras, autopistas y autovías \r\n                        junto con la venta anual de coches electricos en 2018. Podría haber mostrado solo el de España,\r\n                        pero la gráfica final se veia muy mal.";
+    			t32 = space();
+    			div7 = element("div");
+    			figure2 = element("figure");
+    			div6 = element("div");
+    			t33 = space();
+    			p2 = element("p");
+    			p2.textContent = "La integración muestra la esperanza de vida media en todo el mundo junto el porcentaje de coches\r\n                        eléctricos cada 1000 personas en todo el mundo en el año 2018.";
+    			t35 = space();
+    			div9 = element("div");
+    			figure3 = element("figure");
+    			div8 = element("div");
+    			t36 = space();
+    			p3 = element("p");
+    			p3.textContent = "La integración muestra el número total de vías urbanas e interurbanas en distintas ciudades de España\r\n                        junto al porcentaje de coches eléctricos cada 1000 personas en todo el mundo en el año 2018.\r\n                        Podría haber mostrado unicamente los datos de EEUU, pero la gráfica resultante no resulta \r\n                        muy agradable visualmente.";
+    			t38 = space();
+    			div11 = element("div");
+    			figure4 = element("figure");
+    			div10 = element("div");
+    			t39 = space();
+    			p4 = element("p");
+    			p4.textContent = "La integración muestra la cantidad de alcohol total importado en todo el mundo en el año 2000\r\n                        junto al porcentaje de coches eléctricos cada 1000 personas en todo el mundo en el año 2018.";
+    			t41 = space();
+    			div13 = element("div");
+    			figure5 = element("figure");
+    			div12 = element("div");
+    			t42 = space();
+    			p5 = element("p");
+    			p5.textContent = "La integración muestra el porcentaje de coches eléctricos cada 1000 personas en todo el mundo\r\n                        junto a la cantidad de energía producida, por carbon, solar o hidrográfica, en el año 2018.\r\n                        Podría haber mostrado unicamente los datos de EEUU, pero la gráfica resultante no resulta \r\n                        muy agradable visualmente.";
+    			t44 = space();
+    			div15 = element("div");
+    			figure6 = element("figure");
+    			div14 = element("div");
+    			t45 = space();
+    			p6 = element("p");
+    			p6.textContent = "La integración muestra el número total de muertes por sobredosis, tanto masculinas como femeninas, en todo\r\n                        el mundo en el año 2017 junto al porcentaje de coches electricos cada 1000 personas en 2018.";
+    			t47 = space();
+    			div17 = element("div");
+    			figure7 = element("figure");
+    			div16 = element("div");
+    			t48 = space();
+    			p7 = element("p");
+    			p7.textContent = "La integración muestra el número total de incendios en cada comunidad autónoma de España en el año 2007\r\n                        junto al porcentaje de coches eléctricos en el año 2018 en todo el mundo. Podría haber mostrado solo el de España,\r\n                        pero la gráfica final se veia muy mal.";
+    			t50 = space();
+    			div19 = element("div");
+    			figure8 = element("figure");
+    			div18 = element("div");
+    			t51 = space();
+    			p8 = element("p");
+    			p8.textContent = "La integración muestra el coste medio de las matriculas universitarias españolas junto el Porcentaje\r\n                        de coches eléctricos cada 1000 personas en el año 2018 en todo el mundo. Podría haber mostrado solo el de España,\r\n                        pero la gráfica final se veia muy mal.";
+    			t53 = space();
+    			div21 = element("div");
+    			figure9 = element("figure");
+    			div20 = element("div");
+    			t54 = space();
+    			p9 = element("p");
+    			p9.textContent = "La integración muestra el porcentaje de suicidios totales en paises de todo el mundo en el año 2013\r\n                        junto el porcentaje de coches eléctricos cada 1000 personas en todo el mundo en el año 2018.";
+    			t56 = space();
+    			div23 = element("div");
+    			figure10 = element("figure");
+    			div22 = element("div");
+    			t57 = space();
+    			p10 = element("p");
+    			p10.textContent = "La integración muestra el porcentaje per capital en 2014 junto el porcentaje del número de coches\r\n                        eléctricos cada 1000 personas en el año 2018, en todo el mundo.";
+    			t59 = space();
+    			div25 = element("div");
+    			figure11 = element("figure");
+    			div24 = element("div");
+    			t60 = space();
+    			p11 = element("p");
+    			p11.textContent = "Integra la API externa mediante proxy, y muestra datos del porcentaje de coches eléctricos cada\r\n                        1000 personas en USA junto con el nombre y el dorsal de jugadores de baloncesto de la NBA (en USA).";
+    			t62 = space();
+    			div27 = element("div");
+    			figure12 = element("figure");
+    			div26 = element("div");
+    			t63 = space();
+    			p12 = element("p");
+    			p12.textContent = "Integra la API externa mediante proxy, y muestra datos del porcentaje de coches eléctricos cada 1000 personas\r\n                        junto el número y nombre de los satelites desplegados en el año 2018.";
+    			t65 = space();
+    			create_component(button.$$.fragment);
+    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
+    			add_location(script0, file$t, 1412, 4, 42031);
+    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
+    			add_location(script1, file$t, 1413, 4, 42102);
+    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
+    			add_location(script2, file$t, 1414, 4, 42178);
+    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
+    			add_location(script3, file$t, 1415, 4, 42256);
+    			attr_dev(a0, "class", "list-group-item list-group-item-action active");
+    			attr_dev(a0, "id", "list-home-list");
+    			attr_dev(a0, "data-toggle", "list");
+    			attr_dev(a0, "href", "#list-01");
+    			attr_dev(a0, "role", "tab");
+    			attr_dev(a0, "aria-controls", "home");
+    			add_location(a0, file$t, 1425, 12, 42499);
+    			attr_dev(a1, "class", "list-group-item list-group-item-action");
+    			attr_dev(a1, "id", "list-profile-list");
+    			attr_dev(a1, "data-toggle", "list");
+    			attr_dev(a1, "href", "#list-04");
+    			attr_dev(a1, "role", "tab");
+    			attr_dev(a1, "aria-controls", "profile");
+    			add_location(a1, file$t, 1426, 12, 42695);
+    			attr_dev(a2, "class", "list-group-item list-group-item-action");
+    			attr_dev(a2, "id", "list-profile-list");
+    			attr_dev(a2, "data-toggle", "list");
+    			attr_dev(a2, "href", "#list-05");
+    			attr_dev(a2, "role", "tab");
+    			attr_dev(a2, "aria-controls", "profile");
+    			add_location(a2, file$t, 1427, 12, 42880);
+    			attr_dev(a3, "class", "list-group-item list-group-item-action");
+    			attr_dev(a3, "id", "list-profile-list");
+    			attr_dev(a3, "data-toggle", "list");
+    			attr_dev(a3, "href", "#list-06");
+    			attr_dev(a3, "role", "tab");
+    			attr_dev(a3, "aria-controls", "profile");
+    			add_location(a3, file$t, 1428, 12, 43077);
+    			attr_dev(a4, "class", "list-group-item list-group-item-action");
+    			attr_dev(a4, "id", "list-profile-list");
+    			attr_dev(a4, "data-toggle", "list");
+    			attr_dev(a4, "href", "#list-07");
+    			attr_dev(a4, "role", "tab");
+    			attr_dev(a4, "aria-controls", "profile");
+    			add_location(a4, file$t, 1429, 12, 43279);
+    			attr_dev(a5, "class", "list-group-item list-group-item-action");
+    			attr_dev(a5, "id", "list-profile-list");
+    			attr_dev(a5, "data-toggle", "list");
+    			attr_dev(a5, "href", "#list-08");
+    			attr_dev(a5, "role", "tab");
+    			attr_dev(a5, "aria-controls", "profile");
+    			add_location(a5, file$t, 1430, 12, 43466);
+    			attr_dev(a6, "class", "list-group-item list-group-item-action");
+    			attr_dev(a6, "id", "list-profile-list");
+    			attr_dev(a6, "data-toggle", "list");
+    			attr_dev(a6, "href", "#list-12");
+    			attr_dev(a6, "role", "tab");
+    			attr_dev(a6, "aria-controls", "profile");
+    			add_location(a6, file$t, 1431, 12, 43672);
+    			attr_dev(a7, "class", "list-group-item list-group-item-action");
+    			attr_dev(a7, "id", "list-profile-list");
+    			attr_dev(a7, "data-toggle", "list");
+    			attr_dev(a7, "href", "#list-23");
+    			attr_dev(a7, "role", "tab");
+    			attr_dev(a7, "aria-controls", "profile");
+    			add_location(a7, file$t, 1432, 12, 43867);
+    			attr_dev(a8, "class", "list-group-item list-group-item-action");
+    			attr_dev(a8, "id", "list-profile-list");
+    			attr_dev(a8, "data-toggle", "list");
+    			attr_dev(a8, "href", "#list-24");
+    			attr_dev(a8, "role", "tab");
+    			attr_dev(a8, "aria-controls", "profile");
+    			add_location(a8, file$t, 1433, 12, 44058);
+    			attr_dev(a9, "class", "list-group-item list-group-item-action");
+    			attr_dev(a9, "id", "list-profile-list");
+    			attr_dev(a9, "data-toggle", "list");
+    			attr_dev(a9, "href", "#list-27");
+    			attr_dev(a9, "role", "tab");
+    			attr_dev(a9, "aria-controls", "profile");
+    			add_location(a9, file$t, 1434, 12, 44247);
+    			attr_dev(a10, "class", "list-group-item list-group-item-action");
+    			attr_dev(a10, "id", "list-profile-list");
+    			attr_dev(a10, "data-toggle", "list");
+    			attr_dev(a10, "href", "#list-28");
+    			attr_dev(a10, "role", "tab");
+    			attr_dev(a10, "aria-controls", "profile");
+    			add_location(a10, file$t, 1435, 12, 44436);
+    			attr_dev(a11, "class", "list-group-item list-group-item-action");
+    			attr_dev(a11, "id", "list-profile-list");
+    			attr_dev(a11, "data-toggle", "list");
+    			attr_dev(a11, "href", "#list-Ext01");
+    			attr_dev(a11, "role", "tab");
+    			attr_dev(a11, "aria-controls", "profile");
+    			add_location(a11, file$t, 1436, 12, 44619);
+    			attr_dev(a12, "class", "list-group-item list-group-item-action");
+    			attr_dev(a12, "id", "list-profile-list");
+    			attr_dev(a12, "data-toggle", "list");
+    			attr_dev(a12, "href", "#list-Ext02");
+    			attr_dev(a12, "role", "tab");
+    			attr_dev(a12, "aria-controls", "profile");
+    			add_location(a12, file$t, 1437, 12, 44805);
+    			attr_dev(div0, "class", "list-group");
+    			attr_dev(div0, "id", "list-tab");
+    			attr_dev(div0, "role", "tablist");
+    			add_location(div0, file$t, 1423, 10, 42430);
+    			attr_dev(div1, "class", "col-4");
+    			add_location(div1, file$t, 1422, 8, 42399);
+    			attr_dev(div2, "id", "container01");
+    			add_location(div2, file$t, 1445, 20, 45286);
+    			attr_dev(p0, "class", "highcharts-description");
+    			add_location(p0, file$t, 1446, 20, 45336);
+    			attr_dev(figure0, "class", "highcharts-figure");
+    			add_location(figure0, file$t, 1444, 16, 45230);
+    			attr_dev(div3, "class", "tab-pane fade show active");
+    			attr_dev(div3, "id", "list-01");
+    			attr_dev(div3, "role", "tabpanel");
+    			attr_dev(div3, "aria-labelledby", "list-home-list");
+    			add_location(div3, file$t, 1443, 12, 45111);
+    			attr_dev(div4, "id", "container04");
+    			add_location(div4, file$t, 1454, 20, 45843);
+    			attr_dev(p1, "class", "highcharts-description");
+    			add_location(p1, file$t, 1455, 20, 45893);
+    			attr_dev(figure1, "class", "highcharts-figure");
+    			add_location(figure1, file$t, 1453, 16, 45787);
+    			attr_dev(div5, "class", "tab-pane fade");
+    			attr_dev(div5, "id", "list-04");
+    			attr_dev(div5, "role", "tabpanel");
+    			attr_dev(div5, "aria-labelledby", "list-profile-list");
+    			add_location(div5, file$t, 1452, 12, 45677);
+    			attr_dev(div6, "id", "container05");
+    			add_location(div6, file$t, 1464, 20, 46493);
+    			attr_dev(p2, "class", "highcharts-description");
+    			add_location(p2, file$t, 1465, 20, 46543);
+    			attr_dev(figure2, "class", "highcharts-figure");
+    			add_location(figure2, file$t, 1463, 16, 46437);
+    			attr_dev(div7, "class", "tab-pane fade");
+    			attr_dev(div7, "id", "list-05");
+    			attr_dev(div7, "role", "tabpanel");
+    			attr_dev(div7, "aria-labelledby", "list-profile-list");
+    			add_location(div7, file$t, 1462, 12, 46327);
+    			attr_dev(div8, "id", "container06");
+    			add_location(div8, file$t, 1473, 20, 47040);
+    			attr_dev(p3, "class", "highcharts-description");
+    			add_location(p3, file$t, 1474, 20, 47090);
+    			attr_dev(figure3, "class", "highcharts-figure");
+    			add_location(figure3, file$t, 1472, 16, 46984);
+    			attr_dev(div9, "class", "tab-pane fade");
+    			attr_dev(div9, "id", "list-06");
+    			attr_dev(div9, "role", "tabpanel");
+    			attr_dev(div9, "aria-labelledby", "list-profile-list");
+    			add_location(div9, file$t, 1471, 12, 46874);
+    			attr_dev(div10, "id", "container07");
+    			add_location(div10, file$t, 1485, 20, 47816);
+    			attr_dev(p4, "class", "highcharts-description");
+    			add_location(p4, file$t, 1486, 20, 47866);
+    			attr_dev(figure4, "class", "highcharts-figure");
+    			add_location(figure4, file$t, 1484, 16, 47760);
+    			attr_dev(div11, "class", "tab-pane fade");
+    			attr_dev(div11, "id", "list-07");
+    			attr_dev(div11, "role", "tabpanel");
+    			attr_dev(div11, "aria-labelledby", "list-profile-list");
+    			add_location(div11, file$t, 1483, 12, 47650);
+    			attr_dev(div12, "id", "container08");
+    			add_location(div12, file$t, 1494, 20, 48390);
+    			attr_dev(p5, "class", "highcharts-description");
+    			add_location(p5, file$t, 1495, 20, 48440);
+    			attr_dev(figure5, "class", "highcharts-figure");
+    			add_location(figure5, file$t, 1493, 16, 48334);
+    			attr_dev(div13, "class", "tab-pane fade");
+    			attr_dev(div13, "id", "list-08");
+    			attr_dev(div13, "role", "tabpanel");
+    			attr_dev(div13, "aria-labelledby", "list-profile-list");
+    			add_location(div13, file$t, 1492, 12, 48224);
+    			attr_dev(div14, "id", "container12");
+    			add_location(div14, file$t, 1505, 20, 49131);
+    			attr_dev(p6, "class", "highcharts-description");
+    			add_location(p6, file$t, 1506, 20, 49181);
+    			attr_dev(figure6, "class", "highcharts-figure");
+    			add_location(figure6, file$t, 1504, 16, 49075);
+    			attr_dev(div15, "class", "tab-pane fade");
+    			attr_dev(div15, "id", "list-12");
+    			attr_dev(div15, "role", "tabpanel");
+    			attr_dev(div15, "aria-labelledby", "list-profile-list");
+    			add_location(div15, file$t, 1503, 12, 48965);
+    			attr_dev(div16, "id", "container23");
+    			add_location(div16, file$t, 1514, 20, 49718);
+    			attr_dev(p7, "class", "highcharts-description");
+    			add_location(p7, file$t, 1515, 20, 49768);
+    			attr_dev(figure7, "class", "highcharts-figure");
+    			add_location(figure7, file$t, 1513, 16, 49662);
+    			attr_dev(div17, "class", "tab-pane fade");
+    			attr_dev(div17, "id", "list-23");
+    			attr_dev(div17, "role", "tabpanel");
+    			attr_dev(div17, "aria-labelledby", "list-profile-list");
+    			add_location(div17, file$t, 1512, 12, 49552);
+    			attr_dev(div18, "id", "container24");
+    			add_location(div18, file$t, 1524, 20, 50388);
+    			attr_dev(p8, "class", "highcharts-description");
+    			add_location(p8, file$t, 1525, 20, 50438);
+    			attr_dev(figure8, "class", "highcharts-figure");
+    			add_location(figure8, file$t, 1523, 16, 50332);
+    			attr_dev(div19, "class", "tab-pane fade");
+    			attr_dev(div19, "id", "list-24");
+    			attr_dev(div19, "role", "tabpanel");
+    			attr_dev(div19, "aria-labelledby", "list-profile-list");
+    			add_location(div19, file$t, 1522, 12, 50222);
+    			attr_dev(div20, "id", "container27");
+    			add_location(div20, file$t, 1534, 20, 51054);
+    			attr_dev(p9, "class", "highcharts-description");
+    			add_location(p9, file$t, 1535, 20, 51104);
+    			attr_dev(figure9, "class", "highcharts-figure");
+    			add_location(figure9, file$t, 1533, 16, 50998);
+    			attr_dev(div21, "class", "tab-pane fade");
+    			attr_dev(div21, "id", "list-27");
+    			attr_dev(div21, "role", "tabpanel");
+    			attr_dev(div21, "aria-labelledby", "list-profile-list");
+    			add_location(div21, file$t, 1532, 12, 50888);
+    			attr_dev(div22, "id", "container28");
+    			add_location(div22, file$t, 1543, 20, 51634);
+    			attr_dev(p10, "class", "highcharts-description");
+    			add_location(p10, file$t, 1544, 20, 51684);
+    			attr_dev(figure10, "class", "highcharts-figure");
+    			add_location(figure10, file$t, 1542, 16, 51578);
+    			attr_dev(div23, "class", "tab-pane fade");
+    			attr_dev(div23, "id", "list-28");
+    			attr_dev(div23, "role", "tabpanel");
+    			attr_dev(div23, "aria-labelledby", "list-profile-list");
+    			add_location(div23, file$t, 1541, 12, 51468);
+    			attr_dev(div24, "id", "containerExt01");
+    			add_location(div24, file$t, 1552, 20, 52186);
+    			attr_dev(p11, "class", "highcharts-description");
+    			add_location(p11, file$t, 1553, 20, 52239);
+    			attr_dev(figure11, "class", "highcharts-figure");
+    			add_location(figure11, file$t, 1551, 16, 52130);
+    			attr_dev(div25, "class", "tab-pane fade");
+    			attr_dev(div25, "id", "list-Ext01");
+    			attr_dev(div25, "role", "tabpanel");
+    			attr_dev(div25, "aria-labelledby", "list-profile-list");
+    			add_location(div25, file$t, 1550, 12, 52017);
+    			attr_dev(div26, "id", "containerExt02");
+    			add_location(div26, file$t, 1561, 20, 52775);
+    			attr_dev(p12, "class", "highcharts-description");
+    			add_location(p12, file$t, 1562, 20, 52828);
+    			attr_dev(figure12, "class", "highcharts-figure");
+    			add_location(figure12, file$t, 1560, 16, 52719);
+    			attr_dev(div27, "class", "tab-pane fade");
+    			attr_dev(div27, "id", "list-Ext02");
+    			attr_dev(div27, "role", "tabpanel");
+    			attr_dev(div27, "aria-labelledby", "list-profile-list");
+    			add_location(div27, file$t, 1559, 12, 52606);
+    			attr_dev(div28, "class", "tab-content");
+    			attr_dev(div28, "id", "nav-tabContent");
+    			add_location(div28, file$t, 1442, 10, 45052);
+    			attr_dev(div29, "class", "col-8");
+    			add_location(div29, file$t, 1441, 8, 45021);
+    			attr_dev(div30, "class", "row");
+    			add_location(div30, file$t, 1421, 4, 42372);
+    			add_location(main, file$t, 1419, 0, 42358);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			append_dev(document.head, script0);
+    			append_dev(document.head, script1);
+    			append_dev(document.head, script2);
+    			append_dev(document.head, script3);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, main, anchor);
+    			append_dev(main, div30);
+    			append_dev(div30, div1);
+    			append_dev(div1, div0);
+    			append_dev(div0, a0);
+    			append_dev(div0, t2);
+    			append_dev(div0, a1);
+    			append_dev(div0, t4);
+    			append_dev(div0, a2);
+    			append_dev(div0, t6);
+    			append_dev(div0, a3);
+    			append_dev(div0, t8);
+    			append_dev(div0, a4);
+    			append_dev(div0, t10);
+    			append_dev(div0, a5);
+    			append_dev(div0, t12);
+    			append_dev(div0, a6);
+    			append_dev(div0, t14);
+    			append_dev(div0, a7);
+    			append_dev(div0, t16);
+    			append_dev(div0, a8);
+    			append_dev(div0, t18);
+    			append_dev(div0, a9);
+    			append_dev(div0, t20);
+    			append_dev(div0, a10);
+    			append_dev(div0, t22);
+    			append_dev(div0, a11);
+    			append_dev(div0, t24);
+    			append_dev(div0, a12);
+    			append_dev(div30, t26);
+    			append_dev(div30, div29);
+    			append_dev(div29, div28);
+    			append_dev(div28, div3);
+    			append_dev(div3, figure0);
+    			append_dev(figure0, div2);
+    			append_dev(figure0, t27);
+    			append_dev(figure0, p0);
+    			append_dev(div28, t29);
+    			append_dev(div28, div5);
+    			append_dev(div5, figure1);
+    			append_dev(figure1, div4);
+    			append_dev(figure1, t30);
+    			append_dev(figure1, p1);
+    			append_dev(div28, t32);
+    			append_dev(div28, div7);
+    			append_dev(div7, figure2);
+    			append_dev(figure2, div6);
+    			append_dev(figure2, t33);
+    			append_dev(figure2, p2);
+    			append_dev(div28, t35);
+    			append_dev(div28, div9);
+    			append_dev(div9, figure3);
+    			append_dev(figure3, div8);
+    			append_dev(figure3, t36);
+    			append_dev(figure3, p3);
+    			append_dev(div28, t38);
+    			append_dev(div28, div11);
+    			append_dev(div11, figure4);
+    			append_dev(figure4, div10);
+    			append_dev(figure4, t39);
+    			append_dev(figure4, p4);
+    			append_dev(div28, t41);
+    			append_dev(div28, div13);
+    			append_dev(div13, figure5);
+    			append_dev(figure5, div12);
+    			append_dev(figure5, t42);
+    			append_dev(figure5, p5);
+    			append_dev(div28, t44);
+    			append_dev(div28, div15);
+    			append_dev(div15, figure6);
+    			append_dev(figure6, div14);
+    			append_dev(figure6, t45);
+    			append_dev(figure6, p6);
+    			append_dev(div28, t47);
+    			append_dev(div28, div17);
+    			append_dev(div17, figure7);
+    			append_dev(figure7, div16);
+    			append_dev(figure7, t48);
+    			append_dev(figure7, p7);
+    			append_dev(div28, t50);
+    			append_dev(div28, div19);
+    			append_dev(div19, figure8);
+    			append_dev(figure8, div18);
+    			append_dev(figure8, t51);
+    			append_dev(figure8, p8);
+    			append_dev(div28, t53);
+    			append_dev(div28, div21);
+    			append_dev(div21, figure9);
+    			append_dev(figure9, div20);
+    			append_dev(figure9, t54);
+    			append_dev(figure9, p9);
+    			append_dev(div28, t56);
+    			append_dev(div28, div23);
+    			append_dev(div23, figure10);
+    			append_dev(figure10, div22);
+    			append_dev(figure10, t57);
+    			append_dev(figure10, p10);
+    			append_dev(div28, t59);
+    			append_dev(div28, div25);
+    			append_dev(div25, figure11);
+    			append_dev(figure11, div24);
+    			append_dev(figure11, t60);
+    			append_dev(figure11, p11);
+    			append_dev(div28, t62);
+    			append_dev(div28, div27);
+    			append_dev(div27, figure12);
+    			append_dev(figure12, div26);
+    			append_dev(figure12, t63);
+    			append_dev(figure12, p12);
+    			append_dev(main, t65);
+    			mount_component(button, main, null);
+    			current = true;
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 1) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			detach_dev(script0);
+    			detach_dev(script1);
+    			detach_dev(script2);
+    			detach_dev(script3);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(main);
+    			destroy_component(button);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$u.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    const BASE_API_URL$6 = "/api/v3/plugin-vehicles-stats";
+
+    async function loadGraph01() {
+    	const BASE_API_URL_01 = "/api/v2/emigrants-stats";
+    	const resData = await fetch(BASE_API_URL$6);
+    	const resData01 = await fetch(BASE_API_URL_01);
+    	let MyData = await resData.json();
+    	let Data01 = await resData01.json();
+
+    	/*
+                Sus Datos:
+    }
+        "country": "spain",
+        "year": 2017,
+        "em_man": 609615,
+        "em_woman": 736247,
+        "em_totals": 1345862
+    }
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+    	let dataPlugin = MyData.filter(d => {
+    		return d.year == 2018;
+    	}).map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d["cars-per-1000"]
+    		};
+
     		return res;
     	});
->>>>>>> 43e6c3529c0a04455a2a86e87ab9a684b18d5c93
+
+    	let dataAPI01 = Data01.filter(d => {
+    		return d.year == 2017;
+    	}).map(d => {
+    		let res = { name: d.country, value: d.em_totals };
+    		return res;
+    	});
+
+    	let datos = [
+    		{
+    			name: "Porcentaje de coche eléctricos cada 1000 personas en 2018.",
+    			data: dataPlugin
+    		},
+    		{
+    			name: "Emigrantes totales en el año 2017.",
+    			data: dataAPI01
+    		}
+    	];
+
+    	Highcharts.chart("container01", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: {
+    			text: "Integración con el grupo 01 emigrants-stats"
+    		},
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "20%",
+    				maxSize: "100%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					gravitationalConstant: 0.05,
+    					splitSeries: true,
+    					seriesInteraction: false,
+    					dragBetweenSeries: true,
+    					parentNodeLimit: true
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: datos
+    	});
+    }
+
+    async function loadGraph04() {
+    	const BASE_API_URL_04 = "https://sos1920-04.herokuapp.com/api/v1/roads/";
+    	const resData = await fetch(BASE_API_URL$6);
+    	const resData04 = await fetch(BASE_API_URL_04);
+    	let MyData = await resData.json();
+    	let Data04 = await resData04.json();
+
+    	/*
+                Sus Datos:
+    {
+        "province": "Madrid",
+        "year": 2015,
+        "oneway": 2347,
+        "multipleway": 208,
+        "dualCarriagewayAndHighway": 622,
+        "highwayWithToll": 161,
+        "total": 3338
+    }
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+    	let dataPlugin = MyData.filter(d => {
+    		return d.year == 2018;
+    	}).map(d => {
+    		let res = { name: d.country, value: d["annual-sale"] };
+    		return res;
+    	});
+
+    	let dataAPI04 = Data04.map(d => {
+    		let res = { name: d["province"], value: d["total"] };
+    		return res;
+    	});
+
+    	console.log(dataAPI04);
+
+    	let datos = [
+    		{
+    			name: "Ventas anuales de coches electricos en 2018.",
+    			data: dataPlugin
+    		},
+    		{
+    			name: "Número total de carreteras, autopistas y autovías en España.",
+    			data: dataAPI04
+    		}
+    	];
+
+    	Highcharts.chart("container04", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: {
+    			text: "Integración con el grupo 04 roads"
+    		},
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "20%",
+    				maxSize: "100%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					gravitationalConstant: 0.05,
+    					splitSeries: true,
+    					seriesInteraction: false,
+    					dragBetweenSeries: true,
+    					parentNodeLimit: true
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: datos
+    	});
+    }
+
+    async function loadGraph05() {
+    	const BASE_API_URL_05 = "/api/v1/life_expectancies";
+    	const resData = await fetch(BASE_API_URL$6);
+    	const resData05 = await fetch(BASE_API_URL_05);
+    	let MyData = await resData.json();
+    	let Data05 = await resData05.json();
+
+    	/*
+                Sus Datos:
+    {
+        "country": "france",
+        "year": 2015,
+        "women_life_expectancy": 85.6,
+        "men_life_expectancy": 79.2,
+        "average_life_expectancy": 82.4
+    }
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+    	let dataPlugin = MyData.filter(d => {
+    		return d.year == 2018;
+    	}).map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d["cars-per-1000"]
+    		};
+
+    		return res;
+    	});
+
+    	let dataAPI05 = Data05.map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d["average_life_expectancy"]
+    		};
+
+    		return res;
+    	});
+
+    	let datos = [
+    		{
+    			name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018.",
+    			data: dataPlugin
+    		},
+    		{
+    			name: "Esperanza de vida media entre hombres y mujeres",
+    			data: dataAPI05
+    		}
+    	];
+
+    	Highcharts.chart("container05", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: {
+    			text: "Integración con el grupo 05 life_expectancies"
+    		},
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "20%",
+    				maxSize: "100%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					gravitationalConstant: 0.05,
+    					splitSeries: true,
+    					seriesInteraction: false,
+    					dragBetweenSeries: true,
+    					parentNodeLimit: true
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: datos
+    	});
+    }
+
+    async function loadGraph06() {
+    	const BASE_API_URL_06 = "/api/v2/not-hospitalized-stats";
+    	const resData = await fetch(BASE_API_URL$6);
+    	const resData06 = await fetch(BASE_API_URL_06);
+    	let MyData = await resData.json();
+    	let Data06 = await resData06.json();
+
+    	/*
+                Sus Datos:
+
+    }
+        "province": "Tarragona",
+        "year": 1995,
+        "total": 1676,
+        "interurban": 1044,
+        "urban": 632
+    }
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+    	let dataPlugin = MyData.filter(d => {
+    		return d.year == 2018;
+    	}).map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d["cars-per-1000"]
+    		};
+
+    		return res;
+    	});
+
+    	let dataAPI06 = Data06.map(d => {
+    		let res = { name: d.province, value: d.total };
+    		return res;
+    	});
+
+    	let datos = [
+    		{
+    			name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018.",
+    			data: dataPlugin
+    		},
+    		{
+    			name: "Número total de vías urbanas e interurbanas en ciudades españolas.",
+    			data: dataAPI06
+    		}
+    	];
+
+    	Highcharts.chart("container06", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: {
+    			text: "Integración con el grupo 06 not-hospitalized-stats"
+    		},
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "20%",
+    				maxSize: "100%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					gravitationalConstant: 0.05,
+    					splitSeries: true,
+    					seriesInteraction: false,
+    					dragBetweenSeries: true,
+    					parentNodeLimit: true
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: datos
+    	});
+    }
+
+    async function loadGraph07() {
+    	const BASE_API_URL_07 = "https://sos1920-07.herokuapp.com/api/v2/imports";
+    	const resData = await fetch(BASE_API_URL$6);
+    	const resData07 = await fetch(BASE_API_URL_07);
+    	let MyData = await resData.json();
+    	let Data07 = await resData07.json();
+
+    	/*
+                Sus Datos:
+    }
+        "country": "canada",
+        "year": 2005,
+        "gdamalt": 584620,
+        "gdabarley": 50979,
+        "gdaoat": 1466303,
+        "gdawaste": 26325,
+        "gdaethylalcohol": 99284
+    }
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+    	let dataPlugin = MyData.filter(d => {
+    		return d.year == 2018;
+    	}).map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d["cars-per-1000"]
+    		};
+
+    		return res;
+    	});
+
+    	//Como mi proveedor dispone de un dato en el cual el valor de pais es total y muetra el resultado total de todos los datos
+    	// he decidido descartarlo.
+    	let dataAPI07 = Data07.filter(d => {
+    		return d.year == 2000 && d.country != "total";
+    	}).map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d.gdaethylalcohol
+    		};
+
+    		return res;
+    	});
+
+    	let datos = [
+    		{
+    			name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018.",
+    			data: dataPlugin
+    		},
+    		{
+    			name: "Alcohol total importado en el año 2000.",
+    			data: dataAPI07
+    		}
+    	];
+
+    	Highcharts.chart("container07", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: {
+    			text: "Integración con el grupo 07 imports"
+    		},
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "20%",
+    				maxSize: "100%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					gravitationalConstant: 0.05,
+    					splitSeries: true,
+    					seriesInteraction: false,
+    					dragBetweenSeries: true,
+    					parentNodeLimit: true
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: datos
+    	});
+    }
+
+    async function loadGraph08() {
+    	const BASE_API_URL_08 = "/api/v2/electricity-produced-stats";
+    	const resData = await fetch(BASE_API_URL$6);
+    	const resData08 = await fetch(BASE_API_URL_08);
+    	let MyData = await resData.json();
+    	let Data08 = await resData08.json();
+
+    	/*
+                Sus Datos:
+    {
+        "country": "EEUU",
+        "state": "Florida",
+        "year": 2018,
+        "hydro": 232574,
+        "solar": 2412067,
+        "coal": 30272201
+    }
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+    	let dataPlugin = MyData.filter(d => {
+    		return d.year == 2018;
+    	}).map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d["cars-per-1000"]
+    		};
+
+    		return res;
+    	});
+
+    	let dataAPI08_1 = Data08.map(d => {
+    		let res = { name: d.state, value: d.hydro };
+    		return res;
+    	});
+
+    	let dataAPI08_2 = Data08.map(d => {
+    		let res = { name: d.state, value: d.solar };
+    		return res;
+    	});
+
+    	let dataAPI08_3 = Data08.map(d => {
+    		let res = { name: d.state, value: d.coal };
+    		return res;
+    	});
+
+    	let datos = [
+    		{
+    			name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018.",
+    			data: dataPlugin
+    		},
+    		{
+    			name: "Energía Hidroeléctrica producida en EEUU en el año 2018",
+    			data: dataAPI08_1
+    		},
+    		{
+    			name: "Energía Solar producida en EEUU en el año 2018",
+    			data: dataAPI08_2
+    		},
+    		{
+    			name: "Energía por combustión de Carbón producida en EEUU en el año 2018",
+    			data: dataAPI08_3
+    		}
+    	];
+
+    	Highcharts.chart("container08", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: {
+    			text: "Integración con el grupo 08 electricity-produced-stats"
+    		},
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "20%",
+    				maxSize: "100%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					gravitationalConstant: 0.05,
+    					splitSeries: true,
+    					seriesInteraction: false,
+    					dragBetweenSeries: true,
+    					parentNodeLimit: true
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: datos
+    	});
+    }
+
+    async function loadGraph12() {
+    	const BASE_API_URL_12 = "https://sos1920-12.herokuapp.com/api/v2/overdose-deaths";
+    	const resData = await fetch(BASE_API_URL$6);
+    	const resData12 = await fetch(BASE_API_URL_12);
+    	let MyData = await resData.json();
+    	let Data12 = await resData12.json();
+
+    	/*
+                Sus Datos:
+    {
+        "country": "France",
+        "year": 2011,
+        "death_male": 249,
+        "death_female": 91,
+        "death_total": 340,
+        "mean_age": 45.7
+    }
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+    	let dataPlugin = MyData.filter(d => {
+    		return d.year == 2018;
+    	}).map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d["cars-per-1000"]
+    		};
+
+    		return res;
+    	});
+
+    	let dataAPI12 = Data12.filter(d => {
+    		return d.year == 2017;
+    	}).map(d => {
+    		let res = { name: d.country, value: d["death_total"] };
+    		return res;
+    	});
+
+    	let datos = [
+    		{
+    			name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018.",
+    			data: dataPlugin
+    		},
+    		{
+    			name: "Número total de muertes por sobredosis en el año 2017.",
+    			data: dataAPI12
+    		}
+    	];
+
+    	Highcharts.chart("container12", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: {
+    			text: "Integración con el grupo 12 overdose-deaths"
+    		},
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "20%",
+    				maxSize: "100%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					gravitationalConstant: 0.05,
+    					splitSeries: true,
+    					seriesInteraction: false,
+    					dragBetweenSeries: true,
+    					parentNodeLimit: true
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: datos
+    	});
+    }
+
+    async function loadGraph23$1() {
+    	const BASE_API_URL_23 = "https://sos1920-23.herokuapp.com/api/v2/fires-stats/";
+    	const resData = await fetch(BASE_API_URL$6);
+    	const resData23 = await fetch(BASE_API_URL_23);
+    	let MyData = await resData.json();
+    	let Data23 = await resData23.json();
+
+    	/*
+                Sus Datos:
+    {
+        "community": "castilla-la-mancha",
+        "year": 2007,
+        "total_fire": 694,
+        "forest_area": 2026.46,
+        "non_forest_area": 1068.96
+    }
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+    	let dataPlugin = MyData.filter(d => {
+    		return d.year == 2018;
+    	}).map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d["cars-per-1000"]
+    		};
+
+    		return res;
+    	});
+
+    	let dataAPI23 = Data23.filter(d => {
+    		return d.year == 2007;
+    	}).map(d => {
+    		let res = {
+    			name: d.community,
+    			value: d["total_fire"]
+    		};
+
+    		return res;
+    	});
+
+    	let datos = [
+    		{
+    			name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018.",
+    			data: dataPlugin
+    		},
+    		{
+    			name: "Número de incendios totales en España en el año 2007.",
+    			data: dataAPI23
+    		}
+    	];
+
+    	Highcharts.chart("container23", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: {
+    			text: "Integración con el grupo 23 fires-stats"
+    		},
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "20%",
+    				maxSize: "100%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					gravitationalConstant: 0.05,
+    					splitSeries: true,
+    					seriesInteraction: false,
+    					dragBetweenSeries: true,
+    					parentNodeLimit: true
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: datos
+    	});
+    }
+
+    async function loadGraph24() {
+    	const BASE_API_URL_24 = "https://sos1920-24.herokuapp.com/api/v2/atc-stats";
+    	const resData = await fetch(BASE_API_URL$6);
+    	const resData24 = await fetch(BASE_API_URL_24);
+    	let MyData = await resData.json();
+    	let Data24 = await resData24.json();
+
+    	/*
+                Sus Datos:
+    {
+        "aut_com": "Andalucia",
+        "year": 2018,
+        "espce": 757.2,
+        "yaq": 757,
+        "obu": 757
+    }
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+    	let dataPlugin = MyData.filter(d => {
+    		return d.year == 2018;
+    	}).map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d["cars-per-1000"]
+    		};
+
+    		return res;
+    	});
+
+    	let dataAPI24 = Data24.filter(d => {
+    		return d.year == 2018;
+    	}).map(d => {
+    		let res = {
+    			name: d["aut_com"],
+    			//value: (d["espce"] / 10) //Los divido entre 10 para obtener una mejor visualización.
+    			value: d["espce"]
+    		};
+
+    		return res;
+    	});
+
+    	let datos = [
+    		{
+    			name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018",
+    			data: dataPlugin
+    		},
+    		{
+    			name: "Coste medio de la matricula universitaria en el año 2018",
+    			data: dataAPI24
+    		}
+    	];
+
+    	Highcharts.chart("container24", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: {
+    			text: "Integración con el grupo 24 atc-stats"
+    		},
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "20%",
+    				maxSize: "100%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					gravitationalConstant: 0.05,
+    					splitSeries: true,
+    					seriesInteraction: false,
+    					dragBetweenSeries: true,
+    					parentNodeLimit: true
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: datos
+    	});
+    }
+
+    async function loadGraph27$1() {
+    	const BASE_API_URL_27 = "https://sos1920-27.herokuapp.com/api/v2/spc-stats";
+    	const resData = await fetch(BASE_API_URL$6);
+    	const resData27 = await fetch(BASE_API_URL_27);
+    	let MyData = await resData.json();
+    	let Data27 = await resData27.json();
+
+    	/*
+                Sus Datos:
+    {
+        "country": "cameroon",                       
+        "both_sex": 19.5,
+        "male_rank": 13,
+        "male_number": 26.9,
+        "female_rank": 10,
+        "female_number": 12.5,
+        "ratio": 2.15,
+        "year": 2013,
+        "continent": "africa"
+    }
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+    	let dataPlugin = MyData.filter(d => {
+    		return d.year == 2018;
+    	}).map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d["cars-per-1000"]
+    		};
+
+    		return res;
+    	});
 
     	let dataAPI27 = Data27.filter(d => {
     		return d.year == 2013;
@@ -25498,12 +25544,6 @@ var app = (function () {
     		return res;
     	});
 
-<<<<<<< HEAD
-    	let { $$slots = {}, $$scope } = $$props;
-    	validate_slots("Integrations", $$slots, []);
-    	$$self.$capture_state = () => ({ Button, pop, loadGraph4: loadGraph4$1 });
-    	return [];
-=======
     	let datos = [
     		{
     			name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018",
@@ -25517,7 +25557,9 @@ var app = (function () {
 
     	Highcharts.chart("container27", {
     		chart: { type: "packedbubble", height: "100%" },
-    		title: { text: "Integración con el grupo 27." },
+    		title: {
+    			text: "Integración con el grupo 27 spc-stats"
+    		},
     		tooltip: {
     			useHTML: true,
     			pointFormat: "<b>{point.name}:</b> {point.value}%"
@@ -25549,7 +25591,6 @@ var app = (function () {
     		},
     		series: datos
     	});
->>>>>>> 43e6c3529c0a04455a2a86e87ab9a684b18d5c93
     }
 
     async function loadGraph28() {
@@ -25577,7 +25618,9 @@ var app = (function () {
         "cars-per-1000": 2.0
     }
     */
-    	let dataPlugin = MyData.map(d => {
+    	let dataPlugin = MyData.filter(d => {
+    		return d.year == 2018;
+    	}).map(d => {
     		let res = {
     			name: d.country,
     			value: d["cars-per-1000"]
@@ -25610,7 +25653,7 @@ var app = (function () {
 
     	Highcharts.chart("container28", {
     		chart: { type: "packedbubble", height: "100%" },
-    		title: { text: "Integración con el grupo 28." },
+    		title: { text: "Integración con el grupo 28 gce" },
     		tooltip: {
     			useHTML: true,
     			pointFormat: "<b>{point.name}:</b> {point.value}%"
@@ -25645,7 +25688,7 @@ var app = (function () {
     }
 
     async function loadGraphExternal01() {
-    	const BASE_API_URL_External01 = "/v3/launches";
+    	const BASE_API_URL_External01 = "/api/v1/players";
     	const resData = await fetch(BASE_API_URL$6);
     	const resDataExternal01 = await fetch(BASE_API_URL_External01);
     	let MyData = await resData.json();
@@ -25654,34 +25697,26 @@ var app = (function () {
     	/*
                 Sus Datos: (HAY BASTANTES MÁS, PERO DENTRO DE ESTOS ESTÁN LOS QUE YO USARE)
     }
-
-        "flight_number": 1,
-        "mission_name": "FalconSat",
-        "mission_id": [
-        
-        ],
-        
-        "launch_year": "2006",
-        
-        "rocket_id": "falcon1",
-        "rocket_name": "Falcon 1",
-        "rocket_type": "Merlin A",
-        
-        "second_stage": {
-            "block": 1,
-            "payloads": [
-            {
-                "payload_id": "FalconSAT-2",
-                "norad_id": [
-                
-                ],
-                "reused": false,
-                "customers": [
-                "DARPA"
-                ],
-                "nationality": "United States",
-                "payload_mass_kg": 20
+    "data": [
+        {
+        "id": 14,
+        "first_name": "Ike",
+        "height_feet": null,
+        "height_inches": null,
+        "last_name": "Anigbogu",
+        "position": "C",
+        "team": {
+            "id": 12,
+            "abbreviation": "IND",
+            "city": "Indiana",
+            "conference": "East",
+            "division": "Central",
+            "full_name": "Indiana Pacers",
+            "name": "Pacers"
+        },
+        "weight_pounds": null
         }
+
                 Mis Datos:
     { 
         "country": "Japan",
@@ -25691,7 +25726,110 @@ var app = (function () {
         "cars-per-1000": 2.0
     }
     */
-    	let dataPlugin = MyData.map(d => {
+    	let dataPlugin = MyData.filter(d => {
+    		return d.country == "USA";
+    	}).map(d => {
+    		let res = { name: d.year, value: d["cars-per-1000"] };
+    		return res;
+    	});
+
+    	let dataAPIExternal01 = DataExternal01.data.map(d => {
+    		let res = { name: d.first_name, value: d.team.id };
+    		return res;
+    	});
+
+    	let datos = [
+    		{
+    			name: "Porcentaje de coche eléctricos cada 1000 personas en USA.",
+    			data: dataPlugin
+    		},
+    		{
+    			name: "Nombre y dorsal de jugadores de baloncesto de la NBA.",
+    			data: dataAPIExternal01
+    		}
+    	];
+
+    	Highcharts.chart("containerExt01", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: { text: "Integración con API externa." },
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "20%",
+    				maxSize: "100%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					gravitationalConstant: 0.05,
+    					splitSeries: true,
+    					seriesInteraction: false,
+    					dragBetweenSeries: true,
+    					parentNodeLimit: true
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: datos
+    	});
+    }
+
+    async function loadGraphExternal02() {
+    	const BASE_API_URL_External02 = "/v3/launches";
+    	const resData = await fetch(BASE_API_URL$6);
+    	const resDataExternal02 = await fetch(BASE_API_URL_External02);
+    	let MyData = await resData.json();
+    	let DataExternal02 = await resDataExternal02.json();
+
+    	/*
+                Sus Datos: (HAY BASTANTES MÁS, PERO DENTRO DE ESTOS ESTÁN LOS QUE YO USARE)
+    }
+    mission_name": "FalconSat",
+    "mission_id": [
+
+    ],
+    "upcoming": false,
+    "launch_year": "2006",
+    "launch_date_unix": 1143239400,
+    "launch_date_utc": "2006-03-24T22:30:00.000Z",
+    "launch_date_local": "2006-03-25T10:30:00+12:00",
+    "is_tentative": false,
+    "tentative_max_precision": "hour",
+    "tbd": false,
+    "launch_window": 0,
+    "rocket": {
+    "rocket_id": "falcon1",
+    "rocket_name": "Falcon 1",
+    "rocket_type": "Merlin A",
+    "first_stage": {
+        "cores": [
+        {
+            "core_serial": "Merlin1A",
+            "flight": 1,
+
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+    	let dataPlugin = MyData.filter(d => {
+    		return d.year == 2018;
+    	}).map(d => {
     		let res = {
     			name: d.country,
     			value: d["cars-per-1000"]
@@ -25700,12 +25838,12 @@ var app = (function () {
     		return res;
     	});
 
-    	let dataAPIExternal01 = DataExternal01.map(d => {
-    		console.log(d["second_stage"]);
-
+    	let dataAPIExternal02 = DataExternal02.filter(d => {
+    		return d.launch_year == "2018";
+    	}).map(d => {
     		let res = {
-    			name: d.second_stage.payloads.nationality,
-    			value: d.second_stage.payloads.payload_mass_kg
+    			name: d.mission_name,
+    			value: d.flight_number
     		};
 
     		return res;
@@ -25713,20 +25851,18 @@ var app = (function () {
 
     	let datos = [
     		{
-    			name: "Porcentaje de coche eléctricos cada 1000 personas.",
+    			name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018.",
     			data: dataPlugin
     		},
     		{
-    			name: "Número total de carreteras, autopistas y autovías.",
-    			data: dataAPIExternal01
+    			name: "Número y nombre de los satélites desplegados en el año 2018",
+    			data: dataAPIExternal02
     		}
     	];
 
-    	Highcharts.chart("container", {
+    	Highcharts.chart("containerExt02", {
     		chart: { type: "packedbubble", height: "100%" },
-    		title: {
-    			text: "Integración con api externa satex."
-    		},
+    		title: { text: "Integración con API externa." },
     		tooltip: {
     			useHTML: true,
     			pointFormat: "<b>{point.name}:</b> {point.value}"
@@ -25772,6 +25908,8 @@ var app = (function () {
     	loadGraph24(); //Implementado mediante cors
     	loadGraph27$1(); //Implementado mediante cors
     	loadGraph28(); //Implementado mediante proxy
+    	loadGraphExternal01(); //Implementado mediante proxy
+    	loadGraphExternal02(); //Implementado mediante proxy
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -25796,7 +25934,8 @@ var app = (function () {
     		loadGraph24,
     		loadGraph27: loadGraph27$1,
     		loadGraph28,
-    		loadGraphExternal01
+    		loadGraphExternal01,
+    		loadGraphExternal02
     	});
 
     	return [];
