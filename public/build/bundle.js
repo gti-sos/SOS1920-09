@@ -3029,9 +3029,9 @@ var app = (function () {
 
     	let select_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ multiple: true },
     		{ class: /*classes*/ ctx[10] },
+    		{ id: /*id*/ ctx[6] },
     		{ name: /*name*/ ctx[7] },
     		{ disabled: /*disabled*/ ctx[9] }
     	];
@@ -3062,8 +3062,8 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(select, "blur", /*blur_handler_17*/ ctx[141], false, false, false),
-    				listen_dev(select, "focus", /*focus_handler_17*/ ctx[142], false, false, false),
+    				listen_dev(select, "blur", /*blur_handler_17*/ ctx[142], false, false, false),
+    				listen_dev(select, "focus", /*focus_handler_17*/ ctx[141], false, false, false),
     				listen_dev(select, "change", /*change_handler_16*/ ctx[143], false, false, false),
     				listen_dev(select, "input", /*input_handler_16*/ ctx[144], false, false, false),
     				listen_dev(select, "change", /*select_change_handler_1*/ ctx[161])
@@ -3078,9 +3078,9 @@ var app = (function () {
 
     			set_attributes(select, get_spread_update(select_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ multiple: true },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] }
     			]));
@@ -3218,8 +3218,8 @@ var app = (function () {
 
     	let textarea_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ class: /*classes*/ ctx[10] },
+    		{ id: /*id*/ ctx[6] },
     		{ name: /*name*/ ctx[7] },
     		{ disabled: /*disabled*/ ctx[9] }
     	];
@@ -3242,10 +3242,10 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(textarea, "blur", /*blur_handler_15*/ ctx[130], false, false, false),
-    				listen_dev(textarea, "focus", /*focus_handler_15*/ ctx[131], false, false, false),
-    				listen_dev(textarea, "keydown", /*keydown_handler_15*/ ctx[132], false, false, false),
-    				listen_dev(textarea, "keypress", /*keypress_handler_15*/ ctx[133], false, false, false),
+    				listen_dev(textarea, "blur", /*blur_handler_15*/ ctx[131], false, false, false),
+    				listen_dev(textarea, "focus", /*focus_handler_15*/ ctx[132], false, false, false),
+    				listen_dev(textarea, "keydown", /*keydown_handler_15*/ ctx[133], false, false, false),
+    				listen_dev(textarea, "keypress", /*keypress_handler_15*/ ctx[130], false, false, false),
     				listen_dev(textarea, "keyup", /*keyup_handler_15*/ ctx[134], false, false, false),
     				listen_dev(textarea, "change", /*change_handler_14*/ ctx[135], false, false, false),
     				listen_dev(textarea, "input", /*input_handler_14*/ ctx[136], false, false, false),
@@ -3255,8 +3255,8 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(textarea, get_spread_update(textarea_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] }
     			]));
@@ -3357,8 +3357,8 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: /*type*/ ctx[3] },
+    		{ id: /*id*/ ctx[6] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
@@ -3396,8 +3396,8 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*type*/ 8 && { type: /*type*/ ctx[3] },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
@@ -3430,12 +3430,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "search" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3457,12 +3457,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_13*/ ctx[118], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_13*/ ctx[119], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_13*/ ctx[120], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_13*/ ctx[121], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_13*/ ctx[122], false, false, false),
-    				listen_dev(input, "change", /*change_handler_13*/ ctx[123], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_13*/ ctx[119], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_13*/ ctx[120], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_13*/ ctx[121], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_13*/ ctx[122], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_13*/ ctx[123], false, false, false),
+    				listen_dev(input, "change", /*change_handler_13*/ ctx[118], false, false, false),
     				listen_dev(input, "input", /*input_handler_13*/ ctx[124], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_9*/ ctx[158])
     			];
@@ -3470,12 +3470,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "search" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3507,12 +3507,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "range" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3534,12 +3534,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_12*/ ctx[111], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_12*/ ctx[112], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_12*/ ctx[113], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_12*/ ctx[114], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_12*/ ctx[115], false, false, false),
-    				listen_dev(input, "change", /*change_handler_12*/ ctx[116], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_12*/ ctx[112], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_12*/ ctx[113], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_12*/ ctx[114], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_12*/ ctx[115], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_12*/ ctx[116], false, false, false),
+    				listen_dev(input, "change", /*change_handler_12*/ ctx[111], false, false, false),
     				listen_dev(input, "input", /*input_handler_12*/ ctx[117], false, false, false),
     				listen_dev(input, "change", /*input_change_input_handler*/ ctx[157]),
     				listen_dev(input, "input", /*input_change_input_handler*/ ctx[157])
@@ -3548,12 +3548,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "range" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3585,12 +3585,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "color" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3612,12 +3612,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_11*/ ctx[104], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_11*/ ctx[105], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_11*/ ctx[106], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_11*/ ctx[107], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_11*/ ctx[108], false, false, false),
-    				listen_dev(input, "change", /*change_handler_11*/ ctx[109], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_11*/ ctx[105], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_11*/ ctx[106], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_11*/ ctx[107], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_11*/ ctx[108], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_11*/ ctx[109], false, false, false),
+    				listen_dev(input, "change", /*change_handler_11*/ ctx[104], false, false, false),
     				listen_dev(input, "input", /*input_handler_11*/ ctx[110], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_8*/ ctx[156])
     			];
@@ -3625,12 +3625,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "color" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3662,12 +3662,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "datetime" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3689,12 +3689,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_10*/ ctx[97], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_10*/ ctx[98], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_10*/ ctx[99], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_10*/ ctx[100], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_10*/ ctx[101], false, false, false),
-    				listen_dev(input, "change", /*change_handler_10*/ ctx[102], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_10*/ ctx[98], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_10*/ ctx[99], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_10*/ ctx[100], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_10*/ ctx[101], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_10*/ ctx[102], false, false, false),
+    				listen_dev(input, "change", /*change_handler_10*/ ctx[97], false, false, false),
     				listen_dev(input, "input", /*input_handler_10*/ ctx[103], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_7*/ ctx[155])
     			];
@@ -3702,12 +3702,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "datetime" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3739,12 +3739,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "time" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3766,12 +3766,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_9*/ ctx[90], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_9*/ ctx[91], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_9*/ ctx[92], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_9*/ ctx[93], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_9*/ ctx[94], false, false, false),
-    				listen_dev(input, "change", /*change_handler_9*/ ctx[95], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_9*/ ctx[91], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_9*/ ctx[92], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_9*/ ctx[93], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_9*/ ctx[94], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_9*/ ctx[95], false, false, false),
+    				listen_dev(input, "change", /*change_handler_9*/ ctx[90], false, false, false),
     				listen_dev(input, "input", /*input_handler_9*/ ctx[96], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_6*/ ctx[154])
     			];
@@ -3779,12 +3779,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "time" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3816,12 +3816,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "date" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3843,12 +3843,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_8*/ ctx[83], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_8*/ ctx[84], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_8*/ ctx[85], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_8*/ ctx[86], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_8*/ ctx[87], false, false, false),
-    				listen_dev(input, "change", /*change_handler_8*/ ctx[88], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_8*/ ctx[84], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_8*/ ctx[85], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_8*/ ctx[86], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_8*/ ctx[87], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_8*/ ctx[88], false, false, false),
+    				listen_dev(input, "change", /*change_handler_8*/ ctx[83], false, false, false),
     				listen_dev(input, "input", /*input_handler_8*/ ctx[89], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_5*/ ctx[153])
     			];
@@ -3856,12 +3856,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "date" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3894,12 +3894,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "number" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3926,12 +3926,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_7*/ ctx[76], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_7*/ ctx[77], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_7*/ ctx[78], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_7*/ ctx[79], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_7*/ ctx[80], false, false, false),
-    				listen_dev(input, "change", /*change_handler_7*/ ctx[81], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_7*/ ctx[77], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_7*/ ctx[78], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_7*/ ctx[79], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_7*/ ctx[80], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_7*/ ctx[81], false, false, false),
+    				listen_dev(input, "change", /*change_handler_7*/ ctx[76], false, false, false),
     				listen_dev(input, "input", /*input_handler_7*/ ctx[82], false, false, false),
     				listen_dev(input, "input", input_input_handler_4)
     			];
@@ -3939,12 +3939,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "number" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3978,12 +3978,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "url" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4005,12 +4005,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_6*/ ctx[69], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_6*/ ctx[70], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_6*/ ctx[71], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_6*/ ctx[72], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_6*/ ctx[73], false, false, false),
-    				listen_dev(input, "change", /*change_handler_6*/ ctx[74], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_6*/ ctx[70], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_6*/ ctx[71], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_6*/ ctx[72], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_6*/ ctx[73], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_6*/ ctx[74], false, false, false),
+    				listen_dev(input, "change", /*change_handler_6*/ ctx[69], false, false, false),
     				listen_dev(input, "input", /*input_handler_6*/ ctx[75], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_3*/ ctx[151])
     			];
@@ -4018,12 +4018,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "url" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -4055,12 +4055,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "radio" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4082,12 +4082,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_5*/ ctx[62], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_5*/ ctx[63], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_5*/ ctx[64], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_5*/ ctx[65], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_5*/ ctx[66], false, false, false),
-    				listen_dev(input, "change", /*change_handler_5*/ ctx[67], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_5*/ ctx[63], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_5*/ ctx[64], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_5*/ ctx[65], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_5*/ ctx[66], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_5*/ ctx[67], false, false, false),
+    				listen_dev(input, "change", /*change_handler_5*/ ctx[62], false, false, false),
     				listen_dev(input, "input", /*input_handler_5*/ ctx[68], false, false, false),
     				listen_dev(input, "change", /*input_change_handler_2*/ ctx[150])
     			];
@@ -4095,12 +4095,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "radio" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -4132,12 +4132,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "checkbox" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
+    		{ name: /*name*/ ctx[7] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
-    		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4155,17 +4155,17 @@ var app = (function () {
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, input, anchor);
-    			input.checked = /*checked*/ ctx[0];
     			set_input_value(input, /*value*/ ctx[1]);
+    			input.checked = /*checked*/ ctx[0];
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_4*/ ctx[55], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_4*/ ctx[56], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_4*/ ctx[57], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_4*/ ctx[58], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_4*/ ctx[59], false, false, false),
-    				listen_dev(input, "change", /*change_handler_4*/ ctx[60], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_4*/ ctx[56], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_4*/ ctx[57], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_4*/ ctx[58], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_4*/ ctx[59], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_4*/ ctx[60], false, false, false),
+    				listen_dev(input, "change", /*change_handler_4*/ ctx[55], false, false, false),
     				listen_dev(input, "input", /*input_handler_4*/ ctx[61], false, false, false),
     				listen_dev(input, "change", /*input_change_handler_1*/ ctx[149])
     			];
@@ -4173,21 +4173,21 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "checkbox" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
-    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
-    			if (dirty[0] & /*checked*/ 1) {
-    				input.checked = /*checked*/ ctx[0];
-    			}
-
     			if (dirty[0] & /*value*/ 2) {
     				set_input_value(input, /*value*/ ctx[1]);
+    			}
+
+    			if (dirty[0] & /*checked*/ 1) {
+    				input.checked = /*checked*/ ctx[0];
     			}
     		},
     		d: function destroy(detaching) {
@@ -4214,12 +4214,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "file" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4240,12 +4240,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_3*/ ctx[48], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_3*/ ctx[49], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_3*/ ctx[50], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_3*/ ctx[51], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_3*/ ctx[52], false, false, false),
-    				listen_dev(input, "change", /*change_handler_3*/ ctx[53], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_3*/ ctx[49], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_3*/ ctx[50], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_3*/ ctx[51], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_3*/ ctx[52], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_3*/ ctx[53], false, false, false),
+    				listen_dev(input, "change", /*change_handler_3*/ ctx[48], false, false, false),
     				listen_dev(input, "input", /*input_handler_3*/ ctx[54], false, false, false),
     				listen_dev(input, "change", /*input_change_handler*/ ctx[148])
     			];
@@ -4253,12 +4253,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "file" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
     		},
@@ -4286,12 +4286,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "email" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4313,12 +4313,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_2*/ ctx[41], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_2*/ ctx[42], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_2*/ ctx[43], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_2*/ ctx[44], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_2*/ ctx[45], false, false, false),
-    				listen_dev(input, "change", /*change_handler_2*/ ctx[46], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_2*/ ctx[42], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_2*/ ctx[43], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_2*/ ctx[44], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_2*/ ctx[45], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_2*/ ctx[46], false, false, false),
+    				listen_dev(input, "change", /*change_handler_2*/ ctx[41], false, false, false),
     				listen_dev(input, "input", /*input_handler_2*/ ctx[47], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_2*/ ctx[147])
     			];
@@ -4326,12 +4326,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "email" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -4363,12 +4363,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "password" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4390,12 +4390,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_1*/ ctx[34], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_1*/ ctx[35], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_1*/ ctx[36], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_1*/ ctx[37], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_1*/ ctx[38], false, false, false),
-    				listen_dev(input, "change", /*change_handler_1*/ ctx[39], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_1*/ ctx[35], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_1*/ ctx[36], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_1*/ ctx[37], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_1*/ ctx[38], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_1*/ ctx[39], false, false, false),
+    				listen_dev(input, "change", /*change_handler_1*/ ctx[34], false, false, false),
     				listen_dev(input, "input", /*input_handler_1*/ ctx[40], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_1*/ ctx[146])
     			];
@@ -4403,12 +4403,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "password" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -4440,12 +4440,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ id: /*id*/ ctx[6] },
     		{ type: "text" },
+    		{ id: /*id*/ ctx[6] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
-    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4467,12 +4467,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler*/ ctx[27], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler*/ ctx[28], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler*/ ctx[29], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler*/ ctx[30], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler*/ ctx[31], false, false, false),
-    				listen_dev(input, "change", /*change_handler*/ ctx[32], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler*/ ctx[28], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler*/ ctx[29], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler*/ ctx[30], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler*/ ctx[31], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler*/ ctx[32], false, false, false),
+    				listen_dev(input, "change", /*change_handler*/ ctx[27], false, false, false),
     				listen_dev(input, "input", /*input_handler*/ ctx[33], false, false, false),
     				listen_dev(input, "input", /*input_input_handler*/ ctx[145])
     			];
@@ -4480,12 +4480,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ type: "text" },
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -4642,6 +4642,10 @@ var app = (function () {
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("Input", $$slots, ['default']);
 
+    	function change_handler(event) {
+    		bubble($$self, event);
+    	}
+
     	function blur_handler(event) {
     		bubble($$self, event);
     	}
@@ -4662,11 +4666,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler(event) {
+    	function input_handler(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler(event) {
+    	function change_handler_1(event) {
     		bubble($$self, event);
     	}
 
@@ -4690,11 +4694,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_1(event) {
+    	function input_handler_1(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_1(event) {
+    	function change_handler_2(event) {
     		bubble($$self, event);
     	}
 
@@ -4718,11 +4722,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_2(event) {
+    	function input_handler_2(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_2(event) {
+    	function change_handler_3(event) {
     		bubble($$self, event);
     	}
 
@@ -4746,11 +4750,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_3(event) {
+    	function input_handler_3(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_3(event) {
+    	function change_handler_4(event) {
     		bubble($$self, event);
     	}
 
@@ -4774,11 +4778,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_4(event) {
+    	function input_handler_4(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_4(event) {
+    	function change_handler_5(event) {
     		bubble($$self, event);
     	}
 
@@ -4802,11 +4806,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_5(event) {
+    	function input_handler_5(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_5(event) {
+    	function change_handler_6(event) {
     		bubble($$self, event);
     	}
 
@@ -4830,11 +4834,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_6(event) {
+    	function input_handler_6(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_6(event) {
+    	function change_handler_7(event) {
     		bubble($$self, event);
     	}
 
@@ -4858,11 +4862,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_7(event) {
+    	function input_handler_7(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_7(event) {
+    	function change_handler_8(event) {
     		bubble($$self, event);
     	}
 
@@ -4886,11 +4890,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_8(event) {
+    	function input_handler_8(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_8(event) {
+    	function change_handler_9(event) {
     		bubble($$self, event);
     	}
 
@@ -4914,11 +4918,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_9(event) {
+    	function input_handler_9(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_9(event) {
+    	function change_handler_10(event) {
     		bubble($$self, event);
     	}
 
@@ -4942,11 +4946,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_10(event) {
+    	function input_handler_10(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_10(event) {
+    	function change_handler_11(event) {
     		bubble($$self, event);
     	}
 
@@ -4970,11 +4974,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_11(event) {
+    	function input_handler_11(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_11(event) {
+    	function change_handler_12(event) {
     		bubble($$self, event);
     	}
 
@@ -4998,11 +5002,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function change_handler_12(event) {
+    	function input_handler_12(event) {
     		bubble($$self, event);
     	}
 
-    	function input_handler_12(event) {
+    	function change_handler_13(event) {
     		bubble($$self, event);
     	}
 
@@ -5023,10 +5027,6 @@ var app = (function () {
     	}
 
     	function keyup_handler_13(event) {
-    		bubble($$self, event);
-    	}
-
-    	function change_handler_13(event) {
     		bubble($$self, event);
     	}
 
@@ -5054,6 +5054,10 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
+    	function keypress_handler_15(event) {
+    		bubble($$self, event);
+    	}
+
     	function blur_handler_15(event) {
     		bubble($$self, event);
     	}
@@ -5063,10 +5067,6 @@ var app = (function () {
     	}
 
     	function keydown_handler_15(event) {
-    		bubble($$self, event);
-    	}
-
-    	function keypress_handler_15(event) {
     		bubble($$self, event);
     	}
 
@@ -5098,11 +5098,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function blur_handler_17(event) {
+    	function focus_handler_17(event) {
     		bubble($$self, event);
     	}
 
-    	function focus_handler_17(event) {
+    	function blur_handler_17(event) {
     		bubble($$self, event);
     	}
 
@@ -5135,10 +5135,10 @@ var app = (function () {
     	}
 
     	function input_change_handler_1() {
-    		checked = this.checked;
     		value = this.value;
-    		$$invalidate(0, checked);
+    		checked = this.checked;
     		$$invalidate(1, value);
+    		$$invalidate(0, checked);
     	}
 
     	function input_change_handler_2() {
@@ -5355,113 +5355,113 @@ var app = (function () {
     		$$props,
     		$$scope,
     		$$slots,
+    		change_handler,
     		blur_handler,
     		focus_handler,
     		keydown_handler,
     		keypress_handler,
     		keyup_handler,
-    		change_handler,
     		input_handler,
+    		change_handler_1,
     		blur_handler_1,
     		focus_handler_1,
     		keydown_handler_1,
     		keypress_handler_1,
     		keyup_handler_1,
-    		change_handler_1,
     		input_handler_1,
+    		change_handler_2,
     		blur_handler_2,
     		focus_handler_2,
     		keydown_handler_2,
     		keypress_handler_2,
     		keyup_handler_2,
-    		change_handler_2,
     		input_handler_2,
+    		change_handler_3,
     		blur_handler_3,
     		focus_handler_3,
     		keydown_handler_3,
     		keypress_handler_3,
     		keyup_handler_3,
-    		change_handler_3,
     		input_handler_3,
+    		change_handler_4,
     		blur_handler_4,
     		focus_handler_4,
     		keydown_handler_4,
     		keypress_handler_4,
     		keyup_handler_4,
-    		change_handler_4,
     		input_handler_4,
+    		change_handler_5,
     		blur_handler_5,
     		focus_handler_5,
     		keydown_handler_5,
     		keypress_handler_5,
     		keyup_handler_5,
-    		change_handler_5,
     		input_handler_5,
+    		change_handler_6,
     		blur_handler_6,
     		focus_handler_6,
     		keydown_handler_6,
     		keypress_handler_6,
     		keyup_handler_6,
-    		change_handler_6,
     		input_handler_6,
+    		change_handler_7,
     		blur_handler_7,
     		focus_handler_7,
     		keydown_handler_7,
     		keypress_handler_7,
     		keyup_handler_7,
-    		change_handler_7,
     		input_handler_7,
+    		change_handler_8,
     		blur_handler_8,
     		focus_handler_8,
     		keydown_handler_8,
     		keypress_handler_8,
     		keyup_handler_8,
-    		change_handler_8,
     		input_handler_8,
+    		change_handler_9,
     		blur_handler_9,
     		focus_handler_9,
     		keydown_handler_9,
     		keypress_handler_9,
     		keyup_handler_9,
-    		change_handler_9,
     		input_handler_9,
+    		change_handler_10,
     		blur_handler_10,
     		focus_handler_10,
     		keydown_handler_10,
     		keypress_handler_10,
     		keyup_handler_10,
-    		change_handler_10,
     		input_handler_10,
+    		change_handler_11,
     		blur_handler_11,
     		focus_handler_11,
     		keydown_handler_11,
     		keypress_handler_11,
     		keyup_handler_11,
-    		change_handler_11,
     		input_handler_11,
+    		change_handler_12,
     		blur_handler_12,
     		focus_handler_12,
     		keydown_handler_12,
     		keypress_handler_12,
     		keyup_handler_12,
-    		change_handler_12,
     		input_handler_12,
+    		change_handler_13,
     		blur_handler_13,
     		focus_handler_13,
     		keydown_handler_13,
     		keypress_handler_13,
     		keyup_handler_13,
-    		change_handler_13,
     		input_handler_13,
     		blur_handler_14,
     		focus_handler_14,
     		keydown_handler_14,
     		keypress_handler_14,
     		keyup_handler_14,
+    		keypress_handler_15,
     		blur_handler_15,
     		focus_handler_15,
     		keydown_handler_15,
-    		keypress_handler_15,
     		keyup_handler_15,
     		change_handler_14,
     		input_handler_14,
@@ -5469,8 +5469,8 @@ var app = (function () {
     		focus_handler_16,
     		change_handler_15,
     		input_handler_15,
-    		blur_handler_17,
     		focus_handler_17,
+    		blur_handler_17,
     		change_handler_16,
     		input_handler_16,
     		input_input_handler,
@@ -10427,7 +10427,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (304:2) <Label for="selectCountry">
+    // (334:2) <Label for="selectCountry">
     function create_default_slot_21$1(ctx) {
     	let t;
 
@@ -10447,14 +10447,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_21$1.name,
     		type: "slot",
-    		source: "(304:2) <Label for=\\\"selectCountry\\\">",
+    		source: "(334:2) <Label for=\\\"selectCountry\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (310:3) {:else}
+    // (340:3) {:else}
     function create_else_block_1$2(ctx) {
     	let option;
     	let t_value = /*country*/ ctx[36] + "";
@@ -10467,7 +10467,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*country*/ ctx[36];
     			option.value = option.__value;
-    			add_location(option, file$c, 310, 3, 9338);
+    			add_location(option, file$c, 340, 3, 10111);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -10491,14 +10491,14 @@ var app = (function () {
     		block,
     		id: create_else_block_1$2.name,
     		type: "else",
-    		source: "(310:3) {:else}",
+    		source: "(340:3) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (308:3) {#if country == currentCountry}
+    // (338:3) {#if country == currentCountry}
     function create_if_block_3$3(ctx) {
     	let option;
     	let t_value = /*country*/ ctx[36] + "";
@@ -10512,7 +10512,7 @@ var app = (function () {
     			option.selected = "selected";
     			option.__value = option_value_value = /*country*/ ctx[36];
     			option.value = option.__value;
-    			add_location(option, file$c, 308, 3, 9275);
+    			add_location(option, file$c, 338, 3, 10048);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -10536,14 +10536,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3$3.name,
     		type: "if",
-    		source: "(308:3) {#if country == currentCountry}",
+    		source: "(338:3) {#if country == currentCountry}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (306:3) {#each countries as country}
+    // (336:3) {#each countries as country}
     function create_each_block_2$1(ctx) {
     	let if_block_anchor;
 
@@ -10587,14 +10587,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2$1.name,
     		type: "each",
-    		source: "(306:3) {#each countries as country}",
+    		source: "(336:3) {#each countries as country}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (305:2) <Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentCountry}">
+    // (335:2) <Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentCountry}">
     function create_default_slot_20$1(ctx) {
     	let t0;
     	let option;
@@ -10617,7 +10617,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$c, 313, 3, 9391);
+    			add_location(option, file$c, 343, 3, 10164);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -10663,14 +10663,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_20$1.name,
     		type: "slot",
-    		source: "(305:2) <Input type=\\\"select\\\" name=\\\"selectCountry\\\" id=\\\"selectCountry\\\" bind:value=\\\"{currentCountry}\\\">",
+    		source: "(335:2) <Input type=\\\"select\\\" name=\\\"selectCountry\\\" id=\\\"selectCountry\\\" bind:value=\\\"{currentCountry}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (303:1) <FormGroup>
+    // (333:1) <FormGroup>
     function create_default_slot_19$1(ctx) {
     	let t;
     	let updating_value;
@@ -10760,14 +10760,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_19$1.name,
     		type: "slot",
-    		source: "(303:1) <FormGroup>",
+    		source: "(333:1) <FormGroup>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (319:2) <Label for="selectYear">
+    // (349:2) <Label for="selectYear">
     function create_default_slot_18$1(ctx) {
     	let t;
 
@@ -10787,14 +10787,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_18$1.name,
     		type: "slot",
-    		source: "(319:2) <Label for=\\\"selectYear\\\">",
+    		source: "(349:2) <Label for=\\\"selectYear\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (325:3) {:else}
+    // (355:3) {:else}
     function create_else_block$7(ctx) {
     	let option;
     	let t_value = /*year*/ ctx[33] + "";
@@ -10807,7 +10807,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*year*/ ctx[33];
     			option.value = option.__value;
-    			add_location(option, file$c, 325, 3, 9791);
+    			add_location(option, file$c, 355, 3, 10564);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -10831,14 +10831,14 @@ var app = (function () {
     		block,
     		id: create_else_block$7.name,
     		type: "else",
-    		source: "(325:3) {:else}",
+    		source: "(355:3) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (323:3) {#if year == currentYear}
+    // (353:3) {#if year == currentYear}
     function create_if_block_2$3(ctx) {
     	let option;
     	let t_value = /*year*/ ctx[33] + "";
@@ -10852,7 +10852,7 @@ var app = (function () {
     			option.selected = "selected";
     			option.__value = option_value_value = /*year*/ ctx[33];
     			option.value = option.__value;
-    			add_location(option, file$c, 323, 3, 9731);
+    			add_location(option, file$c, 353, 3, 10504);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -10876,14 +10876,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$3.name,
     		type: "if",
-    		source: "(323:3) {#if year == currentYear}",
+    		source: "(353:3) {#if year == currentYear}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (321:3) {#each years as year}
+    // (351:3) {#each years as year}
     function create_each_block_1$1(ctx) {
     	let if_block_anchor;
 
@@ -10927,14 +10927,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(321:3) {#each years as year}",
+    		source: "(351:3) {#each years as year}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (320:2) <Input type="select" name="selectYear" id="selectYear" bind:value="{currentYear}">
+    // (350:2) <Input type="select" name="selectYear" id="selectYear" bind:value="{currentYear}">
     function create_default_slot_17$1(ctx) {
     	let t0;
     	let option;
@@ -10957,7 +10957,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$c, 328, 3, 9841);
+    			add_location(option, file$c, 358, 3, 10614);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -11003,14 +11003,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_17$1.name,
     		type: "slot",
-    		source: "(320:2) <Input type=\\\"select\\\" name=\\\"selectYear\\\" id=\\\"selectYear\\\" bind:value=\\\"{currentYear}\\\">",
+    		source: "(350:2) <Input type=\\\"select\\\" name=\\\"selectYear\\\" id=\\\"selectYear\\\" bind:value=\\\"{currentYear}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (318:1) <FormGroup>
+    // (348:1) <FormGroup>
     function create_default_slot_16$1(ctx) {
     	let t;
     	let updating_value;
@@ -11100,14 +11100,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_16$1.name,
     		type: "slot",
-    		source: "(318:1) <FormGroup>",
+    		source: "(348:1) <FormGroup>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (333:1) <Button outline color="secondary" on:click="{search(currentCountry, currentYear)}" class="button-search">
+    // (363:1) <Button outline color="secondary" on:click="{search(currentCountry, currentYear)}" class="button-search">
     function create_default_slot_15$1(ctx) {
     	let i;
     	let t;
@@ -11117,7 +11117,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Buscar");
     			attr_dev(i, "class", "fas fa-search");
-    			add_location(i, file$c, 332, 108, 9998);
+    			add_location(i, file$c, 362, 108, 10771);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -11133,7 +11133,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_15$1.name,
     		type: "slot",
-    		source: "(333:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{search(currentCountry, currentYear)}\\\" class=\\\"button-search\\\">",
+    		source: "(363:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{search(currentCountry, currentYear)}\\\" class=\\\"button-search\\\">",
     		ctx
     	});
 
@@ -11162,7 +11162,7 @@ var app = (function () {
     	return block;
     }
 
-    // (338:1) {:then pluginVehicles}
+    // (368:1) {:then pluginVehicles}
     function create_then_block$1(ctx) {
     	let current;
 
@@ -11210,14 +11210,14 @@ var app = (function () {
     		block,
     		id: create_then_block$1.name,
     		type: "then",
-    		source: "(338:1) {:then pluginVehicles}",
+    		source: "(368:1) {:then pluginVehicles}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (358:10) <Button outline color="primary" on:click={insertPluginVehicles}>
+    // (388:10) <Button outline color="primary" on:click={insertPluginVehicles}>
     function create_default_slot_14$1(ctx) {
     	let i;
     	let t;
@@ -11227,7 +11227,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Insertar");
     			attr_dev(i, "class", "far fa-edit");
-    			add_location(i, file$c, 357, 75, 10965);
+    			add_location(i, file$c, 387, 75, 11738);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -11243,14 +11243,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_14$1.name,
     		type: "slot",
-    		source: "(358:10) <Button outline color=\\\"primary\\\" on:click={insertPluginVehicles}>",
+    		source: "(388:10) <Button outline color=\\\"primary\\\" on:click={insertPluginVehicles}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (371:10) <Button outline color="danger" on:click="{deletePluginVehicles(pluginVehicles.country, pluginVehicles.year)}">
+    // (401:10) <Button outline color="danger" on:click="{deletePluginVehicles(pluginVehicles.country, pluginVehicles.year)}">
     function create_default_slot_13$1(ctx) {
     	let i;
     	let t;
@@ -11261,7 +11261,7 @@ var app = (function () {
     			t = text(" Borrar");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$c, 370, 121, 11550);
+    			add_location(i, file$c, 400, 121, 12323);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -11277,14 +11277,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_13$1.name,
     		type: "slot",
-    		source: "(371:10) <Button outline color=\\\"danger\\\" on:click=\\\"{deletePluginVehicles(pluginVehicles.country, pluginVehicles.year)}\\\">",
+    		source: "(401:10) <Button outline color=\\\"danger\\\" on:click=\\\"{deletePluginVehicles(pluginVehicles.country, pluginVehicles.year)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (360:4) {#each pluginVehicles as pluginVehicles}
+    // (390:4) {#each pluginVehicles as pluginVehicles}
     function create_each_block$1(ctx) {
     	let tr;
     	let td0;
@@ -11350,14 +11350,14 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t10 = space();
     			attr_dev(a, "href", a_href_value = "#/plugin-vehicles-stats/" + /*pluginVehicles*/ ctx[7].country + "/" + /*pluginVehicles*/ ctx[7].year);
-    			add_location(a, file$c, 362, 7, 11104);
-    			add_location(td0, file$c, 361, 6, 11091);
-    			add_location(td1, file$c, 366, 6, 11253);
-    			add_location(td2, file$c, 367, 6, 11291);
-    			add_location(td3, file$c, 368, 6, 11337);
-    			add_location(td4, file$c, 369, 6, 11385);
-    			add_location(td5, file$c, 370, 6, 11435);
-    			add_location(tr, file$c, 360, 5, 11079);
+    			add_location(a, file$c, 392, 7, 11877);
+    			add_location(td0, file$c, 391, 6, 11864);
+    			add_location(td1, file$c, 396, 6, 12026);
+    			add_location(td2, file$c, 397, 6, 12064);
+    			add_location(td3, file$c, 398, 6, 12110);
+    			add_location(td4, file$c, 399, 6, 12158);
+    			add_location(td5, file$c, 400, 6, 12208);
+    			add_location(tr, file$c, 390, 5, 11852);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -11421,14 +11421,14 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(360:4) {#each pluginVehicles as pluginVehicles}",
+    		source: "(390:4) {#each pluginVehicles as pluginVehicles}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (340:2) <Table bordered>
+    // (370:2) <Table bordered>
     function create_default_slot_12$1(ctx) {
     	let thead;
     	let tr0;
@@ -11605,22 +11605,22 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$c, 342, 5, 10179);
-    			add_location(th1, file$c, 343, 5, 10199);
-    			add_location(th2, file$c, 344, 5, 10218);
-    			add_location(th3, file$c, 345, 5, 10251);
-    			add_location(th4, file$c, 346, 5, 10281);
-    			add_location(th5, file$c, 347, 5, 10336);
-    			add_location(tr0, file$c, 341, 4, 10168);
-    			add_location(thead, file$c, 340, 3, 10155);
-    			add_location(td0, file$c, 352, 5, 10406);
-    			add_location(td1, file$c, 353, 5, 10496);
-    			add_location(td2, file$c, 354, 5, 10596);
-    			add_location(td3, file$c, 355, 5, 10681);
-    			add_location(td4, file$c, 356, 5, 10768);
-    			add_location(td5, file$c, 357, 5, 10895);
-    			add_location(tr1, file$c, 351, 4, 10395);
-    			add_location(tbody, file$c, 350, 3, 10382);
+    			add_location(th0, file$c, 372, 5, 10952);
+    			add_location(th1, file$c, 373, 5, 10972);
+    			add_location(th2, file$c, 374, 5, 10991);
+    			add_location(th3, file$c, 375, 5, 11024);
+    			add_location(th4, file$c, 376, 5, 11054);
+    			add_location(th5, file$c, 377, 5, 11109);
+    			add_location(tr0, file$c, 371, 4, 10941);
+    			add_location(thead, file$c, 370, 3, 10928);
+    			add_location(td0, file$c, 382, 5, 11179);
+    			add_location(td1, file$c, 383, 5, 11269);
+    			add_location(td2, file$c, 384, 5, 11369);
+    			add_location(td3, file$c, 385, 5, 11454);
+    			add_location(td4, file$c, 386, 5, 11541);
+    			add_location(td5, file$c, 387, 5, 11668);
+    			add_location(tr1, file$c, 381, 4, 11168);
+    			add_location(tbody, file$c, 380, 3, 11155);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -11794,14 +11794,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_12$1.name,
     		type: "slot",
-    		source: "(340:2) <Table bordered>",
+    		source: "(370:2) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (336:24)     Loading plugin vehicles...   {:then pluginVehicles}
+    // (366:24)     Loading plugin vehicles...   {:then pluginVehicles}
     function create_pending_block$1(ctx) {
     	let t;
 
@@ -11824,14 +11824,14 @@ var app = (function () {
     		block,
     		id: create_pending_block$1.name,
     		type: "pending",
-    		source: "(336:24)     Loading plugin vehicles...   {:then pluginVehicles}",
+    		source: "(366:24)     Loading plugin vehicles...   {:then pluginVehicles}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (379:8) <PaginationItem class="{currentPage === 1 ? 'disabled' : ''}">
+    // (409:8) <PaginationItem class="{currentPage === 1 ? 'disabled' : ''}">
     function create_default_slot_11$1(ctx) {
     	let current;
 
@@ -11872,14 +11872,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11$1.name,
     		type: "slot",
-    		source: "(379:8) <PaginationItem class=\\\"{currentPage === 1 ? 'disabled' : ''}\\\">",
+    		source: "(409:8) <PaginationItem class=\\\"{currentPage === 1 ? 'disabled' : ''}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (384:2) {#if currentPage != 1}
+    // (414:2) {#if currentPage != 1}
     function create_if_block_1$3(ctx) {
     	let current;
 
@@ -11926,14 +11926,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$3.name,
     		type: "if",
-    		source: "(384:2) {#if currentPage != 1}",
+    		source: "(414:2) {#if currentPage != 1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (386:12) <PaginationLink previous href="#/plugInVehiclesAPI" on:click="{() => addOffset(-1)}">
+    // (416:12) <PaginationLink previous href="#/plugInVehiclesAPI" on:click="{() => addOffset(-1)}">
     function create_default_slot_10$1(ctx) {
     	let t_value = /*currentPage*/ ctx[5] - 1 + "";
     	let t;
@@ -11957,14 +11957,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10$1.name,
     		type: "slot",
-    		source: "(386:12) <PaginationLink previous href=\\\"#/plugInVehiclesAPI\\\" on:click=\\\"{() => addOffset(-1)}\\\">",
+    		source: "(416:12) <PaginationLink previous href=\\\"#/plugInVehiclesAPI\\\" on:click=\\\"{() => addOffset(-1)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (385:8) <PaginationItem>
+    // (415:8) <PaginationItem>
     function create_default_slot_9$1(ctx) {
     	let current;
 
@@ -12015,14 +12015,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9$1.name,
     		type: "slot",
-    		source: "(385:8) <PaginationItem>",
+    		source: "(415:8) <PaginationItem>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (390:12) <PaginationLink href="#/plugInVehiclesAPI">
+    // (420:12) <PaginationLink href="#/plugInVehiclesAPI">
     function create_default_slot_8$1(ctx) {
     	let t;
 
@@ -12045,14 +12045,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8$1.name,
     		type: "slot",
-    		source: "(390:12) <PaginationLink href=\\\"#/plugInVehiclesAPI\\\">",
+    		source: "(420:12) <PaginationLink href=\\\"#/plugInVehiclesAPI\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (389:8) <PaginationItem active>
+    // (419:8) <PaginationItem active>
     function create_default_slot_7$1(ctx) {
     	let current;
 
@@ -12100,14 +12100,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7$1.name,
     		type: "slot",
-    		source: "(389:8) <PaginationItem active>",
+    		source: "(419:8) <PaginationItem active>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (393:2) {#if moreData}
+    // (423:2) {#if moreData}
     function create_if_block$7(ctx) {
     	let current;
 
@@ -12154,14 +12154,14 @@ var app = (function () {
     		block,
     		id: create_if_block$7.name,
     		type: "if",
-    		source: "(393:2) {#if moreData}",
+    		source: "(423:2) {#if moreData}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (395:12) <PaginationLink previous href="#/plugInVehiclesAPI" on:click="{() => addOffset(1)}">
+    // (425:12) <PaginationLink previous href="#/plugInVehiclesAPI" on:click="{() => addOffset(1)}">
     function create_default_slot_6$1(ctx) {
     	let t_value = /*currentPage*/ ctx[5] + 1 + "";
     	let t;
@@ -12185,14 +12185,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6$1.name,
     		type: "slot",
-    		source: "(395:12) <PaginationLink previous href=\\\"#/plugInVehiclesAPI\\\" on:click=\\\"{() => addOffset(1)}\\\">",
+    		source: "(425:12) <PaginationLink previous href=\\\"#/plugInVehiclesAPI\\\" on:click=\\\"{() => addOffset(1)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (394:8) <PaginationItem >
+    // (424:8) <PaginationItem >
     function create_default_slot_5$1(ctx) {
     	let current;
 
@@ -12243,14 +12243,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5$1.name,
     		type: "slot",
-    		source: "(394:8) <PaginationItem >",
+    		source: "(424:8) <PaginationItem >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (399:8) <PaginationItem class="{moreData === true ? '' : 'disabled'}">
+    // (429:8) <PaginationItem class="{moreData === true ? '' : 'disabled'}">
     function create_default_slot_4$1(ctx) {
     	let current;
 
@@ -12288,14 +12288,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4$1.name,
     		type: "slot",
-    		source: "(399:8) <PaginationItem class=\\\"{moreData === true ? '' : 'disabled'}\\\">",
+    		source: "(429:8) <PaginationItem class=\\\"{moreData === true ? '' : 'disabled'}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (378:1) <Pagination style="float:right;" ariaLabel="Cambiar de página">
+    // (408:1) <Pagination style="float:right;" ariaLabel="Cambiar de página">
     function create_default_slot_3$1(ctx) {
     	let t0;
     	let t1;
@@ -12459,14 +12459,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$1.name,
     		type: "slot",
-    		source: "(378:1) <Pagination style=\\\"float:right;\\\" ariaLabel=\\\"Cambiar de página\\\">",
+    		source: "(408:1) <Pagination style=\\\"float:right;\\\" ariaLabel=\\\"Cambiar de página\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (404:1) <Button outline color="secondary" on:click="{pop}">
+    // (434:1) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot_2$1(ctx) {
     	let i;
     	let t;
@@ -12476,7 +12476,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$c, 403, 52, 12871);
+    			add_location(i, file$c, 433, 52, 13644);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -12492,14 +12492,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$1.name,
     		type: "slot",
-    		source: "(404:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(434:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (405:1) <Button outline color="warning" on:click={loadInitialPluginVehicles}>
+    // (435:1) <Button outline color="warning" on:click={loadInitialPluginVehicles}>
     function create_default_slot_1$1(ctx) {
     	let i;
     	let t;
@@ -12510,7 +12510,7 @@ var app = (function () {
     			t = text(" Cargar datos iniciales");
     			attr_dev(i, "class", "fa fa-cloud-upload-alt");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$c, 404, 71, 12999);
+    			add_location(i, file$c, 434, 71, 13772);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -12526,14 +12526,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$1.name,
     		type: "slot",
-    		source: "(405:1) <Button outline color=\\\"warning\\\" on:click={loadInitialPluginVehicles}>",
+    		source: "(435:1) <Button outline color=\\\"warning\\\" on:click={loadInitialPluginVehicles}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (406:1) <Button outline color="danger" on:click={deletePluginVehiclesAll}>
+    // (436:1) <Button outline color="danger" on:click={deletePluginVehiclesAll}>
     function create_default_slot$1(ctx) {
     	let i;
     	let t;
@@ -12544,7 +12544,7 @@ var app = (function () {
     			t = text(" Borrar todos");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$c, 405, 68, 13158);
+    			add_location(i, file$c, 435, 68, 13931);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -12560,7 +12560,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(406:1) <Button outline color=\\\"danger\\\" on:click={deletePluginVehiclesAll}>",
+    		source: "(436:1) <Button outline color=\\\"danger\\\" on:click={deletePluginVehiclesAll}>",
     		ctx
     	});
 
@@ -12694,8 +12694,8 @@ var app = (function () {
     			attr_dev(div, "role", "alert");
     			attr_dev(div, "id", "div_alert");
     			set_style(div, "display", "none");
-    			add_location(div, file$c, 300, 1, 8893);
-    			add_location(main, file$c, 298, 0, 8846);
+    			add_location(div, file$c, 330, 1, 9666);
+    			add_location(main, file$c, 328, 0, 9619);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12838,6 +12838,30 @@ var app = (function () {
     }
 
     const BASE_API_URL$1 = "/api/v2/plugin-vehicles-stats";
+
+    async function checkData(data) {
+    	const res = await fetch(BASE_API_URL$1);
+    	let theDataExist = false;
+
+    	/* Getting the countries for the select */
+    	if (res.ok) {
+    		const json = await res.json();
+
+    		/* We find the number repeated data */
+    		let numberRepeatedData = json.filter(d => {
+    			return d.year == data.year && d.country == data.country;
+    		}).length;
+
+    		if (numberRepeatedData >= 1) {
+    			theDataExist = true;
+    		}
+    	} else {
+    		errorAlert("Error interno al intentar obtener repetidos");
+    		console.log("ERROR!");
+    	}
+
+    	return theDataExist;
+    }
 
     //These function are for the alerts
     function insertAlert$1() {
@@ -13026,6 +13050,7 @@ var app = (function () {
 
     	async function loadInitialPluginVehicles() {
     		console.log("Loading initial plugin vehicles stats...");
+    		deletePluginVehiclesAll();
 
     		const res = await fetch(BASE_API_URL$1 + "/loadInitialData").then(function (res) {
     			if (res.ok) {
@@ -13046,9 +13071,12 @@ var app = (function () {
 
     	async function insertPluginVehicles() {
     		console.log("Inserting plugin vehicles...");
+    		const isRepeated = await checkData(newPluginVehicles);
 
     		if (newPluginVehicles.country == "" || newPluginVehicles.country == null || newPluginVehicles.year == "" || newPluginVehicles.year == null) {
     			alert("Se debe incluir el nombre del país y del año");
+    		} else if (isRepeated) {
+    			alert("¡Ya existe ese dato en nuestra base de datos!");
     		} else {
     			const res = await fetch(BASE_API_URL$1, {
     				method: "POST",
@@ -13192,6 +13220,7 @@ var app = (function () {
     		getCountriesYears,
     		getPluginVehicles,
     		loadInitialPluginVehicles,
+    		checkData,
     		insertPluginVehicles,
     		deletePluginVehicles,
     		deletePluginVehiclesAll,
@@ -13404,7 +13433,7 @@ var app = (function () {
     	return block;
     }
 
-    // (300:1) {:then renewableSources}
+    // (329:1) {:then renewableSources}
     function create_then_block$2(ctx) {
     	let t0;
     	let t1;
@@ -13532,14 +13561,14 @@ var app = (function () {
     		block,
     		id: create_then_block$2.name,
     		type: "then",
-    		source: "(300:1) {:then renewableSources}",
+    		source: "(329:1) {:then renewableSources}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (303:3) <Label for="selectCountry">
+    // (332:3) <Label for="selectCountry">
     function create_default_slot_21$2(ctx) {
     	let t;
 
@@ -13559,14 +13588,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_21$2.name,
     		type: "slot",
-    		source: "(303:3) <Label for=\\\"selectCountry\\\">",
+    		source: "(332:3) <Label for=\\\"selectCountry\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (310:4) {:else}
+    // (339:4) {:else}
     function create_else_block_1$3(ctx) {
     	let option;
     	let t_value = /*country*/ ctx[36] + "";
@@ -13579,7 +13608,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*country*/ ctx[36];
     			option.value = option.__value;
-    			add_location(option, file$e, 310, 4, 9536);
+    			add_location(option, file$e, 339, 4, 10307);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -13603,14 +13632,14 @@ var app = (function () {
     		block,
     		id: create_else_block_1$3.name,
     		type: "else",
-    		source: "(310:4) {:else}",
+    		source: "(339:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (308:4) {#if country == currentCountry}
+    // (337:4) {#if country == currentCountry}
     function create_if_block_3$4(ctx) {
     	let option;
     	let t_value = /*country*/ ctx[36] + "";
@@ -13624,7 +13653,7 @@ var app = (function () {
     			option.selected = "selected";
     			option.__value = option_value_value = /*country*/ ctx[36];
     			option.value = option.__value;
-    			add_location(option, file$e, 308, 4, 9471);
+    			add_location(option, file$e, 337, 4, 10242);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -13648,14 +13677,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3$4.name,
     		type: "if",
-    		source: "(308:4) {#if country == currentCountry}",
+    		source: "(337:4) {#if country == currentCountry}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (306:4) {#each countries as country}
+    // (335:4) {#each countries as country}
     function create_each_block_2$2(ctx) {
     	let if_block_anchor;
 
@@ -13699,14 +13728,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2$2.name,
     		type: "each",
-    		source: "(306:4) {#each countries as country}",
+    		source: "(335:4) {#each countries as country}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (304:3) <Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentCountry}">
+    // (333:3) <Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentCountry}">
     function create_default_slot_20$2(ctx) {
     	let t0;
     	let option;
@@ -13729,7 +13758,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$e, 313, 4, 9592);
+    			add_location(option, file$e, 342, 4, 10363);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -13775,14 +13804,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_20$2.name,
     		type: "slot",
-    		source: "(304:3) <Input type=\\\"select\\\" name=\\\"selectCountry\\\" id=\\\"selectCountry\\\" bind:value=\\\"{currentCountry}\\\">",
+    		source: "(333:3) <Input type=\\\"select\\\" name=\\\"selectCountry\\\" id=\\\"selectCountry\\\" bind:value=\\\"{currentCountry}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (302:2) <FormGroup>
+    // (331:2) <FormGroup>
     function create_default_slot_19$2(ctx) {
     	let t;
     	let updating_value;
@@ -13872,14 +13901,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_19$2.name,
     		type: "slot",
-    		source: "(302:2) <FormGroup>",
+    		source: "(331:2) <FormGroup>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (319:3) <Label for="selectYear">
+    // (348:3) <Label for="selectYear">
     function create_default_slot_18$2(ctx) {
     	let t;
 
@@ -13899,14 +13928,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_18$2.name,
     		type: "slot",
-    		source: "(319:3) <Label for=\\\"selectYear\\\">",
+    		source: "(348:3) <Label for=\\\"selectYear\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (325:4) {:else}
+    // (354:4) {:else}
     function create_else_block$8(ctx) {
     	let option;
     	let t_value = /*year*/ ctx[33] + "";
@@ -13919,7 +13948,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*year*/ ctx[33];
     			option.value = option.__value;
-    			add_location(option, file$e, 325, 4, 9993);
+    			add_location(option, file$e, 354, 4, 10764);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -13943,14 +13972,14 @@ var app = (function () {
     		block,
     		id: create_else_block$8.name,
     		type: "else",
-    		source: "(325:4) {:else}",
+    		source: "(354:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (323:4) {#if year == currentYear}
+    // (352:4) {#if year == currentYear}
     function create_if_block_2$4(ctx) {
     	let option;
     	let t_value = /*year*/ ctx[33] + "";
@@ -13964,7 +13993,7 @@ var app = (function () {
     			option.selected = "selected";
     			option.__value = option_value_value = /*year*/ ctx[33];
     			option.value = option.__value;
-    			add_location(option, file$e, 323, 4, 9931);
+    			add_location(option, file$e, 352, 4, 10702);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -13988,14 +14017,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$4.name,
     		type: "if",
-    		source: "(323:4) {#if year == currentYear}",
+    		source: "(352:4) {#if year == currentYear}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (321:4) {#each years as year}
+    // (350:4) {#each years as year}
     function create_each_block_1$2(ctx) {
     	let if_block_anchor;
 
@@ -14039,14 +14068,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1$2.name,
     		type: "each",
-    		source: "(321:4) {#each years as year}",
+    		source: "(350:4) {#each years as year}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (320:3) <Input type="select"  name="selectYear" id="selectYear" bind:value="{currentYear}">
+    // (349:3) <Input type="select"  name="selectYear" id="selectYear" bind:value="{currentYear}">
     function create_default_slot_17$2(ctx) {
     	let t0;
     	let option;
@@ -14069,7 +14098,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$e, 328, 4, 10046);
+    			add_location(option, file$e, 357, 4, 10817);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -14115,14 +14144,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_17$2.name,
     		type: "slot",
-    		source: "(320:3) <Input type=\\\"select\\\"  name=\\\"selectYear\\\" id=\\\"selectYear\\\" bind:value=\\\"{currentYear}\\\">",
+    		source: "(349:3) <Input type=\\\"select\\\"  name=\\\"selectYear\\\" id=\\\"selectYear\\\" bind:value=\\\"{currentYear}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (318:2) <FormGroup>
+    // (347:2) <FormGroup>
     function create_default_slot_16$2(ctx) {
     	let t;
     	let updating_value;
@@ -14212,14 +14241,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_16$2.name,
     		type: "slot",
-    		source: "(318:2) <FormGroup>",
+    		source: "(347:2) <FormGroup>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (333:2) <Button outline color="secondary" on:click="{search(currentCountry, currentYear)}" class="button-search" >
+    // (362:2) <Button outline color="secondary" on:click="{search(currentCountry, currentYear)}" class="button-search" >
     function create_default_slot_15$2(ctx) {
     	let i;
     	let t;
@@ -14229,7 +14258,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Buscar");
     			attr_dev(i, "class", "fas fa-search");
-    			add_location(i, file$e, 332, 109, 10206);
+    			add_location(i, file$e, 361, 109, 10977);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -14245,14 +14274,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_15$2.name,
     		type: "slot",
-    		source: "(333:2) <Button outline color=\\\"secondary\\\" on:click=\\\"{search(currentCountry, currentYear)}\\\" class=\\\"button-search\\\" >",
+    		source: "(362:2) <Button outline color=\\\"secondary\\\" on:click=\\\"{search(currentCountry, currentYear)}\\\" class=\\\"button-search\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (354:10) <Button outline color="primary" on:click={insertRenewableSources}>
+    // (383:10) <Button outline color="primary" on:click={insertRenewableSources}>
     function create_default_slot_14$2(ctx) {
     	let i;
     	let t;
@@ -14262,7 +14291,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Insertar");
     			attr_dev(i, "class", "far fa-edit");
-    			add_location(i, file$e, 353, 77, 11301);
+    			add_location(i, file$e, 382, 77, 12072);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -14278,14 +14307,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_14$2.name,
     		type: "slot",
-    		source: "(354:10) <Button outline color=\\\"primary\\\" on:click={insertRenewableSources}>",
+    		source: "(383:10) <Button outline color=\\\"primary\\\" on:click={insertRenewableSources}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (367:10) <Button outline color="danger" on:click="{deleteRenewableSource(renewableSource.country, renewableSource.year)}" >
+    // (396:10) <Button outline color="danger" on:click="{deleteRenewableSource(renewableSource.country, renewableSource.year)}" >
     function create_default_slot_13$2(ctx) {
     	let i;
     	let t;
@@ -14296,7 +14325,7 @@ var app = (function () {
     			t = text(" Borrar");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$e, 366, 125, 11947);
+    			add_location(i, file$e, 395, 125, 12718);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -14312,14 +14341,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_13$2.name,
     		type: "slot",
-    		source: "(367:10) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteRenewableSource(renewableSource.country, renewableSource.year)}\\\" >",
+    		source: "(396:10) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteRenewableSource(renewableSource.country, renewableSource.year)}\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (356:4) {#each renewableSources as renewableSource}
+    // (385:4) {#each renewableSources as renewableSource}
     function create_each_block$2(ctx) {
     	let tr;
     	let td0;
@@ -14385,14 +14414,14 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t10 = space();
     			attr_dev(a, "href", a_href_value = "#/renewable-sources-stats/" + /*renewableSource*/ ctx[30].country + "/" + /*renewableSource*/ ctx[30].year);
-    			add_location(a, file$e, 358, 6, 11445);
-    			add_location(td0, file$e, 357, 5, 11430);
-    			add_location(td1, file$e, 362, 5, 11597);
-    			add_location(td2, file$e, 363, 5, 11637);
-    			add_location(td3, file$e, 364, 5, 11695);
-    			add_location(td4, file$e, 365, 5, 11761);
-    			add_location(td5, file$e, 366, 5, 11827);
-    			add_location(tr, file$e, 356, 4, 11419);
+    			add_location(a, file$e, 387, 6, 12216);
+    			add_location(td0, file$e, 386, 5, 12201);
+    			add_location(td1, file$e, 391, 5, 12368);
+    			add_location(td2, file$e, 392, 5, 12408);
+    			add_location(td3, file$e, 393, 5, 12466);
+    			add_location(td4, file$e, 394, 5, 12532);
+    			add_location(td5, file$e, 395, 5, 12598);
+    			add_location(tr, file$e, 385, 4, 12190);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -14456,14 +14485,14 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(356:4) {#each renewableSources as renewableSource}",
+    		source: "(385:4) {#each renewableSources as renewableSource}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (336:2) <Table bordered>
+    // (365:2) <Table bordered>
     function create_default_slot_12$2(ctx) {
     	let thead;
     	let tr0;
@@ -14650,22 +14679,22 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$e, 338, 5, 10307);
-    			add_location(th1, file$e, 339, 5, 10329);
-    			add_location(th2, file$e, 340, 5, 10350);
-    			add_location(th3, file$e, 341, 5, 10408);
-    			add_location(th4, file$e, 342, 5, 10471);
-    			add_location(th5, file$e, 343, 5, 10525);
-    			add_location(tr0, file$e, 337, 4, 10296);
-    			add_location(thead, file$e, 336, 3, 10283);
-    			add_location(td0, file$e, 348, 5, 10597);
-    			add_location(td1, file$e, 349, 5, 10702);
-    			add_location(td2, file$e, 350, 5, 10805);
-    			add_location(td3, file$e, 351, 5, 10941);
-    			add_location(td4, file$e, 352, 5, 11085);
-    			add_location(td5, file$e, 353, 5, 11229);
-    			add_location(tr1, file$e, 347, 4, 10586);
-    			add_location(tbody, file$e, 346, 3, 10573);
+    			add_location(th0, file$e, 367, 5, 11078);
+    			add_location(th1, file$e, 368, 5, 11100);
+    			add_location(th2, file$e, 369, 5, 11121);
+    			add_location(th3, file$e, 370, 5, 11179);
+    			add_location(th4, file$e, 371, 5, 11242);
+    			add_location(th5, file$e, 372, 5, 11296);
+    			add_location(tr0, file$e, 366, 4, 11067);
+    			add_location(thead, file$e, 365, 3, 11054);
+    			add_location(td0, file$e, 377, 5, 11368);
+    			add_location(td1, file$e, 378, 5, 11473);
+    			add_location(td2, file$e, 379, 5, 11576);
+    			add_location(td3, file$e, 380, 5, 11712);
+    			add_location(td4, file$e, 381, 5, 11856);
+    			add_location(td5, file$e, 382, 5, 12000);
+    			add_location(tr1, file$e, 376, 4, 11357);
+    			add_location(tbody, file$e, 375, 3, 11344);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -14839,14 +14868,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_12$2.name,
     		type: "slot",
-    		source: "(336:2) <Table bordered>",
+    		source: "(365:2) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (298:26)     Loading renewable sources...   {:then renewableSources}
+    // (327:26)     Loading renewable sources...   {:then renewableSources}
     function create_pending_block$2(ctx) {
     	let t;
 
@@ -14869,14 +14898,14 @@ var app = (function () {
     		block,
     		id: create_pending_block$2.name,
     		type: "pending",
-    		source: "(298:26)     Loading renewable sources...   {:then renewableSources}",
+    		source: "(327:26)     Loading renewable sources...   {:then renewableSources}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (377:2) <PaginationItem class="{currentPage === 1 ? 'disabled' : ''}">
+    // (406:2) <PaginationItem class="{currentPage === 1 ? 'disabled' : ''}">
     function create_default_slot_11$2(ctx) {
     	let current;
 
@@ -14917,14 +14946,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11$2.name,
     		type: "slot",
-    		source: "(377:2) <PaginationItem class=\\\"{currentPage === 1 ? 'disabled' : ''}\\\">",
+    		source: "(406:2) <PaginationItem class=\\\"{currentPage === 1 ? 'disabled' : ''}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (382:2) {#if currentPage != 1}
+    // (411:2) {#if currentPage != 1}
     function create_if_block_1$4(ctx) {
     	let current;
 
@@ -14971,14 +15000,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$4.name,
     		type: "if",
-    		source: "(382:2) {#if currentPage != 1}",
+    		source: "(411:2) {#if currentPage != 1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (384:3) <PaginationLink href="#/renewableSourcesAPI" on:click="{() => addOffset(-1)}" >
+    // (413:3) <PaginationLink href="#/renewableSourcesAPI" on:click="{() => addOffset(-1)}" >
     function create_default_slot_10$2(ctx) {
     	let t_value = /*currentPage*/ ctx[5] - 1 + "";
     	let t;
@@ -15002,14 +15031,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10$2.name,
     		type: "slot",
-    		source: "(384:3) <PaginationLink href=\\\"#/renewableSourcesAPI\\\" on:click=\\\"{() => addOffset(-1)}\\\" >",
+    		source: "(413:3) <PaginationLink href=\\\"#/renewableSourcesAPI\\\" on:click=\\\"{() => addOffset(-1)}\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (383:2) <PaginationItem>
+    // (412:2) <PaginationItem>
     function create_default_slot_9$2(ctx) {
     	let current;
 
@@ -15059,14 +15088,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9$2.name,
     		type: "slot",
-    		source: "(383:2) <PaginationItem>",
+    		source: "(412:2) <PaginationItem>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (388:3) <PaginationLink href="#/renewableSourcesAPI" >
+    // (417:3) <PaginationLink href="#/renewableSourcesAPI" >
     function create_default_slot_8$2(ctx) {
     	let t;
 
@@ -15089,14 +15118,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8$2.name,
     		type: "slot",
-    		source: "(388:3) <PaginationLink href=\\\"#/renewableSourcesAPI\\\" >",
+    		source: "(417:3) <PaginationLink href=\\\"#/renewableSourcesAPI\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (387:2) <PaginationItem active>
+    // (416:2) <PaginationItem active>
     function create_default_slot_7$2(ctx) {
     	let current;
 
@@ -15144,14 +15173,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7$2.name,
     		type: "slot",
-    		source: "(387:2) <PaginationItem active>",
+    		source: "(416:2) <PaginationItem active>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (392:2) {#if moreData}
+    // (421:2) {#if moreData}
     function create_if_block$8(ctx) {
     	let current;
 
@@ -15198,14 +15227,14 @@ var app = (function () {
     		block,
     		id: create_if_block$8.name,
     		type: "if",
-    		source: "(392:2) {#if moreData}",
+    		source: "(421:2) {#if moreData}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (394:3) <PaginationLink href="#/renewableSourcesAPI" on:click="{() => addOffset(1)}">
+    // (423:3) <PaginationLink href="#/renewableSourcesAPI" on:click="{() => addOffset(1)}">
     function create_default_slot_6$2(ctx) {
     	let t_value = /*currentPage*/ ctx[5] + 1 + "";
     	let t;
@@ -15229,14 +15258,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6$2.name,
     		type: "slot",
-    		source: "(394:3) <PaginationLink href=\\\"#/renewableSourcesAPI\\\" on:click=\\\"{() => addOffset(1)}\\\">",
+    		source: "(423:3) <PaginationLink href=\\\"#/renewableSourcesAPI\\\" on:click=\\\"{() => addOffset(1)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (393:2) <PaginationItem >
+    // (422:2) <PaginationItem >
     function create_default_slot_5$2(ctx) {
     	let current;
 
@@ -15286,14 +15315,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5$2.name,
     		type: "slot",
-    		source: "(393:2) <PaginationItem >",
+    		source: "(422:2) <PaginationItem >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (398:2) <PaginationItem class="{moreData ? '' : 'disabled'}">
+    // (427:2) <PaginationItem class="{moreData ? '' : 'disabled'}">
     function create_default_slot_4$2(ctx) {
     	let current;
 
@@ -15334,14 +15363,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4$2.name,
     		type: "slot",
-    		source: "(398:2) <PaginationItem class=\\\"{moreData ? '' : 'disabled'}\\\">",
+    		source: "(427:2) <PaginationItem class=\\\"{moreData ? '' : 'disabled'}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (374:1) <Pagination style="float:right;" ariaLabel="Cambiar de página">
+    // (403:1) <Pagination style="float:right;" ariaLabel="Cambiar de página">
     function create_default_slot_3$2(ctx) {
     	let t0;
     	let t1;
@@ -15505,14 +15534,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$2.name,
     		type: "slot",
-    		source: "(374:1) <Pagination style=\\\"float:right;\\\" ariaLabel=\\\"Cambiar de página\\\">",
+    		source: "(403:1) <Pagination style=\\\"float:right;\\\" ariaLabel=\\\"Cambiar de página\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (404:1) <Button outline color="secondary" on:click="{pop}">
+    // (433:1) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot_2$2(ctx) {
     	let i;
     	let t;
@@ -15522,7 +15551,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$e, 403, 53, 13170);
+    			add_location(i, file$e, 432, 53, 13941);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -15538,14 +15567,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$2.name,
     		type: "slot",
-    		source: "(404:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(433:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (405:1) <Button outline color="warning" on:click={loadInitialRenewableSources} >
+    // (434:1) <Button outline color="warning" on:click={loadInitialRenewableSources} >
     function create_default_slot_1$2(ctx) {
     	let i;
     	let t;
@@ -15556,7 +15585,7 @@ var app = (function () {
     			t = text(" Cargar datos iniciales");
     			attr_dev(i, "class", "fas fa-cloud-upload-alt");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$e, 404, 74, 13302);
+    			add_location(i, file$e, 433, 74, 14073);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -15572,14 +15601,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$2.name,
     		type: "slot",
-    		source: "(405:1) <Button outline color=\\\"warning\\\" on:click={loadInitialRenewableSources} >",
+    		source: "(434:1) <Button outline color=\\\"warning\\\" on:click={loadInitialRenewableSources} >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (406:1) <Button outline color="danger" on:click={deleteRenewableSources} >
+    // (435:1) <Button outline color="danger" on:click={deleteRenewableSources} >
     function create_default_slot$2(ctx) {
     	let i;
     	let t;
@@ -15590,7 +15619,7 @@ var app = (function () {
     			t = text(" Borrar todo");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$e, 405, 68, 13463);
+    			add_location(i, file$e, 434, 68, 14234);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -15606,7 +15635,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$2.name,
     		type: "slot",
-    		source: "(406:1) <Button outline color=\\\"danger\\\" on:click={deleteRenewableSources} >",
+    		source: "(435:1) <Button outline color=\\\"danger\\\" on:click={deleteRenewableSources} >",
     		ctx
     	});
 
@@ -15700,8 +15729,8 @@ var app = (function () {
     			attr_dev(div, "role", "alert");
     			attr_dev(div, "id", "div_alert");
     			set_style(div, "display", "none");
-    			add_location(div, file$e, 295, 1, 8984);
-    			add_location(main, file$e, 293, 0, 8937);
+    			add_location(div, file$e, 324, 1, 9755);
+    			add_location(main, file$e, 322, 0, 9708);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -15807,6 +15836,30 @@ var app = (function () {
     }
 
     const BASE_API_URL$2 = "/api/v2/renewable-sources-stats";
+
+    async function checkData$1(data) {
+    	const res = await fetch(BASE_API_URL$2);
+    	let theDataExist = false;
+
+    	/* Getting the countries for the select */
+    	if (res.ok) {
+    		const json = await res.json();
+
+    		/* We find the number repeated data */
+    		let numberRepeatedData = json.filter(d => {
+    			return d.year == data.year && d.country == data.country;
+    		}).length;
+
+    		if (numberRepeatedData >= 1) {
+    			theDataExist = true;
+    		}
+    	} else {
+    		errorAlert$1("Error interno al intentar obtener repetidos");
+    		console.log("ERROR!");
+    	}
+
+    	return theDataExist;
+    }
 
     /* These functions are for the alerts */
     function insertAlert$2() {
@@ -15994,6 +16047,7 @@ var app = (function () {
 
     	async function loadInitialRenewableSources() {
     		console.log("Loading initial renewable sources stats...");
+    		deleteRenewableSources();
 
     		const res = await fetch(BASE_API_URL$2 + "/loadInitialData").then(function (res) {
     			if (res.ok) {
@@ -16015,10 +16069,13 @@ var app = (function () {
 
     	async function insertRenewableSources() {
     		console.log("Inserting renewable sources stats...");
+    		const isRepeated = await checkData$1(newRenewableSource);
 
     		/* Checking if the country and the year are not empty */
     		if (newRenewableSource.country == "" || newRenewableSource.country == null || newRenewableSource.year == "" || newRenewableSource.year == null) {
     			alert("Se debe incluir el nombre del país y el año obligatoriamente");
+    		} else if (isRepeated) {
+    			alert("¡Ya existe ese dato en nuestra base de datos!");
     		} else {
     			const res = await fetch(BASE_API_URL$2, {
     				method: "POST",
@@ -16166,6 +16223,7 @@ var app = (function () {
     		getCountriesYears,
     		getRenewableSources,
     		loadInitialRenewableSources,
+    		checkData: checkData$1,
     		insertRenewableSources,
     		deleteRenewableSource,
     		deleteRenewableSources,
@@ -20689,7 +20747,7 @@ var app = (function () {
     const { console: console_1$a } = globals;
     const file$r = "src\\front\\renewableSourcesAPI\\Integrations.svelte";
 
-    // (660:4) <Button outline color="secondary" on:click="{pop}">
+    // (2029:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$e(ctx) {
     	let i;
     	let t;
@@ -20699,7 +20757,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$r, 659, 56, 25974);
+    			add_location(i, file$r, 2028, 56, 78685);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -20715,7 +20773,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$e.name,
     		type: "slot",
-    		source: "(660:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(2029:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -20724,7 +20782,7 @@ var app = (function () {
 
     function create_fragment$s(ctx) {
     	let main;
-    	let div18;
+    	let div30;
     	let div1;
     	let div0;
     	let a0;
@@ -20741,50 +20799,100 @@ var app = (function () {
     	let t11;
     	let a6;
     	let t13;
-    	let div17;
-    	let div16;
+    	let a7;
+    	let t15;
+    	let a8;
+    	let t17;
+    	let a9;
+    	let t19;
+    	let a10;
+    	let t21;
+    	let a11;
+    	let t23;
+    	let a12;
+    	let t25;
+    	let div29;
+    	let div28;
     	let div3;
     	let figure0;
     	let div2;
-    	let t14;
+    	let t26;
     	let p0;
-    	let t16;
+    	let t28;
     	let div5;
     	let figure1;
     	let div4;
-    	let t17;
+    	let t29;
     	let p1;
-    	let t19;
+    	let t31;
     	let div7;
     	let figure2;
     	let div6;
-    	let t20;
+    	let t32;
     	let p2;
-    	let t22;
+    	let t34;
     	let div9;
     	let figure3;
     	let div8;
-    	let t23;
+    	let t35;
     	let p3;
-    	let t25;
+    	let t37;
     	let div11;
     	let figure4;
     	let div10;
-    	let t26;
+    	let t38;
     	let p4;
-    	let t28;
+    	let t40;
     	let div13;
     	let figure5;
     	let div12;
-    	let t29;
+    	let t41;
     	let p5;
-    	let t31;
+    	let t43;
     	let div15;
     	let figure6;
     	let div14;
-    	let t32;
+    	let t44;
     	let p6;
-    	let t34;
+    	let t46;
+    	let div17;
+    	let figure7;
+    	let div16;
+    	let t47;
+    	let p7;
+    	let t49;
+    	let div19;
+    	let figure8;
+    	let div18;
+    	let t50;
+    	let p8;
+    	let t52;
+    	let div21;
+    	let figure9;
+    	let div20;
+    	let t53;
+    	let p9;
+    	let t55;
+    	let div23;
+    	let figure10;
+    	let div22;
+    	let t56;
+    	let p10;
+    	let t58;
+    	let div25;
+    	let figure11;
+    	let div24;
+    	let t59;
+    	let p11;
+    	let t61;
+    	let div27;
+    	let figure12;
+    	let div26;
+    	let t62;
+    	let p12;
+    	let t64;
+    	let p13;
+    	let t65;
     	let current;
 
     	const button = new Button({
@@ -20802,7 +20910,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			main = element("main");
-    			div18 = element("div");
+    			div30 = element("div");
     			div1 = element("div");
     			div0 = element("div");
     			a0 = element("a");
@@ -20821,62 +20929,124 @@ var app = (function () {
     			a4.textContent = "Integración con 22";
     			t9 = space();
     			a5 = element("a");
-    			a5.textContent = "Integración con 28";
+    			a5.textContent = "Integración con 1";
     			t11 = space();
     			a6 = element("a");
-    			a6.textContent = "Integración con API externa";
+    			a6.textContent = "Integración con 30";
     			t13 = space();
-    			div17 = element("div");
-    			div16 = element("div");
+    			a7 = element("a");
+    			a7.textContent = "Integración con 23";
+    			t15 = space();
+    			a8 = element("a");
+    			a8.textContent = "Integración con 25";
+    			t17 = space();
+    			a9 = element("a");
+    			a9.textContent = "Integración con 8";
+    			t19 = space();
+    			a10 = element("a");
+    			a10.textContent = "Integración con 6";
+    			t21 = space();
+    			a11 = element("a");
+    			a11.textContent = "Integración con API externa 1";
+    			t23 = space();
+    			a12 = element("a");
+    			a12.textContent = "Integración con API externa 2";
+    			t25 = space();
+    			div29 = element("div");
+    			div28 = element("div");
     			div3 = element("div");
     			figure0 = element("figure");
     			div2 = element("div");
-    			t14 = space();
+    			t26 = space();
     			p0 = element("p");
     			p0.textContent = "Integración con el grupo 7, la integración está realizada con la importaciones de vegetales y preparados.";
-    			t16 = space();
+    			t28 = space();
     			div5 = element("div");
     			figure1 = element("figure");
     			div4 = element("div");
-    			t17 = space();
+    			t29 = space();
     			p1 = element("p");
     			p1.textContent = "Integra la 27.";
-    			t19 = space();
+    			t31 = space();
     			div7 = element("div");
     			figure2 = element("figure");
     			div6 = element("div");
-    			t20 = space();
+    			t32 = space();
     			p2 = element("p");
     			p2.textContent = "Integra la 5.";
-    			t22 = space();
+    			t34 = space();
     			div9 = element("div");
     			figure3 = element("figure");
     			div8 = element("div");
-    			t23 = space();
+    			t35 = space();
     			p3 = element("p");
     			p3.textContent = "Integra la 4.";
-    			t25 = space();
+    			t37 = space();
     			div11 = element("div");
     			figure4 = element("figure");
     			div10 = element("div");
-    			t26 = space();
+    			t38 = space();
     			p4 = element("p");
     			p4.textContent = "Integra la 22.";
-    			t28 = space();
+    			t40 = space();
     			div13 = element("div");
     			figure5 = element("figure");
     			div12 = element("div");
-    			t29 = space();
+    			t41 = space();
     			p5 = element("p");
-    			p5.textContent = "Integra la 28.";
-    			t31 = space();
+    			p5.textContent = "Integra la 1.";
+    			t43 = space();
     			div15 = element("div");
     			figure6 = element("figure");
     			div14 = element("div");
-    			t32 = space();
+    			t44 = space();
     			p6 = element("p");
-    			p6.textContent = "Integración con la una API externa que proporciona el área (en kilómetros cuadrados) de los países.";
-    			t34 = space();
+    			p6.textContent = "Integra la 30.";
+    			t46 = space();
+    			div17 = element("div");
+    			figure7 = element("figure");
+    			div16 = element("div");
+    			t47 = space();
+    			p7 = element("p");
+    			p7.textContent = "Integra la 23.";
+    			t49 = space();
+    			div19 = element("div");
+    			figure8 = element("figure");
+    			div18 = element("div");
+    			t50 = space();
+    			p8 = element("p");
+    			p8.textContent = "Integra la 25.";
+    			t52 = space();
+    			div21 = element("div");
+    			figure9 = element("figure");
+    			div20 = element("div");
+    			t53 = space();
+    			p9 = element("p");
+    			p9.textContent = "Integra la 8.";
+    			t55 = space();
+    			div23 = element("div");
+    			figure10 = element("figure");
+    			div22 = element("div");
+    			t56 = space();
+    			p10 = element("p");
+    			p10.textContent = "Integra la 6.";
+    			t58 = space();
+    			div25 = element("div");
+    			figure11 = element("figure");
+    			div24 = element("div");
+    			t59 = space();
+    			p11 = element("p");
+    			p11.textContent = "Integración con la una API externa que proporciona el área (en kilómetros cuadrados) de los países.";
+    			t61 = space();
+    			div27 = element("div");
+    			figure12 = element("figure");
+    			div26 = element("div");
+    			t62 = space();
+    			p12 = element("p");
+    			p12.textContent = "Integración con la una API externa que proporciona la moneda utilizada de los países.";
+    			t64 = space();
+    			p13 = element("p");
+    			t65 = space();
     			create_component(button.$$.fragment);
     			attr_dev(a0, "class", "list-group-item list-group-item-action active");
     			attr_dev(a0, "id", "list-home-list");
@@ -20884,148 +21054,257 @@ var app = (function () {
     			attr_dev(a0, "href", "#list-7");
     			attr_dev(a0, "role", "tab");
     			attr_dev(a0, "aria-controls", "home");
-    			add_location(a0, file$r, 588, 12, 21679);
+    			add_location(a0, file$r, 1896, 12, 70876);
     			attr_dev(a1, "class", "list-group-item list-group-item-action");
     			attr_dev(a1, "id", "list-profile-list");
     			attr_dev(a1, "data-toggle", "list");
     			attr_dev(a1, "href", "#list-27");
     			attr_dev(a1, "role", "tab");
     			attr_dev(a1, "aria-controls", "profile");
-    			add_location(a1, file$r, 589, 12, 21857);
+    			add_location(a1, file$r, 1897, 12, 71054);
     			attr_dev(a2, "class", "list-group-item list-group-item-action");
     			attr_dev(a2, "id", "list-profile-list");
     			attr_dev(a2, "data-toggle", "list");
     			attr_dev(a2, "href", "#list-5");
     			attr_dev(a2, "role", "tab");
     			attr_dev(a2, "aria-controls", "profile");
-    			add_location(a2, file$r, 590, 12, 22036);
+    			add_location(a2, file$r, 1898, 12, 71233);
     			attr_dev(a3, "class", "list-group-item list-group-item-action");
     			attr_dev(a3, "id", "list-profile-list");
     			attr_dev(a3, "data-toggle", "list");
     			attr_dev(a3, "href", "#list-4");
     			attr_dev(a3, "role", "tab");
     			attr_dev(a3, "aria-controls", "profile");
-    			add_location(a3, file$r, 591, 12, 22213);
+    			add_location(a3, file$r, 1899, 12, 71410);
     			attr_dev(a4, "class", "list-group-item list-group-item-action");
     			attr_dev(a4, "id", "list-profile-list");
     			attr_dev(a4, "data-toggle", "list");
     			attr_dev(a4, "href", "#list-22");
     			attr_dev(a4, "role", "tab");
     			attr_dev(a4, "aria-controls", "profile");
-    			add_location(a4, file$r, 592, 12, 22390);
+    			add_location(a4, file$r, 1900, 12, 71587);
     			attr_dev(a5, "class", "list-group-item list-group-item-action");
     			attr_dev(a5, "id", "list-profile-list");
     			attr_dev(a5, "data-toggle", "list");
-    			attr_dev(a5, "href", "#list-28");
+    			attr_dev(a5, "href", "#list-1");
     			attr_dev(a5, "role", "tab");
     			attr_dev(a5, "aria-controls", "profile");
-    			add_location(a5, file$r, 593, 12, 22569);
+    			add_location(a5, file$r, 1901, 12, 71766);
     			attr_dev(a6, "class", "list-group-item list-group-item-action");
     			attr_dev(a6, "id", "list-profile-list");
     			attr_dev(a6, "data-toggle", "list");
-    			attr_dev(a6, "href", "#list-ext");
+    			attr_dev(a6, "href", "#list-30");
     			attr_dev(a6, "role", "tab");
     			attr_dev(a6, "aria-controls", "profile");
-    			add_location(a6, file$r, 594, 12, 22748);
+    			add_location(a6, file$r, 1902, 12, 71944);
+    			attr_dev(a7, "class", "list-group-item list-group-item-action");
+    			attr_dev(a7, "id", "list-profile-list");
+    			attr_dev(a7, "data-toggle", "list");
+    			attr_dev(a7, "href", "#list-23");
+    			attr_dev(a7, "role", "tab");
+    			attr_dev(a7, "aria-controls", "profile");
+    			add_location(a7, file$r, 1903, 12, 72124);
+    			attr_dev(a8, "class", "list-group-item list-group-item-action");
+    			attr_dev(a8, "id", "list-profile-list");
+    			attr_dev(a8, "data-toggle", "list");
+    			attr_dev(a8, "href", "#list-25");
+    			attr_dev(a8, "role", "tab");
+    			attr_dev(a8, "aria-controls", "profile");
+    			add_location(a8, file$r, 1904, 12, 72304);
+    			attr_dev(a9, "class", "list-group-item list-group-item-action");
+    			attr_dev(a9, "id", "list-profile-list");
+    			attr_dev(a9, "data-toggle", "list");
+    			attr_dev(a9, "href", "#list-8");
+    			attr_dev(a9, "role", "tab");
+    			attr_dev(a9, "aria-controls", "profile");
+    			add_location(a9, file$r, 1905, 12, 72484);
+    			attr_dev(a10, "class", "list-group-item list-group-item-action");
+    			attr_dev(a10, "id", "list-profile-list");
+    			attr_dev(a10, "data-toggle", "list");
+    			attr_dev(a10, "href", "#list-6");
+    			attr_dev(a10, "role", "tab");
+    			attr_dev(a10, "aria-controls", "profile");
+    			add_location(a10, file$r, 1906, 12, 72662);
+    			attr_dev(a11, "class", "list-group-item list-group-item-action");
+    			attr_dev(a11, "id", "list-profile-list");
+    			attr_dev(a11, "data-toggle", "list");
+    			attr_dev(a11, "href", "#list-ext1");
+    			attr_dev(a11, "role", "tab");
+    			attr_dev(a11, "aria-controls", "profile");
+    			add_location(a11, file$r, 1910, 12, 72845);
+    			attr_dev(a12, "class", "list-group-item list-group-item-action");
+    			attr_dev(a12, "id", "list-profile-list");
+    			attr_dev(a12, "data-toggle", "list");
+    			attr_dev(a12, "href", "#list-ext2");
+    			attr_dev(a12, "role", "tab");
+    			attr_dev(a12, "aria-controls", "profile");
+    			add_location(a12, file$r, 1911, 12, 73038);
     			attr_dev(div0, "class", "list-group");
     			attr_dev(div0, "id", "list-tab");
     			attr_dev(div0, "role", "tablist");
-    			add_location(div0, file$r, 587, 10, 21612);
+    			add_location(div0, file$r, 1895, 10, 70809);
     			attr_dev(div1, "class", "col-4");
-    			add_location(div1, file$r, 586, 8, 21581);
+    			add_location(div1, file$r, 1894, 8, 70778);
     			attr_dev(div2, "id", "container-7");
-    			add_location(div2, file$r, 602, 20, 23231);
+    			add_location(div2, file$r, 1919, 20, 73525);
     			attr_dev(p0, "class", "highcharts-description");
-    			add_location(p0, file$r, 603, 20, 23281);
+    			add_location(p0, file$r, 1920, 20, 73575);
     			attr_dev(figure0, "class", "highcharts-figure");
-    			add_location(figure0, file$r, 601, 16, 23175);
+    			add_location(figure0, file$r, 1918, 16, 73469);
     			attr_dev(div3, "class", "tab-pane fade show active");
     			attr_dev(div3, "id", "list-7");
     			attr_dev(div3, "role", "tabpanel");
     			attr_dev(div3, "aria-labelledby", "list-home-list");
-    			add_location(div3, file$r, 600, 12, 23057);
+    			add_location(div3, file$r, 1917, 12, 73351);
     			attr_dev(div4, "id", "container-27");
-    			add_location(div4, file$r, 610, 20, 23699);
+    			add_location(div4, file$r, 1927, 20, 73993);
     			attr_dev(p1, "class", "highcharts-description");
-    			add_location(p1, file$r, 611, 20, 23750);
+    			add_location(p1, file$r, 1928, 20, 74044);
     			attr_dev(figure1, "class", "highcharts-figure");
-    			add_location(figure1, file$r, 609, 16, 23643);
+    			add_location(figure1, file$r, 1926, 16, 73937);
     			attr_dev(div5, "class", "tab-pane fade");
     			attr_dev(div5, "id", "list-27");
     			attr_dev(div5, "role", "tabpanel");
     			attr_dev(div5, "aria-labelledby", "list-profile-list");
-    			add_location(div5, file$r, 608, 12, 23533);
+    			add_location(div5, file$r, 1925, 12, 73827);
     			attr_dev(div6, "id", "container-5");
-    			add_location(div6, file$r, 618, 20, 24076);
+    			add_location(div6, file$r, 1935, 20, 74370);
     			attr_dev(p2, "class", "highcharts-description");
-    			add_location(p2, file$r, 619, 20, 24126);
+    			add_location(p2, file$r, 1936, 20, 74420);
     			attr_dev(figure2, "class", "highcharts-figure");
-    			add_location(figure2, file$r, 617, 16, 24020);
+    			add_location(figure2, file$r, 1934, 16, 74314);
     			attr_dev(div7, "class", "tab-pane fade");
     			attr_dev(div7, "id", "list-5");
     			attr_dev(div7, "role", "tabpanel");
     			attr_dev(div7, "aria-labelledby", "list-profile-list");
-    			add_location(div7, file$r, 616, 12, 23911);
+    			add_location(div7, file$r, 1933, 12, 74205);
     			attr_dev(div8, "id", "container-4");
-    			add_location(div8, file$r, 626, 20, 24451);
+    			add_location(div8, file$r, 1943, 20, 74745);
     			attr_dev(p3, "class", "highcharts-description");
-    			add_location(p3, file$r, 627, 20, 24501);
+    			add_location(p3, file$r, 1944, 20, 74795);
     			attr_dev(figure3, "class", "highcharts-figure");
-    			add_location(figure3, file$r, 625, 16, 24395);
+    			add_location(figure3, file$r, 1942, 16, 74689);
     			attr_dev(div9, "class", "tab-pane fade");
     			attr_dev(div9, "id", "list-4");
     			attr_dev(div9, "role", "tabpanel");
     			attr_dev(div9, "aria-labelledby", "list-profile-list");
-    			add_location(div9, file$r, 624, 12, 24286);
+    			add_location(div9, file$r, 1941, 12, 74580);
     			attr_dev(div10, "id", "container-22");
-    			add_location(div10, file$r, 634, 20, 24827);
+    			add_location(div10, file$r, 1951, 20, 75121);
     			attr_dev(p4, "class", "highcharts-description");
-    			add_location(p4, file$r, 635, 20, 24878);
+    			add_location(p4, file$r, 1952, 20, 75172);
     			attr_dev(figure4, "class", "highcharts-figure");
-    			add_location(figure4, file$r, 633, 16, 24771);
+    			add_location(figure4, file$r, 1950, 16, 75065);
     			attr_dev(div11, "class", "tab-pane fade");
     			attr_dev(div11, "id", "list-22");
     			attr_dev(div11, "role", "tabpanel");
     			attr_dev(div11, "aria-labelledby", "list-profile-list");
-    			add_location(div11, file$r, 632, 12, 24661);
-    			attr_dev(div12, "id", "container-28");
-    			add_location(div12, file$r, 642, 20, 25205);
+    			add_location(div11, file$r, 1949, 12, 74955);
+    			attr_dev(div12, "id", "container-1");
+    			add_location(div12, file$r, 1959, 20, 75498);
     			attr_dev(p5, "class", "highcharts-description");
-    			add_location(p5, file$r, 643, 20, 25256);
+    			add_location(p5, file$r, 1960, 20, 75548);
     			attr_dev(figure5, "class", "highcharts-figure");
-    			add_location(figure5, file$r, 641, 16, 25149);
+    			add_location(figure5, file$r, 1958, 16, 75442);
     			attr_dev(div13, "class", "tab-pane fade");
-    			attr_dev(div13, "id", "list-28");
+    			attr_dev(div13, "id", "list-1");
     			attr_dev(div13, "role", "tabpanel");
     			attr_dev(div13, "aria-labelledby", "list-profile-list");
-    			add_location(div13, file$r, 640, 12, 25039);
-    			attr_dev(div14, "id", "container-ext");
-    			add_location(div14, file$r, 650, 20, 25584);
+    			add_location(div13, file$r, 1957, 12, 75333);
+    			attr_dev(div14, "id", "container-30");
+    			add_location(div14, file$r, 1967, 20, 75874);
     			attr_dev(p6, "class", "highcharts-description");
-    			add_location(p6, file$r, 651, 20, 25636);
+    			add_location(p6, file$r, 1968, 20, 75925);
     			attr_dev(figure6, "class", "highcharts-figure");
-    			add_location(figure6, file$r, 649, 16, 25528);
+    			add_location(figure6, file$r, 1966, 16, 75818);
     			attr_dev(div15, "class", "tab-pane fade");
-    			attr_dev(div15, "id", "list-ext");
+    			attr_dev(div15, "id", "list-30");
     			attr_dev(div15, "role", "tabpanel");
     			attr_dev(div15, "aria-labelledby", "list-profile-list");
-    			add_location(div15, file$r, 648, 12, 25417);
-    			attr_dev(div16, "class", "tab-content");
-    			attr_dev(div16, "id", "nav-tabContent");
-    			add_location(div16, file$r, 599, 10, 22998);
-    			attr_dev(div17, "class", "col-8");
-    			add_location(div17, file$r, 598, 8, 22967);
-    			attr_dev(div18, "class", "row");
-    			add_location(div18, file$r, 585, 4, 21554);
-    			add_location(main, file$r, 584, 0, 21542);
+    			add_location(div15, file$r, 1965, 12, 75708);
+    			attr_dev(div16, "id", "container-23");
+    			add_location(div16, file$r, 1975, 20, 76252);
+    			attr_dev(p7, "class", "highcharts-description");
+    			add_location(p7, file$r, 1976, 20, 76303);
+    			attr_dev(figure7, "class", "highcharts-figure");
+    			add_location(figure7, file$r, 1974, 16, 76196);
+    			attr_dev(div17, "class", "tab-pane fade");
+    			attr_dev(div17, "id", "list-23");
+    			attr_dev(div17, "role", "tabpanel");
+    			attr_dev(div17, "aria-labelledby", "list-profile-list");
+    			add_location(div17, file$r, 1973, 12, 76086);
+    			attr_dev(div18, "id", "container-25");
+    			add_location(div18, file$r, 1983, 20, 76630);
+    			attr_dev(p8, "class", "highcharts-description");
+    			add_location(p8, file$r, 1984, 20, 76681);
+    			attr_dev(figure8, "class", "highcharts-figure");
+    			add_location(figure8, file$r, 1982, 16, 76574);
+    			attr_dev(div19, "class", "tab-pane fade");
+    			attr_dev(div19, "id", "list-25");
+    			attr_dev(div19, "role", "tabpanel");
+    			attr_dev(div19, "aria-labelledby", "list-profile-list");
+    			add_location(div19, file$r, 1981, 12, 76464);
+    			attr_dev(div20, "id", "container-8");
+    			add_location(div20, file$r, 1991, 20, 77007);
+    			attr_dev(p9, "class", "highcharts-description");
+    			add_location(p9, file$r, 1992, 20, 77057);
+    			attr_dev(figure9, "class", "highcharts-figure");
+    			add_location(figure9, file$r, 1990, 16, 76951);
+    			attr_dev(div21, "class", "tab-pane fade");
+    			attr_dev(div21, "id", "list-8");
+    			attr_dev(div21, "role", "tabpanel");
+    			attr_dev(div21, "aria-labelledby", "list-profile-list");
+    			add_location(div21, file$r, 1989, 12, 76842);
+    			attr_dev(div22, "id", "container-6");
+    			add_location(div22, file$r, 1999, 20, 77382);
+    			attr_dev(p10, "class", "highcharts-description");
+    			add_location(p10, file$r, 2000, 20, 77432);
+    			attr_dev(figure10, "class", "highcharts-figure");
+    			add_location(figure10, file$r, 1998, 16, 77326);
+    			attr_dev(div23, "class", "tab-pane fade");
+    			attr_dev(div23, "id", "list-6");
+    			attr_dev(div23, "role", "tabpanel");
+    			attr_dev(div23, "aria-labelledby", "list-profile-list");
+    			add_location(div23, file$r, 1997, 12, 77217);
+    			attr_dev(div24, "id", "container-ext1");
+    			add_location(div24, file$r, 2008, 20, 77774);
+    			attr_dev(p11, "class", "highcharts-description");
+    			add_location(p11, file$r, 2009, 20, 77827);
+    			attr_dev(figure11, "class", "highcharts-figure");
+    			add_location(figure11, file$r, 2007, 16, 77718);
+    			attr_dev(div25, "class", "tab-pane fade");
+    			attr_dev(div25, "id", "list-ext1");
+    			attr_dev(div25, "role", "tabpanel");
+    			attr_dev(div25, "aria-labelledby", "list-profile-list");
+    			add_location(div25, file$r, 2006, 12, 77606);
+    			attr_dev(div26, "id", "container-ext2");
+    			add_location(div26, file$r, 2017, 20, 78267);
+    			attr_dev(p12, "class", "highcharts-description");
+    			add_location(p12, file$r, 2018, 20, 78320);
+    			attr_dev(figure12, "class", "highcharts-figure");
+    			add_location(figure12, file$r, 2016, 16, 78211);
+    			attr_dev(div27, "class", "tab-pane fade");
+    			attr_dev(div27, "id", "list-ext2");
+    			attr_dev(div27, "role", "tabpanel");
+    			attr_dev(div27, "aria-labelledby", "list-profile-list");
+    			add_location(div27, file$r, 2015, 12, 78099);
+    			attr_dev(div28, "class", "tab-content");
+    			attr_dev(div28, "id", "nav-tabContent");
+    			add_location(div28, file$r, 1916, 10, 73292);
+    			attr_dev(div29, "class", "col-8");
+    			add_location(div29, file$r, 1915, 8, 73261);
+    			attr_dev(div30, "class", "row");
+    			add_location(div30, file$r, 1893, 4, 70751);
+    			add_location(p13, file$r, 2027, 6, 78620);
+    			add_location(main, file$r, 1892, 0, 70739);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
-    			append_dev(main, div18);
-    			append_dev(div18, div1);
+    			append_dev(main, div30);
+    			append_dev(div30, div1);
     			append_dev(div1, div0);
     			append_dev(div0, a0);
     			append_dev(div0, t1);
@@ -21040,51 +21319,101 @@ var app = (function () {
     			append_dev(div0, a5);
     			append_dev(div0, t11);
     			append_dev(div0, a6);
-    			append_dev(div18, t13);
-    			append_dev(div18, div17);
-    			append_dev(div17, div16);
-    			append_dev(div16, div3);
+    			append_dev(div0, t13);
+    			append_dev(div0, a7);
+    			append_dev(div0, t15);
+    			append_dev(div0, a8);
+    			append_dev(div0, t17);
+    			append_dev(div0, a9);
+    			append_dev(div0, t19);
+    			append_dev(div0, a10);
+    			append_dev(div0, t21);
+    			append_dev(div0, a11);
+    			append_dev(div0, t23);
+    			append_dev(div0, a12);
+    			append_dev(div30, t25);
+    			append_dev(div30, div29);
+    			append_dev(div29, div28);
+    			append_dev(div28, div3);
     			append_dev(div3, figure0);
     			append_dev(figure0, div2);
-    			append_dev(figure0, t14);
+    			append_dev(figure0, t26);
     			append_dev(figure0, p0);
-    			append_dev(div16, t16);
-    			append_dev(div16, div5);
+    			append_dev(div28, t28);
+    			append_dev(div28, div5);
     			append_dev(div5, figure1);
     			append_dev(figure1, div4);
-    			append_dev(figure1, t17);
+    			append_dev(figure1, t29);
     			append_dev(figure1, p1);
-    			append_dev(div16, t19);
-    			append_dev(div16, div7);
+    			append_dev(div28, t31);
+    			append_dev(div28, div7);
     			append_dev(div7, figure2);
     			append_dev(figure2, div6);
-    			append_dev(figure2, t20);
+    			append_dev(figure2, t32);
     			append_dev(figure2, p2);
-    			append_dev(div16, t22);
-    			append_dev(div16, div9);
+    			append_dev(div28, t34);
+    			append_dev(div28, div9);
     			append_dev(div9, figure3);
     			append_dev(figure3, div8);
-    			append_dev(figure3, t23);
+    			append_dev(figure3, t35);
     			append_dev(figure3, p3);
-    			append_dev(div16, t25);
-    			append_dev(div16, div11);
+    			append_dev(div28, t37);
+    			append_dev(div28, div11);
     			append_dev(div11, figure4);
     			append_dev(figure4, div10);
-    			append_dev(figure4, t26);
+    			append_dev(figure4, t38);
     			append_dev(figure4, p4);
-    			append_dev(div16, t28);
-    			append_dev(div16, div13);
+    			append_dev(div28, t40);
+    			append_dev(div28, div13);
     			append_dev(div13, figure5);
     			append_dev(figure5, div12);
-    			append_dev(figure5, t29);
+    			append_dev(figure5, t41);
     			append_dev(figure5, p5);
-    			append_dev(div16, t31);
-    			append_dev(div16, div15);
+    			append_dev(div28, t43);
+    			append_dev(div28, div15);
     			append_dev(div15, figure6);
     			append_dev(figure6, div14);
-    			append_dev(figure6, t32);
+    			append_dev(figure6, t44);
     			append_dev(figure6, p6);
-    			append_dev(main, t34);
+    			append_dev(div28, t46);
+    			append_dev(div28, div17);
+    			append_dev(div17, figure7);
+    			append_dev(figure7, div16);
+    			append_dev(figure7, t47);
+    			append_dev(figure7, p7);
+    			append_dev(div28, t49);
+    			append_dev(div28, div19);
+    			append_dev(div19, figure8);
+    			append_dev(figure8, div18);
+    			append_dev(figure8, t50);
+    			append_dev(figure8, p8);
+    			append_dev(div28, t52);
+    			append_dev(div28, div21);
+    			append_dev(div21, figure9);
+    			append_dev(figure9, div20);
+    			append_dev(figure9, t53);
+    			append_dev(figure9, p9);
+    			append_dev(div28, t55);
+    			append_dev(div28, div23);
+    			append_dev(div23, figure10);
+    			append_dev(figure10, div22);
+    			append_dev(figure10, t56);
+    			append_dev(figure10, p10);
+    			append_dev(div28, t58);
+    			append_dev(div28, div25);
+    			append_dev(div25, figure11);
+    			append_dev(figure11, div24);
+    			append_dev(figure11, t59);
+    			append_dev(figure11, p11);
+    			append_dev(div28, t61);
+    			append_dev(div28, div27);
+    			append_dev(div27, figure12);
+    			append_dev(figure12, div26);
+    			append_dev(figure12, t62);
+    			append_dev(figure12, p12);
+    			append_dev(main, t64);
+    			append_dev(main, p13);
+    			append_dev(main, t65);
     			mount_component(button, main, null);
     			current = true;
     		},
@@ -21294,8 +21623,9 @@ var app = (function () {
     The first 0 is the index of "Country" in the array of countries
 
     */
+    	/* In the filter we put Spain to get only the Spain data and the years that are present in both APIs */
     	MyData = MyData.filter(d => {
-    		return d.country == "Spain";
+    		return d.country == "Spain" && Data4.find(d4 => d4.year == d.year);
     	}).map(d => {
     		return [
     			countries.indexOf(d.country),
@@ -21306,13 +21636,20 @@ var app = (function () {
     		];
     	});
 
+    	let ModifiedData = [];
+
     	for (let i = 0; i < MyData.length; i++) {
-    		let dataMatchesYear = Data4.find(d => d.year == MyData[i][1]);
-
-    		/* The first parameter of splice is the position and the second the numbers of elements to delete */
-    		MyData[i].splice(1, 0, provinces.indexOf(dataMatchesYear.province));
-
-    		MyData[i].push(dataMatchesYear["car"]);
+    		Data4.filter(d => d.year == MyData[i][1]).forEach(dataMatchesYear => {
+    			ModifiedData.push([
+    				MyData[i][0],
+    				provinces.indexOf(dataMatchesYear.province),
+    				MyData[i][1],
+    				MyData[i][2],
+    				MyData[i][3],
+    				MyData[i][4],
+    				dataMatchesYear["car"]
+    			]);
+    		});
     	}
 
     	/* 
@@ -21523,22 +21860,22 @@ var app = (function () {
     	});
     }
 
-    async function loadGraphExt() {
-    	console.log("Loading external api");
+    async function loadGraph5() {
+    	console.log("Loading 5");
 
     	/* Asking for the data to the back */
     	const BASE_API_URL = "/api/v4/renewable-sources-stats";
 
-    	const BASE_API_URL_EXT = "https://restcountries.eu/rest/v2/all?fields=name;capital;area";
+    	const BASE_API_URL_5 = "/api/v1/books-exports";
     	const resData = await fetch(BASE_API_URL);
-    	const resDataExt = await fetch(BASE_API_URL_EXT);
+    	const resData5 = await fetch(BASE_API_URL_5);
     	let MyData = await resData.json();
-    	let DataExt = await resDataExt.json();
+    	let Data5 = await resData5.json();
 
     	/* Getting the countries */
     	/* Turning them into upper case because the integration needs it */
     	let countries = Array.from(new Set(MyData.map(d => {
-    			return d.country;
+    			return d.country.toLowerCase();
     		})));
 
     	/* Mapping the data in the right format */
@@ -21562,7 +21899,7 @@ var app = (function () {
     */
     	MyData = MyData.map(d => {
     		return [
-    			countries.indexOf(d.country),
+    			countries.indexOf(d.country.toLowerCase()),
     			d.year,
     			d["percentage-re-total"],
     			d["percentage-hydropower-total"],
@@ -21571,7 +21908,7 @@ var app = (function () {
     	});
 
     	MyData = MyData.filter(d => {
-    		return DataExt.find(dext => dext.name == countries[d[0]]);
+    		return Data5.find(d5 => d5.country == countries[d[0]] && parseInt(d5.year) == d[1]);
     	}).map(d => {
     		return [
     			d[0],
@@ -21579,7 +21916,7 @@ var app = (function () {
     			d[2],
     			d[3],
     			d[4],
-    			DataExt.find(dext => dext.name == countries[d[0]])["area"]
+    			Data5.find(d5 => d5.country == countries[d[0]] && parseInt(d5.year) == d[1])["exp_book"]
     		];
     	});
 
@@ -21601,13 +21938,15 @@ var app = (function () {
     	});
 
     	/* Setting the chart */
-    	Highcharts.chart("container-ext", {
+    	Highcharts.chart("container-5", {
     		chart: {
     			type: "spline",
     			parallelCoordinates: true,
     			parallelAxes: { lineWidth: 3 }
     		},
-    		title: { text: "Energías renovables y área" },
+    		title: {
+    			text: "Energías renovables y exportación de libros"
+    		},
     		plotOptions: {
     			series: {
     				animation: false,
@@ -21633,7 +21972,7 @@ var app = (function () {
     				"Porcentaje de uso de energías renovables",
     				"Porcentaje de uso de energías hidroeléctricas",
     				"Porcentaje de uso de energías eólica",
-    				"Área"
+    				"Exportación de libros"
     			],
     			offset: 10
     		},
@@ -21652,48 +21991,65 @@ var app = (function () {
     	});
     }
 
-    function instance$s($$self, $$props, $$invalidate) {
-    	loadGraph7();
-    	loadGraph4();
-    	loadGraph27();
-    	loadGraphExt();
-    	const writable_props = [];
+    async function loadGraph22() {
+    	console.log("Loading 22");
 
-    	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$a.warn(`<Integrations> was created with unknown prop '${key}'`);
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_22 = "https://sos1920-22.herokuapp.com/api/v2/formula-stats";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData22 = await fetch(BASE_API_URL_22);
+    	let MyData = await resData.json();
+    	let Data22 = await resData22.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country.toLowerCase();
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.map(d => {
+    		return [
+    			countries.indexOf(d.country.toLowerCase()),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
     	});
 
-    	let { $$slots = {}, $$scope } = $$props;
-    	validate_slots("Integrations", $$slots, []);
-
-    	$$self.$capture_state = () => ({
-    		Button,
-    		pop,
-    		loadGraph7,
-    		loadGraph4,
-    		loadGraph27,
-    		loadGraphExt
+    	MyData = MyData.filter(d => {
+    		return Data22.find(d22 => d22.country == countries[d[0]] && parseInt(d22.year) == d[1]);
+    	}).map(d => {
+    		return [
+    			d[0],
+    			d[1],
+    			d[2],
+    			d[3],
+    			d[4],
+    			Data22.find(d22 => d22.country == countries[d[0]] && parseInt(d22.year) == d[1])["victorynumber"]
+    		];
     	});
-
-    	return [];
-    }
-
-    class Integrations extends SvelteComponentDev {
-    	constructor(options) {
-    		super(options);
-    		init(this, options, instance$s, create_fragment$s, safe_not_equal, {});
-
-    		dispatch_dev("SvelteRegisterComponent", {
-    			component: this,
-    			tagName: "Integrations",
-    			options,
-    			id: create_fragment$s.name
-    		});
-    	}
-    }
-
-    /* src\front\oilCoalNuclearEnergyConsumptionAPI\Integrations.svelte generated by Svelte v3.20.1 */
-    const file$s = "src\\front\\oilCoalNuclearEnergyConsumptionAPI\\Integrations.svelte";
 
     // (295:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$f(ctx) {
@@ -21707,9 +22063,8 @@ var app = (function () {
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
     			add_location(i, file$s, 294, 56, 10172);
     		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, i, anchor);
-    			insert_dev(target, t, anchor);
+    		title: {
+    			text: "Energías renovables y victorias de fórmula 1"
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(i);
@@ -21800,9 +22155,2478 @@ var app = (function () {
     				$$slots: { default: [create_default_slot$f] },
     				$$scope: { ctx }
     			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraph6() {
+    	console.log("Loading 6");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_6 = "/api/v2/lottery-sales";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData6 = await fetch(BASE_API_URL_6);
+    	let MyData = await resData.json();
+    	let Data6 = await resData6.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country;
+    		})));
+
+    	let provinces = Array.from(new Set(Data6.map(d => {
+    			return d.province;
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.filter(d => {
+    		return d.country == "Spain" && Data6.find(d4 => d4.year == d.year);
+    	}).map(d => {
+    		return [
+    			countries.indexOf(d.country),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	let ModifiedData = [];
+
+    	for (let i = 0; i < MyData.length; i++) {
+    		Data6.filter(d => d.year == MyData[i][1]).forEach(dataMatchesYear => {
+    			ModifiedData.push([
+    				MyData[i][0],
+    				provinces.indexOf(dataMatchesYear.province),
+    				MyData[i][1],
+    				MyData[i][2],
+    				MyData[i][3],
+    				MyData[i][4],
+    				dataMatchesYear["total"]
+    			]);
+    		});
+    	}
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = ModifiedData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-6", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: {
+    			text: "Energías renovables y número de coches"
+    		},
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Provincias",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Número de loterías vendidas"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{
+    				categories: provinces,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraph1() {
+    	console.log("Loading 1");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_1 = "/api/v2/natality-stats";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData1 = await fetch(BASE_API_URL_1);
+    	let MyData = await resData.json();
+    	let Data1 = await resData1.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country.toLowerCase();
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.map(d => {
+    		return [
+    			countries.indexOf(d.country.toLowerCase()),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	MyData = MyData.filter(d => {
+    		return Data1.find(d1 => d1.country == countries[d[0]] && parseInt(d1.year) == d[1]);
+    	}).map(d => {
+    		return [
+    			d[0],
+    			d[1],
+    			d[2],
+    			d[3],
+    			d[4],
+    			Data1.find(d1 => d1.country == countries[d[0]] && parseInt(d1.year) == d[1])["natality_totals"]
+    		];
+    	});
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MyData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-1", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: { text: "Energías renovables y natalidad" },
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Número de nacimientos"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraph30() {
+    	console.log("Loading 30");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_30 = "https://sos1920-30.herokuapp.com/api/v3/sugarconsume";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData30 = await fetch(BASE_API_URL_30);
+    	let MyData = await resData.json();
+    	let Data30 = await resData30.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let years = Array.from(new Set(MyData.map(d => {
+    			return d.year;
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	let MeanData = [];
+
+    	years.filter(y => {
+    		return Data30.find(d30 => d30.year == y);
+    	}).forEach(y => {
+    		let totalSugar = Data30.filter(d => {
+    			return d.year == y;
+    		}).map(d => {
+    			return d["sugarconsume"];
+    		}).reduce((accumulator, currentValue) => accumulator + currentValue);
+
+    		let reAverrage = MyData.filter(d => {
+    			return d.year == y;
+    		}).map(d => {
+    			return d["percentage-re-total"];
+    		}).reduce((accumulator, currentValue) => accumulator + currentValue) / MyData.filter(d => {
+    			return d.year == y;
+    		}).length;
+
+    		let hydropowerAverrage = MyData.filter(d => {
+    			return d.year == y;
+    		}).map(d => {
+    			return d["percentage-hydropower-total"];
+    		}).reduce((accumulator, currentValue) => accumulator + currentValue) / MyData.filter(d => {
+    			return d.year == y;
+    		}).length;
+
+    		let windAverrage = MyData.filter(d => {
+    			return d.year == y;
+    		}).map(d => {
+    			return d["percentage-wind-power-total"];
+    		}).reduce((accumulator, currentValue) => accumulator + currentValue) / MyData.filter(d => {
+    			return d.year == y;
+    		}).length;
+
+    		MeanData.push([y, reAverrage, hydropowerAverrage, windAverrage, totalSugar]);
+    	});
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MeanData.map(function (set, i) {
+    		return { name: set[0], data: set, shadow: false };
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-30", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: {
+    			text: "Energías renovables y azúcar consumido"
+    		},
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Kilos de azúcar consumidos"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			,{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraph23() {
+    	console.log("Loading 23");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_23 = "/api/v2/cigarretes-sales";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData23 = await fetch(BASE_API_URL_23);
+    	let MyData = await resData.json();
+    	let Data23 = await resData23.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country;
+    		})));
+
+    	let provinces = Array.from(new Set(Data23.map(d => {
+    			return d.community;
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.filter(d => {
+    		return d.country == "Spain" && Data23.find(d4 => d4.year == d.year);
+    	}).map(d => {
+    		return [
+    			countries.indexOf(d.country),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	let ModifiedData = [];
+
+    	for (let i = 0; i < MyData.length; i++) {
+    		Data23.filter(d => d.year == MyData[i][1]).forEach(dataMatchesYear => {
+    			ModifiedData.push([
+    				MyData[i][0],
+    				provinces.indexOf(dataMatchesYear.community),
+    				MyData[i][1],
+    				MyData[i][2],
+    				MyData[i][3],
+    				MyData[i][4],
+    				dataMatchesYear["cigarrete_sale"]
+    			]);
+    		});
+    	}
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = ModifiedData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-23", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: { text: "Energías renovables y tabaco" },
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Provincias",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Ventas de cigarrillos de tabaco"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{
+    				categories: provinces,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraph25() {
+    	console.log("Loading 25");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_25 = "/api/v2/happiness_rate";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData25 = await fetch(BASE_API_URL_25);
+    	let MyData = await resData.json();
+    	let Data25 = await resData25.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country.toLowerCase();
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.map(d => {
+    		return [
+    			countries.indexOf(d.country.toLowerCase()),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	MyData = MyData.filter(d => {
+    		return Data25.find(d25 => d25.country.toLowerCase() == countries[d[0]] && parseInt(d25.year) == d[1]);
+    	}).map(d => {
+    		return [
+    			d[0],
+    			d[1],
+    			d[2],
+    			d[3],
+    			d[4],
+    			Data25.find(d25 => d25.country.toLowerCase() == countries[d[0]] && parseInt(d25.year) == d[1])["happinessRanking"]
+    		];
+    	});
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MyData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-25", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: {
+    			text: "Energías renovables y nivel de felicidad"
+    		},
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Ranking en felicidad"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraph8() {
+    	console.log("Loading 8");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_8 = "/api/v1/motogp-statistics";
+    	const resData = await fetch(BASE_API_URL);
+    	const resData8 = await fetch(BASE_API_URL_8);
+    	let MyData = await resData.json();
+    	let Data8 = await resData8.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country;
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.map(d => {
+    		return [
+    			countries.indexOf(d.country),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	MyData = MyData.filter(d => {
+    		return Data8.find(d8 => d8.country == countries[d[0]]);
+    	}).map(d => {
+    		return [
+    			d[0],
+    			d[1],
+    			d[2],
+    			d[3],
+    			d[4],
+    			Data8.find(d8 => d8.country == countries[d[0]])["world_title"]
+    		];
+    	});
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MyData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-8", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: { text: "Energías renovables y motoGP" },
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Títulos mundiales"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraphExt1() {
+    	console.log("Loading external api");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_EXT = "https://restcountries.eu/rest/v2/all?fields=name;capital;area";
+    	const resData = await fetch(BASE_API_URL);
+    	const resDataExt = await fetch(BASE_API_URL_EXT);
+    	let MyData = await resData.json();
+    	let DataExt = await resDataExt.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country;
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.map(d => {
+    		return [
+    			countries.indexOf(d.country),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	MyData = MyData.filter(d => {
+    		return DataExt.find(dext => dext.name == countries[d[0]]);
+    	}).map(d => {
+    		return [
+    			d[0],
+    			d[1],
+    			d[2],
+    			d[3],
+    			d[4],
+    			DataExt.find(dext => dext.name == countries[d[0]])["area"]
+    		];
+    	});
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MyData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-ext1", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: { text: "Energías renovables y área" },
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Área"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value}" }
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    async function loadGraphExt2() {
+    	console.log("Loading external api");
+
+    	/* Asking for the data to the back */
+    	const BASE_API_URL = "/api/v4/renewable-sources-stats";
+
+    	const BASE_API_URL_EXT = "/v1/Country/getCountries";
+    	const resData = await fetch(BASE_API_URL);
+    	const resDataExt = await fetch(BASE_API_URL_EXT);
+    	let MyData = await resData.json();
+    	let DataExt = await resDataExt.json();
+
+    	/* Getting the countries */
+    	/* Turning them into upper case because the integration needs it */
+    	let countries = Array.from(new Set(MyData.map(d => {
+    			return d.country;
+    		})));
+
+    	let currencies = Array.from(new Set(DataExt.Response.map(d => {
+    			return d["CurrencyName"];
+    		})));
+
+    	/* Mapping the data in the right format */
+    	/* The country must be an index of the array of countries */
+    	/*  
+    Turning this:
+        
+    {
+        "country": "COUNTRY",
+        "year": 2000,
+        "percentage-re-total": 0.0,
+        "percentage-hydropower-total": 0.0,
+        "percentage-wind-power-total": 0.0
+    }
+        
+    into this:
+        
+    [0, 2000, 0.0, 0.0, 0.0]
+    The first 0 is the index of "Country" in the array of countries
+
+    */
+    	MyData = MyData.map(d => {
+    		return [
+    			countries.indexOf(d.country),
+    			d.year,
+    			d["percentage-re-total"],
+    			d["percentage-hydropower-total"],
+    			d["percentage-wind-power-total"]
+    		];
+    	});
+
+    	MyData = MyData.filter(d => {
+    		return DataExt.Response.find(dext => dext.Name == countries[d[0]]);
+    	}).map(d => {
+    		return [
+    			d[0],
+    			d[1],
+    			d[2],
+    			d[3],
+    			d[4],
+    			currencies.indexOf(DataExt.Response.find(dext => dext.Name == countries[d[0]])["CurrencyName"])
+    		];
+    	});
+
+    	/* 
+    The following array turn this:
+    [0, 2000, 0.0, 0.0, 0.0]
+        
+    into this:
+        
+    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+    That is how the chart needs it
+     */
+    	let ChartData = MyData.map(function (set, i) {
+    		return {
+    			name: countries[set[0]],
+    			data: set,
+    			shadow: false
+    		};
+    	});
+
+    	/* Setting the chart */
+    	Highcharts.chart("container-ext2", {
+    		chart: {
+    			type: "spline",
+    			parallelCoordinates: true,
+    			parallelAxes: { lineWidth: 3 }
+    		},
+    		title: { text: "Energías renovables y monedas" },
+    		plotOptions: {
+    			series: {
+    				animation: false,
+    				marker: {
+    					enabled: false,
+    					states: { hover: { enabled: false } }
+    				},
+    				states: { hover: { halo: { size: 0 } } },
+    				events: {
+    					mouseOver() {
+    						this.group.toFront();
+    					}
+    				}
+    			}
+    		},
+    		tooltip: {
+    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
+    		},
+    		xAxis: {
+    			categories: [
+    				"País",
+    				"Año",
+    				"Porcentaje de uso de energías renovables",
+    				"Porcentaje de uso de energías hidroeléctricas",
+    				"Porcentaje de uso de energías eólica",
+    				"Moneda"
+    			],
+    			offset: 10
+    		},
+    		yAxis: [
+    			{
+    				categories: countries,
+    				tooltipValueFormat: "{value}"
+    			},
+    			{ min: 2000, tooltipValueFormat: "{value}" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{ min: 0, tooltipValueFormat: "{value} %" },
+    			{
+    				categories: currencies,
+    				tooltipValueFormat: "{value}"
+    			}
+    		],
+    		colors: ["rgba(129, 131, 202, 0.8)"],
+    		series: ChartData
+    	});
+    }
+
+    function instance$s($$self, $$props, $$invalidate) {
+    	loadGraph7();
+    	loadGraph4();
+    	loadGraph27();
+    	loadGraph5(); // [proxy] bookexports
+    	loadGraph22();
+    	loadGraph6(); // [proxy] lottery
+    	loadGraph1(); // [proxy] natality
+    	loadGraph30();
+    	loadGraph23(); // [proxy] cigarettes
+    	loadGraph25(); // [proxy] happiness rate
+    	loadGraph8(); // [proxy] motogp
+    	loadGraphExt1();
+    	loadGraphExt2();
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$a.warn(`<Integrations> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("Integrations", $$slots, []);
+
+    	$$self.$capture_state = () => ({
+    		Button,
+    		pop,
+    		loadGraph7,
+    		loadGraph4,
+    		loadGraph27,
+    		loadGraph5,
+    		loadGraph22,
+    		loadGraph6,
+    		loadGraph1,
+    		loadGraph30,
+    		loadGraph23,
+    		loadGraph25,
+    		loadGraph8,
+    		loadGraphExt1,
+    		loadGraphExt2
+    	});
+
+    	return [];
+    }
+
+    class Integrations extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$s, create_fragment$s, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Integrations",
+    			options,
+    			id: create_fragment$s.name
+    		});
+    	}
+    }
+
+    /* src\front\oilCoalNuclearEnergyConsumptionAPI\Integrations.svelte generated by Svelte v3.20.1 */
+    const file$s = "src\\front\\oilCoalNuclearEnergyConsumptionAPI\\Integrations.svelte";
+
+    // (61:4) <Button outline color="secondary" on:click="{pop}">
+    function create_default_slot$f(ctx) {
+    	let i;
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			i = element("i");
+    			t = text(" Atrás");
+    			attr_dev(i, "class", "fas fa-arrow-circle-left");
+    			add_location(i, file$s, 60, 56, 2356);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$f.name,
+    		type: "slot",
+    		source: "(61:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$t(ctx) {
+    	let body;
+    	let div1;
+    	let button0;
+    	let t1;
+    	let div0;
+    	let t2;
+    	let script;
+    	let t4;
+    	let main;
+    	let button1;
+    	let i;
+    	let t5;
+    	let t6;
+    	let current;
+
+    	const button2 = new Button({
+    			props: {
+    				outline: true,
+    				color: "secondary",
+    				$$slots: { default: [create_default_slot$f] },
+    				$$scope: { ctx }
+    			},
     			$$inline: true
     		});
 
+    	button2.$on("click", pop);
+
+    	const block = {
+    		c: function create() {
+    			body = element("body");
+    			div1 = element("div");
+    			button0 = element("button");
+    			button0.textContent = "Obtener";
+    			t1 = space();
+    			div0 = element("div");
+    			t2 = space();
+    			script = element("script");
+    			script.textContent = "/* #contenido capturamos el id. Dentro de contenido guardamos ese div.*/\r\n        var contenido = document.querySelector('#contenido')\r\n        function traer() {\r\n            fetch('https://randomuser.me/api/')\r\n            .then(res => res.json())\r\n            .then(data => {\r\n                console.log(data.results['0'])\r\n                /* Estas comillas de abajo nos permiten manejar templates literarios, podemos mezclar html y css*/\r\n                contenido.innerHTML = `   \r\n                <table class=\"table table-dark\">\r\n                    <thead>\r\n                        <tr>\r\n                            <th scope=\"col\">Nombre</th>\r\n                            <th scope=\"col\">Email</th>\r\n                            <th scope=\"col\">Genero</th>\r\n                            <th scope=\"col\">Procedencia</th>\r\n                            <th scope=\"col\">Numero de tlf</th>\r\n                            <th scope=\"col\">Codigo Postal</th>\r\n                            <th scope=\"col\">Edad</th>\r\n                        </tr>\r\n                    </thead>\r\n                    <tbody>\r\n                        <tr>\r\n                            <td>${data.results['0'].name.last}</td>\r\n                            <td>${data.results['0'].email}</td>\r\n                            <td>${data.results['0'].gender}</td>\r\n                            <td>${data.results['0'].location.country}</td>\r\n                            <td>${data.results['0'].cell}</td>\r\n                            <td>${data.results['0'].location.postcode}</td>\r\n                            <td>${data.results['0'].registered.age}</td>\r\n                        </tr>\r\n                    </tbody>          \r\n                `\r\n            })\r\n        }";
+    			t4 = space();
+    			main = element("main");
+    			button1 = element("button");
+    			i = element("i");
+    			t5 = text(" 1");
+    			t6 = space();
+    			create_component(button2.$$.fragment);
+    			attr_dev(button0, "class", "btn btn-danger w-100");
+    			attr_dev(button0, "onclick", "traer()");
+    			add_location(button0, file$s, 11, 8, 209);
+    			attr_dev(div0, "class", "mt-5");
+    			attr_dev(div0, "id", "contenido");
+    			add_location(div0, file$s, 12, 8, 290);
+    			attr_dev(div1, "class", "container my-5 text-center");
+    			add_location(div1, file$s, 10, 4, 159);
+    			add_location(script, file$s, 16, 4, 359);
+    			add_location(body, file$s, 8, 0, 142);
+    			attr_dev(i, "class", "fas fa-chart-area");
+    			add_location(i, file$s, 58, 92, 2248);
+    			attr_dev(button1, "type", "button");
+    			attr_dev(button1, "class", "btn btn-outline-dark");
+    			attr_dev(button1, "onclick", "window.location.href='#/'");
+    			add_location(button1, file$s, 58, 4, 2160);
+    			add_location(main, file$s, 57, 0, 2148);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, body, anchor);
+    			append_dev(body, div1);
+    			append_dev(div1, button0);
+    			append_dev(div1, t1);
+    			append_dev(div1, div0);
+    			append_dev(body, t2);
+    			append_dev(body, script);
+    			insert_dev(target, t4, anchor);
+    			insert_dev(target, main, anchor);
+    			append_dev(main, button1);
+    			append_dev(button1, i);
+    			append_dev(button1, t5);
+    			append_dev(main, t6);
+    			mount_component(button2, main, null);
+    			current = true;
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const button2_changes = {};
+
+    			if (dirty & /*$$scope*/ 1) {
+    				button2_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button2.$set(button2_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button2.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button2.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(body);
+    			if (detaching) detach_dev(t4);
+    			if (detaching) detach_dev(main);
+    			destroy_component(button2);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$t.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$t($$self, $$props, $$invalidate) {
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Integrations> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("Integrations", $$slots, []);
+    	$$self.$capture_state = () => ({ Button, pop });
+    	return [];
+    }
+
+    class Integrations$1 extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$t, create_fragment$t, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Integrations",
+    			options,
+    			id: create_fragment$t.name
+    		});
+    	}
+    }
+
+    /* src\front\plugInVehiclesAPI\Integrations.svelte generated by Svelte v3.20.1 */
+
+    const { console: console_1$b } = globals;
+    const file$t = "src\\front\\plugInVehiclesAPI\\Integrations.svelte";
+
+    // (1437:4) <Button outline color="secondary" on:click="{pop}">
+    function create_default_slot$g(ctx) {
+    	let i;
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			i = element("i");
+    			t = text(" Atrás");
+    			attr_dev(i, "class", "fas fa-arrow-circle-left");
+    			add_location(i, file$t, 1436, 56, 44813);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$g.name,
+    		type: "slot",
+    		source: "(1437:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$u(ctx) {
+    	let script0;
+    	let script0_src_value;
+    	let script1;
+    	let script1_src_value;
+    	let script2;
+    	let script2_src_value;
+    	let script3;
+    	let script3_src_value;
+    	let t0;
+    	let main;
+    	let div26;
+    	let div1;
+    	let div0;
+    	let a0;
+    	let t2;
+    	let a1;
+    	let t4;
+    	let a2;
+    	let t6;
+    	let a3;
+    	let t8;
+    	let a4;
+    	let t10;
+    	let a5;
+    	let t12;
+    	let a6;
+    	let t14;
+    	let a7;
+    	let t16;
+    	let a8;
+    	let t18;
+    	let a9;
+    	let t20;
+    	let a10;
+    	let t22;
+    	let div25;
+    	let div24;
+    	let div3;
+    	let figure0;
+    	let div2;
+    	let t23;
+    	let p0;
+    	let t25;
+    	let div5;
+    	let figure1;
+    	let div4;
+    	let t26;
+    	let p1;
+    	let t28;
+    	let div7;
+    	let figure2;
+    	let div6;
+    	let t29;
+    	let p2;
+    	let t31;
+    	let div9;
+    	let figure3;
+    	let div8;
+    	let t32;
+    	let p3;
+    	let t34;
+    	let div11;
+    	let figure4;
+    	let div10;
+    	let t35;
+    	let p4;
+    	let t37;
+    	let div13;
+    	let figure5;
+    	let div12;
+    	let t38;
+    	let p5;
+    	let t40;
+    	let div15;
+    	let figure6;
+    	let div14;
+    	let t41;
+    	let p6;
+    	let t43;
+    	let div17;
+    	let figure7;
+    	let div16;
+    	let t44;
+    	let p7;
+    	let t46;
+    	let div19;
+    	let figure8;
+    	let div18;
+    	let t47;
+    	let p8;
+    	let t49;
+    	let div21;
+    	let figure9;
+    	let div20;
+    	let t50;
+    	let p9;
+    	let t52;
+    	let div23;
+    	let figure10;
+    	let div22;
+    	let t53;
+    	let p10;
+    	let t55;
+    	let current;
+
+    	const button = new Button({
+    			props: {
+    				outline: true,
+    				color: "secondary",
+    				$$slots: { default: [create_default_slot$g] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", pop);
+
+    	const block = {
+    		c: function create() {
+    			script0 = element("script");
+    			script1 = element("script");
+    			script2 = element("script");
+    			script3 = element("script");
+    			t0 = space();
+    			main = element("main");
+    			div26 = element("div");
+    			div1 = element("div");
+    			div0 = element("div");
+    			a0 = element("a");
+    			a0.textContent = "Integración con 01 emigrants-stats";
+    			t2 = space();
+    			a1 = element("a");
+    			a1.textContent = "Integración con 04";
+    			t4 = space();
+    			a2 = element("a");
+    			a2.textContent = "Integración con 05";
+    			t6 = space();
+    			a3 = element("a");
+    			a3.textContent = "Integración con 06";
+    			t8 = space();
+    			a4 = element("a");
+    			a4.textContent = "Integración con 07";
+    			t10 = space();
+    			a5 = element("a");
+    			a5.textContent = "Integración con 08";
+    			t12 = space();
+    			a6 = element("a");
+    			a6.textContent = "Integración con 12";
+    			t14 = space();
+    			a7 = element("a");
+    			a7.textContent = "Integración con 23";
+    			t16 = space();
+    			a8 = element("a");
+    			a8.textContent = "Integración con 24";
+    			t18 = space();
+    			a9 = element("a");
+    			a9.textContent = "Integración con 27";
+    			t20 = space();
+    			a10 = element("a");
+    			a10.textContent = "Integración con 28";
+    			t22 = space();
+    			div25 = element("div");
+    			div24 = element("div");
+    			div3 = element("div");
+    			figure0 = element("figure");
+    			div2 = element("div");
+    			t23 = space();
+    			p0 = element("p");
+    			p0.textContent = "Integración con el grupo 01, la integración está realizada con emigrantes totales en todo el mundo";
+    			t25 = space();
+    			div5 = element("div");
+    			figure1 = element("figure");
+    			div4 = element("div");
+    			t26 = space();
+    			p1 = element("p");
+    			p1.textContent = "Integra la 04.";
+    			t28 = space();
+    			div7 = element("div");
+    			figure2 = element("figure");
+    			div6 = element("div");
+    			t29 = space();
+    			p2 = element("p");
+    			p2.textContent = "Integra la 05.";
+    			t31 = space();
+    			div9 = element("div");
+    			figure3 = element("figure");
+    			div8 = element("div");
+    			t32 = space();
+    			p3 = element("p");
+    			p3.textContent = "Integra la 06.";
+    			t34 = space();
+    			div11 = element("div");
+    			figure4 = element("figure");
+    			div10 = element("div");
+    			t35 = space();
+    			p4 = element("p");
+    			p4.textContent = "Integra la 07.";
+    			t37 = space();
+    			div13 = element("div");
+    			figure5 = element("figure");
+    			div12 = element("div");
+    			t38 = space();
+    			p5 = element("p");
+    			p5.textContent = "Integra la 08.";
+    			t40 = space();
+    			div15 = element("div");
+    			figure6 = element("figure");
+    			div14 = element("div");
+    			t41 = space();
+    			p6 = element("p");
+    			p6.textContent = "Integra la 12.";
+    			t43 = space();
+    			div17 = element("div");
+    			figure7 = element("figure");
+    			div16 = element("div");
+    			t44 = space();
+    			p7 = element("p");
+    			p7.textContent = "Integra la 23.";
+    			t46 = space();
+    			div19 = element("div");
+    			figure8 = element("figure");
+    			div18 = element("div");
+    			t47 = space();
+    			p8 = element("p");
+    			p8.textContent = "Integra la 24.";
+    			t49 = space();
+    			div21 = element("div");
+    			figure9 = element("figure");
+    			div20 = element("div");
+    			t50 = space();
+    			p9 = element("p");
+    			p9.textContent = "Integra la 27.";
+    			t52 = space();
+    			div23 = element("div");
+    			figure10 = element("figure");
+    			div22 = element("div");
+    			t53 = space();
+    			p10 = element("p");
+    			p10.textContent = "Integra la 28.";
+    			t55 = space();
+    			create_component(button.$$.fragment);
+    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
+    			add_location(script0, file$t, 1304, 4, 37637);
+    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
+    			add_location(script1, file$t, 1305, 4, 37708);
+    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
+    			add_location(script2, file$t, 1306, 4, 37784);
+    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
+    			add_location(script3, file$t, 1307, 4, 37862);
+    			attr_dev(a0, "class", "list-group-item list-group-item-action active");
+    			attr_dev(a0, "id", "list-home-list");
+    			attr_dev(a0, "data-toggle", "list");
+    			attr_dev(a0, "href", "#list-01");
+    			attr_dev(a0, "role", "tab");
+    			attr_dev(a0, "aria-controls", "home");
+    			add_location(a0, file$t, 1328, 12, 38350);
+    			attr_dev(a1, "class", "list-group-item list-group-item-action");
+    			attr_dev(a1, "id", "list-profile-list");
+    			attr_dev(a1, "data-toggle", "list");
+    			attr_dev(a1, "href", "#list-04");
+    			attr_dev(a1, "role", "tab");
+    			attr_dev(a1, "aria-controls", "profile");
+    			add_location(a1, file$t, 1329, 12, 38546);
+    			attr_dev(a2, "class", "list-group-item list-group-item-action");
+    			attr_dev(a2, "id", "list-profile-list");
+    			attr_dev(a2, "data-toggle", "list");
+    			attr_dev(a2, "href", "#list-05");
+    			attr_dev(a2, "role", "tab");
+    			attr_dev(a2, "aria-controls", "profile");
+    			add_location(a2, file$t, 1330, 12, 38725);
+    			attr_dev(a3, "class", "list-group-item list-group-item-action");
+    			attr_dev(a3, "id", "list-profile-list");
+    			attr_dev(a3, "data-toggle", "list");
+    			attr_dev(a3, "href", "#list-06");
+    			attr_dev(a3, "role", "tab");
+    			attr_dev(a3, "aria-controls", "profile");
+    			add_location(a3, file$t, 1331, 12, 38904);
+    			attr_dev(a4, "class", "list-group-item list-group-item-action");
+    			attr_dev(a4, "id", "list-profile-list");
+    			attr_dev(a4, "data-toggle", "list");
+    			attr_dev(a4, "href", "#list-07");
+    			attr_dev(a4, "role", "tab");
+    			attr_dev(a4, "aria-controls", "profile");
+    			add_location(a4, file$t, 1332, 12, 39083);
+    			attr_dev(a5, "class", "list-group-item list-group-item-action");
+    			attr_dev(a5, "id", "list-profile-list");
+    			attr_dev(a5, "data-toggle", "list");
+    			attr_dev(a5, "href", "#list-08");
+    			attr_dev(a5, "role", "tab");
+    			attr_dev(a5, "aria-controls", "profile");
+    			add_location(a5, file$t, 1333, 12, 39262);
+    			attr_dev(a6, "class", "list-group-item list-group-item-action");
+    			attr_dev(a6, "id", "list-profile-list");
+    			attr_dev(a6, "data-toggle", "list");
+    			attr_dev(a6, "href", "#list-12");
+    			attr_dev(a6, "role", "tab");
+    			attr_dev(a6, "aria-controls", "profile");
+    			add_location(a6, file$t, 1334, 12, 39441);
+    			attr_dev(a7, "class", "list-group-item list-group-item-action");
+    			attr_dev(a7, "id", "list-profile-list");
+    			attr_dev(a7, "data-toggle", "list");
+    			attr_dev(a7, "href", "#list-23");
+    			attr_dev(a7, "role", "tab");
+    			attr_dev(a7, "aria-controls", "profile");
+    			add_location(a7, file$t, 1335, 12, 39620);
+    			attr_dev(a8, "class", "list-group-item list-group-item-action");
+    			attr_dev(a8, "id", "list-profile-list");
+    			attr_dev(a8, "data-toggle", "list");
+    			attr_dev(a8, "href", "#list-24");
+    			attr_dev(a8, "role", "tab");
+    			attr_dev(a8, "aria-controls", "profile");
+    			add_location(a8, file$t, 1336, 12, 39799);
+    			attr_dev(a9, "class", "list-group-item list-group-item-action");
+    			attr_dev(a9, "id", "list-profile-list");
+    			attr_dev(a9, "data-toggle", "list");
+    			attr_dev(a9, "href", "#list-27");
+    			attr_dev(a9, "role", "tab");
+    			attr_dev(a9, "aria-controls", "profile");
+    			add_location(a9, file$t, 1337, 12, 39978);
+    			attr_dev(a10, "class", "list-group-item list-group-item-action");
+    			attr_dev(a10, "id", "list-profile-list");
+    			attr_dev(a10, "data-toggle", "list");
+    			attr_dev(a10, "href", "#list-28");
+    			attr_dev(a10, "role", "tab");
+    			attr_dev(a10, "aria-controls", "profile");
+    			add_location(a10, file$t, 1338, 12, 40157);
+    			attr_dev(div0, "class", "list-group");
+    			attr_dev(div0, "id", "list-tab");
+    			attr_dev(div0, "role", "tablist");
+    			add_location(div0, file$t, 1326, 10, 38281);
+    			attr_dev(div1, "class", "col-4");
+    			add_location(div1, file$t, 1325, 8, 38250);
+    			attr_dev(div2, "id", "container01");
+    			add_location(div2, file$t, 1346, 20, 40643);
+    			attr_dev(p0, "class", "highcharts-description");
+    			add_location(p0, file$t, 1347, 20, 40693);
+    			attr_dev(figure0, "class", "highcharts-figure");
+    			add_location(figure0, file$t, 1345, 16, 40587);
+    			attr_dev(div3, "class", "tab-pane fade show active");
+    			attr_dev(div3, "id", "list-01");
+    			attr_dev(div3, "role", "tabpanel");
+    			attr_dev(div3, "aria-labelledby", "list-home-list");
+    			add_location(div3, file$t, 1344, 12, 40468);
+    			attr_dev(div4, "id", "container04");
+    			add_location(div4, file$t, 1354, 20, 41104);
+    			attr_dev(p1, "class", "highcharts-description");
+    			add_location(p1, file$t, 1355, 20, 41154);
+    			attr_dev(figure1, "class", "highcharts-figure");
+    			add_location(figure1, file$t, 1353, 16, 41048);
+    			attr_dev(div5, "class", "tab-pane fade");
+    			attr_dev(div5, "id", "list-04");
+    			attr_dev(div5, "role", "tabpanel");
+    			attr_dev(div5, "aria-labelledby", "list-profile-list");
+    			add_location(div5, file$t, 1352, 12, 40938);
+    			attr_dev(div6, "id", "container05");
+    			add_location(div6, file$t, 1362, 20, 41481);
+    			attr_dev(p2, "class", "highcharts-description");
+    			add_location(p2, file$t, 1363, 20, 41531);
+    			attr_dev(figure2, "class", "highcharts-figure");
+    			add_location(figure2, file$t, 1361, 16, 41425);
+    			attr_dev(div7, "class", "tab-pane fade");
+    			attr_dev(div7, "id", "list-05");
+    			attr_dev(div7, "role", "tabpanel");
+    			attr_dev(div7, "aria-labelledby", "list-profile-list");
+    			add_location(div7, file$t, 1360, 12, 41315);
+    			attr_dev(div8, "id", "container06");
+    			add_location(div8, file$t, 1370, 20, 41858);
+    			attr_dev(p3, "class", "highcharts-description");
+    			add_location(p3, file$t, 1371, 20, 41908);
+    			attr_dev(figure3, "class", "highcharts-figure");
+    			add_location(figure3, file$t, 1369, 16, 41802);
+    			attr_dev(div9, "class", "tab-pane fade");
+    			attr_dev(div9, "id", "list-06");
+    			attr_dev(div9, "role", "tabpanel");
+    			attr_dev(div9, "aria-labelledby", "list-profile-list");
+    			add_location(div9, file$t, 1368, 12, 41692);
+    			attr_dev(div10, "id", "container07");
+    			add_location(div10, file$t, 1378, 20, 42235);
+    			attr_dev(p4, "class", "highcharts-description");
+    			add_location(p4, file$t, 1379, 20, 42285);
+    			attr_dev(figure4, "class", "highcharts-figure");
+    			add_location(figure4, file$t, 1377, 16, 42179);
+    			attr_dev(div11, "class", "tab-pane fade");
+    			attr_dev(div11, "id", "list-07");
+    			attr_dev(div11, "role", "tabpanel");
+    			attr_dev(div11, "aria-labelledby", "list-profile-list");
+    			add_location(div11, file$t, 1376, 12, 42069);
+    			attr_dev(div12, "id", "container08");
+    			add_location(div12, file$t, 1386, 20, 42612);
+    			attr_dev(p5, "class", "highcharts-description");
+    			add_location(p5, file$t, 1387, 20, 42662);
+    			attr_dev(figure5, "class", "highcharts-figure");
+    			add_location(figure5, file$t, 1385, 16, 42556);
+    			attr_dev(div13, "class", "tab-pane fade");
+    			attr_dev(div13, "id", "list-08");
+    			attr_dev(div13, "role", "tabpanel");
+    			attr_dev(div13, "aria-labelledby", "list-profile-list");
+    			add_location(div13, file$t, 1384, 12, 42446);
+    			attr_dev(div14, "id", "container12");
+    			add_location(div14, file$t, 1394, 20, 42989);
+    			attr_dev(p6, "class", "highcharts-description");
+    			add_location(p6, file$t, 1395, 20, 43039);
+    			attr_dev(figure6, "class", "highcharts-figure");
+    			add_location(figure6, file$t, 1393, 16, 42933);
+    			attr_dev(div15, "class", "tab-pane fade");
+    			attr_dev(div15, "id", "list-12");
+    			attr_dev(div15, "role", "tabpanel");
+    			attr_dev(div15, "aria-labelledby", "list-profile-list");
+    			add_location(div15, file$t, 1392, 12, 42823);
+    			attr_dev(div16, "id", "container23");
+    			add_location(div16, file$t, 1402, 20, 43366);
+    			attr_dev(p7, "class", "highcharts-description");
+    			add_location(p7, file$t, 1403, 20, 43416);
+    			attr_dev(figure7, "class", "highcharts-figure");
+    			add_location(figure7, file$t, 1401, 16, 43310);
+    			attr_dev(div17, "class", "tab-pane fade");
+    			attr_dev(div17, "id", "list-23");
+    			attr_dev(div17, "role", "tabpanel");
+    			attr_dev(div17, "aria-labelledby", "list-profile-list");
+    			add_location(div17, file$t, 1400, 12, 43200);
+    			attr_dev(div18, "id", "container24");
+    			add_location(div18, file$t, 1410, 20, 43743);
+    			attr_dev(p8, "class", "highcharts-description");
+    			add_location(p8, file$t, 1411, 20, 43793);
+    			attr_dev(figure8, "class", "highcharts-figure");
+    			add_location(figure8, file$t, 1409, 16, 43687);
+    			attr_dev(div19, "class", "tab-pane fade");
+    			attr_dev(div19, "id", "list-24");
+    			attr_dev(div19, "role", "tabpanel");
+    			attr_dev(div19, "aria-labelledby", "list-profile-list");
+    			add_location(div19, file$t, 1408, 12, 43577);
+    			attr_dev(div20, "id", "container27");
+    			add_location(div20, file$t, 1418, 20, 44120);
+    			attr_dev(p9, "class", "highcharts-description");
+    			add_location(p9, file$t, 1419, 20, 44170);
+    			attr_dev(figure9, "class", "highcharts-figure");
+    			add_location(figure9, file$t, 1417, 16, 44064);
+    			attr_dev(div21, "class", "tab-pane fade");
+    			attr_dev(div21, "id", "list-27");
+    			attr_dev(div21, "role", "tabpanel");
+    			attr_dev(div21, "aria-labelledby", "list-profile-list");
+    			add_location(div21, file$t, 1416, 12, 43954);
+    			attr_dev(div22, "id", "container28");
+    			add_location(div22, file$t, 1426, 20, 44497);
+    			attr_dev(p10, "class", "highcharts-description");
+    			add_location(p10, file$t, 1427, 20, 44547);
+    			attr_dev(figure10, "class", "highcharts-figure");
+    			add_location(figure10, file$t, 1425, 16, 44441);
+    			attr_dev(div23, "class", "tab-pane fade");
+    			attr_dev(div23, "id", "list-28");
+    			attr_dev(div23, "role", "tabpanel");
+    			attr_dev(div23, "aria-labelledby", "list-profile-list");
+    			add_location(div23, file$t, 1424, 12, 44331);
+    			attr_dev(div24, "class", "tab-content");
+    			attr_dev(div24, "id", "nav-tabContent");
+    			add_location(div24, file$t, 1343, 10, 40409);
+    			attr_dev(div25, "class", "col-8");
+    			add_location(div25, file$t, 1342, 8, 40378);
+    			attr_dev(div26, "class", "row");
+    			add_location(div26, file$t, 1324, 4, 38223);
+    			add_location(main, file$t, 1311, 0, 37964);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			append_dev(document.head, script0);
+    			append_dev(document.head, script1);
+    			append_dev(document.head, script2);
+    			append_dev(document.head, script3);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, main, anchor);
+    			append_dev(main, div26);
+    			append_dev(div26, div1);
+    			append_dev(div1, div0);
+    			append_dev(div0, a0);
+    			append_dev(div0, t2);
+    			append_dev(div0, a1);
+    			append_dev(div0, t4);
+    			append_dev(div0, a2);
+    			append_dev(div0, t6);
+    			append_dev(div0, a3);
+    			append_dev(div0, t8);
+    			append_dev(div0, a4);
+    			append_dev(div0, t10);
+    			append_dev(div0, a5);
+    			append_dev(div0, t12);
+    			append_dev(div0, a6);
+    			append_dev(div0, t14);
+    			append_dev(div0, a7);
+    			append_dev(div0, t16);
+    			append_dev(div0, a8);
+    			append_dev(div0, t18);
+    			append_dev(div0, a9);
+    			append_dev(div0, t20);
+    			append_dev(div0, a10);
+    			append_dev(div26, t22);
+    			append_dev(div26, div25);
+    			append_dev(div25, div24);
+    			append_dev(div24, div3);
+    			append_dev(div3, figure0);
+    			append_dev(figure0, div2);
+    			append_dev(figure0, t23);
+    			append_dev(figure0, p0);
+    			append_dev(div24, t25);
+    			append_dev(div24, div5);
+    			append_dev(div5, figure1);
+    			append_dev(figure1, div4);
+    			append_dev(figure1, t26);
+    			append_dev(figure1, p1);
+    			append_dev(div24, t28);
+    			append_dev(div24, div7);
+    			append_dev(div7, figure2);
+    			append_dev(figure2, div6);
+    			append_dev(figure2, t29);
+    			append_dev(figure2, p2);
+    			append_dev(div24, t31);
+    			append_dev(div24, div9);
+    			append_dev(div9, figure3);
+    			append_dev(figure3, div8);
+    			append_dev(figure3, t32);
+    			append_dev(figure3, p3);
+    			append_dev(div24, t34);
+    			append_dev(div24, div11);
+    			append_dev(div11, figure4);
+    			append_dev(figure4, div10);
+    			append_dev(figure4, t35);
+    			append_dev(figure4, p4);
+    			append_dev(div24, t37);
+    			append_dev(div24, div13);
+    			append_dev(div13, figure5);
+    			append_dev(figure5, div12);
+    			append_dev(figure5, t38);
+    			append_dev(figure5, p5);
+    			append_dev(div24, t40);
+    			append_dev(div24, div15);
+    			append_dev(div15, figure6);
+    			append_dev(figure6, div14);
+    			append_dev(figure6, t41);
+    			append_dev(figure6, p6);
+    			append_dev(div24, t43);
+    			append_dev(div24, div17);
+    			append_dev(div17, figure7);
+    			append_dev(figure7, div16);
+    			append_dev(figure7, t44);
+    			append_dev(figure7, p7);
+    			append_dev(div24, t46);
+    			append_dev(div24, div19);
+    			append_dev(div19, figure8);
+    			append_dev(figure8, div18);
+    			append_dev(figure8, t47);
+    			append_dev(figure8, p8);
+    			append_dev(div24, t49);
+    			append_dev(div24, div21);
+    			append_dev(div21, figure9);
+    			append_dev(figure9, div20);
+    			append_dev(figure9, t50);
+    			append_dev(figure9, p9);
+    			append_dev(div24, t52);
+    			append_dev(div24, div23);
+    			append_dev(div23, figure10);
+    			append_dev(figure10, div22);
+    			append_dev(figure10, t53);
+    			append_dev(figure10, p10);
+    			append_dev(main, t55);
+    			mount_component(button, main, null);
+    			current = true;
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 1) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			detach_dev(script0);
+    			detach_dev(script1);
+    			detach_dev(script2);
+    			detach_dev(script3);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(main);
+    			destroy_component(button);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$u.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    const BASE_API_URL$6 = "/api/v3/plugin-vehicles-stats";
+
+    async function loadGraph01() {
+    	const BASE_API_URL_01 = "/api/v2/emigrants-stats";
+    	const resData = await fetch(BASE_API_URL$6);
+    	const resData01 = await fetch(BASE_API_URL_01);
+    	let MyData = await resData.json();
+    	let Data01 = await resData01.json();
+
+    	/*
+                Sus Datos:
+    }
+        "country": "spain",
+        "year": 2017,
+        "em_man": 609615,
+        "em_woman": 736247,
+        "em_totals": 1345862
+    }
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+    	let dataPlugin = MyData.map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d["cars-per-1000"]
+    		};
+
+    		return res;
+    	});
+
+    	let dataAPI01 = Data01.filter(d => {
+    		return d.year == 2017;
+    	}).map(d => {
+    		let res = { name: d.country, value: d.em_totals };
+    		return res;
+    	});
+
+    	let datos = [
+    		{
+    			name: "Porcentaje de coche eléctricos cada 1000 personas.",
+    			data: dataPlugin
+    		},
+    		{
+    			name: "Emigrantes totales",
+    			data: dataAPI01
+    		}
+    	];
+
+    	Highcharts.chart("container01", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: { text: "Integración con el grupo 01." },
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "20%",
+    				maxSize: "100%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					gravitationalConstant: 0.05,
+    					splitSeries: true,
+    					seriesInteraction: false,
+    					dragBetweenSeries: true,
+    					parentNodeLimit: true
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: datos
+    	});
+    }
+
+    async function loadGraph04() {
+    	const BASE_API_URL_04 = "https://sos1920-04.herokuapp.com/api/v1/roads/";
+    	const resData = await fetch(BASE_API_URL$6);
+    	const resData04 = await fetch(BASE_API_URL_04);
+    	let MyData = await resData.json();
+    	let Data04 = await resData04.json();
+
+    	/*
+                Sus Datos:
+    {
+        "province": "Madrid",
+        "year": 2015,
+        "oneway": 2347,
+        "multipleway": 208,
+        "dualCarriagewayAndHighway": 622,
+        "highwayWithToll": 161,
+        "total": 3338
+    }
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+    	let dataPlugin = MyData.map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d["cars-per-1000"]
+    		};
+
+    		return res;
+    	});
+
+    	let dataAPI04 = Data04.map(d => {
+    		let res = { name: d["province"], value: d["total"] };
+    		return res;
+    	});
+
+    	let datos = [
+    		{
+    			name: "Porcentaje de coche eléctricos cada 1000 personas.",
+    			data: dataPlugin
+    		},
+    		{
+    			name: "Número total de carreteras, autopistas y autovías.",
+    			data: dataAPI04
+    		}
+    	];
+
+    	Highcharts.chart("container04", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: { text: "Integración con el grupo 04." },
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "20%",
+    				maxSize: "100%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					gravitationalConstant: 0.05,
+    					splitSeries: true,
+    					seriesInteraction: false,
+    					dragBetweenSeries: true,
+    					parentNodeLimit: true
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: datos
+    	});
+    }
+
+    async function loadGraph05() {
+    	const BASE_API_URL_05 = "/api/v1/life_expectancies";
+    	const resData = await fetch(BASE_API_URL$6);
+    	const resData05 = await fetch(BASE_API_URL_05);
+    	let MyData = await resData.json();
+    	let Data05 = await resData05.json();
+
+    	/*
+                Sus Datos:
+    {
+        "country": "france",
+        "year": 2015,
+        "women_life_expectancy": 85.6,
+        "men_life_expectancy": 79.2,
+        "average_life_expectancy": 82.4
+    }
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+    	let dataPlugin = MyData.map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d["cars-per-1000"]
+    		};
+
+    		return res;
+    	});
+
+    	let dataAPI05 = Data05.map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d["average_life_expectancy"]
+    		};
+
+    		return res;
+    	});
+
+    	let datos = [
+    		{
+    			name: "Porcentaje de coche eléctricos cada 1000 personas.",
+    			data: dataPlugin
+    		},
+    		{
+    			name: "Esperanza de vida media entre hombres y mujeres",
+    			data: dataAPI05
+    		}
+    	];
+
+    	Highcharts.chart("container05", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: { text: "Integración con el grupo 05." },
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "20%",
+    				maxSize: "100%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					gravitationalConstant: 0.05,
+    					splitSeries: true,
+    					seriesInteraction: false,
+    					dragBetweenSeries: true,
+    					parentNodeLimit: true
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: datos
+    	});
+    }
+
+    async function loadGraph06() {
+    	const BASE_API_URL_06 = "/api/v1/not-hospitalized-stats";
+    	const resData = await fetch(BASE_API_URL$6);
+    	const resData06 = await fetch(BASE_API_URL_06);
+    	let MyData = await resData.json();
+    	let Data06 = await resData06.json();
+
+    	/*
+                Sus Datos:
+
+    }
+        "province": "Tarragona",
+        "year": 1995,
+        "total": 1676,
+        "interurban": 1044,
+        "urban": 632
+    }
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+    	let dataPlugin = MyData.map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d["cars-per-1000"]
+    		};
+
+    		return res;
+    	});
+
+    	let dataAPI06 = Data06.map(d => {
+    		let res = { name: d.province, value: d.total };
+    		return res;
+    	});
+
+    	let datos = [
+    		{
+    			name: "Porcentaje de coche eléctricos cada 1000 personas.",
+    			data: dataPlugin
+    		},
+    		{
+    			name: "Número total de vías urbanas e interurbanas.",
+    			data: dataAPI06
+    		}
+    	];
+
+    	Highcharts.chart("container06", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: { text: "Integración con el grupo 06." },
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "20%",
+    				maxSize: "100%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					gravitationalConstant: 0.05,
+    					splitSeries: true,
+    					seriesInteraction: false,
+    					dragBetweenSeries: true,
+    					parentNodeLimit: true
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: datos
+    	});
+    }
+
+    async function loadGraph07() {
+    	const BASE_API_URL_07 = "https://sos1920-07.herokuapp.com/api/v2/imports";
+    	const resData = await fetch(BASE_API_URL$6);
+    	const resData07 = await fetch(BASE_API_URL_07);
+    	let MyData = await resData.json();
+    	let Data07 = await resData07.json();
+
+    	/*
+                Sus Datos:
+    }
+        "country": "canada",
+        "year": 2005,
+        "gdamalt": 584620,
+        "gdabarley": 50979,
+        "gdaoat": 1466303,
+        "gdawaste": 26325,
+        "gdaethylalcohol": 99284
+    }
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+    	let dataPlugin = MyData.map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d["cars-per-1000"]
+    		};
+
+    		return res;
+    	});
+
+    	let dataAPI07 = Data07.filter(d => {
+    		return d.year == 2000;
+    	}).map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d.gdaethylalcohol
+    		};
+
+    		return res;
+    	});
+
+    	let datos = [
+    		{
+    			name: "Porcentaje de coche eléctricos cada 1000 personas.",
+    			data: dataPlugin
+    		},
+    		{
+    			name: "Alcohol total importado en el año 2000",
+    			data: dataAPI07
+    		}
+    	];
+
+    	Highcharts.chart("container07", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: { text: "Integración con el grupo 07." },
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "20%",
+    				maxSize: "100%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					gravitationalConstant: 0.05,
+    					splitSeries: true,
+    					seriesInteraction: false,
+    					dragBetweenSeries: true,
+    					parentNodeLimit: true
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: datos
+    	});
+    }
+
+    async function loadGraph08() {
+    	const BASE_API_URL_08 = "/api/v1/electricity-produced-stats/";
+    	const resData = await fetch(BASE_API_URL$6);
+    	const resData08 = await fetch(BASE_API_URL_08);
+    	let MyData = await resData.json();
+    	let Data08 = await resData08.json();
+
+    	/*
+                Sus Datos:
+    {
+        "country": "EEUU",
+        "state": "Florida",
+        "year": 2018,
+        "hydro": 232574,
+        "solar": 2412067,
+        "coal": 30272201
+    }
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+    	let dataPlugin = MyData.map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d["cars-per-1000"]
+    		};
+
+    		return res;
+    	});
+
+    	let dataAPI08_1 = Data08.map(d => {
+    		let res = { name: d.state, value: d.hydro };
+    		return res;
+    	});
+
+<<<<<<< HEAD
     	button.$on("click", pop);
 
     	const block = {
@@ -22024,10 +24848,28 @@ var app = (function () {
     			attr_dev(div18, "class", "row");
     			add_location(div18, file$s, 220, 4, 5752);
     			add_location(main, file$s, 219, 0, 5740);
+=======
+    	let dataAPI08_2 = Data08.map(d => {
+    		let res = { name: d.state, value: d.solar };
+    		return res;
+    	});
+
+    	let dataAPI08_3 = Data08.map(d => {
+    		let res = { name: d.state, value: d.coal };
+    		return res;
+    	});
+
+    	let datos = [
+    		{
+    			name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018.",
+    			data: dataPlugin
+>>>>>>> 43e6c3529c0a04455a2a86e87ab9a684b18d5c93
     		},
-    		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		{
+    			name: "Energía Hidroeléctrica producida en EEUU en el año 2018",
+    			data: dataAPI08_1
     		},
+<<<<<<< HEAD
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
     			append_dev(main, div18);
@@ -22099,8 +24941,55 @@ var app = (function () {
 
     			if (dirty & /*$$scope*/ 1) {
     				button_changes.$$scope = { dirty, ctx };
-    			}
+=======
+    		{
+    			name: "Energía Solar producida en EEUU en el año 2018",
+    			data: dataAPI08_2
+    		},
+    		{
+    			name: "Energía por combustión de Carbón producida en EEUU en el año 2018",
+    			data: dataAPI08_3
+    		}
+    	];
 
+    	Highcharts.chart("container08", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: { text: "Integración con el grupo 08." },
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "20%",
+    				maxSize: "100%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					gravitationalConstant: 0.05,
+    					splitSeries: true,
+    					seriesInteraction: false,
+    					dragBetweenSeries: true,
+    					parentNodeLimit: true
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+>>>>>>> 43e6c3529c0a04455a2a86e87ab9a684b18d5c93
+    			}
+    		},
+    		series: datos
+    	});
+    }
+
+<<<<<<< HEAD
     			button.$set(button_changes);
     		},
     		i: function intro(local) {
@@ -22115,20 +25004,316 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(main);
     			destroy_component(button);
-    		}
-    	};
+=======
+    async function loadGraph12() {
+    	const BASE_API_URL_12 = "https://sos1920-12.herokuapp.com/api/v2/overdose-deaths";
+    	const resData = await fetch(BASE_API_URL$6);
+    	const resData12 = await fetch(BASE_API_URL_12);
+    	let MyData = await resData.json();
+    	let Data12 = await resData12.json();
 
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_fragment$t.name,
-    		type: "component",
-    		source: "",
-    		ctx
+    	/*
+                Sus Datos:
+    {
+        "country": "France",
+        "year": 2011,
+        "death_male": 249,
+        "death_female": 91,
+        "death_total": 340,
+        "mean_age": 45.7
+    }
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+    	let dataPlugin = MyData.map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d["cars-per-1000"]
+    		};
+
+    		return res;
     	});
 
-    	return block;
+    	let dataAPI12 = Data12.filter(d => {
+    		return d.year == 2017;
+    	}).map(d => {
+    		let res = { name: d.country, value: d["death_total"] };
+    		return res;
+    	});
+
+    	let datos = [
+    		{
+    			name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018.",
+    			data: dataPlugin
+    		},
+    		{
+    			name: "Número total de muertes por sobredosis en el año 2017",
+    			data: dataAPI12
+    		}
+    	];
+
+    	Highcharts.chart("container12", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: { text: "Integración con el grupo 12." },
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "20%",
+    				maxSize: "100%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					gravitationalConstant: 0.05,
+    					splitSeries: true,
+    					seriesInteraction: false,
+    					dragBetweenSeries: true,
+    					parentNodeLimit: true
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: datos
+    	});
     }
 
+    async function loadGraph23$1() {
+    	const BASE_API_URL_23 = "https://sos1920-23.herokuapp.com/api/v2/fires-stats/";
+    	const resData = await fetch(BASE_API_URL$6);
+    	const resData23 = await fetch(BASE_API_URL_23);
+    	let MyData = await resData.json();
+    	let Data23 = await resData23.json();
+
+    	/*
+                Sus Datos:
+    {
+        "community": "castilla-la-mancha",
+        "year": 2007,
+        "total_fire": 694,
+        "forest_area": 2026.46,
+        "non_forest_area": 1068.96
+    }
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+    	let dataPlugin = MyData.map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d["cars-per-1000"]
+    		};
+
+    		return res;
+    	});
+
+    	let dataAPI23 = Data23.filter(d => {
+    		return d.year == 2007;
+    	}).map(d => {
+    		let res = {
+    			name: d.community,
+    			value: d["total_fire"]
+    		};
+
+    		return res;
+    	});
+
+    	let datos = [
+    		{
+    			name: "Porcentaje de coche eléctricos cada 1000 personas.",
+    			data: dataPlugin
+    		},
+    		{
+    			name: "Número de incendios totales en España en el año 2007",
+    			data: dataAPI23
+>>>>>>> 43e6c3529c0a04455a2a86e87ab9a684b18d5c93
+    		}
+    	];
+
+    	Highcharts.chart("container23", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: { text: "Integración con el grupo 23." },
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "20%",
+    				maxSize: "100%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					gravitationalConstant: 0.05,
+    					splitSeries: true,
+    					seriesInteraction: false,
+    					dragBetweenSeries: true,
+    					parentNodeLimit: true
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: datos
+    	});
+    }
+
+    async function loadGraph24() {
+    	const BASE_API_URL_24 = "https://sos1920-24.herokuapp.com/api/v2/atc-stats";
+    	const resData = await fetch(BASE_API_URL$6);
+    	const resData24 = await fetch(BASE_API_URL_24);
+    	let MyData = await resData.json();
+    	let Data24 = await resData24.json();
+
+    	/*
+                Sus Datos:
+    {
+        "aut_com": "Andalucia",
+        "year": 2018,
+        "espce": 757.2,
+        "yaq": 757,
+        "obu": 757
+    }
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+    	let dataPlugin = MyData.map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d["cars-per-1000"]
+    		};
+
+    		return res;
+    	});
+
+    	let dataAPI24 = Data24.map(d => {
+    		let res = {
+    			name: d["aut_com"],
+    			//value: (d["espce"] / 10) //Los divido entre 10 para obtener una mejor visualización.
+    			value: d["espce"]
+    		};
+
+    		return res;
+    	});
+
+    	let datos = [
+    		{
+    			name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018",
+    			data: dataPlugin
+    		},
+    		{
+    			name: "Coste medio de la matricula universitaria en el año 2018",
+    			data: dataAPI24
+    		}
+    	];
+
+    	Highcharts.chart("container24", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: { text: "Integración con el grupo 24." },
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "20%",
+    				maxSize: "100%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					gravitationalConstant: 0.05,
+    					splitSeries: true,
+    					seriesInteraction: false,
+    					dragBetweenSeries: true,
+    					parentNodeLimit: true
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: datos
+    	});
+    }
+
+    async function loadGraph27$1() {
+    	const BASE_API_URL_27 = "https://sos1920-27.herokuapp.com/api/v2/spc-stats";
+    	const resData = await fetch(BASE_API_URL$6);
+    	const resData27 = await fetch(BASE_API_URL_27);
+    	let MyData = await resData.json();
+    	let Data27 = await resData27.json();
+
+    	/*
+                Sus Datos:
+    {
+        "country": "cameroon",                       
+        "both_sex": 19.5,
+        "male_rank": 13,
+        "male_number": 26.9,
+        "female_rank": 10,
+        "female_number": 12.5,
+        "ratio": 2.15,
+        "year": 2013,
+        "continent": "africa"
+    }
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+    	let dataPlugin = MyData.map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d["cars-per-1000"]
+    		};
+
+<<<<<<< HEAD
     async function loadGraph4$1() {
     	const BASE_API_URL = "https://sos1920-04.herokuapp.com/api/v1/traffic_accidents";
     	let MyData = [];
@@ -22301,160 +25486,310 @@ var app = (function () {
     function instance$t($$self, $$props, $$invalidate) {
     	loadGraph4$1();
     	const writable_props = [];
+=======
+    		return res;
+    	});
+>>>>>>> 43e6c3529c0a04455a2a86e87ab9a684b18d5c93
 
-    	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Integrations> was created with unknown prop '${key}'`);
+    	let dataAPI27 = Data27.map(d => {
+    		//if(d.year == 2013){
+    		let res = { name: d.country, value: d["both_sex"] };
+
+    		//}
+    		return res;
     	});
 
+<<<<<<< HEAD
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("Integrations", $$slots, []);
     	$$self.$capture_state = () => ({ Button, pop, loadGraph4: loadGraph4$1 });
     	return [];
-    }
-
-    class Integrations$1 extends SvelteComponentDev {
-    	constructor(options) {
-    		super(options);
-    		init(this, options, instance$t, create_fragment$t, safe_not_equal, {});
-
-    		dispatch_dev("SvelteRegisterComponent", {
-    			component: this,
-    			tagName: "Integrations",
-    			options,
-    			id: create_fragment$t.name
-    		});
-    	}
-    }
-
-    /* src\front\plugInVehiclesAPI\Integrations.svelte generated by Svelte v3.20.1 */
-    const file$t = "src\\front\\plugInVehiclesAPI\\Integrations.svelte";
-
-    // (12:4) <Button outline color="secondary" on:click="{pop}">
-    function create_default_slot$g(ctx) {
-    	let i;
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			i = element("i");
-    			t = text(" Atrás");
-    			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$t, 11, 56, 346);
+=======
+    	let datos = [
+    		{
+    			name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018",
+    			data: dataPlugin
     		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, i, anchor);
-    			insert_dev(target, t, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(i);
-    			if (detaching) detach_dev(t);
+    		{
+    			name: "Porcentaje de suicidios en el año 2013",
+    			data: dataAPI27
     		}
-    	};
+    	];
 
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot$g.name,
-    		type: "slot",
-    		source: "(12:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    function create_fragment$u(ctx) {
-    	let main;
-    	let button0;
-    	let i;
-    	let t0;
-    	let t1;
-    	let current;
-
-    	const button1 = new Button({
-    			props: {
-    				outline: true,
-    				color: "secondary",
-    				$$slots: { default: [create_default_slot$g] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	button1.$on("click", pop);
-
-    	const block = {
-    		c: function create() {
-    			main = element("main");
-    			button0 = element("button");
-    			i = element("i");
-    			t0 = text(" 1");
-    			t1 = space();
-    			create_component(button1.$$.fragment);
-    			attr_dev(i, "class", "fas fa-chart-area");
-    			add_location(i, file$t, 9, 92, 242);
-    			attr_dev(button0, "type", "button");
-    			attr_dev(button0, "class", "btn btn-outline-dark");
-    			attr_dev(button0, "onclick", "window.location.href='#/'");
-    			add_location(button0, file$t, 9, 4, 154);
-    			add_location(main, file$t, 8, 0, 142);
+    	Highcharts.chart("container27", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: { text: "Integración con el grupo 27." },
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}%"
     		},
-    		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, main, anchor);
-    			append_dev(main, button0);
-    			append_dev(button0, i);
-    			append_dev(button0, t0);
-    			append_dev(main, t1);
-    			mount_component(button1, main, null);
-    			current = true;
-    		},
-    		p: function update(ctx, [dirty]) {
-    			const button1_changes = {};
-
-    			if (dirty & /*$$scope*/ 1) {
-    				button1_changes.$$scope = { dirty, ctx };
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "20%",
+    				maxSize: "100%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					gravitationalConstant: 0.05,
+    					splitSeries: true,
+    					seriesInteraction: false,
+    					dragBetweenSeries: true,
+    					parentNodeLimit: true
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
     			}
+    		},
+    		series: datos
+    	});
+>>>>>>> 43e6c3529c0a04455a2a86e87ab9a684b18d5c93
+    }
 
-    			button1.$set(button1_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(button1.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(button1.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(main);
-    			destroy_component(button1);
-    		}
-    	};
+    async function loadGraph28() {
+    	const BASE_API_URL_28 = "/api/v1/gce";
+    	const resData = await fetch(BASE_API_URL$6);
+    	const resData28 = await fetch(BASE_API_URL_28);
+    	let MyData = await resData.json();
+    	let Data28 = await resData28.json();
 
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_fragment$u.name,
-    		type: "component",
-    		source: "",
-    		ctx
+    	/*
+                Sus Datos:
+    {
+        "country": "Germany",
+        "year": 2010,
+        "gce_country": 811861,
+        "gce_per_capita": 10.09,
+        "gce_cars": 6311318
+    }
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+    	let dataPlugin = MyData.map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d["cars-per-1000"]
+    		};
+
+    		return res;
     	});
 
-    	return block;
+    	let dataAPI28 = Data28.map(d => {
+    		//if(d.year == 2014){
+    		let res = {
+    			name: d.country,
+    			value: d["gce_per_capita"]
+    		};
+
+    		//}
+    		return res;
+    	});
+
+    	let datos = [
+    		{
+    			name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018",
+    			data: dataPlugin
+    		},
+    		{
+    			name: "Porcentaje per capital en el año 2014",
+    			data: dataAPI28
+    		}
+    	];
+
+    	Highcharts.chart("container28", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: { text: "Integración con el grupo 28." },
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}%"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "20%",
+    				maxSize: "100%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					gravitationalConstant: 0.05,
+    					splitSeries: true,
+    					seriesInteraction: false,
+    					dragBetweenSeries: true,
+    					parentNodeLimit: true
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: datos
+    	});
+    }
+
+    async function loadGraphExternal01() {
+    	const BASE_API_URL_External01 = "/v3/launches";
+    	const resData = await fetch(BASE_API_URL$6);
+    	const resDataExternal01 = await fetch(BASE_API_URL_External01);
+    	let MyData = await resData.json();
+    	let DataExternal01 = await resDataExternal01.json();
+
+    	/*
+                Sus Datos: (HAY BASTANTES MÁS, PERO DENTRO DE ESTOS ESTÁN LOS QUE YO USARE)
+    }
+
+        "flight_number": 1,
+        "mission_name": "FalconSat",
+        "mission_id": [
+        
+        ],
+        
+        "launch_year": "2006",
+        
+        "rocket_id": "falcon1",
+        "rocket_name": "Falcon 1",
+        "rocket_type": "Merlin A",
+        
+        "second_stage": {
+            "block": 1,
+            "payloads": [
+            {
+                "payload_id": "FalconSAT-2",
+                "norad_id": [
+                
+                ],
+                "reused": false,
+                "customers": [
+                "DARPA"
+                ],
+                "nationality": "United States",
+                "payload_mass_kg": 20
+        }
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+    	let dataPlugin = MyData.map(d => {
+    		let res = {
+    			name: d.country,
+    			value: d["cars-per-1000"]
+    		};
+
+    		return res;
+    	});
+
+    	let dataAPIExternal01 = DataExternal01.map(d => {
+    		console.log(d["second_stage"]);
+
+    		let res = {
+    			name: d.second_stage.payloads.nationality,
+    			value: d.second_stage.payloads.payload_mass_kg
+    		};
+
+    		return res;
+    	});
+
+    	let datos = [
+    		{
+    			name: "Porcentaje de coche eléctricos cada 1000 personas.",
+    			data: dataPlugin
+    		},
+    		{
+    			name: "Número total de carreteras, autopistas y autovías.",
+    			data: dataAPIExternal01
+    		}
+    	];
+
+    	Highcharts.chart("container", {
+    		chart: { type: "packedbubble", height: "100%" },
+    		title: {
+    			text: "Integración con api externa satex."
+    		},
+    		tooltip: {
+    			useHTML: true,
+    			pointFormat: "<b>{point.name}:</b> {point.value}"
+    		},
+    		plotOptions: {
+    			packedbubble: {
+    				minSize: "20%",
+    				maxSize: "100%",
+    				zMin: 0,
+    				zMax: 1000,
+    				layoutAlgorithm: {
+    					gravitationalConstant: 0.05,
+    					splitSeries: true,
+    					seriesInteraction: false,
+    					dragBetweenSeries: true,
+    					parentNodeLimit: true
+    				},
+    				dataLabels: {
+    					enabled: true,
+    					format: "{point.name}",
+    					filter: { property: "y", operator: ">", value: 250 },
+    					style: {
+    						color: "black",
+    						textOutline: "none",
+    						fontWeight: "normal"
+    					}
+    				}
+    			}
+    		},
+    		series: datos
+    	});
     }
 
     function instance$u($$self, $$props, $$invalidate) {
+    	loadGraphExternal01();
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Integrations> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$b.warn(`<Integrations> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("Integrations", $$slots, []);
-    	$$self.$capture_state = () => ({ Button, pop });
+
+    	$$self.$capture_state = () => ({
+    		Button,
+    		pop,
+    		BASE_API_URL: BASE_API_URL$6,
+    		loadGraph01,
+    		loadGraph04,
+    		loadGraph05,
+    		loadGraph06,
+    		loadGraph07,
+    		loadGraph08,
+    		loadGraph12,
+    		loadGraph23: loadGraph23$1,
+    		loadGraph24,
+    		loadGraph27: loadGraph27$1,
+    		loadGraph28,
+    		loadGraphExternal01
+    	});
+
     	return [];
     }
 

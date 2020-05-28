@@ -9,12 +9,28 @@ module.exports = function (app) {
 	const express = require("express");
 	var api07 = 'https://sos1920-07.herokuapp.com';
 	var path07 = '/api/v2/foodsImports';
+	var api05 = 'https://sos1920-05.herokuapp.com';
+	var path05 = '/api/v1/books-exports';
+	var api6 = 'https://sos1920-06.herokuapp.com';
+	var path6 = '/api/v2/lottery-sales';
+	var api1 = 'https://sos1920-01.herokuapp.com';
+	var path1 = '/api/v2/natality-stats';
+	var api23 = 'https://sos1920-23.herokuapp.com';
+	var path23 = '/api/v2/cigarretes-sales';
+	var api25 = 'https://sos1920-25.herokuapp.com';
+	var path25 = '/api/v2/happiness_rate';
+	var api8 = 'https://sos1920-08.herokuapp.com';
+	var path8 = '/api/v1/motogp-statistics';
+
+	var apiExt = 'http://countryapi.gear.host';
+	var pathExt = '/v1/Country/getCountries';
 	
 	const db = new dataStore({
 		filename: dbFileName,
 		autoload: true
 	});
 	
+	/* Pipes */
 	app.use(path07, function(req, res) {
 		var url = api07 + req.baseUrl + req.url;
 		console.log('piped: ' + req.baseUrl + req.url);
@@ -22,7 +38,58 @@ module.exports = function (app) {
 	});
 	app.use(express.static('.'));
 
+	app.use(path05, function(req, res) {
+		var url = api05 + req.baseUrl + req.url;
+		console.log('piped: ' + req.baseUrl + req.url);
+		req.pipe(request(url)).pipe(res);
+	});
+	app.use(express.static('.'));
+
+	app.use(path6, function(req, res) {
+		var url = api6 + req.baseUrl + req.url;
+		console.log('piped: ' + req.baseUrl + req.url);
+		req.pipe(request(url)).pipe(res);
+	});
+	app.use(express.static('.'));
+
+	app.use(path1, function(req, res) {
+		var url = api1 + req.baseUrl + req.url;
+		console.log('piped: ' + req.baseUrl + req.url);
+		req.pipe(request(url)).pipe(res);
+	});
+	app.use(express.static('.'));
+
+	app.use(path23, function(req, res) {
+		var url = api23 + req.baseUrl + req.url;
+		console.log('piped: ' + req.baseUrl + req.url);
+		req.pipe(request(url)).pipe(res);
+	});
+	app.use(express.static('.'));
+
+	app.use(path25, function(req, res) {
+		var url = api25 + req.baseUrl + req.url;
+		console.log('piped: ' + req.baseUrl + req.url);
+		req.pipe(request(url)).pipe(res);
+	});
+	app.use(express.static('.'));
+
+	app.use(path8, function(req, res) {
+		var url = api8 + req.baseUrl + req.url;
+		console.log('piped: ' + req.baseUrl + req.url);
+		req.pipe(request(url)).pipe(res);
+	});
+	app.use(express.static('.'));
+
+	app.use(pathExt, function(req, res) {
+		var url = apiExt + req.baseUrl + req.url;
+		console.log('piped: ' + req.baseUrl + req.url);
+		req.pipe(request(url)).pipe(res);
+	});
+	app.use(express.static('.'));
+
 	
+
+
 	var initialRenewableSourcesStats = [
 		{ 
 			"country": "Spain",
@@ -143,7 +210,51 @@ module.exports = function (app) {
 			"percentage-hydropower-total": 69.3,
 			"percentage-wind-power-total": 4.2
 
-		}
+		},
+		{
+			"country": "Mexico",
+			"year": 2015,
+			"percentage-re-total": 24.2,
+			"percentage-hydropower-total": 89.3,
+			"percentage-wind-power-total": 1.3
+
+		},
+		{
+			"country": "France",
+			"year": 2015,
+			"percentage-re-total": 18.3,
+			"percentage-hydropower-total": 15.7,
+			"percentage-wind-power-total": 61.8
+		},
+		{
+			"country": "Mexico",
+			"year": 2016,
+			"percentage-re-total": 24.2,
+			"percentage-hydropower-total": 89.7,
+			"percentage-wind-power-total": 1.7
+		},
+		{
+			"country": "Germany",
+			"year": 2019,
+			"percentage-re-total": 44.2,
+			"percentage-hydropower-total": 99.9,
+			"percentage-wind-power-total": 8.7
+		},
+		{
+			"country": "Spain",
+			"year": 2019,
+			"percentage-re-total": 47.2,
+			"percentage-hydropower-total": 34.5,
+			"percentage-wind-power-total": 54.1
+		},
+		{
+			"country": "Spain",
+			"year": 2009,
+			"percentage-re-total": 8.5,
+			"percentage-hydropower-total": 4.6,
+			"percentage-wind-power-total": 8.1
+		},
+
 		
 		
 	];

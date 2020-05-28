@@ -112,7 +112,8 @@
     }
 
 	async function loadInitialOilEnergy() {
-        console.log("Loading initial oil scoal stats data..."); 
+		console.log("Loading initial oil scoal stats data...");
+		deleteOilEnergys();
         const res = await fetch(BASE_API_URL + "/loadInitialData").then(function (res) {
 			if (res.ok){
 				/* putting the current year and the country to remove the search*/
