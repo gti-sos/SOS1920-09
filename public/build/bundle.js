@@ -23424,7 +23424,7 @@ var app = (function () {
     const { console: console_1$b } = globals;
     const file$t = "src\\front\\plugInVehiclesAPI\\Integrations.svelte";
 
-    // (1437:4) <Button outline color="secondary" on:click="{pop}">
+    // (1432:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$g(ctx) {
     	let i;
     	let t;
@@ -23434,7 +23434,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$t, 1436, 56, 44813);
+    			add_location(i, file$t, 1431, 56, 44818);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -23450,7 +23450,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$g.name,
     		type: "slot",
-    		source: "(1437:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(1432:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -23700,225 +23700,225 @@ var app = (function () {
     			t55 = space();
     			create_component(button.$$.fragment);
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$t, 1304, 4, 37637);
+    			add_location(script0, file$t, 1299, 4, 37642);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$t, 1305, 4, 37708);
+    			add_location(script1, file$t, 1300, 4, 37713);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$t, 1306, 4, 37784);
+    			add_location(script2, file$t, 1301, 4, 37789);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$t, 1307, 4, 37862);
+    			add_location(script3, file$t, 1302, 4, 37867);
     			attr_dev(a0, "class", "list-group-item list-group-item-action active");
     			attr_dev(a0, "id", "list-home-list");
     			attr_dev(a0, "data-toggle", "list");
     			attr_dev(a0, "href", "#list-01");
     			attr_dev(a0, "role", "tab");
     			attr_dev(a0, "aria-controls", "home");
-    			add_location(a0, file$t, 1328, 12, 38350);
+    			add_location(a0, file$t, 1323, 12, 38355);
     			attr_dev(a1, "class", "list-group-item list-group-item-action");
     			attr_dev(a1, "id", "list-profile-list");
     			attr_dev(a1, "data-toggle", "list");
     			attr_dev(a1, "href", "#list-04");
     			attr_dev(a1, "role", "tab");
     			attr_dev(a1, "aria-controls", "profile");
-    			add_location(a1, file$t, 1329, 12, 38546);
+    			add_location(a1, file$t, 1324, 12, 38551);
     			attr_dev(a2, "class", "list-group-item list-group-item-action");
     			attr_dev(a2, "id", "list-profile-list");
     			attr_dev(a2, "data-toggle", "list");
     			attr_dev(a2, "href", "#list-05");
     			attr_dev(a2, "role", "tab");
     			attr_dev(a2, "aria-controls", "profile");
-    			add_location(a2, file$t, 1330, 12, 38725);
+    			add_location(a2, file$t, 1325, 12, 38730);
     			attr_dev(a3, "class", "list-group-item list-group-item-action");
     			attr_dev(a3, "id", "list-profile-list");
     			attr_dev(a3, "data-toggle", "list");
     			attr_dev(a3, "href", "#list-06");
     			attr_dev(a3, "role", "tab");
     			attr_dev(a3, "aria-controls", "profile");
-    			add_location(a3, file$t, 1331, 12, 38904);
+    			add_location(a3, file$t, 1326, 12, 38909);
     			attr_dev(a4, "class", "list-group-item list-group-item-action");
     			attr_dev(a4, "id", "list-profile-list");
     			attr_dev(a4, "data-toggle", "list");
     			attr_dev(a4, "href", "#list-07");
     			attr_dev(a4, "role", "tab");
     			attr_dev(a4, "aria-controls", "profile");
-    			add_location(a4, file$t, 1332, 12, 39083);
+    			add_location(a4, file$t, 1327, 12, 39088);
     			attr_dev(a5, "class", "list-group-item list-group-item-action");
     			attr_dev(a5, "id", "list-profile-list");
     			attr_dev(a5, "data-toggle", "list");
     			attr_dev(a5, "href", "#list-08");
     			attr_dev(a5, "role", "tab");
     			attr_dev(a5, "aria-controls", "profile");
-    			add_location(a5, file$t, 1333, 12, 39262);
+    			add_location(a5, file$t, 1328, 12, 39267);
     			attr_dev(a6, "class", "list-group-item list-group-item-action");
     			attr_dev(a6, "id", "list-profile-list");
     			attr_dev(a6, "data-toggle", "list");
     			attr_dev(a6, "href", "#list-12");
     			attr_dev(a6, "role", "tab");
     			attr_dev(a6, "aria-controls", "profile");
-    			add_location(a6, file$t, 1334, 12, 39441);
+    			add_location(a6, file$t, 1329, 12, 39446);
     			attr_dev(a7, "class", "list-group-item list-group-item-action");
     			attr_dev(a7, "id", "list-profile-list");
     			attr_dev(a7, "data-toggle", "list");
     			attr_dev(a7, "href", "#list-23");
     			attr_dev(a7, "role", "tab");
     			attr_dev(a7, "aria-controls", "profile");
-    			add_location(a7, file$t, 1335, 12, 39620);
+    			add_location(a7, file$t, 1330, 12, 39625);
     			attr_dev(a8, "class", "list-group-item list-group-item-action");
     			attr_dev(a8, "id", "list-profile-list");
     			attr_dev(a8, "data-toggle", "list");
     			attr_dev(a8, "href", "#list-24");
     			attr_dev(a8, "role", "tab");
     			attr_dev(a8, "aria-controls", "profile");
-    			add_location(a8, file$t, 1336, 12, 39799);
+    			add_location(a8, file$t, 1331, 12, 39804);
     			attr_dev(a9, "class", "list-group-item list-group-item-action");
     			attr_dev(a9, "id", "list-profile-list");
     			attr_dev(a9, "data-toggle", "list");
     			attr_dev(a9, "href", "#list-27");
     			attr_dev(a9, "role", "tab");
     			attr_dev(a9, "aria-controls", "profile");
-    			add_location(a9, file$t, 1337, 12, 39978);
+    			add_location(a9, file$t, 1332, 12, 39983);
     			attr_dev(a10, "class", "list-group-item list-group-item-action");
     			attr_dev(a10, "id", "list-profile-list");
     			attr_dev(a10, "data-toggle", "list");
     			attr_dev(a10, "href", "#list-28");
     			attr_dev(a10, "role", "tab");
     			attr_dev(a10, "aria-controls", "profile");
-    			add_location(a10, file$t, 1338, 12, 40157);
+    			add_location(a10, file$t, 1333, 12, 40162);
     			attr_dev(div0, "class", "list-group");
     			attr_dev(div0, "id", "list-tab");
     			attr_dev(div0, "role", "tablist");
-    			add_location(div0, file$t, 1326, 10, 38281);
+    			add_location(div0, file$t, 1321, 10, 38286);
     			attr_dev(div1, "class", "col-4");
-    			add_location(div1, file$t, 1325, 8, 38250);
+    			add_location(div1, file$t, 1320, 8, 38255);
     			attr_dev(div2, "id", "container01");
-    			add_location(div2, file$t, 1346, 20, 40643);
+    			add_location(div2, file$t, 1341, 20, 40648);
     			attr_dev(p0, "class", "highcharts-description");
-    			add_location(p0, file$t, 1347, 20, 40693);
+    			add_location(p0, file$t, 1342, 20, 40698);
     			attr_dev(figure0, "class", "highcharts-figure");
-    			add_location(figure0, file$t, 1345, 16, 40587);
+    			add_location(figure0, file$t, 1340, 16, 40592);
     			attr_dev(div3, "class", "tab-pane fade show active");
     			attr_dev(div3, "id", "list-01");
     			attr_dev(div3, "role", "tabpanel");
     			attr_dev(div3, "aria-labelledby", "list-home-list");
-    			add_location(div3, file$t, 1344, 12, 40468);
+    			add_location(div3, file$t, 1339, 12, 40473);
     			attr_dev(div4, "id", "container04");
-    			add_location(div4, file$t, 1354, 20, 41104);
+    			add_location(div4, file$t, 1349, 20, 41109);
     			attr_dev(p1, "class", "highcharts-description");
-    			add_location(p1, file$t, 1355, 20, 41154);
+    			add_location(p1, file$t, 1350, 20, 41159);
     			attr_dev(figure1, "class", "highcharts-figure");
-    			add_location(figure1, file$t, 1353, 16, 41048);
+    			add_location(figure1, file$t, 1348, 16, 41053);
     			attr_dev(div5, "class", "tab-pane fade");
     			attr_dev(div5, "id", "list-04");
     			attr_dev(div5, "role", "tabpanel");
     			attr_dev(div5, "aria-labelledby", "list-profile-list");
-    			add_location(div5, file$t, 1352, 12, 40938);
+    			add_location(div5, file$t, 1347, 12, 40943);
     			attr_dev(div6, "id", "container05");
-    			add_location(div6, file$t, 1362, 20, 41481);
+    			add_location(div6, file$t, 1357, 20, 41486);
     			attr_dev(p2, "class", "highcharts-description");
-    			add_location(p2, file$t, 1363, 20, 41531);
+    			add_location(p2, file$t, 1358, 20, 41536);
     			attr_dev(figure2, "class", "highcharts-figure");
-    			add_location(figure2, file$t, 1361, 16, 41425);
+    			add_location(figure2, file$t, 1356, 16, 41430);
     			attr_dev(div7, "class", "tab-pane fade");
     			attr_dev(div7, "id", "list-05");
     			attr_dev(div7, "role", "tabpanel");
     			attr_dev(div7, "aria-labelledby", "list-profile-list");
-    			add_location(div7, file$t, 1360, 12, 41315);
+    			add_location(div7, file$t, 1355, 12, 41320);
     			attr_dev(div8, "id", "container06");
-    			add_location(div8, file$t, 1370, 20, 41858);
+    			add_location(div8, file$t, 1365, 20, 41863);
     			attr_dev(p3, "class", "highcharts-description");
-    			add_location(p3, file$t, 1371, 20, 41908);
+    			add_location(p3, file$t, 1366, 20, 41913);
     			attr_dev(figure3, "class", "highcharts-figure");
-    			add_location(figure3, file$t, 1369, 16, 41802);
+    			add_location(figure3, file$t, 1364, 16, 41807);
     			attr_dev(div9, "class", "tab-pane fade");
     			attr_dev(div9, "id", "list-06");
     			attr_dev(div9, "role", "tabpanel");
     			attr_dev(div9, "aria-labelledby", "list-profile-list");
-    			add_location(div9, file$t, 1368, 12, 41692);
+    			add_location(div9, file$t, 1363, 12, 41697);
     			attr_dev(div10, "id", "container07");
-    			add_location(div10, file$t, 1378, 20, 42235);
+    			add_location(div10, file$t, 1373, 20, 42240);
     			attr_dev(p4, "class", "highcharts-description");
-    			add_location(p4, file$t, 1379, 20, 42285);
+    			add_location(p4, file$t, 1374, 20, 42290);
     			attr_dev(figure4, "class", "highcharts-figure");
-    			add_location(figure4, file$t, 1377, 16, 42179);
+    			add_location(figure4, file$t, 1372, 16, 42184);
     			attr_dev(div11, "class", "tab-pane fade");
     			attr_dev(div11, "id", "list-07");
     			attr_dev(div11, "role", "tabpanel");
     			attr_dev(div11, "aria-labelledby", "list-profile-list");
-    			add_location(div11, file$t, 1376, 12, 42069);
+    			add_location(div11, file$t, 1371, 12, 42074);
     			attr_dev(div12, "id", "container08");
-    			add_location(div12, file$t, 1386, 20, 42612);
+    			add_location(div12, file$t, 1381, 20, 42617);
     			attr_dev(p5, "class", "highcharts-description");
-    			add_location(p5, file$t, 1387, 20, 42662);
+    			add_location(p5, file$t, 1382, 20, 42667);
     			attr_dev(figure5, "class", "highcharts-figure");
-    			add_location(figure5, file$t, 1385, 16, 42556);
+    			add_location(figure5, file$t, 1380, 16, 42561);
     			attr_dev(div13, "class", "tab-pane fade");
     			attr_dev(div13, "id", "list-08");
     			attr_dev(div13, "role", "tabpanel");
     			attr_dev(div13, "aria-labelledby", "list-profile-list");
-    			add_location(div13, file$t, 1384, 12, 42446);
+    			add_location(div13, file$t, 1379, 12, 42451);
     			attr_dev(div14, "id", "container12");
-    			add_location(div14, file$t, 1394, 20, 42989);
+    			add_location(div14, file$t, 1389, 20, 42994);
     			attr_dev(p6, "class", "highcharts-description");
-    			add_location(p6, file$t, 1395, 20, 43039);
+    			add_location(p6, file$t, 1390, 20, 43044);
     			attr_dev(figure6, "class", "highcharts-figure");
-    			add_location(figure6, file$t, 1393, 16, 42933);
+    			add_location(figure6, file$t, 1388, 16, 42938);
     			attr_dev(div15, "class", "tab-pane fade");
     			attr_dev(div15, "id", "list-12");
     			attr_dev(div15, "role", "tabpanel");
     			attr_dev(div15, "aria-labelledby", "list-profile-list");
-    			add_location(div15, file$t, 1392, 12, 42823);
+    			add_location(div15, file$t, 1387, 12, 42828);
     			attr_dev(div16, "id", "container23");
-    			add_location(div16, file$t, 1402, 20, 43366);
+    			add_location(div16, file$t, 1397, 20, 43371);
     			attr_dev(p7, "class", "highcharts-description");
-    			add_location(p7, file$t, 1403, 20, 43416);
+    			add_location(p7, file$t, 1398, 20, 43421);
     			attr_dev(figure7, "class", "highcharts-figure");
-    			add_location(figure7, file$t, 1401, 16, 43310);
+    			add_location(figure7, file$t, 1396, 16, 43315);
     			attr_dev(div17, "class", "tab-pane fade");
     			attr_dev(div17, "id", "list-23");
     			attr_dev(div17, "role", "tabpanel");
     			attr_dev(div17, "aria-labelledby", "list-profile-list");
-    			add_location(div17, file$t, 1400, 12, 43200);
+    			add_location(div17, file$t, 1395, 12, 43205);
     			attr_dev(div18, "id", "container24");
-    			add_location(div18, file$t, 1410, 20, 43743);
+    			add_location(div18, file$t, 1405, 20, 43748);
     			attr_dev(p8, "class", "highcharts-description");
-    			add_location(p8, file$t, 1411, 20, 43793);
+    			add_location(p8, file$t, 1406, 20, 43798);
     			attr_dev(figure8, "class", "highcharts-figure");
-    			add_location(figure8, file$t, 1409, 16, 43687);
+    			add_location(figure8, file$t, 1404, 16, 43692);
     			attr_dev(div19, "class", "tab-pane fade");
     			attr_dev(div19, "id", "list-24");
     			attr_dev(div19, "role", "tabpanel");
     			attr_dev(div19, "aria-labelledby", "list-profile-list");
-    			add_location(div19, file$t, 1408, 12, 43577);
+    			add_location(div19, file$t, 1403, 12, 43582);
     			attr_dev(div20, "id", "container27");
-    			add_location(div20, file$t, 1418, 20, 44120);
+    			add_location(div20, file$t, 1413, 20, 44125);
     			attr_dev(p9, "class", "highcharts-description");
-    			add_location(p9, file$t, 1419, 20, 44170);
+    			add_location(p9, file$t, 1414, 20, 44175);
     			attr_dev(figure9, "class", "highcharts-figure");
-    			add_location(figure9, file$t, 1417, 16, 44064);
+    			add_location(figure9, file$t, 1412, 16, 44069);
     			attr_dev(div21, "class", "tab-pane fade");
     			attr_dev(div21, "id", "list-27");
     			attr_dev(div21, "role", "tabpanel");
     			attr_dev(div21, "aria-labelledby", "list-profile-list");
-    			add_location(div21, file$t, 1416, 12, 43954);
+    			add_location(div21, file$t, 1411, 12, 43959);
     			attr_dev(div22, "id", "container28");
-    			add_location(div22, file$t, 1426, 20, 44497);
+    			add_location(div22, file$t, 1421, 20, 44502);
     			attr_dev(p10, "class", "highcharts-description");
-    			add_location(p10, file$t, 1427, 20, 44547);
+    			add_location(p10, file$t, 1422, 20, 44552);
     			attr_dev(figure10, "class", "highcharts-figure");
-    			add_location(figure10, file$t, 1425, 16, 44441);
+    			add_location(figure10, file$t, 1420, 16, 44446);
     			attr_dev(div23, "class", "tab-pane fade");
     			attr_dev(div23, "id", "list-28");
     			attr_dev(div23, "role", "tabpanel");
     			attr_dev(div23, "aria-labelledby", "list-profile-list");
-    			add_location(div23, file$t, 1424, 12, 44331);
+    			add_location(div23, file$t, 1419, 12, 44336);
     			attr_dev(div24, "class", "tab-content");
     			attr_dev(div24, "id", "nav-tabContent");
-    			add_location(div24, file$t, 1343, 10, 40409);
+    			add_location(div24, file$t, 1338, 10, 40414);
     			attr_dev(div25, "class", "col-8");
-    			add_location(div25, file$t, 1342, 8, 40378);
+    			add_location(div25, file$t, 1337, 8, 40383);
     			attr_dev(div26, "class", "row");
-    			add_location(div26, file$t, 1324, 4, 38223);
-    			add_location(main, file$t, 1311, 0, 37964);
+    			add_location(div26, file$t, 1319, 4, 38228);
+    			add_location(main, file$t, 1306, 0, 37969);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -24458,7 +24458,7 @@ var app = (function () {
     	});
 
     	let dataAPI07 = Data07.filter(d => {
-    		return d.year == 2000;
+    		return d.year == 2000 && d.country != "total";
     	}).map(d => {
     		let res = {
     			name: d.country,
@@ -24516,7 +24516,7 @@ var app = (function () {
     }
 
     async function loadGraph08() {
-    	const BASE_API_URL_08 = "/api/v1/electricity-produced-stats/";
+    	const BASE_API_URL_08 = "/api/v1/electricity-produced-stats/loadInitialData()";
     	const resData = await fetch(BASE_API_URL$6);
     	const resData08 = await fetch(BASE_API_URL_08);
     	let MyData = await resData.json();
@@ -24930,11 +24930,10 @@ var app = (function () {
     		return res;
     	});
 
-    	let dataAPI27 = Data27.map(d => {
-    		//if(d.year == 2013){
+    	let dataAPI27 = Data27.filter(d => {
+    		return d.year == 2013;
+    	}).map(d => {
     		let res = { name: d.country, value: d["both_sex"] };
-
-    		//}
     		return res;
     	});
 
@@ -25019,14 +25018,14 @@ var app = (function () {
     		return res;
     	});
 
-    	let dataAPI28 = Data28.map(d => {
-    		//if(d.year == 2014){
+    	let dataAPI28 = Data28.filter(d => {
+    		return d.year == 2014;
+    	}).map(d => {
     		let res = {
     			name: d.country,
     			value: d["gce_per_capita"]
     		};
 
-    		//}
     		return res;
     	});
 
@@ -25194,7 +25193,17 @@ var app = (function () {
     }
 
     function instance$u($$self, $$props, $$invalidate) {
-    	loadGraphExternal01();
+    	loadGraph01(); //Implementado mediante proxy
+    	loadGraph04(); //Implementado mediante cors
+    	loadGraph05(); //Implementado mediante proxy
+    	loadGraph06(); //Implementado mediante proxy
+    	loadGraph07(); //Implementado mediante cors
+    	loadGraph08(); //Implementado mediante proxy
+    	loadGraph12(); //Implementado mediante cors
+    	loadGraph23$1(); //Implementado mediante cors
+    	loadGraph24(); //Implementado mediante cors
+    	loadGraph27$1(); //Implementado mediante cors
+    	loadGraph28(); //Implementado mediante proxy
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {

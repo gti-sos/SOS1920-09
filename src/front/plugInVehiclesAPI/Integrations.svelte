@@ -453,7 +453,7 @@
             return res;
         });
 
-        let dataAPI07 = Data07.filter((d) => {return d.year==2000;}).map((d) => {
+        let dataAPI07 = Data07.filter((d) => {return d.year==2000 && d.country != "total";}).map((d) => {
                 let res = {
                     name: d.country,
                     value: d.gdaethylalcohol
@@ -522,7 +522,7 @@
 
     async function loadGraph08(){
     
-        const BASE_API_URL_08 = "/api/v1/electricity-produced-stats/";
+        const BASE_API_URL_08 = "/api/v1/electricity-produced-stats/loadInitialData()";
 
         const resData = await fetch(BASE_API_URL);
         const resData08 = await fetch(BASE_API_URL_08);
@@ -990,13 +990,11 @@
 			return res;
         });
 
-        let dataAPI27 = Data27.map((d) => {
-            //if(d.year == 2013){
+        let dataAPI27 = Data27.filter((d) => {return d.year==2013;}).map((d) => {
                 let res = {
                     name: d.country,
                     value: d["both_sex"]
                 };
-            //}
 			return res;
         });
 
@@ -1093,13 +1091,11 @@
             return res;
         });
 
-        let dataAPI28 = Data28.map((d) => {
-            //if(d.year == 2014){
+        let dataAPI28 = Data28.filter((d) => {return d.year==2014;}).map((d) => {
                 let res = {
                     name: d.country,
                     value: d["gce_per_capita"]
                 };
-            //}
             return res;
         });
 
@@ -1284,7 +1280,7 @@
         });
 
     }
-/*
+
     loadGraph01(); //Implementado mediante proxy
     loadGraph04(); //Implementado mediante cors
     loadGraph05(); //Implementado mediante proxy
@@ -1296,8 +1292,7 @@
     loadGraph24(); //Implementado mediante cors
     loadGraph27(); //Implementado mediante cors
     loadGraph28(); //Implementado mediante proxy
-    */
-    loadGraphExternal01();
+    //loadGraphExternal01();
 </script>
 
 
