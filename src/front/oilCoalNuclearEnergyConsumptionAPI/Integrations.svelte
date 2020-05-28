@@ -757,18 +757,108 @@ async function loadGraph01(){
      });
 }
 
+async function loadGraphExt1(){
+        console.log("Loading external api");
+        
+        const BASE_API_URL  = "/api/v2/oil-coal-nuclear-energy-consumption-stats";
+        const BASE_API_URL_External01 = "https://restcountries.eu/rest/v2/all?fields=name;area;population";
 
+        const resData = await fetch(BASE_API_URL);
+        const resDataExternal01 = await fetch(BASE_API_URL_External01);
+        let MyData = await resData.json();
+        let DataExternal01 = await resDataExternal01.json();
+        console.log(DataExternal01);
+        console.log(MyData);
+
+            
+            let dataPrimary = MyData.map((d) => {
+                let res = {
+                    name: d.country + " - " + d.year,
+                    value: d["oil-consumption"]
+                };
+                return res;
+            });
+
+            let dataAPIExternal01 = DataExternal01.filter((d) => {return d.area > 5000000;}).map((d) =>  {
+            let res = {
+                name:  d.name + " - " + d.population,
+                value: d.area
+            };
+            return res;
+        });
+        
+        
+		let datos = 
+        [
+            {
+                name: "Millones de toneladas de petróleo.",
+                data: dataPrimary
+            },
+            {
+                name: "Area por País y Población.",
+                data: dataAPIExternal01
+            }
+        ];
+
+        Highcharts.chart('container-ext', {
+			chart: {
+				type: 'packedbubble',
+				height: '100%'
+			},
+			title: {
+				text: 'Relacion Consumo de petroleo por Países junto con Países y su Poblacion con un area meno que 250.'
+			},
+			tooltip: {
+				useHTML: true,
+				pointFormat: '<b>{point.name}:</b> {point.value}'
+			},
+			plotOptions: {
+				packedbubble: {
+					minSize: '30%',
+					maxSize: '120%',
+					zMin: 0,
+					zMax: 1000,
+					layoutAlgorithm: {
+						splitSeries: false,
+						gravitationalConstant: 0.02
+					},
+					dataLabels: {
+						enabled: true,
+						format: '{point.name}',
+						filter: {
+							property: 'y',
+							operator: '>',
+							value: 250
+						},
+						style: {
+							color: 'black',
+							textOutline: 'none',
+							fontWeight: 'normal'
+						}
+					}
+				}
+			},
+			series: datos
+		});
+    }
 
 loadGraph4();
 loadGraph2();
 loadGraph12();
 loadGraph01();
-
+loadGraphExt1();
 
 
 
 </script>
 
+<svelte:head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+</svelte:head>
 
 
 <main>
@@ -779,7 +869,7 @@ loadGraph01();
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-2" role="tab" aria-controls="profile">Integración con 2</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-12" role="tab" aria-controls="profile">Integración con 12</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-01" role="tab" aria-controls="profile">Integración con 1</a>
-            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-22" role="tab" aria-controls="profile">Integración con 22</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-ext" role="tab" aria-controls="profile">Integración API Externa 1</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-28" role="tab" aria-controls="profile">Integración con 28</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-ext" role="tab" aria-controls="profile">Integración con API externa</a>
 
@@ -819,11 +909,12 @@ loadGraph01();
                     </p>
                 </figure>
             </div>
-            <div class="tab-pane fade" id="list-22" role="tabpanel" aria-labelledby="list-profile-list">
+            <div class="tab-pane fade" id="list-ext" role="tabpanel" aria-labelledby="list-profile-list">
                 <figure class="highcharts-figure">
-                    <div id="container-22"></div>
+                    <div id="container-ext"></div>
                     <p class="highcharts-description">
-                        Integra la 22.
+                        Integración de API externa 
+                        <a href="https://restcountries.eu/rest/v2/all?fields=name;area;population">Link de la API</a>
                     </p>
                 </figure>
             </div>

@@ -16,6 +16,9 @@ module.exports = function(app) {
 	
 	var api02 = 'http://sos1920-02.herokuapp.com';
 	var path02= '/api/v2/evolution-of-cycling-routes';
+
+	var apiExt01 = 'https://restcountries.eu/'; // Integración mediante proxy external api 01
+	var pathsExt01='/rest/v2/all?fields=name;area;population';
 	
 
 	const db = new dataS ({
@@ -23,6 +26,12 @@ module.exports = function(app) {
 		autoload : true
 	});
 
+	/*app.use(pathsExt01, function(req, res) {
+        var url = apiExt01 + req.baseUrl + req.url;
+        console.log('piped: ' + req.baseUrl + req.url);
+        req.pipe(request(url)).pipe(res);
+	});
+	*/
 
 	app.use(path01, function(req,res){
 		var url = api01+req.baseUrl + req.url;
