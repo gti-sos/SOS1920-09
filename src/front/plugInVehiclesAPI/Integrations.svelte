@@ -78,7 +78,7 @@
         plotOptions: {
             packedbubble: {
             minSize: '20%',
-            maxSize: '100%',
+            maxSize: '60%',
             zMin: 0,
             zMax: 1000,
             layoutAlgorithm: {
@@ -139,7 +139,7 @@
         }
         */
 
-        let dataPlugin = MyData.filter((d) => {return d.year==2018;}).map((d) => {
+        let dataPlugin = MyData.filter((d) => {return d.year==2018 && d.country=="Spain";}).map((d) => {
             let res = {
                 name: d.country,
                 value: d["annual-sale"]
@@ -158,7 +158,7 @@
         let datos = 
         [
             {
-                name: "Ventas anuales de coches electricos en 2018.",
+                name: "Ventas anuales de coches electricos en España en 2018.",
                 data: dataPlugin
             },
             {
@@ -181,8 +181,8 @@
             },
             plotOptions: {
                 packedbubble: {
-                minSize: '20%',
-                maxSize: '100%',
+                minSize: '05%',
+                maxSize: '40%',
                 zMin: 0,
                 zMax: 1000,
                 layoutAlgorithm: {
@@ -282,7 +282,7 @@
             },
             plotOptions: {
                 packedbubble: {
-                minSize: '20%',
+                minSize: '30%',
                 maxSize: '100%',
                 zMin: 0,
                 zMax: 1000,
@@ -342,7 +342,7 @@
         }
         */
 
-        let dataPlugin = MyData.filter((d) => {return d.year==2018;}).map((d) => {
+        let dataPlugin = MyData.filter((d) => {return d.year==2018 && d.country=="Spain";}).map((d) => {
             let res = {
                 name: d.country,
                 value: d["cars-per-1000"]
@@ -361,7 +361,7 @@
         let datos = 
         [
             {
-                name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018.",
+                name: "Porcentaje de coche eléctricos cada 1000 personas en España en el año 2018.",
                 data: dataPlugin
             },
             {
@@ -384,8 +384,8 @@
             },
             plotOptions: {
                 packedbubble: {
-                minSize: '20%',
-                maxSize: '100%',
+                minSize: '15%',
+                maxSize: '40%',
                 zMin: 0,
                 zMax: 1000,
                 layoutAlgorithm: {
@@ -491,7 +491,7 @@
             plotOptions: {
                 packedbubble: {
                 minSize: '20%',
-                maxSize: '100%',
+                maxSize: '70%',
                 zMin: 0,
                 zMax: 1000,
                 layoutAlgorithm: {
@@ -617,7 +617,7 @@
             plotOptions: {
                 packedbubble: {
                 minSize: '20%',
-                maxSize: '100%',
+                maxSize: '70%',
                 zMin: 0,
                 zMax: 1000,
                 layoutAlgorithm: {
@@ -719,7 +719,7 @@
             plotOptions: {
                 packedbubble: {
                 minSize: '20%',
-                maxSize: '100%',
+                maxSize: '80%',
                 zMin: 0,
                 zMax: 1000,
                 layoutAlgorithm: {
@@ -777,7 +777,7 @@
         }
         */
 
-        let dataPlugin = MyData.filter((d) => {return d.year==2018;}).map((d) => {
+        let dataPlugin = MyData.filter((d) => {return d.year==2018 && d.country=="Spain";}).map((d) => {
             let res = {
                 name: d.country,
                 value: d["cars-per-1000"]
@@ -796,7 +796,7 @@
         let datos = 
         [
             {
-                name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018.",
+                name: "Porcentaje de coches eléctricos cada 1000 personas en España en el año 2018.",
                 data: dataPlugin
             },
             {
@@ -819,8 +819,8 @@
             },
             plotOptions: {
                 packedbubble: {
-                minSize: '20%',
-                maxSize: '100%',
+                minSize: '25%',
+                maxSize: '55%',
                 zMin: 0,
                 zMax: 1000,
                 layoutAlgorithm: {
@@ -878,7 +878,7 @@
         }
         */
 
-        let dataPlugin = MyData.filter((d) => {return d.year==2018;}).map((d) => {
+        let dataPlugin = MyData.filter((d) => {return d.year==2018 && d.country=="Spain";}).map((d) => {
             let res = {
                 name: d.country,
                 value: d["cars-per-1000"]
@@ -898,11 +898,11 @@
         let datos = 
         [
             {
-                name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018",
+                name: "Porcentaje de coche eléctricos cada 1000 personas en España en el año 2018.",
                 data: dataPlugin
             },
             {
-                name: "Coste medio de la matricula universitaria en el año 2018",
+                name: "Coste medio de la matricula universitaria en el año 2018.",
                 data: dataAPI24
             }
         ];
@@ -922,7 +922,7 @@
             plotOptions: {
                 packedbubble: {
                 minSize: '20%',
-                maxSize: '100%',
+                maxSize: '40%',
                 zMin: 0,
                 zMax: 1000,
                 layoutAlgorithm: {
@@ -1455,8 +1455,7 @@
                     <div id="container04"></div>
                     <p class="highcharts-description">
                         La integración muestra los datos en España sobre el número total de carreteras, autopistas y autovías 
-                        junto con la venta anual de coches electricos en 2018. Podría haber mostrado solo el de España,
-                        pero la gráfica final se veia muy mal.
+                        junto con la venta anual de coches electricos en 2018 (también en España).
                     </p>
                 </figure>
             </div>
@@ -1474,9 +1473,7 @@
                     <div id="container06"></div>
                     <p class="highcharts-description">
                         La integración muestra el número total de vías urbanas e interurbanas en distintas ciudades de España
-                        junto al porcentaje de coches eléctricos cada 1000 personas en todo el mundo en el año 2018.
-                        Podría haber mostrado unicamente los datos de EEUU, pero la gráfica resultante no resulta 
-                        muy agradable visualmente.
+                        junto al porcentaje de coches eléctricos cada 1000 personas en España en el año 2018.
                         
                     </p>
                 </figure>
@@ -1515,8 +1512,7 @@
                     <div id="container23"></div>
                     <p class="highcharts-description">
                         La integración muestra el número total de incendios en cada comunidad autónoma de España en el año 2007
-                        junto al porcentaje de coches eléctricos en el año 2018 en todo el mundo. Podría haber mostrado solo el de España,
-                        pero la gráfica final se veia muy mal.
+                        junto al porcentaje de coches eléctricos en el año 2018 en España.
                     </p>
                 </figure>
             </div>
@@ -1525,8 +1521,7 @@
                     <div id="container24"></div>
                     <p class="highcharts-description">
                         La integración muestra el coste medio de las matriculas universitarias españolas junto el Porcentaje
-                        de coches eléctricos cada 1000 personas en el año 2018 en todo el mundo. Podría haber mostrado solo el de España,
-                        pero la gráfica final se veia muy mal.
+                        de coches eléctricos cada 1000 personas en el año 2018 en España.
                     </p>
                 </figure>
             </div>
