@@ -7,23 +7,85 @@ module.exports = function (app){
 
 	const request = require('request');
 	const express = require("express");
-	
-	var api27 = 'https://sos1920-27.herokuapp.com'; // Integración mediante proxy
-	var paths27='/api/v2/spc-stats';
-	
 
+	var api01 = 'https://sos1920-01.herokuapp.com'; // Integración mediante proxy grupo 01 emigrants-stats
+	var paths01='/api/v2/emigrants-stats';
+
+	var api05 = 'https://sos1920-05.herokuapp.com'; // Integración mediante proxy grupo 05 life_expectancies
+	var paths05='/api/v1/life_expectancies';
+
+	var api06 = 'https://sos1920-06.herokuapp.com'; // Integración mediante proxy grupo 06 not-hospitalized-stats
+	var paths06='/api/v2/not-hospitalized-stats';
+
+	var api08 = 'https://sos1920-08.herokuapp.com'; // Integración mediante proxy grupo 08 electricity-produced-stats
+	var paths08='/api/v2/electricity-produced-stats';
+
+	var api28 = 'https://sos1920-28.herokuapp.com'; // Integración mediante proxy grupo 28 gce
+	var paths28='/api/v1/gce';
+
+	var apiExt01 = 'https://www.balldontlie.io'; // Integración mediante proxy external api 01
+	var pathsExt01='/api/v1/players';
+
+	var apiExt02 = 'https://api.spacexdata.com'; // Integración mediante proxy external api 02
+	var pathsExt02='/v3/launches';
+
+	
+	
 	const db = new dataStore({
 		filename: dbFileName,
 		autoload: true
 	});
 
-	// Integración mediante proxy Api 27
-	app.use(paths27, function(req, res) {
-        var url = api27 + req.baseUrl + req.url;
+	// Integración mediante proxy Api 01 emigrants-stats
+	app.use(paths01, function(req, res) {
+        var url = api01 + req.baseUrl + req.url;
         console.log('piped: ' + req.baseUrl + req.url);
         req.pipe(request(url)).pipe(res);
 	});
-	
+
+	// Integración mediante proxy Api 05 life_expectancies
+	app.use(paths05, function(req, res) {
+        var url = api05 + req.baseUrl + req.url;
+        console.log('piped: ' + req.baseUrl + req.url);
+        req.pipe(request(url)).pipe(res);
+	});
+
+	// Integración mediante proxy Api 06 not-hospitalized-stats
+	app.use(paths06, function(req, res) {
+        var url = api06 + req.baseUrl + req.url;
+        console.log('piped: ' + req.baseUrl + req.url);
+        req.pipe(request(url)).pipe(res);
+	});
+
+	// Integración mediante proxy Api 08 electricity-produced-stats
+	app.use(paths08, function(req, res) {
+        var url = api08 + req.baseUrl + req.url;
+        console.log('piped: ' + req.baseUrl + req.url);
+        req.pipe(request(url)).pipe(res);
+	});
+
+	// Integración mediante proxy Api 28 gce
+	app.use(paths28, function(req, res) {
+        var url = api28 + req.baseUrl + req.url;
+        console.log('piped: ' + req.baseUrl + req.url);
+        req.pipe(request(url)).pipe(res);
+	});
+
+	// Integración mediante proxy External API 01
+	app.use(pathsExt01, function(req, res) {
+        var url = apiExt01 + req.baseUrl + req.url;
+        console.log('piped: ' + req.baseUrl + req.url);
+        req.pipe(request(url)).pipe(res);
+	});
+
+	// Integración mediante proxy External API 02
+	app.use(pathsExt02, function(req, res) {
+        var url = apiExt02 + req.baseUrl + req.url;
+        console.log('piped: ' + req.baseUrl + req.url);
+        req.pipe(request(url)).pipe(res);
+	});
+
+
     app.use(express.static('.'));
 
 	var initialPlugInVehiclesStats = [

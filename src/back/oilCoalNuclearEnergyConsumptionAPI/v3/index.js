@@ -6,10 +6,19 @@ module.exports = function(app) {
 	const BASE_API_URL = "/api/v3";
 
 	const request = require('request');
-    const express = require("express");
-    var apiServerHost = 'http://sos1920-01.herokuapp.com';
-	var paths= '/api/v2/poverty-stats';
+	const express = require("express");
 	
+    var api01 = 'http://sos1920-01.herokuapp.com';
+	var path01= '/api/v2/poverty-stats';
+
+	var api04 = 'http://sos1920-04.herokuapp.com';
+	var path04= '/api/v1/traffic_accidents';
+	
+	var api02 = 'http://sos1920-02.herokuapp.com';
+	var path02= '/api/v2/evolution-of-cycling-routes';
+
+	var apiExt01 = 'https://restcountries.eu/'; // Integración mediante proxy external api 01
+	var pathsExt01='/rest/v2/all?fields=name;area;population';
 	
 
 	const db = new dataS ({
@@ -17,14 +26,33 @@ module.exports = function(app) {
 		autoload : true
 	});
 
+	/*app.use(pathsExt01, function(req, res) {
+        var url = apiExt01 + req.baseUrl + req.url;
+        console.log('piped: ' + req.baseUrl + req.url);
+        req.pipe(request(url)).pipe(res);
+	});
+	*/
 
-	app.use(paths, function(req,res){
-		var url = apiServerHost+req.baseUrl + req.url;
+	app.use(path01, function(req,res){
+		var url = api01+req.baseUrl + req.url;
 		console.log('piped: ' + req.baseUrl + req.url);
 		req.pipe(request(url)).pipe(res);
 	});
 	app.use(express.static('.'));
 
+	app.use(path04, function(req,res){
+		var url = api04+req.baseUrl + req.url;
+		console.log('piped: ' + req.baseUrl + req.url);
+		req.pipe(request(url)).pipe(res);
+	});
+	app.use(express.static('.'));
+
+	app.use(path02, function(req,res){
+		var url = api02+req.baseUrl + req.url;
+		console.log('piped: ' + req.baseUrl + req.url);
+		req.pipe(request(url)).pipe(res);
+	});
+	app.use(express.static('.'));
 
 	var initialOilCoalNuclearEnergyConsumptionStats = [
 		{ 
