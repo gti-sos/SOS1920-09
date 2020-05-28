@@ -3029,9 +3029,9 @@ var app = (function () {
 
     	let select_levels = [
     		/*props*/ ctx[12],
+    		{ id: /*id*/ ctx[6] },
     		{ multiple: true },
     		{ class: /*classes*/ ctx[10] },
-    		{ id: /*id*/ ctx[6] },
     		{ name: /*name*/ ctx[7] },
     		{ disabled: /*disabled*/ ctx[9] }
     	];
@@ -3062,8 +3062,8 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(select, "blur", /*blur_handler_17*/ ctx[142], false, false, false),
-    				listen_dev(select, "focus", /*focus_handler_17*/ ctx[141], false, false, false),
+    				listen_dev(select, "blur", /*blur_handler_17*/ ctx[141], false, false, false),
+    				listen_dev(select, "focus", /*focus_handler_17*/ ctx[142], false, false, false),
     				listen_dev(select, "change", /*change_handler_16*/ ctx[143], false, false, false),
     				listen_dev(select, "input", /*input_handler_16*/ ctx[144], false, false, false),
     				listen_dev(select, "change", /*select_change_handler_1*/ ctx[161])
@@ -3078,9 +3078,9 @@ var app = (function () {
 
     			set_attributes(select, get_spread_update(select_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
+    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				{ multiple: true },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
-    				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] }
     			]));
@@ -3218,8 +3218,8 @@ var app = (function () {
 
     	let textarea_levels = [
     		/*props*/ ctx[12],
-    		{ class: /*classes*/ ctx[10] },
     		{ id: /*id*/ ctx[6] },
+    		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
     		{ disabled: /*disabled*/ ctx[9] }
     	];
@@ -3242,10 +3242,10 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(textarea, "blur", /*blur_handler_15*/ ctx[131], false, false, false),
-    				listen_dev(textarea, "focus", /*focus_handler_15*/ ctx[132], false, false, false),
-    				listen_dev(textarea, "keydown", /*keydown_handler_15*/ ctx[133], false, false, false),
-    				listen_dev(textarea, "keypress", /*keypress_handler_15*/ ctx[130], false, false, false),
+    				listen_dev(textarea, "blur", /*blur_handler_15*/ ctx[130], false, false, false),
+    				listen_dev(textarea, "focus", /*focus_handler_15*/ ctx[131], false, false, false),
+    				listen_dev(textarea, "keydown", /*keydown_handler_15*/ ctx[132], false, false, false),
+    				listen_dev(textarea, "keypress", /*keypress_handler_15*/ ctx[133], false, false, false),
     				listen_dev(textarea, "keyup", /*keyup_handler_15*/ ctx[134], false, false, false),
     				listen_dev(textarea, "change", /*change_handler_14*/ ctx[135], false, false, false),
     				listen_dev(textarea, "input", /*input_handler_14*/ ctx[136], false, false, false),
@@ -3255,8 +3255,8 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(textarea, get_spread_update(textarea_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
     				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] }
     			]));
@@ -3357,8 +3357,8 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ type: /*type*/ ctx[3] },
     		{ id: /*id*/ ctx[6] },
+    		{ type: /*type*/ ctx[3] },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
@@ -3396,8 +3396,8 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				dirty[0] & /*type*/ 8 && { type: /*type*/ ctx[3] },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
+    				dirty[0] & /*type*/ 8 && { type: /*type*/ ctx[3] },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
@@ -3430,12 +3430,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ type: "search" },
     		{ id: /*id*/ ctx[6] },
-    		{ disabled: /*disabled*/ ctx[9] },
+    		{ type: "search" },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3457,12 +3457,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_13*/ ctx[119], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_13*/ ctx[120], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_13*/ ctx[121], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_13*/ ctx[122], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_13*/ ctx[123], false, false, false),
-    				listen_dev(input, "change", /*change_handler_13*/ ctx[118], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_13*/ ctx[118], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_13*/ ctx[119], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_13*/ ctx[120], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_13*/ ctx[121], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_13*/ ctx[122], false, false, false),
+    				listen_dev(input, "change", /*change_handler_13*/ ctx[123], false, false, false),
     				listen_dev(input, "input", /*input_handler_13*/ ctx[124], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_9*/ ctx[158])
     			];
@@ -3470,12 +3470,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				{ type: "search" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+    				{ type: "search" },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3507,12 +3507,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ type: "range" },
     		{ id: /*id*/ ctx[6] },
-    		{ disabled: /*disabled*/ ctx[9] },
+    		{ type: "range" },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3534,12 +3534,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_12*/ ctx[112], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_12*/ ctx[113], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_12*/ ctx[114], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_12*/ ctx[115], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_12*/ ctx[116], false, false, false),
-    				listen_dev(input, "change", /*change_handler_12*/ ctx[111], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_12*/ ctx[111], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_12*/ ctx[112], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_12*/ ctx[113], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_12*/ ctx[114], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_12*/ ctx[115], false, false, false),
+    				listen_dev(input, "change", /*change_handler_12*/ ctx[116], false, false, false),
     				listen_dev(input, "input", /*input_handler_12*/ ctx[117], false, false, false),
     				listen_dev(input, "change", /*input_change_input_handler*/ ctx[157]),
     				listen_dev(input, "input", /*input_change_input_handler*/ ctx[157])
@@ -3548,12 +3548,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				{ type: "range" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+    				{ type: "range" },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3585,12 +3585,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ type: "color" },
     		{ id: /*id*/ ctx[6] },
-    		{ disabled: /*disabled*/ ctx[9] },
+    		{ type: "color" },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3612,12 +3612,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_11*/ ctx[105], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_11*/ ctx[106], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_11*/ ctx[107], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_11*/ ctx[108], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_11*/ ctx[109], false, false, false),
-    				listen_dev(input, "change", /*change_handler_11*/ ctx[104], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_11*/ ctx[104], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_11*/ ctx[105], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_11*/ ctx[106], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_11*/ ctx[107], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_11*/ ctx[108], false, false, false),
+    				listen_dev(input, "change", /*change_handler_11*/ ctx[109], false, false, false),
     				listen_dev(input, "input", /*input_handler_11*/ ctx[110], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_8*/ ctx[156])
     			];
@@ -3625,12 +3625,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				{ type: "color" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+    				{ type: "color" },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3662,12 +3662,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ type: "datetime" },
     		{ id: /*id*/ ctx[6] },
-    		{ disabled: /*disabled*/ ctx[9] },
+    		{ type: "datetime" },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3689,12 +3689,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_10*/ ctx[98], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_10*/ ctx[99], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_10*/ ctx[100], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_10*/ ctx[101], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_10*/ ctx[102], false, false, false),
-    				listen_dev(input, "change", /*change_handler_10*/ ctx[97], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_10*/ ctx[97], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_10*/ ctx[98], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_10*/ ctx[99], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_10*/ ctx[100], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_10*/ ctx[101], false, false, false),
+    				listen_dev(input, "change", /*change_handler_10*/ ctx[102], false, false, false),
     				listen_dev(input, "input", /*input_handler_10*/ ctx[103], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_7*/ ctx[155])
     			];
@@ -3702,12 +3702,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				{ type: "datetime" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+    				{ type: "datetime" },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3739,12 +3739,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ type: "time" },
     		{ id: /*id*/ ctx[6] },
-    		{ disabled: /*disabled*/ ctx[9] },
+    		{ type: "time" },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3766,12 +3766,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_9*/ ctx[91], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_9*/ ctx[92], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_9*/ ctx[93], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_9*/ ctx[94], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_9*/ ctx[95], false, false, false),
-    				listen_dev(input, "change", /*change_handler_9*/ ctx[90], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_9*/ ctx[90], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_9*/ ctx[91], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_9*/ ctx[92], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_9*/ ctx[93], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_9*/ ctx[94], false, false, false),
+    				listen_dev(input, "change", /*change_handler_9*/ ctx[95], false, false, false),
     				listen_dev(input, "input", /*input_handler_9*/ ctx[96], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_6*/ ctx[154])
     			];
@@ -3779,12 +3779,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				{ type: "time" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+    				{ type: "time" },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3816,12 +3816,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ type: "date" },
     		{ id: /*id*/ ctx[6] },
-    		{ disabled: /*disabled*/ ctx[9] },
+    		{ type: "date" },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3843,12 +3843,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_8*/ ctx[84], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_8*/ ctx[85], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_8*/ ctx[86], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_8*/ ctx[87], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_8*/ ctx[88], false, false, false),
-    				listen_dev(input, "change", /*change_handler_8*/ ctx[83], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_8*/ ctx[83], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_8*/ ctx[84], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_8*/ ctx[85], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_8*/ ctx[86], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_8*/ ctx[87], false, false, false),
+    				listen_dev(input, "change", /*change_handler_8*/ ctx[88], false, false, false),
     				listen_dev(input, "input", /*input_handler_8*/ ctx[89], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_5*/ ctx[153])
     			];
@@ -3856,12 +3856,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				{ type: "date" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+    				{ type: "date" },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3894,12 +3894,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ type: "number" },
     		{ id: /*id*/ ctx[6] },
-    		{ disabled: /*disabled*/ ctx[9] },
+    		{ type: "number" },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -3926,12 +3926,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_7*/ ctx[77], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_7*/ ctx[78], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_7*/ ctx[79], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_7*/ ctx[80], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_7*/ ctx[81], false, false, false),
-    				listen_dev(input, "change", /*change_handler_7*/ ctx[76], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_7*/ ctx[76], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_7*/ ctx[77], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_7*/ ctx[78], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_7*/ ctx[79], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_7*/ ctx[80], false, false, false),
+    				listen_dev(input, "change", /*change_handler_7*/ ctx[81], false, false, false),
     				listen_dev(input, "input", /*input_handler_7*/ ctx[82], false, false, false),
     				listen_dev(input, "input", input_input_handler_4)
     			];
@@ -3939,12 +3939,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				{ type: "number" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+    				{ type: "number" },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -3978,12 +3978,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ type: "url" },
     		{ id: /*id*/ ctx[6] },
-    		{ disabled: /*disabled*/ ctx[9] },
+    		{ type: "url" },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4005,12 +4005,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_6*/ ctx[70], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_6*/ ctx[71], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_6*/ ctx[72], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_6*/ ctx[73], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_6*/ ctx[74], false, false, false),
-    				listen_dev(input, "change", /*change_handler_6*/ ctx[69], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_6*/ ctx[69], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_6*/ ctx[70], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_6*/ ctx[71], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_6*/ ctx[72], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_6*/ ctx[73], false, false, false),
+    				listen_dev(input, "change", /*change_handler_6*/ ctx[74], false, false, false),
     				listen_dev(input, "input", /*input_handler_6*/ ctx[75], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_3*/ ctx[151])
     			];
@@ -4018,12 +4018,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				{ type: "url" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+    				{ type: "url" },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -4055,12 +4055,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ type: "radio" },
     		{ id: /*id*/ ctx[6] },
-    		{ disabled: /*disabled*/ ctx[9] },
+    		{ type: "radio" },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4082,12 +4082,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_5*/ ctx[63], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_5*/ ctx[64], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_5*/ ctx[65], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_5*/ ctx[66], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_5*/ ctx[67], false, false, false),
-    				listen_dev(input, "change", /*change_handler_5*/ ctx[62], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_5*/ ctx[62], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_5*/ ctx[63], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_5*/ ctx[64], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_5*/ ctx[65], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_5*/ ctx[66], false, false, false),
+    				listen_dev(input, "change", /*change_handler_5*/ ctx[67], false, false, false),
     				listen_dev(input, "input", /*input_handler_5*/ ctx[68], false, false, false),
     				listen_dev(input, "change", /*input_change_handler_2*/ ctx[150])
     			];
@@ -4095,12 +4095,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				{ type: "radio" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+    				{ type: "radio" },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -4132,12 +4132,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ type: "checkbox" },
     		{ id: /*id*/ ctx[6] },
-    		{ disabled: /*disabled*/ ctx[9] },
-    		{ name: /*name*/ ctx[7] },
+    		{ type: "checkbox" },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
+    		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4155,17 +4155,17 @@ var app = (function () {
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, input, anchor);
-    			set_input_value(input, /*value*/ ctx[1]);
     			input.checked = /*checked*/ ctx[0];
+    			set_input_value(input, /*value*/ ctx[1]);
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_4*/ ctx[56], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_4*/ ctx[57], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_4*/ ctx[58], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_4*/ ctx[59], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_4*/ ctx[60], false, false, false),
-    				listen_dev(input, "change", /*change_handler_4*/ ctx[55], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_4*/ ctx[55], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_4*/ ctx[56], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_4*/ ctx[57], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_4*/ ctx[58], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_4*/ ctx[59], false, false, false),
+    				listen_dev(input, "change", /*change_handler_4*/ ctx[60], false, false, false),
     				listen_dev(input, "input", /*input_handler_4*/ ctx[61], false, false, false),
     				listen_dev(input, "change", /*input_change_handler_1*/ ctx[149])
     			];
@@ -4173,21 +4173,21 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				{ type: "checkbox" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
-    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				{ type: "checkbox" },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
+    				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
-    			if (dirty[0] & /*value*/ 2) {
-    				set_input_value(input, /*value*/ ctx[1]);
-    			}
-
     			if (dirty[0] & /*checked*/ 1) {
     				input.checked = /*checked*/ ctx[0];
+    			}
+
+    			if (dirty[0] & /*value*/ 2) {
+    				set_input_value(input, /*value*/ ctx[1]);
     			}
     		},
     		d: function destroy(detaching) {
@@ -4214,12 +4214,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ type: "file" },
     		{ id: /*id*/ ctx[6] },
-    		{ disabled: /*disabled*/ ctx[9] },
+    		{ type: "file" },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4240,12 +4240,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_3*/ ctx[49], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_3*/ ctx[50], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_3*/ ctx[51], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_3*/ ctx[52], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_3*/ ctx[53], false, false, false),
-    				listen_dev(input, "change", /*change_handler_3*/ ctx[48], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_3*/ ctx[48], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_3*/ ctx[49], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_3*/ ctx[50], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_3*/ ctx[51], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_3*/ ctx[52], false, false, false),
+    				listen_dev(input, "change", /*change_handler_3*/ ctx[53], false, false, false),
     				listen_dev(input, "input", /*input_handler_3*/ ctx[54], false, false, false),
     				listen_dev(input, "change", /*input_change_handler*/ ctx[148])
     			];
@@ -4253,12 +4253,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				{ type: "file" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+    				{ type: "file" },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
     		},
@@ -4286,12 +4286,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ type: "email" },
     		{ id: /*id*/ ctx[6] },
-    		{ disabled: /*disabled*/ ctx[9] },
+    		{ type: "email" },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4313,12 +4313,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_2*/ ctx[42], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_2*/ ctx[43], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_2*/ ctx[44], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_2*/ ctx[45], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_2*/ ctx[46], false, false, false),
-    				listen_dev(input, "change", /*change_handler_2*/ ctx[41], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_2*/ ctx[41], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_2*/ ctx[42], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_2*/ ctx[43], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_2*/ ctx[44], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_2*/ ctx[45], false, false, false),
+    				listen_dev(input, "change", /*change_handler_2*/ ctx[46], false, false, false),
     				listen_dev(input, "input", /*input_handler_2*/ ctx[47], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_2*/ ctx[147])
     			];
@@ -4326,12 +4326,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				{ type: "email" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+    				{ type: "email" },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -4363,12 +4363,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ type: "password" },
     		{ id: /*id*/ ctx[6] },
-    		{ disabled: /*disabled*/ ctx[9] },
+    		{ type: "password" },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4390,12 +4390,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler_1*/ ctx[35], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler_1*/ ctx[36], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler_1*/ ctx[37], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler_1*/ ctx[38], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler_1*/ ctx[39], false, false, false),
-    				listen_dev(input, "change", /*change_handler_1*/ ctx[34], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler_1*/ ctx[34], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler_1*/ ctx[35], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler_1*/ ctx[36], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler_1*/ ctx[37], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler_1*/ ctx[38], false, false, false),
+    				listen_dev(input, "change", /*change_handler_1*/ ctx[39], false, false, false),
     				listen_dev(input, "input", /*input_handler_1*/ ctx[40], false, false, false),
     				listen_dev(input, "input", /*input_input_handler_1*/ ctx[146])
     			];
@@ -4403,12 +4403,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				{ type: "password" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+    				{ type: "password" },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -4440,12 +4440,12 @@ var app = (function () {
 
     	let input_levels = [
     		/*props*/ ctx[12],
-    		{ type: "text" },
     		{ id: /*id*/ ctx[6] },
-    		{ disabled: /*disabled*/ ctx[9] },
+    		{ type: "text" },
     		{ readOnly: /*readonly*/ ctx[4] },
     		{ class: /*classes*/ ctx[10] },
     		{ name: /*name*/ ctx[7] },
+    		{ disabled: /*disabled*/ ctx[9] },
     		{ placeholder: /*placeholder*/ ctx[8] }
     	];
 
@@ -4467,12 +4467,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input, "blur", /*blur_handler*/ ctx[28], false, false, false),
-    				listen_dev(input, "focus", /*focus_handler*/ ctx[29], false, false, false),
-    				listen_dev(input, "keydown", /*keydown_handler*/ ctx[30], false, false, false),
-    				listen_dev(input, "keypress", /*keypress_handler*/ ctx[31], false, false, false),
-    				listen_dev(input, "keyup", /*keyup_handler*/ ctx[32], false, false, false),
-    				listen_dev(input, "change", /*change_handler*/ ctx[27], false, false, false),
+    				listen_dev(input, "blur", /*blur_handler*/ ctx[27], false, false, false),
+    				listen_dev(input, "focus", /*focus_handler*/ ctx[28], false, false, false),
+    				listen_dev(input, "keydown", /*keydown_handler*/ ctx[29], false, false, false),
+    				listen_dev(input, "keypress", /*keypress_handler*/ ctx[30], false, false, false),
+    				listen_dev(input, "keyup", /*keyup_handler*/ ctx[31], false, false, false),
+    				listen_dev(input, "change", /*change_handler*/ ctx[32], false, false, false),
     				listen_dev(input, "input", /*input_handler*/ ctx[33], false, false, false),
     				listen_dev(input, "input", /*input_input_handler*/ ctx[145])
     			];
@@ -4480,12 +4480,12 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			set_attributes(input, get_spread_update(input_levels, [
     				dirty[0] & /*props*/ 4096 && /*props*/ ctx[12],
-    				{ type: "text" },
     				dirty[0] & /*id*/ 64 && { id: /*id*/ ctx[6] },
-    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
+    				{ type: "text" },
     				dirty[0] & /*readonly*/ 16 && { readOnly: /*readonly*/ ctx[4] },
     				dirty[0] & /*classes*/ 1024 && { class: /*classes*/ ctx[10] },
     				dirty[0] & /*name*/ 128 && { name: /*name*/ ctx[7] },
+    				dirty[0] & /*disabled*/ 512 && { disabled: /*disabled*/ ctx[9] },
     				dirty[0] & /*placeholder*/ 256 && { placeholder: /*placeholder*/ ctx[8] }
     			]));
 
@@ -4642,10 +4642,6 @@ var app = (function () {
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("Input", $$slots, ['default']);
 
-    	function change_handler(event) {
-    		bubble($$self, event);
-    	}
-
     	function blur_handler(event) {
     		bubble($$self, event);
     	}
@@ -4666,11 +4662,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function input_handler(event) {
+    	function change_handler(event) {
     		bubble($$self, event);
     	}
 
-    	function change_handler_1(event) {
+    	function input_handler(event) {
     		bubble($$self, event);
     	}
 
@@ -4694,11 +4690,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function input_handler_1(event) {
+    	function change_handler_1(event) {
     		bubble($$self, event);
     	}
 
-    	function change_handler_2(event) {
+    	function input_handler_1(event) {
     		bubble($$self, event);
     	}
 
@@ -4722,11 +4718,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function input_handler_2(event) {
+    	function change_handler_2(event) {
     		bubble($$self, event);
     	}
 
-    	function change_handler_3(event) {
+    	function input_handler_2(event) {
     		bubble($$self, event);
     	}
 
@@ -4750,11 +4746,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function input_handler_3(event) {
+    	function change_handler_3(event) {
     		bubble($$self, event);
     	}
 
-    	function change_handler_4(event) {
+    	function input_handler_3(event) {
     		bubble($$self, event);
     	}
 
@@ -4778,11 +4774,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function input_handler_4(event) {
+    	function change_handler_4(event) {
     		bubble($$self, event);
     	}
 
-    	function change_handler_5(event) {
+    	function input_handler_4(event) {
     		bubble($$self, event);
     	}
 
@@ -4806,11 +4802,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function input_handler_5(event) {
+    	function change_handler_5(event) {
     		bubble($$self, event);
     	}
 
-    	function change_handler_6(event) {
+    	function input_handler_5(event) {
     		bubble($$self, event);
     	}
 
@@ -4834,11 +4830,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function input_handler_6(event) {
+    	function change_handler_6(event) {
     		bubble($$self, event);
     	}
 
-    	function change_handler_7(event) {
+    	function input_handler_6(event) {
     		bubble($$self, event);
     	}
 
@@ -4862,11 +4858,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function input_handler_7(event) {
+    	function change_handler_7(event) {
     		bubble($$self, event);
     	}
 
-    	function change_handler_8(event) {
+    	function input_handler_7(event) {
     		bubble($$self, event);
     	}
 
@@ -4890,11 +4886,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function input_handler_8(event) {
+    	function change_handler_8(event) {
     		bubble($$self, event);
     	}
 
-    	function change_handler_9(event) {
+    	function input_handler_8(event) {
     		bubble($$self, event);
     	}
 
@@ -4918,11 +4914,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function input_handler_9(event) {
+    	function change_handler_9(event) {
     		bubble($$self, event);
     	}
 
-    	function change_handler_10(event) {
+    	function input_handler_9(event) {
     		bubble($$self, event);
     	}
 
@@ -4946,11 +4942,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function input_handler_10(event) {
+    	function change_handler_10(event) {
     		bubble($$self, event);
     	}
 
-    	function change_handler_11(event) {
+    	function input_handler_10(event) {
     		bubble($$self, event);
     	}
 
@@ -4974,11 +4970,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function input_handler_11(event) {
+    	function change_handler_11(event) {
     		bubble($$self, event);
     	}
 
-    	function change_handler_12(event) {
+    	function input_handler_11(event) {
     		bubble($$self, event);
     	}
 
@@ -5002,11 +4998,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function input_handler_12(event) {
+    	function change_handler_12(event) {
     		bubble($$self, event);
     	}
 
-    	function change_handler_13(event) {
+    	function input_handler_12(event) {
     		bubble($$self, event);
     	}
 
@@ -5027,6 +5023,10 @@ var app = (function () {
     	}
 
     	function keyup_handler_13(event) {
+    		bubble($$self, event);
+    	}
+
+    	function change_handler_13(event) {
     		bubble($$self, event);
     	}
 
@@ -5054,10 +5054,6 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function keypress_handler_15(event) {
-    		bubble($$self, event);
-    	}
-
     	function blur_handler_15(event) {
     		bubble($$self, event);
     	}
@@ -5067,6 +5063,10 @@ var app = (function () {
     	}
 
     	function keydown_handler_15(event) {
+    		bubble($$self, event);
+    	}
+
+    	function keypress_handler_15(event) {
     		bubble($$self, event);
     	}
 
@@ -5098,11 +5098,11 @@ var app = (function () {
     		bubble($$self, event);
     	}
 
-    	function focus_handler_17(event) {
+    	function blur_handler_17(event) {
     		bubble($$self, event);
     	}
 
-    	function blur_handler_17(event) {
+    	function focus_handler_17(event) {
     		bubble($$self, event);
     	}
 
@@ -5135,10 +5135,10 @@ var app = (function () {
     	}
 
     	function input_change_handler_1() {
-    		value = this.value;
     		checked = this.checked;
-    		$$invalidate(1, value);
+    		value = this.value;
     		$$invalidate(0, checked);
+    		$$invalidate(1, value);
     	}
 
     	function input_change_handler_2() {
@@ -5355,113 +5355,113 @@ var app = (function () {
     		$$props,
     		$$scope,
     		$$slots,
-    		change_handler,
     		blur_handler,
     		focus_handler,
     		keydown_handler,
     		keypress_handler,
     		keyup_handler,
+    		change_handler,
     		input_handler,
-    		change_handler_1,
     		blur_handler_1,
     		focus_handler_1,
     		keydown_handler_1,
     		keypress_handler_1,
     		keyup_handler_1,
+    		change_handler_1,
     		input_handler_1,
-    		change_handler_2,
     		blur_handler_2,
     		focus_handler_2,
     		keydown_handler_2,
     		keypress_handler_2,
     		keyup_handler_2,
+    		change_handler_2,
     		input_handler_2,
-    		change_handler_3,
     		blur_handler_3,
     		focus_handler_3,
     		keydown_handler_3,
     		keypress_handler_3,
     		keyup_handler_3,
+    		change_handler_3,
     		input_handler_3,
-    		change_handler_4,
     		blur_handler_4,
     		focus_handler_4,
     		keydown_handler_4,
     		keypress_handler_4,
     		keyup_handler_4,
+    		change_handler_4,
     		input_handler_4,
-    		change_handler_5,
     		blur_handler_5,
     		focus_handler_5,
     		keydown_handler_5,
     		keypress_handler_5,
     		keyup_handler_5,
+    		change_handler_5,
     		input_handler_5,
-    		change_handler_6,
     		blur_handler_6,
     		focus_handler_6,
     		keydown_handler_6,
     		keypress_handler_6,
     		keyup_handler_6,
+    		change_handler_6,
     		input_handler_6,
-    		change_handler_7,
     		blur_handler_7,
     		focus_handler_7,
     		keydown_handler_7,
     		keypress_handler_7,
     		keyup_handler_7,
+    		change_handler_7,
     		input_handler_7,
-    		change_handler_8,
     		blur_handler_8,
     		focus_handler_8,
     		keydown_handler_8,
     		keypress_handler_8,
     		keyup_handler_8,
+    		change_handler_8,
     		input_handler_8,
-    		change_handler_9,
     		blur_handler_9,
     		focus_handler_9,
     		keydown_handler_9,
     		keypress_handler_9,
     		keyup_handler_9,
+    		change_handler_9,
     		input_handler_9,
-    		change_handler_10,
     		blur_handler_10,
     		focus_handler_10,
     		keydown_handler_10,
     		keypress_handler_10,
     		keyup_handler_10,
+    		change_handler_10,
     		input_handler_10,
-    		change_handler_11,
     		blur_handler_11,
     		focus_handler_11,
     		keydown_handler_11,
     		keypress_handler_11,
     		keyup_handler_11,
+    		change_handler_11,
     		input_handler_11,
-    		change_handler_12,
     		blur_handler_12,
     		focus_handler_12,
     		keydown_handler_12,
     		keypress_handler_12,
     		keyup_handler_12,
+    		change_handler_12,
     		input_handler_12,
-    		change_handler_13,
     		blur_handler_13,
     		focus_handler_13,
     		keydown_handler_13,
     		keypress_handler_13,
     		keyup_handler_13,
+    		change_handler_13,
     		input_handler_13,
     		blur_handler_14,
     		focus_handler_14,
     		keydown_handler_14,
     		keypress_handler_14,
     		keyup_handler_14,
-    		keypress_handler_15,
     		blur_handler_15,
     		focus_handler_15,
     		keydown_handler_15,
+    		keypress_handler_15,
     		keyup_handler_15,
     		change_handler_14,
     		input_handler_14,
@@ -5469,8 +5469,8 @@ var app = (function () {
     		focus_handler_16,
     		change_handler_15,
     		input_handler_15,
-    		focus_handler_17,
     		blur_handler_17,
+    		focus_handler_17,
     		change_handler_16,
     		input_handler_16,
     		input_input_handler,
@@ -19076,7 +19076,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$k, 61, 52, 2256);
+    			add_location(i, file$k, 61, 52, 2249);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -19132,8 +19132,8 @@ var app = (function () {
     			attr_dev(canvas, "width", "3");
     			attr_dev(canvas, "height", "1");
     			add_location(canvas, file$k, 0, 0, 0);
-    			add_location(p, file$k, 60, 0, 2092);
-    			add_location(main, file$k, 59, 0, 2084);
+    			add_location(p, file$k, 60, 0, 2085);
+    			add_location(main, file$k, 59, 0, 2077);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -19241,7 +19241,7 @@ var app = (function () {
     }
 
     function instance$l($$self, $$props, $$invalidate) {
-    	onMount(loadGraph$1);
+    	loadGraph$1();
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -23267,7 +23267,11 @@ var app = (function () {
     /* src\front\oilCoalNuclearEnergyConsumptionAPI\Integrations.svelte generated by Svelte v3.20.1 */
     const file$s = "src\\front\\oilCoalNuclearEnergyConsumptionAPI\\Integrations.svelte";
 
+<<<<<<< HEAD
+    // (850:4) <Button outline color="secondary" on:click="{pop}">
+=======
     // (295:4) <Button outline color="secondary" on:click="{pop}">
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     function create_default_slot$f(ctx) {
     	let i;
     	let t;
@@ -23277,7 +23281,11 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
+<<<<<<< HEAD
+    			add_location(i, file$s, 849, 56, 25604);
+=======
     			add_location(i, file$s, 294, 56, 10172);
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -23293,7 +23301,11 @@ var app = (function () {
     		block,
     		id: create_default_slot$f.name,
     		type: "slot",
+<<<<<<< HEAD
+    		source: "(850:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+=======
     		source: "(295:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     		ctx
     	});
 
@@ -23302,7 +23314,11 @@ var app = (function () {
 
     function create_fragment$t(ctx) {
     	let main;
+<<<<<<< HEAD
+    	let div19;
+=======
     	let div18;
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     	let div1;
     	let div0;
     	let a0;
@@ -23319,8 +23335,13 @@ var app = (function () {
     	let t11;
     	let a6;
     	let t13;
+<<<<<<< HEAD
+    	let div18;
+    	let div17;
+=======
     	let div17;
     	let div16;
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     	let div3;
     	let figure0;
     	let div2;
@@ -23357,6 +23378,18 @@ var app = (function () {
     	let t29;
     	let p5;
     	let t31;
+<<<<<<< HEAD
+    	let div16;
+    	let figure6;
+    	let div15;
+    	let button0;
+    	let t33;
+    	let div14;
+    	let t34;
+    	let current;
+
+    	const button1 = new Button({
+=======
     	let div15;
     	let figure6;
     	let div14;
@@ -23366,6 +23399,7 @@ var app = (function () {
     	let current;
 
     	const button = new Button({
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			props: {
     				outline: true,
     				color: "secondary",
@@ -23375,11 +23409,31 @@ var app = (function () {
     			$$inline: true
     		});
 
+<<<<<<< HEAD
+    	button1.$on("click", pop);
+=======
     	button.$on("click", pop);
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
 
     	const block = {
     		c: function create() {
     			main = element("main");
+<<<<<<< HEAD
+    			div19 = element("div");
+    			div1 = element("div");
+    			div0 = element("div");
+    			a0 = element("a");
+    			a0.textContent = "Integración con 4";
+    			t1 = space();
+    			a1 = element("a");
+    			a1.textContent = "Integración con 2";
+    			t3 = space();
+    			a2 = element("a");
+    			a2.textContent = "Integración con 12";
+    			t5 = space();
+    			a3 = element("a");
+    			a3.textContent = "Integración con 1";
+=======
     			div18 = element("div");
     			div1 = element("div");
     			div0 = element("div");
@@ -23394,6 +23448,7 @@ var app = (function () {
     			t5 = space();
     			a3 = element("a");
     			a3.textContent = "Integración con 4";
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			t7 = space();
     			a4 = element("a");
     			a4.textContent = "Integración con 22";
@@ -23404,35 +23459,56 @@ var app = (function () {
     			a6 = element("a");
     			a6.textContent = "Integración con API externa";
     			t13 = space();
+<<<<<<< HEAD
+    			div18 = element("div");
+    			div17 = element("div");
+=======
     			div17 = element("div");
     			div16 = element("div");
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			div3 = element("div");
     			figure0 = element("figure");
     			div2 = element("div");
     			t14 = space();
     			p0 = element("p");
+<<<<<<< HEAD
+    			p0.textContent = "Integración con la 4";
+=======
     			p0.textContent = "Integración con el grupo 7, la integración está realizada con la importaciones de vegetales y preparados.";
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			t16 = space();
     			div5 = element("div");
     			figure1 = element("figure");
     			div4 = element("div");
     			t17 = space();
     			p1 = element("p");
+<<<<<<< HEAD
+    			p1.textContent = "Integración con la 2.";
+=======
     			p1.textContent = "Integra la 27.";
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			t19 = space();
     			div7 = element("div");
     			figure2 = element("figure");
     			div6 = element("div");
     			t20 = space();
     			p2 = element("p");
+<<<<<<< HEAD
+    			p2.textContent = "Integración con la 12.";
+=======
     			p2.textContent = "Integra la 5.";
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			t22 = space();
     			div9 = element("div");
     			figure3 = element("figure");
     			div8 = element("div");
     			t23 = space();
     			p3 = element("p");
+<<<<<<< HEAD
+    			p3.textContent = "Integra la 1.";
+=======
     			p3.textContent = "Integra la 4.";
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			t25 = space();
     			div11 = element("div");
     			figure4 = element("figure");
@@ -23448,6 +23524,45 @@ var app = (function () {
     			p5 = element("p");
     			p5.textContent = "Integra la 28.";
     			t31 = space();
+<<<<<<< HEAD
+    			div16 = element("div");
+    			figure6 = element("figure");
+    			div15 = element("div");
+    			button0 = element("button");
+    			button0.textContent = "Obtener";
+    			t33 = space();
+    			div14 = element("div");
+    			t34 = space();
+    			create_component(button1.$$.fragment);
+    			attr_dev(a0, "class", "list-group-item list-group-item-action active");
+    			attr_dev(a0, "id", "list-home-list");
+    			attr_dev(a0, "data-toggle", "list");
+    			attr_dev(a0, "href", "#list-4");
+    			attr_dev(a0, "role", "tab");
+    			attr_dev(a0, "aria-controls", "home");
+    			add_location(a0, file$s, 777, 12, 21354);
+    			attr_dev(a1, "class", "list-group-item list-group-item-action");
+    			attr_dev(a1, "id", "list-profile-list");
+    			attr_dev(a1, "data-toggle", "list");
+    			attr_dev(a1, "href", "#list-2");
+    			attr_dev(a1, "role", "tab");
+    			attr_dev(a1, "aria-controls", "profile");
+    			add_location(a1, file$s, 778, 12, 21532);
+    			attr_dev(a2, "class", "list-group-item list-group-item-action");
+    			attr_dev(a2, "id", "list-profile-list");
+    			attr_dev(a2, "data-toggle", "list");
+    			attr_dev(a2, "href", "#list-12");
+    			attr_dev(a2, "role", "tab");
+    			attr_dev(a2, "aria-controls", "profile");
+    			add_location(a2, file$s, 779, 12, 21709);
+    			attr_dev(a3, "class", "list-group-item list-group-item-action");
+    			attr_dev(a3, "id", "list-profile-list");
+    			attr_dev(a3, "data-toggle", "list");
+    			attr_dev(a3, "href", "#list-01");
+    			attr_dev(a3, "role", "tab");
+    			attr_dev(a3, "aria-controls", "profile");
+    			add_location(a3, file$s, 780, 12, 21888);
+=======
     			div15 = element("div");
     			figure6 = element("figure");
     			div14 = element("div");
@@ -23484,26 +23599,94 @@ var app = (function () {
     			attr_dev(a3, "role", "tab");
     			attr_dev(a3, "aria-controls", "profile");
     			add_location(a3, file$s, 226, 12, 6411);
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			attr_dev(a4, "class", "list-group-item list-group-item-action");
     			attr_dev(a4, "id", "list-profile-list");
     			attr_dev(a4, "data-toggle", "list");
     			attr_dev(a4, "href", "#list-22");
     			attr_dev(a4, "role", "tab");
     			attr_dev(a4, "aria-controls", "profile");
+<<<<<<< HEAD
+    			add_location(a4, file$s, 781, 12, 22066);
+=======
     			add_location(a4, file$s, 227, 12, 6588);
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			attr_dev(a5, "class", "list-group-item list-group-item-action");
     			attr_dev(a5, "id", "list-profile-list");
     			attr_dev(a5, "data-toggle", "list");
     			attr_dev(a5, "href", "#list-28");
     			attr_dev(a5, "role", "tab");
     			attr_dev(a5, "aria-controls", "profile");
+<<<<<<< HEAD
+    			add_location(a5, file$s, 782, 12, 22245);
+=======
     			add_location(a5, file$s, 228, 12, 6767);
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			attr_dev(a6, "class", "list-group-item list-group-item-action");
     			attr_dev(a6, "id", "list-profile-list");
     			attr_dev(a6, "data-toggle", "list");
     			attr_dev(a6, "href", "#list-ext");
     			attr_dev(a6, "role", "tab");
     			attr_dev(a6, "aria-controls", "profile");
+<<<<<<< HEAD
+    			add_location(a6, file$s, 783, 12, 22424);
+    			attr_dev(div0, "class", "list-group");
+    			attr_dev(div0, "id", "list-tab");
+    			attr_dev(div0, "role", "tablist");
+    			add_location(div0, file$s, 776, 10, 21287);
+    			attr_dev(div1, "class", "col-4");
+    			add_location(div1, file$s, 775, 8, 21256);
+    			attr_dev(div2, "id", "container-4");
+    			add_location(div2, file$s, 791, 20, 22907);
+    			attr_dev(p0, "class", "highcharts-description");
+    			add_location(p0, file$s, 792, 20, 22957);
+    			attr_dev(figure0, "class", "highcharts-figure");
+    			add_location(figure0, file$s, 790, 16, 22851);
+    			attr_dev(div3, "class", "tab-pane fade show active");
+    			attr_dev(div3, "id", "list-4");
+    			attr_dev(div3, "role", "tabpanel");
+    			attr_dev(div3, "aria-labelledby", "list-home-list");
+    			add_location(div3, file$s, 789, 12, 22733);
+    			attr_dev(div4, "id", "container-2");
+    			add_location(div4, file$s, 799, 20, 23287);
+    			attr_dev(p1, "class", "highcharts-description");
+    			add_location(p1, file$s, 800, 20, 23337);
+    			attr_dev(figure1, "class", "highcharts-figure");
+    			add_location(figure1, file$s, 798, 16, 23231);
+    			attr_dev(div5, "class", "tab-pane fade");
+    			attr_dev(div5, "id", "list-2");
+    			attr_dev(div5, "role", "tabpanel");
+    			attr_dev(div5, "aria-labelledby", "list-profile-list");
+    			add_location(div5, file$s, 797, 12, 23122);
+    			attr_dev(div6, "id", "container-12");
+    			add_location(div6, file$s, 807, 20, 23671);
+    			attr_dev(p2, "class", "highcharts-description");
+    			add_location(p2, file$s, 808, 20, 23722);
+    			attr_dev(figure2, "class", "highcharts-figure");
+    			add_location(figure2, file$s, 806, 16, 23615);
+    			attr_dev(div7, "class", "tab-pane fade");
+    			attr_dev(div7, "id", "list-12");
+    			attr_dev(div7, "role", "tabpanel");
+    			attr_dev(div7, "aria-labelledby", "list-profile-list");
+    			add_location(div7, file$s, 805, 12, 23505);
+    			attr_dev(div8, "id", "container-01");
+    			add_location(div8, file$s, 815, 20, 24057);
+    			attr_dev(p3, "class", "highcharts-description");
+    			add_location(p3, file$s, 816, 20, 24108);
+    			attr_dev(figure3, "class", "highcharts-figure");
+    			add_location(figure3, file$s, 814, 16, 24001);
+    			attr_dev(div9, "class", "tab-pane fade");
+    			attr_dev(div9, "id", "list-01");
+    			attr_dev(div9, "role", "tabpanel");
+    			attr_dev(div9, "aria-labelledby", "list-profile-list");
+    			add_location(div9, file$s, 813, 12, 23891);
+    			attr_dev(div10, "id", "container-22");
+    			add_location(div10, file$s, 823, 20, 24434);
+    			attr_dev(p4, "class", "highcharts-description");
+    			add_location(p4, file$s, 824, 20, 24485);
+    			attr_dev(figure4, "class", "highcharts-figure");
+    			add_location(figure4, file$s, 822, 16, 24378);
+=======
     			add_location(a6, file$s, 229, 12, 6946);
     			attr_dev(div0, "class", "list-group");
     			attr_dev(div0, "id", "list-tab");
@@ -23561,10 +23744,20 @@ var app = (function () {
     			add_location(p4, file$s, 270, 20, 9076);
     			attr_dev(figure4, "class", "highcharts-figure");
     			add_location(figure4, file$s, 268, 16, 8969);
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			attr_dev(div11, "class", "tab-pane fade");
     			attr_dev(div11, "id", "list-22");
     			attr_dev(div11, "role", "tabpanel");
     			attr_dev(div11, "aria-labelledby", "list-profile-list");
+<<<<<<< HEAD
+    			add_location(div11, file$s, 821, 12, 24268);
+    			attr_dev(div12, "id", "container-28");
+    			add_location(div12, file$s, 831, 20, 24812);
+    			attr_dev(p5, "class", "highcharts-description");
+    			add_location(p5, file$s, 832, 20, 24863);
+    			attr_dev(figure5, "class", "highcharts-figure");
+    			add_location(figure5, file$s, 830, 16, 24756);
+=======
     			add_location(div11, file$s, 267, 12, 8859);
     			attr_dev(div12, "id", "container-28");
     			add_location(div12, file$s, 277, 20, 9403);
@@ -23572,10 +23765,37 @@ var app = (function () {
     			add_location(p5, file$s, 278, 20, 9454);
     			attr_dev(figure5, "class", "highcharts-figure");
     			add_location(figure5, file$s, 276, 16, 9347);
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			attr_dev(div13, "class", "tab-pane fade");
     			attr_dev(div13, "id", "list-28");
     			attr_dev(div13, "role", "tabpanel");
     			attr_dev(div13, "aria-labelledby", "list-profile-list");
+<<<<<<< HEAD
+    			add_location(div13, file$s, 829, 12, 24646);
+    			attr_dev(button0, "class", "btn btn-danger w-100");
+    			attr_dev(button0, "onclick", "traer()");
+    			add_location(button0, file$s, 840, 24, 25257);
+    			attr_dev(div14, "class", "mt-5");
+    			attr_dev(div14, "id", "container-ext");
+    			add_location(div14, file$s, 841, 24, 25354);
+    			attr_dev(div15, "class", "container my-5 text-center");
+    			add_location(div15, file$s, 839, 20, 25191);
+    			attr_dev(figure6, "class", "highcharts-figure");
+    			add_location(figure6, file$s, 838, 16, 25135);
+    			attr_dev(div16, "class", "tab-pane fade");
+    			attr_dev(div16, "id", "list-ext");
+    			attr_dev(div16, "role", "tabpanel");
+    			attr_dev(div16, "aria-labelledby", "list-profile-list");
+    			add_location(div16, file$s, 837, 12, 25024);
+    			attr_dev(div17, "class", "tab-content");
+    			attr_dev(div17, "id", "nav-tabContent");
+    			add_location(div17, file$s, 788, 10, 22674);
+    			attr_dev(div18, "class", "col-8");
+    			add_location(div18, file$s, 787, 8, 22643);
+    			attr_dev(div19, "class", "row");
+    			add_location(div19, file$s, 774, 4, 21229);
+    			add_location(main, file$s, 773, 0, 21217);
+=======
     			add_location(div13, file$s, 275, 12, 9237);
     			attr_dev(div14, "id", "container-ext");
     			add_location(div14, file$s, 285, 20, 9782);
@@ -23596,14 +23816,20 @@ var app = (function () {
     			attr_dev(div18, "class", "row");
     			add_location(div18, file$s, 220, 4, 5752);
     			add_location(main, file$s, 219, 0, 5740);
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
+<<<<<<< HEAD
+    			append_dev(main, div19);
+    			append_dev(div19, div1);
+=======
     			append_dev(main, div18);
     			append_dev(div18, div1);
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			append_dev(div1, div0);
     			append_dev(div0, a0);
     			append_dev(div0, t1);
@@ -23618,44 +23844,105 @@ var app = (function () {
     			append_dev(div0, a5);
     			append_dev(div0, t11);
     			append_dev(div0, a6);
+<<<<<<< HEAD
+    			append_dev(div19, t13);
+    			append_dev(div19, div18);
+    			append_dev(div18, div17);
+    			append_dev(div17, div3);
+=======
     			append_dev(div18, t13);
     			append_dev(div18, div17);
     			append_dev(div17, div16);
     			append_dev(div16, div3);
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			append_dev(div3, figure0);
     			append_dev(figure0, div2);
     			append_dev(figure0, t14);
     			append_dev(figure0, p0);
+<<<<<<< HEAD
+    			append_dev(div17, t16);
+    			append_dev(div17, div5);
+=======
     			append_dev(div16, t16);
     			append_dev(div16, div5);
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			append_dev(div5, figure1);
     			append_dev(figure1, div4);
     			append_dev(figure1, t17);
     			append_dev(figure1, p1);
+<<<<<<< HEAD
+    			append_dev(div17, t19);
+    			append_dev(div17, div7);
+=======
     			append_dev(div16, t19);
     			append_dev(div16, div7);
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			append_dev(div7, figure2);
     			append_dev(figure2, div6);
     			append_dev(figure2, t20);
     			append_dev(figure2, p2);
+<<<<<<< HEAD
+    			append_dev(div17, t22);
+    			append_dev(div17, div9);
+=======
     			append_dev(div16, t22);
     			append_dev(div16, div9);
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			append_dev(div9, figure3);
     			append_dev(figure3, div8);
     			append_dev(figure3, t23);
     			append_dev(figure3, p3);
+<<<<<<< HEAD
+    			append_dev(div17, t25);
+    			append_dev(div17, div11);
+=======
     			append_dev(div16, t25);
     			append_dev(div16, div11);
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			append_dev(div11, figure4);
     			append_dev(figure4, div10);
     			append_dev(figure4, t26);
     			append_dev(figure4, p4);
+<<<<<<< HEAD
+    			append_dev(div17, t28);
+    			append_dev(div17, div13);
+=======
     			append_dev(div16, t28);
     			append_dev(div16, div13);
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			append_dev(div13, figure5);
     			append_dev(figure5, div12);
     			append_dev(figure5, t29);
     			append_dev(figure5, p5);
+<<<<<<< HEAD
+    			append_dev(div17, t31);
+    			append_dev(div17, div16);
+    			append_dev(div16, figure6);
+    			append_dev(figure6, div15);
+    			append_dev(div15, button0);
+    			append_dev(div15, t33);
+    			append_dev(div15, div14);
+    			append_dev(main, t34);
+    			mount_component(button1, main, null);
+    			current = true;
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const button1_changes = {};
+
+    			if (dirty & /*$$scope*/ 1) {
+    				button1_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button1.$set(button1_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button1.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button1.$$.fragment, local);
+=======
     			append_dev(div16, t31);
     			append_dev(div16, div15);
     			append_dev(div15, figure6);
@@ -23682,11 +23969,16 @@ var app = (function () {
     		},
     		o: function outro(local) {
     			transition_out(button.$$.fragment, local);
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(main);
+<<<<<<< HEAD
+    			destroy_component(button1);
+=======
     			destroy_component(button);
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     		}
     	};
 
@@ -23702,7 +23994,11 @@ var app = (function () {
     }
 
     async function loadGraph4$1() {
+<<<<<<< HEAD
+    	const BASE_API_URL = "https://sos1920-04.herokuapp.com/api/v1/traffic_accidents/";
+=======
     	const BASE_API_URL = "https://sos1920-04.herokuapp.com/api/v1/traffic_accidents";
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     	let MyData = [];
     	const resData = await fetch(BASE_API_URL);
     	MyData = await resData.json();
@@ -23724,6 +24020,12 @@ var app = (function () {
     		let acc = data.accidentWithVictims;
     		let mor = data.mortalAccident;
     		let dea = data.death;
+<<<<<<< HEAD
+    		provincies.push(province);
+    		accidentWithVictims.push(acc);
+    		mortalAccident.push(mor);
+    		death.push(dea);
+=======
 
     		/* let country = data.country;
      let year = data.year;
@@ -23737,10 +24039,24 @@ var app = (function () {
     			mortalAccident.push(mor);
     			death.push(dea);
     		}
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     	});
 
     	/*
         { 
+<<<<<<< HEAD
+       province:"Almeria",
+    		year: 2018,
+    		accidentWithVictims: 1194,
+    		mortalAccident: 27,
+    		death: 27,
+    		hospitalizedWounded: 111,
+    		notHospitalizedWounded: 1780
+        }
+        
+        */
+    	Highcharts.chart("container-4", {
+=======
        "country": "Japan",
        "year": 2018,
        "pev-stock": 257363,
@@ -23757,13 +24073,18 @@ var app = (function () {
         
         */
     	Highcharts.chart("container", {
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     		chart: { zoomType: "xy" },
     		title: {
     			text: "Gráfica sobre datos de accidentes de tráfico.",
     			align: "left"
     		},
     		subtitle: {
+<<<<<<< HEAD
+    			text: "Datos sobre el año 2015-2018:",
+=======
     			text: "Datos sobre el año 2018:",
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			align: "left"
     		},
     		xAxis: [{ categories: provincies, crosshair: true }],
@@ -23771,7 +24092,11 @@ var app = (function () {
     			{
     				// Primary yAxis
     				labels: {
+<<<<<<< HEAD
+    					format: "{value} casos",
+=======
     					format: "{value} unidades",
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     					style: { color: Highcharts.getOptions().colors[2] }
     				},
     				title: {
@@ -23788,7 +24113,11 @@ var app = (function () {
     					style: { color: Highcharts.getOptions().colors[0] }
     				},
     				labels: {
+<<<<<<< HEAD
+    					format: "{value} casos",
+=======
     					format: "{value} unidades",
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     					style: { color: Highcharts.getOptions().colors[0] }
     				}
     			},
@@ -23821,7 +24150,11 @@ var app = (function () {
     				type: "column",
     				yAxis: 1,
     				data: accidentWithVictims,
+<<<<<<< HEAD
+    				tooltip: { valueSuffix: " Personas" }
+=======
     				tooltip: { valueSuffix: " unidades" }
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			},
     			{
     				name: "Personas Fallecidas",
@@ -23830,13 +24163,483 @@ var app = (function () {
     				data: death,
     				marker: { enabled: false },
     				dashStyle: "shortdot",
+<<<<<<< HEAD
+    				tooltip: { valueSuffix: " Personas" }
+=======
     				tooltip: { valueSuffix: " unidades" }
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			},
     			{
     				name: "Accidentes Mortales",
     				type: "spline",
     				data: mortalAccident,
+<<<<<<< HEAD
+    				tooltip: { valueSuffix: " Personas" }
+    			}
+    		],
+    		responsive: {
+    			rules: [
+    				{
+    					condition: { maxWidth: 500 },
+    					chartOptions: {
+    						legend: {
+    							floating: false,
+    							layout: "horizontal",
+    							align: "center",
+    							verticalAlign: "bottom",
+    							x: 0,
+    							y: 0
+    						},
+    						yAxis: [
+    							{
+    								labels: { align: "right", x: 0, y: -6 },
+    								showLastLabel: false
+    							},
+    							{
+    								labels: { align: "left", x: 0, y: -6 },
+    								showLastLabel: false
+    							},
+    							{ visible: false }
+    						]
+    					}
+    				}
+    			]
+    		}
+    	});
+    }
+
+    async function loadGraph2() {
+    	const BASE_API_URL = "/api/v2/evolution-of-cycling-routes";
+    	let MyData = [];
+    	const resData = await fetch(BASE_API_URL);
+    	MyData = await resData.json();
+
+    	/* let countries = [];
+     let pevStock = [];
+     let annualSale = [];
+     let carsPer1000 = [];
+     */
+    	let provincies = [];
+
+    	let metropolitans = [];
+    	let urbans = [];
+    	let rests = [];
+
+    	MyData.forEach(data => {
+    		let province = data.province;
+    		let year = data.year;
+    		let metr = data.metropolitan;
+    		let urb = data.urban;
+    		let res = data.rest;
+
+    		if (data.year == 2015) {
+    			provincies.push(province);
+    			metropolitans.push(metr);
+    			urbans.push(urb);
+    			rests.push(res);
+    		}
+    	});
+
+    	/* 
+        {   province: "almeria",
+      year: 2015,
+      metropolitan: 77.6,
+      urban: 53.2, rest: 24.3
+        }
+         */
+    	Highcharts.chart("container-2", {
+    		chart: { zoomType: "xy" },
+    		title: {
+    			text: "Gráfica sobre datos de accidentes de tráfico.",
+    			align: "left"
+    		},
+    		subtitle: {
+    			text: "Datos sobre el año 2015:",
+    			align: "left"
+    		},
+    		xAxis: [{ categories: provincies, crosshair: true }],
+    		yAxis: [
+    			{
+    				// Primary yAxis
+    				labels: {
+    					format: "{value} km",
+    					style: { color: Highcharts.getOptions().colors[2] }
+    				},
+    				title: {
+    					text: "Metropolitano",
+    					style: { color: Highcharts.getOptions().colors[2] }
+    				},
+    				opposite: true
+    			},
+    			{
+    				// Secondary yAxis
+    				gridLineWidth: 0,
+    				title: {
+    					text: "Urbano",
+    					style: { color: Highcharts.getOptions().colors[0] }
+    				},
+    				labels: {
+    					format: "{value} km",
+    					style: { color: Highcharts.getOptions().colors[0] }
+    				}
+    			},
+    			{
+    				// Tertiary yAxis
+    				gridLineWidth: 0,
+    				title: {
+    					text: "Resto",
+    					style: { color: Highcharts.getOptions().colors[1] }
+    				},
+    				labels: {
+    					format: "{value} km",
+    					style: { color: Highcharts.getOptions().colors[1] }
+    				},
+    				opposite: true
+    			}
+    		],
+    		tooltip: { shared: true },
+    		legend: {
+    			align: "left",
+    			verticalAlign: "bottom",
+    			y: 25,
+    			floating: true,
+    			backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || // theme
+    			"rgba(255,255,255,0.25)"
+    		},
+    		series: [
+    			{
+    				name: "Urbano",
+    				type: "column",
+    				yAxis: 1,
+    				data: urbans,
+    				tooltip: { valueSuffix: " Personas" }
+    			},
+    			{
+    				name: "Resto",
+    				type: "spline",
+    				yAxis: 2,
+    				data: rests,
+    				marker: { enabled: false },
+    				dashStyle: "shortdot",
+    				tooltip: { valueSuffix: " Personas" }
+    			},
+    			{
+    				name: "Metropolitano",
+    				type: "spline",
+    				data: metropolitans,
+    				tooltip: { valueSuffix: " Personas" }
+    			}
+    		],
+    		responsive: {
+    			rules: [
+    				{
+    					condition: { maxWidth: 500 },
+    					chartOptions: {
+    						legend: {
+    							floating: false,
+    							layout: "horizontal",
+    							align: "center",
+    							verticalAlign: "bottom",
+    							x: 0,
+    							y: 0
+    						},
+    						yAxis: [
+    							{
+    								labels: { align: "right", x: 0, y: -6 },
+    								showLastLabel: false
+    							},
+    							{
+    								labels: { align: "left", x: 0, y: -6 },
+    								showLastLabel: false
+    							},
+    							{ visible: false }
+    						]
+    					}
+    				}
+    			]
+    		}
+    	});
+    }
+
+    async function loadGraph12() {
+    	const BASE_API_URL = "http://sos1920-12.herokuapp.com/api/v1/drug_offences";
+    	let MyData = [];
+    	const resData = await fetch(BASE_API_URL);
+    	MyData = await resData.json();
+
+    	/*  country: "Portugal",
+    	    year: 2014,
+    		cannabis_offences: 11836,
+    		offences_use: 7417,
+    		offences_supply:4419
+    */
+    	let countries = [];
+
+    	let cannabisoffences = [];
+    	let offencesuse = [];
+    	let offences_supply = [];
+
+    	MyData.forEach(data => {
+    		let country = data.country;
+    		let year = data.year;
+    		let cannoffen = data.cannabis_offences;
+    		let offuse = data.offences_use;
+    		let offsup = data.offences_supply;
+
+    		if (data.year == 2017 || data.year == 2016) {
+    			countries.push(country);
+    			cannabisoffences.push(cannoffen);
+    			offencesuse.push(offuse);
+    			offences_supply.push(offsup);
+    		}
+    	});
+
+    	/* 
+        {   province: "almeria",
+      year: 2015,
+      metropolitan: 77.6,
+      urban: 53.2, rest: 24.3
+        }
+         */
+    	Highcharts.chart("container-12", {
+    		chart: { zoomType: "xy" },
+    		title: {
+    			text: "Gráfica sobre datos relacionados con asesinatos y consumo de cannabis.",
+    			align: "left"
+    		},
+    		subtitle: {
+    			text: "Datos comprendidos entre 2016 y 2017:",
+    			align: "left"
+    		},
+    		xAxis: [{ categories: countries, crosshair: true }],
+    		yAxis: [
+    			{
+    				// Primary yAxis
+    				labels: {
+    					format: "{value} casos",
+    					style: { color: Highcharts.getOptions().colors[2] }
+    				},
+    				title: {
+    					text: "Delitos relacionados con el Cannabis",
+    					style: { color: Highcharts.getOptions().colors[2] }
+    				},
+    				opposite: true
+    			},
+    			{
+    				// Secondary yAxis
+    				gridLineWidth: 0,
+    				title: {
+    					text: "Delitos relacionados con el tráfico de Cannabis",
+    					style: { color: Highcharts.getOptions().colors[0] }
+    				},
+    				labels: {
+    					format: "{value} casos",
+    					style: { color: Highcharts.getOptions().colors[0] }
+    				}
+    			},
+    			{
+    				// Tertiary yAxis
+    				gridLineWidth: 0,
+    				title: {
+    					text: "Delitos relacionadso con el uso de Cannabis",
+    					style: { color: Highcharts.getOptions().colors[1] }
+    				},
+    				labels: {
+    					format: "{value} km",
+    					style: { color: Highcharts.getOptions().colors[1] }
+    				},
+    				opposite: true
+    			}
+    		],
+    		tooltip: { shared: true },
+    		legend: {
+    			align: "left",
+    			verticalAlign: "bottom",
+    			y: 25,
+    			floating: true,
+    			backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || // theme
+    			"rgba(255,255,255,0.25)"
+    		},
+    		series: [
+    			{
+    				name: "Tráfico",
+    				type: "column",
+    				yAxis: 1,
+    				data: offences_supply,
+    				tooltip: { valueSuffix: " casos" }
+    			},
+    			{
+    				name: "Uso",
+    				type: "spline",
+    				yAxis: 2,
+    				data: offencesuse,
+    				marker: { enabled: false },
+    				dashStyle: "shortdot",
+    				tooltip: { valueSuffix: " casos" }
+    			},
+    			{
+    				name: "Total",
+    				type: "spline",
+    				data: cannabisoffences,
+    				tooltip: { valueSuffix: " casos" }
+    			}
+    		],
+    		responsive: {
+    			rules: [
+    				{
+    					condition: { maxWidth: 500 },
+    					chartOptions: {
+    						legend: {
+    							floating: false,
+    							layout: "horizontal",
+    							align: "center",
+    							verticalAlign: "bottom",
+    							x: 0,
+    							y: 0
+    						},
+    						yAxis: [
+    							{
+    								labels: { align: "right", x: 0, y: -6 },
+    								showLastLabel: false
+    							},
+    							{
+    								labels: { align: "left", x: 0, y: -6 },
+    								showLastLabel: false
+    							},
+    							{ visible: false }
+    						]
+    					}
+    				}
+    			]
+    		}
+    	});
+    }
+
+    async function loadGraph01() {
+    	const BASE_API_URL = "http://sos1920-01.herokuapp.com/api/v2/poverty-stats";
+    	let MyData = [];
+    	const resData = await fetch(BASE_API_URL);
+    	MyData = await resData.json();
+
+    	/* 
+        country: "spain",
+        year: 2010,
+        poverty_prp:9551,
+        poverty_pt:8763,
+        poverty_ht:18402
+    */
+    	let countries = [];
+
+    	let povertyprp = [];
+    	let povertypt = [];
+    	let povertyht = [];
+
+    	MyData.forEach(data => {
+    		let country = data.country;
+    		let year = data.year;
+    		let prp = data.poverty_prp;
+    		let pt = data.poverty_pt;
+    		let ht = data.poverty_ht;
+
+    		if (data.year == 2015 || data.year == 2017) {
+    			countries.push(country);
+    			povertyprp.push(prp);
+    			povertypt.push(pt);
+    			povertyht.push(ht);
+    		}
+    	});
+
+    	/* 
+        {   province: "almeria",
+      year: 2015,
+      metropolitan: 77.6,
+      urban: 53.2, rest: 24.3
+        }
+         */
+    	Highcharts.chart("container-01", {
+    		chart: { zoomType: "xy" },
+    		title: {
+    			text: "Gráfica sobre datos relacionados con la pobreza.",
+    			align: "left"
+    		},
+    		subtitle: {
+    			text: "Datos de 2015 y 2017:",
+    			align: "left"
+    		},
+    		xAxis: [{ categories: countries, crosshair: true }],
+    		yAxis: [
+    			{
+    				// Primary yAxis
+    				labels: {
+    					format: "{value} personas",
+    					style: { color: Highcharts.getOptions().colors[2] }
+    				},
+    				title: {
+    					text: "Personas en riesgo de pobreza",
+    					style: { color: Highcharts.getOptions().colors[2] }
+    				},
+    				opposite: true
+    			},
+    			{
+    				// Secondary yAxis
+    				gridLineWidth: 0,
+    				title: {
+    					text: "Umbral de ingreso minimo por persona",
+    					style: { color: Highcharts.getOptions().colors[0] }
+    				},
+    				labels: {
+    					format: "{value} euros",
+    					style: { color: Highcharts.getOptions().colors[0] }
+    				}
+    			},
+    			{
+    				// Tertiary yAxis
+    				gridLineWidth: 0,
+    				title: {
+    					text: "Umbral de ingreso minimo por hogar",
+    					style: { color: Highcharts.getOptions().colors[1] }
+    				},
+    				labels: {
+    					format: "{value} euros",
+    					style: { color: Highcharts.getOptions().colors[1] }
+    				},
+    				opposite: true
+    			}
+    		],
+    		tooltip: { shared: true },
+    		legend: {
+    			align: "left",
+    			verticalAlign: "bottom",
+    			y: 25,
+    			floating: true,
+    			backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || // theme
+    			"rgba(255,255,255,0.25)"
+    		},
+    		series: [
+    			{
+    				name: "Umbral por persona",
+    				type: "column",
+    				yAxis: 1,
+    				data: povertypt,
+    				tooltip: { valueSuffix: " euros" }
+    			},
+    			{
+    				name: "Personas con pobreza",
+    				type: "spline",
+    				yAxis: 2,
+    				data: povertyprp,
+    				marker: { enabled: false },
+    				dashStyle: "shortdot",
+    				tooltip: { valueSuffix: " personas" }
+    			},
+    			{
+    				name: "Umbral por Hogar",
+    				type: "spline",
+    				data: povertyht,
+    				tooltip: { valueSuffix: " euros" }
+=======
     				tooltip: { valueSuffix: " unidades" }
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     			}
     		],
     		responsive: {
@@ -23872,6 +24675,12 @@ var app = (function () {
 
     function instance$t($$self, $$props, $$invalidate) {
     	loadGraph4$1();
+<<<<<<< HEAD
+    	loadGraph2();
+    	loadGraph12();
+    	loadGraph01();
+=======
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -23880,7 +24689,20 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("Integrations", $$slots, []);
+<<<<<<< HEAD
+
+    	$$self.$capture_state = () => ({
+    		Button,
+    		pop,
+    		loadGraph4: loadGraph4$1,
+    		loadGraph2,
+    		loadGraph12,
+    		loadGraph01
+    	});
+
+=======
     	$$self.$capture_state = () => ({ Button, pop, loadGraph4: loadGraph4$1 });
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     	return [];
     }
 
@@ -24635,7 +25457,7 @@ var app = (function () {
 
     const BASE_API_URL$6 = "/api/v3/plugin-vehicles-stats";
 
-    async function loadGraph01() {
+    async function loadGraph01$1() {
     	const BASE_API_URL_01 = "/api/v2/emigrants-stats";
     	const resData = await fetch(BASE_API_URL$6);
     	const resData01 = await fetch(BASE_API_URL_01);
@@ -25128,9 +25950,13 @@ var app = (function () {
         "cars-per-1000": 2.0
     }
     */
+<<<<<<< HEAD
+    	let dataPlugin = MyData.map(d => {
+=======
     	let dataPlugin = MyData.filter(d => {
     		return d.year == 2018;
     	}).map(d => {
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     		let res = {
     			name: d.country,
     			value: d["cars-per-1000"]
@@ -25211,7 +26037,11 @@ var app = (function () {
     	});
     }
 
+<<<<<<< HEAD
+    async function loadGraph12$1() {
+=======
     async function loadGraph12() {
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     	const BASE_API_URL_12 = "https://sos1920-12.herokuapp.com/api/v2/overdose-deaths";
     	const resData = await fetch(BASE_API_URL$6);
     	const resData12 = await fetch(BASE_API_URL_12);
@@ -25461,9 +26291,13 @@ var app = (function () {
 
     	Highcharts.chart("container24", {
     		chart: { type: "packedbubble", height: "100%" },
+<<<<<<< HEAD
+    		title: { text: "Integración con el grupo 24." },
+=======
     		title: {
     			text: "Integración con el grupo 24 atc-stats"
     		},
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     		tooltip: {
     			useHTML: true,
     			pointFormat: "<b>{point.name}:</b> {point.value}"
@@ -25526,9 +26360,13 @@ var app = (function () {
         "cars-per-1000": 2.0
     }
     */
+<<<<<<< HEAD
+    	let dataPlugin = MyData.map(d => {
+=======
     	let dataPlugin = MyData.filter(d => {
     		return d.year == 2018;
     	}).map(d => {
+>>>>>>> 3a5d0b31b3aef1cb19d49b697640c8fe5fe9be03
     		let res = {
     			name: d.country,
     			value: d["cars-per-1000"]
@@ -25923,13 +26761,13 @@ var app = (function () {
     		Button,
     		pop,
     		BASE_API_URL: BASE_API_URL$6,
-    		loadGraph01,
+    		loadGraph01: loadGraph01$1,
     		loadGraph04,
     		loadGraph05,
     		loadGraph06,
     		loadGraph07,
     		loadGraph08,
-    		loadGraph12,
+    		loadGraph12: loadGraph12$1,
     		loadGraph23: loadGraph23$1,
     		loadGraph24,
     		loadGraph27: loadGraph27$1,

@@ -12,8 +12,10 @@ module.exports = function(app) {
 	var path01= '/api/v2/poverty-stats';
 
 	var api04 = 'http://sos1920-04.herokuapp.com';
-	var path04= 'api/v1/traffic_accidents';
+	var path04= '/api/v1/traffic_accidents';
 	
+	var api02 = 'http://sos1920-02.herokuapp.com';
+	var path02= '/api/v2/evolution-of-cycling-routes';
 	
 
 	const db = new dataS ({
@@ -36,6 +38,12 @@ module.exports = function(app) {
 	});
 	app.use(express.static('.'));
 
+	app.use(path02, function(req,res){
+		var url = api02+req.baseUrl + req.url;
+		console.log('piped: ' + req.baseUrl + req.url);
+		req.pipe(request(url)).pipe(res);
+	});
+	app.use(express.static('.'));
 
 	var initialOilCoalNuclearEnergyConsumptionStats = [
 		{ 
