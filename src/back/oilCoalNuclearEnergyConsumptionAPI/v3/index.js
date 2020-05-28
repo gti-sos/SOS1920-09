@@ -6,9 +6,13 @@ module.exports = function(app) {
 	const BASE_API_URL = "/api/v3";
 
 	const request = require('request');
-    const express = require("express");
-    var apiServerHost = 'http://sos1920-01.herokuapp.com';
-	var paths= '/api/v2/poverty-stats';
+	const express = require("express");
+	
+    var api01 = 'http://sos1920-01.herokuapp.com';
+	var path01= '/api/v2/poverty-stats';
+
+	var api04 = 'http://sos1920-04.herokuapp.com';
+	var path04= 'api/v1/traffic_accidents';
 	
 	
 
@@ -18,8 +22,15 @@ module.exports = function(app) {
 	});
 
 
-	app.use(paths, function(req,res){
-		var url = apiServerHost+req.baseUrl + req.url;
+	app.use(path01, function(req,res){
+		var url = api01+req.baseUrl + req.url;
+		console.log('piped: ' + req.baseUrl + req.url);
+		req.pipe(request(url)).pipe(res);
+	});
+	app.use(express.static('.'));
+
+	app.use(path04, function(req,res){
+		var url = api04+req.baseUrl + req.url;
 		console.log('piped: ' + req.baseUrl + req.url);
 		req.pipe(request(url)).pipe(res);
 	});

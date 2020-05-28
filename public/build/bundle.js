@@ -7417,13 +7417,13 @@ var app = (function () {
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[35] = list[i];
+    	child_ctx[36] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[38] = list[i];
+    	child_ctx[39] = list[i];
     	return child_ctx;
     }
 
@@ -7449,7 +7449,7 @@ var app = (function () {
     	return block;
     }
 
-    // (298:1) {:then oilEnergys}
+    // (319:1) {:then oilEnergys}
     function create_then_block(ctx) {
     	let t0;
     	let t1;
@@ -7520,28 +7520,28 @@ var app = (function () {
     			ctx = new_ctx;
     			const formgroup0_changes = {};
 
-    			if (dirty[0] & /*currentCountry, countries*/ 10 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*currentCountry, countries*/ 10 | dirty[1] & /*$$scope*/ 2048) {
     				formgroup0_changes.$$scope = { dirty, ctx };
     			}
 
     			formgroup0.$set(formgroup0_changes);
     			const formgroup1_changes = {};
 
-    			if (dirty[0] & /*currentYear, years*/ 20 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*currentYear, years*/ 20 | dirty[1] & /*$$scope*/ 2048) {
     				formgroup1_changes.$$scope = { dirty, ctx };
     			}
 
     			formgroup1.$set(formgroup1_changes);
     			const button_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[1] & /*$$scope*/ 2048) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
     			button.$set(button_changes);
     			const table_changes = {};
 
-    			if (dirty[0] & /*oilEnergy, newOilEnergy*/ 129 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*oilEnergy, newOilEnergy*/ 129 | dirty[1] & /*$$scope*/ 2048) {
     				table_changes.$$scope = { dirty, ctx };
     			}
 
@@ -7577,14 +7577,14 @@ var app = (function () {
     		block,
     		id: create_then_block.name,
     		type: "then",
-    		source: "(298:1) {:then oilEnergys}",
+    		source: "(319:1) {:then oilEnergys}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (300:8) <Label for="selectCountry">
+    // (321:8) <Label for="selectCountry">
     function create_default_slot_21(ctx) {
     	let t;
 
@@ -7604,17 +7604,17 @@ var app = (function () {
     		block,
     		id: create_default_slot_21.name,
     		type: "slot",
-    		source: "(300:8) <Label for=\\\"selectCountry\\\">",
+    		source: "(321:8) <Label for=\\\"selectCountry\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (305:3) {:else}
+    // (326:3) {:else}
     function create_else_block_1$1(ctx) {
     	let option;
-    	let t_value = /*country*/ ctx[38] + "";
+    	let t_value = /*country*/ ctx[39] + "";
     	let t;
     	let option_value_value;
 
@@ -7622,18 +7622,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*country*/ ctx[38];
+    			option.__value = option_value_value = /*country*/ ctx[39];
     			option.value = option.__value;
-    			add_location(option, file$a, 305, 3, 8856);
+    			add_location(option, file$a, 326, 3, 9541);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*countries*/ 2 && t_value !== (t_value = /*country*/ ctx[38] + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*countries*/ 2 && t_value !== (t_value = /*country*/ ctx[39] + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*countries*/ 2 && option_value_value !== (option_value_value = /*country*/ ctx[38])) {
+    			if (dirty[0] & /*countries*/ 2 && option_value_value !== (option_value_value = /*country*/ ctx[39])) {
     				prop_dev(option, "__value", option_value_value);
     			}
 
@@ -7648,17 +7648,17 @@ var app = (function () {
     		block,
     		id: create_else_block_1$1.name,
     		type: "else",
-    		source: "(305:3) {:else}",
+    		source: "(326:3) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (303:3) {#if country == currentCountry}
+    // (324:3) {#if country == currentCountry}
     function create_if_block_3$2(ctx) {
     	let option;
-    	let t_value = /*country*/ ctx[38] + "";
+    	let t_value = /*country*/ ctx[39] + "";
     	let t;
     	let option_value_value;
 
@@ -7667,18 +7667,18 @@ var app = (function () {
     			option = element("option");
     			t = text(t_value);
     			option.selected = "selected";
-    			option.__value = option_value_value = /*country*/ ctx[38];
+    			option.__value = option_value_value = /*country*/ ctx[39];
     			option.value = option.__value;
-    			add_location(option, file$a, 303, 3, 8791);
+    			add_location(option, file$a, 324, 3, 9476);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*countries*/ 2 && t_value !== (t_value = /*country*/ ctx[38] + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*countries*/ 2 && t_value !== (t_value = /*country*/ ctx[39] + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*countries*/ 2 && option_value_value !== (option_value_value = /*country*/ ctx[38])) {
+    			if (dirty[0] & /*countries*/ 2 && option_value_value !== (option_value_value = /*country*/ ctx[39])) {
     				prop_dev(option, "__value", option_value_value);
     			}
 
@@ -7693,19 +7693,19 @@ var app = (function () {
     		block,
     		id: create_if_block_3$2.name,
     		type: "if",
-    		source: "(303:3) {#if country == currentCountry}",
+    		source: "(324:3) {#if country == currentCountry}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (302:3) {#each countries as country}
+    // (323:3) {#each countries as country}
     function create_each_block_2(ctx) {
     	let if_block_anchor;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*country*/ ctx[38] == /*currentCountry*/ ctx[3]) return create_if_block_3$2;
+    		if (/*country*/ ctx[39] == /*currentCountry*/ ctx[3]) return create_if_block_3$2;
     		return create_else_block_1$1;
     	}
 
@@ -7744,14 +7744,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(302:3) {#each countries as country}",
+    		source: "(323:3) {#each countries as country}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (301:8) <Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentCountry}">
+    // (322:8) <Input type="select" name="selectCountry" id="selectCountry" bind:value="{currentCountry}">
     function create_default_slot_20(ctx) {
     	let t0;
     	let option;
@@ -7774,7 +7774,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$a, 308, 3, 8909);
+    			add_location(option, file$a, 329, 3, 9594);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -7820,14 +7820,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_20.name,
     		type: "slot",
-    		source: "(301:8) <Input type=\\\"select\\\" name=\\\"selectCountry\\\" id=\\\"selectCountry\\\" bind:value=\\\"{currentCountry}\\\">",
+    		source: "(322:8) <Input type=\\\"select\\\" name=\\\"selectCountry\\\" id=\\\"selectCountry\\\" bind:value=\\\"{currentCountry}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (299:1) <FormGroup>
+    // (320:1) <FormGroup>
     function create_default_slot_19(ctx) {
     	let t;
     	let updating_value;
@@ -7843,7 +7843,7 @@ var app = (function () {
     		});
 
     	function input_value_binding(value) {
-    		/*input_value_binding*/ ctx[21].call(null, value);
+    		/*input_value_binding*/ ctx[22].call(null, value);
     	}
 
     	let input_props = {
@@ -7876,14 +7876,14 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const label_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[1] & /*$$scope*/ 2048) {
     				label_changes.$$scope = { dirty, ctx };
     			}
 
     			label.$set(label_changes);
     			const input_changes = {};
 
-    			if (dirty[0] & /*countries, currentCountry*/ 10 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*countries, currentCountry*/ 10 | dirty[1] & /*$$scope*/ 2048) {
     				input_changes.$$scope = { dirty, ctx };
     			}
 
@@ -7917,14 +7917,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_19.name,
     		type: "slot",
-    		source: "(299:1) <FormGroup>",
+    		source: "(320:1) <FormGroup>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (315:3) <Label for="selectYear">
+    // (336:3) <Label for="selectYear">
     function create_default_slot_18(ctx) {
     	let t;
 
@@ -7944,17 +7944,17 @@ var app = (function () {
     		block,
     		id: create_default_slot_18.name,
     		type: "slot",
-    		source: "(315:3) <Label for=\\\"selectYear\\\">",
+    		source: "(336:3) <Label for=\\\"selectYear\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (321:4) {:else}
+    // (342:4) {:else}
     function create_else_block$6(ctx) {
     	let option;
-    	let t_value = /*year*/ ctx[35] + "";
+    	let t_value = /*year*/ ctx[36] + "";
     	let t;
     	let option_value_value;
 
@@ -7962,18 +7962,18 @@ var app = (function () {
     		c: function create() {
     			option = element("option");
     			t = text(t_value);
-    			option.__value = option_value_value = /*year*/ ctx[35];
+    			option.__value = option_value_value = /*year*/ ctx[36];
     			option.value = option.__value;
-    			add_location(option, file$a, 321, 4, 9241);
+    			add_location(option, file$a, 342, 4, 9926);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*years*/ 4 && t_value !== (t_value = /*year*/ ctx[35] + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*years*/ 4 && t_value !== (t_value = /*year*/ ctx[36] + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*years*/ 4 && option_value_value !== (option_value_value = /*year*/ ctx[35])) {
+    			if (dirty[0] & /*years*/ 4 && option_value_value !== (option_value_value = /*year*/ ctx[36])) {
     				prop_dev(option, "__value", option_value_value);
     			}
 
@@ -7988,17 +7988,17 @@ var app = (function () {
     		block,
     		id: create_else_block$6.name,
     		type: "else",
-    		source: "(321:4) {:else}",
+    		source: "(342:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (319:4) {#if year == currentYear}
+    // (340:4) {#if year == currentYear}
     function create_if_block_2$2(ctx) {
     	let option;
-    	let t_value = /*year*/ ctx[35] + "";
+    	let t_value = /*year*/ ctx[36] + "";
     	let t;
     	let option_value_value;
 
@@ -8007,18 +8007,18 @@ var app = (function () {
     			option = element("option");
     			t = text(t_value);
     			option.selected = "selected";
-    			option.__value = option_value_value = /*year*/ ctx[35];
+    			option.__value = option_value_value = /*year*/ ctx[36];
     			option.value = option.__value;
-    			add_location(option, file$a, 319, 4, 9178);
+    			add_location(option, file$a, 340, 4, 9863);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
     			append_dev(option, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*years*/ 4 && t_value !== (t_value = /*year*/ ctx[35] + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*years*/ 4 && t_value !== (t_value = /*year*/ ctx[36] + "")) set_data_dev(t, t_value);
 
-    			if (dirty[0] & /*years*/ 4 && option_value_value !== (option_value_value = /*year*/ ctx[35])) {
+    			if (dirty[0] & /*years*/ 4 && option_value_value !== (option_value_value = /*year*/ ctx[36])) {
     				prop_dev(option, "__value", option_value_value);
     			}
 
@@ -8033,19 +8033,19 @@ var app = (function () {
     		block,
     		id: create_if_block_2$2.name,
     		type: "if",
-    		source: "(319:4) {#if year == currentYear}",
+    		source: "(340:4) {#if year == currentYear}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (318:4) {#each years as year}
+    // (339:4) {#each years as year}
     function create_each_block_1(ctx) {
     	let if_block_anchor;
 
     	function select_block_type_1(ctx, dirty) {
-    		if (/*year*/ ctx[35] == /*currentYear*/ ctx[4]) return create_if_block_2$2;
+    		if (/*year*/ ctx[36] == /*currentYear*/ ctx[4]) return create_if_block_2$2;
     		return create_else_block$6;
     	}
 
@@ -8084,14 +8084,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(318:4) {#each years as year}",
+    		source: "(339:4) {#each years as year}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (316:3) <Input type="select" name="selectYear" id="selectYear" bind:value = "{currentYear}">
+    // (337:3) <Input type="select" name="selectYear" id="selectYear" bind:value = "{currentYear}">
     function create_default_slot_17(ctx) {
     	let t0;
     	let option;
@@ -8114,7 +8114,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$a, 324, 4, 9294);
+    			add_location(option, file$a, 345, 4, 9979);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -8160,14 +8160,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_17.name,
     		type: "slot",
-    		source: "(316:3) <Input type=\\\"select\\\" name=\\\"selectYear\\\" id=\\\"selectYear\\\" bind:value = \\\"{currentYear}\\\">",
+    		source: "(337:3) <Input type=\\\"select\\\" name=\\\"selectYear\\\" id=\\\"selectYear\\\" bind:value = \\\"{currentYear}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (314:2) <FormGroup>
+    // (335:2) <FormGroup>
     function create_default_slot_16(ctx) {
     	let t;
     	let updating_value;
@@ -8183,7 +8183,7 @@ var app = (function () {
     		});
 
     	function input_value_binding_1(value) {
-    		/*input_value_binding_1*/ ctx[22].call(null, value);
+    		/*input_value_binding_1*/ ctx[23].call(null, value);
     	}
 
     	let input_props = {
@@ -8216,14 +8216,14 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const label_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[1] & /*$$scope*/ 2048) {
     				label_changes.$$scope = { dirty, ctx };
     			}
 
     			label.$set(label_changes);
     			const input_changes = {};
 
-    			if (dirty[0] & /*years, currentYear*/ 20 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*years, currentYear*/ 20 | dirty[1] & /*$$scope*/ 2048) {
     				input_changes.$$scope = { dirty, ctx };
     			}
 
@@ -8257,14 +8257,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_16.name,
     		type: "slot",
-    		source: "(314:2) <FormGroup>",
+    		source: "(335:2) <FormGroup>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (329:2) <Button outline color="secondary" on:click="{search(currentCountry, currentYear)}" class="button-search" >
+    // (350:2) <Button outline color="secondary" on:click="{search(currentCountry, currentYear)}" class="button-search" >
     function create_default_slot_15(ctx) {
     	let i;
     	let t;
@@ -8274,7 +8274,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Buscar");
     			attr_dev(i, "class", "fas fa-search");
-    			add_location(i, file$a, 328, 109, 9454);
+    			add_location(i, file$a, 349, 109, 10139);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -8290,14 +8290,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_15.name,
     		type: "slot",
-    		source: "(329:2) <Button outline color=\\\"secondary\\\" on:click=\\\"{search(currentCountry, currentYear)}\\\" class=\\\"button-search\\\" >",
+    		source: "(350:2) <Button outline color=\\\"secondary\\\" on:click=\\\"{search(currentCountry, currentYear)}\\\" class=\\\"button-search\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (349:9) <Button outline color= "primary" on:click={insertOilEnergy}>
+    // (370:9) <Button outline color= "primary" on:click={insertOilEnergy}>
     function create_default_slot_14(ctx) {
     	let i;
     	let t;
@@ -8307,7 +8307,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Insertar");
     			attr_dev(i, "class", "far fa-edit");
-    			add_location(i, file$a, 348, 70, 10442);
+    			add_location(i, file$a, 369, 70, 11127);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -8323,14 +8323,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_14.name,
     		type: "slot",
-    		source: "(349:9) <Button outline color= \\\"primary\\\" on:click={insertOilEnergy}>",
+    		source: "(370:9) <Button outline color= \\\"primary\\\" on:click={insertOilEnergy}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (364:10) <Button outline color= "danger" on:click = {deleteOilEnergy(oilEnergy.country,oilEnergy.year)}>
+    // (385:10) <Button outline color= "danger" on:click = {deleteOilEnergy(oilEnergy.country,oilEnergy.year)}>
     function create_default_slot_13(ctx) {
     	let i;
     	let t;
@@ -8341,7 +8341,7 @@ var app = (function () {
     			t = text(" Borrar");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$a, 363, 106, 11020);
+    			add_location(i, file$a, 384, 106, 11705);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -8357,14 +8357,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_13.name,
     		type: "slot",
-    		source: "(364:10) <Button outline color= \\\"danger\\\" on:click = {deleteOilEnergy(oilEnergy.country,oilEnergy.year)}>",
+    		source: "(385:10) <Button outline color= \\\"danger\\\" on:click = {deleteOilEnergy(oilEnergy.country,oilEnergy.year)}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (352:4) {#each oilEnergys as oilEnergy}
+    // (373:4) {#each oilEnergys as oilEnergy}
     function create_each_block(ctx) {
     	let tr;
     	let td0;
@@ -8428,14 +8428,14 @@ var app = (function () {
     			td5 = element("td");
     			create_component(button.$$.fragment);
     			attr_dev(a, "href", a_href_value = "#/oil-coal-nuclear-energy-consumption-stats/" + /*oilEnergy*/ ctx[7].country + "/" + /*oilEnergy*/ ctx[7].year);
-    			add_location(a, file$a, 354, 7, 10574);
-    			add_location(td0, file$a, 353, 6, 10561);
-    			add_location(td1, file$a, 358, 6, 10727);
-    			add_location(td2, file$a, 360, 6, 10767);
-    			add_location(td3, file$a, 361, 6, 10814);
-    			add_location(td4, file$a, 362, 6, 10862);
-    			add_location(td5, file$a, 363, 6, 10920);
-    			add_location(tr, file$a, 352, 5, 10549);
+    			add_location(a, file$a, 375, 7, 11259);
+    			add_location(td0, file$a, 374, 6, 11246);
+    			add_location(td1, file$a, 379, 6, 11412);
+    			add_location(td2, file$a, 381, 6, 11452);
+    			add_location(td3, file$a, 382, 6, 11499);
+    			add_location(td4, file$a, 383, 6, 11547);
+    			add_location(td5, file$a, 384, 6, 11605);
+    			add_location(tr, file$a, 373, 5, 11234);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -8473,7 +8473,7 @@ var app = (function () {
     			if ((!current || dirty[0] & /*oilEnergy*/ 128) && t8_value !== (t8_value = /*oilEnergy*/ ctx[7]["nuclear-energy-consumption"] + "")) set_data_dev(t8, t8_value);
     			const button_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[1] & /*$$scope*/ 2048) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -8498,14 +8498,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(352:4) {#each oilEnergys as oilEnergy}",
+    		source: "(373:4) {#each oilEnergys as oilEnergy}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (331:2) <Table bordered>
+    // (352:2) <Table bordered>
     function create_default_slot_12(ctx) {
     	let thead;
     	let tr0;
@@ -8545,7 +8545,7 @@ var app = (function () {
     	let current;
 
     	function input0_value_binding(value) {
-    		/*input0_value_binding*/ ctx[23].call(null, value);
+    		/*input0_value_binding*/ ctx[24].call(null, value);
     	}
 
     	let input0_props = { placeholder: "Ej. España" };
@@ -8558,7 +8558,7 @@ var app = (function () {
     	binding_callbacks.push(() => bind(input0, "value", input0_value_binding));
 
     	function input1_value_binding(value) {
-    		/*input1_value_binding*/ ctx[24].call(null, value);
+    		/*input1_value_binding*/ ctx[25].call(null, value);
     	}
 
     	let input1_props = {
@@ -8575,7 +8575,7 @@ var app = (function () {
     	binding_callbacks.push(() => bind(input1, "value", input1_value_binding));
 
     	function input2_value_binding(value) {
-    		/*input2_value_binding*/ ctx[25].call(null, value);
+    		/*input2_value_binding*/ ctx[26].call(null, value);
     	}
 
     	let input2_props = {
@@ -8593,7 +8593,7 @@ var app = (function () {
     	binding_callbacks.push(() => bind(input2, "value", input2_value_binding));
 
     	function input3_value_binding(value) {
-    		/*input3_value_binding*/ ctx[26].call(null, value);
+    		/*input3_value_binding*/ ctx[27].call(null, value);
     	}
 
     	let input3_props = {
@@ -8611,7 +8611,7 @@ var app = (function () {
     	binding_callbacks.push(() => bind(input3, "value", input3_value_binding));
 
     	function input4_value_binding(value) {
-    		/*input4_value_binding*/ ctx[27].call(null, value);
+    		/*input4_value_binding*/ ctx[28].call(null, value);
     	}
 
     	let input4_props = {
@@ -8639,7 +8639,7 @@ var app = (function () {
     		});
 
     	button.$on("click", /*insertOilEnergy*/ ctx[9]);
-    	let each_value = /*oilEnergys*/ ctx[32];
+    	let each_value = /*oilEnergys*/ ctx[33];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -8700,23 +8700,23 @@ var app = (function () {
 
     			t18 = space();
     			tr2 = element("tr");
-    			add_location(th0, file$a, 333, 5, 9553);
-    			add_location(th1, file$a, 334, 5, 9573);
-    			add_location(th2, file$a, 335, 5, 9592);
-    			add_location(th3, file$a, 336, 5, 9627);
-    			add_location(th4, file$a, 337, 20, 9675);
-    			add_location(th5, file$a, 338, 20, 9732);
-    			add_location(tr0, file$a, 332, 4, 9542);
-    			add_location(thead, file$a, 331, 3, 9529);
-    			add_location(td0, file$a, 343, 5, 9802);
-    			add_location(td1, file$a, 344, 5, 9890);
-    			add_location(td2, file$a, 345, 5, 9996);
-    			add_location(td3, file$a, 346, 5, 10113);
-    			add_location(td4, file$a, 347, 5, 10240);
-    			add_location(td5, file$a, 348, 5, 10377);
-    			add_location(tr1, file$a, 342, 4, 9791);
-    			add_location(tr2, file$a, 366, 4, 11118);
-    			add_location(tbody, file$a, 341, 3, 9778);
+    			add_location(th0, file$a, 354, 5, 10238);
+    			add_location(th1, file$a, 355, 5, 10258);
+    			add_location(th2, file$a, 356, 5, 10277);
+    			add_location(th3, file$a, 357, 5, 10312);
+    			add_location(th4, file$a, 358, 20, 10360);
+    			add_location(th5, file$a, 359, 20, 10417);
+    			add_location(tr0, file$a, 353, 4, 10227);
+    			add_location(thead, file$a, 352, 3, 10214);
+    			add_location(td0, file$a, 364, 5, 10487);
+    			add_location(td1, file$a, 365, 5, 10575);
+    			add_location(td2, file$a, 366, 5, 10681);
+    			add_location(td3, file$a, 367, 5, 10798);
+    			add_location(td4, file$a, 368, 5, 10925);
+    			add_location(td5, file$a, 369, 5, 11062);
+    			add_location(tr1, file$a, 363, 4, 10476);
+    			add_location(tr2, file$a, 387, 4, 11803);
+    			add_location(tbody, file$a, 362, 3, 10463);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -8810,14 +8810,14 @@ var app = (function () {
     			input4.$set(input4_changes);
     			const button_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[1] & /*$$scope*/ 2048) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
     			button.$set(button_changes);
 
     			if (dirty[0] & /*deleteOilEnergy, oilEnergy*/ 1152) {
-    				each_value = /*oilEnergys*/ ctx[32];
+    				each_value = /*oilEnergys*/ ctx[33];
     				validate_each_argument(each_value);
     				let i;
 
@@ -8892,14 +8892,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_12.name,
     		type: "slot",
-    		source: "(331:2) <Table bordered>",
+    		source: "(352:2) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (296:19)     Loading oilEnergy...   {:then oilEnergys}
+    // (317:19)     Loading oilEnergy...   {:then oilEnergys}
     function create_pending_block(ctx) {
     	let t;
 
@@ -8922,14 +8922,14 @@ var app = (function () {
     		block,
     		id: create_pending_block.name,
     		type: "pending",
-    		source: "(296:19)     Loading oilEnergy...   {:then oilEnergys}",
+    		source: "(317:19)     Loading oilEnergy...   {:then oilEnergys}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (376:8) <PaginationItem class = "{currentPage === 1 ? 'disabled' : ''}">
+    // (397:8) <PaginationItem class = "{currentPage === 1 ? 'disabled' : ''}">
     function create_default_slot_11(ctx) {
     	let current;
 
@@ -8941,7 +8941,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	paginationlink.$on("click", /*click_handler*/ ctx[28]);
+    	paginationlink.$on("click", /*click_handler*/ ctx[29]);
 
     	const block = {
     		c: function create() {
@@ -8970,14 +8970,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11.name,
     		type: "slot",
-    		source: "(376:8) <PaginationItem class = \\\"{currentPage === 1 ? 'disabled' : ''}\\\">",
+    		source: "(397:8) <PaginationItem class = \\\"{currentPage === 1 ? 'disabled' : ''}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (380:2) {#if currentPage != 1}
+    // (401:2) {#if currentPage != 1}
     function create_if_block_1$2(ctx) {
     	let current;
 
@@ -9000,7 +9000,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const paginationitem_changes = {};
 
-    			if (dirty[0] & /*currentPage*/ 32 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*currentPage*/ 32 | dirty[1] & /*$$scope*/ 2048) {
     				paginationitem_changes.$$scope = { dirty, ctx };
     			}
 
@@ -9024,14 +9024,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(380:2) {#if currentPage != 1}",
+    		source: "(401:2) {#if currentPage != 1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (382:12) <PaginationLink href="#/oilCoalNuclearEnergyConsumptionAPI" on:click="{() => addOffset(-1)}" >
+    // (403:12) <PaginationLink href="#/oilCoalNuclearEnergyConsumptionAPI" on:click="{() => addOffset(-1)}" >
     function create_default_slot_10(ctx) {
     	let t_value = /*currentPage*/ ctx[5] - 1 + "";
     	let t;
@@ -9055,14 +9055,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10.name,
     		type: "slot",
-    		source: "(382:12) <PaginationLink href=\\\"#/oilCoalNuclearEnergyConsumptionAPI\\\" on:click=\\\"{() => addOffset(-1)}\\\" >",
+    		source: "(403:12) <PaginationLink href=\\\"#/oilCoalNuclearEnergyConsumptionAPI\\\" on:click=\\\"{() => addOffset(-1)}\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (381:8) <PaginationItem>
+    // (402:8) <PaginationItem>
     function create_default_slot_9(ctx) {
     	let current;
 
@@ -9075,7 +9075,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	paginationlink.$on("click", /*click_handler_1*/ ctx[29]);
+    	paginationlink.$on("click", /*click_handler_1*/ ctx[30]);
 
     	const block = {
     		c: function create() {
@@ -9088,7 +9088,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const paginationlink_changes = {};
 
-    			if (dirty[0] & /*currentPage*/ 32 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*currentPage*/ 32 | dirty[1] & /*$$scope*/ 2048) {
     				paginationlink_changes.$$scope = { dirty, ctx };
     			}
 
@@ -9112,14 +9112,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9.name,
     		type: "slot",
-    		source: "(381:8) <PaginationItem>",
+    		source: "(402:8) <PaginationItem>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (387:12) <PaginationLink href="#/oilCoalNuclearEnergyConsumptionAPI" >
+    // (408:12) <PaginationLink href="#/oilCoalNuclearEnergyConsumptionAPI" >
     function create_default_slot_8(ctx) {
     	let t;
 
@@ -9142,14 +9142,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8.name,
     		type: "slot",
-    		source: "(387:12) <PaginationLink href=\\\"#/oilCoalNuclearEnergyConsumptionAPI\\\" >",
+    		source: "(408:12) <PaginationLink href=\\\"#/oilCoalNuclearEnergyConsumptionAPI\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (386:8) <PaginationItem active>
+    // (407:8) <PaginationItem active>
     function create_default_slot_7(ctx) {
     	let current;
 
@@ -9173,7 +9173,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const paginationlink_changes = {};
 
-    			if (dirty[0] & /*currentPage*/ 32 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*currentPage*/ 32 | dirty[1] & /*$$scope*/ 2048) {
     				paginationlink_changes.$$scope = { dirty, ctx };
     			}
 
@@ -9197,14 +9197,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7.name,
     		type: "slot",
-    		source: "(386:8) <PaginationItem active>",
+    		source: "(407:8) <PaginationItem active>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (391:2) {#if moreData}
+    // (412:2) {#if moreData}
     function create_if_block$6(ctx) {
     	let current;
 
@@ -9227,7 +9227,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const paginationitem_changes = {};
 
-    			if (dirty[0] & /*currentPage*/ 32 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*currentPage*/ 32 | dirty[1] & /*$$scope*/ 2048) {
     				paginationitem_changes.$$scope = { dirty, ctx };
     			}
 
@@ -9251,14 +9251,14 @@ var app = (function () {
     		block,
     		id: create_if_block$6.name,
     		type: "if",
-    		source: "(391:2) {#if moreData}",
+    		source: "(412:2) {#if moreData}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (393:12) <PaginationLink href="#/oilCoalNuclearEnergyConsumptionAPI" on:click="{() => addOffset(1)}">
+    // (414:12) <PaginationLink href="#/oilCoalNuclearEnergyConsumptionAPI" on:click="{() => addOffset(1)}">
     function create_default_slot_6(ctx) {
     	let t_value = /*currentPage*/ ctx[5] + 1 + "";
     	let t;
@@ -9282,14 +9282,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6.name,
     		type: "slot",
-    		source: "(393:12) <PaginationLink href=\\\"#/oilCoalNuclearEnergyConsumptionAPI\\\" on:click=\\\"{() => addOffset(1)}\\\">",
+    		source: "(414:12) <PaginationLink href=\\\"#/oilCoalNuclearEnergyConsumptionAPI\\\" on:click=\\\"{() => addOffset(1)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (392:8) <PaginationItem >
+    // (413:8) <PaginationItem >
     function create_default_slot_5(ctx) {
     	let current;
 
@@ -9302,7 +9302,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	paginationlink.$on("click", /*click_handler_2*/ ctx[30]);
+    	paginationlink.$on("click", /*click_handler_2*/ ctx[31]);
 
     	const block = {
     		c: function create() {
@@ -9315,7 +9315,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const paginationlink_changes = {};
 
-    			if (dirty[0] & /*currentPage*/ 32 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*currentPage*/ 32 | dirty[1] & /*$$scope*/ 2048) {
     				paginationlink_changes.$$scope = { dirty, ctx };
     			}
 
@@ -9339,14 +9339,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5.name,
     		type: "slot",
-    		source: "(392:8) <PaginationItem >",
+    		source: "(413:8) <PaginationItem >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (397:8) <PaginationItem class = "{moreData ? '' : 'disabled'}">
+    // (418:8) <PaginationItem class = "{moreData ? '' : 'disabled'}">
     function create_default_slot_4(ctx) {
     	let current;
 
@@ -9358,7 +9358,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	paginationlink.$on("click", /*click_handler_3*/ ctx[31]);
+    	paginationlink.$on("click", /*click_handler_3*/ ctx[32]);
 
     	const block = {
     		c: function create() {
@@ -9387,14 +9387,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(397:8) <PaginationItem class = \\\"{moreData ? '' : 'disabled'}\\\">",
+    		source: "(418:8) <PaginationItem class = \\\"{moreData ? '' : 'disabled'}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (373:1) <Pagination style="float:right;" ariaLabel="Cambiar de página">
+    // (394:1) <Pagination style="float:right;" ariaLabel="Cambiar de página">
     function create_default_slot_3(ctx) {
     	let t0;
     	let t1;
@@ -9461,7 +9461,7 @@ var app = (function () {
     			const paginationitem0_changes = {};
     			if (dirty[0] & /*currentPage*/ 32) paginationitem0_changes.class = /*currentPage*/ ctx[5] === 1 ? "disabled" : "";
 
-    			if (dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[1] & /*$$scope*/ 2048) {
     				paginationitem0_changes.$$scope = { dirty, ctx };
     			}
 
@@ -9489,7 +9489,7 @@ var app = (function () {
 
     			const paginationitem1_changes = {};
 
-    			if (dirty[0] & /*currentPage*/ 32 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*currentPage*/ 32 | dirty[1] & /*$$scope*/ 2048) {
     				paginationitem1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -9518,7 +9518,7 @@ var app = (function () {
     			const paginationitem2_changes = {};
     			if (dirty[0] & /*moreData*/ 64) paginationitem2_changes.class = /*moreData*/ ctx[6] ? "" : "disabled";
 
-    			if (dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[1] & /*$$scope*/ 2048) {
     				paginationitem2_changes.$$scope = { dirty, ctx };
     			}
 
@@ -9558,14 +9558,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(373:1) <Pagination style=\\\"float:right;\\\" ariaLabel=\\\"Cambiar de página\\\">",
+    		source: "(394:1) <Pagination style=\\\"float:right;\\\" ariaLabel=\\\"Cambiar de página\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (404:1) <Button outline color="secondary" on:click="{pop}">
+    // (425:1) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot_2(ctx) {
     	let i;
     	let t;
@@ -9575,7 +9575,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$a, 403, 53, 12397);
+    			add_location(i, file$a, 424, 53, 13082);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -9591,14 +9591,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(404:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(425:1) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (405:1) <Button outline color= "warning" on:click = {loadInitialOilEnergy}>
+    // (426:1) <Button outline color= "warning" on:click = {loadInitialOilEnergy}>
     function create_default_slot_1(ctx) {
     	let i;
     	let t;
@@ -9609,7 +9609,7 @@ var app = (function () {
     			t = text(" Cargar datos Iniciales");
     			attr_dev(i, "class", "fas fa-cloud-upload-alt");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$a, 404, 69, 12523);
+    			add_location(i, file$a, 425, 69, 13208);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -9625,14 +9625,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(405:1) <Button outline color= \\\"warning\\\" on:click = {loadInitialOilEnergy}>",
+    		source: "(426:1) <Button outline color= \\\"warning\\\" on:click = {loadInitialOilEnergy}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (406:1) <Button outline color= "danger" on:click = {deleteOilEnergys}>
+    // (427:1) <Button outline color= "danger" on:click = {deleteOilEnergys}>
     function create_default_slot(ctx) {
     	let i;
     	let t;
@@ -9643,7 +9643,7 @@ var app = (function () {
     			t = text(" Borrar todo");
     			attr_dev(i, "class", "fa fa-trash");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$a, 405, 64, 12680);
+    			add_location(i, file$a, 426, 64, 13365);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -9659,7 +9659,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(406:1) <Button outline color= \\\"danger\\\" on:click = {deleteOilEnergys}>",
+    		source: "(427:1) <Button outline color= \\\"danger\\\" on:click = {deleteOilEnergys}>",
     		ctx
     	});
 
@@ -9684,7 +9684,7 @@ var app = (function () {
     		pending: create_pending_block,
     		then: create_then_block,
     		catch: create_catch_block,
-    		value: 32,
+    		value: 33,
     		blocks: [,,,]
     	};
 
@@ -9753,8 +9753,8 @@ var app = (function () {
     			attr_dev(div, "role", "alert");
     			attr_dev(div, "id", "div_alert");
     			set_style(div, "display", "none");
-    			add_location(div, file$a, 293, 1, 8403);
-    			add_location(main, file$a, 292, 0, 8394);
+    			add_location(div, file$a, 314, 1, 9088);
+    			add_location(main, file$a, 313, 0, 9079);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -9782,34 +9782,34 @@ var app = (function () {
 
     			if (dirty[0] & /*oilEnergy*/ 128 && promise !== (promise = /*oilEnergy*/ ctx[7]) && handle_promise(promise, info)) ; else {
     				const child_ctx = ctx.slice();
-    				child_ctx[32] = info.resolved;
+    				child_ctx[33] = info.resolved;
     				info.block.p(child_ctx, dirty);
     			}
 
     			const pagination_changes = {};
 
-    			if (dirty[0] & /*moreData, currentPage*/ 96 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*moreData, currentPage*/ 96 | dirty[1] & /*$$scope*/ 2048) {
     				pagination_changes.$$scope = { dirty, ctx };
     			}
 
     			pagination.$set(pagination_changes);
     			const button0_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[1] & /*$$scope*/ 2048) {
     				button0_changes.$$scope = { dirty, ctx };
     			}
 
     			button0.$set(button0_changes);
     			const button1_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[1] & /*$$scope*/ 2048) {
     				button1_changes.$$scope = { dirty, ctx };
     			}
 
     			button1.$set(button1_changes);
     			const button2_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[1] & /*$$scope*/ 2048) {
     				button2_changes.$$scope = { dirty, ctx };
     			}
 
@@ -10045,11 +10045,37 @@ var app = (function () {
     		});
     	}
 
+    	async function checkData(data) {
+    		const res = await fetch(BASE_API_URL);
+    		let theDataExist = false;
+
+    		/* Getting the countries for the select */
+    		if (res.ok) {
+    			const json = await res.json();
+
+    			let numberRepeatedData = json.filter(d => {
+    				return d.year == data.year && d.country == d.country;
+    			}).length;
+
+    			if (numberRepeatedData >= 1) {
+    				theDataExist = true;
+    			}
+    		} else {
+    			errorAlert = "Error interno al intentar obtener repetidos";
+    			console.log("ERROR!");
+    		}
+
+    		return theDataExist;
+    	}
+
     	async function insertOilEnergy() {
     		console.log("Inserting oil coal consumption...");
+    		const isRepeated = await checkData(newOilEnergy);
 
     		if (newOilEnergy.country == "" || newOilEnergy.country == null || newOilEnergy.year == "" || newOilEnergy.year == null) {
     			alert("Es obligatorio el campo País y año");
+    		} else if (isRepeated) {
+    			alert("¡Ya existe!");
     		} else {
     			const res = await fetch(BASE_API_URL, {
     				method: "POST",
@@ -10208,6 +10234,7 @@ var app = (function () {
     		getCountriesYears,
     		getOilEnergy,
     		loadInitialOilEnergy,
+    		checkData,
     		insertOilEnergy,
     		deleteOilEnergy,
     		deleteOilEnergys,
@@ -10261,6 +10288,7 @@ var app = (function () {
     		pages,
     		getCountriesYears,
     		getOilEnergy,
+    		checkData,
     		setOffset,
     		input_value_binding,
     		input_value_binding_1,
@@ -22023,66 +22051,109 @@ var app = (function () {
     		];
     	});
 
-    	/* 
-    The following array turn this:
-    [0, 2000, 0.0, 0.0, 0.0]
-        
-    into this:
-        
-    {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
-    That is how the chart needs it
-     */
-    	let ChartData = MyData.map(function (set, i) {
-    		return {
-    			name: countries[set[0]],
-    			data: set,
-    			shadow: false
-    		};
-    	});
+    // (295:4) <Button outline color="secondary" on:click="{pop}">
+    function create_default_slot$f(ctx) {
+    	let i;
+    	let t;
 
-    	/* Setting the chart */
-    	Highcharts.chart("container-22", {
-    		chart: {
-    			type: "spline",
-    			parallelCoordinates: true,
-    			parallelAxes: { lineWidth: 3 }
+    	const block = {
+    		c: function create() {
+    			i = element("i");
+    			t = text(" Atrás");
+    			attr_dev(i, "class", "fas fa-arrow-circle-left");
+    			add_location(i, file$s, 294, 56, 10172);
     		},
     		title: {
     			text: "Energías renovables y victorias de fórmula 1"
     		},
-    		plotOptions: {
-    			series: {
-    				animation: false,
-    				marker: {
-    					enabled: false,
-    					states: { hover: { enabled: false } }
-    				},
-    				states: { hover: { halo: { size: 0 } } },
-    				events: {
-    					mouseOver() {
-    						this.group.toFront();
-    					}
-    				}
-    			}
-    		},
-    		tooltip: {
-    			pointFormat: "<span style=\"color:{point.color}\">●</span>" + "{series.name}: <b>{point.formattedValue}</b><br/>"
-    		},
-    		xAxis: {
-    			categories: [
-    				"País",
-    				"Año",
-    				"Porcentaje de uso de energías renovables",
-    				"Porcentaje de uso de energías hidroeléctricas",
-    				"Porcentaje de uso de energías eólica",
-    				"Victorias en fórmula 1"
-    			],
-    			offset: 10
-    		},
-    		yAxis: [
-    			{
-    				categories: countries,
-    				tooltipValueFormat: "{value}"
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$f.name,
+    		type: "slot",
+    		source: "(295:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$t(ctx) {
+    	let main;
+    	let div18;
+    	let div1;
+    	let div0;
+    	let a0;
+    	let t1;
+    	let a1;
+    	let t3;
+    	let a2;
+    	let t5;
+    	let a3;
+    	let t7;
+    	let a4;
+    	let t9;
+    	let a5;
+    	let t11;
+    	let a6;
+    	let t13;
+    	let div17;
+    	let div16;
+    	let div3;
+    	let figure0;
+    	let div2;
+    	let t14;
+    	let p0;
+    	let t16;
+    	let div5;
+    	let figure1;
+    	let div4;
+    	let t17;
+    	let p1;
+    	let t19;
+    	let div7;
+    	let figure2;
+    	let div6;
+    	let t20;
+    	let p2;
+    	let t22;
+    	let div9;
+    	let figure3;
+    	let div8;
+    	let t23;
+    	let p3;
+    	let t25;
+    	let div11;
+    	let figure4;
+    	let div10;
+    	let t26;
+    	let p4;
+    	let t28;
+    	let div13;
+    	let figure5;
+    	let div12;
+    	let t29;
+    	let p5;
+    	let t31;
+    	let div15;
+    	let figure6;
+    	let div14;
+    	let t32;
+    	let p6;
+    	let t34;
+    	let current;
+
+    	const button = new Button({
+    			props: {
+    				outline: true,
+    				color: "secondary",
+    				$$slots: { default: [create_default_slot$f] },
+    				$$scope: { ctx }
     			},
     			{ min: 2000, tooltipValueFormat: "{value}" },
     			{ min: 0, tooltipValueFormat: "{value} %" },
@@ -24555,6 +24626,229 @@ var app = (function () {
     		return res;
     	});
 
+<<<<<<< HEAD
+    	button.$on("click", pop);
+
+    	const block = {
+    		c: function create() {
+    			main = element("main");
+    			div18 = element("div");
+    			div1 = element("div");
+    			div0 = element("div");
+    			a0 = element("a");
+    			a0.textContent = "Integración con 7";
+    			t1 = space();
+    			a1 = element("a");
+    			a1.textContent = "Integración con 27";
+    			t3 = space();
+    			a2 = element("a");
+    			a2.textContent = "Integración con 5";
+    			t5 = space();
+    			a3 = element("a");
+    			a3.textContent = "Integración con 4";
+    			t7 = space();
+    			a4 = element("a");
+    			a4.textContent = "Integración con 22";
+    			t9 = space();
+    			a5 = element("a");
+    			a5.textContent = "Integración con 28";
+    			t11 = space();
+    			a6 = element("a");
+    			a6.textContent = "Integración con API externa";
+    			t13 = space();
+    			div17 = element("div");
+    			div16 = element("div");
+    			div3 = element("div");
+    			figure0 = element("figure");
+    			div2 = element("div");
+    			t14 = space();
+    			p0 = element("p");
+    			p0.textContent = "Integración con el grupo 7, la integración está realizada con la importaciones de vegetales y preparados.";
+    			t16 = space();
+    			div5 = element("div");
+    			figure1 = element("figure");
+    			div4 = element("div");
+    			t17 = space();
+    			p1 = element("p");
+    			p1.textContent = "Integra la 27.";
+    			t19 = space();
+    			div7 = element("div");
+    			figure2 = element("figure");
+    			div6 = element("div");
+    			t20 = space();
+    			p2 = element("p");
+    			p2.textContent = "Integra la 5.";
+    			t22 = space();
+    			div9 = element("div");
+    			figure3 = element("figure");
+    			div8 = element("div");
+    			t23 = space();
+    			p3 = element("p");
+    			p3.textContent = "Integra la 4.";
+    			t25 = space();
+    			div11 = element("div");
+    			figure4 = element("figure");
+    			div10 = element("div");
+    			t26 = space();
+    			p4 = element("p");
+    			p4.textContent = "Integra la 22.";
+    			t28 = space();
+    			div13 = element("div");
+    			figure5 = element("figure");
+    			div12 = element("div");
+    			t29 = space();
+    			p5 = element("p");
+    			p5.textContent = "Integra la 28.";
+    			t31 = space();
+    			div15 = element("div");
+    			figure6 = element("figure");
+    			div14 = element("div");
+    			t32 = space();
+    			p6 = element("p");
+    			p6.textContent = "Integración con la una API externa que proporciona el área (en kilómetros cuadrados) de los países.";
+    			t34 = space();
+    			create_component(button.$$.fragment);
+    			attr_dev(a0, "class", "list-group-item list-group-item-action active");
+    			attr_dev(a0, "id", "list-home-list");
+    			attr_dev(a0, "data-toggle", "list");
+    			attr_dev(a0, "href", "#list-7");
+    			attr_dev(a0, "role", "tab");
+    			attr_dev(a0, "aria-controls", "home");
+    			add_location(a0, file$s, 223, 12, 5877);
+    			attr_dev(a1, "class", "list-group-item list-group-item-action");
+    			attr_dev(a1, "id", "list-profile-list");
+    			attr_dev(a1, "data-toggle", "list");
+    			attr_dev(a1, "href", "#list-27");
+    			attr_dev(a1, "role", "tab");
+    			attr_dev(a1, "aria-controls", "profile");
+    			add_location(a1, file$s, 224, 12, 6055);
+    			attr_dev(a2, "class", "list-group-item list-group-item-action");
+    			attr_dev(a2, "id", "list-profile-list");
+    			attr_dev(a2, "data-toggle", "list");
+    			attr_dev(a2, "href", "#list-5");
+    			attr_dev(a2, "role", "tab");
+    			attr_dev(a2, "aria-controls", "profile");
+    			add_location(a2, file$s, 225, 12, 6234);
+    			attr_dev(a3, "class", "list-group-item list-group-item-action");
+    			attr_dev(a3, "id", "list-profile-list");
+    			attr_dev(a3, "data-toggle", "list");
+    			attr_dev(a3, "href", "#list-4");
+    			attr_dev(a3, "role", "tab");
+    			attr_dev(a3, "aria-controls", "profile");
+    			add_location(a3, file$s, 226, 12, 6411);
+    			attr_dev(a4, "class", "list-group-item list-group-item-action");
+    			attr_dev(a4, "id", "list-profile-list");
+    			attr_dev(a4, "data-toggle", "list");
+    			attr_dev(a4, "href", "#list-22");
+    			attr_dev(a4, "role", "tab");
+    			attr_dev(a4, "aria-controls", "profile");
+    			add_location(a4, file$s, 227, 12, 6588);
+    			attr_dev(a5, "class", "list-group-item list-group-item-action");
+    			attr_dev(a5, "id", "list-profile-list");
+    			attr_dev(a5, "data-toggle", "list");
+    			attr_dev(a5, "href", "#list-28");
+    			attr_dev(a5, "role", "tab");
+    			attr_dev(a5, "aria-controls", "profile");
+    			add_location(a5, file$s, 228, 12, 6767);
+    			attr_dev(a6, "class", "list-group-item list-group-item-action");
+    			attr_dev(a6, "id", "list-profile-list");
+    			attr_dev(a6, "data-toggle", "list");
+    			attr_dev(a6, "href", "#list-ext");
+    			attr_dev(a6, "role", "tab");
+    			attr_dev(a6, "aria-controls", "profile");
+    			add_location(a6, file$s, 229, 12, 6946);
+    			attr_dev(div0, "class", "list-group");
+    			attr_dev(div0, "id", "list-tab");
+    			attr_dev(div0, "role", "tablist");
+    			add_location(div0, file$s, 222, 10, 5810);
+    			attr_dev(div1, "class", "col-4");
+    			add_location(div1, file$s, 221, 8, 5779);
+    			attr_dev(div2, "id", "container-7");
+    			add_location(div2, file$s, 237, 20, 7429);
+    			attr_dev(p0, "class", "highcharts-description");
+    			add_location(p0, file$s, 238, 20, 7479);
+    			attr_dev(figure0, "class", "highcharts-figure");
+    			add_location(figure0, file$s, 236, 16, 7373);
+    			attr_dev(div3, "class", "tab-pane fade show active");
+    			attr_dev(div3, "id", "list-7");
+    			attr_dev(div3, "role", "tabpanel");
+    			attr_dev(div3, "aria-labelledby", "list-home-list");
+    			add_location(div3, file$s, 235, 12, 7255);
+    			attr_dev(div4, "id", "container-27");
+    			add_location(div4, file$s, 245, 20, 7897);
+    			attr_dev(p1, "class", "highcharts-description");
+    			add_location(p1, file$s, 246, 20, 7948);
+    			attr_dev(figure1, "class", "highcharts-figure");
+    			add_location(figure1, file$s, 244, 16, 7841);
+    			attr_dev(div5, "class", "tab-pane fade");
+    			attr_dev(div5, "id", "list-27");
+    			attr_dev(div5, "role", "tabpanel");
+    			attr_dev(div5, "aria-labelledby", "list-profile-list");
+    			add_location(div5, file$s, 243, 12, 7731);
+    			attr_dev(div6, "id", "container-5");
+    			add_location(div6, file$s, 253, 20, 8274);
+    			attr_dev(p2, "class", "highcharts-description");
+    			add_location(p2, file$s, 254, 20, 8324);
+    			attr_dev(figure2, "class", "highcharts-figure");
+    			add_location(figure2, file$s, 252, 16, 8218);
+    			attr_dev(div7, "class", "tab-pane fade");
+    			attr_dev(div7, "id", "list-5");
+    			attr_dev(div7, "role", "tabpanel");
+    			attr_dev(div7, "aria-labelledby", "list-profile-list");
+    			add_location(div7, file$s, 251, 12, 8109);
+    			attr_dev(div8, "id", "container-4");
+    			add_location(div8, file$s, 261, 20, 8649);
+    			attr_dev(p3, "class", "highcharts-description");
+    			add_location(p3, file$s, 262, 20, 8699);
+    			attr_dev(figure3, "class", "highcharts-figure");
+    			add_location(figure3, file$s, 260, 16, 8593);
+    			attr_dev(div9, "class", "tab-pane fade");
+    			attr_dev(div9, "id", "list-4");
+    			attr_dev(div9, "role", "tabpanel");
+    			attr_dev(div9, "aria-labelledby", "list-profile-list");
+    			add_location(div9, file$s, 259, 12, 8484);
+    			attr_dev(div10, "id", "container-22");
+    			add_location(div10, file$s, 269, 20, 9025);
+    			attr_dev(p4, "class", "highcharts-description");
+    			add_location(p4, file$s, 270, 20, 9076);
+    			attr_dev(figure4, "class", "highcharts-figure");
+    			add_location(figure4, file$s, 268, 16, 8969);
+    			attr_dev(div11, "class", "tab-pane fade");
+    			attr_dev(div11, "id", "list-22");
+    			attr_dev(div11, "role", "tabpanel");
+    			attr_dev(div11, "aria-labelledby", "list-profile-list");
+    			add_location(div11, file$s, 267, 12, 8859);
+    			attr_dev(div12, "id", "container-28");
+    			add_location(div12, file$s, 277, 20, 9403);
+    			attr_dev(p5, "class", "highcharts-description");
+    			add_location(p5, file$s, 278, 20, 9454);
+    			attr_dev(figure5, "class", "highcharts-figure");
+    			add_location(figure5, file$s, 276, 16, 9347);
+    			attr_dev(div13, "class", "tab-pane fade");
+    			attr_dev(div13, "id", "list-28");
+    			attr_dev(div13, "role", "tabpanel");
+    			attr_dev(div13, "aria-labelledby", "list-profile-list");
+    			add_location(div13, file$s, 275, 12, 9237);
+    			attr_dev(div14, "id", "container-ext");
+    			add_location(div14, file$s, 285, 20, 9782);
+    			attr_dev(p6, "class", "highcharts-description");
+    			add_location(p6, file$s, 286, 20, 9834);
+    			attr_dev(figure6, "class", "highcharts-figure");
+    			add_location(figure6, file$s, 284, 16, 9726);
+    			attr_dev(div15, "class", "tab-pane fade");
+    			attr_dev(div15, "id", "list-ext");
+    			attr_dev(div15, "role", "tabpanel");
+    			attr_dev(div15, "aria-labelledby", "list-profile-list");
+    			add_location(div15, file$s, 283, 12, 9615);
+    			attr_dev(div16, "class", "tab-content");
+    			attr_dev(div16, "id", "nav-tabContent");
+    			add_location(div16, file$s, 234, 10, 7196);
+    			attr_dev(div17, "class", "col-8");
+    			add_location(div17, file$s, 233, 8, 7165);
+    			attr_dev(div18, "class", "row");
+    			add_location(div18, file$s, 220, 4, 5752);
+    			add_location(main, file$s, 219, 0, 5740);
+=======
     	let dataAPI08_2 = Data08.map(d => {
     		let res = { name: d.state, value: d.solar };
     		return res;
@@ -24569,11 +24863,85 @@ var app = (function () {
     		{
     			name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018.",
     			data: dataPlugin
+>>>>>>> 43e6c3529c0a04455a2a86e87ab9a684b18d5c93
     		},
     		{
     			name: "Energía Hidroeléctrica producida en EEUU en el año 2018",
     			data: dataAPI08_1
     		},
+<<<<<<< HEAD
+    		m: function mount(target, anchor) {
+    			insert_dev(target, main, anchor);
+    			append_dev(main, div18);
+    			append_dev(div18, div1);
+    			append_dev(div1, div0);
+    			append_dev(div0, a0);
+    			append_dev(div0, t1);
+    			append_dev(div0, a1);
+    			append_dev(div0, t3);
+    			append_dev(div0, a2);
+    			append_dev(div0, t5);
+    			append_dev(div0, a3);
+    			append_dev(div0, t7);
+    			append_dev(div0, a4);
+    			append_dev(div0, t9);
+    			append_dev(div0, a5);
+    			append_dev(div0, t11);
+    			append_dev(div0, a6);
+    			append_dev(div18, t13);
+    			append_dev(div18, div17);
+    			append_dev(div17, div16);
+    			append_dev(div16, div3);
+    			append_dev(div3, figure0);
+    			append_dev(figure0, div2);
+    			append_dev(figure0, t14);
+    			append_dev(figure0, p0);
+    			append_dev(div16, t16);
+    			append_dev(div16, div5);
+    			append_dev(div5, figure1);
+    			append_dev(figure1, div4);
+    			append_dev(figure1, t17);
+    			append_dev(figure1, p1);
+    			append_dev(div16, t19);
+    			append_dev(div16, div7);
+    			append_dev(div7, figure2);
+    			append_dev(figure2, div6);
+    			append_dev(figure2, t20);
+    			append_dev(figure2, p2);
+    			append_dev(div16, t22);
+    			append_dev(div16, div9);
+    			append_dev(div9, figure3);
+    			append_dev(figure3, div8);
+    			append_dev(figure3, t23);
+    			append_dev(figure3, p3);
+    			append_dev(div16, t25);
+    			append_dev(div16, div11);
+    			append_dev(div11, figure4);
+    			append_dev(figure4, div10);
+    			append_dev(figure4, t26);
+    			append_dev(figure4, p4);
+    			append_dev(div16, t28);
+    			append_dev(div16, div13);
+    			append_dev(div13, figure5);
+    			append_dev(figure5, div12);
+    			append_dev(figure5, t29);
+    			append_dev(figure5, p5);
+    			append_dev(div16, t31);
+    			append_dev(div16, div15);
+    			append_dev(div15, figure6);
+    			append_dev(figure6, div14);
+    			append_dev(figure6, t32);
+    			append_dev(figure6, p6);
+    			append_dev(main, t34);
+    			mount_component(button, main, null);
+    			current = true;
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 1) {
+    				button_changes.$$scope = { dirty, ctx };
+=======
     		{
     			name: "Energía Solar producida en EEUU en el año 2018",
     			data: dataAPI08_2
@@ -24614,12 +24982,29 @@ var app = (function () {
     						fontWeight: "normal"
     					}
     				}
+>>>>>>> 43e6c3529c0a04455a2a86e87ab9a684b18d5c93
     			}
     		},
     		series: datos
     	});
     }
 
+<<<<<<< HEAD
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(main);
+    			destroy_component(button);
+=======
     async function loadGraph12() {
     	const BASE_API_URL_12 = "https://sos1920-12.herokuapp.com/api/v2/overdose-deaths";
     	const resData = await fetch(BASE_API_URL$6);
@@ -24762,6 +25147,7 @@ var app = (function () {
     		{
     			name: "Número de incendios totales en España en el año 2007",
     			data: dataAPI23
+>>>>>>> 43e6c3529c0a04455a2a86e87ab9a684b18d5c93
     		}
     	];
 
@@ -24927,8 +25313,183 @@ var app = (function () {
     			value: d["cars-per-1000"]
     		};
 
+<<<<<<< HEAD
+    async function loadGraph4$1() {
+    	const BASE_API_URL = "https://sos1920-04.herokuapp.com/api/v1/traffic_accidents";
+    	let MyData = [];
+    	const resData = await fetch(BASE_API_URL);
+    	MyData = await resData.json();
+
+    	/* let countries = [];
+     let pevStock = [];
+     let annualSale = [];
+     let carsPer1000 = [];
+     */
+    	let provincies = [];
+
+    	let accidentWithVictims = [];
+    	let mortalAccident = [];
+    	let death = [];
+
+    	MyData.forEach(data => {
+    		let province = data.province;
+    		let year = data.year;
+    		let acc = data.accidentWithVictims;
+    		let mor = data.mortalAccident;
+    		let dea = data.death;
+
+    		/* let country = data.country;
+     let year = data.year;
+     let p = data["pev-stock"];
+     let a = data["annual-sale"];
+     let c = data["cars-per-1000"];
+     */
+    		if (data.year == 2018) {
+    			provincies.push(province);
+    			accidentWithVictims.push(acc);
+    			mortalAccident.push(mor);
+    			death.push(dea);
+    		}
+    	});
+
+    	/*
+        { 
+       "country": "Japan",
+       "year": 2018,
+       "pev-stock": 257363,
+       "annual-sale": 52013,
+       "cars-per-1000": 2.0
+           province:"Almeria",
+    			year: 2018,
+    			accidentWithVictims: 1194,
+    			mortalAccident: 27,
+    			death: 27,
+    			hospitalizedWounded: 111,
+    			notHospitalizedWounded: 1780
+        }
+        
+        */
+    	Highcharts.chart("container", {
+    		chart: { zoomType: "xy" },
+    		title: {
+    			text: "Gráfica sobre datos de accidentes de tráfico.",
+    			align: "left"
+    		},
+    		subtitle: {
+    			text: "Datos sobre el año 2018:",
+    			align: "left"
+    		},
+    		xAxis: [{ categories: provincies, crosshair: true }],
+    		yAxis: [
+    			{
+    				// Primary yAxis
+    				labels: {
+    					format: "{value} unidades",
+    					style: { color: Highcharts.getOptions().colors[2] }
+    				},
+    				title: {
+    					text: "Accidentes Mortales",
+    					style: { color: Highcharts.getOptions().colors[2] }
+    				},
+    				opposite: true
+    			},
+    			{
+    				// Secondary yAxis
+    				gridLineWidth: 0,
+    				title: {
+    					text: "Accidentes con Víctimas",
+    					style: { color: Highcharts.getOptions().colors[0] }
+    				},
+    				labels: {
+    					format: "{value} unidades",
+    					style: { color: Highcharts.getOptions().colors[0] }
+    				}
+    			},
+    			{
+    				// Tertiary yAxis
+    				gridLineWidth: 0,
+    				title: {
+    					text: "Personas Fallecidas",
+    					style: { color: Highcharts.getOptions().colors[1] }
+    				},
+    				labels: {
+    					format: "{value} unidades",
+    					style: { color: Highcharts.getOptions().colors[1] }
+    				},
+    				opposite: true
+    			}
+    		],
+    		tooltip: { shared: true },
+    		legend: {
+    			align: "left",
+    			verticalAlign: "bottom",
+    			y: 25,
+    			floating: true,
+    			backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || // theme
+    			"rgba(255,255,255,0.25)"
+    		},
+    		series: [
+    			{
+    				name: "Accidentes con Víctimas",
+    				type: "column",
+    				yAxis: 1,
+    				data: accidentWithVictims,
+    				tooltip: { valueSuffix: " unidades" }
+    			},
+    			{
+    				name: "Personas Fallecidas",
+    				type: "spline",
+    				yAxis: 2,
+    				data: death,
+    				marker: { enabled: false },
+    				dashStyle: "shortdot",
+    				tooltip: { valueSuffix: " unidades" }
+    			},
+    			{
+    				name: "Accidentes Mortales",
+    				type: "spline",
+    				data: mortalAccident,
+    				tooltip: { valueSuffix: " unidades" }
+    			}
+    		],
+    		responsive: {
+    			rules: [
+    				{
+    					condition: { maxWidth: 500 },
+    					chartOptions: {
+    						legend: {
+    							floating: false,
+    							layout: "horizontal",
+    							align: "center",
+    							verticalAlign: "bottom",
+    							x: 0,
+    							y: 0
+    						},
+    						yAxis: [
+    							{
+    								labels: { align: "right", x: 0, y: -6 },
+    								showLastLabel: false
+    							},
+    							{
+    								labels: { align: "left", x: 0, y: -6 },
+    								showLastLabel: false
+    							},
+    							{ visible: false }
+    						]
+    					}
+    				}
+    			]
+    		}
+    	});
+    }
+
+    function instance$t($$self, $$props, $$invalidate) {
+    	loadGraph4$1();
+    	const writable_props = [];
+=======
     		return res;
     	});
+>>>>>>> 43e6c3529c0a04455a2a86e87ab9a684b18d5c93
 
     	let dataAPI27 = Data27.filter(d => {
     		return d.year == 2013;
@@ -24937,6 +25498,12 @@ var app = (function () {
     		return res;
     	});
 
+<<<<<<< HEAD
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("Integrations", $$slots, []);
+    	$$self.$capture_state = () => ({ Button, pop, loadGraph4: loadGraph4$1 });
+    	return [];
+=======
     	let datos = [
     		{
     			name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018",
@@ -24982,6 +25549,7 @@ var app = (function () {
     		},
     		series: datos
     	});
+>>>>>>> 43e6c3529c0a04455a2a86e87ab9a684b18d5c93
     }
 
     async function loadGraph28() {
