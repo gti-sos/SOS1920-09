@@ -23903,7 +23903,7 @@ var app = (function () {
     const { console: console_1$b } = globals;
     const file$t = "src\\front\\plugInVehiclesAPI\\Integrations.svelte";
 
-    // (1574:4) <Button outline color="secondary" on:click="{pop}">
+    // (1569:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$g(ctx) {
     	let i;
     	let t;
@@ -23913,7 +23913,7 @@ var app = (function () {
     			i = element("i");
     			t = text(" Atrás");
     			attr_dev(i, "class", "fas fa-arrow-circle-left");
-    			add_location(i, file$t, 1573, 56, 53284);
+    			add_location(i, file$t, 1568, 56, 52923);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -23929,7 +23929,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$g.name,
     		type: "slot",
-    		source: "(1574:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(1569:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -24134,7 +24134,7 @@ var app = (function () {
     			div4 = element("div");
     			t30 = space();
     			p1 = element("p");
-    			p1.textContent = "La integración muestra los datos en España sobre el número total de carreteras, autopistas y autovías \r\n                        junto con la venta anual de coches electricos en 2018. Podría haber mostrado solo el de España,\r\n                        pero la gráfica final se veia muy mal.";
+    			p1.textContent = "La integración muestra los datos en España sobre el número total de carreteras, autopistas y autovías \r\n                        junto con la venta anual de coches electricos en 2018 (también en España).";
     			t32 = space();
     			div7 = element("div");
     			figure2 = element("figure");
@@ -24148,7 +24148,7 @@ var app = (function () {
     			div8 = element("div");
     			t36 = space();
     			p3 = element("p");
-    			p3.textContent = "La integración muestra el número total de vías urbanas e interurbanas en distintas ciudades de España\r\n                        junto al porcentaje de coches eléctricos cada 1000 personas en todo el mundo en el año 2018.\r\n                        Podría haber mostrado unicamente los datos de EEUU, pero la gráfica resultante no resulta \r\n                        muy agradable visualmente.";
+    			p3.textContent = "La integración muestra el número total de vías urbanas e interurbanas en distintas ciudades de España\r\n                        junto al porcentaje de coches eléctricos cada 1000 personas en España en el año 2018.";
     			t38 = space();
     			div11 = element("div");
     			figure4 = element("figure");
@@ -24176,14 +24176,14 @@ var app = (function () {
     			div16 = element("div");
     			t48 = space();
     			p7 = element("p");
-    			p7.textContent = "La integración muestra el número total de incendios en cada comunidad autónoma de España en el año 2007\r\n                        junto al porcentaje de coches eléctricos en el año 2018 en todo el mundo. Podría haber mostrado solo el de España,\r\n                        pero la gráfica final se veia muy mal.";
+    			p7.textContent = "La integración muestra el número total de incendios en cada comunidad autónoma de España en el año 2007\r\n                        junto al porcentaje de coches eléctricos en el año 2018 en España.";
     			t50 = space();
     			div19 = element("div");
     			figure8 = element("figure");
     			div18 = element("div");
     			t51 = space();
     			p8 = element("p");
-    			p8.textContent = "La integración muestra el coste medio de las matriculas universitarias españolas junto el Porcentaje\r\n                        de coches eléctricos cada 1000 personas en el año 2018 en todo el mundo. Podría haber mostrado solo el de España,\r\n                        pero la gráfica final se veia muy mal.";
+    			p8.textContent = "La integración muestra el coste medio de las matriculas universitarias españolas junto el Porcentaje\r\n                        de coches eléctricos cada 1000 personas en el año 2018 en España.";
     			t53 = space();
     			div21 = element("div");
     			figure9 = element("figure");
@@ -24215,261 +24215,261 @@ var app = (function () {
     			t65 = space();
     			create_component(button.$$.fragment);
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$t, 1412, 4, 42031);
+    			add_location(script0, file$t, 1412, 4, 42154);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$t, 1413, 4, 42102);
+    			add_location(script1, file$t, 1413, 4, 42225);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$t, 1414, 4, 42178);
+    			add_location(script2, file$t, 1414, 4, 42301);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$t, 1415, 4, 42256);
+    			add_location(script3, file$t, 1415, 4, 42379);
     			attr_dev(a0, "class", "list-group-item list-group-item-action active");
     			attr_dev(a0, "id", "list-home-list");
     			attr_dev(a0, "data-toggle", "list");
     			attr_dev(a0, "href", "#list-01");
     			attr_dev(a0, "role", "tab");
     			attr_dev(a0, "aria-controls", "home");
-    			add_location(a0, file$t, 1425, 12, 42499);
+    			add_location(a0, file$t, 1425, 12, 42622);
     			attr_dev(a1, "class", "list-group-item list-group-item-action");
     			attr_dev(a1, "id", "list-profile-list");
     			attr_dev(a1, "data-toggle", "list");
     			attr_dev(a1, "href", "#list-04");
     			attr_dev(a1, "role", "tab");
     			attr_dev(a1, "aria-controls", "profile");
-    			add_location(a1, file$t, 1426, 12, 42695);
+    			add_location(a1, file$t, 1426, 12, 42818);
     			attr_dev(a2, "class", "list-group-item list-group-item-action");
     			attr_dev(a2, "id", "list-profile-list");
     			attr_dev(a2, "data-toggle", "list");
     			attr_dev(a2, "href", "#list-05");
     			attr_dev(a2, "role", "tab");
     			attr_dev(a2, "aria-controls", "profile");
-    			add_location(a2, file$t, 1427, 12, 42880);
+    			add_location(a2, file$t, 1427, 12, 43003);
     			attr_dev(a3, "class", "list-group-item list-group-item-action");
     			attr_dev(a3, "id", "list-profile-list");
     			attr_dev(a3, "data-toggle", "list");
     			attr_dev(a3, "href", "#list-06");
     			attr_dev(a3, "role", "tab");
     			attr_dev(a3, "aria-controls", "profile");
-    			add_location(a3, file$t, 1428, 12, 43077);
+    			add_location(a3, file$t, 1428, 12, 43200);
     			attr_dev(a4, "class", "list-group-item list-group-item-action");
     			attr_dev(a4, "id", "list-profile-list");
     			attr_dev(a4, "data-toggle", "list");
     			attr_dev(a4, "href", "#list-07");
     			attr_dev(a4, "role", "tab");
     			attr_dev(a4, "aria-controls", "profile");
-    			add_location(a4, file$t, 1429, 12, 43279);
+    			add_location(a4, file$t, 1429, 12, 43402);
     			attr_dev(a5, "class", "list-group-item list-group-item-action");
     			attr_dev(a5, "id", "list-profile-list");
     			attr_dev(a5, "data-toggle", "list");
     			attr_dev(a5, "href", "#list-08");
     			attr_dev(a5, "role", "tab");
     			attr_dev(a5, "aria-controls", "profile");
-    			add_location(a5, file$t, 1430, 12, 43466);
+    			add_location(a5, file$t, 1430, 12, 43589);
     			attr_dev(a6, "class", "list-group-item list-group-item-action");
     			attr_dev(a6, "id", "list-profile-list");
     			attr_dev(a6, "data-toggle", "list");
     			attr_dev(a6, "href", "#list-12");
     			attr_dev(a6, "role", "tab");
     			attr_dev(a6, "aria-controls", "profile");
-    			add_location(a6, file$t, 1431, 12, 43672);
+    			add_location(a6, file$t, 1431, 12, 43795);
     			attr_dev(a7, "class", "list-group-item list-group-item-action");
     			attr_dev(a7, "id", "list-profile-list");
     			attr_dev(a7, "data-toggle", "list");
     			attr_dev(a7, "href", "#list-23");
     			attr_dev(a7, "role", "tab");
     			attr_dev(a7, "aria-controls", "profile");
-    			add_location(a7, file$t, 1432, 12, 43867);
+    			add_location(a7, file$t, 1432, 12, 43990);
     			attr_dev(a8, "class", "list-group-item list-group-item-action");
     			attr_dev(a8, "id", "list-profile-list");
     			attr_dev(a8, "data-toggle", "list");
     			attr_dev(a8, "href", "#list-24");
     			attr_dev(a8, "role", "tab");
     			attr_dev(a8, "aria-controls", "profile");
-    			add_location(a8, file$t, 1433, 12, 44058);
+    			add_location(a8, file$t, 1433, 12, 44181);
     			attr_dev(a9, "class", "list-group-item list-group-item-action");
     			attr_dev(a9, "id", "list-profile-list");
     			attr_dev(a9, "data-toggle", "list");
     			attr_dev(a9, "href", "#list-27");
     			attr_dev(a9, "role", "tab");
     			attr_dev(a9, "aria-controls", "profile");
-    			add_location(a9, file$t, 1434, 12, 44247);
+    			add_location(a9, file$t, 1434, 12, 44370);
     			attr_dev(a10, "class", "list-group-item list-group-item-action");
     			attr_dev(a10, "id", "list-profile-list");
     			attr_dev(a10, "data-toggle", "list");
     			attr_dev(a10, "href", "#list-28");
     			attr_dev(a10, "role", "tab");
     			attr_dev(a10, "aria-controls", "profile");
-    			add_location(a10, file$t, 1435, 12, 44436);
+    			add_location(a10, file$t, 1435, 12, 44559);
     			attr_dev(a11, "class", "list-group-item list-group-item-action");
     			attr_dev(a11, "id", "list-profile-list");
     			attr_dev(a11, "data-toggle", "list");
     			attr_dev(a11, "href", "#list-Ext01");
     			attr_dev(a11, "role", "tab");
     			attr_dev(a11, "aria-controls", "profile");
-    			add_location(a11, file$t, 1436, 12, 44619);
+    			add_location(a11, file$t, 1436, 12, 44742);
     			attr_dev(a12, "class", "list-group-item list-group-item-action");
     			attr_dev(a12, "id", "list-profile-list");
     			attr_dev(a12, "data-toggle", "list");
     			attr_dev(a12, "href", "#list-Ext02");
     			attr_dev(a12, "role", "tab");
     			attr_dev(a12, "aria-controls", "profile");
-    			add_location(a12, file$t, 1437, 12, 44805);
+    			add_location(a12, file$t, 1437, 12, 44928);
     			attr_dev(div0, "class", "list-group");
     			attr_dev(div0, "id", "list-tab");
     			attr_dev(div0, "role", "tablist");
-    			add_location(div0, file$t, 1423, 10, 42430);
+    			add_location(div0, file$t, 1423, 10, 42553);
     			attr_dev(div1, "class", "col-4");
-    			add_location(div1, file$t, 1422, 8, 42399);
+    			add_location(div1, file$t, 1422, 8, 42522);
     			attr_dev(div2, "id", "container01");
-    			add_location(div2, file$t, 1445, 20, 45286);
+    			add_location(div2, file$t, 1445, 20, 45409);
     			attr_dev(p0, "class", "highcharts-description");
-    			add_location(p0, file$t, 1446, 20, 45336);
+    			add_location(p0, file$t, 1446, 20, 45459);
     			attr_dev(figure0, "class", "highcharts-figure");
-    			add_location(figure0, file$t, 1444, 16, 45230);
+    			add_location(figure0, file$t, 1444, 16, 45353);
     			attr_dev(div3, "class", "tab-pane fade show active");
     			attr_dev(div3, "id", "list-01");
     			attr_dev(div3, "role", "tabpanel");
     			attr_dev(div3, "aria-labelledby", "list-home-list");
-    			add_location(div3, file$t, 1443, 12, 45111);
+    			add_location(div3, file$t, 1443, 12, 45234);
     			attr_dev(div4, "id", "container04");
-    			add_location(div4, file$t, 1454, 20, 45843);
+    			add_location(div4, file$t, 1454, 20, 45966);
     			attr_dev(p1, "class", "highcharts-description");
-    			add_location(p1, file$t, 1455, 20, 45893);
+    			add_location(p1, file$t, 1455, 20, 46016);
     			attr_dev(figure1, "class", "highcharts-figure");
-    			add_location(figure1, file$t, 1453, 16, 45787);
+    			add_location(figure1, file$t, 1453, 16, 45910);
     			attr_dev(div5, "class", "tab-pane fade");
     			attr_dev(div5, "id", "list-04");
     			attr_dev(div5, "role", "tabpanel");
     			attr_dev(div5, "aria-labelledby", "list-profile-list");
-    			add_location(div5, file$t, 1452, 12, 45677);
+    			add_location(div5, file$t, 1452, 12, 45800);
     			attr_dev(div6, "id", "container05");
-    			add_location(div6, file$t, 1464, 20, 46493);
+    			add_location(div6, file$t, 1463, 20, 46531);
     			attr_dev(p2, "class", "highcharts-description");
-    			add_location(p2, file$t, 1465, 20, 46543);
+    			add_location(p2, file$t, 1464, 20, 46581);
     			attr_dev(figure2, "class", "highcharts-figure");
-    			add_location(figure2, file$t, 1463, 16, 46437);
+    			add_location(figure2, file$t, 1462, 16, 46475);
     			attr_dev(div7, "class", "tab-pane fade");
     			attr_dev(div7, "id", "list-05");
     			attr_dev(div7, "role", "tabpanel");
     			attr_dev(div7, "aria-labelledby", "list-profile-list");
-    			add_location(div7, file$t, 1462, 12, 46327);
+    			add_location(div7, file$t, 1461, 12, 46365);
     			attr_dev(div8, "id", "container06");
-    			add_location(div8, file$t, 1473, 20, 47040);
+    			add_location(div8, file$t, 1472, 20, 47078);
     			attr_dev(p3, "class", "highcharts-description");
-    			add_location(p3, file$t, 1474, 20, 47090);
+    			add_location(p3, file$t, 1473, 20, 47128);
     			attr_dev(figure3, "class", "highcharts-figure");
-    			add_location(figure3, file$t, 1472, 16, 46984);
+    			add_location(figure3, file$t, 1471, 16, 47022);
     			attr_dev(div9, "class", "tab-pane fade");
     			attr_dev(div9, "id", "list-06");
     			attr_dev(div9, "role", "tabpanel");
     			attr_dev(div9, "aria-labelledby", "list-profile-list");
-    			add_location(div9, file$t, 1471, 12, 46874);
+    			add_location(div9, file$t, 1470, 12, 46912);
     			attr_dev(div10, "id", "container07");
-    			add_location(div10, file$t, 1485, 20, 47816);
+    			add_location(div10, file$t, 1482, 20, 47679);
     			attr_dev(p4, "class", "highcharts-description");
-    			add_location(p4, file$t, 1486, 20, 47866);
+    			add_location(p4, file$t, 1483, 20, 47729);
     			attr_dev(figure4, "class", "highcharts-figure");
-    			add_location(figure4, file$t, 1484, 16, 47760);
+    			add_location(figure4, file$t, 1481, 16, 47623);
     			attr_dev(div11, "class", "tab-pane fade");
     			attr_dev(div11, "id", "list-07");
     			attr_dev(div11, "role", "tabpanel");
     			attr_dev(div11, "aria-labelledby", "list-profile-list");
-    			add_location(div11, file$t, 1483, 12, 47650);
+    			add_location(div11, file$t, 1480, 12, 47513);
     			attr_dev(div12, "id", "container08");
-    			add_location(div12, file$t, 1494, 20, 48390);
+    			add_location(div12, file$t, 1491, 20, 48253);
     			attr_dev(p5, "class", "highcharts-description");
-    			add_location(p5, file$t, 1495, 20, 48440);
+    			add_location(p5, file$t, 1492, 20, 48303);
     			attr_dev(figure5, "class", "highcharts-figure");
-    			add_location(figure5, file$t, 1493, 16, 48334);
+    			add_location(figure5, file$t, 1490, 16, 48197);
     			attr_dev(div13, "class", "tab-pane fade");
     			attr_dev(div13, "id", "list-08");
     			attr_dev(div13, "role", "tabpanel");
     			attr_dev(div13, "aria-labelledby", "list-profile-list");
-    			add_location(div13, file$t, 1492, 12, 48224);
+    			add_location(div13, file$t, 1489, 12, 48087);
     			attr_dev(div14, "id", "container12");
-    			add_location(div14, file$t, 1505, 20, 49131);
+    			add_location(div14, file$t, 1502, 20, 48994);
     			attr_dev(p6, "class", "highcharts-description");
-    			add_location(p6, file$t, 1506, 20, 49181);
+    			add_location(p6, file$t, 1503, 20, 49044);
     			attr_dev(figure6, "class", "highcharts-figure");
-    			add_location(figure6, file$t, 1504, 16, 49075);
+    			add_location(figure6, file$t, 1501, 16, 48938);
     			attr_dev(div15, "class", "tab-pane fade");
     			attr_dev(div15, "id", "list-12");
     			attr_dev(div15, "role", "tabpanel");
     			attr_dev(div15, "aria-labelledby", "list-profile-list");
-    			add_location(div15, file$t, 1503, 12, 48965);
+    			add_location(div15, file$t, 1500, 12, 48828);
     			attr_dev(div16, "id", "container23");
-    			add_location(div16, file$t, 1514, 20, 49718);
+    			add_location(div16, file$t, 1511, 20, 49581);
     			attr_dev(p7, "class", "highcharts-description");
-    			add_location(p7, file$t, 1515, 20, 49768);
+    			add_location(p7, file$t, 1512, 20, 49631);
     			attr_dev(figure7, "class", "highcharts-figure");
-    			add_location(figure7, file$t, 1513, 16, 49662);
+    			add_location(figure7, file$t, 1510, 16, 49525);
     			attr_dev(div17, "class", "tab-pane fade");
     			attr_dev(div17, "id", "list-23");
     			attr_dev(div17, "role", "tabpanel");
     			attr_dev(div17, "aria-labelledby", "list-profile-list");
-    			add_location(div17, file$t, 1512, 12, 49552);
+    			add_location(div17, file$t, 1509, 12, 49415);
     			attr_dev(div18, "id", "container24");
-    			add_location(div18, file$t, 1524, 20, 50388);
+    			add_location(div18, file$t, 1520, 20, 50139);
     			attr_dev(p8, "class", "highcharts-description");
-    			add_location(p8, file$t, 1525, 20, 50438);
+    			add_location(p8, file$t, 1521, 20, 50189);
     			attr_dev(figure8, "class", "highcharts-figure");
-    			add_location(figure8, file$t, 1523, 16, 50332);
+    			add_location(figure8, file$t, 1519, 16, 50083);
     			attr_dev(div19, "class", "tab-pane fade");
     			attr_dev(div19, "id", "list-24");
     			attr_dev(div19, "role", "tabpanel");
     			attr_dev(div19, "aria-labelledby", "list-profile-list");
-    			add_location(div19, file$t, 1522, 12, 50222);
+    			add_location(div19, file$t, 1518, 12, 49973);
     			attr_dev(div20, "id", "container27");
-    			add_location(div20, file$t, 1534, 20, 51054);
+    			add_location(div20, file$t, 1529, 20, 50693);
     			attr_dev(p9, "class", "highcharts-description");
-    			add_location(p9, file$t, 1535, 20, 51104);
+    			add_location(p9, file$t, 1530, 20, 50743);
     			attr_dev(figure9, "class", "highcharts-figure");
-    			add_location(figure9, file$t, 1533, 16, 50998);
+    			add_location(figure9, file$t, 1528, 16, 50637);
     			attr_dev(div21, "class", "tab-pane fade");
     			attr_dev(div21, "id", "list-27");
     			attr_dev(div21, "role", "tabpanel");
     			attr_dev(div21, "aria-labelledby", "list-profile-list");
-    			add_location(div21, file$t, 1532, 12, 50888);
+    			add_location(div21, file$t, 1527, 12, 50527);
     			attr_dev(div22, "id", "container28");
-    			add_location(div22, file$t, 1543, 20, 51634);
+    			add_location(div22, file$t, 1538, 20, 51273);
     			attr_dev(p10, "class", "highcharts-description");
-    			add_location(p10, file$t, 1544, 20, 51684);
+    			add_location(p10, file$t, 1539, 20, 51323);
     			attr_dev(figure10, "class", "highcharts-figure");
-    			add_location(figure10, file$t, 1542, 16, 51578);
+    			add_location(figure10, file$t, 1537, 16, 51217);
     			attr_dev(div23, "class", "tab-pane fade");
     			attr_dev(div23, "id", "list-28");
     			attr_dev(div23, "role", "tabpanel");
     			attr_dev(div23, "aria-labelledby", "list-profile-list");
-    			add_location(div23, file$t, 1541, 12, 51468);
+    			add_location(div23, file$t, 1536, 12, 51107);
     			attr_dev(div24, "id", "containerExt01");
-    			add_location(div24, file$t, 1552, 20, 52186);
+    			add_location(div24, file$t, 1547, 20, 51825);
     			attr_dev(p11, "class", "highcharts-description");
-    			add_location(p11, file$t, 1553, 20, 52239);
+    			add_location(p11, file$t, 1548, 20, 51878);
     			attr_dev(figure11, "class", "highcharts-figure");
-    			add_location(figure11, file$t, 1551, 16, 52130);
+    			add_location(figure11, file$t, 1546, 16, 51769);
     			attr_dev(div25, "class", "tab-pane fade");
     			attr_dev(div25, "id", "list-Ext01");
     			attr_dev(div25, "role", "tabpanel");
     			attr_dev(div25, "aria-labelledby", "list-profile-list");
-    			add_location(div25, file$t, 1550, 12, 52017);
+    			add_location(div25, file$t, 1545, 12, 51656);
     			attr_dev(div26, "id", "containerExt02");
-    			add_location(div26, file$t, 1561, 20, 52775);
+    			add_location(div26, file$t, 1556, 20, 52414);
     			attr_dev(p12, "class", "highcharts-description");
-    			add_location(p12, file$t, 1562, 20, 52828);
+    			add_location(p12, file$t, 1557, 20, 52467);
     			attr_dev(figure12, "class", "highcharts-figure");
-    			add_location(figure12, file$t, 1560, 16, 52719);
+    			add_location(figure12, file$t, 1555, 16, 52358);
     			attr_dev(div27, "class", "tab-pane fade");
     			attr_dev(div27, "id", "list-Ext02");
     			attr_dev(div27, "role", "tabpanel");
     			attr_dev(div27, "aria-labelledby", "list-profile-list");
-    			add_location(div27, file$t, 1559, 12, 52606);
+    			add_location(div27, file$t, 1554, 12, 52245);
     			attr_dev(div28, "class", "tab-content");
     			attr_dev(div28, "id", "nav-tabContent");
-    			add_location(div28, file$t, 1442, 10, 45052);
+    			add_location(div28, file$t, 1442, 10, 45175);
     			attr_dev(div29, "class", "col-8");
-    			add_location(div29, file$t, 1441, 8, 45021);
+    			add_location(div29, file$t, 1441, 8, 45144);
     			attr_dev(div30, "class", "row");
-    			add_location(div30, file$t, 1421, 4, 42372);
-    			add_location(main, file$t, 1419, 0, 42358);
+    			add_location(div30, file$t, 1421, 4, 42495);
+    			add_location(main, file$t, 1419, 0, 42481);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -24701,7 +24701,7 @@ var app = (function () {
     		plotOptions: {
     			packedbubble: {
     				minSize: "20%",
-    				maxSize: "100%",
+    				maxSize: "60%",
     				zMin: 0,
     				zMax: 1000,
     				layoutAlgorithm: {
@@ -24755,7 +24755,7 @@ var app = (function () {
     }
     */
     	let dataPlugin = MyData.filter(d => {
-    		return d.year == 2018;
+    		return d.year == 2018 && d.country == "Spain";
     	}).map(d => {
     		let res = { name: d.country, value: d["annual-sale"] };
     		return res;
@@ -24770,7 +24770,7 @@ var app = (function () {
 
     	let datos = [
     		{
-    			name: "Ventas anuales de coches electricos en 2018.",
+    			name: "Ventas anuales de coches electricos en España en 2018.",
     			data: dataPlugin
     		},
     		{
@@ -24790,8 +24790,8 @@ var app = (function () {
     		},
     		plotOptions: {
     			packedbubble: {
-    				minSize: "20%",
-    				maxSize: "100%",
+    				minSize: "05%",
+    				maxSize: "40%",
     				zMin: 0,
     				zMax: 1000,
     				layoutAlgorithm: {
@@ -24884,7 +24884,7 @@ var app = (function () {
     		},
     		plotOptions: {
     			packedbubble: {
-    				minSize: "20%",
+    				minSize: "30%",
     				maxSize: "100%",
     				zMin: 0,
     				zMax: 1000,
@@ -24938,7 +24938,7 @@ var app = (function () {
     }
     */
     	let dataPlugin = MyData.filter(d => {
-    		return d.year == 2018;
+    		return d.year == 2018 && d.country == "Spain";
     	}).map(d => {
     		let res = {
     			name: d.country,
@@ -24955,7 +24955,7 @@ var app = (function () {
 
     	let datos = [
     		{
-    			name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018.",
+    			name: "Porcentaje de coche eléctricos cada 1000 personas en España en el año 2018.",
     			data: dataPlugin
     		},
     		{
@@ -24975,8 +24975,8 @@ var app = (function () {
     		},
     		plotOptions: {
     			packedbubble: {
-    				minSize: "20%",
-    				maxSize: "100%",
+    				minSize: "15%",
+    				maxSize: "40%",
     				zMin: 0,
     				zMax: 1000,
     				layoutAlgorithm: {
@@ -25076,7 +25076,7 @@ var app = (function () {
     		plotOptions: {
     			packedbubble: {
     				minSize: "20%",
-    				maxSize: "100%",
+    				maxSize: "70%",
     				zMin: 0,
     				zMax: 1000,
     				layoutAlgorithm: {
@@ -25185,7 +25185,7 @@ var app = (function () {
     		plotOptions: {
     			packedbubble: {
     				minSize: "20%",
-    				maxSize: "100%",
+    				maxSize: "70%",
     				zMin: 0,
     				zMax: 1000,
     				layoutAlgorithm: {
@@ -25278,7 +25278,7 @@ var app = (function () {
     		plotOptions: {
     			packedbubble: {
     				minSize: "20%",
-    				maxSize: "100%",
+    				maxSize: "80%",
     				zMin: 0,
     				zMax: 1000,
     				layoutAlgorithm: {
@@ -25330,7 +25330,7 @@ var app = (function () {
     }
     */
     	let dataPlugin = MyData.filter(d => {
-    		return d.year == 2018;
+    		return d.year == 2018 && d.country == "Spain";
     	}).map(d => {
     		let res = {
     			name: d.country,
@@ -25353,7 +25353,7 @@ var app = (function () {
 
     	let datos = [
     		{
-    			name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018.",
+    			name: "Porcentaje de coches eléctricos cada 1000 personas en España en el año 2018.",
     			data: dataPlugin
     		},
     		{
@@ -25373,8 +25373,8 @@ var app = (function () {
     		},
     		plotOptions: {
     			packedbubble: {
-    				minSize: "20%",
-    				maxSize: "100%",
+    				minSize: "25%",
+    				maxSize: "55%",
     				zMin: 0,
     				zMax: 1000,
     				layoutAlgorithm: {
@@ -25426,7 +25426,7 @@ var app = (function () {
     }
     */
     	let dataPlugin = MyData.filter(d => {
-    		return d.year == 2018;
+    		return d.year == 2018 && d.country == "Spain";
     	}).map(d => {
     		let res = {
     			name: d.country,
@@ -25450,11 +25450,11 @@ var app = (function () {
 
     	let datos = [
     		{
-    			name: "Porcentaje de coche eléctricos cada 1000 personas en el año 2018",
+    			name: "Porcentaje de coche eléctricos cada 1000 personas en España en el año 2018.",
     			data: dataPlugin
     		},
     		{
-    			name: "Coste medio de la matricula universitaria en el año 2018",
+    			name: "Coste medio de la matricula universitaria en el año 2018.",
     			data: dataAPI24
     		}
     	];
@@ -25471,7 +25471,7 @@ var app = (function () {
     		plotOptions: {
     			packedbubble: {
     				minSize: "20%",
-    				maxSize: "100%",
+    				maxSize: "40%",
     				zMin: 0,
     				zMax: 1000,
     				layoutAlgorithm: {
