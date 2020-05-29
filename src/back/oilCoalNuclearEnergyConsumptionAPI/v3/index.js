@@ -226,14 +226,22 @@ module.exports = function(app) {
 	//	var wrongValues = isNaN(parseInt(newOilCoalNuclearEnergyConsumptionStat.year))
 	//	|| isNaN(parseInt(newOilCoalNuclearEnergyConsumptionStat.year)
 			
-		if((isempty || nofield || !rightfield)  ){
+		var itExists = false;
+
+		if(isempty || nofield || !rightfield){
 			res.sendStatus(400,"BAD REQUEST");
 		} 
 		else {
-		db.insert(newOilCoalNuclearEnergyConsumptionStat);
- 			
-	
-		res.sendStatus(201,"CREATED");
+			db.find(newOilCoalNuclearEnergyConsumptionStat).exec((error, oil) => {
+				if (oil.length == 1) {	
+					res.sendStatus(409,"USER ALREADY EXISTS");
+
+				} else {
+					db.insert(newOilCoalNuclearEnergyConsumptionStat);
+					res.sendStatus(201, "CREATED");
+				}
+
+			});
 		}
 	});
 

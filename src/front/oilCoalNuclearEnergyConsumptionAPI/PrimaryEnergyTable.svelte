@@ -14,7 +14,7 @@
 		pop
 	} from "svelte-spa-router";
 	
-	const BASE_API_URL = "/api/v2/oil-coal-nuclear-energy-consumption-stats";
+	const BASE_API_URL = "/api/v3/oil-coal-nuclear-energy-consumption-stats";
 	let oilEnergy = [];
 	let newOilEnergy = {
 		"country": "",
@@ -131,39 +131,15 @@
 		});
     }
 
-	async function checkData (data) {
-		const res = await fetch(BASE_API_URL);
-		let theDataExist = false;
-        /* Getting the countries for the select */
-        if (res.ok) {
-            const json = await res.json();
-			
-			let numberRepeatedData = json.filter((d) => { return d.year == data.year
-														&& d.country == d.country}).length;
-			
-		if (numberRepeatedData >= 1) {
-				theDataExist = true;
-		}
- 
-        } else {
-			errorAlert=("Error interno al intentar obtener repetidos")
-            console.log("ERROR!");
-		}
-		return theDataExist;
-	}
-
 	async function insertOilEnergy() {
 		console.log("Inserting oil coal consumption...");
-		const isRepeated = await checkData(newOilEnergy);
 		if (newOilEnergy.country == ""
 			|| newOilEnergy.country == null
 			|| newOilEnergy.year == ""
 			|| newOilEnergy.year == null) {
 			alert("Es obligatorio el campo País y año");
 
-		}  else if (isRepeated) {
-			alert("¡Ya existe!");
-		}else {
+		} else {
 			const res = await fetch(BASE_API_URL, {
 				method: "POST",
 				body: JSON.stringify(newOilEnergy),
@@ -175,9 +151,12 @@
 				if (res.ok){
 					getOilEnergy(currentCountry,currentYear);
 					insertAlert();
-				}else {
-					errorAlert("No se han podido insetar los elementos");
+				}  else if (res.status == 409) {
+					alert("¡Ya existe ese dato en nuestra base de datos!");
+				} else {
+					errorAlert("Error interno al intentar insertar un elemento");
 				}
+
 			});
 		};
 	}

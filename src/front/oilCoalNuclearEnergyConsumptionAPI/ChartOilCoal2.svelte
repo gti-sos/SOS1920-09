@@ -8,7 +8,7 @@
 
   async function loadGraph(){
 
-    const BASE_API_URL = "/api/v2/oil-coal-nuclear-energy-consumption-stats";
+    const BASE_API_URL = "/api/v3/oil-coal-nuclear-energy-consumption-stats";
     const resData = await fetch(BASE_API_URL);
     let Data = await resData.json(); 
     let years = Array.from(new Set(Data.map((d) => {return d.year;})));
