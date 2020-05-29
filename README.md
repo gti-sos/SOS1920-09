@@ -9,6 +9,7 @@ Postman:
 * Fernando Baeza Rodríguez:
 * * [v1](https://documenter.getpostman.com/view/10674128/SzYT4Lrv)
 * * [v2](https://documenter.getpostman.com/view/10674128/Szme3xWC)
+* * [v3](https://documenter.getpostman.com/view/10674128/SztD6TQp)
 * Francisco Mohedano Caro:
 * * [v1](https://documenter.getpostman.com/view/10805606/SzYT4Lrw)
 * * [v2](https://documenter.getpostman.com/view/10805606/Szme3xGu)

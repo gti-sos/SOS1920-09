@@ -15,6 +15,7 @@
         MyData = await resData.json();
        
         let countries = [];
+        let years = [];
         let pevStock = [];
         let annualSale = [];
         let carsPer1000 = [];
@@ -26,12 +27,11 @@
             let a = data["annual-sale"];
             let c = data["cars-per-1000"];
             
-            if (data.year == 2018) {
-                countries.push(country);
-                pevStock.push(p);
-                annualSale.push(a);
-                carsPer1000.push(c);
-            }
+            countries.push(country);
+            years.push(year)
+            pevStock.push(p);
+            annualSale.push(a);
+            carsPer1000.push(c);
         });
          /*
         { 
@@ -52,7 +52,7 @@
                 align: 'left'
             },
             subtitle: {
-                text: 'Datos sobre el año 2018:',
+                text: 'Datos:',
                 align: 'left'
             },
             xAxis: [{
@@ -93,13 +93,13 @@
             }, { // Tertiary yAxis
                 gridLineWidth: 0,
                 title: {
-                    text: 'Ventas anuales',
+                    text: 'Años',
                     style: {
                         color: Highcharts.getOptions().colors[1]
                     }
                 },
                 labels: {
-                    format: '{value} unidades',
+                    format: '{value} año',
                     style: {
                         color: Highcharts.getOptions().colors[1]
                     }
@@ -128,16 +128,16 @@
                 },
 
             }, {
-                name: 'Ventas anuales',
+                name: 'Año',
                 type: 'spline',
                 yAxis: 2,
-                data: annualSale,
+                data: years,
                 marker: {
                     enabled: false
                 },
                 dashStyle: 'shortdot',
                 tooltip: {
-                    valueSuffix: ' unidades'
+                    valueSuffix: ' '
                 }
 
             }, {
@@ -146,8 +146,8 @@
                 data: carsPer1000,
                 tooltip: {
                     valueSuffix: ' %'
-                }
-            }],
+                },
+            }, ],
             responsive: {
                 rules: [{
                     condition: {
@@ -205,8 +205,9 @@
         </p>
         <p class="highcharts-description">
             En esta sección de la api podemos observar una representación gráfica acerca de los datos que tenemos sobre cada país
-            en relación con el uso de coches eléctricos, mostrando de azul las ventas acumuladas, de negro las ventas anuales y de verde
-            el porcentaje de coches cada 1000 personas.
+            en relación con el uso de coches eléctricos, mostrando de azul las ventas acumuladas, de negro el año del que se disponen
+	        los datos, puesto que al mostrar todos los datos hay de años distintos, y finalmente de verde el porcentaje de coches
+            cada 1000 personas.
         </p>
     </figure>
         
