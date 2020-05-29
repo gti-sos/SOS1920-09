@@ -250,12 +250,24 @@ module.exports = function (app){
 			&& newPlugInVehiclesStat.hasOwnProperty("annual-sale") 
 			&& newPlugInVehiclesStat.hasOwnProperty("cars-per-1000");
 
-		if(isEmpty || haveNullField || !rightFields){
+		
+		var itExists = false;
+
+		if(isEmpty || haveNullField || !rightFields) {		
 			res.sendStatus(400,"BAD REQUEST");
-		}
-		else {
-			db.insert(newPlugInVehiclesStat);	
-			res.sendStatus(201,"CREATED");
+		} else {
+
+			db.find(newPlugInVehiclesStat).exec((error, plugInVehiclesStats) => {
+				if (plugInVehiclesStats.length == 1) {	
+					res.sendStatus(409,"USER ALREADY EXISTS");
+					
+				} else {
+					db.insert(newPlugInVehiclesStat);
+					res.sendStatus(201, "CREATED");
+				}
+				
+			});
+			
 		}
 	}); 
 

@@ -17,7 +17,7 @@
 	import Form from "sveltestrap/src/Form.svelte";
 	import FormGroup from "sveltestrap/src/FormGroup.svelte";
 
-	const BASE_API_URL = "/api/v2/plugin-vehicles-stats";
+	const BASE_API_URL = "/api/v3/plugin-vehicles-stats";
 
 	let pluginVehicles = [];
 	let newPluginVehicles = {
@@ -139,43 +139,15 @@
 		});
 	}
 
-	async function checkData (data) {
-		const res = await fetch(BASE_API_URL);
-		let theDataExist = false;
-
-		/* Getting the countries for the select */
-		if (res.ok) {
-			const json = await res.json();
-			/* We find the number repeated data */
-
-			let numberRepeatedData = json.filter((d) => { return d.year == data.year 
-										&& d.country == data.country }).length; 
-
-			if (numberRepeatedData >= 1) {
-				theDataExist = true;
-			}
-
-
-		} else {
-			errorAlert("Error interno al intentar obtener repetidos");
-			console.log("ERROR!");
-		}
-
-		return theDataExist;
-	}
-
 	async function insertPluginVehicles(){
 		console.log("Inserting plugin vehicles...");
-		const isRepeated = await checkData(newPluginVehicles);
+		
 		if(newPluginVehicles.country == "" 
 		|| newPluginVehicles.country == null 
 		|| newPluginVehicles.year == "" 
 		|| newPluginVehicles.year == null){
 
 			alert("Se debe incluir el nombre del país y del año");
-		}
-		else if (isRepeated) {
-			alert("¡Ya existe ese dato en nuestra base de datos!");
 		}
 		else{
 			const res = await fetch(BASE_API_URL, {
@@ -185,9 +157,13 @@
 					"Content-Type": "application/json"
 				}
 			}).then(function (res){
+				
 				if(res.ok){
 					insertAlert();
 					getPluginVehicles(currentCountry,currentYear);
+				}
+				else if (res.status == 409) {
+					alert("¡Ya existe ese dato en nuestra base de datos!");
 				}
 				else{
 					errorAlert("Error interno al intentar insertar un elemento.")

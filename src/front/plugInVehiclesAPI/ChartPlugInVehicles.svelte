@@ -8,7 +8,7 @@
 
     async function loadGraph(){
     
-        const BASE_API_URL = "/api/v2/plugin-vehicles-stats";
+        const BASE_API_URL = "/api/v3/plugin-vehicles-stats";
         let MyData = [];
 
         const resData = await fetch(BASE_API_URL);
