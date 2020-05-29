@@ -159,8 +159,10 @@
 			}).then(function (res){
 				
 				if(res.ok){
-					insertAlert();
+				 //If we not want the select to be update each time we insert, uncoment the line below
+					getCountriesYears();
 					getPluginVehicles(currentCountry,currentYear);
+					insertAlert();
 				}
 				else if (res.status == 409) {
 					alert("¡Ya existe ese dato en nuestra base de datos!");
@@ -168,9 +170,6 @@
 				else{
 					errorAlert("Error interno al intentar insertar un elemento.")
 				}
-				
-				/* If we want the select to be update each time we insert, uncoment the line below */
-				//getCountriesYears();
 			});
 		}
 	}
