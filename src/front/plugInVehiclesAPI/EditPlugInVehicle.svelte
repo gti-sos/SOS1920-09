@@ -11,7 +11,7 @@
     import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
 
-    const BASE_API_URL = "/api/v2/plugin-vehicles-stats";
+    const BASE_API_URL = "/api/v3/plugin-vehicles-stats";
 
     export let params = {};
     let pluginVehicles = {};
