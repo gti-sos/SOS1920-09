@@ -927,13 +927,288 @@ async function loadGraph05(){
 		});
     }
 
+async function loadGraph10(){
+        console.log("Loading api 10");
+        
+        const BASE_API_URL  = "/api/v3/oil-coal-nuclear-energy-consumption-stats";
+        const BASE_API_URL_05 = "https://sos1920-10.herokuapp.com/api/v2/global-divorces";
 
+        const resData = await fetch(BASE_API_URL);
+        const resData10 = await fetch(BASE_API_URL_05);
+        let MyData = await resData.json();
+        let Data10 = await resData10.json();
+        console.log(Data10);
+        console.log(MyData);
+
+            
+            let dataPrimary = MyData.filter((d) => {return d.year == 2017}).map((d) => {
+                let res = {
+                    name: d.country + " - " + "Consumo de energía nuclear",
+                    value: d["coal-consumption"]
+                };
+                return res;
+            });
+
+            let dataAPI10 = Data10.filter((d) => {return d.year==2017;}).map((d) =>  {
+            let res = {
+                name:  d.country + " - " + "Numero de divorcios",
+                value: d.divorce
+            };
+            return res;
+        });
+        
+        
+		let datos = 
+        [
+            {
+                name: "Consumo de carbón expresada en millones de toneladas en el año 2016.",
+                data: dataPrimary
+            },
+            {
+                name: "Estadística de divorcios Globales.",
+                data: dataAPI10
+            }
+        ];
+
+        Highcharts.chart('container-10', {
+			chart: {
+				type: 'packedbubble',
+				height: '100%'
+			},
+			title: {
+				text: 'Relacion Consumo de carbón por Países en el año 2017 junto con el numero de divorcios por países en 2017.'
+			},
+			tooltip: {
+				useHTML: true,
+				pointFormat: '<b>{point.name}:</b> {point.value}'
+			},
+			plotOptions: {
+				packedbubble: {
+					minSize: '30%',
+					maxSize: '120%',
+					zMin: 0,
+					zMax: 1000,
+					layoutAlgorithm: {
+						splitSeries: false,
+						gravitationalConstant: 0.02
+					},
+					dataLabels: {
+						enabled: true,
+						format: '{point.name}',
+						filter: {
+							property: 'y',
+							operator: '>',
+							value: 250
+						},
+						style: {
+							color: 'black',
+							textOutline: 'none',
+							fontWeight: 'normal'
+						}
+					}
+				}
+			},
+			series: datos
+		});
+    }
+
+async function loadGraph23(){
+    
+  
+    const BASE_API_23 = "https://sos1920-23.herokuapp.com/api/v2/offworks-stats";
+    let Data23 = [];
+
+    const resData23 = await fetch(BASE_API_23);
+    Data23 = await resData23.json();
+   
+   
+   /* let countries = [];
+    let pevStock = [];
+    let annualSale = [];
+    let carsPer1000 = [];
+    */
+
+    let communities = [];
+    let accidents= [];
+    let sicks= [];
+    let numberzon= [];
+  
+    Data23.forEach((data) => {
+        let community = data.community;
+        let year = data.year;
+        let accide = data.accident;
+        let sic = data.sick;
+        let num = data.numberzone;
+        
+        communities.push(community);
+        accidents.push(accide);
+        sicks.push(sic);
+        numberzon.push(num);
+       
+    });
+     /*
+    { 
+        province:"Almeria",
+		year: 2018,
+		accidentWithVictims: 1194,
+		mortalAccident: 27,
+		death: 27,
+		hospitalizedWounded: 111,
+		notHospitalizedWounded: 1780
+    }
+    
+    */
+    Highcharts.chart('container-23', {
+        chart: {
+            zoomType: 'xy'
+        },
+        title: {
+            text: 'Datos sobre el tipo de bajas de trabajo durante el año 2008 por Comunidades Autónomas.',
+            align: 'left'
+        },
+        subtitle: {
+            text: '',
+            align: 'left'
+        },
+        xAxis: [{
+            categories: communities,
+            crosshair: true
+        }],
+        yAxis: [{ // Primary yAxis
+            labels: {
+                format: '{value} casos',
+                style: {
+                    color: Highcharts.getOptions().colors[2]
+                }
+            },
+            title: {
+                text: 'Baja por Enfermedad',
+                style: {
+                    color: Highcharts.getOptions().colors[2]
+                }
+            },
+            opposite: true
+
+        }, { // Secondary yAxis
+            gridLineWidth: 0,
+            title: {
+                text: 'Baja por Accidente',
+                style: {
+                    color: Highcharts.getOptions().colors[0]
+                }
+                
+            },
+            labels: {
+                format: '{value} casos',
+                style: {
+                    color: Highcharts.getOptions().colors[0]
+                }
+            }
+
+        }, { // Tertiary yAxis
+            gridLineWidth: 0,
+            title: {
+                text: 'Baja por numero de zonas',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            },
+            labels: {
+                format: '{value} casos',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            },
+            opposite: true
+        }],
+        tooltip: {
+            shared: true
+        },
+        legend: {
+            align: 'left',
+            verticalAlign: 'bottom',
+            y: 25,
+            floating: true,
+            backgroundColor:
+                Highcharts.defaultOptions.legend.backgroundColor || // theme
+                'rgba(255,255,255,0.25)'
+        },
+        series: [{
+            name: 'Baja por Accidente',
+            type: 'column',
+            yAxis: 1,
+            data: accidents,
+            tooltip: {
+                valueSuffix: ' casos'
+            },
+
+        }, {
+            name: 'Baja por Enfermedad',
+            type: 'spline',
+            yAxis: 2,
+            data: sicks,
+            marker: {
+                enabled: false
+            },
+            dashStyle: 'shortdot',
+            tooltip: {
+                valueSuffix: ' casos'
+            }
+
+        }, {
+            name: 'Numero de Zonas',
+            type: 'spline',
+            data: numberzon,
+            tooltip: {
+                valueSuffix: ' casos'
+            }
+        }],
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        floating: false,
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom',
+                        x: 0,
+                        y: 0
+                    },
+                    yAxis: [{
+                        labels: {
+                            align: 'right',
+                            x: 0,
+                            y: -6
+                        },
+                        showLastLabel: false
+                    }, {
+                        labels: {
+                            align: 'left',
+                            x: 0,
+                            y: -6
+                        },
+                        showLastLabel: false
+                    }, {
+                        visible: false
+                    }]
+                }
+            }]
+        }
+    });
+   
+}
+    
 loadGraph4();
 loadGraph2();
 loadGraph12();
 loadGraph01();
 loadGraphExt1();
 loadGraph05();
+loadGraph10();
+loadGraph23();
 
 
 
@@ -958,7 +1233,8 @@ loadGraph05();
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-01" role="tab" aria-controls="profile">Integración con 1</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-ext" role="tab" aria-controls="profile">Integración API Externa 1</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-05" role="tab" aria-controls="profile">Integración con 5</a>
-            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-ext" role="tab" aria-controls="profile">Integración con API externa</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-10" role="tab" aria-controls="profile">Integración con 10</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-23" role="tab" aria-controls="profile">Integración con 23</a>
 
         </div>
         </div>
@@ -1010,6 +1286,22 @@ loadGraph05();
                     <div id="container-05"></div>
                     <p class="highcharts-description">
                         Integra la 5.
+                    </p>
+                </figure>
+            </div>
+            <div class="tab-pane fade" id="list-10" role="tabpanel" aria-labelledby="list-profile-list">
+                <figure class="highcharts-figure">
+                    <div id="container-10"></div>
+                    <p class="highcharts-description">
+                        Integra la 10.
+                    </p>
+                </figure>
+            </div>
+            <div class="tab-pane fade" id="list-23" role="tabpanel" aria-labelledby="list-profile-list">
+                <figure class="highcharts-figure">
+                    <div id="container-23"></div>
+                    <p class="highcharts-description">
+                        Integra la 23.
                     </p>
                 </figure>
             </div>

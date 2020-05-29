@@ -149,6 +149,7 @@
 			}).then(function (res) {
 				/* we can update it each time we insert*/
 				if (res.ok){
+					getCountriesYears();
 					getOilEnergy(currentCountry,currentYear);
 					insertAlert();
 				}  else if (res.status == 409) {
