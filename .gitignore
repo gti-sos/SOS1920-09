@@ -1,6 +1,7 @@
 node_modules
 
 
+public/build
 src/back/oilCoalNuclearEnergyConsumptionAPI/v1/oil_coal_nuclear_energy_consumption.db
 src/back/oilCoalNuclearEnergyConsumptionAPI/v2/oil_coal_nuclear_energy_consumption.db
 src/back/oilCoalNuclearEnergyConsumptionAPI/v3/oil_coal_nuclear_energy_consumption.db
