@@ -842,11 +842,98 @@ async function loadGraphExt1(){
 		});
     }
 
+async function loadGraph05(){
+        console.log("Loading api 05");
+        
+        const BASE_API_URL  = "/api/v2/oil-coal-nuclear-energy-consumption-stats";
+        const BASE_API_URL_05 = "https://sos1920-05.herokuapp.com/api/v1/health_public";
+
+        const resData = await fetch(BASE_API_URL);
+        const resData05 = await fetch(BASE_API_URL_05);
+        let MyData = await resData.json();
+        let Data05 = await resData05.json();
+        console.log(Data05);
+        console.log(MyData);
+
+            
+            let dataPrimary = MyData.filter((d) => {return d.year==2016}).map((d) => {
+                let res = {
+                    name: d.country + " - " + "Consumo de energía nuclear",
+                    value: d["nuclear-energy-consumption"]
+                };
+                return res;
+            });
+
+            let dataAPIExternal01 = Data05.filter((d) => {return d.year==2016;}).map((d) =>  {
+            let res = {
+                name:  d.country + " - " + "Gasto Público",
+                value: d.public_spending
+            };
+            return res;
+        });
+        
+        
+		let datos = 
+        [
+            {
+                name: "Consumo de energía nuclear expresada en millones de toneladas en el año 2016.",
+                data: dataPrimary
+            },
+            {
+                name: "Gasto Público del País en el año 2016.",
+                data: dataAPIExternal01
+            }
+        ];
+
+        Highcharts.chart('container-05', {
+			chart: {
+				type: 'packedbubble',
+				height: '100%'
+			},
+			title: {
+				text: 'Relacion Consumo de energía nuclear por Países en el año 2016 junto con el gasto Publico de un País en 2016.'
+			},
+			tooltip: {
+				useHTML: true,
+				pointFormat: '<b>{point.name}:</b> {point.value}'
+			},
+			plotOptions: {
+				packedbubble: {
+					minSize: '30%',
+					maxSize: '120%',
+					zMin: 0,
+					zMax: 1000,
+					layoutAlgorithm: {
+						splitSeries: false,
+						gravitationalConstant: 0.02
+					},
+					dataLabels: {
+						enabled: true,
+						format: '{point.name}',
+						filter: {
+							property: 'y',
+							operator: '>',
+							value: 250
+						},
+						style: {
+							color: 'black',
+							textOutline: 'none',
+							fontWeight: 'normal'
+						}
+					}
+				}
+			},
+			series: datos
+		});
+    }
+
+
 loadGraph4();
 loadGraph2();
 loadGraph12();
 loadGraph01();
 loadGraphExt1();
+loadGraph05();
 
 
 
@@ -870,7 +957,7 @@ loadGraphExt1();
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-12" role="tab" aria-controls="profile">Integración con 12</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-01" role="tab" aria-controls="profile">Integración con 1</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-ext" role="tab" aria-controls="profile">Integración API Externa 1</a>
-            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-28" role="tab" aria-controls="profile">Integración con 28</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-05" role="tab" aria-controls="profile">Integración con 5</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-ext" role="tab" aria-controls="profile">Integración con API externa</a>
 
         </div>
@@ -918,11 +1005,11 @@ loadGraphExt1();
                     </p>
                 </figure>
             </div>
-            <div class="tab-pane fade" id="list-28" role="tabpanel" aria-labelledby="list-profile-list">
+            <div class="tab-pane fade" id="list-05" role="tabpanel" aria-labelledby="list-profile-list">
                 <figure class="highcharts-figure">
-                    <div id="container-28"></div>
+                    <div id="container-05"></div>
                     <p class="highcharts-description">
-                        Integra la 28.
+                        Integra la 5.
                     </p>
                 </figure>
             </div>
