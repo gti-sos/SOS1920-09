@@ -17,7 +17,7 @@
 
 	import { Pagination, PaginationItem, PaginationLink } from 'sveltestrap';
 
-	const BASE_API_URL = "/api/v2/renewable-sources-stats";
+	const BASE_API_URL = "/api/v4/renewable-sources-stats";
 	
 	let renewableSources = [];
 	let newRenewableSource = {
@@ -132,34 +132,11 @@
 
 	}
 
-	async function checkData (data) {
-		const res = await fetch(BASE_API_URL);
-		let theDataExist = false;
 
-		/* Getting the countries for the select */
-		if (res.ok) {
-			const json = await res.json();
-			/* We find the number repeated data */
-
-			let numberRepeatedData = json.filter((d) => { return d.year == data.year 
-										&& d.country == data.country }).length; 
-
-			if (numberRepeatedData >= 1) {
-				theDataExist = true;
-			}
-
-
-		} else {
-			errorAlert("Error interno al intentar obtener repetidos");
-			console.log("ERROR!");
-		}
-
-		return theDataExist;
-	}
 
 	async function insertRenewableSources() {
 		console.log("Inserting renewable sources stats...");
-		const isRepeated = await checkData(newRenewableSource);
+
 		/* Checking if the country and the year are not empty */
 		if (newRenewableSource.country == ""
 			|| newRenewableSource.country == null
@@ -168,10 +145,7 @@
 			
 			alert("Se debe incluir el nombre del país y el año obligatoriamente");
 
-		} else if (isRepeated) {
-			alert("¡Ya existe ese dato en nuestra base de datos!");
-		}
-		else {
+		} else {
 			const res = await fetch(BASE_API_URL, {
 				method: "POST",
 				body: JSON.stringify(newRenewableSource),
@@ -179,11 +153,14 @@
 					"Content-Type": "application/json"
 				}
 			}).then(function(res) {
+
 				if (res.ok) {
 					/* If we want the select to be updated each time we insert, uncomment the line below */
 					/*getCountriesYears();*/
 					getRenewableSources(currentCountry, currentYear);
 					insertAlert();
+				} else if (res.status == 409) {
+					alert("¡Ya existe ese dato en nuestra base de datos!");
 				} else {
 					errorAlert("Error interno al intentar insertar un elemento");
 				}

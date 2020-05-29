@@ -353,13 +353,26 @@ module.exports = function (app) {
 			|| isNaN(parseFloat(newRenewableSourcesStat["percentage-hydropower-total"])
 			|| isNaN(parseFloat(newRenewableSourcesStat["percentage-wind-power-total"]);
 		*/
+
+		var itExists = false;
+
+		
 		
 		if(isEmpty || haveNullField || !rightFields) {		
 			res.sendStatus(400,"BAD REQUEST");
 		} else {
-			db.insert(newRenewableSourcesStat);
+
+			db.find(newRenewableSourcesStat).exec((error, renewableSourcesStats) => {
+				if (renewableSourcesStats.length == 1) {	
+					res.sendStatus(409,"USER ALREADY EXISTS");
+					
+				} else {
+					db.insert(newRenewableSourcesStat);
+					res.sendStatus(201, "CREATED");
+				}
+				
+			});
 			
-			res.sendStatus(201, "CREATED");
 		}
 	});
 
