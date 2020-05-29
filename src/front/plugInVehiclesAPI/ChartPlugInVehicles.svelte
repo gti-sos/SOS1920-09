@@ -206,7 +206,7 @@
         <p class="highcharts-description">
             En esta sección de la api podemos observar una representación gráfica acerca de los datos que tenemos sobre cada país
             en relación con el uso de coches eléctricos, mostrando de azul las ventas acumuladas, de negro el año del que se disponen
-	    los datos, puesto que al mostrar todos los datos hay de años distintos, y finalmente de verde el porcentaje de coches
+	        los datos, puesto que al mostrar todos los datos hay de años distintos, y finalmente de verde el porcentaje de coches
             cada 1000 personas.
         </p>
     </figure>
