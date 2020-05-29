@@ -156,7 +156,7 @@
 
 				if (res.ok) {
 					/* If we want the select to be updated each time we insert, uncomment the line below */
-					/*getCountriesYears();*/
+					getCountriesYears();
 					getRenewableSources(currentCountry, currentYear);
 					insertAlert();
 				} else if (res.status == 409) {
@@ -179,7 +179,7 @@
 				getRenewableSources(currentCountry, currentYear);
 				/* If we want to delete the entry in the select, uncomment the line below */
 				/* We decided to conserve the option because we find it more logic */
-				/* getCountriesYears(); */
+				getCountriesYears();
 				deleteAlert();
 			} else if (res.status == 404) {
 				errorAlert("Se ha intentado borrar un elemento inexistente.");
