@@ -1927,7 +1927,7 @@
                 <figure class="highcharts-figure">
                     <div id="container-27"></div>
                     <p class="highcharts-description">
-                        Integra la 27.
+                        Integración con el grupo 27.
                     </p>
                 </figure>
             </div>
@@ -1935,7 +1935,7 @@
                 <figure class="highcharts-figure">
                     <div id="container-5"></div>
                     <p class="highcharts-description">
-                        Integra la 5.
+                        Integración con el grupo 5.
                     </p>
                 </figure>
             </div>
@@ -1943,7 +1943,7 @@
                 <figure class="highcharts-figure">
                     <div id="container-4"></div>
                     <p class="highcharts-description">
-                        Integra la 4.
+                        Integración con el grupo 4.
                     </p>
                 </figure>
             </div>
@@ -1951,7 +1951,7 @@
                 <figure class="highcharts-figure">
                     <div id="container-22"></div>
                     <p class="highcharts-description">
-                        Integra la 22.
+                        Integración con el grupo 22.
                     </p>
                 </figure>
             </div>
@@ -1959,7 +1959,7 @@
                 <figure class="highcharts-figure">
                     <div id="container-1"></div>
                     <p class="highcharts-description">
-                        Integra la 1.
+                        Integración con el grupo 1.
                     </p>
                 </figure>
             </div>
@@ -1967,7 +1967,7 @@
                 <figure class="highcharts-figure">
                     <div id="container-30"></div>
                     <p class="highcharts-description">
-                        Integra la 30.
+                        Integración con el grupo 30.
                     </p>
                 </figure>
             </div>
@@ -1975,7 +1975,7 @@
                 <figure class="highcharts-figure">
                     <div id="container-23"></div>
                     <p class="highcharts-description">
-                        Integra la 23.
+                        Integración con el grupo 23.
                     </p>
                 </figure>
             </div>
@@ -1983,7 +1983,7 @@
                 <figure class="highcharts-figure">
                     <div id="container-25"></div>
                     <p class="highcharts-description">
-                        Integra la 25.
+                        Integración con el grupo 25.
                     </p>
                 </figure>
             </div>
@@ -1991,7 +1991,7 @@
                 <figure class="highcharts-figure">
                     <div id="container-8"></div>
                     <p class="highcharts-description">
-                        Integra la 8.
+                        Integración con el grupo 8.
                     </p>
                 </figure>
             </div>
@@ -1999,7 +1999,7 @@
                 <figure class="highcharts-figure">
                     <div id="container-6"></div>
                     <p class="highcharts-description">
-                        Integra la 6.
+                        Integración con el grupo 6.
                     </p>
                 </figure>
             </div>
