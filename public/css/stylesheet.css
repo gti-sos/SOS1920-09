@@ -2,11 +2,27 @@
     padding: 2%;
 }
 
+.div-center {
+  margin: 0 auto;
+  display: block;
+
+  text-align: center;
+}
+
+.display-4 {
+  margin-bottom: 40px;
+}
+
 .video {
   margin: 0 auto;
   display: block;
   padding: 2%;
   border-radius: 10px;
+}
+
+
+.p-center {
+  text-align: center;
 }
 
 .div-home {
@@ -118,12 +134,13 @@
 
 
 
+
 #container {
   color:#999;
   text-transform: uppercase;
   font-size:36px;
   font-weight:bold;
-  padding-top:200px;  
+  padding-top:50px;  
   margin:0px;
   font-family:'Roboto';
   text-align:center;

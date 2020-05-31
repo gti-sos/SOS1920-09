@@ -1,4 +1,6 @@
 <main>
+	<h1 class="display-4" style="text-align: center;" > ¡Hola! </h1>
+
 	<div id=container>
 		APIs de 
 		<div id=flip>

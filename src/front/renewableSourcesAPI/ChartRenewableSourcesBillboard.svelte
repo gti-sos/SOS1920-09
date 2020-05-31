@@ -79,10 +79,14 @@
 
 <main>
     
+    <h1 class="display-4" style="text-align: center;" > Gráfica con BillBoard </h1>
 
     <div id="gaugeChart"></div>
 
     <p></p>
-    <p>Gráfica utilizando billboard.js que representa el porcentaje de energía renovables por países de 2016.</p>
+    
+    <p class="p-center"> Gráfica que representa el porcentaje de energía renovables por países de 2016. Esta gráfica está realizada con  <a href="https://naver.github.io/billboard.js/">billboard.js</a>. </p>
+    <p></p>
+
     <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
 </main>

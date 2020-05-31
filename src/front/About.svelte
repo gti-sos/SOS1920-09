@@ -9,8 +9,9 @@
 
 <main>
 
-    <h2> Vídeos explicativos </h2>
-    <div class="card-deck">
+  <h1 class="display-4" style="text-align: center;" > Vídeos explicativos </h1>
+
+  <div class="card-deck">
         <div class="card">
             <div class="embed-responsive embed-responsive-16by9 video">
                 <iframe title="Vídeo 1" class="embed-responsive-item video" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
