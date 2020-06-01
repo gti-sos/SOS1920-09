@@ -418,7 +418,7 @@
 
     async function loadGraph06_2(){
     
-    const BASE_API_URL_06 = "/api/v2/not-hospitalized-stats";
+    const BASE_API_URL_06 = "https://sos1920-06.herokuapp.com/api/v2/accstats";
 
     const resData = await fetch(BASE_API_URL);
     const resData06 = await fetch(BASE_API_URL_06);
@@ -428,11 +428,11 @@
                 Sus Datos:
     
     }
-        "province": "Tarragona",
-        "year": 1995,
-        "total": 1676,
-        "interurban": 1044,
-        "urban": 632
+        "province": "Pontevedra",
+        "year": 2017,
+        "accvictotal": 2719,
+        "accvicinter": 2017,
+        "accfall": 31
     }
                 Mis Datos:
     { 
@@ -455,7 +455,7 @@
     let dataAPI06 = Data06.map((d) => {
         let res = {
             name: d.province,
-            value: d.total
+            value: d.accvicinter
         };
         return res;
     });
@@ -467,7 +467,7 @@
             data: dataPlugin
         },
         {
-            name: "Número total de vías urbanas e interurbanas en ciudades españolas.",
+            name: "Número de victimas totales por accidentes de tráfico en ciudades españolas.",
             data: dataAPI06
         }
     ];
@@ -478,7 +478,7 @@
             height: '100%'
         },
         title: {
-            text: 'Integración con el grupo 06 not-hospitalized-stats'
+            text: 'Integración con el grupo 06 accstats'
         },
         tooltip: {
             useHTML: true,
@@ -1498,7 +1498,7 @@
     loadGraph04(); //Implementado mediante cors
     loadGraph05(); //Implementado mediante proxy
     loadGraph06_1(); //Implementado mediante proxy
-    loadGraph06_2(); //Implementado mediante 
+    loadGraph06_2(); //Implementado mediante cors
     loadGraph07(); //Implementado mediante cors
     loadGraph08(); //Implementado mediante proxy
     loadGraph12(); //Implementado mediante cors
@@ -1530,7 +1530,7 @@
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-04" role="tab" aria-controls="profile">Integración con 04 roads</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-05" role="tab" aria-controls="profile">Integración con 05 life_expectancies</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-06_1" role="tab" aria-controls="profile">Integración con 06 not-hospitalized-stats</a>
-            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-06_2" role="tab" aria-controls="profile">Integración con 06 suicidios</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-06_2" role="tab" aria-controls="profile">Integración con 06 accstats</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-07" role="tab" aria-controls="profile">Integración con 07 imports</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-08" role="tab" aria-controls="profile">Integración con 08 electricity-produced-stats</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-12" role="tab" aria-controls="profile">Integración con 12 overdose-deaths</a>
@@ -1586,7 +1586,9 @@
                 <figure class="highcharts-figure">
                     <div id="container06_2"></div>
                     <p class="highcharts-description">
-                        Segunda integracion.
+                        Integración entre el número total de víctimas mortales de accidentes de tráfico en vías urbanas e interurbanas 
+                        en las distintas ciudades de España junto al porcentaje de coches eléctricos cada 1000 personas en el año 2018, 
+                        también en España.
                         
                     </p>
                 </figure>
