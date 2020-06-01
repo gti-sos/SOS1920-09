@@ -19,6 +19,7 @@
 	import IntegrationsPrimaryEnergies from './oilCoalNuclearEnergyConsumptionAPI/Integrations.svelte';
 	import IntegrationsPluginCars from './plugInVehiclesAPI/Integrations.svelte';
 	import Integrations from './Integrations.svelte';
+	import About from './About.svelte';
 	
 
 
@@ -43,6 +44,7 @@
 		"/integrationsPrimaryEnergies" : IntegrationsPrimaryEnergies,
 		"/integrationsPluginCars" : IntegrationsPluginCars,
 		"/integrations" : Integrations,
+		"/about": About,
 		"*": NotFound
 	};
 </script>

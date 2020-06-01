@@ -6,12 +6,12 @@
     import {
         pop
     } from "svelte-spa-router";
+    
 	import Input from "sveltestrap/src/Input.svelte";
-
-
     import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
-    const BASE_API_URL = "/api/v2/oil-coal-nuclear-energy-consumption-stats";
+
+    const BASE_API_URL = "/api/v3/oil-coal-nuclear-energy-consumption-stats";
 
     export let params = {};
     let oilCoal = {};

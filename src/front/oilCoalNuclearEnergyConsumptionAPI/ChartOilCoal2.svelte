@@ -8,7 +8,7 @@
 
   async function loadGraph(){
 
-    const BASE_API_URL = "/api/v2/oil-coal-nuclear-energy-consumption-stats";
+    const BASE_API_URL = "/api/v3/oil-coal-nuclear-energy-consumption-stats";
     const resData = await fetch(BASE_API_URL);
     let Data = await resData.json(); 
     let years = Array.from(new Set(Data.map((d) => {return d.year;})));
@@ -58,6 +58,7 @@
     
 </script>
 <main>
+<h1 class="display-5" style="text-align: center;" > Gráfica realizada con Chartis.js </h1>
 <p>Representación Gráfica del consumo de gasolina medidos en Tonelada de petróleo por países del Año 2016.</p>
 <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
 </main>

@@ -16,8 +16,9 @@ Postman:
 * * [v3](https://documenter.getpostman.com/view/10805606/SztD4n9w).
 * * [v4](https://documenter.getpostman.com/view/10805606/SztD4n9v).
 * Rubén Faraco Iglesias:
-* * [v1](https://documenter.getpostman.com/view/10667105/SzYT4Lrx).
-* * [v2](https://documenter.getpostman.com/view/10667105/Szme4Hua).
+* * [v1](https://documenter.getpostman.com/view/10667105/SzYT4Lrx)
+* * [v2](https://documenter.getpostman.com/view/10667105/Szme4Hua)
+* * [v3](https://documenter.getpostman.com/view/10667105/SztD6Te2)
 
 URL GUI:
 * http://sos1920-09.herokuapp.com/#

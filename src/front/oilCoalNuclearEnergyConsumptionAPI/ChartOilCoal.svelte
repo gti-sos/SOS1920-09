@@ -13,7 +13,7 @@
     }
     
     async function loadGraph() {
-        const BASE_API_URL = "/api/v2/oil-coal-nuclear-energy-consumption-stats";
+        const BASE_API_URL = "/api/v3/oil-coal-nuclear-energy-consumption-stats";
 
         const resData = await fetch(BASE_API_URL);
         let Data = await resData.json();   
@@ -148,10 +148,12 @@
 </svelte:head>
 
 <main>
-    
+    <h1 class="display-4" style="text-align: center;" > Gráfica realizada con HighChart </h1>
     <figure class="highcharts-figure">
         <div id="container"></div>
         <p class="highcharts-description">
+            En esta gráfica realizada con highchart tenemos el consumo, expresado en millones de toneladas, de carbón por país y por año. En el eje
+            x tenemos los países, en el eje y los años y en cada uno de los valores de la tabla están expresados los valores de consumo de carbón.
         </p>
     </figure>
 

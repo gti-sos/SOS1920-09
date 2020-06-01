@@ -136,11 +136,13 @@
 </svelte:head>
 
 <main>
-    
+    <h1 class="display-4" style="text-align: center;" > Gráfica con HighChart </h1>
     <figure class="highcharts-figure">
         <div id="container"></div>
+        <p></p>
         <p class="highcharts-description">
-            Gráfica que representa los datos de las energías renovables por países.
+            Gráfica que representa los datos de las energías renovables por países. Los datos de las energías renovables son los porcentajes de: uso de energías renovables sobre el total, uso de energía hidroeléctrica y uso de energía eólica.
+            Esta gráfica está hecha con HighChart.
         </p>
     </figure>
 

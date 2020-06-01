@@ -117,14 +117,17 @@
 </svelte:head>
 
 <main>
-
+	<h1 class="display-4" style="text-align: center;" > Gráfica común </h1>
 	<figure class="highcharts-figure">
 		<div id="container"></div>
+		<p></p>
+
 		<p class="highcharts-description">
 			Gráfica común a las tres APIs. Muestra los millones de toneladas de petróleo, los porcentajes del uso energías renovables y las ventas coches eléctricos por cada 1000.
 		</p>
 	</figure>
-	
+	<p></p>
+
 	<Button outline color="secondary" on:click="{pop}"><i class="fas fa-arrow-circle-left"></i> Atrás</Button>
 
 </main>

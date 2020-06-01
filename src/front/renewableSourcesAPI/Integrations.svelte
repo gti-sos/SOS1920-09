@@ -78,7 +78,7 @@
                     }
                 },
                 title: {
-                    text: 'Energías renovables e importaciones'
+                    text: 'Energías renovables e importaciones de vegetales'
                 },
                 plotOptions: {
                     series: {
@@ -205,7 +205,7 @@
             {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
             That is how the chart needs it
              */
-            let ChartData = MyData.map(function (set, i) {
+            let ChartData = ModifiedData.map(function (set, i) {
                 return {
                     name: countries[set[0]],
                     data: set,
@@ -795,7 +795,7 @@
                     }
                 },
                 title: {
-                    text: 'Energías renovables y número de coches'
+                    text: 'Energías renovables y número de loterías vendidas'
                 },
                 plotOptions: {
                     series: {
@@ -1869,6 +1869,160 @@
             
         }
         
+        async function loadGraphExt3() {
+            console.log("Loading external api 3");
+            /* Asking for the data to the back */
+            const BASE_API_URL = "/api/v4/renewable-sources-stats";
+            const BASE_API_URL_EXT = "https://coronavirus-19-api.herokuapp.com/countries";
+
+            const resData = await fetch(BASE_API_URL);
+            const resDataExt = await fetch(BASE_API_URL_EXT);
+            let MyData = await resData.json();   
+            let DataExt = await resDataExt.json();
+
+    
+            /* Getting the countries */
+            /* Turning them into upper case because the integration needs it */
+            let countries = Array.from(new Set(MyData.map((d) => {return d.country;})));
+
+            /* Mapping the data in the right format */
+            /* The country must be an index of the array of countries */
+            /*  
+            Turning this:
+    
+            {
+                "country": "COUNTRY",
+                "year": 2000,
+                "percentage-re-total": 0.0,
+                "percentage-hydropower-total": 0.0,
+                "percentage-wind-power-total": 0.0
+            }
+    
+            into this:
+    
+            [0, 2000, 0.0, 0.0, 0.0]
+            The first 0 is the index of "Country" in the array of countries
+            
+            */
+
+            /* We add up the data to avoid years */
+            let SumData = [];
+            countries.forEach((c) => {
+                let retotal = MyData.filter((d) => { return d.country == c; }).map((d) => { return d["percentage-re-total"] }).reduce(function(a, b){ return a + b; });
+                let hydropower = MyData.filter((d) => { return d.country == c; }).map((d) => { return d["percentage-hydropower-total"] }).reduce(function(a, b){ return a + b; });
+                let windpower = MyData.filter((d) => { return d.country == c; }).map((d) => { return d["percentage-wind-power-total"] }).reduce(function(a, b){ return a + b; });
+                SumData.push([countries.indexOf(c), retotal, hydropower, windpower]);
+
+
+
+            });
+            
+
+            SumData = SumData.filter((d) => {  return DataExt.find(dext => dext.country == countries[d[0]])}).map((d) => {
+                return [d[0], d[1], d[2], d[3],
+                DataExt.find(dext => dext.country == countries[d[0]])["cases"]
+            ]; 
+            });
+
+
+
+
+            /* 
+            The following array turn this:
+            [0, 2000, 0.0, 0.0, 0.0]
+    
+            into this:
+    
+            {name: "Country", data: [0, 2000, 0.0, 0.0, 0.0]}
+            That is how the chart needs it
+             */
+             let ChartData = SumData.map(function (set, i) {
+                return {
+                    name: countries[set[0]],
+                    data: set,
+                    shadow: false
+                };
+            });
+            
+            /* Setting the chart */
+            Highcharts.chart('container-ext3', {
+                chart: {
+                    type: 'spline',
+                    parallelCoordinates: true,
+                    parallelAxes: {
+                        lineWidth: 3
+                    }
+                },
+                title: {
+                    text: 'Energías renovables y casos de coronavirus'
+                },
+                plotOptions: {
+                    series: {
+                        animation: false,
+                        marker: {
+                            enabled: false,
+                            states: {
+                                hover: {
+                                    enabled: false
+                                }
+                            }
+                        },
+                        states: {
+                            hover: {
+                                halo: {
+                                    size: 0
+                                }
+                            }
+                        },
+                        events: {
+                            mouseOver: function () {
+                                this.group.toFront();
+                            }
+                        }
+                    }
+                },
+                tooltip: {
+                    pointFormat: '<span style="color:{point.color}">\u25CF</span>' +
+                        '{series.name}: <b>{point.formattedValue}</b><br/>'
+                },
+                xAxis: {
+                    categories: [
+                        'País',
+                        'Porcentaje de uso de energías renovables',
+                        'Porcentaje de uso de energías hidroeléctricas',
+                        'Porcentaje de uso de energías eólica',
+                        'Total de casos'
+                    ],
+                    offset: 10
+                },
+                yAxis: [
+                {
+                    categories: countries,
+                    tooltipValueFormat: '{value}'
+                }, {
+                    min: 0,
+                    tooltipValueFormat: '{value} %'
+                }, {
+                    min: 0,
+                    tooltipValueFormat: '{value} %'
+                },
+                {
+                    min: 0,
+                    tooltipValueFormat: '{value} %'
+                },
+                {
+                    min: 0,
+                    tooltipValueFormat: '{value}'
+                }],
+                colors: ['rgba(129, 131, 202, 0.8)'],
+                series: ChartData
+            });
+
+            
+            
+        }
+        
+    
     
         loadGraph7();
         loadGraph4();
@@ -1886,6 +2040,7 @@
 
         loadGraphExt1();
         loadGraphExt2();
+        loadGraphExt3();
 
 
 </script>
@@ -1894,22 +2049,23 @@
     <div class="row">
         <div class="col-4">
           <div class="list-group" id="list-tab" role="tablist">
-            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-7" role="tab" aria-controls="home">Integración con 7</a>
-            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-27" role="tab" aria-controls="profile">Integración con 27</a>
-            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-5" role="tab" aria-controls="profile">Integración con 5</a>
-            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-4" role="tab" aria-controls="profile">Integración con 4</a>
-            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-22" role="tab" aria-controls="profile">Integración con 22</a>
-            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-1" role="tab" aria-controls="profile">Integración con 1 </a>
-            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-30" role="tab" aria-controls="profile">Integración con 30 </a>
-            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-23" role="tab" aria-controls="profile">Integración con 23 </a>
-            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-25" role="tab" aria-controls="profile">Integración con 25 </a>
-            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-8" role="tab" aria-controls="profile">Integración con 8 </a>
-            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-6" role="tab" aria-controls="profile">Integración con 6</a>
+            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-7" role="tab" aria-controls="home">Integración con importaciones de vegetales - 7</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-27" role="tab" aria-controls="profile">Integración con calidad de vida (clima) - 27</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-5" role="tab" aria-controls="profile">Integración con exportación de libros - 5</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-4" role="tab" aria-controls="profile">Integración con número de coches - 4</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-22" role="tab" aria-controls="profile">Integración con victorias de fórmula 1 - 22</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-1" role="tab" aria-controls="profile">Integración con natalidad - 1 </a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-30" role="tab" aria-controls="profile">Integración con azúcar consumido - 30 </a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-23" role="tab" aria-controls="profile">Integración con tabaco - 23 </a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-25" role="tab" aria-controls="profile">Integración con nivel de felicidad - 25 </a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-8" role="tab" aria-controls="profile">Integración con motoGP - 8 </a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-6" role="tab" aria-controls="profile">Integración con loterías - 6</a>
 
 
 
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-ext1" role="tab" aria-controls="profile">Integración con API externa 1 </a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-ext2" role="tab" aria-controls="profile">Integración con API externa 2 </a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-ext3" role="tab" aria-controls="profile">Integración con API externa 3 </a>
 
         </div>
         </div>
@@ -1919,7 +2075,7 @@
                 <figure class="highcharts-figure">
                     <div id="container-7"></div>
                     <p class="highcharts-description">
-                        Integración con el grupo 7, la integración está realizada con la importaciones de vegetales y preparados.
+                        Integración con el grupo 7.
                     </p>
                 </figure>
             </div>
@@ -1927,7 +2083,7 @@
                 <figure class="highcharts-figure">
                     <div id="container-27"></div>
                     <p class="highcharts-description">
-                        Integra la 27.
+                        Integración con el grupo 27.
                     </p>
                 </figure>
             </div>
@@ -1935,7 +2091,7 @@
                 <figure class="highcharts-figure">
                     <div id="container-5"></div>
                     <p class="highcharts-description">
-                        Integra la 5.
+                        Integración con el grupo 5.
                     </p>
                 </figure>
             </div>
@@ -1943,7 +2099,7 @@
                 <figure class="highcharts-figure">
                     <div id="container-4"></div>
                     <p class="highcharts-description">
-                        Integra la 4.
+                        Integración con el grupo 4.
                     </p>
                 </figure>
             </div>
@@ -1951,7 +2107,7 @@
                 <figure class="highcharts-figure">
                     <div id="container-22"></div>
                     <p class="highcharts-description">
-                        Integra la 22.
+                        Integración con el grupo 22.
                     </p>
                 </figure>
             </div>
@@ -1959,7 +2115,7 @@
                 <figure class="highcharts-figure">
                     <div id="container-1"></div>
                     <p class="highcharts-description">
-                        Integra la 1.
+                        Integración con el grupo 1.
                     </p>
                 </figure>
             </div>
@@ -1967,7 +2123,7 @@
                 <figure class="highcharts-figure">
                     <div id="container-30"></div>
                     <p class="highcharts-description">
-                        Integra la 30.
+                        Integración con el grupo 30.
                     </p>
                 </figure>
             </div>
@@ -1975,7 +2131,7 @@
                 <figure class="highcharts-figure">
                     <div id="container-23"></div>
                     <p class="highcharts-description">
-                        Integra la 23.
+                        Integración con el grupo 23.
                     </p>
                 </figure>
             </div>
@@ -1983,7 +2139,7 @@
                 <figure class="highcharts-figure">
                     <div id="container-25"></div>
                     <p class="highcharts-description">
-                        Integra la 25.
+                        Integración con el grupo 25.
                     </p>
                 </figure>
             </div>
@@ -1991,7 +2147,7 @@
                 <figure class="highcharts-figure">
                     <div id="container-8"></div>
                     <p class="highcharts-description">
-                        Integra la 8.
+                        Integración con el grupo 8.
                     </p>
                 </figure>
             </div>
@@ -1999,7 +2155,7 @@
                 <figure class="highcharts-figure">
                     <div id="container-6"></div>
                     <p class="highcharts-description">
-                        Integra la 6.
+                        Integración con el grupo 6.
                     </p>
                 </figure>
             </div>
@@ -2018,6 +2174,15 @@
                     <div id="container-ext2"></div>
                     <p class="highcharts-description">
                         Integración con la una API externa que proporciona la moneda utilizada de los países.
+                        
+                    </p>
+                </figure>
+            </div>
+            <div class="tab-pane fade" id="list-ext3" role="tabpanel" aria-labelledby="list-profile-list">
+                <figure class="highcharts-figure">
+                    <div id="container-ext3"></div>
+                    <p class="highcharts-description">
+                        Integración con la una API externa que proporciona datos del coronavirus por países.
                         
                     </p>
                 </figure>
