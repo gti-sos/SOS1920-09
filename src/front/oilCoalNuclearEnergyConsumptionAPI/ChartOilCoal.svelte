@@ -153,7 +153,7 @@
         <div id="container"></div>
         <p class="highcharts-description">
             En esta gráfica realizada con highchart tenemos el consumo, expresado en millones de toneladas, de carbón por país y por año. En el eje
-            x tenemos los países, en el eje y los años y en cada uno de los valores de la tabla están expresados los valores de consumo de carbón.
+            x tenemos los países, en el eje y los años y en cada uno de los valores, de la tabla están expresados los valores de consumo de carbón.
         </p>
     </figure>
 
