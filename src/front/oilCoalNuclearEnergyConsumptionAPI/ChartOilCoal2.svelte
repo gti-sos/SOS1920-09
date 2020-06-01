@@ -58,6 +58,7 @@
     
 </script>
 <main>
+<h1 class="display-5" style="text-align: center;" > Gráfica realizada con Chartis.js </h1>
 <p>Representación Gráfica del consumo de gasolina medidos en Tonelada de petróleo por países del Año 2016.</p>
 <Button outline color="secondary" on:click="{pop}"> <i class="fas fa-arrow-circle-left"></i> Atrás </Button>
 </main>
