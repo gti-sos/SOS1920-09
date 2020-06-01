@@ -7,17 +7,17 @@ This is an API that manages data related to [renewable energies](http://sos1920-
 
 Postman:
 * Fernando Baeza Rodríguez:
-* * [v1](https://documenter.getpostman.com/view/10674128/SzYT4Lrv)
-* * [v2](https://documenter.getpostman.com/view/10674128/Szme3xWC)
-* * [v3](https://documenter.getpostman.com/view/10674128/SztD6TQp)
+* * [v1](https://documenter.getpostman.com/view/10674128/SzYT4Lrv).
+* * [v2](https://documenter.getpostman.com/view/10674128/Szme3xWC).
+* * [v3](https://documenter.getpostman.com/view/10674128/SztD6TQp).
 * Francisco Mohedano Caro:
-* * [v1](https://documenter.getpostman.com/view/10805606/SzYT4Lrw)
-* * [v2](https://documenter.getpostman.com/view/10805606/Szme3xGu)
-* * [v3](https://documenter.getpostman.com/view/10805606/SztD4n9w)
-* * [v4](https://documenter.getpostman.com/view/10805606/SztD4n9v)
+* * [v1](https://documenter.getpostman.com/view/10805606/SzYT4Lrw).
+* * [v2](https://documenter.getpostman.com/view/10805606/Szme3xGu).
+* * [v3](https://documenter.getpostman.com/view/10805606/SztD4n9w).
+* * [v4](https://documenter.getpostman.com/view/10805606/SztD4n9v).
 * Rubén Faraco Iglesias:
-* * [v1](https://documenter.getpostman.com/view/10667105/SzYT4Lrx)
-* * [v2](https://documenter.getpostman.com/view/10667105/Szme4Hua)
+* * [v1](https://documenter.getpostman.com/view/10667105/SzYT4Lrx).
+* * [v2](https://documenter.getpostman.com/view/10667105/Szme4Hua).
 
 URL GUI:
 * http://sos1920-09.herokuapp.com/#
@@ -31,4 +31,3 @@ Project members:
 * [Fernando Baeza Rodríguez](https://github.com/nandobaeza97).
 * [Francisco Mohedano Caro](https://github.com/pacomc).
 * [Rubén Faraco Iglesias](https://github.com/rubenfaracoi).
-
