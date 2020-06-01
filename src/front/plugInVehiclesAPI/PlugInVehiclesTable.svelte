@@ -128,9 +128,9 @@
 					console.log("OK:");
 					currentCountry = "-";
 					currentYear = "-";
-					initialDataAlert();
 					getPluginVehicles(currentCountry,currentYear);
 					getCountriesYears();
+					initialDataAlert();
 				}
 				else{
 					errorAlert("Error interno al intentar obtener todos los datos iniciales!");
@@ -202,9 +202,9 @@
 				setOffset(0);
 				currentCountry = "-";
 				currentYear = "-";
-				deleteAllAlert();
 				getPluginVehicles(currentCountry,currentYear);
 				getCountriesYears();
+				deleteAllAlert();
 			}
 			else{
 				errorAlert("Error interno al intentar borrar todos los elementos.")
