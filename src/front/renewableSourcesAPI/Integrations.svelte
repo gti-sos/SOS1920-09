@@ -148,10 +148,33 @@
             console.log("Loading 4");
             /* Asking for the data to the back */
             const BASE_API_URL = "/api/v4/renewable-sources-stats";
+            
             const BASE_API_URL_4 = "https://sos1920-04.herokuapp.com/api/v1/vehicles";
+
+
+            /* All of this to delete and load the initial data from the other api */
+            await fetch(BASE_API_URL_4 + "/", {
+                method: "DELETE"
+            }).then(async function (resDelete) {
+                if (resDelete.ok) {
+                    console.log("Deleted data 4...");
+                    const res = await fetch(BASE_API_URL_4 + "/loadInitialData").then(async function(resLoad) {
+                            if (resLoad.ok) {
+                                console.log("Loaded initial data 4...");
+                                
+                            } else {
+                                console.log("ERROR obtaining initial data 4...");
+                            }
+                    }); 
+
+                } else {
+                    console.log("ERROR deleting data 4...");
+                }
+            });
 
             const resData = await fetch(BASE_API_URL);
             const resData4 = await fetch(BASE_API_URL_4);
+
             let MyData = await resData.json();   
             let Data4 = await resData4.json();  
     
