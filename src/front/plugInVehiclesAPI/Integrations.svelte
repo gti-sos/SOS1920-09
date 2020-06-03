@@ -154,7 +154,7 @@
             };
             return res;
         });
-        console.log(dataAPI04);
+        
         let datos = 
         [
             {
@@ -384,8 +384,8 @@
             },
             plotOptions: {
                 packedbubble: {
-                minSize: '15%',
-                maxSize: '40%',
+                minSize: '35%',
+                maxSize: '50%',
                 zMin: 0,
                 zMax: 1000,
                 layoutAlgorithm: {
@@ -486,8 +486,8 @@
         },
         plotOptions: {
             packedbubble: {
-            minSize: '15%',
-            maxSize: '40%',
+            minSize: '35%',
+            maxSize: '45%',
             zMin: 0,
             zMax: 1000,
             layoutAlgorithm: {
@@ -921,8 +921,8 @@
             },
             plotOptions: {
                 packedbubble: {
-                minSize: '25%',
-                maxSize: '55%',
+                minSize: '35%',
+                maxSize: '50%',
                 zMin: 0,
                 zMax: 1000,
                 layoutAlgorithm: {
@@ -1023,7 +1023,7 @@
             },
             plotOptions: {
                 packedbubble: {
-                minSize: '20%',
+                minSize: '30%',
                 maxSize: '40%',
                 zMin: 0,
                 zMax: 1000,
@@ -1344,8 +1344,8 @@
             },
             plotOptions: {
                 packedbubble: {
-                minSize: '20%',
-                maxSize: '100%',
+                minSize: '35%',
+                maxSize: '75%',
                 zMin: 0,
                 zMax: 1000,
                 layoutAlgorithm: {
