@@ -70,9 +70,11 @@
 
 <main>
 
+    <h1 class="display-4" style="text-align: center;" > Gráfica realizada con RGraph </h1>
+
     <div style="width: 750px; height: 250px" id="chart-container"></div>
     <p></p>
-    <p>Representación gráfica realizada con RGraph que nos muestra el porcentaje de coches electricos en el año 2018</p>
+    <p class="p-center">Representación gráfica que nos muestra el porcentaje de coches electricos en el año 2018 en todo el mundo.</p>
     <Button outline color="secondary" on:click="{pop}"><i class="fas fa-arrow-circle-left"></i> Atrás</Button>
 
 </main>

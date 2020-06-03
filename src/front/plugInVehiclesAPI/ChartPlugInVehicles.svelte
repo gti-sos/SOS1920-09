@@ -67,7 +67,7 @@
                     }
                 },
                 title: {
-                    text: 'Coches cada 1000 personas',
+                    text: 'Porcentaje de Coches cada 1000 personas',
                     style: {
                         color: Highcharts.getOptions().colors[2]
                     }
@@ -141,7 +141,7 @@
                 }
 
             }, {
-                name: 'Coches cada 1000 personas',
+                name: 'Porcentaje de Coches cada 1000 personas',
                 type: 'spline',
                 data: carsPer1000,
                 tooltip: {

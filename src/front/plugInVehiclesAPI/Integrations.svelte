@@ -314,7 +314,7 @@
 
     }
 
-    async function loadGraph06(){
+    async function loadGraph06_1(){
     
         const BASE_API_URL_06 = "/api/v2/not-hospitalized-stats";
 
@@ -370,7 +370,7 @@
             }
         ];
 
-        Highcharts.chart('container06', {
+        Highcharts.chart('container06_1', {
             chart: {
                 type: 'packedbubble',
                 height: '100%'
@@ -415,6 +415,108 @@
         });
 
     }
+
+    async function loadGraph06_2(){
+    
+    const BASE_API_URL_06 = "https://sos1920-06.herokuapp.com/api/v2/accstats";
+
+    const resData = await fetch(BASE_API_URL);
+    const resData06 = await fetch(BASE_API_URL_06);
+    let MyData = await resData.json();
+    let Data06 = await resData06.json();
+    /*
+                Sus Datos:
+    
+    }
+        "province": "Pontevedra",
+        "year": 2017,
+        "accvictotal": 2719,
+        "accvicinter": 2017,
+        "accfall": 31
+    }
+                Mis Datos:
+    { 
+        "country": "Japan",
+        "year": 2018,
+        "pev-stock": 257363,
+        "annual-sale": 52013,
+        "cars-per-1000": 2.0
+    }
+    */
+
+    let dataPlugin = MyData.filter((d) => {return d.year==2018 && d.country=="Spain";}).map((d) => {
+        let res = {
+            name: d.country,
+            value: d["cars-per-1000"]
+        };
+        return res;
+    });
+
+    let dataAPI06 = Data06.map((d) => {
+        let res = {
+            name: d.province,
+            value: d.accvicinter
+        };
+        return res;
+    });
+
+    let datos = 
+    [
+        {
+            name: "Porcentaje de coche eléctricos cada 1000 personas en España en el año 2018.",
+            data: dataPlugin
+        },
+        {
+            name: "Número de victimas totales por accidentes de tráfico en ciudades españolas.",
+            data: dataAPI06
+        }
+    ];
+
+    Highcharts.chart('container06_2', {
+        chart: {
+            type: 'packedbubble',
+            height: '100%'
+        },
+        title: {
+            text: 'Integración con el grupo 06 accstats'
+        },
+        tooltip: {
+            useHTML: true,
+            pointFormat: '<b>{point.name}:</b> {point.value}'
+        },
+        plotOptions: {
+            packedbubble: {
+            minSize: '15%',
+            maxSize: '40%',
+            zMin: 0,
+            zMax: 1000,
+            layoutAlgorithm: {
+                gravitationalConstant: 0.05,
+                splitSeries: true,
+                seriesInteraction: false,
+                dragBetweenSeries: true,
+                parentNodeLimit: true
+            },
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}',
+                filter: {
+                property: 'y',
+                operator: '>',
+                value: 250
+                },
+                style: {
+                color: 'black',
+                textOutline: 'none',
+                fontWeight: 'normal'
+                }
+            }
+            }
+        },
+        series: datos
+    });
+
+}
 
     async function loadGraph07(){
         
@@ -1395,7 +1497,8 @@
     loadGraph01(); //Implementado mediante proxy
     loadGraph04(); //Implementado mediante cors
     loadGraph05(); //Implementado mediante proxy
-    loadGraph06(); //Implementado mediante proxy
+    loadGraph06_1(); //Implementado mediante proxy
+    loadGraph06_2(); //Implementado mediante cors
     loadGraph07(); //Implementado mediante cors
     loadGraph08(); //Implementado mediante proxy
     loadGraph12(); //Implementado mediante cors
@@ -1426,7 +1529,8 @@
             <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-01" role="tab" aria-controls="home">Integración con 01 emigrants-stats</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-04" role="tab" aria-controls="profile">Integración con 04 roads</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-05" role="tab" aria-controls="profile">Integración con 05 life_expectancies</a>
-            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-06" role="tab" aria-controls="profile">Integración con 06 not-hospitalized-stats</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-06_1" role="tab" aria-controls="profile">Integración con 06 not-hospitalized-stats</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-06_2" role="tab" aria-controls="profile">Integración con 06 accstats</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-07" role="tab" aria-controls="profile">Integración con 07 imports</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-08" role="tab" aria-controls="profile">Integración con 08 electricity-produced-stats</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-12" role="tab" aria-controls="profile">Integración con 12 overdose-deaths</a>
@@ -1468,12 +1572,23 @@
                     </p>
                 </figure>
             </div>
-            <div class="tab-pane fade" id="list-06" role="tabpanel" aria-labelledby="list-profile-list">
+            <div class="tab-pane fade" id="list-06_1" role="tabpanel" aria-labelledby="list-profile-list">
                 <figure class="highcharts-figure">
-                    <div id="container06"></div>
+                    <div id="container06_1"></div>
                     <p class="highcharts-description">
                         La integración muestra el número total de vías urbanas e interurbanas en distintas ciudades de España
                         junto al porcentaje de coches eléctricos cada 1000 personas en España en el año 2018.
+                        
+                    </p>
+                </figure>
+            </div>
+            <div class="tab-pane fade" id="list-06_2" role="tabpanel" aria-labelledby="list-profile-list">
+                <figure class="highcharts-figure">
+                    <div id="container06_2"></div>
+                    <p class="highcharts-description">
+                        Integración entre el número total de víctimas mortales de accidentes de tráfico en vías urbanas e interurbanas 
+                        en las distintas ciudades de España junto al porcentaje de coches eléctricos cada 1000 personas en el año 2018, 
+                        también en España.
                         
                     </p>
                 </figure>

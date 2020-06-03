@@ -9,7 +9,7 @@
     
 async function loadGraph4(){
     
-    const BASE_API_URL = "https://sos1920-04.herokuapp.com/api/v1/traffic_accidents/";
+    const BASE_API_URL = "/api/v1/traffic_accidents/";
     let MyData = [];
      
     const resData = await fetch(BASE_API_URL);
@@ -1201,6 +1201,327 @@ async function loadGraph23(){
    
 }
     
+async function loadGraph26(){
+        console.log("Loading api 26");
+        
+        const BASE_API_URL  = "/api/v3/oil-coal-nuclear-energy-consumption-stats";
+        const BASE_API_URL_26 = "http://sos1920-26.herokuapp.com/api/v2/global-transfers";
+
+        const resData = await fetch(BASE_API_URL);
+        const resData26 = await fetch(BASE_API_URL_26);
+        let MyData = await resData.json();
+        let Data26 = await resData26.json();
+        console.log(Data26);
+        console.log(MyData);
+
+            
+            let dataPrimary = MyData.filter((d) => {return d.year == 2016}).map((d) => {
+                let res = {
+                    name: d.country + " - " + "consumo de gasolina",
+                    value: d["oil-consumption"]
+                };
+                return res;
+            });
+
+            let dataAPI26 = Data26.filter((d) => {return d.year==2018;}).map((d) =>  {
+            let res = {
+                name:  d.country + " - " + d.team,
+                value: d.signing
+            };
+            return res;
+        });
+        
+        
+		let datos = 
+        [
+            {
+                name: "Consumo de gasolina expresada en millones de toneladas en el año 2016.",
+                data: dataPrimary
+            },
+            {
+                name: "Estadística de numero de fichajes por equipo y País en 2018.",
+                data: dataAPI26
+            }
+        ];
+
+        Highcharts.chart('container-26', {
+			chart: {
+				type: 'packedbubble',
+				height: '100%'
+			},
+			title: {
+				text: 'Relacion Consumo de carbón por Países en el año 2017 junto con mercado de fichajes por equipo en 2018.'
+			},
+			tooltip: {
+				useHTML: true,
+				pointFormat: '<b>{point.name}:</b> {point.value}'
+			},
+			plotOptions: {
+				packedbubble: {
+					minSize: '30%',
+					maxSize: '120%',
+					zMin: 0,
+					zMax: 1000,
+					layoutAlgorithm: {
+						splitSeries: false,
+						gravitationalConstant: 0.02
+					},
+					dataLabels: {
+						enabled: true,
+						format: '{point.name}',
+						filter: {
+							property: 'y',
+							operator: '>',
+							value: 250
+						},
+						style: {
+							color: 'black',
+							textOutline: 'none',
+							fontWeight: 'normal'
+						}
+					}
+				}
+			},
+			series: datos
+		});
+    }
+
+async function loadGraphExt2(){
+
+    const BASE_API_URL = "https://parallelum.com.br/fipe/api/v1/carros/marcas";
+    const resData = await fetch(BASE_API_URL);
+    let Data = await resData.json(); 
+    let nomes = Array.from(new Set(Data.map((d) => {return d.nome;})));
+    let codigos = Array.from(new Set(Data.map((d) => {return d.codigo;})));
+    var ctx = document.getElementById('container-ext2');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: nomes,
+            datasets: [{
+                label: 'Marcas de Coches ordenados alfabéticamente y código',
+                data: codigos,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(123, 13, 132, 0.2)',
+                    'rgba(189, 162, 235, 0.2)',
+                    'rgba(255, 65, 186, 0.1)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(53, 101, 200, 0.3)',
+                    'rgba(25, 159, 64, 0.2)',
+                    'rgba(255,0,0,0.3)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(123, 13, 132, 0.2)',
+                    'rgba(189, 162, 235, 0.2)',
+                    'rgba(255, 65, 186, 0.1)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(53, 101, 200, 0.3)',
+                    'rgba(25, 159, 64, 0.2)',
+                    'rgba(255,0,0,0.3)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(123, 13, 132, 0.2)',
+                    'rgba(189, 162, 235, 0.2)',
+                    'rgba(255, 65, 186, 0.1)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(53, 101, 200, 0.3)',
+                    'rgba(25, 159, 64, 0.2)',
+                    'rgba(255,0,0,0.3)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(123, 13, 132, 0.2)',
+                    'rgba(189, 162, 235, 0.2)',
+                    'rgba(255, 65, 186, 0.1)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(53, 101, 200, 0.3)',
+                    'rgba(25, 159, 64, 0.2)',
+                    'rgba(255,0,0,0.3)'
+                ],
+                borderColor: [
+                'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(123, 13, 132, 0.2)',
+                    'rgba(189, 162, 235, 0.2)',
+                    'rgba(255, 65, 186, 0.1)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(53, 101, 200, 0.3)',
+                    'rgba(25, 159, 64, 0.2)',
+                    'rgba(255,0,0,0.3)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(123, 13, 132, 0.2)',
+                    'rgba(189, 162, 235, 0.2)',
+                    'rgba(255, 65, 186, 0.1)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(53, 101, 200, 0.3)',
+                    'rgba(25, 159, 64, 0.2)',
+                    'rgba(255,0,0,0.3)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(123, 13, 132, 0.2)',
+                    'rgba(189, 162, 235, 0.2)',
+                    'rgba(255, 65, 186, 0.1)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(53, 101, 200, 0.3)',
+                    'rgba(25, 159, 64, 0.2)',
+                    'rgba(255,0,0,0.3)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(123, 13, 132, 0.2)',
+                    'rgba(189, 162, 235, 0.2)',
+                    'rgba(255, 65, 186, 0.1)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(53, 101, 200, 0.3)',
+                    'rgba(25, 159, 64, 0.2)',
+                    'rgba(255,0,0,0.3)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+    }
+
+async function loadGraphExt28(){
+
+const BASE_API_URL  = "/api/v3/oil-coal-nuclear-energy-consumption-stats";
+        const BASE_API_URL_28 = "/api/v1/ppas";
+
+        const resData = await fetch(BASE_API_URL);
+        const resData28 = await fetch(BASE_API_URL_28);
+        let MyData = await resData.json();
+        let Data28 = await resData28.json();
+        console.log(Data28);
+        console.log(MyData);
+
+let oil = Array.from(new Set(MyData.map((d) => {return d["oil-consumption"];})));
+
+let paridad = Array.from(new Set(Data28.map((d) => {return d.ppa_per_capita;})));
+
+var ctx = document.getElementById('container-28');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: paridad,
+        datasets: [{
+            label: 'Paridad de poder adquisitivo en el año 2016 junto con el consumo de gasolina.',
+            data: oil,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(123, 13, 132, 0.2)'
+            ],
+            borderColor: [
+            'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(123, 13, 132, 0.2)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+}
+
+async function loadGraph21(){
+
+const BASE_API_URL  = "/api/v3/oil-coal-nuclear-energy-consumption-stats";
+        const BASE_API_URL_21 = "https://sos1920-21.herokuapp.com/api/v2/traffic-injuries";
+
+        const resData = await fetch(BASE_API_URL);
+        const resData21 = await fetch(BASE_API_URL_21);
+        let MyData = await resData.json();
+        let Data21 = await resData21.json();
+        console.log(Data21);
+        console.log(MyData);
+
+let coal = Array.from(new Set(MyData.map((d) => {return d["coal-consumption"];})));
+
+let accidents = Array.from(new Set(Data21.map((d) => {return d.accident;})));
+
+var ctx = document.getElementById('container-21');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: accidents,
+        datasets: [{
+            label: 'Numero de accidentes desde el año 2016 al 2018 junto con el consumo de carbón.',
+            data: coal,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(123, 13, 132, 0.2)'
+            ],
+            borderColor: [
+            'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(123, 13, 132, 0.2)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+}
+
 loadGraph4();
 loadGraph2();
 loadGraph12();
@@ -1209,6 +1530,10 @@ loadGraphExt1();
 loadGraph05();
 loadGraph10();
 loadGraph23();
+loadGraph26();
+loadGraphExt2();
+loadGraphExt28();
+loadGraph21();
 
 
 
@@ -1218,6 +1543,13 @@ loadGraph23();
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/highcharts-more.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
 </svelte:head>
@@ -1235,6 +1567,11 @@ loadGraph23();
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-05" role="tab" aria-controls="profile">Integración con 5</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-10" role="tab" aria-controls="profile">Integración con 10</a>
             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-23" role="tab" aria-controls="profile">Integración con 23</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-26" role="tab" aria-controls="profile">Integración con 26</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-ext2" role="tab" aria-controls="profile">Integración con API Externa 2</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-28" role="tab" aria-controls="profile">Integración con 28</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-21" role="tab" aria-controls="profile">Integración con 21</a>
+
 
         </div>
         </div>
@@ -1302,6 +1639,42 @@ loadGraph23();
                     <div id="container-23"></div>
                     <p class="highcharts-description">
                         Integra la 23.
+                    </p>
+                </figure>
+            </div>
+            <div class="tab-pane fade" id="list-26" role="tabpanel" aria-labelledby="list-profile-list">
+                <figure class="highcharts-figure">
+                    <div id="container-26"></div>
+                    <p class="highcharts-description">
+                        Integra la 26.
+                    </p>
+                </figure>
+            </div>
+            <div class="tab-pane fade" id="list-ext2" role="tabpanel" aria-labelledby="list-profile-list">
+                <figure class="highcharts-figure">
+                    <canvas id="container-ext2" width="3" height="1"></canvas>
+                    <div id="container-ext2"></div>
+                    <p class="highcharts-description">
+                        Integra la Externa 2.
+                        <a href="https://parallelum.com.br/fipe/api/v1/carros/marcas">Link de la API</a>
+                    </p>
+                </figure>
+            </div>
+            <div class="tab-pane fade" id="list-28" role="tabpanel" aria-labelledby="list-profile-list">
+                <figure class="highcharts-figure">
+                    <canvas id="container-28" width="3" height="1"></canvas>
+                    <div id="container-28"></div>
+                    <p class="highcharts-description">
+                        Integra la 28.
+                    </p>
+                </figure>
+            </div>
+            <div class="tab-pane fade" id="list-21" role="tabpanel" aria-labelledby="list-profile-list">
+                <figure class="highcharts-figure">
+                    <canvas id="container-21" width="3" height="1"></canvas>
+                    <div id="container-21"></div>
+                    <p class="highcharts-description">
+                        Integra la 21.
                     </p>
                 </figure>
             </div>

@@ -24,7 +24,7 @@
 
         <div class="card">
             <div class="embed-responsive embed-responsive-16by9 video">
-                <iframe title="Vídeo 2" class="embed-responsive-item video" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+                <iframe title="Vídeo 2" class="embed-responsive-item video" src="https://youtube.be/embed/tfHDW8y86aU" allowfullscreen></iframe>
             </div>
           <div class="card-body">
             <h5 class="card-title">Energías primarias</h5>
@@ -34,7 +34,7 @@
 
         <div class="card">
             <div class="embed-responsive embed-responsive-16by9 video">
-                <iframe title="Vídeo 3" class="embed-responsive-item video" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+                <iframe title="Vídeo 3" class="embed-responsive-item video" src="https://www.youtube.com/embed/DQrZBa-6fP4" allowfullscreen></iframe>
             </div>
           <div class="card-body">
             <h5 class="card-title">Coches eléctricos</h5>
