@@ -570,7 +570,7 @@ async function loadGraph12(){
 
 async function loadGraph01(){
     
-    const BASE_API_URL = "http://sos1920-01.herokuapp.com/api/v2/poverty-stats";
+    const BASE_API_URL = "https://sos1920-01.herokuapp.com/api/v1/poverty-stats";
     
     let MyData = [];
      
