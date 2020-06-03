@@ -69,7 +69,7 @@
 				height: '100%'
 			},
 			title: {
-				text: 'Carbon emissions around the world (2014)'
+				text: 'Gráfica común de energías renovables, energías primarias y coches eléctricos'
 			},
 			tooltip: {
 				useHTML: true,
