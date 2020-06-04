@@ -113,6 +113,26 @@
     
         const BASE_API_URL_04 = "https://sos1920-04.herokuapp.com/api/v1/roads/";
 
+        /* All of this to delete and load the initial data from the other api */
+        await fetch(BASE_API_URL_04, {
+                method: "DELETE"
+            }).then(async function (resDelete) {
+                if (resDelete.ok) {
+                    console.log("Deleted data 4...");
+                    const res = await fetch(BASE_API_URL_04 + "loadInitialData").then(async function(resLoad) {
+                            if (resLoad.ok) {
+                                console.log("Loaded initial data 4...");
+                                
+                            } else {
+                                console.log("ERROR obtaining initial data 4...");
+                            }
+                    }); 
+
+                } else {
+                    console.log("ERROR deleting data 4...");
+                }
+            });
+
         const resData = await fetch(BASE_API_URL);
         const resData04 = await fetch(BASE_API_URL_04);
         let MyData = await resData.json();
@@ -316,10 +336,10 @@
 
     async function loadGraph06_1(){
     
-        const BASE_API_URL_06 = "/api/v2/not-hospitalized-stats";
+        const BASE_API_URL_06_1 = "/api/v2/not-hospitalized-stats";
 
         const resData = await fetch(BASE_API_URL);
-        const resData06 = await fetch(BASE_API_URL_06);
+        const resData06 = await fetch(BASE_API_URL_06_1);
         let MyData = await resData.json();
         let Data06 = await resData06.json();
         /*
@@ -418,10 +438,10 @@
 
     async function loadGraph06_2(){
     
-    const BASE_API_URL_06 = "https://sos1920-06.herokuapp.com/api/v2/accstats";
+    const BASE_API_URL_06_2 = "https://sos1920-06.herokuapp.com/api/v2/accstats";
 
     const resData = await fetch(BASE_API_URL);
-    const resData06 = await fetch(BASE_API_URL_06);
+    const resData06 = await fetch(BASE_API_URL_06_2);
     let MyData = await resData.json();
     let Data06 = await resData06.json();
     /*
