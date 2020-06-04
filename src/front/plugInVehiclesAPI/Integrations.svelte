@@ -1514,20 +1514,20 @@
 
     }
 
-    loadGraph01(); //Implementado mediante proxy
-    loadGraph04(); //Implementado mediante cors
-    loadGraph05(); //Implementado mediante proxy
-    loadGraph06_1(); //Implementado mediante proxy
-    loadGraph06_2(); //Implementado mediante cors
-    loadGraph07(); //Implementado mediante cors
-    loadGraph08(); //Implementado mediante proxy
-    loadGraph12(); //Implementado mediante cors
-    loadGraph23(); //Implementado mediante cors
-    loadGraph24(); //Implementado mediante cors
-    loadGraph27(); //Implementado mediante cors
-    loadGraph28(); //Implementado mediante proxy
-    loadGraphExternal01(); //Implementado mediante proxy
-    loadGraphExternal02(); //Implementado mediante proxy
+    loadGraph01(); //Implementado mediante proxy.
+    loadGraph04(); //Implementado mediante cors.
+    loadGraph05(); //Implementado mediante proxy.
+    loadGraph06_1(); //Implementado mediante proxy.
+    loadGraph06_2(); //Implementado mediante cors.
+    loadGraph07(); //Implementado mediante cors.
+    loadGraph08(); //Implementado mediante proxy.
+    loadGraph12(); //Implementado mediante cors.
+    loadGraph23(); //Implementado mediante cors.
+    loadGraph24(); //Implementado mediante cors.
+    loadGraph27(); //Implementado mediante cors.
+    loadGraph28(); //Implementado mediante proxy.
+    loadGraphExternal01(); //Implementado mediante proxy.
+    loadGraphExternal02(); //Implementado mediante proxy.
 
 </script>
 
