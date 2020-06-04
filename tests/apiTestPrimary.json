@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "3be38db7-9ed6-4d24-bb18-c05b7888eb6b",
-		"name": "SOS1920-09-oil-coal-nuclear-energy-consumption-stats V2",
+		"_postman_id": "0dd3c091-9717-4a57-bdfa-a19769385468",
+		"name": "SOS1920-09-oil-coal-nuclear-energy-consumption-stats V3",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -11,7 +11,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "a24f8a53-7ef5-4215-9e04-a7e84f1d859c",
+						"id": "574d92d9-074c-4c5c-898c-2f3bd1ef12d4",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -42,13 +42,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats",
+					"raw": "{{BASE_URL}}/api/v3/oil-coal-nuclear-energy-consumption-stats",
 					"host": [
-						"http://localhost:12345"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"oil-coal-nuclear-energy-consumption-stats"
 					]
 				}
@@ -61,7 +61,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "21a650af-749d-48ae-b7f8-8d78dff711b0",
+						"id": "ebd0243e-f4a6-4f46-ab3f-8da8226052aa",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -92,13 +92,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats?limit=2&offset=1",
+					"raw": "{{BASE_URL}}/api/v3/oil-coal-nuclear-energy-consumption-stats?limit=2&offset=1",
 					"host": [
-						"http://localhost:12345"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"oil-coal-nuclear-energy-consumption-stats"
 					],
 					"query": [
@@ -121,7 +121,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "2a478ec3-cd0e-47c6-8d0e-a492e340098f",
+						"id": "d040a336-54ed-44d2-92cf-ef657094a8ac",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -162,13 +162,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats?country=Spain&year=2017",
+					"raw": "{{BASE_URL}}/api/v3/oil-coal-nuclear-energy-consumption-stats?country=Spain&year=2017",
 					"host": [
-						"http://localhost:12345"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"oil-coal-nuclear-energy-consumption-stats"
 					],
 					"query": [
@@ -191,7 +191,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "aa77a971-7a79-4f19-96ac-cf24719fb565",
+						"id": "835d5ae2-e854-4147-a3a0-7635b62e9afc",
 						"exec": [
 							"pm.test(\"Status code is 201\", function () {",
 							"    pm.response.to.have.status(201);",
@@ -214,13 +214,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats",
+					"raw": "{{BASE_URL}}/api/v3/oil-coal-nuclear-energy-consumption-stats",
 					"host": [
-						"http://localhost:12345"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"oil-coal-nuclear-energy-consumption-stats"
 					]
 				}
@@ -233,7 +233,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "357ee7d2-4558-4609-83a0-712a0ebe02cd",
+						"id": "853fd81d-692c-4a29-bfc1-17709a8b6420",
 						"exec": [
 							"pm.test(\"Status code is 400\", function () {",
 							"    pm.response.to.have.status(400);",
@@ -256,13 +256,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats",
+					"raw": "{{BASE_URL}}/api/v3/oil-coal-nuclear-energy-consumption-stats",
 					"host": [
-						"http://localhost:12345"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"oil-coal-nuclear-energy-consumption-stats"
 					]
 				}
@@ -275,7 +275,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "f6de2f60-b1e4-40dc-84ea-7a9f1f29f1c6",
+						"id": "32d3ffac-fc2f-4d1f-8af4-747c6fedbb20",
 						"exec": [
 							"pm.test(\"Status code is 400\", function () {",
 							"    pm.response.to.have.status(400);",
@@ -298,13 +298,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats",
+					"raw": "{{BASE_URL}}/api/v3/oil-coal-nuclear-energy-consumption-stats",
 					"host": [
-						"http://localhost:12345"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"oil-coal-nuclear-energy-consumption-stats"
 					]
 				}
@@ -317,7 +317,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "42e4b1b2-4d24-45df-b3eb-75867ef6a49c",
+						"id": "c956b6aa-8a50-4612-9c71-4505cb3bcd2b",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -340,13 +340,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats/Australia/2015",
+					"raw": "{{BASE_URL}}/api/v3/oil-coal-nuclear-energy-consumption-stats/Australia/2015",
 					"host": [
-						"http://localhost:12345"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"oil-coal-nuclear-energy-consumption-stats",
 						"Australia",
 						"2015"
@@ -361,7 +361,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "fdfeac99-5fd4-4aa5-a0a6-f5e92fe2c455",
+						"id": "30583d62-3d84-48a8-9e6c-77db489c10d7",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -384,13 +384,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats/Australia/2015",
+					"raw": "{{BASE_URL}}/api/v3/oil-coal-nuclear-energy-consumption-stats/Australia/2015",
 					"host": [
-						"http://localhost:12345"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"oil-coal-nuclear-energy-consumption-stats",
 						"Australia",
 						"2015"
@@ -405,7 +405,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "75605026-86b2-48d0-95c8-ebdfda7c22e1",
+						"id": "42524783-78c6-471a-9e35-caa7d6fce979",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -428,13 +428,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats/Australia/2015",
+					"raw": "{{BASE_URL}}/api/v3/oil-coal-nuclear-energy-consumption-stats/Australia/2015",
 					"host": [
-						"http://localhost:12345"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"oil-coal-nuclear-energy-consumption-stats",
 						"Australia",
 						"2015"
@@ -449,7 +449,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "edd6c20d-8c0f-437a-857e-5de13b5ad0bf",
+						"id": "11258edb-44e4-45c5-8d66-3c9b38c7b923",
 						"exec": [
 							"pm.test(\"Status code is 405\", function () {",
 							"    pm.response.to.have.status(405);",
@@ -472,13 +472,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats/Australia/2015",
+					"raw": "{{BASE_URL}}/api/v3/oil-coal-nuclear-energy-consumption-stats/Australia/2015",
 					"host": [
-						"http://localhost:12345"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"oil-coal-nuclear-energy-consumption-stats",
 						"Australia",
 						"2015"
@@ -493,7 +493,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "c747a1dc-178d-45b1-9ce2-d52f02a73381",
+						"id": "3e72faf5-1243-445e-a2be-4cee921c3b52",
 						"exec": [
 							"pm.test(\"Status code is 405\", function () {",
 							"    pm.response.to.have.status(405);",
@@ -516,13 +516,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats",
+					"raw": "{{BASE_URL}}/api/v3/oil-coal-nuclear-energy-consumption-stats",
 					"host": [
-						"http://localhost:12345"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"oil-coal-nuclear-energy-consumption-stats"
 					]
 				}
@@ -535,7 +535,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "9f135250-a2fb-4ece-a8a4-b7f37f60e7f5",
+						"id": "fd7c9881-2b38-4889-abdf-2cc6dae9617a",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -551,13 +551,13 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats",
+					"raw": "{{BASE_URL}}/api/v3/oil-coal-nuclear-energy-consumption-stats",
 					"host": [
-						"http://localhost:12345"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"oil-coal-nuclear-energy-consumption-stats"
 					]
 				}
@@ -570,7 +570,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "f0151c5f-2fd0-4aa7-992f-a8b8c36243d1",
+						"id": "c853448e-6d69-4f34-8600-5e10674265da",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -596,13 +596,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:12345/api/v2/oil-coal-nuclear-energy-consumption-stats/loadInitialData",
+					"raw": "{{BASE_URL}}/api/v3/oil-coal-nuclear-energy-consumption-stats/loadInitialData",
 					"host": [
-						"http://localhost:12345"
+						"{{BASE_URL}}"
 					],
 					"path": [
 						"api",
-						"v2",
+						"v3",
 						"oil-coal-nuclear-energy-consumption-stats",
 						"loadInitialData"
 					]
@@ -615,7 +615,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "72991c00-a646-4ffd-8d68-5d84b67a2ca0",
+				"id": "b16eef91-aaa8-41b1-9ea7-4713e96233de",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -625,7 +625,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "7693e2c2-e9cd-420b-ac36-3d9bd37f996f",
+				"id": "5ea845a6-3967-4787-b393-43fba686c7d6",
 				"type": "text/javascript",
 				"exec": [
 					""
