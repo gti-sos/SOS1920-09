@@ -15,6 +15,25 @@ async function loadGraph4(){
     const resData = await fetch(BASE_API_URL);
     MyData = await resData.json();
    
+    await fetch(BASE_API_URL + "/", {
+                method: "DELETE"
+            }).then(async function (resDelete) {
+                if (resDelete.ok) {
+                    console.log("Deleted data 4...");
+                    const res = await fetch(BASE_API_URL + "/loadInitialData").then(async function(resLoad) {
+                            if (resLoad.ok) {
+                                console.log("Loaded initial data 4...");
+                                
+                            } else {
+                                console.log("ERROR obtaining initial data 4...");
+                            }
+                    }); 
+
+                } else {
+                    console.log("ERROR deleting data 4...");
+                }
+            });
+
    /* let countries = [];
     let pevStock = [];
     let annualSale = [];
@@ -1466,10 +1485,20 @@ var myChart = new Chart(ctx, {
 }
 
 async function loadGraph21(){
+    
 
-const BASE_API_URL  = "/api/v3/oil-coal-nuclear-energy-consumption-stats";
+        const BASE_API_URL  = "/api/v3/oil-coal-nuclear-energy-consumption-stats";
         const BASE_API_URL_21 = "https://sos1920-21.herokuapp.com/api/v2/traffic-injuries";
+        await fetch(BASE_API_URL_21 + "/loadInitialData").then(async function(resLoad) {
+                            if (resLoad.ok) {
+                                console.log("Loaded initial data 21...");
+                                
+                            } else {
+                                console.log("ERROR obtaining initial data 21...");
+                            }
+                    }); 
 
+                
         const resData = await fetch(BASE_API_URL);
         const resData21 = await fetch(BASE_API_URL_21);
         let MyData = await resData.json();
