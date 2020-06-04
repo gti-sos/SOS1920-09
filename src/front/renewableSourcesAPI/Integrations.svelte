@@ -2060,7 +2060,7 @@
         loadGraph8(); // [proxy] motogp
 
 
-
+        /* Externals API */
         loadGraphExt1();
         loadGraphExt2();
         loadGraphExt3();
