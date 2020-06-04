@@ -2050,14 +2050,14 @@
         loadGraph7();
         loadGraph4();
         loadGraph27();
-        loadGraph5(); // [proxy] bookexports
+        loadGraph5(); // [proxy] bookexports.
         loadGraph22();
-        loadGraph6(); // [proxy] lottery
-        loadGraph1(); // [proxy] natality
+        loadGraph6(); // [proxy] lottery.
+        loadGraph1(); // [proxy] natality.
         loadGraph30();
-        loadGraph23(); // [proxy] cigarettes
-        loadGraph25(); // [proxy] happiness rate
-        loadGraph8(); // [proxy] motogp
+        loadGraph23(); // [proxy] cigarettes.
+        loadGraph25(); // [proxy] happiness rate.
+        loadGraph8(); // [proxy] motogp.
 
 
         /* Externals API */
